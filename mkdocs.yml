@@ -1,0 +1,30 @@
+site_name: Clash.meta Docs
+theme:
+  name: material
+  features:
+    - navigation.tracking
+    - navigation.instant
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    # - navigation.tabs
+  nav:
+    - Home: index.md
+    - Yaml: yaml.md
+    - example: example.md
+  include_nav: '**'
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences 
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+repo_url:  https://github.com/MetaCubeX/Clash.Meta
+repo_name: MetaCubeX/Clash.Meta
