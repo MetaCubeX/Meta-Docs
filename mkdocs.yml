@@ -34,7 +34,7 @@ theme:
 
 nav:
   - 简介: index.md
-  - 客户端: client.md
+  - 支持clash.meta的工具: client.md
   - 配置示例: example.md
   - 配置详解: 
     - grammar.md
