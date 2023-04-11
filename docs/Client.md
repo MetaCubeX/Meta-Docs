@@ -6,7 +6,7 @@
 
 [Dashboard](http://clash.metacubex.one)
 
-## 使用Meta的客户端
+## 使用 Meta 的客户端
 
 #### Windows：
 
@@ -30,7 +30,7 @@
 
 [**OpenClash**](https://github.com/vernesong/OpenClash)
 
-#### Merlin (KoolCenter 固件/paldier SWRT固件):
+#### Merlin (KoolCenter 固件/paldier SWRT 固件）:
 
 [**merlinclashcat**](https://t.me/merlinclashcat)
 
