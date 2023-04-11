@@ -31,7 +31,6 @@ theme:
         name: Switch to system preference
 
 
-
 nav:
   - 简介: index.md
   - 支持clash.meta的工具: client.md
