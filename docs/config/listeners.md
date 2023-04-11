@@ -151,6 +151,6 @@ listeners:
 !!! note
 
     * proxy 如果不为空，则将该入站流量交由指定[proxy](../proxies/)处理
-    * rule 默认使用规则 rules，如果未找到 [sub-rule](./rules 配置/sub-rule.md) 则直接使用 rules
+    * rule 默认使用规则 rules，如果未找到 [sub-rule](./rules/sub-rule.md) 则直接使用 rules
 
 
