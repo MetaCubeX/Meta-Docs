@@ -15,5 +15,5 @@ experimental:
 ```
 
 {% hint style="danger" %}
-本文内容只展示Meta专属特性，全部基础配置内容请参阅 [**完整示例**](broken-reference) ，或者请查阅 [**Clash Wiki** ](https://lancellc.gitbook.io/clash/clash-config-file/general)。
+本文内容只展示Meta专属特性,全部基础配置内容请参阅 [**完整示例**](broken-reference) ,或者请查阅 [**Clash Wiki** ](https://lancellc.gitbook.io/clash/clash-config-file/general)。
 

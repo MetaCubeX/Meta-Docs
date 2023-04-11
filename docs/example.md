@@ -142,7 +142,7 @@ proxy-groups:
 
   - {name: 其他, <<: *pr}
 
-#分隔，下面是地区分组
+#分隔,下面是地区分组
   - {name: 香港, <<: *use,filter: "(?i)港|hk|hongkong|hong kong"}
 
   - {name: 台湾, <<: *use, filter: "(?i)台|tw|taiwan"}

@@ -53,7 +53,7 @@ dns:
 
 可选值 `true/false`
 
-是否启用,如为false，则使用系统dns解析
+是否启用,如为false,则使用系统dns解析
 
 ```yaml
 dns:

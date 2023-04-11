@@ -32,11 +32,14 @@ theme:
 
 
 nav:
-  - 简介: index.md
-  - 支持clash.meta的工具: client.md
-  - 配置示例: example.md
+  - 简介: 
+    - index.md
+  - 支持clash.meta的工具: 
+    - client.md
+  - 配置示例: 
+    - example.md
   - 配置详解: 
-    - config/grammar.md
+    - config/index.md
     - 全局配置: config/general.md
     - tun: config/tun.md
     - dns:
