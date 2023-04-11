@@ -2,6 +2,7 @@
 
 [**Clash.Meta**](https://github.com/MetaCubeX/Clash.Meta/tree/Meta) **是一个基于开源** [**Clash**](https://github.com/Dreamacro/clash) **项目的二次开发版本，增加了一些独有特性！**
 
+文档仍在修订中，欢迎[PR](https://github.com/MetaCubeX/Meta-Docs/)。
 
 **使用 Clash.Meta Kernel 前，请悉知：**
 
