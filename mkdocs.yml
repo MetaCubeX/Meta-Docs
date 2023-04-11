@@ -46,7 +46,7 @@ markdown_extensions:
   - pymdownx.superfences 
   - toc:
       permalink: true
-      toc_depth: 2
+      toc_depth: 1
   - admonition
   - pymdownx.details
   - pymdownx.superfences
