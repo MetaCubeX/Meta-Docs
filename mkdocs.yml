@@ -36,14 +36,13 @@ nav:
   - 支持clash.meta的工具: client.md
   - 配置示例: example.md
   - 配置详解: 
-    - grammar.md
-    - 配置:
-      - general: config/general.md
-      - tun: config/tun.md
-      - dns:
-        - config/dns/dns.md
-        - hosts: config/dns/hosts.md
-        - 域名嗅探: config/dns/sniffer.md
+    - config/grammar.md
+    - general: config/general.md
+    - tun: config/tun.md
+    - dns:
+      - config/dns/dns.md
+      - hosts: config/dns/hosts.md
+      - 域名嗅探: config/dns/sniffer.md
     - 代理:
       - config/proxies/proxies.md
       - http: config/proxies/http.md
