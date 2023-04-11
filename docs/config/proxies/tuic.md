@@ -1,6 +1,6 @@
 # tuic
 
-```
+```yaml
 - name: tuic
   server: www.example.com
   port: 10443
