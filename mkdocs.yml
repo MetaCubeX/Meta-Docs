@@ -7,13 +7,23 @@ theme:
     - navigation.expand
     - navigation.path
     - navigation.indexes
+    - navigation.tracking
     - toc.follow
+    - toc.integrate
+    - navigation.top
     # - navigation.tabs
-  nav:
-    - Home: index.md
-    - Yaml: yaml.md
-    - example: example.md
-  include_nav: '**'
+  palette:
+    scheme: default
+    primary: white
+    accent: deep purple
+
+
+# nav:
+#   - Home: index.md
+#   - example: example.md
+#   - Yaml: yaml.md
+#   - Used: /used/
+#   - Config: /config/
 
 
 markdown_extensions:
@@ -22,6 +32,14 @@ markdown_extensions:
   - pymdownx.superfences 
   - toc:
       permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
 
 plugins:
   - search

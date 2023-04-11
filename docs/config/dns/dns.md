@@ -157,9 +157,9 @@ default-nameserver:
   "geosite:private,apple": [https://doh.pub/dns-query, https://dns.alidns.com/dns-query]
 </code></pre>
 
-{% hint style="info" %}
-`使用geosite时,应当使用引号包裹`
-{% endhint %}
+!!! note
+    使用geosite时,应当使用引号包裹
+
 
 ### nameserver
 

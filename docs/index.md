@@ -1,6 +1,5 @@
 # 简介
 
-
 [**Clash.Meta**](https://github.com/MetaCubeX/Clash.Meta/tree/Meta) **是一个基于开源** [**Clash**](https://github.com/Dreamacro/clash) **项目的二次开发版本，增加了一些独有特性！**
 
 
@@ -11,7 +10,7 @@
 > * 本 Wiki 基于最新的 [**Meta Alpha**](https://github.com/MetaCubeX/Clash.Meta/tree/Alpha) 分支介绍，如果您的 Meta 低于此版本，可能会有部分功能不支持；
 > * Meta 核心支持所有原开源核心的全部特性，支持原 Clash Premium 核心部分特性。
 
-### Clash.Meta 主要特性：
+### Clash.Meta 主要特性
 
 #### **代理模块：**
 
@@ -25,7 +24,7 @@
 * Relay 代理链支持 UDP over TCP
 * TCP 连接并发
 
-#### 规则模块：
+#### 规则模块
 
 * 支持规则 GEOSITE
 * 支持入站类型规则 IN-TYPE
@@ -41,7 +40,7 @@
 * 支持 GeoSite 延迟加载 （无 Geosite 规则，getsite.dat 不下载）
 * GEOIP / GEOSITE 数据库基于 Loyalsoldier/v2ray-rules-dat
 
-#### DNS 模块：
+#### DNS 模块
 
 * 支持 Sniffer 域名嗅探器
 * 支持 Fallback-Filter 使用 Geosite
@@ -50,7 +49,7 @@
 * 支持使用 HTTP/3
 * 支持DNS over QUIC
 
-#### TUN 模块：
+#### TUN 模块
 
 * 支持 macOS、Linux 和 Windows
 * 内置 iptables，无需手动配置
