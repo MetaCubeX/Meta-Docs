@@ -37,7 +37,7 @@ nav:
   - 配置示例: example.md
   - 配置详解: 
     - config/grammar.md
-    - general: config/general.md
+    - 全局配置: config/general.md
     - tun: config/tun.md
     - dns:
       - config/dns/dns.md
