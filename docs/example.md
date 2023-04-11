@@ -8,7 +8,7 @@
 
 [https://github.com/MetaCubeX/Clash.Meta/blob/Meta/docs/config.yaml](https://github.com/MetaCubeX/Clash.Meta/blob/Meta/docs/config.yaml)
 
-# 懒人配置
+## 懒人配置
 
 proxy-providers写订阅就能用了(理论上)
 
