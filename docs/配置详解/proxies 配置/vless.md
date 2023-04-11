@@ -6,7 +6,7 @@
 
 Meta增加了Vless协议支持，具体格式如下：
 
-#### <mark style="color:blue;">VLESS-xtls-rprx-vision</mark>
+#### VLESS-xtls-rprx-vision
 
 ```yaml
   - name: "vless-vision"
@@ -24,7 +24,7 @@ Meta增加了Vless协议支持，具体格式如下：
     # skip-cert-verify: true
 ```
 
-#### <mark style="color:blue;">**VLESS-reality-vision**</mark>
+#### **VLESS-reality-vision**
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>- name: "vless-reality-vision"
 </strong>  type: vless
@@ -42,7 +42,7 @@ Meta增加了Vless协议支持，具体格式如下：
   client-fingerprint: chrome # cannot be empty
 </code></pre>
 
-#### <mark style="color:blue;">**VLESS-reality-grpc**</mark>
+#### **VLESS-reality-grpc**
 
 ```
 - name: "vless-reality-grpc"
@@ -64,7 +64,7 @@ Meta增加了Vless协议支持，具体格式如下：
     short-id: 10f897e26c4b9478
 ```
 
-#### <mark style="color:blue;">VLESS-TCP</mark>
+#### VLESS-TCP
 
 ```yaml
 - name: "vless-tcp"
@@ -79,7 +79,7 @@ Meta增加了Vless协议支持，具体格式如下：
 
 ```
 
-#### <mark style="color:blue;">VLESS-WS</mark>
+#### VLESS-WS
 
 
 

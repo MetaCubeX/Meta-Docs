@@ -21,6 +21,6 @@ hosts域名支持通配,例如`*.clash.dev`或`+.example.com`,别名(示例最�
 
 !!! note
     完整的的域名优先级高于使用通配符的域名
-
-例如: foo.example.com > \*.example.com > .example.com
+    
+    例如: foo.example.com > \*.example.com > .example.com
 

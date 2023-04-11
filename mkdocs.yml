@@ -8,10 +8,11 @@ theme:
     - navigation.path
     - navigation.indexes
     - navigation.tracking
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
     - toc.follow
     - toc.integrate
-    - navigation.top
-    # - navigation.tabs
   palette:
       # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -45,6 +46,7 @@ markdown_extensions:
   - pymdownx.superfences 
   - toc:
       permalink: true
+      toc_depth: 2
   - admonition
   - pymdownx.details
   - pymdownx.superfences

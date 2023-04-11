@@ -6,7 +6,7 @@ description: 使用流量入站，可以使 Clash.Meta 充当服务器。
 
 
 
-## <mark style="color:blue;">局域网入站</mark>
+## 局域网入站
 
 用于监听局域网流量的入站，适用于无加密传输：
 
@@ -102,7 +102,7 @@ listeners:
     # - com.android.captiveportallogin
 ```
 
-## <mark style="color:blue;">互联网入站</mark>
+## 互联网入站
 
 用于加密传输流量的入站如下：
 
@@ -151,6 +151,6 @@ listeners:
 !!! note
 
     * proxy 如果不为空，则将该入站流量交由指定[proxy](../proxies/)处理
-    * rule 默认使用规则 rules，如果未找到 [sub-rule](../rules/sub-rule.md) 则直接使用 rules
+    * rule 默认使用规则 rules，如果未找到 [sub-rule](./rules 配置/sub-rule.md) 则直接使用 rules
 
 

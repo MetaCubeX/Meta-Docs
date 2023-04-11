@@ -2,7 +2,7 @@
 description: clash的dns模块配置
 ---
 
-# DNS
+# DNS 各项配置
 
 ## 示例
 
