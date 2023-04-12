@@ -1,4 +1,4 @@
-# socks
+# SOCKS
 
 ```
 - name: "socks"

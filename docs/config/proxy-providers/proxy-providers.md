@@ -1,12 +1,12 @@
 ---
-description: 用户可以单独将一些代理放入特定文件中,通过引用该文件,用户可以快速将这些相同的代理填充到不同的策略组中
+description: 用户可以单独将一些代理放入特定文件中，通过引用该文件，用户可以快速将这些相同的代理填充到不同的策略组中
 ---
 
 # 代理集合
 
 ## 示例
 
-```
+```yaml
 proxy-providers:
   provider1:
     type: http
@@ -29,11 +29,11 @@ proxy-providers:
 
 ### name
 
-如`provider1`,为provider的name,name不能重复
+如`provider1`, 为 provider 的 name,name 不能重复
 
 ### type
 
-provider类型,可选`http/file`
+provider 类型，可选`http/file`
 
 ### url
 
@@ -41,24 +41,35 @@ provider类型,可选`http/file`
 
 ### path
 
-文件路径,不可重复
+文件路径，不可重复
 
 ### interval
 
-更新provider的时间,单位为秒
+更新 provider 的时间，单位为秒
 
 ### health-check
 
-健康检查(测试延迟)
+健康检查（测试延迟）
 
 #### enable
 
-是否启用,可选 `true/false`
+是否启用，可选 `true/false`
 
 #### url
 
-健康检查地址,推荐为204地址,以获得更准确的延迟
+健康检查地址，推荐使用以下地址之一：
+
+Cloudflare:
+```
+https://cp.cloudflare.com/generate_204
+```
+
+Google：
+```
+http://www.gstatic.com/generate_204
+https://www.gstatic.com/generate_204
+```
 
 #### interval
 
-健康检查间隔时间,单位为秒
+健康检查间隔时间，单位为秒

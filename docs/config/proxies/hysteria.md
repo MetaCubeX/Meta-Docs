@@ -1,4 +1,4 @@
-# hysteria
+# Hysteria
 
 ```
 - name: "hysteria"

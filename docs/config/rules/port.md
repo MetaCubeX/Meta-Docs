@@ -1,13 +1,13 @@
 # 端口规则
 
-## **`DST-PORT`**
+## **DST-PORT**
 
 目标端口规则,匹配请求的目标端口
 
 <pre><code><strong>DST-PORT,22,DIRECT
 </strong></code></pre>
 
-## `SRC-PORT`
+## **SRC-PORT**
 
 `来源端口规则,`匹配请求来源的端口
 

@@ -1,4 +1,4 @@
-# wg
+# Wireguard
 
 ```
   - name: "wg"

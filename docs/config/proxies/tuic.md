@@ -1,4 +1,4 @@
-# tuic
+# Tuic
 
 ```yaml
 - name: tuic

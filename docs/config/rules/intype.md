@@ -13,5 +13,4 @@ IN-TYPE,INNER,proxy
 HTTP/SOCKS/TUN/TPROXY/REDIR/INNER
 
 !!! note
-    INNER 为providers的下载请求
-
+    INNER 为 providers 的下载请求

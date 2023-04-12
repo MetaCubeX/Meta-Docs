@@ -4,7 +4,7 @@ description: 有三种基于域名的规则,如果请求是域名,匹配IP规则
 
 # IP规则
 
-## **`IP-CIDR&IP-CIDR6`**
+## **IP-CIDR&IP-CIDR6**
 
 IP规则,请求的匹配指定的IP范围
 
@@ -25,7 +25,7 @@ IP-CIDR6,2620:0:2d0:200::7/32,auto
 IP-CIDR,127.0.0.1/8,DIRECT,no-resolve
 ```
 
-## **`GEOIP`**
+## **GEOIP**
 
 国家IP代码规则,匹配集合内相应的IP范围
 
@@ -42,7 +42,7 @@ GEOIP,lan,DIRECT
 GEOIP,lan,DIRECT,no-resolve
 ```
 
-## `SRC-IP-CIDR`
+## **SRC-IP-CIDR**
 
 来源IP规则,匹配请求的客户端IP地址
 

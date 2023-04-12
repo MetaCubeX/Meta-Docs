@@ -8,7 +8,7 @@ description: 与或非逻辑判断
 
 规则内的条件都必须满足
 
-示例为匹配baidu.com域名并且网络类型为tcp的请求 直连
+示例为匹配 `baidu.com` 域名并且网络类型为 tcp 的请求 直连
 
 ```
 AND,((DOMAIN,baidu.com),(NETWORK,tcp)),DIRECT
@@ -18,7 +18,7 @@ AND,((DOMAIN,baidu.com),(NETWORK,tcp)),DIRECT
 
 规则内的条件只需满足一项即可
 
-示例为域名关键词为pcdn或域名关键词为stun的请求 拦截
+示例为域名关键词为 pcdn 或域名关键词为 stun 的请求 拦截
 
 ```
 OR,((DOMAIN-KEYWORD,pcdn),(DOMAIN-KEYWORD,stun)),REJECT
@@ -28,7 +28,7 @@ OR,((DOMAIN-KEYWORD,pcdn),(DOMAIN-KEYWORD,stun)),REJECT
 
 必须为规则内不包含的条件
 
-示例为不匹配baidu.com域名的请求走proxy节点/策略组
+示例为不匹配 baidu.com 域名的请求走 proxy 节点/策略组
 
 ```
 NOT,((DOMAIN,baidu.com)),PROXY
@@ -36,7 +36,7 @@ NOT,((DOMAIN,baidu.com)),PROXY
 
 ## no-resolve
 
-ip类规则可用no-resolve,需书写在括号内
+ip 类规则可用 no-resolve, 需书写在括号内
 
 关于 [no-resolve](ipcidr.md#no-resolve)
 
@@ -49,7 +49,6 @@ rules:
 
 !!! note
     逻辑判断规则支持多层嵌套，注意括号的用法
-
 
 |      支持的规则类别     |
 | :--------------: |

@@ -1,2 +1,2 @@
-# ssr
+# ShadowsocksR
 

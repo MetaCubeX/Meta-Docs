@@ -12,13 +12,13 @@ theme:
     - navigation.tabs
     - navigation.sections
     - toc.follow
-    - toc.integrate
+    # - toc.integrate
   palette:
       # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default 
       primary: white
-      accent: deep purple
+      accent: blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -26,6 +26,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
+      accent: red
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
@@ -41,24 +42,27 @@ nav:
   - 配置详解: 
     - config/index.md
     - 全局配置: config/general.md
-    - tun: config/tun.md
-    - dns:
+    - Tun配置: config/tun.md
+    - DNS配置:
       - config/dns/dns.md
       - hosts: config/dns/hosts.md
       - 域名嗅探: config/dns/sniffer.md
-    - 代理:
+    - 流量入站: config/listeners.md
+    - 隧道: config/tunnels.md
+    - 实验性: config/test.md
+    - 代理配置:
       - config/proxies/proxies.md
-      - http: config/proxies/http.md
-      - socks: config/proxies/socks.md
-      - ss: config/proxies/ss.md
-      - ssr: config/proxies/ssr.md
+      - HTTP: config/proxies/http.md
+      - SOCKS: config/proxies/socks.md
+      - Shadowsocks: config/proxies/ss.md
+      - ShadowsocksR: config/proxies/ssr.md
       - vmess: config/proxies/vmess.md
       - vless: config/proxies/vless.md
       - trojan: config/proxies/trojan.md
       - hysteria: config/proxies/hysteria.md
-      - tuic: config/proxies/tuic.md
-      - wg: config/proxies/wg.md
-    - 代理策略:
+      - Tuic: config/proxies/tuic.md
+      - Wireguard: config/proxies/wg.md
+    - 代理组配置:
       - config/proxy-groups/proxy-groups.md
       - 内置策略: config/proxy-groups/built-in.md
       - 手动选择: config/proxy-groups/select.md
@@ -67,13 +71,13 @@ nav:
       - 负载均衡: config/proxy-groups/load-balance.md
       - 链式代理: config/proxy-groups/relay.md
       - 指定接口以及路由标记: config/proxy-groups/interface-name-and-routing-mark.md
-    - 代理集合:
+    - 代理集合配置:
       - config/proxy-providers/proxy-providers.md
       - 代理集合内容: config/proxy-providers/content.md
       - 引用代理集合: config/proxy-providers/use.md
       - 筛选代理集合: config/proxy-providers/filter.md
       - 健康检查: config/proxy-providers/health-check.md
-    - 规则:
+    - 规则配置:
       - config/rules/rules.md
       - 域名规则: config/rules/domain.md
       - IP规则: config/rules/ipcidr.md
@@ -85,11 +89,7 @@ nav:
       - 规则集合: config/rules/rule-provider.md
       - 子规则: config/rules/sub-rule.md
       - 最终匹配: config/rules/match.md
-    - 规则集合: config/rule-providers.md
-    - 子规则: config/sub-rules.md
-    - 流量入站: config/listeners.md
-    - 隧道: config/tunnels.md
-    - 实验性: config/test.md
+      - 子规则: config/sub-rules.md
 
 
 

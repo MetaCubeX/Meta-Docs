@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+#   - toc
+---
 # 支持 Clash.Meta 的工具
 
 ## 在线面板
