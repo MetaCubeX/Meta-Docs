@@ -39,7 +39,7 @@ theme:
 
 nav:
   - 简介: index.md
-  - 支持 Clash.Meta 的工具: client/index.md
+  - 支持clash.meta的工具: client/index.md
   - 配置示例: example/index.md
   - 配置详解: 
     - config/index.md
@@ -61,7 +61,7 @@ nav:
       - hysteria: config/proxies/hysteria.md
       - Tuic: config/proxies/tuic.md
       - Wireguard: config/proxies/wg.md
-    - 代理组配置:
+    - 策略组配置:
       - config/proxy-groups/index.md
       - 内置策略: config/proxy-groups/built-in.md
       - 手动选择: config/proxy-groups/select.md
@@ -92,6 +92,7 @@ nav:
     - 流量入站: config/listeners.md
     - 流量隧道: config/tunnels.md
     - 实验性: config/test.md
+  - API: api/index.md
 
 
 

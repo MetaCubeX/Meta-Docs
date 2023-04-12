@@ -2,22 +2,33 @@
 
 ```yaml
 proxy-providers:
-  hk:
+  provider1:
     type: http
-    path: ./meta.yaml
-    url: http://example.com/files/meta.yaml
+    path: ./meta1.yaml
+    url: http://example.com/files/meta1.yaml
+    interval: 3600
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+  provider2:
+    type: http
+    path: ./meta2.yaml
+    url: http://example.com/files/meta2.yaml
     interval: 3600
     filter: "(?i)港|hk|hongkong|hong kong"
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-      
+  
  proxy-groups: 
   - name: Proxy
     type: select
     use:
-      - hk
+      - provider1
+      - provider2
+    filter: "(?i)港|hk|hongkong|hong kong"
 ```
 
 ## filter
