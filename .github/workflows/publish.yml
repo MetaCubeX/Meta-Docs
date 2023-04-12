@@ -3,7 +3,10 @@ on:
   push:
     branches:
       - main
-
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+  
 jobs:
   build:
     name: Deploy docs
@@ -17,8 +20,8 @@ jobs:
         # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CUSTOM_DOMAIN: optionaldomain.com
+          CUSTOM_DOMAIN: docs.metacubex.one
           CONFIG_FILE: ./mkdocs.yml
           EXTRA_PACKAGES: build-base
           # GITHUB_DOMAIN: github.myenterprise.com
-          REQUIREMENTS: folder/requirements.txt
+          # REQUIREMENTS: folder/requirements.txt
