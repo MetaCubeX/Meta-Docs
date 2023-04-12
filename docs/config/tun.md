@@ -48,7 +48,7 @@ enable: true
 
 ### stack
 
-tun模式堆栈,如无使用问题,建议使用 `system` 栈;MacOS 用户推荐 `gvisor`栈,IOS无法使用`system`栈
+tun模式堆栈,如无使用问题,建议使用 `system` 栈;MacOS 用户推荐 `gvisor`栈,IOS无法使用 `system`栈
 
 可选： `system/gvisor/lwip`
 
@@ -57,12 +57,11 @@ stack: system
 ```
 
 !!! note "协议栈之间的区别"
-    
+
     * system 使用系统协议栈,可以提供更稳定/全面的 tun 体验,且占用相对其他堆栈更低。
     * gvisor 通过在用户空间中实现网络协议栈,可以提供更高的安全性和隔离性,同时可以避免操作系统内核和用户空间之间的切换,从而在特定情况下具有更好的网络处理性能。
     * lwip 即 lightweight IP,是一款专为嵌入式系统设计的TCP/IP协议栈,采用了单线程的事件驱动模型,性能表现可能不如`system/gvisor`协议栈。
     * [性能测试](tun.md#tun-de-xie-yi-zhan-wang-luo-hui-huan-ce-shi)
-
 
 ### device
 
@@ -109,7 +108,6 @@ ANDROID 如开启私人dns则无法自动劫持dns请求
 
 LINUX 如果 systemd-resolved 开启无法自动劫持dns请求
 
-
 ### strict\_route
 
 严格路由,它可以防止地址泄漏,并使 DNS 劫持在 Android 和使用 systemd-resolved 的 Linux 上工作,但你的设备将无法其他设备被访问
@@ -122,7 +120,7 @@ strict_route: true
 
 ### mtu
 
-最大传输单元, 值为`1-65534`, 会影响极限状态下的速率,一般用户默认即可。
+最大传输单元, 值为 `1-65534`, 会影响极限状态下的速率,一般用户默认即可。
 
 ```
 mtu: 9000
@@ -130,7 +128,7 @@ mtu: 9000
 
 ### inet4\_route\_address
 
-启用`auto_route`时使用自定义ipv4路由而不是默认路由,一般无需配置。
+启用 `auto_route`时使用自定义ipv4路由而不是默认路由,一般无需配置。
 
 ```
 inet4_route_address:
@@ -140,7 +138,7 @@ inet4_route_address:
 
 ### inet6\_route\_address
 
-启用`auto_route`时使用自定义ipv6路由而不是默认路由,一般无需配置。
+启用 `auto_route`时使用自定义ipv6路由而不是默认路由,一般无需配置。
 
 ```
 inet6_route_address:
@@ -160,8 +158,7 @@ inet6_route_address:
 限制被路由用户,默认不限制。
 
 !!! note
-    UID 规则仅在Linux下被支持,并且需要`auto_route`
-
+    UID 规则仅在Linux下被支持,并且需要 `auto_route`
 
 ```
 include_uid:
@@ -199,13 +196,12 @@ exclude_uid_range:
 
 限制被路由的 Android 用户
 
-!!! note  
+!!! note
     Android用户和应用规则仅在Android下被支持,并且需要`auto_route`
 
-
 | 常用用户 | ID  |
-| ---- | --- |
-| 机主   | 0   |
+| -------- | --- |
+| 机主     | 0   |
 | 手机分身 | 10  |
 | 应用多开 | 999 |
 
@@ -235,8 +231,8 @@ exclude_package:
 
 ## Tun 的协议栈网络回环测试
 
-从上到下分别为`system/gvisor/lwip`,仅供参考,平台为linux,Windows和MacOS可能会有差异
+从上到下分别为 `system/gvisor/lwip`,仅供参考,平台为linux,Windows和MacOS可能会有差异
 
 CPU为amd r7 1700 3.6Ghz,内存8G 3600mhz C16,硬盘为PM981A
 
-<figure><img src="../.gitbook/assets/iperf1.png" alt=""><figcaption></figcaption></figure>
+![1681296875141](image/tun/1681296875141.png)
