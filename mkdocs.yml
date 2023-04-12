@@ -39,7 +39,7 @@ theme:
 
 nav:
   - 简介: index.md
-  - 支持clash.meta的工具: client/index.md
+  - 支持 Clash.Meta 的工具: client/index.md
   - 配置示例: example/index.md
   - 配置详解: 
     - config/index.md
