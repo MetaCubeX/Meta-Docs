@@ -49,7 +49,7 @@ dns:
       - '+.youtube.com'
 ```
 
-### enable
+## enable
 
 可选值 `true/false`
 
@@ -60,7 +60,7 @@ dns:
   enable: true
 ```
 
-### prefer-h3
+## prefer-h3
 
 可选值 `true/false`
 
@@ -70,7 +70,7 @@ dns:
 prefer-h3: true
 ```
 
-### listen
+## listen
 
 dns 服务监听
 
@@ -78,7 +78,7 @@ dns 服务监听
 listen: 0.0.0.0:1053
 ```
 
-### IPV6
+## IPV6
 
 可选值 `true/false`
 
@@ -88,7 +88,7 @@ listen: 0.0.0.0:1053
 ipv6: true
 ```
 
-### enhanced-mode
+## enhanced-mode
 
 可选值 `fake-ip / redir-host`
 
@@ -98,7 +98,7 @@ clash 的 dns 处理模式
 enhanced-mode: fake-ip
 ```
 
-### fake-ip-range
+## fake-ip-range
 
 格式为 `ip/掩码`
 
@@ -108,7 +108,7 @@ fakeip 下的 IP 段设置，tun 网卡的默认 ip 也使用此值
 fake-ip-range: 198.18.0.1/16
 ```
 
-### fake-ip-filter
+## fake-ip-filter
 
 fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
@@ -118,7 +118,7 @@ fake-ip-filter:
   - localhost.ptlogin2.qq.com
 ```
 
-### use-hosts
+## use-hosts
 
 可选值 `true/false`
 
@@ -128,7 +128,7 @@ fake-ip-filter:
 use-hosts: true
 ```
 
-### default-nameserver
+## default-nameserver
 
 默认 dns, 用于解析 DNS 服务器 的域名
 
@@ -142,7 +142,7 @@ default-nameserver:
   - https://223.5.5.5/dns-query
 ```
 
-### nameserver-policy
+## nameserver-policy
 
 指定域名查询的解析服务器，可使用 geosite, 优先于`nameserver/fallback 查询`
 
@@ -165,7 +165,7 @@ nameserver-policy:
 
 
 
-### nameserver
+## nameserver
 
 默认的域名解析服务器，如不配置 `fallback/proxy-server-nameserver` , 则所有域名都由 nameserver 解析
 
@@ -175,7 +175,7 @@ nameserver:
   - https://dns.alidns.com/dns-query
 ```
 
-### proxy-server-nameserver
+## proxy-server-nameserver
 
 代理节点域名解析服务器，仅用于解析代理节点的域名
 
@@ -184,7 +184,7 @@ proxy-server-nameserver:
  - https://doh.pub/dns-query
 ```
 
-### fallback
+## fallback
 
 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信
 
@@ -196,17 +196,17 @@ fallback:
   - https://1.0.0.1/dns-query
 ```
 
-### fallback-filter
+## fallback-filter
 
 后备域名解析服务器筛选，满足条件的将使用`fallback`结果或只使用`fallback`解析
 
-#### geoip
+### geoip
 
 可选值为 `true/false`
 
 是否启用 fallback filter
 
-#### geoip-code
+### geoip-code
 
 可选值为 国家缩写，默认值为 `CN`
 
@@ -214,19 +214,19 @@ fallback:
 
 `geoip-code` 配置的国家的结果会直接采用，否则将采用`fallback`结果
 
-#### geosite
+### geosite
 
 可选值为对于的 geosite 内包含的集合
 
 geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用`fallback`解析，不去使用`nameserver`
 
-#### ipcidr
+### ipcidr
 
 书写内容为 `IP/掩码`
 
 这些网段的结果会被视为污染，`nameserver`解析出这些结果时将会采用`fallback`的解析结果
 
-#### domain
+### domain
 
 这些域名被视为已污染，匹配到这些域名，会直接使用`fallback`解析，不去使用`nameserver`
 
@@ -248,7 +248,7 @@ fallback-filter:
 
 此部分可用于所有的 dns 服务器
 
-### dns 经过代理查询
+## DNS 经过代理查询
 
 书写格式为 dns 服务器后 `#策略组或节点`
 
@@ -259,7 +259,7 @@ nameserver:
   - 'tls://dns.google#proxy'
 ```
 
-### 强制 http/3
+## 强制 http/3
 
 强制 gttp/3, 与`perfer-h3`无关，强制开启 doh 的 http/3 支持，若不支持将无法使用
 
@@ -268,7 +268,7 @@ nameserver:
   - 'tls://dot.pub#h3=true'
 ```
 
-### 指定 DNS 出口网卡
+## 指定 DNS 出口网卡
 
 ```yaml
 nameserver:

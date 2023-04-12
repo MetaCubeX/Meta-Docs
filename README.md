@@ -17,3 +17,7 @@ mkdocs serve
 
 https://squidfunk.github.io/mkdocs-material/setup/   
 https://squidfunk.github.io/mkdocs-material/reference/
+
+###
+
+推荐使用 [Pangu-Markdown](https://marketplace.visualstudio.com/items?itemName=xlthu.Pangu-Markdown) 对文档进行格式化。
