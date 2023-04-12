@@ -14,7 +14,7 @@
     reserved: "U4An"
     # 数组格式也是合法的
     # reserved: [209,98,59]
-    # 如果peers不为空，该段落中的allowed_ips不可为空；前面段落的server,port,ip,ipv6,public-key,pre-shared-key均会被忽略，但private-key会被保留且只能在顶层指定
+    # 如果peers不为空,该段落中的allowed_ips不可为空；前面段落的server,port,ip,ipv6,public-key,pre-shared-key均会被忽略,但private-key会被保留且只能在顶层指定
     # peers:
     #   - server: 162.159.192.1
     #     port: 2480

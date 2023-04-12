@@ -1,12 +1,8 @@
----
-description: 全局配置定义了 代理端口、允许局域网、运行模式、日志级别、外部控制器、外部用户界面、身份验证和实验性功能等
----
-
 # 全局配置
 
 ## 代理端口
 
-**端口是计算机或路由交换机内部的一部分，计算机按照 INTERNET 传输层 TCP/IP 协议进行通信，不同的协议对应不同的端口**
+**端口是计算机或路由交换机内部的一部分,计算机按照 INTERNET 传输层 TCP/IP 协议进行通信,不同的协议对应不同的端口**
 
 http(s)代理端口
 
@@ -135,7 +131,7 @@ API 监听地址,你可以将127.0.0.1修改为0.0.0.0来监听所有IP
 external-controller: 127.0.0.1:9090
 ```
 
-HTTPS-API 监听地址，需要配置 tls 部分配置文件
+HTTPS-API 监听地址,需要配置 tls 部分配置文件
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>external-controller-tls: 127.0.0.1:9443
 </strong></code></pre>
@@ -165,7 +161,7 @@ profile:
   store-selected: true
   # 储存 API 对策略组的选择,以供下次启动时使用
   store-fake-ip: true
-  # 储存fakeip映射表,域名再次发生连接时，使用原有映射地址
+  # 储存fakeip映射表,域名再次发生连接时,使用原有映射地址
 ```
 
 ## 出站接口
@@ -190,15 +186,15 @@ routing-mark: 6666
 
 ```yaml
 tls:
-  certificate: string # 证书 PEM 格式，或者 证书的路径
-  private-key: string # 证书对应的私钥 PEM 格式，或者私钥路径
+  certificate: string # 证书 PEM 格式,或者 证书的路径
+  private-key: string # 证书对应的私钥 PEM 格式,或者私钥路径
 ```
 
 ## **全局客户端指纹**
 
-全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint。
+全局 TLS 指纹,优先低于 proxy 内的 client-fingerprint。
 
-目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP ，支持协议有 VLESS，Vmess 和 trojan.
+目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP ,支持协议有 VLESS,Vmess 和 trojan.
 
 ```yaml
 global-client-fingerprint: chrome
@@ -250,8 +246,8 @@ geox-url:
   mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
 
 tls:
-  certificate: string # 证书 PEM 格式，或者 证书的路径
-  private-key: string # 证书对应的私钥 PEM 格式，或者私钥路径
+  certificate: string # 证书 PEM 格式,或者 证书的路径
+  private-key: string # 证书对应的私钥 PEM 格式,或者私钥路径
   custom-certifactes:
     - |
       -----BEGIN CERTIFICATE-----

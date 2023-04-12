@@ -11,8 +11,8 @@
   # alpn:
   #   - h3
   protocol: udp # 支持 udp/wechat-video/faketcp
-  up: "30 Mbps" # 若不写单位，默认为 Mbps
-  down: "200 Mbps" # 若不写单位，默认为 Mbps
+  up: "30 Mbps" # 若不写单位,默认为 Mbps
+  down: "200 Mbps" # 若不写单位,默认为 Mbps
   # sni: server.com
   # skip-cert-verify: false
   # recv_window_conn: 12582912 # 将会在未来某个时候删除
@@ -24,5 +24,5 @@
   # ca-str: "xyz"
   # disable_mtu_discovery: false
   # fingerprint: xxxx
-  # fast-open: true # 支持 TCP 快速打开，默认为 false
+  # fast-open: true # 支持 TCP 快速打开,默认为 false
 ```

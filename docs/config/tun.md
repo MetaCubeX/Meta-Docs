@@ -62,9 +62,9 @@ stack: system
 
 !!! note "协议栈之间的区别"
     
-    * system 使用系统协议栈，可以提供更稳定/全面的 tun 体验，且占用相对其他堆栈更低。
-    * gvisor 通过在用户空间中实现网络协议栈，可以提供更高的安全性和隔离性，同时可以避免操作系统内核和用户空间之间的切换，从而在特定情况下具有更好的网络处理性能。
-    * lwip 即 lightweight IP，是一款专为嵌入式系统设计的TCP/IP协议栈，采用了单线程的事件驱动模型，性能表现可能不如`system/gvisor`协议栈。
+    * system 使用系统协议栈,可以提供更稳定/全面的 tun 体验,且占用相对其他堆栈更低。
+    * gvisor 通过在用户空间中实现网络协议栈,可以提供更高的安全性和隔离性,同时可以避免操作系统内核和用户空间之间的切换,从而在特定情况下具有更好的网络处理性能。
+    * lwip 即 lightweight IP,是一款专为嵌入式系统设计的TCP/IP协议栈,采用了单线程的事件驱动模型,性能表现可能不如`system/gvisor`协议栈。
     * [性能测试](tun.md#tun-de-xie-yi-zhan-wang-luo-hui-huan-ce-shi)
 
 
@@ -78,7 +78,7 @@ device: utun0
 
 ### auto-route
 
-自动设置全局路由，可以自动将全局流量路由进入tun网卡。
+自动设置全局路由,可以自动将全局流量路由进入tun网卡。
 
 可选：`true/false`
 
@@ -134,7 +134,7 @@ mtu: 9000
 
 ### inet4\_route\_address
 
-启用`auto_route`时使用自定义ipv4路由而不是默认路由，一般无需配置。
+启用`auto_route`时使用自定义ipv4路由而不是默认路由,一般无需配置。
 
 ```
 inet4_route_address:
@@ -144,7 +144,7 @@ inet4_route_address:
 
 ### inet6\_route\_address
 
-启用`auto_route`时使用自定义ipv6路由而不是默认路由，一般无需配置。
+启用`auto_route`时使用自定义ipv6路由而不是默认路由,一般无需配置。
 
 ```
 inet6_route_address:
@@ -161,10 +161,10 @@ inet6_route_address:
 
 ### include\_uid
 
-限制被路由用户，默认不限制。
+限制被路由用户,默认不限制。
 
 !!! note
-    UID 规则仅在Linux下被支持，并且需要`auto_route`
+    UID 规则仅在Linux下被支持,并且需要`auto_route`
 
 
 ```

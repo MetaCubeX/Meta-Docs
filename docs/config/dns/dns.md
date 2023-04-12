@@ -1,5 +1,5 @@
 ---
-description: clash 的 dns 模块配置
+description: clash 的 DNS 模块配置
 ---
 
 # DNS 各项配置
@@ -53,7 +53,7 @@ dns:
 
 可选值 `true/false`
 
-是否启用，如为 false，则使用系统 dns 解析
+是否启用，如为 false，则使用系统 DNS 解析
 
 ```yaml
 dns:

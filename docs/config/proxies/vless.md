@@ -4,7 +4,7 @@
     因clash实现的问题,h2传输层不建议在clash使用,建议更换为grpc
     
 
-Meta增加了Vless协议支持，具体格式如下：
+Meta增加了Vless协议支持,具体格式如下：
 
 #### VLESS-xtls-rprx-vision
 
