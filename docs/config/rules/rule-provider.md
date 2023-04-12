@@ -14,12 +14,14 @@ rule-providers:
 ```
 
 在规则中引用
+
 ```yaml
 rules:
   - RULE-SET,google,PROXY
 ```
 
-在 [nameserver-policy](../dns/dns.md) 中引用
+在 [nameserver-policy](../dns/index.md) 中引用
+
 ```yaml
 dns:
  nameserver-policy:

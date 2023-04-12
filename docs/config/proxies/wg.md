@@ -25,3 +25,5 @@
     #     allowed_ips: ['0.0.0.0/0']
     #     reserved: [209,98,59]
 ```
+
+wireguard目前不支持在relay中使用，请使用tunnels功能模拟

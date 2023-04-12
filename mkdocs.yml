@@ -49,14 +49,14 @@ nav:
     - 全局配置: config/general.md
     - Tun配置: config/tun.md
     - DNS配置:
-      - config/dns/dns.md
+      - config/dns/index.md
       - hosts: config/dns/hosts.md
       - 域名嗅探: config/dns/sniffer.md
     - 流量入站: config/listeners.md
     - 隧道: config/tunnels.md
     - 实验性: config/test.md
     - 代理配置:
-      - config/proxies/proxies.md
+      - config/proxies/index.md
       - HTTP: config/proxies/http.md
       - SOCKS: config/proxies/socks.md
       - Shadowsocks: config/proxies/ss.md
@@ -68,7 +68,7 @@ nav:
       - Tuic: config/proxies/tuic.md
       - Wireguard: config/proxies/wg.md
     - 代理组配置:
-      - config/proxy-groups/proxy-groups.md
+      - config/proxy-groups/index.md
       - 内置策略: config/proxy-groups/built-in.md
       - 手动选择: config/proxy-groups/select.md
       - 自动选择: config/proxy-groups/url-test.md
@@ -77,13 +77,13 @@ nav:
       - 链式代理: config/proxy-groups/relay.md
       - 指定接口以及路由标记: config/proxy-groups/interface-name-and-routing-mark.md
     - 代理集合配置:
-      - config/proxy-providers/proxy-providers.md
+      - config/proxy-providers/index.md
       - 代理集合内容: config/proxy-providers/content.md
       - 引用代理集合: config/proxy-providers/use.md
       - 筛选代理集合: config/proxy-providers/filter.md
       - 健康检查: config/proxy-providers/health-check.md
     - 规则配置:
-      - config/rules/rules.md
+      - config/rules/index.md
       - 域名规则: config/rules/domain.md
       - IP规则: config/rules/ipcidr.md
       - 端口规则: config/rules/port.md

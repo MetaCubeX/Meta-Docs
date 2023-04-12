@@ -1,7 +1,6 @@
 ---
 description: clash 的 DNS 模块配置
 ---
-
 # DNS 各项配置
 
 ## 示例
@@ -144,26 +143,20 @@ default-nameserver:
 
 ## nameserver-policy
 
-指定域名查询的解析服务器，可使用 geosite, 优先于`nameserver/fallback 查询`
+指定域名查询的解析服务器，可使用 geosite, 优先于 `nameserver/fallback 查询`
 
-!!! note 
+!!! note
     **并发查询，无法保证顺序**，以下仅作为书写演示，建议根据自己需求写
 
 ```yaml
 nameserver-policy:
   'www.baidu.com': '114.114.114.114'
   '+.internal.crop.com': '10.0.0.1'
-  geosite:geolocation-!cn: [tls://8.8.4.4, https://1.0.0.1/dns-query]
-  "www.baidu.com,+.google.cn": 
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  "geosite:private,apple": 
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
+  "geosite:geolocation-!cn": [tls://8.8.4.4, https://1.0.0.1/dns-query]
+  "www.baidu.com,+.google.cn": https://doh.pub/dns-query
+  "geosite:private,apple": https://dns.alidns.com/dns-query
+  "rule-set:google": 8.8.8.8
 ```
-
-
-
 
 ## nameserver
 
@@ -188,7 +181,7 @@ proxy-server-nameserver:
 
 后备域名解析服务器，一般情况下使用境外 DNS, 保证结果可信
 
-配置`fallback`后默认启用`fallback-filter`,`geoip-code`为 cn
+配置 `fallback`后默认启用 `fallback-filter`,`geoip-code`为 cn
 
 ```yaml
 fallback:
@@ -198,7 +191,7 @@ fallback:
 
 ## fallback-filter
 
-后备域名解析服务器筛选，满足条件的将使用`fallback`结果或只使用`fallback`解析
+后备域名解析服务器筛选，满足条件的将使用 `fallback`结果或只使用 `fallback`解析
 
 ### geoip
 
@@ -212,23 +205,23 @@ fallback:
 
 除了 `geoip-code` 配置的国家 IP, 其他的 IP 结果会被视为污染
 
-`geoip-code` 配置的国家的结果会直接采用，否则将采用`fallback`结果
+`geoip-code` 配置的国家的结果会直接采用，否则将采用 `fallback`结果
 
 ### geosite
 
 可选值为对于的 geosite 内包含的集合
 
-geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用`fallback`解析，不去使用`nameserver`
+geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 `fallback`解析，不去使用 `nameserver`
 
 ### ipcidr
 
 书写内容为 `IP/掩码`
 
-这些网段的结果会被视为污染，`nameserver`解析出这些结果时将会采用`fallback`的解析结果
+这些网段的结果会被视为污染，`nameserver`解析出这些结果时将会采用 `fallback`的解析结果
 
 ### domain
 
-这些域名被视为已污染，匹配到这些域名，会直接使用`fallback`解析，不去使用`nameserver`
+这些域名被视为已污染，匹配到这些域名，会直接使用 `fallback`解析，不去使用 `nameserver`
 
 ```yaml
 fallback-filter:
@@ -248,27 +241,27 @@ fallback-filter:
 
 此部分可用于所有的 dns 服务器
 
-## DNS 经过代理查询
+### DNS 经过代理查询
 
 书写格式为 dns 服务器后 `#策略组或节点`
 
-书写规范应带引号，以防出现特殊字符，如需过代理查询，应配置`proxy-server-nameserver`, 以防出现鸡蛋问题
+书写规范应带引号，以防出现特殊字符，如需过代理查询，应配置 `proxy-server-nameserver`, 以防出现鸡蛋问题
 
 ```yaml
 nameserver:
   - 'tls://dns.google#proxy'
 ```
 
-## 强制 http/3
+### 强制 http/3
 
-强制 gttp/3, 与`perfer-h3`无关，强制开启 doh 的 http/3 支持，若不支持将无法使用
+强制 gttp/3, 与 `perfer-h3`无关，强制开启 doh 的 http/3 支持，若不支持将无法使用
 
 ```yaml
 nameserver:
   - 'tls://dot.pub#h3=true'
 ```
 
-## 指定 DNS 出口网卡
+### 指定 DNS 出口网卡
 
 ```yaml
 nameserver:

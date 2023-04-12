@@ -3,7 +3,6 @@ hide:
   - navigation
   - toc
 ---
-
 # 简介
 
 [**Clash.Meta**](https://github.com/MetaCubeX/Clash.Meta/tree/Meta) **是一个基于开源** [**Clash**](https://github.com/Dreamacro/clash) **项目的二次开发版本，增加了一些独有特性！**
@@ -61,7 +60,7 @@ hide:
 * 支持 macOS、Linux 和 Windows
 * 内置 iptables, 无需手动配置
 * 内置 Wintun 驱动程序
-* 支持 "gVisor / System" 堆栈
+* 支持 "gvisor / system / lwip" 堆栈
 
-TG 发布频道：[https://t.me/ClashMeta](https://t.me/ClashMeta)  
+TG 发布频道：[https://t.me/ClashMeta](https://t.me/ClashMeta)
 TG 讨论组：[https://t.me/MetaKernel](https://t.me/MetaKernel)
