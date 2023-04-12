@@ -61,7 +61,7 @@ a:
 
 如合并时有重复的项，则不会去合并
 
-```
+```yaml
 p: &p
   type: http
   interval: 3600
@@ -84,7 +84,7 @@ proxy-providers:
 
 等同于
 
-```
+```yaml
 proxy-providers:
   provider1:
     type: http
