@@ -9,25 +9,27 @@ Meta增加了Vless协议支持,具体格式如下：
 #### VLESS-xtls-rprx-vision
 
 ```yaml
-  - name: "vless-vision"
-    type: vless
-    server: server
-    port: 443
-    uuid: uuid
-    network: tcp
-    tls: true
-    udp: true
-    flow: xtls-rprx-vision 
-    client-fingerprint: chrome
-    # xudp: true #default
-    # fingerprint: xxxx
-    # skip-cert-verify: true
+- name: "vless-vision"
+  type: vless
+  server: server
+  port: 443
+  uuid: uuid
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision 
+  client-fingerprint: chrome
+  # xudp: true #default
+  # fingerprint: xxxx
+  # skip-cert-verify: true
 ```
 
 #### **VLESS-reality-vision**
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>- name: "vless-reality-vision"
-</strong>  type: vless
+
+```yaml
+- name: "vless-reality-vision"
+  type: vless
   server: server
   port: 443
   uuid: uuid
@@ -40,11 +42,11 @@ Meta增加了Vless协议支持,具体格式如下：
     public-key: xxx
     short-id: xxx # optional
   client-fingerprint: chrome # cannot be empty
-</code></pre>
+```
 
 #### **VLESS-reality-grpc**
 
-```
+```yaml
 - name: "vless-reality-grpc"
   type: vless
   server: server
@@ -83,8 +85,9 @@ Meta增加了Vless协议支持,具体格式如下：
 
 
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>- name: "vless-ws"
-</strong>  type: vless
+```yaml
+- name: "vless-ws"
+  type: vless
   server: server
   port: 443
   uuid: uuid
@@ -97,4 +100,4 @@ Meta增加了Vless协议支持,具体格式如下：
     path: "/"
     headers:
       Host: example.com
-</code></pre>
+```yaml
