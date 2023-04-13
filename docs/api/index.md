@@ -37,6 +37,14 @@ hide:
 
 * 获取clash版本
 
+## 缓存
+
+#### `/cache/fakeip/flush`
+
+#### 请求方法:  `POST`
+
+* 清除fakeip缓存
+
 ## 运行配置
 
 #### `/configs`
@@ -48,10 +56,37 @@ hide:
 请求方法:  `PUT`
 
 * 重新加载基本配置
+* URL需携带 `?force=true` 强制执行,必须发送数据
+* curl示例: `curl "127.0.0.1:9090/configs?force=true" -X PUT -d '{"path": "", "payload": ""}'`
 
 请求方法:  `PATCH`
 
-* 更新基本配置
+* 更新基本配置,传入需要修改的配置即可,传入的数据需以json格式传入
+* 示例: `curl 127.0.0.1:9090/configs -X PATCH -d '{"mixed-port": 7890}'`
+
+#### `/configs/geo`
+
+#### 请求方法:  `POST`
+
+* 更新GEO数据库
+* 必须发送数据,因更新后会自动重载一次配置
+* curl示例: `curl "127.0.0.1:9090/configs" -X POST -d '{"path": "", "payload": ""}'`
+
+#### `/restart`
+
+#### 请求方法:  `POST`
+
+* 重启内核
+* 必须发送数据
+* curl示例: `curl "127.0.0.1:9090/restart " -X POST -d '{"path": "", "payload": ""}'`
+
+#### `/upgrade`
+
+#### 请求方法:  `POST`
+
+* 更新内核
+* 必须发送数据,因更新后会自动重载一次配置
+* curl示例: `curl "127.0.0.1:9090/upgrade" -X POST -d '{"path": "", "payload": ""}'`
 
 ## 代理
 
@@ -101,7 +136,7 @@ hide:
 
 请求方法:  `DELETE`
 
-*  关闭特定连接
+* 关闭特定连接
 
 ## 代理集合
 
@@ -127,6 +162,12 @@ hide:
 
 * 触发特定代理集合的健康检查
 
+## 规则集合
+
+#### `/providers/rules`
+
+#### `/providers/rules/:name`
+
 ## 域名查询
 
 #### `/dns/query`
@@ -141,7 +182,6 @@ hide:
 * `type`（可选）：要查询的 DNS 记录类型(例如，A、MX、CNAME 等)
 
 示例: `GET /dns/query?name=example.com&type=A`
-
 
 ## API密钥
 
