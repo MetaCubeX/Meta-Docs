@@ -5,6 +5,12 @@ hide:
 ---
 # API说明
 
+## API密钥
+
+请求时附带  `'Authorization: Bearer secret'`  请求头,`secret` 为配置文件设置的api密钥
+
+curl示例 `curl -H 'Authorization: Bearer secret' 127.0.0.1:9090 /version`
+
 ## 日志
 
 #### `/logs`
@@ -182,7 +188,3 @@ hide:
 * `type`（可选）：要查询的 DNS 记录类型(例如，A、MX、CNAME 等)
 
 示例: `GET /dns/query?name=example.com&type=A`
-
-## API密钥
-
-请求时附带  `'Authorization: Bearer secret'`  请求头,`secret` 为配置文件设置的api密钥
