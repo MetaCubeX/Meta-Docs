@@ -7,7 +7,8 @@ flowchart TD
   B -->  I[匹配到基于域名的规则]
   IP --> DNS[使用 Clash DNS 解析域名]
   DNS --> Cache
-  Cache --> NS[使用 nameserver-policy 匹配]
+  Cache --> |Cache 未命中|NS[使用 nameserver-policy 匹配]
+  Cache --> |Cache 命中|G
   NS --> |匹配成功| G[将查询到的 IP 用于匹配 IP 规则]
   NS --> |没匹配到| F[用 nameserver/fallback 并发查询]
 
