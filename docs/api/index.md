@@ -122,3 +122,7 @@
 请求方法:  `GET`
 
 * 触发特定代理集合的健康检查
+
+## API密钥
+
+请求时附带  `'Authorization: Bearer secret'`  请求头,`secret` 为配置文件设置的api密钥
