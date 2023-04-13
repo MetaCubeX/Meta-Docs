@@ -2,7 +2,6 @@
 description: clash 的 DNS 模块配置
 ---
 # DNS 各项配置
-
 ## 示例
 
 以下的拆分说明皆是 `DNS` 下的配置项

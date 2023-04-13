@@ -16,12 +16,13 @@ socks-port: 7891
 
 ## 对象
 
-对象键值对使用冒号结构表示** key: value**, 冒号后面要加一个空格，使用缩进表示层级关系
+对象键值对使用冒号结构表示 **key: value**, 冒号后面要加一个空格，使用缩进表示层级关系
 
 #### 单行
 
 ```yaml
-tun: {enable: true, stack: system, auto-route: true, auto-detect-interface: true}
+tun:
+  { enable: true, stack: system, auto-route: true, auto-detect-interface: true }
 ```
 
 #### 多行
@@ -113,7 +114,7 @@ proxy-providers:
 在 clash 内，应当使用 \[] 来框选一个 IPV6 地址
 
 ```yaml
-[aaaa::a8aa:ff:fe09:57d8] 
+[aaaa::a8aa:ff:fe09:57d8]
 [aaaa::a8aa:ff:fe09:57d9]:853 # 带端口的 IPV6 地址
 ```
 
@@ -149,8 +150,8 @@ clash 的通配符 \* 一次只能匹配一级域名
 
 ```yaml
 fake-ip-filter:
-  - '.lan'
-  - 'xbox.*.microsoft.com'
-  - '+.xboxlive.com'
+  - ".lan"
+  - "xbox.*.microsoft.com"
+  - "+.xboxlive.com"
   - localhost.ptlogin2.qq.com
 ```
