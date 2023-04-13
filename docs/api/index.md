@@ -9,7 +9,7 @@ hide:
 
 请求时附带  `'Authorization: Bearer secret'`  请求头,`secret` 为配置文件设置的api密钥
 
-curl示例 `curl -H 'Authorization: Bearer secret' 127.0.0.1:9090 /version`
+curl示例 `curl -H 'Authorization: Bearer secret' 127.0.0.1:9090/version`
 
 ## 日志
 
