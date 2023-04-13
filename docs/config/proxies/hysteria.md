@@ -1,6 +1,6 @@
 # Hysteria
 
-```
+```yaml
 - name: "hysteria"
   type: hysteria
   server: server.com

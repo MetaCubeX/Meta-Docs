@@ -1,6 +1,6 @@
 # HTTP
 
-```
+```yaml
 - name: "http"
   type: http
   server: server

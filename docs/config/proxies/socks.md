@@ -1,6 +1,6 @@
 # SOCKS
 
-```
+```yaml
 - name: "socks"
   type: socks5
   server: server

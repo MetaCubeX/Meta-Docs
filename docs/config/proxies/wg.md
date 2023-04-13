@@ -1,6 +1,6 @@
 # Wireguard
 
-```
+```yaml
   - name: "wg"
     type: wireguard
     server: 162.159.192.1
