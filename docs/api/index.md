@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+#   - toc
+---
 # API说明
 
 ## 日志
