@@ -5,14 +5,14 @@ flowchart TD
   Start[客户端发起请求] --> rule[匹配规则]
   rule -->  Domain[匹配到基于域名的规则]
   rule --> IP[匹配到基于 IP 的规则]
-  
+
   Domain --> |域名匹配到直连规则|DNS
   IP --> DNS[Clash DNS 解析域名]
 
   
   Domain --> |域名匹配到代理规则|Remote[通过代理服务器解析域名并建立连接]
 
-  Cache --> |Cache 未命中|NS[匹配 nameserver-policy 并查询 ]
+  Cache --> |Redir-host 未命中|NS[匹配 nameserver-policy 并查询 ]
   Cache --> |Cache 命中|Get
   Cache --> |FakeIP 未命中|Remote 
 
