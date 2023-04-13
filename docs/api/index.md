@@ -89,7 +89,6 @@ hide:
 
 #### `/connections`
 
-
 请求方法:  `GET`
 
 * 获取连接信息
@@ -120,7 +119,7 @@ hide:
 
 请求方法:  `PUT`
 
-* 选择特定的代理集合
+* 更新的代理集合
 
 #### `/providers/proxies/:name/healthcheck`
 
