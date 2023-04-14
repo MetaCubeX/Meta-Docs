@@ -53,4 +53,4 @@ hide:
 
 [**Clash Tproxy Android**](https://t.me/e58695/59)
 
-[**Clash.Meta for Magisk**](https://t.me/MagiskChangeKing/126)6
+[**Clash.Meta for Magisk**](https://t.me/MagiskChangeKing/126)
