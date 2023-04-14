@@ -13,7 +13,7 @@ hide:
 
 ## 使用 Meta 的客户端
 
-#### Windows：
+### Windows：
 
 [**clash-verge**](https://github.com/zzzgydi/clash-verge)
 
@@ -21,33 +21,33 @@ hide:
 
 [**V2ray N**](https://github.com/2dust/v2rayN)
 
-#### Mac OS：
+### Mac OS：
 
 [**clash-verge**](https://github.com/zzzgydi/clash-verge)
 
 [**ClashX.Meta**](https://github.com/MetaCubeX/ClashX.Meta)
 
-#### Linux：
+### Linux：
 
 [**clash-verge**](https://github.com/zzzgydi/clash-verge)
 
-#### OpenWRT:
+### OpenWRT:
 
 [**OpenClash**](https://github.com/vernesong/OpenClash)
 
-#### Merlin (KoolCenter 固件/paldier SWRT 固件）:
+### Merlin (KoolCenter 固件/paldier SWRT 固件）:
 
 [**merlinclashcat**](https://t.me/merlinclashcat)
 
-#### Android:
+### Android:
 
 [**Clash.Meta for Android**](https://github.com/MetaCubeX/ClashMetaForAndroid/releases/tag/Prerelease-alpha)
 
-#### IOS
+### IOS
 
 [**MFI**](https://t.me/meta\_for\_ios)
 
-#### Shell:
+### Shell:
 
 [**ShellClash**](https://github.com/juewuy/ShellClash)
 
