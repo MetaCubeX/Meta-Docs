@@ -197,7 +197,7 @@ exclude_uid_range:
 限制被路由的 Android 用户
 
 !!! note
-    Android用户和应用规则仅在Android下被支持,并且需要`auto_route`
+    Android用户和应用规则仅在Android下被支持,并且需要 `auto_route`
 
 | 常用用户 | ID  |
 | -------- | --- |
@@ -235,4 +235,4 @@ exclude_package:
 
 CPU为amd r7 1700 3.6Ghz,内存8G 3600mhz C16,硬盘为PM981A
 
-![1681296875141](image/tun/1681296875141.png)
+![iperf](../assets/image/tun/iperf.png)

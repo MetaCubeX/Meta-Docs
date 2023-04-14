@@ -9,7 +9,7 @@ hide:
 
 请求时附带  `'Authorization: Bearer secret'`  请求头，`secret` 为配置文件设置的 api 密钥
 
-下文的`${controller-api}`格式为配置文件中设置的 `ip:port`
+下文的 `${controller-api}`格式为配置文件中设置的 `ip:port`
 
 curl 示例 `curl -H 'Authorization: Bearer secret'  http://${controller-api}//version`
 
@@ -192,6 +192,7 @@ curl 示例 `curl -H 'Authorization: Bearer secret'  http://${controller-api}//v
 示例：`GET /dns/query?name=example.com&type=A`
 
 ## DEBUG
+
 浏览器打开 `http://${controller-api}/debug/pprof` 可查看原始 DEBUG 信息，其中：
 
 * allocs 表示每个函数调用的内存分配情况，包括在堆栈上和堆上分配的内存大小以及内存分配次数。这个报告主要是为了帮助我们找到代码中存在的内存泄漏、内存频繁申请等问题。
@@ -200,18 +201,23 @@ curl 示例 `curl -H 'Authorization: Bearer secret'  http://${controller-api}//v
 ### 安装 [Graphviz](https://graphviz.org/download/)，可查看图形化的 debug 信息：
 
 #### 查看图形化 Heap 报告：
+
 ```
 go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/heap
 ```
-[Full image](../config/image/api/heap.svg)
-<img src="../config/image/api/heap.svg">
+
+[Full image](../assets/image/api/heap.svg)
+`<img src="../assets/image/api/heap.svg">`
 
 #### 查看图形化 Allocs 报告
+
 ````
 go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/allocs
 ````
-[Full image](../config/image/api/allocs.svg)
-<img src="../config/image/api/allocs.svg">
+
+[Full image](../assets/image/api/allocs.svg)
+`<img src="../assets/image/api/allocs.svg">`
 
 #### 提交输出报告
-浏览器访问`http://${controller-api}/debug/pprof/heap?raw=true` 即可下载这个文件，通过上传到 [issues](https://github.com/MetaCubeX/Clash.Meta/issues) 提交你遇到的问题。
+
+浏览器访问 `http://${controller-api}/debug/pprof/heap?raw=true` 即可下载这个文件，通过上传到 [issues](https://github.com/MetaCubeX/Clash.Meta/issues) 提交你遇到的问题。
