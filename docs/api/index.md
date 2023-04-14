@@ -207,7 +207,7 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/heap
 ```
 
 [Full image](../assets/image/api/heap.svg)
-`<img src="../assets/image/api/heap.svg">`
+<img src="../assets/image/api/heap.svg">
 
 #### 查看图形化 Allocs 报告
 
@@ -216,7 +216,7 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/allocs
 ````
 
 [Full image](../assets/image/api/allocs.svg)
-`<img src="../assets/image/api/allocs.svg">`
+<img src="../assets/image/api/allocs.svg">
 
 #### 提交输出报告
 
