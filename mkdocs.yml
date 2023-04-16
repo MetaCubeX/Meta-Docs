@@ -57,7 +57,7 @@ nav:
       - Shadowsocks: config/proxies/ss.md
       - ShadowsocksR: config/proxies/ssr.md
       - vmess: config/proxies/vmess.md
-      - vless: config/proxies/vless.md
+      - VLESS: config/proxies/vless.md
       - trojan: config/proxies/trojan.md
       - hysteria: config/proxies/hysteria.md
       - Tuic: config/proxies/tuic.md
