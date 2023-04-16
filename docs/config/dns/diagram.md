@@ -1,5 +1,7 @@
 # DNS 流程图
 
+以下流程仅供参考，忽略了Clash内部的DNS映射处理。
+
 ```mermaid
 flowchart TD
   Start[客户端发起请求] --> rule[匹配规则]

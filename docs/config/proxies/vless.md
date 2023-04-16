@@ -1,10 +1,9 @@
-# vless
+# VLESS
 
 !!! note
-    因clash实现的问题,h2传输层不建议在clash使用,建议更换为grpc
-    
+    因 clash 实现的问题，h2 传输层不建议在 clash 使用，建议更换为 grpc
 
-Meta增加了Vless协议支持,具体格式如下：
+Meta 增加了 VLESS 协议支持，具体格式如下：
 
 #### VLESS-xtls-rprx-vision
 
@@ -25,7 +24,6 @@ Meta增加了Vless协议支持,具体格式如下：
 ```
 
 #### **VLESS-reality-vision**
-
 
 ```yaml
 - name: "vless-reality-vision"
@@ -83,8 +81,6 @@ Meta增加了Vless协议支持,具体格式如下：
 
 #### VLESS-WS
 
-
-
 ```yaml
 - name: "vless-ws"
   type: vless
@@ -100,4 +96,4 @@ Meta增加了Vless协议支持,具体格式如下：
     path: "/"
     headers:
       Host: example.com
-```yaml
+```
