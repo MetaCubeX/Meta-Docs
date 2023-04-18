@@ -24,7 +24,7 @@ mixed-port: 7892
 
 !!! note
 
-    redir 端口仅限 Linux 以及 MacOS 适用，tproxy 端口仅限 linux 适用 (Android 设备属于 Linux 设备）
+    redir 端口仅限 Linux 以及 macOS 适用，tproxy 端口仅限 linux 适用 (Android 设备属于 Linux 设备）
 
 redirect 透明代理端口，仅能代理 TCP 流量
 
@@ -201,7 +201,7 @@ global-client-fingerprint: chrome
 
 !!! note
 
-    可选："chrome", "firefox", "safari", "ios", ,"android", "edge", "360"," qq", "random"
+    可选："chrome", "firefox", "safari", "iOS", ,"android", "edge", "360"," qq", "random"
 
     若选择"random", 则按照真实世界数据按概率生成一个现代浏览器指纹。
 

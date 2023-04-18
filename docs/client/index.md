@@ -43,9 +43,9 @@ hide:
 
 [**Clash.Meta for Android**](https://github.com/MetaCubeX/ClashMetaForAndroid/releases/tag/Prerelease-alpha)
 
-### IOS
+### iOS
 
-[**MFI**](https://t.me/meta\_for\_ios)
+[**MFI**](https://t.me/meta_for_ios)
 
 ### Shell:
 

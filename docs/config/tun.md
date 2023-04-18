@@ -48,7 +48,7 @@ enable: true
 
 ### stack
 
-tun模式堆栈,如无使用问题,建议使用 `system` 栈;MacOS 用户推荐 `gvisor`栈,IOS无法使用 `system`栈
+tun模式堆栈,如无使用问题,建议使用 `system` 栈;macOS 用户推荐 `gvisor`栈,iOS无法使用 `system`栈
 
 可选： `system/gvisor/lwip`
 
@@ -65,7 +65,7 @@ stack: system
 
 ### device
 
-指定tun网卡名称,MacOS设备只能使用utun开头的网卡名
+指定tun网卡名称,macOS设备只能使用utun开头的网卡名
 
 ```
 device: utun0
@@ -102,7 +102,7 @@ dns-hijack:
 ```
 
 {% hint style="warning" %}
-MACOS 无法自动劫持发往局域网的dns请求
+macOS 无法自动劫持发往局域网的dns请求
 
 ANDROID 如开启私人dns则无法自动劫持dns请求
 
@@ -231,7 +231,7 @@ exclude_package:
 
 ## Tun 的协议栈网络回环测试
 
-从上到下分别为 `system/gvisor/lwip`,仅供参考,平台为linux,Windows和MacOS可能会有差异
+从上到下分别为 `system/gvisor/lwip`,仅供参考,平台为linux,Windows和macOS可能会有差异
 
 CPU为amd r7 1700 3.6Ghz,内存8G 3600mhz C16,硬盘为PM981A
 
