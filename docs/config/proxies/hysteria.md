@@ -5,6 +5,7 @@
   type: hysteria
   server: server.com
   port: 443
+  posts: 443-8080
   auth_str: yourpassword # 将会在未来某个时候删除
   # auth-str: yourpassword
   # obfs: obfs_str
