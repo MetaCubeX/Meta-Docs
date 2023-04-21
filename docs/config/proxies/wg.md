@@ -1,4 +1,4 @@
-# Wireguard
+# WireGuard
 
 ```yaml
   - name: "wg"

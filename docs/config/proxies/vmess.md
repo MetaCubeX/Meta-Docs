@@ -1,4 +1,4 @@
-# vmess
+# VMess
 
 ```yaml
   - name: "vmess"

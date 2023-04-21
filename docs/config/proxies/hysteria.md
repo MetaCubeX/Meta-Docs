@@ -5,7 +5,7 @@
   type: hysteria
   server: server.com
   port: 443
-  # ports: 1000,2000-3000,5000 # port 不可省略
+  # ports: 1000,2000-3000,4000 # port 不可省略
   auth_str: yourpassword # 将会在未来某个时候删除
   # auth-str: yourpassword
   # obfs: obfs_str
