@@ -56,12 +56,12 @@ nav:
       - SOCKS: config/proxies/socks.md
       - Shadowsocks: config/proxies/ss.md
       - ShadowsocksR: config/proxies/ssr.md
-      - vmess: config/proxies/vmess.md
+      - VMess: config/proxies/vmess.md
       - VLESS: config/proxies/vless.md
-      - trojan: config/proxies/trojan.md
-      - hysteria: config/proxies/hysteria.md
-      - Tuic: config/proxies/tuic.md
-      - Wireguard: config/proxies/wg.md
+      - Trojan: config/proxies/trojan.md
+      - Hysteria: config/proxies/hysteria.md
+      - TUIC: config/proxies/tuic.md
+      - WireGuard: config/proxies/wg.md
     - 策略组配置:
       - config/proxy-groups/index.md
       - 内置策略: config/proxy-groups/built-in.md
