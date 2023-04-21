@@ -195,6 +195,14 @@ curl 示例 `curl -H 'Authorization: Bearer secret'  http://${controller-api}//v
 
 `/debug` 需要内核启动时 [日志级别](../config/general.md#_5) 为 `debug`
 
+### `/debug/gc`
+
+请求方法：`PUT`
+
+* 进行主动GC
+
+### `/debug/pprof`
+
 浏览器打开 `http://${controller-api}/debug/pprof` 可查看原始 DEBUG 信息，其中：
 
 * allocs 表示每个函数调用的内存分配情况，包括在堆栈上和堆上分配的内存大小以及内存分配次数。这个报告主要是为了帮助我们找到代码中存在的内存泄漏、内存频繁申请等问题。
@@ -209,7 +217,7 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/heap
 ```
 
 [Full image](../assets/image/api/heap.svg)
-<img src="../assets/image/api/heap.svg">
+`<img src="../assets/image/api/heap.svg">`
 
 #### 查看图形化 Allocs 报告
 
@@ -218,7 +226,7 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/allocs
 ````
 
 [Full image](../assets/image/api/allocs.svg)
-<img src="../assets/image/api/allocs.svg">
+`<img src="../assets/image/api/allocs.svg">`
 
 #### 提交输出报告
 
