@@ -142,20 +142,20 @@ proxy-groups:
 
   - {name: github, <<: *pr}
 
-  - {name: 国内,type: select, proxies: [DIRECT, 默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择]}
+  - {name: 国内,type: select, proxies: [DIRECT, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}
 
   - {name: 其他,<<: *pr}
 
 #分隔,下面是地区分组
-  - {name: 香港,<<: *use,filter: "(?i) 港|hk|hongkong|hong kong"}
+  - {name: 香港,<<: *use,filter: "(?i)港|hk|hongkong|hong kong"}
 
-  - {name: 台湾,<<: *use, filter: "(?i) 台|tw|taiwan"}
+  - {name: 台湾,<<: *use, filter: "(?i)台|tw|taiwan"}
 
-  - {name: 日本,<<: *use, filter: "(?i) 日本|jp|japan"}
+  - {name: 日本,<<: *use, filter: "(?i)日本|jp|japan"}
 
-  - {name: 美国,<<: *use, filter: "(?i) 美|us|unitedstates|united states"}
+  - {name: 美国,<<: *use, filter: "(?i)美|us|unitedstates|united states"}
 
-  - {name: 新加坡,<<: *use, filter: "(?i)^(?!.*(?:us)).*（新|sg|singapore)"}
+  - {name: 新加坡,<<: *use, filter: "(?i)^(?!.*(?:us)).*(新|sg|singapore)"}
 
   - {name: 其它地区,<<: *use, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"}
 
@@ -187,4 +187,4 @@ rules:
   - MATCH, 其他
 ```
 
-***
+---
