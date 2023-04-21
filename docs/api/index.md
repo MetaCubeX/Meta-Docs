@@ -200,6 +200,7 @@ curl 示例 `curl -H 'Authorization: Bearer secret'  http://${controller-api}//v
 请求方法：`PUT`
 
 * 进行主动GC
+* curl 示例：`curl "${controller-api}/debug/gc" -X PUT`
 
 ### `/debug/pprof`
 
