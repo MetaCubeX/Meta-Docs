@@ -35,7 +35,7 @@ Meta 增加了 VLESS 协议支持，具体格式如下：
   tls: true
   udp: true
   flow: xtls-rprx-vision
-  servername: www.microsoft.com # REALITY servername
+  servername: speed.cloudflare.com # REALITY servername
   reality-opts:
     public-key: xxx
     short-id: xxx # optional
@@ -56,7 +56,7 @@ Meta 增加了 VLESS 协议支持，具体格式如下：
   flow:
   # skip-cert-verify: true
   client-fingerprint: chrome
-  servername: testingcf.jsdelivr.net
+  servername: testingcf.jsdelivr.net # REALITY servername
   grpc-opts:
     grpc-service-name: "grpc"
   reality-opts:
