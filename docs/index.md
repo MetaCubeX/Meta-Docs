@@ -6,7 +6,7 @@ hide:
 # 简介
 
 [**Clash.Meta**](https://github.com/MetaCubeX/Clash.Meta/tree/Meta) **是一个基于开源** [**Clash**](https://github.com/Dreamacro/clash) **项目的二次开发版本，增加了一些独有特性**，文档仍在修订中，欢迎 [PR](https://github.com/MetaCubeX/Meta-Docs/)。
-
+***
 
 
 !!! Telegram
@@ -14,10 +14,11 @@ hide:
     讨论组：[https://t.me/MetaKernel](https://t.me/MetaKernel)
 
 **使用 Clash.Meta Kernel 前，请悉知：**
-> * 原 Clash 是一款全平台的支持多协议分流的代理软件，其项目地址为  [**Dreamacro/clash**](https://github.com/Dreamacro/clash)；
-> * 本 Wiki 主要介绍 Clash.Meta 的特色功能，原 Clash 特性请查看 [**Clash Wiki** ](https://lancellc.gitbook.io/clash/)**；**
-> * 本 Wiki 基于最新的 [**Meta Alpha**](https://github.com/MetaCubeX/Clash.Meta/tree/Alpha) 分支介绍，如果您的 Meta 低于此版本，可能会有部分功能不支持；
-> * Meta 核心支持所有原开源核心的全部特性，支持原 Clash Premium 核心部分特性。
+* 原 Clash 是一款全平台的支持多协议分流的代理软件，其项目地址为  [**Dreamacro/clash**](https://github.com/Dreamacro/clash)；
+* 本 Wiki 主要介绍 Clash.Meta 的特色功能，原 Clash 特性请查看 [**Clash Wiki** ](https://lancellc.gitbook.io/clash/)**；**
+* 本 Wiki 基于最新的 [**Meta Alpha**](https://github.com/MetaCubeX/Clash.Meta/tree/Alpha) 分支介绍，如果您的 Meta 低于此版本，可能会有部分功能不支持；
+* Meta 核心支持所有原开源核心的全部特性，支持原 Clash Premium 核心部分特性。
+
 
 ### Clash.Meta 主要特性
 
