@@ -15,7 +15,7 @@ hide:
 
 ## 懒人配置
 
-proxy-providers 写订阅就能用了（理论上）
+在 `proxy-providers` 补充你的订阅即可食用
 
 ```yaml
 ######### 锚点 start #######
@@ -45,26 +45,26 @@ proxy-providers:
     url: ""
     path: ./proxy_providers/provider2.yaml
 
+mode: rule
+ipv6: true
+log-level: info
+allow-lan: true
 mixed-port: 7890
 unified-delay: false
-geodata-mode: true
-tcp-concurrent: false
-find-process-mode: strict
-global-client-fingerprint: chrome
-
-allow-lan: true
-mode: rule
-log-level: info
-ipv6: true
+tcp-concurrent: true
 
 external-controller: 0.0.0.0:9090
 #external-ui: ui
 secret: ""
 
+geodata-mode: true
 geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+
+find-process-mode: strict
+global-client-fingerprint: chrome
 
 profile:
   store-selected: true
@@ -89,24 +89,24 @@ tun:
 
 dns:
   enable: true
-  listen: 0.0.0.0:1053
+  listen: :1053
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter:
-  - '*'
-  - '+.lan'
+    - '*'
+    - '+.lan'
   default-nameserver:
-  - 223.5.5.5
+    - 223.5.5.5
   nameserver:
-  - 'tls://8.8.4.4#dns'
-  - 'tls://1.0.0.1#dns'
+    - 'tls://8.8.4.4#dns'
+    - 'tls://1.0.0.1#dns'
   proxy-server-nameserver:
-  - https://doh.pub/dns-query
+    - https://doh.pub/dns-query
   nameserver-policy:
     "geosite:cn,private":
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
 
 proxies:
 
@@ -164,7 +164,6 @@ proxy-groups:
   - {name: 自动选择,proxies: [DIRECT], <<: *use, tolerance: 2, type: url-test}
 
 rules:
-
   - GEOSITE,biliintl, 哔哩东南亚
   - GEOSITE,ehentai,ehentai
   - GEOSITE,github,github
