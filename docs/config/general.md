@@ -6,7 +6,7 @@
 
 http(s) 代理端口
 
-```
+```yaml
 port: 7890
 ```
 
@@ -132,8 +132,9 @@ external-controller: 127.0.0.1:9090
 
 HTTPS-API 监听地址，需要配置 tls 部分配置文件
 
-<pre class="language-yaml"><code class="lang-yaml"><strong>external-controller-tls: 127.0.0.1:9443
-</strong></code></pre>
+```yaml
+external-controller-tls: 127.0.0.1:9443
+```
 
 API 的访问密钥
 
@@ -201,9 +202,9 @@ global-client-fingerprint: chrome
 
 !!! note
 
-    可选："chrome", "firefox", "safari", "iOS", ,"android", "edge", "360"," qq", "random"
+    可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random"
 
-    若选择"random", 则按照真实世界数据按概率生成一个现代浏览器指纹。
+    若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
 
 ## 自定 GEO 下载地址
 
