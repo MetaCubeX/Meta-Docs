@@ -2,7 +2,8 @@
 
 ## 配置示例
 
-<pre class="language-yaml"><code class="lang-yaml">tun:
+```yaml
+tun:
   enable: true
   stack: system
   device: utun0
@@ -15,8 +16,8 @@
   # inet4_route_address:
   # - 0.0.0.0/1
   # - 128.0.0.0/1
-<strong>  # inet6_route_address:
-</strong>  # - "::/1"
+  # inet6_route_address:
+  # - "::/1"
   # - "8000::/1"
   # endpoint_independent_nat: false
   # include_uid:
@@ -34,7 +35,7 @@
   # - com.android.chrome
   # exclude_package:
   # - com.android.captiveportallogin
-</code></pre>
+```
 
 ### enable
 
@@ -42,7 +43,7 @@
 
 可选：`true/false`
 
-```
+```yaml
 enable: true
 ```
 
@@ -52,7 +53,7 @@ tun模式堆栈,如无使用问题,建议使用 `system` 栈;MacOS 用户推荐 
 
 可选： `system/gvisor/lwip`
 
-```
+```yaml
 stack: system
 ```
 
@@ -67,7 +68,7 @@ stack: system
 
 指定tun网卡名称,MacOS设备只能使用utun开头的网卡名
 
-```
+```yaml
 device: utun0
 ```
 
@@ -77,7 +78,7 @@ device: utun0
 
 可选：`true/false`
 
-```
+```yaml
 auto-route: true
 ```
 
@@ -87,7 +88,7 @@ auto-route: true
 
 可选：`true/false`
 
-```
+```yaml
 auto-detect-interface: true
 ```
 
@@ -114,7 +115,7 @@ LINUX 如果 systemd-resolved 开启无法自动劫持dns请求
 
 可选：`true/false`
 
-```
+```yaml
 strict_route: true
 ```
 
@@ -122,7 +123,7 @@ strict_route: true
 
 最大传输单元, 值为 `1-65534`, 会影响极限状态下的速率,一般用户默认即可。
 
-```
+```yaml
 mtu: 9000
 ```
 
@@ -130,7 +131,7 @@ mtu: 9000
 
 启用 `auto_route`时使用自定义ipv4路由而不是默认路由,一般无需配置。
 
-```
+```yaml
 inet4_route_address:
   - 0.0.0.0/1
   - 128.0.0.0/1
@@ -140,7 +141,7 @@ inet4_route_address:
 
 启用 `auto_route`时使用自定义ipv6路由而不是默认路由,一般无需配置。
 
-```
+```yaml
 inet6_route_address:
   - "::/1"
   - "8000::/1"
@@ -150,8 +151,9 @@ inet6_route_address:
 
 启用独立于端点的NAT,性能可能会略有下降,所以不建议在不需要的时候开启。
 
-<pre><code><strong>endpoint_independent_nat: false
-</strong></code></pre>
+```yaml
+endpoint_independent_nat: false
+```
 
 ### include\_uid
 
@@ -160,7 +162,7 @@ inet6_route_address:
 !!! note
     UID 规则仅在Linux下被支持,并且需要 `auto_route`
 
-```
+```yaml
 include_uid:
   - 0
 ```
@@ -169,7 +171,7 @@ include_uid:
 
 限制被路由的的用户范围
 
-```
+```yaml
 include_uid_range:
   - 1000-99999
 ```
@@ -178,7 +180,7 @@ include_uid_range:
 
 排除路由的的用户
 
-```
+```yaml
 exclude_uid:
   - 1000
 ```
@@ -187,7 +189,7 @@ exclude_uid:
 
 排除路由的的用户范围
 
-```
+```yaml
 exclude_uid_range:
   - 1000-99999
 ```
@@ -205,7 +207,7 @@ exclude_uid_range:
 | 手机分身 | 10  |
 | 应用多开 | 999 |
 
-```
+```yaml
 include_android_user:
   - 0
   - 10
@@ -215,7 +217,7 @@ include\_package
 
 限制被路由的Android应用包名
 
-```
+```yaml
 include_package:
   - com.android.chrome
 ```
@@ -224,7 +226,7 @@ include_package:
 
 排除路由的Android应用包名
 
-```
+```yaml
 exclude_package:
   - com.android.captiveportallogin
 ```
