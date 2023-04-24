@@ -48,7 +48,7 @@ tproxy－port: 7894
 allow-lan: true
 ```
 
-绑定 IP, 仅允许某个 IP 访问代理端口
+绑定 IP, 通过 LAN 访问一个/一些特定的 IP 地址
 
 "\*" 绑定所有 IP 地址，默认值，不填写此项则绑定全部
 
@@ -100,7 +100,7 @@ log－level: info
 
 是否允许内核接受 ipv6 流量
 
-可选值 `true/false,`默认为`false`
+可选值 `true/false,`默认为 `false`
 
 ```yaml
 ipv6: true
@@ -216,6 +216,7 @@ geox-url:
 ```
 
 ## 实验性
+
 ```yaml
 experimental:
 
