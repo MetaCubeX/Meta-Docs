@@ -5,13 +5,14 @@ hide:
 ---
 # API 说明
 
-## API 密钥
+## API 请求示例
 
-请求时附带  `'Authorization: Bearer secret'`  请求头，`secret` 为配置文件设置的 api 密钥
+curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}//version`
 
-下文的 `${controller-api}`格式为配置文件中设置的 `ip:port`
+此请求附带  `'Authorization: Bearer ${secret}'` 请求头，其中，`${secret}` 为配置文件设置的 api 密钥，
+`${controller-api}`为配置文件中设置的 `ip:port`
 
-curl 示例 `curl -H 'Authorization: Bearer secret'  http://${controller-api}//version`
+
 
 ## 日志
 
