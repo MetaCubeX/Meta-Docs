@@ -12,8 +12,6 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 此请求附带  `'Authorization: Bearer ${secret}'` 请求头，其中，`${secret}` 为配置文件设置的 api 密钥，
 `${controller-api}`为配置文件中设置的 `ip:port`
 
-
-
 ## 日志
 
 ### `/logs`
@@ -210,9 +208,9 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 * allocs 表示每个函数调用的内存分配情况，包括在堆栈上和堆上分配的内存大小以及内存分配次数。这个报告主要是为了帮助我们找到代码中存在的内存泄漏、内存频繁申请等问题。
 * heap 报告则给出了程序在堆上使用的内存的详细信息，其中包括被分配的内存块的大小、数量和地址，并且按照大小排序。这个报告主要是为了搜寻内存使用过高的地方，我们可以在 heap 报告中查看对象的大小，从而找到内存使用过高的地方。
 
-### 安装 [Graphviz](https://graphviz.org/download/)，可查看图形化的 debug 信息：
+#### 安装 [Graphviz](https://graphviz.org/download/)，可查看图形化的 debug 信息：
 
-#### 查看图形化 Heap 报告：
+##### 查看图形化 Heap 报告：
 
 ```
 go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/heap
@@ -221,7 +219,7 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/heap
 [Full image](../assets/image/api/heap.svg)
 `<img src="../assets/image/api/heap.svg">`
 
-#### 查看图形化 Allocs 报告
+##### 查看图形化 Allocs 报告
 
 ````
 go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/allocs
@@ -230,6 +228,6 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/allocs
 [Full image](../assets/image/api/allocs.svg)
 `<img src="../assets/image/api/allocs.svg">`
 
-#### 提交输出报告
+##### 提交输出报告
 
 浏览器访问 `http://${controller-api}/debug/pprof/heap?raw=true` 即可下载这个文件，通过上传到 [issues](https://github.com/MetaCubeX/Clash.Meta/issues) 提交你遇到的问题。
