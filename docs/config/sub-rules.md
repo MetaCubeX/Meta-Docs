@@ -2,7 +2,7 @@
 
 匹配到规则时,将请求送往另一规则流程,示例
 
-```
+```yaml
 sub-rules:
   rule1:
     - DOMAIN-SUFFIX,google.com,ss1
