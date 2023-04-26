@@ -3,6 +3,7 @@ hide:
   - navigation
 #   - toc
 ---
+
 # 完整配置示例
 
 ## Alpha 分支
@@ -17,6 +18,7 @@ hide:
 
 在 `proxy-providers` 补充你的订阅即可食用
 
+<!-- prettier-ignore-start -->
 ```yaml
 ######### 锚点 start #######
 # proxy 相关
@@ -32,6 +34,7 @@ use: &use
   - provider2
   
 ######### 锚点 end #######
+
 
 # url 里填写自己的订阅,名称不能重复,path（文件位置）不能重复
 proxy-providers:
@@ -185,5 +188,6 @@ rules:
   - GEOIP,CN,国内
   - MATCH,其他
 ```
+<!-- prettier-ignore-end -->
 
 ---
