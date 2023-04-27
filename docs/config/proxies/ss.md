@@ -36,11 +36,11 @@ Shadowsocks 密码
 
 ### udp
 
-是否使用udp,默认true
+是否使用 udp,默认 true
 
 ### udp-over-tcp
 
-是否使用UDP over TCP,默认false
+是否使用 UDP over TCP,默认 false
 
 ## 插件
 

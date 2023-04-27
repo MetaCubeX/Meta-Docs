@@ -10,7 +10,7 @@ tun:
   auto-detect-interface: true
   auto-route: true
   dns-hijack:
-  - any:53
+    - any:53
   # mtu: 9000
   # strict_route: true
   # inet4_route_address:
@@ -49,7 +49,7 @@ enable: true
 
 ### stack
 
-tun模式堆栈,如无使用问题,建议使用 `system` 栈;MacOS 用户推荐 `gvisor`栈
+tun 模式堆栈,如无使用问题,建议使用 `system` 栈;MacOS 用户推荐 `gvisor`栈
 
 可选： `system/gvisor/lwip`
 
@@ -66,7 +66,7 @@ stack: system
 
 ### device
 
-指定tun网卡名称,MacOS设备只能使用utun开头的网卡名
+指定 tun 网卡名称,MacOS 设备只能使用 utun 开头的网卡名
 
 ```yaml
 device: utun0
@@ -74,7 +74,7 @@ device: utun0
 
 ### auto-route
 
-自动设置全局路由,可以自动将全局流量路由进入tun网卡。
+自动设置全局路由,可以自动将全局流量路由进入 tun 网卡。
 
 可选：`true/false`
 
@@ -94,22 +94,22 @@ auto-detect-interface: true
 
 ### dns-hijack
 
-dns劫持,一般设置为 `any:53` 即可, 即劫持所有53端口的udp流量
+dns 劫持,一般设置为 `any:53` 即可, 即劫持所有 53 端口的 udp 流量
 
 ```yaml
 dns-hijack:
- - any:53
- - tcp://any:53
+  - any:53
+  - tcp://any:53
 ```
 
 {% hint style="warning" %}
-MACOS 无法自动劫持发往局域网的dns请求
+MACOS 无法自动劫持发往局域网的 dns 请求
 
-ANDROID 如开启私人dns则无法自动劫持dns请求
+ANDROID 如开启私人 dns 则无法自动劫持 dns 请求
 
-LINUX 如果 systemd-resolved 开启无法自动劫持dns请求
+LINUX 如果 systemd-resolved 开启无法自动劫持 dns 请求
 
-### strict\_route
+### strict_route
 
 严格路由,它可以防止地址泄漏,并使 DNS 劫持在 Android 和使用 systemd-resolved 的 Linux 上工作,但你的设备将无法其他设备被访问
 
@@ -127,9 +127,9 @@ strict_route: true
 mtu: 9000
 ```
 
-### inet4\_route\_address
+### inet4_route_address
 
-启用 `auto_route`时使用自定义ipv4路由而不是默认路由,一般无需配置。
+启用 `auto_route`时使用自定义 ipv4 路由而不是默认路由,一般无需配置。
 
 ```yaml
 inet4_route_address:
@@ -137,9 +137,9 @@ inet4_route_address:
   - 128.0.0.0/1
 ```
 
-### inet6\_route\_address
+### inet6_route_address
 
-启用 `auto_route`时使用自定义ipv6路由而不是默认路由,一般无需配置。
+启用 `auto_route`时使用自定义 ipv6 路由而不是默认路由,一般无需配置。
 
 ```yaml
 inet6_route_address:
@@ -147,27 +147,27 @@ inet6_route_address:
   - "8000::/1"
 ```
 
-### endpoint\_independent\_nat
+### endpoint_independent_nat
 
-启用独立于端点的NAT,性能可能会略有下降,所以不建议在不需要的时候开启。
+启用独立于端点的 NAT,性能可能会略有下降,所以不建议在不需要的时候开启。
 
 ```yaml
 endpoint_independent_nat: false
 ```
 
-### include\_uid
+### include_uid
 
 限制被路由用户,默认不限制。
 
 !!! note
-    UID 规则仅在Linux下被支持,并且需要 `auto_route`
+UID 规则仅在 Linux 下被支持,并且需要 `auto_route`
 
 ```yaml
 include_uid:
   - 0
 ```
 
-### include\_uid\_range
+### include_uid_range
 
 限制被路由的的用户范围
 
@@ -176,7 +176,7 @@ include_uid_range:
   - 1000-99999
 ```
 
-### exclude\_uid
+### exclude_uid
 
 排除路由的的用户
 
@@ -185,7 +185,7 @@ exclude_uid:
   - 1000
 ```
 
-### exclude\_uid\_range
+### exclude_uid_range
 
 排除路由的的用户范围
 
@@ -194,12 +194,12 @@ exclude_uid_range:
   - 1000-99999
 ```
 
-### include\_android\_user
+### include_android_user
 
 限制被路由的 Android 用户
 
 !!! note
-    Android用户和应用规则仅在Android下被支持,并且需要 `auto_route`
+Android 用户和应用规则仅在 Android 下被支持,并且需要 `auto_route`
 
 | 常用用户 | ID  |
 | -------- | --- |
@@ -213,18 +213,18 @@ include_android_user:
   - 10
 ```
 
-include\_package
+include_package
 
-限制被路由的Android应用包名
+限制被路由的 Android 应用包名
 
 ```yaml
 include_package:
   - com.android.chrome
 ```
 
-### exclude\_package
+### exclude_package
 
-排除路由的Android应用包名
+排除路由的 Android 应用包名
 
 ```yaml
 exclude_package:
@@ -233,8 +233,8 @@ exclude_package:
 
 ## Tun 的协议栈网络回环测试
 
-从上到下分别为 `system/gvisor/lwip`,仅供参考,平台为linux,Windows和MacOS可能会有差异
+从上到下分别为 `system/gvisor/lwip`,仅供参考,平台为 linux,Windows 和 MacOS 可能会有差异
 
-CPU为amd r7 1700 3.6Ghz,内存8G 3600mhz C16,硬盘为PM981A
+CPU 为 amd r7 1700 3.6Ghz,内存 8G 3600mhz C16,硬盘为 PM981A
 
 ![iperf](../assets/image/tun/iperf.png)
