@@ -112,10 +112,25 @@ dns:
       - https://dns.alidns.com/dns-query
 
 proxies:
+  - name: "WARP"
+    type: wireguard
+    server: engage.cloudflareclient.com
+    port: 2408
+    ip: "172.16.0.2/32"
+    ipv6: "2606::1/128"        # 自行替换
+    private-key: "private-key" # 自行替换
+    public-key: "public-key"   # 自行替换
+    udp: true
+    reserved: "abba"           # 自行替换
+    mtu: 1280
+    dialer-proxy: "dns"
+    remote-dns-resolve: true
+    dns:
+      - https://dns.cloudflare.com/dns-query
 
 proxy-groups:
 
-  - {name: 默认, type: select, proxies: [DIRECT, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}
+  - {name: 默认, type: select, proxies: [DIRECT, WARP, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}
 
   - {name: dns, type: select, proxies: [DIRECT, 自动选择, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点]}
 
