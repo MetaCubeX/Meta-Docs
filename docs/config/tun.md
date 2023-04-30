@@ -6,11 +6,11 @@
 tun:
   enable: true
   stack: system
-  device: utun0
-  auto-detect-interface: true
   auto-route: true
+  auto-detect-interface: true
   dns-hijack:
     - any:53
+  # device: utun0
   # mtu: 9000
   # strict_route: true
   # inet4_route_address:
