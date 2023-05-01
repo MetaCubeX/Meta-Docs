@@ -251,13 +251,13 @@ nameserver:
   - 'tls://dns.google#proxy'
 ```
 
-### 强制 http/3
+### 强制 HTTP/3
 
-强制 gttp/3, 与 `perfer-h3`无关，强制开启 doh 的 http/3 支持，若不支持将无法使用
+强制使用 HTTP/3, 与 `perfer-h3`无关，强制开启 doh 的 http/3 支持，若不支持将无法使用
 
 ```yaml
 nameserver:
-  - 'tls://dot.pub#h3=true'
+  - 'https://dns.cloudflare.com/dns-query#h3=true'
 ```
 
 ### 指定 DNS 出口网卡
