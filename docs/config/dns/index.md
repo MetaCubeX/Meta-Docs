@@ -253,7 +253,7 @@ nameserver:
 
 ### 强制 HTTP/3
 
-强制使用 HTTP/3, 与 `perfer-h3`无关，强制开启 doh 的 http/3 支持，若不支持将无法使用
+此选项与 `perfer-h3` 不冲突，填写后强制启用 HTTP/3 建立 DOH 连接，使用前需确保 DOH 服务器支持 HTTP/3
 
 ```yaml
 nameserver:
