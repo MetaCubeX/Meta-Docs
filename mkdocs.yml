@@ -4,6 +4,9 @@ repo_name: MetaCubeX/Clash.Meta
 copyright: Copyright &copy; 2023 Clash.Meta
 extra:
   generator: false
+  analytics:
+    provider: google
+    property: G-1BJ0XH0RSM
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/MetaCubeX/Clash.Meta
