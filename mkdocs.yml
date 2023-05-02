@@ -13,8 +13,6 @@ extra:
     - icon: material/file-document
       link: https://github.com/MetaCubeX/Meta-Docs
       
-<i class="fa-regular fa-file-doc"></i>
-
 theme:
   name: material
   logo: assets/logo.webp
