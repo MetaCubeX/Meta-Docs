@@ -10,6 +10,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/MetaCubeX/Clash.Meta
+    - icon: fontawesome/material/file-document
+      link: https://github.com/MetaCubeX/Meta-Docs
+      
+<i class="fa-regular fa-file-doc"></i>
 
 theme:
   name: material
