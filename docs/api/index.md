@@ -10,8 +10,9 @@ hide:
 
 curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}//version`
 
-此请求附带 `'Authorization: Bearer ${secret}'` 请求头，其中:
-- `${secret}` 为配置文件设置的 api 密钥
+此请求附带 `'Authorization: Bearer ${secret}'` 请求头，其中:  
+
+- `${secret}` 为配置文件设置的 api 密钥  
 - `${controller-api}`为配置文件中设置的 `ip:port`
 
 ## 日志
