@@ -172,7 +172,7 @@ include-uid:
 限制被路由的的用户范围
 
 ```yaml
-include_uid-range:
+include-uid-range:
   - 1000-99999
 ```
 
@@ -208,7 +208,7 @@ Android 用户和应用规则仅在 Android 下被支持,并且需要 `auto_rout
 | 应用多开 | 999 |
 
 ```yaml
-include_android_user:
+include-android-user:
   - 0
   - 10
 ```
