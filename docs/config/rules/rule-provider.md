@@ -7,6 +7,7 @@ rule-providers:
   google:
     type: http
     behavior: classical
+    format: yaml
     path: ./rule1.yaml
     #【Meta专属】URL可根据rule设定匹配对应的策略，方便更新provider
     url: "https://raw.githubusercontent.com/../Google.yaml"
