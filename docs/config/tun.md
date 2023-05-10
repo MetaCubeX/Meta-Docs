@@ -12,7 +12,7 @@ tun:
     - any:53
   # device: utun0
   # mtu: 9000
-  # strict_route: true
+  # strict-route: true
   # inet4_route_address:
   # - 0.0.0.0/1
   # - 128.0.0.0/1
@@ -109,7 +109,7 @@ ANDROID 如开启私人 dns 则无法自动劫持 dns 请求
 
 LINUX 如果 systemd-resolved 开启无法自动劫持 dns 请求
 
-### strict_route
+### strict-route
 
 严格路由,它可以防止地址泄漏,并使 DNS 劫持在 Android 和使用 systemd-resolved 的 Linux 上工作,但你的设备将无法其他设备被访问
 
