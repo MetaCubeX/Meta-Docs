@@ -13,27 +13,27 @@ tun:
   # device: utun0
   # mtu: 9000
   # strict-route: true
-  # inet4_route_address:
+  # inet4-route-address:
   # - 0.0.0.0/1
   # - 128.0.0.0/1
-  # inet6_route_address:
+  # inet6-route-address:
   # - "::/1"
   # - "8000::/1"
-  # endpoint_independent_nat: false
-  # include_uid:
+  # endpoint-independent_nat: false
+  # include-uid:
   # - 0
-  # include_uid_range:
+  # include-uid-range:
   # - 1000-99999
-  # exclude_uid:
+  # exclude-uid:
   #- 1000
-  # exclude_uid_range:
+  # exclude-uid-range:
   # - 1000-99999
-  # include_android_user:
+  # include-android-user:
   # - 0
   # - 10
-  # include_package:
+  # include-package:
   # - com.android.chrome
-  # exclude_package:
+  # exclude-package:
   # - com.android.captiveportallogin
 ```
 
@@ -127,35 +127,35 @@ strict_route: true
 mtu: 9000
 ```
 
-### inet4_route_address
+### inet4-route-address
 
 启用 `auto_route`时使用自定义 ipv4 路由而不是默认路由,一般无需配置。
 
 ```yaml
-inet4_route_address:
+inet4-route-address:
   - 0.0.0.0/1
   - 128.0.0.0/1
 ```
 
-### inet6_route_address
+### inet6-route-address
 
-启用 `auto_route`时使用自定义 ipv6 路由而不是默认路由,一般无需配置。
+启用 `auto-route`时使用自定义 ipv6 路由而不是默认路由,一般无需配置。
 
 ```yaml
-inet6_route_address:
+inet6-route-address:
   - "::/1"
   - "8000::/1"
 ```
 
-### endpoint_independent_nat
+### endpoint-independent-nat
 
 启用独立于端点的 NAT,性能可能会略有下降,所以不建议在不需要的时候开启。
 
 ```yaml
-endpoint_independent_nat: false
+endpoint-independent-nat: false
 ```
 
-### include_uid
+### include-uid
 
 限制被路由用户,默认不限制。
 
@@ -163,38 +163,38 @@ endpoint_independent_nat: false
 UID 规则仅在 Linux 下被支持,并且需要 `auto_route`
 
 ```yaml
-include_uid:
+include-uid:
   - 0
 ```
 
-### include_uid_range
+### include-uid-range
 
 限制被路由的的用户范围
 
 ```yaml
-include_uid_range:
+include_uid-range:
   - 1000-99999
 ```
 
-### exclude_uid
+### exclude-uid
 
 排除路由的的用户
 
 ```yaml
-exclude_uid:
+exclude-uid:
   - 1000
 ```
 
-### exclude_uid_range
+### exclude-uid-range
 
 排除路由的的用户范围
 
 ```yaml
-exclude_uid_range:
+exclude-uid-range:
   - 1000-99999
 ```
 
-### include_android_user
+### include-android-user
 
 限制被路由的 Android 用户
 
@@ -213,21 +213,21 @@ include_android_user:
   - 10
 ```
 
-include_package
+include-package
 
 限制被路由的 Android 应用包名
 
 ```yaml
-include_package:
+include-package:
   - com.android.chrome
 ```
 
-### exclude_package
+### exclude-package
 
 排除路由的 Android 应用包名
 
 ```yaml
-exclude_package:
+exclude-package:
   - com.android.captiveportallogin
 ```
 
