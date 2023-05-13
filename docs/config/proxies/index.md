@@ -9,6 +9,7 @@ proxies:
     server: server
     port: 443
     ip-version: ipv4
+    dialer-proxy: ss1
 ```
 
 ## proxies
@@ -25,7 +26,7 @@ proxies:
 
 ### server
 
-代理节点服务器,除`tuic`外,其他代理节点类型的`server`性质都相同
+代理节点服务器,除 `tuic`外,其他代理节点类型的 `server`性质都相同
 
 ### port
 
@@ -42,3 +43,5 @@ ipv6: 仅使用 IPv6
 ipv4-prefer : 优先使用 IPv4,对于 TCP 会进行双栈解析,并发链接但是优先使用 IPv4 链接,UDP 则为双栈解析,获取结果中的第一个 IPv4
 
 ipv6-prefer:优先使用 IPv6,对于 TCP 会进行双栈解析,并发链接但是优先使用 IPv6 链接,UDP 则为双栈解析,获取结果中的第一个 IPv6
+
+### dialer-proxy
