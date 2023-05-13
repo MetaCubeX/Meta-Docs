@@ -51,7 +51,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 ### `/cache/fakeip/flush`
 
-### 请求方法：`POST`
+请求方法：`POST`
 
 - 清除 fakeip 缓存
 
@@ -76,7 +76,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 ### `/configs/geo`
 
-### 请求方法：`POST`
+请求方法：`POST`
 
 - 更新 GEO 数据库
 - 必须发送数据，因更新后会自动重载一次配置
@@ -84,7 +84,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 ### `/restart`
 
-### 请求方法：`POST`
+请求方法：`POST`
 
 - 重启内核
 - 必须发送数据
@@ -92,7 +92,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 ### `/upgrade`
 
-### 请求方法：`POST`
+请求方法：`POST`
 
 - 更新内核
 - 必须发送数据，因更新后会自动重载一次配置
