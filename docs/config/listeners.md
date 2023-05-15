@@ -104,7 +104,7 @@ listeners:
 
 ```yaml
 listeners:
-    - name: shadowsocks-in-1
+  - name: shadowsocks-in-1
     type: shadowsocks
     port: 10813
     listen: 0.0.0.0
@@ -130,16 +130,16 @@ listeners:
     listen: 0.0.0.0
     # rule: sub-rule-name1 # 默认使用 rules,如果未找到 sub-rule 则直接使用 rules
     # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理(当proxy不为空时,这里的proxy名称必须合法,否则会出错)
-    #  token:
-    #    - TOKEN
-    #  certificate: ./server.crt
-    #  private-key: ./server.key
-    #  congestion-controller: bbr
-    #  max-idle-time: 15000
-    #  authentication-timeout: 1000
-    #  alpn:
-    #    - h3
-    #  max-udp-relay-packet-size: 1500
+    # token:
+    #   - TOKEN
+    # certificate: ./server.crt
+    # private-key: ./server.key
+    # congestion-controller: bbr
+    # max-idle-time: 15000
+    # authentication-timeout: 1000
+    # alpn:
+    #   - h3
+    # max-udp-relay-packet-size: 1500
 
 
 ```
