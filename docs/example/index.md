@@ -1,7 +1,7 @@
 ---
 hide:
   - navigation
-#   - toc
+  # - toc
 ---
 
 # 完整配置示例
