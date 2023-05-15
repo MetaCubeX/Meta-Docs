@@ -21,7 +21,6 @@ dns:
       - https://dns.alidns.com/dns-query
 ```
 
-
 此流程图为了更直观和简单地说明 Clash.Meta 的 DNS 工作流程，忽略了 Clash 内部的 DNS 映射处理。
 
 ```mermaid
@@ -31,7 +30,7 @@ flowchart TD
   rule --> IP[匹配到基于 IP 的规则]
 
   Domain --> |域名匹配到直连规则|DNS
-  IP --> DNS[Clash DNS 解析域名]
+  IP --> DNS[通过 Clash DNS 解析域名]
 
 
   Domain --> |域名匹配到代理规则|Remote[通过代理服务器解析域名并建立连接]
@@ -47,10 +46,9 @@ flowchart TD
   Get --> |缓存 DNS 结果|Cache[(Cache)]
   Get --> S[通过 IP 直接/通过代理建立连接]
 
-  DNS --> Redir-host
-  DNS --> FakeIP
-  FakeIP --> |查询 DNS 缓存|Cache
-  Redir-host --> |查询 DNS 缓存| Cache
+  DNS --> Redir-host/FakeIP
+  Redir-host/FakeIP --> |查询 DNS 缓存|Cache
+
 
 
 ```
