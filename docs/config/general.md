@@ -96,9 +96,9 @@ log－level: info
 
 `debug` 尽可能的输出运行中所有的信息
 
-## **IPV6**
+## **IPv6**
 
-是否允许内核接受 ipv6 流量
+是否允许内核接受 IPv6 流量
 
 可选值 `true/false,`默认为 `false`
 
@@ -130,7 +130,7 @@ API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP
 external-controller: 127.0.0.1:9090
 ```
 
-HTTPS-API 监听地址，需要配置 tls 部分配置文件
+HTTPS-API 监听地址，需要配置 `tls` 部分证书和其私钥配置，使用 TLS 也必须填写 `external-controller` 
 
 ```yaml
 external-controller-tls: 127.0.0.1:9443
