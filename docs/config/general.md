@@ -35,7 +35,7 @@ redir-port: 7893
 tproxy 透明代理端口，可以代理 TCP 以及 UDP 流量
 
 ```yaml
-tproxy－port: 7894
+tproxy-port: 7894
 ```
 
 ## **允许局域网**
@@ -83,7 +83,7 @@ mode: rule
 clash 内核输出日志的等级，仅在控制台和控制页面输出
 
 ```yaml
-log－level: info
+log-level: info
 ```
 
 `silent` 静默，不输出
