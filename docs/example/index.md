@@ -183,6 +183,7 @@ proxy-groups:
   - {name: 自动选择, <<: *use, tolerance: 2, type: url-test}
 
 rules:
+  # - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(GEOSITE,geolocation-!cn),REJECT # quic
   - GEOSITE,biliintl, 哔哩东南亚
   - GEOSITE,ehentai,ehentai
   - GEOSITE,github,github
