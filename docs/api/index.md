@@ -3,16 +3,15 @@ hide:
   - navigation
 #   - toc
 ---
-
 # API 说明
 
 ## 请求示例
 
 curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}//version`
 
-此请求附带 `'Authorization: Bearer ${secret}'` 请求头，其中:  
+此请求附带 `'Authorization: Bearer ${secret}'` 请求头，其中:
 
-- `${secret}` 为配置文件设置的 api 密钥  
+- `${secret}` 为配置文件设置的 api 密钥
 - `${controller-api}`为配置文件中设置的 `ip:port`
 
 ## 日志
@@ -164,7 +163,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 请求方法：`PUT`
 
-- 更新的代理集合
+- 更新代理集合
 
 ### `/providers/proxies/:name/healthcheck`
 
@@ -176,7 +175,15 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 ### `/providers/rules`
 
+请求方法：`GET`
+
+- 获取所有规则集合的所有信息
+
 ### `/providers/rules/:name`
+
+请求方法：`PUT`
+
+- 更新规则集合
 
 ## 域名查询
 
@@ -220,7 +227,6 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/heap
 ```
 
 [Full image](../assets/image/api/heap.svg)
-`<img src="../assets/image/api/heap.svg">`
 
 ##### 查看图形化 Allocs 报告
 
@@ -229,7 +235,6 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/allocs
 ```
 
 [Full image](../assets/image/api/allocs.svg)
-`<img src="../assets/image/api/allocs.svg">`
 
 ##### 提交输出报告
 
