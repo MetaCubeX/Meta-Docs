@@ -167,6 +167,7 @@ profile:
 更换延迟计算方式,去除握手等额外延迟
 
 可选值 `true/false`
+
 ```yaml
 unified-delay: true
 ```
@@ -247,10 +248,4 @@ geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
-```
-
-## **实验性**
-
-```yaml
-experimental:
 ```

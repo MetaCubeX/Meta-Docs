@@ -21,8 +21,7 @@ socks-port: 7891
 #### 单行
 
 ```yaml
-tun:
-  { enable: true, stack: system, auto-route: true, auto-detect-interface: true }
+tun: { enable: true, stack: system, auto-route: true, auto-detect-interface: true }
 ```
 
 #### 多行
@@ -58,7 +57,7 @@ a:
 
 **&** 锚点和 **\*** 别名，可以用来引用，**&** 用来建立锚点，**<<**表示合并到当前数据**,\*** 用来引用锚点
 
-因`p:`这个项在 clash 中不存在，所以在运行时会被忽视
+因 `p:`这个项在 clash 中不存在，所以在运行时会被忽视
 
 如合并时有重复的项，则不会去合并
 
@@ -107,8 +106,6 @@ proxy-providers:
     path: ./proxy_providers/provider2.yaml
 ```
 
-###
-
 ## **IPV6 地址**
 
 在 clash 内，应当使用 \[] 来框选一个 IPV6 地址
@@ -146,7 +143,7 @@ clash 的通配符 \* 一次只能匹配一级域名
 
 ### **使用示例**
 
-使用通配符时，应当使用引号`''`或`" "`将内容包裹起来，以免过度匹配
+使用通配符时，应当使用引号 `''`或 `" "`将内容包裹起来，以免过度匹配
 
 ```yaml
 fake-ip-filter:
