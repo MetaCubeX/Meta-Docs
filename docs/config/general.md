@@ -70,7 +70,9 @@ authentication:
 
 ## **运行模式**
 
-rule（规则） / global（全局） / direct（直连）
+* `rule` 规则匹配
+* `global` 全局代理(需要在GLOBAL策略组选择代理/策略)
+* `direct` 全局直连
 
 此项拥有默认值，默认为规则模式
 
@@ -86,15 +88,11 @@ clash 内核输出日志的等级，仅在控制台和控制页面输出
 log-level: info
 ```
 
-`silent` 静默，不输出
-
-`error` 仅输出发生错误至无法使用的日志
-
-`warning` 输出发生错误但不影响运行的日志，以及 error 级别内容
-
-`info` 输出一般运行的内容，以及 error 和 warning 级别的日志
-
-`debug` 尽可能的输出运行中所有的信息
+* `silent` 静默，不输出
+* `error` 仅输出发生错误至无法使用的日志
+* `warning` 输出发生错误但不影响运行的日志，以及 error 级别内容
+* `info` 输出一般运行的内容，以及 error 和 warning 级别的日志
+* `debug` 尽可能的输出运行中所有的信息
 
 ## **IPv6**
 
@@ -110,11 +108,9 @@ ipv6: true
 
 控制是否让 clash 去匹配进程
 
-`always` 开启，强制匹配所有进程
-
-`strict` 默认，由 clash 判断是否开启
-
-`off` 不匹配进程，推荐在路由器上使用此模式
+* `always` 开启，强制匹配所有进程
+* `strict` 默认，由 clash 判断是否开启
+* `off` 不匹配进程，推荐在路由器上使用此模式
 
 ```yaml
 find-process-mode: strict
@@ -156,6 +152,8 @@ external-ui: dashboard
 
 在 clash 官方中，profile 应为扩展配置，但在 clash.meta, 仅作为缓存项使用
 
+可选值 `true/false`
+
 ```yaml
 profile:
   store-selected: true
@@ -168,11 +166,14 @@ profile:
 
 更换延迟计算方式,去除握手等额外延迟
 
+可选值 `true/false`
 ```yaml
 unified-delay: true
 ```
 
 ## **TCP并发**
+
+可选值 `true/false`
 
 ```yaml
 tcp-concurrent: true
@@ -220,12 +221,23 @@ global-client-fingerprint: chrome
 
     若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
 
-## GEO数据模式
+## **GEO数据模式**
 
 更改geoip使用文件,mmdb或者dat,`true`为dat
 
 ```yaml
 geodata-mode: true
+```
+
+## **GEO文件加载模式**
+
+可选的加载模式如下
+
+* `standard`：标准加载器
+* `memconservative`：专为内存受限(小内存)设备优化的加载器(默认值)
+
+```yaml
+geodata-loader: memconservative
 ```
 
 ## **自定 GEO 下载地址**
