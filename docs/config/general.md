@@ -130,7 +130,7 @@ API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP
 external-controller: 127.0.0.1:9090
 ```
 
-HTTPS-API 监听地址，需要配置 `tls` 部分证书和其私钥配置，使用 TLS 也必须填写 `external-controller` 
+HTTPS-API 监听地址，需要配置 `tls` 部分证书和其私钥配置，使用 TLS 也必须填写 `external-controller`
 
 ```yaml
 external-controller-tls: 127.0.0.1:9443
@@ -219,6 +219,14 @@ global-client-fingerprint: chrome
     可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random"
 
     若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
+
+## GEO数据模式
+
+更改geoip使用文件,mmdb或者dat,`true`为dat
+
+```yaml
+geodata-mode: true
+```
 
 ## **自定 GEO 下载地址**
 
