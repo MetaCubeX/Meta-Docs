@@ -2,6 +2,7 @@ site_name: Clash.Meta Docs
 repo_url: https://github.com/MetaCubeX/Clash.Meta
 repo_name: MetaCubeX/Clash.Meta
 copyright: Copyright &copy 2023 Clash.Meta
+edit_uri: 'https://github.com/MetaCubeX/Meta-Docs/blob/main/docs/'
 extra:
   generator: false
   analytics:
@@ -14,6 +15,8 @@ extra:
       link: https://github.com/MetaCubeX/Meta-Docs
 plugins:
   - search
+  - git-revision-date-localized:
+      enable_creation_date: true
 theme:
   name: material
   logo: assets/logo.webp
@@ -29,6 +32,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - toc.follow
+    - content.action.edit
     # - toc.integrate
   palette:
     # Palette toggle for light mode
