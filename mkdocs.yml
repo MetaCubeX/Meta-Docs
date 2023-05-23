@@ -17,6 +17,7 @@ plugins:
   - search
   - git-revision-date-localized:
       enable_creation_date: true
+      fallback_to_build_date: true
 theme:
   name: material
   logo: assets/logo.webp
