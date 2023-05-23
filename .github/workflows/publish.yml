@@ -15,8 +15,6 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v2
 
-      - run: pip install mkdocs-git-revision-date-localized-plugin
-
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
