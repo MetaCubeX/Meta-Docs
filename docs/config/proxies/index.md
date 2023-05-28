@@ -46,19 +46,19 @@ ipv6-prefer:优先使用 IPv6,对于 TCP 会进行双栈解析,并发链接但�
 
 ### dialer-proxy
 
-指定当前 `proxy` 通过下一跳的 `dialer-proxy` 建立网络连接, 值可以为代理组、代理（proxy-groups, proxy）的同一 `name` 字段  
+指定当前 `proxy` 通过下一跳的 `dialer-proxy` 建立网络连接, 值可以为代理组、代理（proxy-groups, proxy）的同一 `name` 字段
 
 ```yaml
 proxies:
-  - name: "ss1"
+  - name: "SS1"
     type: ss
     server: server
     port: 443
     ip-version: ipv4
     dialer-proxy: ss2
     ...
-    
-  - name: "ss2"
+
+  - name: "SS2"
     type: ss
     server: server
     port: 443
@@ -66,6 +66,13 @@ proxies:
 
 ```
 
-local <--> ss1 <--> ss2 <--> Google.com
-!!! Note
-  上面的例子通过在客户端的 proxies 内 `ss-proxy1` 指定 `proxy-dialer: ss-proxy2`，使流量在经过ss1后再与ss2建立连接，从而实现指定下一跳代理的效果
+!!!Note
+    上面的例子通过在客户端的 proxies 内 `SS1` 指定 `proxy-dialer: SS2`，使流量在经过 ss1 后再与 SS2 建立连接，从而实现指定下一跳代理的效果
+
+
+```mermaid
+flowchart LR
+  SS1 <--> |proxy-proxy-dialer: SS2|SS2[SS2]
+  SS2 <--> 目标域名
+
+```
