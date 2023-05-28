@@ -67,7 +67,7 @@ proxies:
 ```
 
 !!!Note
-    上面的例子通过在客户端的 proxies 内 `SS1` 指定 `proxy-dialer: SS2`，使流量在经过 ss1 后再与 SS2 建立连接，从而实现指定下一跳代理的效果
+    上面的例子通过在客户端的 proxies 内 `SS1` 指定 `proxy-dialer: SS2`，使流量在经过 SS1 后再与 SS2 建立连接，从而实现指定下一跳代理的效果
 
 
 ```mermaid
