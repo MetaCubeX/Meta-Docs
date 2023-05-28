@@ -123,7 +123,7 @@ nav:
           - 进程规则: config/rules/process.md
           - 逻辑规则: config/rules/logic.md
           - GEO规则: config/rules/geox.md
-          - 入站类型规则: config/rules/intype.md
+          - 入站规则: config/rules/in.md
           - 网络类型规则: config/rules/network.md
           - 规则集合: config/rules/rule-provider.md
           - 子规则: config/rules/sub-rule.md
