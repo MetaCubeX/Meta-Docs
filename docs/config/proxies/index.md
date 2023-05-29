@@ -72,7 +72,8 @@ proxies:
 
 ```mermaid
 flowchart LR
+  Clash  <--> SS1
   SS1 <--> |proxy-proxy-dialer: SS2|SS2[SS2]
-  SS2 <--> 目标域名
+  SS2 <--> Internet
 
 ```
