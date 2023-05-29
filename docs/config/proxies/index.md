@@ -54,8 +54,7 @@ proxies:
     type: ss
     server: server
     port: 443
-    ip-version: ipv4
-    dialer-proxy: ss2
+    dialer-proxy: SS2
     ...
 
   - name: "SS2"
@@ -64,16 +63,19 @@ proxies:
     port: 443
     ...
 
+rules:
+  match,SS1
+
 ```
 
 !!!Note
-    上面的例子通过在客户端的 proxies 内 `SS1` 指定 `proxy-dialer: SS2`，使流量在经过 SS1 后再与 SS2 建立连接，从而实现指定下一跳代理的效果
+    上面的例子通过在客户端的 proxies 内 `SS1` 指定 `proxy-dialer: SS2`，使发往 SS1 的流量先经过 SS2，从而实现指定下一跳代理的效果
 
 
 ```mermaid
 flowchart LR
-  Clash  <--> SS1
-  SS1 <--> |proxy-proxy-dialer: SS2|SS2[SS2]
-  SS2 <--> Internet
+  Clash <--> |proxy-proxy-dialer: SS2|SS2
+  SS2 <--> SS1
+  SS1 <--> 目标域名
 
 ```
