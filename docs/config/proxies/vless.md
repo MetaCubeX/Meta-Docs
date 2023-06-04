@@ -1,7 +1,7 @@
 # VLESS
 
 !!! note
-    因 clash 实现的问题，h2 传输层不建议在 clash 使用，建议更换为 grpc
+    因 clash 实现的问题，h2 传输层不建议在 clash 使用，建议更换为 gRPC
 
 Meta 增加了 VLESS 协议支持，具体格式如下：
 
@@ -22,6 +22,11 @@ Meta 增加了 VLESS 协议支持，具体格式如下：
   # fingerprint: xxxx
   # skip-cert-verify: true
 ```
+
+!!! note
+    Meta 的 `xtls-*` 流控实际上与 Xray-core 中的 `xtls-*-udp443` 等效，如需拦截 443 端口的 UDP 流量，请使用逻辑规则：
+
+    `AND,((NETWORK,UDP),(DST-PORT,443)),REJECT`
 
 #### **VLESS-reality-vision**
 
@@ -54,7 +59,6 @@ Meta 增加了 VLESS 协议支持，具体格式如下：
   tls: true
   udp: true
   flow:
-  # skip-cert-verify: true
   client-fingerprint: chrome
   servername: testingcf.jsdelivr.net # REALITY servername
   grpc-opts:
@@ -64,7 +68,7 @@ Meta 增加了 VLESS 协议支持，具体格式如下：
     short-id: 10f897e26c4b9478
 ```
 
-#### VLESS-TCP
+#### VLESS-TCP-TLS
 
 ```yaml
 - name: "vless-tcp"
@@ -73,13 +77,14 @@ Meta 增加了 VLESS 协议支持，具体格式如下：
   port: 443
   uuid: uuid
   network: tcp
+  tls: true
   servername: example.com # AKA SNI
   # flow: xtls-rprx-direct # xtls-rprx-origin  # enable XTLS
   # skip-cert-verify: true
 
 ```
 
-#### VLESS-WS
+#### VLESS-WS-TLS
 
 ```yaml
 - name: "vless-ws"
