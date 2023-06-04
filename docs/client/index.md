@@ -25,6 +25,8 @@ hide:
 
 [**v2rayN**](https://github.com/2dust/v2rayN)
 
+[**Clash.Mini**](https://github.com/MetaCubeX/Clash.Mini)
+
 ***
 
 ### Mac OS：

@@ -5,7 +5,7 @@ hide:
 ---
 # 简介
 
-[**Clash.Meta**](https://github.com/MetaCubeX/Clash.Meta/tree/Meta) **是一个基于开源项目** [**Clash**](https://github.com/Dreamacro/clash) **的二次开发版本，增加了一些独有特性**，文档仍在修订中，欢迎 [PR](https://github.com/MetaCubeX/Meta-Docs/)。
+[**Clash.Meta**](https://github.com/MetaCubeX/Clash.Meta/tree/Meta) **是一个基于开源项目** [**Clash**](https://github.com/Dreamacro/clash) **的二次开发版本，增加了一些独有特性**，[本文档](https://github.com/MetaCubeX/Meta-Docs/)仍在修订中，欢迎 PR。
 
 !!! Telegram
     发布频道：[https://t.me/ClashMeta](https://t.me/ClashMeta)  
@@ -23,8 +23,11 @@ hide:
 
 #### **代理模块：**
 
-* 支持出站传输协议 VLESS XTLS / Trojan XTLS
+* 支持出站传输协议 VLESS Reality, Vision 流控 
+* 支持出站传输协议 Trojan XTLS
 * 支持出站传输协议 Hysteria
+* 支持出站传输协议 TUIC
+* 支持出站传输协议 ShadowTLS
 * 支持 PASS ( 跳过 ) 规则
 * 主动健康检测 urltest/fallback（基于 tcp 握手，限定时间内多次失败会主动触发健康检测使用节点）
 * 支持策略组正则筛选
@@ -56,7 +59,7 @@ hide:
 * 恢复 Redir-Host 远程解析
 * 支持使用代理解析 ip
 * 支持使用 Policy 分流 DNS
-* 支持使用 HTTP/3
+* 支持 DNS over HTTP/3
 * 支持 DNS over QUIC
 
 #### TUN 模块
