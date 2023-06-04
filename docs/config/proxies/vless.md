@@ -1,7 +1,7 @@
 # VLESS
 
 !!! note
-    因 clash 实现的问题，h2 传输层不建议在 clash 使用，建议更换为 gRPC
+    Clash 的 H2 传输层未实现多路复用功能，在 Clash.Meta 中更建议使用 gRPC 协议
 
 Meta 增加了 VLESS 协议支持，具体格式如下：
 
@@ -28,7 +28,7 @@ Meta 增加了 VLESS 协议支持，具体格式如下：
 
     `AND,((NETWORK,UDP),(DST-PORT,443)),REJECT`
 
-#### **VLESS-reality-vision**
+#### VLESS-reality-vision
 
 ```yaml
 - name: "vless-reality-vision"
@@ -47,7 +47,7 @@ Meta 增加了 VLESS 协议支持，具体格式如下：
   client-fingerprint: chrome # cannot be empty
 ```
 
-#### **VLESS-reality-grpc**
+#### VLESS-reality-grpc
 
 ```yaml
 - name: "vless-reality-grpc"
