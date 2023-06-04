@@ -1,5 +1,5 @@
 ---
-description: clash 的 DNS 模块配置
+description: Clash 的 DNS 模块配置
 ---
 # DNS 各项配置
 ## 示例
@@ -90,7 +90,7 @@ ipv6: true
 
 可选值 `fake-ip / redir-host`
 
-clash 的 dns 处理模式
+Clash 的 dns 处理模式
 
 ```yaml
 enhanced-mode: fake-ip

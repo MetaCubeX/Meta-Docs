@@ -40,7 +40,7 @@ tproxy-port: 7894
 
 ## **允许局域网**
 
-允许其他设备经过 clash 的代理端口访问互联网
+允许其他设备经过 Clash 的代理端口访问互联网
 
 可选值 `true/false`
 
@@ -82,7 +82,7 @@ mode: rule
 
 ## **日志级别**
 
-clash 内核输出日志的等级，仅在控制台和控制页面输出
+Clash 内核输出日志的等级，仅在控制台和控制页面输出
 
 ```yaml
 log-level: info
@@ -106,10 +106,10 @@ ipv6: true
 
 ## **进程匹配模式**
 
-控制是否让 clash 去匹配进程
+控制是否让 Clash 去匹配进程
 
 * `always` 开启，强制匹配所有进程
-* `strict` 默认，由 clash 判断是否开启
+* `strict` 默认，由 Clash 判断是否开启
 * `off` 不匹配进程，推荐在路由器上使用此模式
 
 ```yaml
@@ -118,7 +118,7 @@ find-process-mode: strict
 
 ## **外部控制 (API)**
 
-外部控制器，可以使用 RESTful API 来控制你的 clash 内核
+外部控制器，可以使用 RESTful API 来控制你的 Clash 内核
 
 API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP
 
@@ -140,9 +140,9 @@ secret: ""
 
 ## **外部用户界面**
 
-可以将静态网页资源（比如 clash-dashboard) 运行在 clash API, 路径为 API 地址/ui
+可以将静态网页资源（比如 Clash-dashboard) 运行在 Clash API, 路径为 API 地址/ui
 
-可以为绝对路径，或者 clash 工作目录的相对路径
+可以为绝对路径，或者 Clash 工作目录的相对路径
 
 ```yaml
 external-ui: dashboard
@@ -150,7 +150,7 @@ external-ui: dashboard
 
 ## **缓存**
 
-在 clash 官方中，profile 应为扩展配置，但在 clash.meta, 仅作为缓存项使用
+在 Clash 官方中，profile 应为扩展配置，但在 Clash.meta, 仅作为缓存项使用
 
 可选值 `true/false`
 
@@ -182,7 +182,7 @@ tcp-concurrent: true
 
 ## **出站接口**
 
-clash 的流量出站接口
+Clash 的流量出站接口
 
 ```yaml
 interface-name: en0

@@ -44,7 +44,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 请求方法：`GET`
 
-- 获取 clash 版本
+- 获取 Clash 版本
 
 ## 缓存
 
