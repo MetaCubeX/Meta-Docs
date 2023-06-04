@@ -116,7 +116,7 @@ LINUX 如果 systemd-resolved 开启无法自动劫持 dns 请求
 可选：`true/false`
 
 ```yaml
-strict_route: true
+strict-route: true
 ```
 
 ### mtu
