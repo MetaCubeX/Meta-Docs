@@ -11,7 +11,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 此请求附带 `'Authorization: Bearer ${secret}'` 请求头，其中:
 
-- `${secret}` 为配置文件设置的 api 密钥
+- `${secret}` 为配置文件设置的 API 密钥
 - `${controller-api}`为配置文件中设置的 `ip:port`
 
 ## 日志
@@ -234,7 +234,7 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/heap
 go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/allocs
 ```
 
-[Full image](../assets/image/api/allocs.svg)
+[示例输出](../assets/image/api/allocs.svg)
 
 ##### 提交输出报告
 
