@@ -151,10 +151,10 @@ default-nameserver:
 nameserver-policy:
   'www.baidu.com': '114.114.114.114'
   '+.internal.crop.com': '10.0.0.1'
-  "geosite:geolocation-!cn": [tls://8.8.4.4, https://1.0.0.1/dns-query]
-  "www.baidu.com,+.google.cn": https://doh.pub/dns-query
-  "geosite:private,apple": https://dns.alidns.com/dns-query
-  "rule-set:google": 8.8.8.8
+  'geosite:geolocation-!cn': [tls://8.8.4.4, https://1.0.0.1/dns-query]
+  'www.baidu.com,+.google.cn': https://doh.pub/dns-query
+  'geosite:private,apple': https://dns.alidns.com/dns-query
+  'rule-set:google': 8.8.8.8
 ```
 
 ## nameserver
