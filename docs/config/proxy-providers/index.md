@@ -1,7 +1,6 @@
 ---
 description: 用户可以单独将一些代理放入特定文件中，通过引用该文件，用户可以快速将这些相同的代理填充到不同的策略组中
 ---
-
 # 代理集合
 
 ## 示例
@@ -29,15 +28,15 @@ proxy-providers:
 
 ### name
 
-如`provider1`, 为 provider 的 name,name 不能重复
+如 `provider1`, 为 provider 的 name,name 不能重复
 
 ### type
 
-provider 类型，可选`http/file`
+provider 类型，可选 `http/file`
 
 ### url
 
-类型为`http`是则需要配置
+类型为 `http`是则需要配置
 
 ### path
 
@@ -46,6 +45,10 @@ provider 类型，可选`http/file`
 ### interval
 
 更新 provider 的时间，单位为秒
+
+### dialer-proxy
+
+为代理集合内所有节点附加[dialer-proxy](../proxies/index.md#dialer-proxy)
 
 ### health-check
 
@@ -60,11 +63,13 @@ provider 类型，可选`http/file`
 健康检查地址，推荐使用以下地址之一：
 
 Cloudflare:
+
 ```
 https://cp.cloudflare.com/generate_204
 ```
 
 Google：
+
 ```
 http://www.gstatic.com/generate_204
 https://www.gstatic.com/generate_204

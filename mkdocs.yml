@@ -112,9 +112,7 @@ nav:
       - 代理集合配置:
           - config/proxy-providers/index.md
           - 代理集合内容: config/proxy-providers/content.md
-          - 引用代理集合: config/proxy-providers/use.md
           - 筛选代理集合: config/proxy-providers/filter.md
-          - 健康检查: config/proxy-providers/health-check.md
       - 规则配置:
           - config/rules/index.md
           - 域名规则: config/rules/domain.md
