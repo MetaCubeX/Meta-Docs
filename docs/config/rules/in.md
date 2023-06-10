@@ -5,7 +5,8 @@
 匹配流量入站的类型
 
 ```yaml
-IN-TYPE,INNER,proxy
+rules:
+- IN-TYPE,INNER,proxy
 ```
 
 ### 支持的类型
@@ -20,7 +21,8 @@ HTTP/SOCKS/TUN/TPROXY/REDIR/INNER
 匹配入站用户名
 
 ```yaml
-IN-USER,meta,DIERCT
+rules:
+- IN-USER,meta,DIERCT
 ```
 
 ## IN-NAME
@@ -28,5 +30,10 @@ IN-USER,meta,DIERCT
 匹配入站名称
 
 ```yaml
-IN-NAME,ss,PROXY
+rules:
+- IN-NAME,ss,PROXY
 ```
+
+
+
+关于[入站](../listeners.md#_3)

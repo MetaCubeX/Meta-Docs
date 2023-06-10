@@ -1,7 +1,6 @@
 ---
 description: 与或非逻辑判断
 ---
-
 # 逻辑规则
 
 ## AND
@@ -11,7 +10,8 @@ description: 与或非逻辑判断
 示例为匹配 `baidu.com` 域名并且网络类型为 tcp 的请求 直连
 
 ```
-AND,((DOMAIN,baidu.com),(NETWORK,tcp)),DIRECT
+rules:
+- AND,((DOMAIN,baidu.com),(NETWORK,tcp)),DIRECT
 ```
 
 ## OR
@@ -21,7 +21,8 @@ AND,((DOMAIN,baidu.com),(NETWORK,tcp)),DIRECT
 示例为域名关键词为 pcdn 或域名关键词为 stun 的请求 拦截
 
 ```
-OR,((DOMAIN-KEYWORD,pcdn),(DOMAIN-KEYWORD,stun)),REJECT
+rules:
+- OR,((DOMAIN-KEYWORD,pcdn),(DOMAIN-KEYWORD,stun)),REJECT
 ```
 
 ## NOT
@@ -31,7 +32,8 @@ OR,((DOMAIN-KEYWORD,pcdn),(DOMAIN-KEYWORD,stun)),REJECT
 示例为不匹配 baidu.com 域名的请求走 proxy 节点/策略组
 
 ```
-NOT,((DOMAIN,baidu.com)),PROXY
+rules:
+- NOT,((DOMAIN,baidu.com)),PROXY
 ```
 
 ## no-resolve
@@ -49,17 +51,3 @@ rules:
 
 !!! note
     逻辑判断规则支持多层嵌套，注意括号的用法
-
-|      支持的规则类别     |
-| :--------------: |
-| NETWORK（UDP/TCP） |
-|      DOMAIN      |
-|   DOMAIN-SUFFIX  |
-|  DOMAIN-KEYWORD  |
-|      IP-CIDR     |
-|    SRC-IP-CIDR   |
-|     SRC-PORT     |
-|      IN-TYPE     |
-|      GEOSITE     |
-|       GEOIP      |
-|     RULE-SET     |

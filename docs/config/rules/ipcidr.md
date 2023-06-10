@@ -7,9 +7,14 @@ description: 有三种基于域名的规则,如果请求是域名,匹配IP规则
 
 IP 规则,请求的匹配指定的 IP 范围
 
+```yaml
+rules:
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR6,2620:0:2d0:200::7/32,auto
 ```
-IP-CIDR,127.0.0.0/8,DIRECT
-IP-CIDR6,2620:0:2d0:200::7/32,auto
+
+```yaml
+
 ```
 
 ### **no-resolve**
@@ -20,14 +25,16 @@ IP-CIDR6,2620:0:2d0:200::7/32,auto
 
 如 `enhanced-mode`为 `redir-host`,则此选项无效
 
-```
-IP-CIDR,127.0.0.1/8,DIRECT,no-resolve
+```yaml
+rules:
+- IP-CIDR,127.0.0.1/8,DIRECT,no-resolve
 ```
 
 ## **SRC-IP-CIDR**
 
 来源 IP 规则,匹配请求的客户端 IP 地址
 
-```
-SRC-IP-CIDR,192.168.1.201/32,DIRECT
+```yaml
+rules:
+- SRC-IP-CIDR,192.168.1.201/32,DIRECT
 ```

@@ -7,7 +7,7 @@ hide:
 
 ## 请求示例
 
-curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}//version`
+curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}/version`
 
 此请求附带 `'Authorization: Bearer ${secret}'` 请求头，其中:
 

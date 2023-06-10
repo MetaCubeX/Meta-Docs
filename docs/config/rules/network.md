@@ -5,7 +5,8 @@
 匹配入站流量的类型
 
 ```yaml
-NETWORK,tcp,proxy
+rules:
+- NETWORK,tcp,proxy
 ```
 
 ### 支持的类型
