@@ -12,6 +12,7 @@ proxy-providers:
     url: ""
     path: ./proxy_providers/provider1.yaml
     interval: 3600
+    dialer-proxy: proxy
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
