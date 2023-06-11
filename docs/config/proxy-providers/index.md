@@ -43,6 +43,8 @@ provider 类型，可选 `http/file`
 
 文件路径，不可重复
 
+由于安全问题，此路径将限制只允许在 HomeDir（有启动参数 -d 配置） 中，如果想存储到任意位置配置环境变量 `SKIP_SAFE_PATH_CHECK=1` 
+
 ### interval
 
 更新 provider 的时间，单位为秒
