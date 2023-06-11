@@ -17,6 +17,8 @@ proxy-providers:
     url: http://example.com/files/meta2.yaml
     interval: 3600
     filter: "(?i)港|hk|hongkong|hong kong"
+    exclude-filter: "xxx"
+    exclude-type: "ss|http"
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -29,8 +31,19 @@ proxy-providers:
       - provider1
       - provider2
     filter: "(?i)港|hk|hongkong|hong kong"
+    exclude-filter: "xxx"
+    exclude-type: "Shadowsocks|Http"
 ```
 
 ## filter
 
 支持使用关键词、[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)筛选节点
+
+## exclude-filter
+
+支持使用关键词、[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)排除节点
+
+## exclude-type
+
+不支持正则表达式，通过 `|` 分割，根据节点类型排除
+注意，`proxy-groups` 与 `proxy-providers` 写法不同
