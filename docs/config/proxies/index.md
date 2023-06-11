@@ -10,6 +10,7 @@ proxies:
     port: 443
     ip-version: ipv4
     dialer-proxy: ss1
+    udp: true
 ```
 
 ## proxies
@@ -43,6 +44,13 @@ ipv6: 仅使用 IPv6
 ipv4-prefer : 优先使用 IPv4,对于 TCP 会进行双栈解析,并发链接但是优先使用 IPv4 链接,UDP 则为双栈解析,获取结果中的第一个 IPv4
 
 ipv6-prefer:优先使用 IPv6,对于 TCP 会进行双栈解析,并发链接但是优先使用 IPv6 链接,UDP 则为双栈解析,获取结果中的第一个 IPv6
+
+### udp
+
+是否允许UDP通过代理
+
+!!! note
+    此选项在 TUIC 等基于 UDP 的协议默认开启
 
 ### dialer-proxy
 
