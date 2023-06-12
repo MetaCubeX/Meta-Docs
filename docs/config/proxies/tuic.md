@@ -1,6 +1,6 @@
 # TUIC
 
-TUIC是一个轻量的基于QUIC的代理协议,由rust编写,你可以在[这里](https://github.com/EAimTY/tuic)找个更多信息
+TUIC是一个轻量的基于QUIC的代理协议,由rust编写,你可以在[这里](https://github.com/EAimTY/tuic)找到更多信息
 
 ```yaml
 - name: tuic
