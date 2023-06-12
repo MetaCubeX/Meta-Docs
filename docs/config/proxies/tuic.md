@@ -7,25 +7,24 @@ TUIC是一个轻量的基于QUIC的代理协议,由rust编写,你可以在[这�
   server: www.example.com
   port: 10443
   type: tuic
-  # tuicV4必须填写token （不可同时填写uuid和password）
   token: TOKEN
-  # tuicV5必须填写uuid和password（不可同时填写token）
   uuid: 00000000-0000-0000-0000-000000000001
   password: PASSWORD_1
-  # ip: 127.0.0.1 # for overwriting the DNS lookup result of the server address set in option 'server'
+  # ip: 127.0.0.1
   # heartbeat-interval: 10000
   # alpn: [h3]
   disable-sni: true
   reduce-rtt: true
   request-timeout: 8000
-  udp-relay-mode: native # Available: "native", "quic". Default: "native"
-  # congestion-controller: bbr # Available: "cubic", "new_reno", "bbr". Default: "cubic"
+  udp-relay-mode: native
+  # congestion-controller: bbr
   # max-udp-relay-packet-size: 1500
   # fast-open: true
   # skip-cert-verify: true
-  # max-open-streams: 20 # default 100, too many open streams may hurt performance
+  # max-open-streams: 20
   # sni: example.com
 ```
+
 ### name
 
 代理名称，书写时请确保不会与其他代理节点重名。
@@ -44,15 +43,15 @@ TUIC是一个轻量的基于QUIC的代理协议,由rust编写,你可以在[这�
 
 ### token
 
-用于 tuicV4 的用户标识。
+用于 TUIC V4 的用户标识,使用TUIC V5时不可书写
 
 ### uuid
 
-用于 tuicV5 的用户唯一识别码。
+用于 TUICV5 的用户唯一识别码,使用TUIC V4时不可书写
 
 ### password
 
-用于 tuicV5 的用户密码。
+用于 TUICV5 的用户密码,使用TUIC V4时不可书写
 
 ### ip
 
