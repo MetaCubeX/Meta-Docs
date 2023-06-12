@@ -1,5 +1,7 @@
 # Hysteria
 
+[配置参考](https://hysteria.network/zh/docs/advanced-usage/#%e5%ae%a2%e6%88%b7%e7%ab%af)
+
 ```yaml
 - name: "hysteria"
   type: hysteria
@@ -25,5 +27,5 @@
   # ca-str: "xyz"
   # disable_mtu_discovery: false
   # fingerprint: xxxx
-  # fast-open: true # 支持 TCP 快速打开,默认为 false
+  # fast-open: true # 启用 Fast Open (降低连接建立延迟),默认为 false
 ```

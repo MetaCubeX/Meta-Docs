@@ -27,7 +27,7 @@ proxies:
 
 ### server
 
-代理节点服务器,除 `tuic`外,其他代理节点类型的 `server`性质都相同
+代理节点服务器（域名/ip）,除 `tuic`外,其他代理节点类型的 `server`性质都相同
 
 ### port
 
