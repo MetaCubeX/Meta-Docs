@@ -3,8 +3,6 @@
 !!! note
     Clash 的 H2 传输层未实现多路复用功能，在 Clash.Meta 中更建议使用 gRPC 协议
 
-Meta 增加了 VLESS 协议支持，具体格式如下：
-
 #### VLESS-xtls-rprx-vision
 
 ```yaml
