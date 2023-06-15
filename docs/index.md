@@ -13,7 +13,7 @@ hide:
 
 **使用 Clash.Meta Kernel 前，请悉知：**
 
-* 本 Wiki 主要介绍 Clash.Meta 的特色功能，原 Clash 特性请查看 [**Clash Wiki** ](https://lancellc.gitbook.io/clash/)**；**
+* 本 Wiki 主要介绍 Clash.Meta 的特色功能，原 Clash 特性请查看 [**Clash Wiki** ](https://clash.wiki/)**；**
 * 本 Wiki 基于最新的 [**Meta Alpha**](https://github.com/MetaCubeX/Clash.Meta/tree/Alpha) 分支介绍，如果您的 Meta 低于此版本，可能会有部分功能不支持；
 * Meta 核心支持所有原开源核心的全部特性，支持原 Clash Premium 核心部分特性。
 
