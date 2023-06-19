@@ -103,6 +103,7 @@ nav:
           - WireGuard: config/proxies/wg.md
       - 策略组配置:
           - config/proxy-groups/index.md
+          - 筛选代理: config/proxy-groups/filter.md
           - 内置策略: config/proxy-groups/built-in.md
           - 手动选择: config/proxy-groups/select.md
           - 自动选择: config/proxy-groups/url-test.md
@@ -112,8 +113,8 @@ nav:
           - 指定接口以及路由标记: config/proxy-groups/interface-name-and-routing-mark.md
       - 代理集合配置:
           - config/proxy-providers/index.md
-          - 代理集合内容: config/proxy-providers/content.md
-          - 筛选代理集合: config/proxy-providers/filter.md
+          - 代理集内容: config/proxy-providers/content.md
+          - 筛选代理集: config/proxy-providers/filter.md
       - 规则配置:
           - config/rules/index.md
           - 域名规则: config/rules/domain.md
