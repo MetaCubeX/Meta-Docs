@@ -2,7 +2,7 @@ site_name: Clash.Meta Docs
 repo_url: https://github.com/MetaCubeX/Clash.Meta
 repo_name: MetaCubeX/Clash.Meta
 copyright: Copyright &copy 2023 Clash.Meta
-edit_uri: "https://github.dev/MetaCubeX/Meta-Docs/blob/main/docs/"
+edit_uri: "https://github.com/MetaCubeX/Meta-Docs/blob/main/docs/"
 extra:
   generator: false
   analytics:
@@ -110,7 +110,7 @@ nav:
           - 自动回退: config/proxy-groups/fallback.md
           - 负载均衡: config/proxy-groups/load-balance.md
           - 链式代理: config/proxy-groups/relay.md
-          - 指定接口以及路由标记: config/proxy-groups/interface-name-and-routing-mark.md
+          - 指定接口及路由标记: config/proxy-groups/if-mark.md
       - 代理集合配置:
           - config/proxy-providers/index.md
           - 代理集内容: config/proxy-providers/content.md

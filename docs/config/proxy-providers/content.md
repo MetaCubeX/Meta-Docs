@@ -2,7 +2,7 @@
 
 一个合法的代理集合必须包含 `proxies:`字段
 
-```
+```yaml
 proxies:
   - name: "ss1"
     type: ss
@@ -10,7 +10,7 @@ proxies:
     port: 443
     cipher: chacha20-ietf-poly1305
     password: "password"
-  
+
   - name: "ss2"
     type: ss
     server: server
@@ -21,7 +21,7 @@ proxies:
 
 ## 额外支持
 
-meta额外支持ray系代理软件的URI以及base64后的URI,例如
+meta 额外支持 ray 系代理软件的 URI 以及 base64 后的 URI,例如
 
 ### URI
 
@@ -37,4 +37,4 @@ c3M6Ly9ZV1Z6TFRJMU5pMW5ZMjA2YldWMFlVQXhNamN1TUM0d0xqRTZORFF6I2hvbWUKdm1lc3M6Ly9l
 ```
 
 !!! note
-    YAML / URI / base64 不可写在同一文件,URI / base64 不需要 `proxies:`字段,直接书写即可
+YAML / URI / base64 不可写在同一文件,URI / base64 不需要 `proxies:`字段,直接书写即可

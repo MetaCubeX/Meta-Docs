@@ -1,6 +1,7 @@
 ---
 description: 用户可以单独将一些代理放入特定文件中，通过引用该文件，用户可以快速将这些相同的代理填充到不同的策略组中
 ---
+
 # 代理集合
 
 ## 示例
@@ -29,7 +30,7 @@ proxy-providers:
 
 ### name
 
-如 `provider1`, 为 provider 的 name,name 不能重复
+如 `provider1`, 为 provider 的 name,不能重复
 
 ### type
 
@@ -41,9 +42,9 @@ provider 类型，可选 `http/file`
 
 ### path
 
-文件路径，不可重复
+文件路径，不可重复,可选，不填写时会使用MD5作为此文件的文件名
 
-由于安全问题，此路径将限制只允许在 HomeDir（有启动参数 -d 配置） 中，如果想存储到任意位置配置环境变量 `SKIP_SAFE_PATH_CHECK=1` 
+由于安全问题，此路径将限制只允许在 HomeDir（有启动参数 -d 配置） 中，如果想存储到任意位置配置环境变量 `SKIP_SAFE_PATH_CHECK=1`
 
 ### interval
 
