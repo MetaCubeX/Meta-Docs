@@ -37,11 +37,20 @@ proxy-providers:
 
 ## filter
 
-支持使用关键词、[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)筛选节点
+筛选满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点
+```yaml
+filter: "(?i)港|hk|hongkong|hong kong"
+```
+
+
 
 ## exclude-filter
+排除满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点
 
-支持使用关键词、[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)排除节点
+```yaml
+filter: "(?i)港|hk|hongkong|hong kong"
+```
+
 
 ## exclude-type
 
