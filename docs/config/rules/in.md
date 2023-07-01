@@ -18,7 +18,7 @@ HTTP/SOCKS/TUN/TPROXY/REDIR/INNER
 
 ## IN-USER
 
-匹配入站用户名
+匹配入站用户名,目前仅vmess入站支持配置用户名
 
 ```yaml
 rules:
@@ -33,7 +33,5 @@ rules:
 rules:
 - IN-NAME,ss,PROXY
 ```
-
-
 
 关于[入站](../listeners.md#_3)
