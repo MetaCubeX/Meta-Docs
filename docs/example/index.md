@@ -7,9 +7,13 @@ hide:
 
 ## Alpha 分支
 
+开发版,新特性支持
+
 [https://github.com/MetaCubeX/Clash.Meta/blob/Alpha/docs/config.yaml](https://github.com/MetaCubeX/Clash.Meta/blob/Alpha/docs/config.yaml)
 
 ## Meta 分支
+
+稳定版,每月一更,部分文档内容不会及时发布在meta分支内
 
 [https://github.com/MetaCubeX/Clash.Meta/blob/Meta/docs/config.yaml](https://github.com/MetaCubeX/Clash.Meta/blob/Meta/docs/config.yaml)
 
@@ -53,16 +57,13 @@ allow-lan: true
 mixed-port: 7890
 unified-delay: false
 tcp-concurrent: true
-
-external-controller: 0.0.0.0:9090
-#external-ui: ui
-secret: ""
+external-controller: 127.0.0.1:9090
 
 geodata-mode: true
 geox-url:
-  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
-  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
 
 find-process-mode: strict
 global-client-fingerprint: chrome
@@ -97,6 +98,7 @@ dns:
   fake-ip-filter:
     - '*'
     - '+.lan'
+    - '+.local'
   default-nameserver:
     - 223.5.5.5
   nameserver:
