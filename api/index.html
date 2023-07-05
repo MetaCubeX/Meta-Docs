@@ -1,0 +1,2371 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../config/experimental/">
+      
+      
+      <link rel="icon" href="../assets/logo.webp">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>APIs - Clash.Meta Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-1BJ0XH0RSM"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-1BJ0XH0RSM",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-1BJ0XH0RSM",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Clash.Meta Docs" class="md-header__button md-logo" aria-label="Clash.Meta Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Clash.Meta Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              APIs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MetaCubeX/Clash.Meta" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MetaCubeX/Clash.Meta
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      简介
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../client/" class="md-tabs__link">
+      支持 Clash.Meta 的工具
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../example/" class="md-tabs__link">
+      配置示例
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../config/" class="md-tabs__link">
+        配置详解
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      APIs
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Clash.Meta Docs" class="md-nav__button md-logo" aria-label="Clash.Meta Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.webp" alt="logo">
+
+    </a>
+    Clash.Meta Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MetaCubeX/Clash.Meta" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MetaCubeX/Clash.Meta
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        简介
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client/" class="md-nav__link">
+        支持 Clash.Meta 的工具
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example/" class="md-nav__link">
+        配置示例
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../config/">配置详解</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="配置详解" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          配置详解
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/general/" class="md-nav__link">
+        全局配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/tun/" class="md-nav__link">
+        Tun配置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../config/dns/">DNS配置</a>
+          
+            <label for="__nav_4_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="DNS配置" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          DNS配置
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/dns/hosts/" class="md-nav__link">
+        hosts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/dns/diagram/" class="md-nav__link">
+        解析流程
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/dns/sniffer/" class="md-nav__link">
+        域名嗅探
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../config/proxies/">代理配置</a>
+          
+            <label for="__nav_4_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="代理配置" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          代理配置
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxies/http/" class="md-nav__link">
+        HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxies/socks/" class="md-nav__link">
+        SOCKS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxies/ss/" class="md-nav__link">
+        Shadowsocks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxies/ssr/" class="md-nav__link">
+        ShadowsocksR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxies/vmess/" class="md-nav__link">
+        VMess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxies/vless/" class="md-nav__link">
+        VLESS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxies/trojan/" class="md-nav__link">
+        Trojan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxies/hysteria/" class="md-nav__link">
+        Hysteria
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxies/tuic/" class="md-nav__link">
+        TUIC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxies/wg/" class="md-nav__link">
+        WireGuard
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../config/proxy-groups/">策略组配置</a>
+          
+            <label for="__nav_4_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="策略组配置" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          策略组配置
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxy-groups/filter/" class="md-nav__link">
+        筛选代理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxy-groups/built-in/" class="md-nav__link">
+        内置策略
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxy-groups/select/" class="md-nav__link">
+        手动选择
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxy-groups/url-test/" class="md-nav__link">
+        自动选择
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxy-groups/fallback/" class="md-nav__link">
+        自动回退
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxy-groups/load-balance/" class="md-nav__link">
+        负载均衡
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxy-groups/relay/" class="md-nav__link">
+        链式代理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxy-groups/if-mark/" class="md-nav__link">
+        指定接口及路由标记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_8" type="checkbox" id="__nav_4_8" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../config/proxy-providers/">代理集合配置</a>
+          
+            <label for="__nav_4_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="代理集合配置" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          代理集合配置
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxy-providers/content/" class="md-nav__link">
+        代理集内容
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/proxy-providers/filter/" class="md-nav__link">
+        筛选代理集
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../config/rules/">规则配置</a>
+          
+            <label for="__nav_4_9">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="规则配置" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          规则配置
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/domain/" class="md-nav__link">
+        域名规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/ipcidr/" class="md-nav__link">
+        IP规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/port/" class="md-nav__link">
+        端口规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/process/" class="md-nav__link">
+        进程规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/logic/" class="md-nav__link">
+        逻辑规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/geox/" class="md-nav__link">
+        GEO规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/in/" class="md-nav__link">
+        入站规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/network/" class="md-nav__link">
+        网络类型规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/rule-provider/" class="md-nav__link">
+        规则集合
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/sub-rule/" class="md-nav__link">
+        子规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/rules/match/" class="md-nav__link">
+        最终匹配
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/sub-rules/" class="md-nav__link">
+        子规则
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/listeners/" class="md-nav__link">
+        流量入站
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/tunnels/" class="md-nav__link">
+        流量隧道
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/experimental/" class="md-nav__link">
+        实验性
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          APIs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        APIs
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    请求示例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    日志
+  </a>
+  
+    <nav class="md-nav" aria-label="日志">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    /logs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    流量信息
+  </a>
+  
+    <nav class="md-nav" aria-label="流量信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traffic" class="md-nav__link">
+    /traffic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    内存信息
+  </a>
+  
+    <nav class="md-nav" aria-label="内存信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    /memory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    版本信息
+  </a>
+  
+    <nav class="md-nav" aria-label="版本信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    /version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    缓存
+  </a>
+  
+    <nav class="md-nav" aria-label="缓存">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cachefakeipflush" class="md-nav__link">
+    /cache/fakeip/flush
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    运行配置
+  </a>
+  
+    <nav class="md-nav" aria-label="运行配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configs" class="md-nav__link">
+    /configs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configsgeo" class="md-nav__link">
+    /configs/geo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart" class="md-nav__link">
+    /restart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade" class="md-nav__link">
+    /upgrade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    代理
+  </a>
+  
+    <nav class="md-nav" aria-label="代理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxies" class="md-nav__link">
+    /proxies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxiesname" class="md-nav__link">
+    /proxies/:name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxiesnamedelay" class="md-nav__link">
+    /proxies/:name/delay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    规则
+  </a>
+  
+    <nav class="md-nav" aria-label="规则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    /rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    连接
+  </a>
+  
+    <nav class="md-nav" aria-label="连接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connections" class="md-nav__link">
+    /connections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectionsid" class="md-nav__link">
+    /connections/:id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    代理集合
+  </a>
+  
+    <nav class="md-nav" aria-label="代理集合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#providersproxies" class="md-nav__link">
+    /providers/proxies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providersproxiesname" class="md-nav__link">
+    /providers/proxies/:name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providersproxiesnamehealthcheck" class="md-nav__link">
+    /providers/proxies/:name/healthcheck
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    规则集合
+  </a>
+  
+    <nav class="md-nav" aria-label="规则集合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#providersrules" class="md-nav__link">
+    /providers/rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providersrulesname" class="md-nav__link">
+    /providers/rules/:name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    域名查询
+  </a>
+  
+    <nav class="md-nav" aria-label="域名查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dnsquery" class="md-nav__link">
+    /dns/query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    DEBUG
+  </a>
+  
+    <nav class="md-nav" aria-label="DEBUG">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debuggc" class="md-nav__link">
+    /debug/gc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugpprof" class="md-nav__link">
+    /debug/pprof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    请求示例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    日志
+  </a>
+  
+    <nav class="md-nav" aria-label="日志">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    /logs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    流量信息
+  </a>
+  
+    <nav class="md-nav" aria-label="流量信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traffic" class="md-nav__link">
+    /traffic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    内存信息
+  </a>
+  
+    <nav class="md-nav" aria-label="内存信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    /memory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    版本信息
+  </a>
+  
+    <nav class="md-nav" aria-label="版本信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    /version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    缓存
+  </a>
+  
+    <nav class="md-nav" aria-label="缓存">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cachefakeipflush" class="md-nav__link">
+    /cache/fakeip/flush
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    运行配置
+  </a>
+  
+    <nav class="md-nav" aria-label="运行配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configs" class="md-nav__link">
+    /configs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configsgeo" class="md-nav__link">
+    /configs/geo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart" class="md-nav__link">
+    /restart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade" class="md-nav__link">
+    /upgrade
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    代理
+  </a>
+  
+    <nav class="md-nav" aria-label="代理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxies" class="md-nav__link">
+    /proxies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxiesname" class="md-nav__link">
+    /proxies/:name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxiesnamedelay" class="md-nav__link">
+    /proxies/:name/delay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    规则
+  </a>
+  
+    <nav class="md-nav" aria-label="规则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules" class="md-nav__link">
+    /rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    连接
+  </a>
+  
+    <nav class="md-nav" aria-label="连接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connections" class="md-nav__link">
+    /connections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectionsid" class="md-nav__link">
+    /connections/:id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    代理集合
+  </a>
+  
+    <nav class="md-nav" aria-label="代理集合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#providersproxies" class="md-nav__link">
+    /providers/proxies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providersproxiesname" class="md-nav__link">
+    /providers/proxies/:name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providersproxiesnamehealthcheck" class="md-nav__link">
+    /providers/proxies/:name/healthcheck
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    规则集合
+  </a>
+  
+    <nav class="md-nav" aria-label="规则集合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#providersrules" class="md-nav__link">
+    /providers/rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providersrulesname" class="md-nav__link">
+    /providers/rules/:name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    域名查询
+  </a>
+  
+    <nav class="md-nav" aria-label="域名查询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dnsquery" class="md-nav__link">
+    /dns/query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    DEBUG
+  </a>
+  
+    <nav class="md-nav" aria-label="DEBUG">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debuggc" class="md-nav__link">
+    /debug/gc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugpprof" class="md-nav__link">
+    /debug/pprof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/MetaCubeX/Meta-Docs/blob/main/docs/api/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+
+<h1 id="api"><a class="toclink" href="#api">API 说明</a><a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
+<h2 id="_1"><a class="toclink" href="#_1">请求示例</a><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>curl 示例 <code>curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}/version</code></p>
+<p>此请求附带 <code>'Authorization: Bearer ${secret}'</code> 请求头，其中:</p>
+<ul>
+<li><code>${secret}</code> 为配置文件设置的 API 密钥</li>
+<li><code>${controller-api}</code>为配置文件中设置的 <code>ip:port</code></li>
+</ul>
+<h2 id="_2"><a class="toclink" href="#_2">日志</a><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="logs"><a class="toclink" href="#logs"><code>/logs</code></a><a class="headerlink" href="#logs" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取实时日志</li>
+</ul>
+<h2 id="_3"><a class="toclink" href="#_3">流量信息</a><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="traffic"><a class="toclink" href="#traffic"><code>/traffic</code></a><a class="headerlink" href="#traffic" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取实时流量，单位 kbps</li>
+</ul>
+<h2 id="_4"><a class="toclink" href="#_4">内存信息</a><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="memory"><a class="toclink" href="#memory"><code>/memory</code></a><a class="headerlink" href="#memory" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取实时内存占用，单位 kb</li>
+</ul>
+<h2 id="_5"><a class="toclink" href="#_5">版本信息</a><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="version"><a class="toclink" href="#version"><code>/version</code></a><a class="headerlink" href="#version" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取 Clash 版本</li>
+</ul>
+<h2 id="_6"><a class="toclink" href="#_6">缓存</a><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="cachefakeipflush"><a class="toclink" href="#cachefakeipflush"><code>/cache/fakeip/flush</code></a><a class="headerlink" href="#cachefakeipflush" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>POST</code></p>
+<ul>
+<li>清除 fakeip 缓存</li>
+</ul>
+<h2 id="_7"><a class="toclink" href="#_7">运行配置</a><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="configs"><a class="toclink" href="#configs"><code>/configs</code></a><a class="headerlink" href="#configs" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取基本配置</li>
+</ul>
+<p>请求方法：<code>PUT</code></p>
+<ul>
+<li>重新加载基本配置</li>
+<li>URL 需携带 <code>?force=true</code> 强制执行，必须发送数据</li>
+<li>curl 示例：<code>curl "${controller-api}/configs?force=true" -X PUT -d '{"path": "", "payload": ""}'</code></li>
+</ul>
+<p>请求方法：<code>PATCH</code></p>
+<ul>
+<li>更新基本配置，传入需要修改的配置即可，传入的数据需以 json 格式传入</li>
+<li>示例：<code>curl ${controller-api}/configs -X PATCH -d '{"mixed-port": 7890}'</code></li>
+</ul>
+<h3 id="configsgeo"><a class="toclink" href="#configsgeo"><code>/configs/geo</code></a><a class="headerlink" href="#configsgeo" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>POST</code></p>
+<ul>
+<li>更新 GEO 数据库</li>
+<li>必须发送数据，因更新后会自动重载一次配置</li>
+<li>curl 示例：<code>curl "${controller-api}/configs" -X POST -d '{"path": "", "payload": ""}'</code></li>
+</ul>
+<h3 id="restart"><a class="toclink" href="#restart"><code>/restart</code></a><a class="headerlink" href="#restart" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>POST</code></p>
+<ul>
+<li>重启内核</li>
+<li>必须发送数据</li>
+<li>curl 示例：<code>curl "${controller-api}/restart " -X POST -d '{"path": "", "payload": ""}'</code></li>
+</ul>
+<h3 id="upgrade"><a class="toclink" href="#upgrade"><code>/upgrade</code></a><a class="headerlink" href="#upgrade" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>POST</code></p>
+<ul>
+<li>更新内核</li>
+<li>必须发送数据，因更新后会自动重载一次配置</li>
+<li>curl 示例：<code>curl "${controller-api}/upgrade" -X POST -d '{"path": "", "payload": ""}'</code></li>
+</ul>
+<h2 id="_8"><a class="toclink" href="#_8">代理</a><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h3 id="proxies"><a class="toclink" href="#proxies"><code>/proxies</code></a><a class="headerlink" href="#proxies" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取代理信息</li>
+</ul>
+<h3 id="proxiesname"><a class="toclink" href="#proxiesname"><code>/proxies/:name</code></a><a class="headerlink" href="#proxiesname" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取具体的代理信息</li>
+</ul>
+<p>请求方法：<code>PUT</code></p>
+<ul>
+<li>选择特定的代理</li>
+</ul>
+<h3 id="proxiesnamedelay"><a class="toclink" href="#proxiesnamedelay"><code>/proxies/:name/delay</code></a><a class="headerlink" href="#proxiesnamedelay" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取具体代理的延迟测试信息</li>
+</ul>
+<h2 id="_9"><a class="toclink" href="#_9">规则</a><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="rules"><a class="toclink" href="#rules"><code>/rules</code></a><a class="headerlink" href="#rules" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取规则信息</li>
+</ul>
+<h2 id="_10"><a class="toclink" href="#_10">连接</a><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="connections"><a class="toclink" href="#connections"><code>/connections</code></a><a class="headerlink" href="#connections" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取连接信息</li>
+</ul>
+<p>请求方法：<code>DELETE</code></p>
+<ul>
+<li>关闭所有连接</li>
+</ul>
+<h3 id="connectionsid"><a class="toclink" href="#connectionsid"><code>/connections/:id</code></a><a class="headerlink" href="#connectionsid" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>DELETE</code></p>
+<ul>
+<li>关闭特定连接</li>
+</ul>
+<h2 id="_11"><a class="toclink" href="#_11">代理集合</a><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="providersproxies"><a class="toclink" href="#providersproxies"><code>/providers/proxies</code></a><a class="headerlink" href="#providersproxies" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取所有代理集合的所有代理信息</li>
+</ul>
+<h3 id="providersproxiesname"><a class="toclink" href="#providersproxiesname"><code>/providers/proxies/:name</code></a><a class="headerlink" href="#providersproxiesname" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取特定代理集合的代理信息</li>
+</ul>
+<p>请求方法：<code>PUT</code></p>
+<ul>
+<li>更新代理集合</li>
+</ul>
+<h3 id="providersproxiesnamehealthcheck"><a class="toclink" href="#providersproxiesnamehealthcheck"><code>/providers/proxies/:name/healthcheck</code></a><a class="headerlink" href="#providersproxiesnamehealthcheck" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>触发特定代理集合的健康检查</li>
+</ul>
+<h2 id="_12"><a class="toclink" href="#_12">规则集合</a><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h3 id="providersrules"><a class="toclink" href="#providersrules"><code>/providers/rules</code></a><a class="headerlink" href="#providersrules" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取所有规则集合的所有信息</li>
+</ul>
+<h3 id="providersrulesname"><a class="toclink" href="#providersrulesname"><code>/providers/rules/:name</code></a><a class="headerlink" href="#providersrulesname" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>PUT</code></p>
+<ul>
+<li>更新规则集合</li>
+</ul>
+<h2 id="_13"><a class="toclink" href="#_13">域名查询</a><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h3 id="dnsquery"><a class="toclink" href="#dnsquery"><code>/dns/query</code></a><a class="headerlink" href="#dnsquery" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>GET</code></p>
+<ul>
+<li>获取指定名称和类型的 DNS 查询数据</li>
+</ul>
+<p>参数</p>
+<ul>
+<li><code>name</code>（必填）：要查询的域名。</li>
+<li><code>type</code>（可选）：要查询的 DNS 记录类型（例如，A、MX、CNAME 等）</li>
+</ul>
+<p>示例：<code>GET /dns/query?name=example.com&amp;type=A</code></p>
+<h2 id="debug"><a class="toclink" href="#debug">DEBUG</a><a class="headerlink" href="#debug" title="Permanent link">&para;</a></h2>
+<p><code>/debug</code> 需要内核启动时 <a href="../config/general/#_5">日志级别</a> 为 <code>debug</code></p>
+<h3 id="debuggc"><a class="toclink" href="#debuggc"><code>/debug/gc</code></a><a class="headerlink" href="#debuggc" title="Permanent link">&para;</a></h3>
+<p>请求方法：<code>PUT</code></p>
+<ul>
+<li>进行主动 GC</li>
+<li>curl 示例：<code>curl "${controller-api}/debug/gc" -X PUT</code></li>
+</ul>
+<h3 id="debugpprof"><a class="toclink" href="#debugpprof"><code>/debug/pprof</code></a><a class="headerlink" href="#debugpprof" title="Permanent link">&para;</a></h3>
+<p>浏览器打开 <code>http://${controller-api}/debug/pprof</code> 可查看原始 DEBUG 信息，其中：</p>
+<ul>
+<li>allocs 表示每个函数调用的内存分配情况，包括在堆栈上和堆上分配的内存大小以及内存分配次数。这个报告主要是为了帮助我们找到代码中存在的内存泄漏、内存频繁申请等问题。</li>
+<li>heap 报告则给出了程序在堆上使用的内存的详细信息，其中包括被分配的内存块的大小、数量和地址，并且按照大小排序。这个报告主要是为了搜寻内存使用过高的地方，我们可以在 heap 报告中查看对象的大小，从而找到内存使用过高的地方。</li>
+</ul>
+<h4 id="graphviz-debug"><a class="toclink" href="#graphviz-debug">安装 <a href="https://graphviz.org/download/">Graphviz</a>，可查看图形化的 debug 信息：</a><a class="headerlink" href="#graphviz-debug" title="Permanent link">&para;</a></h4>
+<h5 id="heap"><a class="toclink" href="#heap">查看图形化 Heap 报告：</a><a class="headerlink" href="#heap" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/heap
+</code></pre></div>
+<p><a href="../assets/image/api/heap.svg">Full image</a></p>
+<h5 id="allocs"><a class="toclink" href="#allocs">查看图形化 Allocs 报告</a><a class="headerlink" href="#allocs" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/allocs
+</code></pre></div>
+<p><a href="../assets/image/api/allocs.svg">示例输出</a></p>
+<h5 id="_14"><a class="toclink" href="#_14">提交输出报告</a><a class="headerlink" href="#_14" title="Permanent link">&para;</a></h5>
+<p>浏览器访问 <code>http://${controller-api}/debug/pprof/heap?raw=true</code> 即可下载这个文件，通过上传到 <a href="https://github.com/MetaCubeX/Clash.Meta/issues">issues</a> 提交你遇到的问题。</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 5, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 5, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+  
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy 2023 Clash.Meta
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/MetaCubeX/Clash.Meta" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/MetaCubeX/Meta-Docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2h9m3-4v-2H6v2h12Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.instant", "navigation.expand", "navigation.path", "navigation.indexes", "navigation.tracking", "navigation.top", "navigation.tabs", "navigation.sections", "toc.follow", "content.action.edit", "content.code.copy"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>
