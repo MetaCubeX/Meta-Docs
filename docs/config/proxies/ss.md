@@ -9,7 +9,7 @@
   password: "password"
   udp: true
   udp-over-tcp: false
-  udp-over-tcp-version: 1
+  udp-over-tcp-version: 2
   ip-version: ipv4
   plugin: obfs
   plugin-opts:
@@ -50,7 +50,7 @@ Shadowsocks 密码
 
 ### udp-over-tcp
 
-UDP over TCP 的协议版本，默认 1。可选值 1、2。
+UDP over TCP 的协议版本，默认 2。可选值 1、2。
 
 ### SMUX
 
