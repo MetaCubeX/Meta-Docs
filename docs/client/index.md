@@ -69,6 +69,8 @@ hide:
 
 ### Shell:
 
+[**Surfing**](https://github.com/MoGuangYu/Surfing)
+
 [**ShellClash**](https://github.com/juewuy/ShellClash)
 
 [**Clash Tproxy Android**](https://t.me/e58695/59)
