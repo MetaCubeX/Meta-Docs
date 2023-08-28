@@ -48,7 +48,7 @@ filter: "(?i)港|hk|hongkong|hong kong"
 排除满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点
 
 ```yaml
-filter: "(?i)港|hk|hongkong|hong kong"
+exclude-filter: "(?i)港|hk|hongkong|hong kong"
 ```
 
 
