@@ -48,7 +48,7 @@ Shadowsocks 密码
 
 是否使用 UDP over TCP,默认 false
 
-### udp-over-tcp
+### udp-over-tcp-version
 
 UDP over TCP 的协议版本，默认 2。可选值 1、2。
 
