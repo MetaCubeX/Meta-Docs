@@ -104,6 +104,14 @@ log-level: info
 ipv6: true
 ```
 
+## **TCP Keep Alive 间隔**
+控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备[耗电问题](https://github.com/vernesong/OpenClash/issues/2614)的临时措施。
+
+```yaml
+keep-alive-interval: 30
+```
+此时 Clash 发现并关闭一个无效 TCP 连接用时：  
+`1*keep-alive-interval + 9*keep-alive-interval`
 ## **进程匹配模式**
 
 控制是否让 Clash 去匹配进程
