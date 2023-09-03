@@ -9,6 +9,7 @@ description: Clash 的 NTP 模块配置
 ```yaml
 ntp:
   enable: true
+  write-to-system: true
   server: time.apple.com
   port: 123
   interval: 30
@@ -24,6 +25,12 @@ ntp:
 ntp:
   enable: true
 ```
+
+## write-to-system
+
+可选值 `true/false`
+
+是否同步至系统时间，需要root、管理员模式运行。
 
 ## server
 
