@@ -141,13 +141,11 @@ proxy-groups:
 
   - {name: Twitter, <<: *pr}
 
-  - {name: pixiv, <<: *pr}
+  - {name: Pixiv, <<: *pr}
 
   - {name: ehentai, <<: *pr}
 
   - {name: 哔哩哔哩, <<: *pr}
-
-  - {name: 哔哩哔哩 api, <<: *pr}
 
   - {name: 哔哩东南亚, <<: *pr}
 
@@ -159,7 +157,7 @@ proxy-groups:
 
   - {name: Spotify, <<: *pr}
 
-  - {name: github, <<: *pr}
+  - {name: Github, <<: *pr}
 
   - {name: 国内, type: select, proxies: [DIRECT, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}
 
@@ -186,7 +184,7 @@ rules:
   # - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(GEOSITE,geolocation-!cn),REJECT # quic
   - GEOSITE,biliintl, 哔哩东南亚
   - GEOSITE,ehentai,ehentai
-  - GEOSITE,github,github
+  - GEOSITE,github,Github
   - GEOSITE,twitter,Twitter
   - GEOSITE,youtube,YouTube
   - GEOSITE,google,Google
@@ -201,6 +199,7 @@ rules:
   - GEOIP,netflix,NETFLIX
   - GEOIP,telegram,Telegram
   - GEOIP,twitter,Twitter
+  - GEOSITE,pixiv,Pixiv
   - GEOSITE,CN,国内
   - GEOIP,CN,国内
   - MATCH,其他
