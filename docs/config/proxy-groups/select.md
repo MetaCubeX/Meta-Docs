@@ -18,7 +18,7 @@ proxy-groups:
    #disable-udp: true
 ```
 
-### nane
+### name
 
 该策略组的名字,如有特殊符号,应当使用引号将其包裹
 
