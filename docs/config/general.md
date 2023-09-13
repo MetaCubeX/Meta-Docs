@@ -232,7 +232,7 @@ global-client-fingerprint: chrome
 
 ## **GEO数据模式**
 
-更改geoip使用文件,mmdb或者dat,可选`true / flase`,`true`为dat,此项有默认值flase
+更改geoip使用文件,mmdb或者dat,可选`true / flase`,`true`为dat,此项有默认值`flase`
 
 ```yaml
 geodata-mode: true 
@@ -256,4 +256,12 @@ geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+```
+
+## **自定客户端UA**
+
+自定义核心使用的UA,此项有默认值 `clash.meta`
+
+```yaml
+global-ua: clash.meta
 ```
