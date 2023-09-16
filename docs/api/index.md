@@ -89,13 +89,22 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 - 必须发送数据
 - curl 示例：`curl "${controller-api}/restart " -X POST -d '{"path": "", "payload": ""}'`
 
-### `/upgrade`
+## 更新
+
+### `/upgrade/`
 
 请求方法：`POST`
 
 - 更新内核
 - 必须发送数据，因更新后会自动重载一次配置
 - curl 示例：`curl "${controller-api}/upgrade" -X POST -d '{"path": "", "payload": ""}'`
+
+### `/upgrade/xd`
+
+请求方法：`POST`
+
+- 更新xd面板
+- curl 示例：`curl "${controller-api}/upgrade" -X POST `
 
 ## 代理
 
