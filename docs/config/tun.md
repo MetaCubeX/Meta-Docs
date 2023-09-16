@@ -62,7 +62,7 @@ stack: system
     * system 使用系统协议栈,可以提供更稳定/全面的 tun 体验,且占用相对其他堆栈更低。
     * gvisor 通过在用户空间中实现网络协议栈,可以提供更高的安全性和隔离性,同时可以避免操作系统内核和用户空间之间的切换,从而在特定情况下具有更好的网络处理性能。
     * lwip 即 lightweight IP,是一款专为嵌入式系统设计的TCP/IP协议栈,采用了单线程的事件驱动模型,性能表现可能不如`system/gvisor`协议栈。
-    * [性能测试](tun.md#tun-de-xie-yi-zhan-wang-luo-hui-huan-ce-shi)
+    * [性能测试](tun.md#tun_1)
 
 ### device
 
@@ -111,7 +111,7 @@ LINUX 如果 systemd-resolved 开启无法自动劫持 dns 请求
 
 ### strict-route
 
-严格路由,它可以防止地址泄漏,并使 DNS 劫持在 Android 和使用 systemd-resolved 的 Linux 上工作,但你的设备将无法其他设备被访问
+严格路由,它可以防止地址泄漏,并使 DNS 劫持在 Android 和使用 systemd-resolved 的 Linux 上工作,但你的设备将无法被其他设备访问
 
 可选：`true/false`
 
