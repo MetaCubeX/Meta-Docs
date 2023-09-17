@@ -260,7 +260,7 @@ geox-url:
 
 ## **自定客户端UA**
 
-自定义核心使用的UA,此项有默认值 `clash.meta`
+自定义外部资源下载时使用的的UA,默认为`clash.meta`
 
 ```yaml
 global-ua: clash.meta
