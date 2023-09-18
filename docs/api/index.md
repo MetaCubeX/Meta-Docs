@@ -99,12 +99,12 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 - 必须发送数据，因更新后会自动重载一次配置
 - curl 示例：`curl "${controller-api}/upgrade" -X POST -d '{"path": "", "payload": ""}'`
 
-### `/upgrade/xd`
+### `/upgrade/ui`
 
 请求方法：`POST`
 
-- 更新xd面板
-- curl 示例：`curl "${controller-api}/upgrade" -X POST `
+- 更新面板，须设置external-ui
+- curl 示例：`curl "${controller-api}/upgrade/ui" -X POST `
 
 ## 代理
 
