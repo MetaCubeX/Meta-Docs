@@ -151,10 +151,12 @@ secret: ""
 可以将静态网页资源（比如 Clash-dashboard) 运行在 Clash API, 路径为 API 地址/ui
 
 ```yaml
-external-ui:
-  ui-path: "./ui"  # /path/to/ui/folder 可以为绝对路径，或者 Clash 工作目录的相对路径
-  ui-name: xd      # /path/to/ui/folder/xd 自动合并
-  ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" #从 GitHub Pages 分支获取
+external-ui: /path/to/ui/folder/  # /path/to/ui/folder 可以为绝对路径，或者 Clash 工作目录的相对路径
+
+## **自定义外部用户界面下载地址**
+```yaml
+external-ui-name: xd      #  合并为/path/to/ui/folder/xd
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" #从 GitHub Pages 分支获取
 ```
 
 ## **缓存**
