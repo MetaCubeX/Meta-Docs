@@ -153,9 +153,13 @@ secret: ""
 ```yaml
 external-ui: /path/to/ui/folder/  # /path/to/ui/folder 可以为绝对路径，或者 Clash 工作目录的相对路径
 
+## **自定义外部用户界面名字**
+```yaml
+external-ui-name: xd      #  合并为 external-ui/xd
+```
+非必须，更新时会更新到指定文件夹，不配置则直接更新到 external-ui 目录
 ## **自定义外部用户界面下载地址**
 ```yaml
-external-ui-name: xd      #  合并为/path/to/ui/folder/xd
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" #从 GitHub Pages 分支获取
 ```
 
