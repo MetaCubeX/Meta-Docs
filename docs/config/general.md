@@ -105,13 +105,16 @@ ipv6: true
 ```
 
 ## **TCP Keep Alive 间隔**
+
 控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备[耗电问题](https://github.com/vernesong/OpenClash/issues/2614)的临时措施。
 
 ```yaml
 keep-alive-interval: 30
 ```
-此时 Clash 发现并关闭一个无效 TCP 连接用时：  
+
+此时 Clash 发现并关闭一个无效 TCP 连接用时：
 `1*keep-alive-interval + 9*keep-alive-interval`
+
 ## **进程匹配模式**
 
 控制是否让 Clash 去匹配进程
@@ -151,14 +154,18 @@ secret: ""
 可以将静态网页资源（比如 Clash-dashboard) 运行在 Clash API, 路径为 API 地址/ui
 
 ```yaml
-external-ui: /path/to/ui/folder/  # /path/to/ui/folder 可以为绝对路径，或者 Clash 工作目录的相对路径
+external-ui: /path/to/ui/folder
+```
+可以为绝对路径，或者 Clash 工作目录的相对路径
 
+```
 ## **自定义外部用户界面名字**
-```yaml
 external-ui-name: xd      #  合并为 external-ui/xd
 ```
 非必须，更新时会更新到指定文件夹，不配置则直接更新到 external-ui 目录
+
 ## **自定义外部用户界面下载地址**
+
 ```yaml
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" #从 GitHub Pages 分支获取
 ```
@@ -239,7 +246,7 @@ global-client-fingerprint: chrome
 
 ## **GEO数据模式**
 
-更改geoip使用文件,mmdb或者dat,可选`true / flase`,`true`为dat,此项有默认值`flase`
+更改geoip使用文件,mmdb或者dat,可选 `true / flase`,`true`为dat,此项有默认值 `flase`
 
 ```yaml
 geodata-mode: true 
@@ -267,7 +274,7 @@ geox-url:
 
 ## **自定客户端UA**
 
-自定义外部资源下载时使用的的UA,默认为`clash.meta`
+自定义外部资源下载时使用的的UA,默认为 `clash.meta`
 
 ```yaml
 global-ua: clash.meta
