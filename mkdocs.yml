@@ -99,6 +99,7 @@ nav:
       - VLESS: config/proxies/vless.md
       - Trojan: config/proxies/trojan.md
       - Hysteria: config/proxies/hysteria.md
+      - Hysteria2: config/proxies/hysteria2.md
       - TUIC: config/proxies/tuic.md
       - WireGuard: config/proxies/wg.md
     - 策略组配置:
