@@ -246,7 +246,7 @@ global-client-fingerprint: chrome
 
 ## **GEO数据模式**
 
-更改geoip使用文件,mmdb或者dat,可选 `true / flase`,`true`为dat,此项有默认值 `flase`
+更改geoip使用文件,mmdb或者dat,可选 `true / false`,`true`为dat,此项有默认值 `false`
 
 ```yaml
 geodata-mode: true 
