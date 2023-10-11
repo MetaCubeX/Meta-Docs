@@ -8,13 +8,11 @@ hide:
 
 ## 使用 systemd
 
-- 创建名为 `clash-meta` 的用户
-
 - 下载二进制可执行文件 [releases](https://github.com/MetaCubeX/Clash.Meta/releases)
 
 - 将下载的二进制可执行文件重名名为 `Clash-Meta` 并移动到 `/usr/local/bin/`
 
-- 以守护进程的方式，由用户 `clash-meta` 运行 Clash-Meta。
+- 以守护进程的方式，运行 Clash-Meta。
 
 使用以下命令将 Clash 二进制文件复制到 /usr/local/bin, 配置文件复制到 /etc/Clash-Meta:
 
@@ -32,8 +30,6 @@ After=network.target NetworkManager.service systemd-networkd.service iwd.service
 
 [Service]
 Type=simple
-User=clash-meta
-Group=clash-meta
 LimitNPROC=500
 LimitNOFILE=1000000
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE
