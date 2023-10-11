@@ -3,6 +3,7 @@ repo_url: https://github.com/MetaCubeX/Clash.Meta
 repo_name: MetaCubeX/Clash.Meta
 copyright: Copyright &copy 2023 Clash.Meta
 edit_uri: "https://github.com/MetaCubeX/Meta-Docs/blob/main/docs/"
+dev_addr: '127.0.0.1:11451'
 extra:
   generator: false
   analytics:
@@ -77,7 +78,10 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
-  - 简介: index.md
+  - 简介: 
+    - index.md
+    - startup/service/index.md
+    - startup/faq/index.md
   - 支持 Clash.Meta 的工具: client/index.md
   - 配置示例: example/index.md
   - 配置详解:

@@ -9,7 +9,7 @@ hide:
 
 [Yacd](http://yacd.metacubex.one)
 
-[Dashboard](http://clash.metacubex.one)
+[Metacubexd](http://d.metacubex.one)
 
 ***
 

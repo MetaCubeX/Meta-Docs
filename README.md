@@ -11,7 +11,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ### 安装
 
 ```shell
-pip install mkdocs-material
+pip install -r requirements.txt
 ```
 
 ### 预览修改

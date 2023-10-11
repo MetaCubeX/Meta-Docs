@@ -1,6 +1,6 @@
 ---
 hide:
-  - navigation
+  # - navigation
   - toc
 ---
 # 简介
@@ -19,9 +19,9 @@ hide:
 
 ***
 
-### Clash.Meta 主要特性
+# Clash.Meta 主要特性
 
-#### **代理模块：**
+## **代理模块：**
 
 * 支持出站传输协议 VLESS Reality, Vision 流控 
 * 支持出站传输协议 Trojan XTLS
@@ -36,7 +36,7 @@ hide:
 * Relay 代理链支持 UDP over TCP
 * TCP 连接并发
 
-#### 规则模块
+## 规则模块
 
 * 支持规则 GEOSITE
 * 支持入站类型规则 IN-TYPE
@@ -52,7 +52,7 @@ hide:
 * 支持 GeoSite 按需加载 
 * 支持使用 `geox-url` 自定义的 GEOIP / GEOSITE 数据库下载地址
 
-#### DNS 模块
+## DNS 模块
 
 * 支持 Sniffer 域名嗅探器
 * 支持 Fallback-Filter 使用 Geosite
@@ -62,7 +62,7 @@ hide:
 * 支持 DNS over HTTP/3
 * 支持 DNS over QUIC
 
-#### TUN 模块
+## TUN 模块
 
 * 支持 macOS、Linux 和 Windows
 * 内置 iptables, 无需手动配置
