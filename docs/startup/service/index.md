@@ -49,13 +49,13 @@ WantedBy=multi-user.target
 systemctl daemon-reload
 ```
 
-启用 clash-meta 服务：
+启用 Clash-Meta 服务：
 
 ```shell
 systemctl enable Clash-Meta
 ```
 
-使用以下命令立即启动 Clash:
+使用以下命令立即启动 Clash-Meta:
 
 ```shell
 systemctl start Clash-Meta
@@ -67,9 +67,9 @@ systemctl start Clash-Meta
 systemctl reload Clash-Meta
 ```
 
-使用以下命令检查 Clash 的运行状况和日志:
+使用以下命令检查 Clash-Meta 的运行状况和日志:
 
 ```shell
-systemctl status clash
+systemctl status Clash-Meta
 journalctl -xe
 ```
