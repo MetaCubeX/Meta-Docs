@@ -34,4 +34,4 @@ rules:
 - IN-NAME,ss,PROXY
 ```
 
-关于[入站](../listeners.md#_3)
+关于[入站](../inbound/index.md)

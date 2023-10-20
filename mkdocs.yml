@@ -95,6 +95,10 @@ nav:
     - 入站配置: 
       - config/inbound/index.md
       - Tun: config/inbound/tun.md
+      - Shadowsocks: config/inbound/ss.md
+      - VMess: config/inbound/vmess.md
+      - TUICv4: config/inbound/tuic-v4.md
+      - TUICv5: config/inbound/tuic-v5.md
       - Hysteria2: config/inbound/hysteria2.md
     - 出站代理配置:
       - config/proxies/index.md
