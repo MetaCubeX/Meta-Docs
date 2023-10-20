@@ -1,0 +1,31 @@
+name: Deploy docs to GitHub Pages
+on:
+  push:
+    branches:
+      - main
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install \
+          mkdocs-material \
+          mkdocs-awesome-pages-plugin \
+          mkdocs-git-revision-date-plugin \
+          mkdocs-toc-sidebar-plugin 
+
+      - run: mkdocs gh-deploy --force --no-history
