@@ -41,7 +41,7 @@ tun:
 
 是否启用 tun 模式来路由全局流量。
 
-可选：`true/false`
+可用值：`true/false`
 
 ```yaml
 enable: true
@@ -51,7 +51,7 @@ enable: true
 
 tun 模式堆栈,如无使用问题,建议使用 `system` 栈;MacOS 用户推荐 `gvisor`栈
 
-可选： `system/gvisor/lwip`
+可用值： `system/gvisor/lwip`
 
 ```yaml
 stack: system
@@ -86,7 +86,7 @@ auto-route: true
 
 自动选择流量出口接口,多出口网卡同时连接的设备建议手动指定出口网卡
 
-可选：`true/false`
+可用值：`true/false`
 
 ```yaml
 auto-detect-interface: true
@@ -113,7 +113,7 @@ dns-hijack:
 
 严格路由,它可以防止地址泄漏,并使 DNS 劫持在 Android 和使用 systemd-resolved 的 Linux 上工作,但你的设备将无法被其他设备访问
 
-可选：`true/false`
+可用值：`true/false`
 
 ```yaml
 strict-route: true
@@ -121,7 +121,7 @@ strict-route: true
 
 ### mtu
 
-最大传输单元, 值为 `1-65534`, 会影响极限状态下的速率,一般用户默认即可。
+最大传输单元, 可用值为 `1-65534`, 会影响极限状态下的速率,一般用户默认即可。
 
 ```yaml
 mtu: 9000
@@ -212,7 +212,6 @@ include-android-user:
 | 机主     | 0   |
 | 手机分身 | 10  |
 | 应用多开 | 999 |
-
 
 ### include-package
 
