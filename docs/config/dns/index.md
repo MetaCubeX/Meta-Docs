@@ -2,6 +2,7 @@
 description: Clash 的 DNS 模块配置
 ---
 # DNS 各项配置
+
 ## 示例
 
 以下的拆分说明皆是 `DNS` 下的配置项
@@ -13,10 +14,7 @@ dns:
   listen: 0.0.0.0:1053
   ipv6: true
   default-nameserver:
-    - 114.114.114.114
-    - 8.8.8.8
-    - tls://1.12.12.12:853
-    - tls://223.5.5.5:853
+    - 223.5.5.5
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:

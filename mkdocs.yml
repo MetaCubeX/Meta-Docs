@@ -84,16 +84,20 @@ nav:
     - startup/faq/index.md
   - 支持 Clash.Meta 的工具: client/index.md
   - 配置示例: example/index.md
-  - 配置详解:
+  - 配置文件:
     - config/index.md
     - 全局配置: config/general.md
-    - Tun配置: config/tun.md
     - DNS配置:
       - config/dns/index.md
       - hosts: config/dns/hosts.md
       - 解析流程: config/dns/diagram.md
-    - 域名嗅探: config/sniffer.md
-    - 代理配置:
+    - 域名嗅探: 
+      - config/sniff/index.md
+    - 入站配置: 
+      - config/inbound/index.md
+      - Tun: config/inbound/tun.md
+      - Hysteria2: config/inbound/hysteria2.md
+    - 出站代理配置:
       - config/proxies/index.md
       - HTTP: config/proxies/http.md
       - SOCKS: config/proxies/socks.md
@@ -119,7 +123,8 @@ nav:
     - 代理集合配置:
       - config/proxy-providers/index.md
       - 代理集内容: config/proxy-providers/content.md
-      - 筛选代理集: config/proxy-providers/filter.md
+      - 筛选代理集: 
+        - config/proxy-providers/filter.md
     - 规则配置:
       - config/rules/index.md
       - 域名规则: config/rules/domain.md
@@ -134,7 +139,7 @@ nav:
       - 子规则: config/rules/sub-rule.md
       - 最终匹配: config/rules/match.md
     - 子规则: config/sub-rules.md
-    - 流量入站: config/listeners.md
+
     - 流量隧道: config/tunnels.md
     - NTP: config/ntp/index.md
     - 实验性: config/experimental.md

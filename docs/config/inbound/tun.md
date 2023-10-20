@@ -102,12 +102,12 @@ dns-hijack:
   - tcp://any:53
 ```
 
-{% hint style="warning" %}
-MACOS 无法自动劫持发往局域网的 dns 请求
+!!! warning ""
+    `MacOS` 无法自动劫持发往局域网的 dns 请求
 
-ANDROID 如开启私人 dns 则无法自动劫持 dns 请求
+    `Android` 如开启 `私人dns` 则无法自动劫持 dns 请求
 
-LINUX 如果 systemd-resolved 开启无法自动劫持 dns 请求
+    `linux` 如果 `systemd-resolved` 开启无法自动劫持 dns 请求
 
 ### strict-route
 
@@ -157,19 +157,19 @@ endpoint-independent-nat: false
 
 ### include-uid
 
-限制被路由用户,默认不限制。
-
-!!! note
-UID 规则仅在 Linux 下被支持,并且需要 `auto_route`
+包含的用户,使其被Tun路由流量,未被配置的用户不会被Tun路由流量,默认不限制
 
 ```yaml
 include-uid:
   - 0
 ```
 
+!!! note ""
+    UID 规则仅在 Linux 下被支持,并且需要 `auto_route`
+
 ### include-uid-range
 
-限制被路由的的用户范围
+包含的用户范围,使其被Tun路由流量,未被配置的用户不会被Tun路由流量
 
 ```yaml
 include-uid-range:
@@ -178,7 +178,7 @@ include-uid-range:
 
 ### exclude-uid
 
-排除路由的的用户
+排除用户,使其避免被Tun路由流量
 
 ```yaml
 exclude-uid:
@@ -187,7 +187,7 @@ exclude-uid:
 
 ### exclude-uid-range
 
-排除路由的的用户范围
+排除用户范围,使其避免被Tun路由流量
 
 ```yaml
 exclude-uid-range:
@@ -196,16 +196,7 @@ exclude-uid-range:
 
 ### include-android-user
 
-限制被路由的 Android 用户
-
-!!! note
-Android 用户和应用规则仅在 Android 下被支持,并且需要 `auto_route`
-
-| 常用用户 | ID  |
-| -------- | --- |
-| 机主     | 0   |
-| 手机分身 | 10  |
-| 应用多开 | 999 |
+包含的Android用户,使其被Tun路由流量,未被配置的用户不会被Tun路由流量
 
 ```yaml
 include-android-user:
@@ -213,9 +204,19 @@ include-android-user:
   - 10
 ```
 
+!!! note ""
+    Android 用户和应用规则仅在 Android 下被支持,并且需要 `auto_route`
+
+| 常用用户 | ID  |
+| -------- | --- |
+| 机主     | 0   |
+| 手机分身 | 10  |
+| 应用多开 | 999 |
+
+
 ### include-package
 
-限制被路由的 Android 应用包名
+包含的Android应用包名,使其被Tun路由流量,未配置的应用包不会被Tun路由流量
 
 ```yaml
 include-package:
@@ -224,7 +225,7 @@ include-package:
 
 ### exclude-package
 
-排除路由的 Android 应用包名
+排除Android应用包名,使其避免被Tun路由流量
 
 ```yaml
 exclude-package:
@@ -235,6 +236,4 @@ exclude-package:
 
 从上到下分别为 `system/gvisor/lwip`,仅供参考,平台为 linux,Windows 和 MacOS 可能会有差异
 
-CPU 为 amd r7 1700 3.6Ghz,内存 8G 3600mhz C16,硬盘为 PM981A
-
-![iperf](../assets/image/tun/iperf.png)
+![iperf](../../assets/image/tun/iperf.png)

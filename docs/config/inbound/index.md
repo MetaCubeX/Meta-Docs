@@ -1,4 +1,4 @@
-# 流量入站
+# 入站配置
 
 Clash.Meta 使用流量入站,可以作为服务器。
 
@@ -146,18 +146,15 @@ listeners:
 
 
 ```
+
 !!! note
  proxy 如果不为空,则将该入站流量交由指定[proxy](proxies/index.md)处理
 
  rule 如果定义的 [子规则 (sub-rule)](./rules/sub-rule.md)不存在 则直接使用 rules
 
-
 ## 入口配置
 
 入口配置与 Listener 等价，传入流量将和 socks,mixed 等入口一样按照 mode 所指定的方式进行匹配处理
-
-
-
 
 ```yaml
 # shadowsocks,vmess 入口配置（传入流量将和socks,mixed等入口一样按照mode所指定的方式进行匹配处理）
