@@ -92,7 +92,7 @@ nav:
       - config/dns/index.md
       - hosts: config/dns/hosts.md
       - 解析流程: config/dns/diagram.md
-    - 域名嗅探: config/dns/sniffer.md
+    - 域名嗅探: config/sniffer.md
     - 代理配置:
       - config/proxies/index.md
       - HTTP: config/proxies/http.md
