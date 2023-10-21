@@ -1,7 +1,7 @@
 ---
 hide:
-  - navigation
-#   - toc
+  # - navigation
+  - toc
 ---
 # 支持 Clash.Meta 的工具
 

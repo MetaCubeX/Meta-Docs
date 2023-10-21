@@ -1,6 +1,6 @@
 ---
 hide:
-  # - navigation
+  - navigation
   - toc
 ---
 # 简介

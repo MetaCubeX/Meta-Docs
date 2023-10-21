@@ -6,26 +6,36 @@ on:
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
-  
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: '0'
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - run: |
+          echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+          echo "COMMITMSG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
       - uses: actions/cache@v3
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install \
-          mkdocs-material \
-          mkdocs-awesome-pages-plugin \
-          mkdocs-git-revision-date-plugin \
-          mkdocs-toc-sidebar-plugin 
-
-      - run: mkdocs gh-deploy --force --no-history
+      - run: pip install -r requirements.txt
+      - run: mkdocs build
+      - name: Git push assets to "gh-pages" branch
+        run: |
+          cd site || exit 1
+          git init
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b gh-pages
+          git add .
+          git commit -m "Deployed ${{ env.COMMITMSG }}"
+          git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git push -f -u origin gh-pages

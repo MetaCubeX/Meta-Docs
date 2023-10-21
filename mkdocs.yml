@@ -17,7 +17,8 @@ extra:
 plugins:
   - search
   - awesome-pages
-  - git-revision-date
+  - git-revision-date-localized:
+      locale: zh
 theme:
   name: material
   logo: assets/logo.webp
@@ -57,14 +58,12 @@ theme:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.superfences
   - toc:
       permalink: true
       toc_depth: 3
       anchorlink: true
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys
@@ -79,11 +78,13 @@ markdown_extensions:
 nav:
   - 简介: 
     - index.md
+  - 安装:
+    - startup/index.md
     - startup/service/index.md
+    - startup/client/index.md
     - startup/faq/index.md
-  - 支持 Clash.Meta 的工具: client/index.md
   - 配置示例: example/index.md
-  - 配置文件:
+  - 配置详解:
     - config/index.md
     - 全局配置: config/general.md
     - DNS配置:
