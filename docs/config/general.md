@@ -158,7 +158,7 @@ external-ui: /path/to/ui/folder
 ```
 可以为绝对路径，或者 Clash 工作目录的相对路径
 
-```
+```yaml
 ## **自定义外部用户界面名字**
 external-ui-name: xd      #  合并为 external-ui/xd
 ```
