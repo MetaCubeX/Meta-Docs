@@ -95,12 +95,15 @@ nav:
       - config/sniff/index.md
     - 入站配置: 
       - config/inbound/index.md
+      - 代理端口: config/inbound/port.md
       - Tun: config/inbound/tun.md
-      - Shadowsocks: config/inbound/ss.md
-      - VMess: config/inbound/vmess.md
-      - TUICv4: config/inbound/tuic-v4.md
-      - TUICv5: config/inbound/tuic-v5.md
-      - Hysteria2: config/inbound/hysteria2.md
+      - listeners:
+        - tun: config/inbound/listeners/tun.md
+        - ShadowSocks: config/inbound/listeners/ss.md
+        - VMess: config/inbound/listeners/vmess.md
+        - TUICv4: config/inbound/listeners/tuic-v4.md
+        - TUICv5: config/inbound/listeners/tuic-v5.md
+        - Hysteria2: config/inbound/listeners/hysteria2.md
     - 出站代理配置:
       - config/proxies/index.md
       - HTTP: config/proxies/http.md

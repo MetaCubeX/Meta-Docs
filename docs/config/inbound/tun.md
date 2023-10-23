@@ -1,7 +1,5 @@
 # Tun 模式
 
-## 配置示例
-
 ```yaml
 tun:
   enable: true

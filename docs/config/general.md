@@ -1,46 +1,9 @@
 # **全局配置**
 
-## **代理端口**
-
-**端口是计算机或路由交换机内部的一部分，计算机按照 INTERNET 传输层 TCP/IP 协议进行通信，不同的协议对应不同的端口**
-
-http(s) 代理端口
-
-```yaml
-port: 7890
-```
-
-socks4/4a/5 代理端口
-
-```yaml
-socks-port: 7891
-```
-
-混合代理端口 http(s)+socks
-
-```yaml
-mixed-port: 7892
-```
-
-!!! note
-
-    redir 端口仅限 Linux 以及 macOS 适用，tproxy 端口仅限 linux 适用 (Android 设备属于 Linux 设备）
-
-redirect 透明代理端口，仅能代理 TCP 流量
-
-```yaml
-redir-port: 7893
-```
-
-tproxy 透明代理端口，可以代理 TCP 以及 UDP 流量
-
-```yaml
-tproxy-port: 7894
-```
 
 ## **允许局域网**
 
-允许其他设备经过 Clash 的代理端口访问互联网
+允许其他设备经过 Clash 的[代理端口](./inbound/port.md)访问互联网
 
 可选值 `true/false`
 
