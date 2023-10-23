@@ -106,6 +106,7 @@ nav:
         - Hysteria2: config/inbound/listeners/hysteria2.md
     - 出站代理配置:
       - config/proxies/index.md
+      - DIRECT: config/proxies/direct.md
       - HTTP: config/proxies/http.md
       - SOCKS: config/proxies/socks.md
       - Shadowsocks: config/proxies/ss.md
