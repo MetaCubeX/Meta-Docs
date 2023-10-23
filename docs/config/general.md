@@ -1,6 +1,5 @@
 # **全局配置**
 
-
 ## **允许局域网**
 
 允许其他设备经过 Clash 的[代理端口](./inbound/port.md)访问互联网
@@ -11,13 +10,13 @@
 allow-lan: true
 ```
 
-绑定 IP, 通过 LAN 访问一个/一些特定的 IP 地址
+绑定地址,仅允许其他设备通过这个地址访问
 
-"\*" 绑定所有 IP 地址，默认值，不填写此项则绑定全部
+***`"*"`*** 绑定所有 IP 地址
 
-192.168.31.31: 绑定单个 IPV4 地址
+***`192.168.31.31`*** 绑定单个 IPV4 地址
 
-"\[aaaa::a8aa:ff:fe09:57d8]": 绑定单个 IPV6 地址
+***`[aaaa::a8aa:ff:fe09:57d8]`*** 绑定单个 IPV6 地址
 
 ```yaml
 bind-address: "*"
@@ -31,11 +30,19 @@ authentication:
   - "user2:pass2"
 ```
 
+设置允许跳过验证的IP段
+
+```yaml
+skip-auth-prefixes:
+  - 127.0.0.1/8
+  - ::1/128
+```
+
 ## **运行模式**
 
-* `rule` 规则匹配
-* `global` 全局代理(需要在GLOBAL策略组选择代理/策略)
-* `direct` 全局直连
+* ***`rule`*** 规则匹配
+* ***`global`*** 全局代理(需要在GLOBAL策略组选择代理/策略)
+* ***`direct`*** 全局直连
 
 此项拥有默认值，默认为规则模式
 
@@ -51,11 +58,11 @@ Clash 内核输出日志的等级，仅在控制台和控制页面输出
 log-level: info
 ```
 
-* `silent` 静默，不输出
-* `error` 仅输出发生错误至无法使用的日志
-* `warning` 输出发生错误但不影响运行的日志，以及 error 级别内容
-* `info` 输出一般运行的内容，以及 error 和 warning 级别的日志
-* `debug` 尽可能的输出运行中所有的信息
+* ***`silent`*** 静默，不输出
+* ***`error`*** 仅输出发生错误至无法使用的日志
+* ***`warning`*** 输出发生错误但不影响运行的日志，以及 error 级别内容
+* ***`info`*** 输出一般运行的内容，以及 error 和 warning 级别的日志
+* ***`debug`*** 尽可能的输出运行中所有的信息
 
 ## **IPv6**
 
@@ -82,9 +89,9 @@ keep-alive-interval: 30
 
 控制是否让 Clash 去匹配进程
 
-* `always` 开启，强制匹配所有进程
-* `strict` 默认，由 Clash 判断是否开启
-* `off` 不匹配进程，推荐在路由器上使用此模式
+* ***`always`*** 开启，强制匹配所有进程
+* ***`strict`*** 默认，由 Clash 判断是否开启
+* ***`off`*** 不匹配进程，推荐在路由器上使用此模式
 
 ```yaml
 find-process-mode: strict
@@ -119,12 +126,14 @@ secret: ""
 ```yaml
 external-ui: /path/to/ui/folder
 ```
+
 可以为绝对路径，或者 Clash 工作目录的相对路径
 
-```yaml
 ## **自定义外部用户界面名字**
+```yaml
 external-ui-name: xd      #  合并为 external-ui/xd
 ```
+
 非必须，更新时会更新到指定文件夹，不配置则直接更新到 external-ui 目录
 
 ## **自定义外部用户界面下载地址**
