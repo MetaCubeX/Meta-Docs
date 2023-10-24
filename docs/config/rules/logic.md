@@ -9,7 +9,7 @@ description: 与或非逻辑判断
 
 示例为匹配 `baidu.com` 域名并且网络类型为 tcp 的请求 直连
 
-```
+```yaml
 rules:
 - AND,((DOMAIN,baidu.com),(NETWORK,tcp)),DIRECT
 ```
@@ -20,7 +20,7 @@ rules:
 
 示例为域名关键词为 pcdn 或域名关键词为 stun 的请求 拦截
 
-```
+```yaml
 rules:
 - OR,((DOMAIN-KEYWORD,pcdn),(DOMAIN-KEYWORD,stun)),REJECT
 ```
@@ -31,7 +31,7 @@ rules:
 
 示例为不匹配 baidu.com 域名的请求走 proxy 节点/策略组
 
-```
+```yaml
 rules:
 - NOT,((DOMAIN,baidu.com)),PROXY
 ```
