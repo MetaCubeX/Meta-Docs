@@ -13,7 +13,7 @@ proxy-groups:
       - ss1
       - ss2
       - vmess1
-    url: 'http://www.gstatic.com/generate_204'
+    url: 'https://www.gstatic.com/generate_204'
     interval: 300
    #lazy: true
    #disable-udp: true
