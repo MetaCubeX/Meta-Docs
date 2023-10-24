@@ -17,15 +17,9 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
+          cache: 'pip'
       - run: |
-          echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
-          echo "COMMITMSG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-      - uses: actions/cache@v3
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
+          echo "COMMIT_MSG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
       - run: pip install -r requirements.txt
       - run: mkdocs build
       - name: Git push assets to "gh-pages" branch
@@ -36,6 +30,6 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b gh-pages
           git add .
-          git commit -m "Deployed ${{ env.COMMITMSG }}"
+          git commit -m "Deployed ${{ env.COMMIT_MSG }}"
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f -u origin gh-pages
