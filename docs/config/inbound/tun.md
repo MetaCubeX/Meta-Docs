@@ -49,7 +49,7 @@ enable: true
 
 tun 模式堆栈,如无使用问题,建议使用 `system` 栈;MacOS 用户推荐 `gvisor`栈
 
-可用值： `system/gvisor/lwip`
+可用值： `system/gvisor/mixed/lwip`
 
 ```yaml
 stack: system
@@ -57,9 +57,11 @@ stack: system
 
 !!! note "协议栈之间的区别"
 
-    * system 使用系统协议栈,可以提供更稳定/全面的 tun 体验,且占用相对其他堆栈更低。
-    * gvisor 通过在用户空间中实现网络协议栈,可以提供更高的安全性和隔离性,同时可以避免操作系统内核和用户空间之间的切换,从而在特定情况下具有更好的网络处理性能。
-    * lwip 即 lightweight IP,是一款专为嵌入式系统设计的TCP/IP协议栈,采用了单线程的事件驱动模型,性能表现可能不如`system/gvisor`协议栈。
+    *`system` 使用系统协议栈,可以提供更稳定/全面的 tun 体验,且占用相对其他堆栈更低。
+    * `gvisor` 通过在用户空间中实现网络协议栈,可以提供更高的安全性和隔离性,同时可以避免操作系统内核和用户空间之间的切换,从而在特定情况下具有更好的网络处理性能
+    * `mixed` 混合堆栈,tcp使用 `system`栈,udp使用 `gvisor`栈,使用体验可能相对更好
+    * `lwip` 即 lightweight IP,是一款专为嵌入式系统设计的TCP/IP协议栈,采用了单线程的事件驱动模型,性能表现可能不如 `system/gvisor`协议栈
+    * `lwip` 堆栈需要启用CGO
     * [性能测试](tun.md#tun_1)
 
 ### device

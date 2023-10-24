@@ -1,5 +1,3 @@
-# Hysteria2
-
 ```yaml
 listeners:
 - name: hy-in
