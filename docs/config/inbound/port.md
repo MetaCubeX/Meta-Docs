@@ -12,6 +12,21 @@ port: 7890
 socks-port: 7891
 ```
 
+### http,socks入口的验证用户名，密码
+
+```yaml
+authentication: 
+  - "username:password"
+```
+
+### 设置跳过验证的IP段
+
+```yaml
+skip-auth-prefixes: 
+  - 127.0.0.1/8
+  - ::1/128
+```
+
 ### 混合端口
 
 !!! node
