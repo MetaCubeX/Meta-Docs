@@ -12,7 +12,7 @@ port: 7890
 socks-port: 7891
 ```
 
-### http/socks入口验证
+### http/socks 入口验证
 
 ```yaml
 authentication: 
