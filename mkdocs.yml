@@ -98,7 +98,7 @@ nav:
       - 代理端口: config/inbound/port.md
       - Tun: config/inbound/tun.md
       - listeners:
-        - config/inbound/listeners/index.md
+        - 通用字段: config/inbound/listeners/index.md
         - tun: config/inbound/listeners/tun.md
         - ShadowSocks: config/inbound/listeners/ss.md
         - VMess: config/inbound/listeners/vmess.md

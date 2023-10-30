@@ -19,8 +19,9 @@ listeners:
   private-key: ./server.key
 ```
 
-## 配置字段
+## [通用字段](./index.md)
 
+## 协议配置
 ### users
 
 Hysteria用户以及认证密码,格式为`用户名: 密码`
@@ -50,10 +51,10 @@ QUIC 流量混淆器密码
 具体可参考 [Hysteria文档](https://v2.hysteria.network/zh/docs/advanced/Full-Server-Config/#masquerade)
 
 
-|              | 示例                     | 描述      |
-|--------------|-------------------------|---------|
+|              | 示例                     | 描述         |
+|--------------|-------------------------|--------------|
 | `file`       | `file:///var/www`       | 作为文件服务器 |
-| `http/https` | `http://127.0.0.1:8080` | 作为反向代理  |
+| `http/https` | `http://127.0.0.1:8080` | 作为反向代理   |
 
 
 ### alpn

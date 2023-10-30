@@ -1,5 +1,3 @@
-# Listeners通用参数
-
 ```yaml
 listeners:
 - name: in
