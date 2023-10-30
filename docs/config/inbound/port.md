@@ -12,20 +12,7 @@ port: 7890
 socks-port: 7891
 ```
 
-### http/socks 入口验证
-
-```yaml
-authentication: 
-  - "username:password"
-```
-
-### 设置跳过验证的IP段
-
-```yaml
-skip-auth-prefixes: 
-  - 127.0.0.1/8
-  - ::1/128
-```
+[验证与外部访问](../general.md/#允许局域网)
 
 ### 混合端口
 
