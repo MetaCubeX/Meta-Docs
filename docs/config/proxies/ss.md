@@ -91,16 +91,17 @@ UDP over TCP 的协议版本，默认 2。可选值 1、2。
   plugin: v2ray-plugin
   plugin-opts:
     mode: websocket # no QUIC now
-    # tls: true # wss
-    # 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
-    # 配置指纹将实现 SSL Pining 效果
-    # fingerprint: xxxx
-    # skip-cert-verify: true
-    # host: bing.com
-    # path: "/"
-    # mux: true
-    # headers:
-    #   custom: value
+      # tls: true # wss
+      # 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
+      # 配置指纹将实现 SSL Pining 效果
+      # fingerprint: xxxx
+      # skip-cert-verify: true
+      # host: bing.com
+      # path: "/"
+      # mux: true
+      # headers:
+      #   custom: value
+      # v2ray-http-upgrade: false
 ```
 
 #### shadow-tls
