@@ -99,4 +99,5 @@
     path: "/"
     headers:
       Host: example.com
+      # v2ray-http-upgrade: false
 ```
