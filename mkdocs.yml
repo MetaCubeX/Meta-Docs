@@ -1,4 +1,4 @@
-site_name: 虚空终端 Docs
+site_name: Clash.Meta Docs
 repo_url: https://github.com/MetaCubeX/Clash.Meta
 repo_name: MetaCubeX/Clash.Meta
 copyright: Copyright &copy 2023 Clash.Meta
@@ -21,8 +21,8 @@ plugins:
       locale: zh
 theme:
   name: material
-  logo: assets/images.jpeg
-  favicon: assets/images.jpeg
+  logo: assets/logo.webp
+  favicon: assets/logo.webp
   features:
     - navigation.tracking
     - navigation.instant
@@ -147,6 +147,7 @@ nav:
       - 规则集合: config/rules/rule-provider.md
       - 子规则: config/rules/sub-rule.md
       - 最终匹配: config/rules/match.md
+    - 子规则: config/sub-rules.md
     - 流量隧道: config/tunnels.md
     - NTP: config/ntp/index.md
     - 实验性: config/experimental.md
