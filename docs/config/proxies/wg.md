@@ -61,7 +61,9 @@
 
 ### private-key
 
-base64编码的Wireguard客户端私钥。可以使用`wg genkey`命令生成私钥，使用`wg pubkey <private-key>`命令获取对应公钥
+base64编码的Wireguard客户端私钥
+
+可以使用`wg genkey | tee privatekey | wg pubkey > publickey`命令生成一对可用的公私钥文件
 
 ### server
 
@@ -114,3 +116,41 @@ base64编码的Wireguard服务端公钥
 ### dns
 
 可选字段，当`remote-dns-resolve`为true时生效，指定远程解析使用的dns服务器
+
+## 从Wireguard标准配置文件翻译
+
+假设有如下Wireguard标准配置文件：
+
+```ini
+[Interface]
+Address = <本机组网IP>
+ListenPort = <本地监听端口>
+PrivateKey = <本机私钥>
+DNS = <使用的DNS>
+MTU = <预设MTU>
+
+[Peer]
+AllowedIPs = <转发IP段>
+Endpoint = <远端地址>:<远端端口>
+PublicKey = <远端公钥>
+```
+
+对应的clash节点配置为：
+
+```yaml
+  - name: "wg"
+    type: wireguard
+    private-key: <本机私钥>
+    peers:
+      - server: <远端地址>
+        port: <远端端口>
+        ip: <本机组网IP，IPv4往这里填>
+        ipv6: <本机组网IP，IPv6往这里填>  # 没有v6地址直接删除
+        public-key: <远端公钥>
+        allowed-ips: ['0.0.0.0/0']     # 分流由clash处理
+        # reserved: [209,98,59]        # 如果需要自己填
+    udp: true
+    mtu: <预设MTU>               # 按需设置，不用直接删除
+    remote-dns-resolve: true    # 按需设置，不用直接删除
+    dns: <使用的DNS>             # 按需设置，不用直接删除
+```
