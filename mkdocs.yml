@@ -131,9 +131,9 @@ nav:
       - 指定接口及路由标记: config/proxy-groups/if-mark.md
     - 代理集合配置:
       - config/proxy-providers/index.md
-      - 代理集内容: config/proxy-providers/content.md
-      - 筛选代理集: 
-        - config/proxy-providers/filter.md
+      - 覆写节点内容: config/proxy-providers/override.md
+      - 代理集合内容: config/proxy-providers/content.md
+      - 筛选代理集合: config/proxy-providers/filter.md
     - 规则配置:
       - config/rules/index.md
       - 域名规则: config/rules/domain.md
@@ -147,6 +147,7 @@ nav:
       - 规则集合: config/rules/rule-provider.md
       - 子规则: config/rules/sub-rule.md
       - 最终匹配: config/rules/match.md
+    - 子规则: config/sub-rules.md
     - 流量隧道: config/tunnels.md
     - NTP: config/ntp/index.md
     - 实验性: config/experimental.md

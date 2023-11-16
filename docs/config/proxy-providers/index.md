@@ -1,7 +1,6 @@
 ---
 description: 用户可以单独将一些代理放入特定文件中，通过引用该文件，用户可以快速将这些相同的代理填充到不同的策略组中
 ---
-
 # 代理集合
 
 ## 示例
@@ -13,7 +12,6 @@ proxy-providers:
     url: ""
     path: ./proxy_providers/provider1.yaml
     interval: 3600
-    dialer-proxy: proxy
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -49,10 +47,6 @@ provider 类型，可选 `http/file`
 ### interval
 
 更新 provider 的时间，单位为秒
-
-### dialer-proxy
-
-为代理集合内所有节点附加[dialer-proxy](../proxies/index.md#dialer-proxy)
 
 ### health-check
 
