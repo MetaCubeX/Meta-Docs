@@ -8,7 +8,6 @@ description: 代理链,若落地协议支持 UDP over TCP 则可支持 UDP
 
 ```yaml
 Proxy Groups:
-# wireguard目前不支持在relay中使用，请使用 proxy 中的 dialer-proxy 配置项
 # Traffic: Clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
 - name: "relay"
   type: relay
@@ -20,6 +19,8 @@ Proxy Groups:
 ```
 
 流量去向为 Clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
+
+> 另外，wireguard目前不支持在relay中使用。如果需要，请使用 proxy 中的 dialer-proxy 配置项
 
 ### 关于UDP
 
