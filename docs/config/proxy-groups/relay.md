@@ -20,7 +20,7 @@ Proxy Groups:
 
 流量去向为 Clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
 
-> 另外，wireguard目前不支持在relay中使用。如果需要，请使用 proxy 中的 dialer-proxy 配置项
+> wireguard目前不支持在relay中使用。如果需要，请使用 proxy 中的 dialer-proxy 配置项
 
 ### 关于UDP
 
