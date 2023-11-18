@@ -31,12 +31,6 @@ pr: &pr {type: select, proxies: [默认,香港,台湾,日本,新加坡,美国,�
 #这里是订阅更新和延迟测试相关的
 p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
 
-use: &use
-  type: select
-  use:
-  - provider1
-  - provider2
-  
 ######### 锚点 end #######
 
 
@@ -164,21 +158,21 @@ proxy-groups:
   - {name: 其他, <<: *pr}
 
 #分隔,下面是地区分组
-  - {name: 香港, <<: *use,filter: "(?i)港|hk|hongkong|hong kong"}
+  - {name: 香港, include-all-providers: true, filter: "(?i)港|hk|hongkong|hong kong"}
 
-  - {name: 台湾, <<: *use, filter: "(?i)台|tw|taiwan"}
+  - {name: 台湾, include-all-providers: true, filter: "(?i)台|tw|taiwan"}
 
-  - {name: 日本, <<: *use, filter: "(?i)日本|jp|japan"}
+  - {name: 日本, include-all-providers: true, filter: "(?i)日本|jp|japan"}
 
-  - {name: 美国, <<: *use, filter: "(?i)美|us|unitedstates|united states"}
+  - {name: 美国, include-all-providers: true, filter: "(?i)美|us|unitedstates|united states"}
 
-  - {name: 新加坡, <<: *use, filter: "(?i)(新|sg|singapore)"}
+  - {name: 新加坡, include-all-providers: true, filter: "(?i)(新|sg|singapore)"}
 
-  - {name: 其它地区, <<: *use, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"}
+  - {name: 其它地区, include-all-providers: true, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"}
 
-  - {name: 全部节点, <<: *use}
+  - {name: 全部节点, include-all-providers: true}
 
-  - {name: 自动选择, <<: *use, tolerance: 2, type: url-test}
+  - {name: 自动选择, include-all-providers: true, tolerance: 10, type: url-test}
 
 rules:
   # - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
@@ -206,7 +200,3 @@ rules:
   - GEOIP,CN,国内
   - MATCH,其他
 ```
-
-<!-- prettier-ignore-end -->
-
----
