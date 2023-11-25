@@ -163,6 +163,7 @@ nameserver-policy:
 nameserver:
   - tls://dot.pub
   - https://dns.alidns.com/dns-query
+  # - system://               # 如果想附加系统DNS，可以使用名为`system://`的项
 ```
 
 ## proxy-server-nameserver
