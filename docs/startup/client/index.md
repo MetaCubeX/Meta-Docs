@@ -17,7 +17,7 @@ hide:
 
 ### Windows：
 
-[**clash-verge**](https://github.com/zzzgydi/clash-verge)
+[**clash-verge**](https://github.com/MetaCubeX/clash-verge)
 
 [**ClashMetaForWindows_Mini**](https://github.com/kogekiplay/ClashMetaForWindows_Mini)
 
@@ -27,11 +27,13 @@ hide:
 
 [**Clash.Mini**](https://github.com/MetaCubeX/Clash.Mini)
 
+[**clashtui**](https://github.com/JohanChane/clashtui)
+
 ***
 
 ### Mac OS：
 
-[**clash-verge**](https://github.com/zzzgydi/clash-verge)
+[**clash-verge**](https://github.com/MetaCubeX/clash-verge)
 
 [**ClashX.Meta**](https://github.com/MetaCubeX/ClashX.Meta)
 
@@ -39,7 +41,9 @@ hide:
 
 ### Linux：
 
-[**clash-verge**](https://github.com/zzzgydi/clash-verge)
+[**clash-verge**](https://github.com/MetaCubeX/clash-verge)
+
+[**clashtui**](https://github.com/JohanChane/clashtui)
 
 ***
 
