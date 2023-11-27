@@ -68,7 +68,7 @@ prefer-h3: true
 
 ## listen
 
-dns 服务监听
+DNS 服务监听
 
 ```yaml
 listen: 0.0.0.0:1053
@@ -88,7 +88,7 @@ ipv6: true
 
 可选值 `fake-ip / redir-host`
 
-Clash 的 dns 处理模式
+Clash 的 DNS 处理模式
 
 ```yaml
 enhanced-mode: fake-ip
@@ -98,7 +98,7 @@ enhanced-mode: fake-ip
 
 格式为 `ip/掩码`
 
-fakeip 下的 IP 段设置，tun 网卡的默认 ip 也使用此值
+fakeip 下的 IP 段设置，tun 网卡的默认 IP 也使用此值
 
 ```yaml
 fake-ip-range: 198.18.0.1/16
@@ -110,7 +110,8 @@ fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
 ```yaml
 fake-ip-filter:
-  - '*.lan'
+  - '+.lan'
+  - '+.local'
   - localhost.ptlogin2.qq.com
 ```
 
@@ -126,9 +127,9 @@ use-hosts: true
 
 ## default-nameserver
 
-默认 dns, 用于解析 DNS 服务器 的域名
+默认 DNS, 用于解析 DNS 服务器 的域名
 
-必须为 ip, 可为加密 dns
+必须为 IP, 可为加密 DNS
 
 ```yaml
 default-nameserver:
@@ -137,6 +138,8 @@ default-nameserver:
   - tls://223.5.5.5:853
   - https://223.5.5.5/dns-query
 ```
+
+
 
 ## nameserver-policy
 
@@ -163,7 +166,6 @@ nameserver-policy:
 nameserver:
   - tls://dot.pub
   - https://dns.alidns.com/dns-query
-  # - system://               # 如果想附加系统DNS，可以使用名为`system://`的项
 ```
 
 ## proxy-server-nameserver
@@ -237,11 +239,11 @@ fallback-filter:
 
 ## 部分特殊写法
 
-此部分可用于所有的 dns 服务器
+此部分可用于所有的 DNS 服务器
 
 ### DNS 经过代理查询
 
-书写格式为 dns 服务器后 `#策略组或节点`
+书写格式为 DNS 服务器后 `#策略组或节点`
 
 书写规范应带引号，以防出现特殊字符，如需过代理查询，应配置 `proxy-server-nameserver`, 以防出现鸡蛋问题
 

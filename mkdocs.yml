@@ -89,6 +89,7 @@ nav:
     - 全局配置: config/general.md
     - DNS配置:
       - config/dns/index.md
+      - DNS类型: config/dns/type.md
       - hosts: config/dns/hosts.md
       - 解析流程: config/dns/diagram.md
     - 域名嗅探: 
