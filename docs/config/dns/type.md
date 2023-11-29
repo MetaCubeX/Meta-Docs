@@ -1,13 +1,16 @@
----
-description: Clash 的 DNS 支持类型
----
-
 # DNS 支持类型
 
 ## UDP
 
 ```yaml
-- 114.114.114.114
+- 223.5.5.5
+- udp://223.5.5.5
+```
+
+## TCP
+
+```yaml
+- tcp://8.8.8.8
 ```
 
 ## DNS over TLS
