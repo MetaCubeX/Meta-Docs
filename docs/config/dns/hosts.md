@@ -1,7 +1,6 @@
 ---
 description: 配置hosts
 ---
-
 # hosts
 
 ## 示例
@@ -12,15 +11,14 @@ hosts:
   'alpha.clash.dev': '::1'
   test.com: [1.1.1.1, 2.2.2.2]
   baidu.com: google.com
-  clash.lan: clash
+  home.lan
 ```
 
-hosts域名支持通配,例如`*.clash.dev`或`+.example.com`,别名(示例最后两个)不支持通配
+hosts域名支持通配,例如 `*.clash.dev`或 `+.example.com`,别名(示例最后两个)不支持通配
 
 支持单域名多ip,格式为数组
 
 !!! note
     完整的的域名优先级高于使用通配符的域名
-    
-    例如: foo.example.com > \*.example.com > .example.com
 
+    例如: foo.example.com >\*.example.com > .example.com
