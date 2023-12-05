@@ -67,7 +67,7 @@ hide:
 
 ### iOS
 
-[**MFI**](https://t.me/meta_for_ios)
+[-MFI-](https://t.me/meta_for_ios)
 
 ***
 

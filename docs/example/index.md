@@ -96,16 +96,17 @@ dns:
   default-nameserver:
     - 223.5.5.5
   nameserver:
-    - 'tls://8.8.4.4#dns'
-    - 'tls://1.0.0.1#dns'
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   proxy-server-nameserver:
     - https://doh.pub/dns-query
   nameserver-policy:
-    "geosite:!cn":
-      - https://dns.cloudflare.com/dns-query#dns
-    "geosite:cn,private":
+    "geosite:private":
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
+    "geosite:geolocation-!cn":
+      - 'https://dns.cloudflare.com/dns-query#dns'
+      - 'https://dns.google/dns-query#dns'
 
 proxies:
   # - name: "WARP"

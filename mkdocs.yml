@@ -79,12 +79,14 @@ nav:
   - 简介: 
     - index.md
   - 安装:
-    - startup/index.md
-    - startup/service/index.md
-    - startup/client/index.md
-    - startup/faq/index.md
-  - 配置示例: example/index.md
-  - 配置详解:
+    - 安装: startup/index.md
+    - 以服务运行: startup/service/index.md
+    - 常见问题: startup/faq/index.md
+    - 非官方支持的工具: startup/client/index.md
+  #- 基础使用: 
+  #  - Windows: 
+  - 示例: example/index.md
+  - 配置:
     - config/index.md
     - 全局配置: config/general.md
     - DNS配置:
@@ -103,8 +105,8 @@ nav:
         - tun: config/inbound/listeners/tun.md
         - ShadowSocks: config/inbound/listeners/ss.md
         - VMess: config/inbound/listeners/vmess.md
-        - TUICv4: config/inbound/listeners/tuic-v4.md
-        - TUICv5: config/inbound/listeners/tuic-v5.md
+        - TUIC v4: config/inbound/listeners/tuic-v4.md
+        - TUIC v5: config/inbound/listeners/tuic-v5.md
         - Hysteria2: config/inbound/listeners/hysteria2.md
     - 出站代理配置:
       - 通用字段:
