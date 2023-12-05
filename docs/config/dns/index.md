@@ -146,7 +146,7 @@ default-nameserver:
 指定域名查询的解析服务器，可使用 geosite, 优先于 `nameserver/fallback 查询`
 
 !!! note
-    **并发查询，无法保证顺序**，以下仅作为书写演示，建议根据自己需求写
+    **以下仅作为书写演示，建议根据自己需求写**
 
 ```yaml
 nameserver-policy:
