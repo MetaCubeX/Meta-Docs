@@ -101,6 +101,8 @@ dns:
   proxy-server-nameserver:
     - https://doh.pub/dns-query
   nameserver-policy:
+    "geosite:!cn":
+      - https://dns.cloudflare.com/dns-query#dns
     "geosite:cn,private":
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
