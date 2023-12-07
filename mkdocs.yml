@@ -80,9 +80,9 @@ nav:
     - index.md
   - 安装:
     - 安装: startup/index.md
-    - 以服务运行: startup/service/index.md
-    - 常见问题: startup/faq/index.md
+    - 创建运行服务: startup/service/index.md
     - 非官方支持的工具: startup/client/index.md
+    - 常见问题: startup/faq/index.md
   #- 基础使用: 
   #  - Windows: 
   - 示例: example/index.md

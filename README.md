@@ -11,53 +11,67 @@ python3.11以上依赖虚拟环境运行,不能直接运行
 ##### 安装virtualenv
 
 * debian
-  ```shell
+  * bash/zsh/fish
+  ```bash
   apt update && apt install virtualenv
   ```
+  * nushell
+  ```nushell
+  apt update ; apt install virtualenv
+  ```
+
 * archlinux
-  ```shell
+  ```bash
   pacman -Syu python-virtualenv
   ```
 
 ##### 创建虚拟环境
 
-```shell
+```bash
 virtualenv venv
 ```
 
 ##### 使用虚拟环境
-
-```shell
+* bash/zsh
+```bash
 source venv/bin/activate
+```
+* nushell
+```nushell
+use venv/bin/activate.nu
+```
+* fish
+```fish
+source venv/bin/activate.fish
 ```
 
 ##### 退出虚拟环境
 
-```shell
+```bash
 deactivate
 ```
 
 ##### 确认是否处于虚拟环境
 
-```shell
+```bash
 which python3
 ```
 
 ### 设置源
 
-```shell
+```bash
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ### 安装依赖
 
-```shell
+```bash
 pip install -r requirements.txt
 ```
 
 ### 预览修改
 
-```shell
+```bash
 mkdocs serve
 ```
 
