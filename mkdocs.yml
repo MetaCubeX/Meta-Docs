@@ -14,6 +14,8 @@ extra:
       link: https://github.com/MetaCubeX/Clash.Meta
     - icon: material/file-document
       link: https://github.com/MetaCubeX/Meta-Docs
+extra_javascript:
+  - javascripts/extra.js
 plugins:
   - search
   - awesome-pages
