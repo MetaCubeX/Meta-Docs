@@ -1,5 +1,5 @@
 site_name: 虚空终端 Docs
-repo_url: https://github.com/MetaCubeX/Clash.Meta
+repo_url: https://github.com/MetaCubeX/mihomo
 repo_name: MetaCubeX/Clash.Meta
 copyright: Copyright &copy 2023 Clash.Meta
 edit_uri: "https://github.com/MetaCubeX/Meta-Docs/blob/main/docs/"
@@ -11,11 +11,9 @@ extra:
     property: G-1BJ0XH0RSM
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/MetaCubeX/Clash.Meta
+      link: https://github.com/MetaCubeX/mihomo
     - icon: material/file-document
       link: https://github.com/MetaCubeX/Meta-Docs
-extra_javascript:
-  - javascripts/extra.js
 plugins:
   - search
   - awesome-pages

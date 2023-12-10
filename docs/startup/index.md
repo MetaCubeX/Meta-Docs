@@ -31,7 +31,7 @@ hide:
   </select>
 
   <div id="download-section">
-    <h2>Download Links:</h2>
+    <h2>Avaiable files:</h2>
     <ul id="download-list"></ul>
   </div>
 
@@ -77,16 +77,6 @@ hide:
     ];
 
     function updateDownloadLinks() {
-      fetch('https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/version.txt')
-        .then(res => res.text()) 
-        .then(data => {
-      const version = data.match(/alpha-(\w+)/)[1];
-
-      // 更新文件名
-      fileList.forEach(file => {
-        file = file.replace(/alpha-\w+/, `alpha-${version}`);  
-      });
-    });
       var os = osSelect.value;
       var arch = archSelect.value;
 
