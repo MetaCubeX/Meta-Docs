@@ -92,7 +92,7 @@ nav:
   #- 基础使用:
   #  - Windows:
   - 示例:
-      - 示例: example/index.md
+      - 完整示例: example/index.md
       - 快捷配置: example/conf.md
   - 配置:
       - config/index.md
