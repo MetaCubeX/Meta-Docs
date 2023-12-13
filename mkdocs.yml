@@ -83,86 +83,89 @@ markdown_extensions:
 
 nav:
   - 简介:
-      - index.md
+    - index.md
   - 安装:
-      - 安装: startup/index.md
-      - 创建运行服务: startup/service/index.md
-      - 非官方支持的工具: startup/client/index.md
-      - 常见问题: startup/faq/index.md
+    - 安装: startup/index.md
+    - 创建运行服务: startup/service/index.md
+    - 非官方支持的工具: startup/client/index.md
+    - 常见问题: startup/faq/index.md
   #- 基础使用:
   #  - Windows:
   - 示例:
-      - 完整示例: example/index.md
-      - 快捷配置: example/conf.md
+    - 完整示例: example/index.md
+    - 快捷配置: example/conf.md
   - 配置:
-      - config/index.md
-      - 全局配置: config/general.md
-      - DNS配置:
-          - config/dns/index.md
-          - DNS类型: config/dns/type.md
-          - hosts: config/dns/hosts.md
-          - 解析流程: config/dns/diagram.md
-      - 域名嗅探:
-          - config/sniff/index.md
-      - 入站配置:
-          - config/inbound/index.md
-          - 代理端口: config/inbound/port.md
-          - Tun: config/inbound/tun.md
-          - listeners:
-              - 通用字段: config/inbound/listeners/index.md
-              - tun: config/inbound/listeners/tun.md
-              - ShadowSocks: config/inbound/listeners/ss.md
-              - VMess: config/inbound/listeners/vmess.md
-              - TUIC v4: config/inbound/listeners/tuic-v4.md
-              - TUIC v5: config/inbound/listeners/tuic-v5.md
-              - Hysteria2: config/inbound/listeners/hysteria2.md
-      - 出站代理配置:
-          - 通用字段:
-              - config/proxies/index.md
-              - dialer-proxy: config/proxies/dialer-proxy.md
-              - sing-mux: config/proxies/sing-mux.md
-          - DIRECT: config/proxies/direct.md
-          - HTTP: config/proxies/http.md
-          - SOCKS: config/proxies/socks.md
-          - Shadowsocks: config/proxies/ss.md
-          - ShadowsocksR: config/proxies/ssr.md
-          - VMess: config/proxies/vmess.md
-          - VLESS: config/proxies/vless.md
-          - Trojan: config/proxies/trojan.md
-          - Hysteria: config/proxies/hysteria.md
-          - Hysteria2: config/proxies/hysteria2.md
-          - TUIC: config/proxies/tuic.md
-          - WireGuard: config/proxies/wg.md
-      - 策略组配置:
-          - config/proxy-groups/index.md
-          - 筛选代理: config/proxy-groups/filter.md
-          - 内置策略: config/proxy-groups/built-in.md
-          - 手动选择: config/proxy-groups/select.md
-          - 自动选择: config/proxy-groups/url-test.md
-          - 自动回退: config/proxy-groups/fallback.md
-          - 负载均衡: config/proxy-groups/load-balance.md
-          - 链式代理: config/proxy-groups/relay.md
-          - 指定接口及路由标记: config/proxy-groups/if-mark.md
-      - 代理集合配置:
-          - config/proxy-providers/index.md
-          - 覆写节点内容: config/proxy-providers/override.md
-          - 代理集合内容: config/proxy-providers/content.md
-          - 筛选代理集合: config/proxy-providers/filter.md
-      - 规则配置:
-          - config/rules/index.md
-          - 域名规则: config/rules/domain.md
-          - IP规则: config/rules/ipcidr.md
-          - 端口规则: config/rules/port.md
-          - 进程规则: config/rules/process.md
-          - 逻辑规则: config/rules/logic.md
-          - GEO规则: config/rules/geox.md
-          - 入站规则: config/rules/in.md
-          - 网络类型规则: config/rules/network.md
-          - 规则集合: config/rules/rule-provider.md
-          - 子规则: config/rules/sub-rule.md
-          - 最终匹配: config/rules/match.md
-      # - 子规则: config/sub-rules.md
-      - 流量隧道: config/tunnels.md
-      - NTP: config/ntp/index.md
-      - 实验性: config/experimental.md
+    - config/index.md
+    - 全局配置: config/general.md
+    - DNS配置:
+      - config/dns/index.md
+      - DNS类型: config/dns/type.md
+      - hosts: config/dns/hosts.md
+      - 解析流程: config/dns/diagram.md
+    - 域名嗅探:
+      - config/sniff/index.md
+    - 入站配置:
+      - config/inbound/index.md
+      - 代理端口: config/inbound/port.md
+      - Tun: config/inbound/tun.md
+      - listeners:
+        - 通用字段: config/inbound/listeners/index.md
+        - tun: config/inbound/listeners/tun.md
+        - ShadowSocks: config/inbound/listeners/ss.md
+        - VMess: config/inbound/listeners/vmess.md
+        - TUIC v4: config/inbound/listeners/tuic-v4.md
+        - TUIC v5: config/inbound/listeners/tuic-v5.md
+        - Hysteria2: config/inbound/listeners/hysteria2.md
+    - 出站代理配置:
+      - 通用字段:
+        - config/proxies/index.md
+        - dialer-proxy: config/proxies/dialer-proxy.md
+        - sing-mux: config/proxies/sing-mux.md
+      - DIRECT: config/proxies/direct.md
+      - HTTP: config/proxies/http.md
+      - SOCKS: config/proxies/socks.md
+      - Shadowsocks: config/proxies/ss.md
+      - ShadowsocksR: config/proxies/ssr.md
+      - VMess: config/proxies/vmess.md
+      - VLESS: config/proxies/vless.md
+      - Trojan: config/proxies/trojan.md
+      - Hysteria: config/proxies/hysteria.md
+      - Hysteria2: config/proxies/hysteria2.md
+      - TUIC: config/proxies/tuic.md
+      - WireGuard: config/proxies/wg.md
+    - 策略组配置:
+      - config/proxy-groups/index.md
+      - 筛选代理: config/proxy-groups/filter.md
+      - 内置策略: config/proxy-groups/built-in.md
+      - 手动选择: config/proxy-groups/select.md
+      - 自动选择: config/proxy-groups/url-test.md
+      - 自动回退: config/proxy-groups/fallback.md
+      - 负载均衡: config/proxy-groups/load-balance.md
+      - 链式代理: config/proxy-groups/relay.md
+      - 指定接口及路由标记: config/proxy-groups/if-mark.md
+    - 代理集合配置:
+      - config/proxy-providers/index.md
+      - 覆写节点内容: config/proxy-providers/override.md
+      - 代理集合内容: config/proxy-providers/content.md
+      - 筛选代理集合: config/proxy-providers/filter.md
+    - 规则配置:
+      - config/rules/index.md
+      - 域名规则: config/rules/domain.md
+      - IP规则: config/rules/ipcidr.md
+      - 端口规则: config/rules/port.md
+      - 进程规则: config/rules/process.md
+      - 逻辑规则: config/rules/logic.md
+      - GEO规则: config/rules/geox.md
+      - 入站规则: config/rules/in.md
+      - 网络类型规则: config/rules/network.md
+      - 引用规则集合: config/rules/rule-set.md
+      - 引用子规则: config/rules/sub-rule.md
+      - 最终匹配: config/rules/match.md
+    - 规则集合: 
+      - 规则集合: config/rule-provider/index.md
+      - 规则集合内容: config/rule-provider/content.md
+    # - 子规则: config/sub-rules.md
+    - 流量隧道: config/tunnels.md
+    - NTP: config/ntp/index.md
+    - 实验性: config/experimental.md
   - APIs: api/index.md
