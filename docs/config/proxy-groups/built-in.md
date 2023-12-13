@@ -2,8 +2,6 @@
 description: Clash.meta有如下三种内置策略
 ---
 
-# 内置策略
-
 ## DIRECT
 
 直连,数据直接出站
@@ -18,4 +16,4 @@ description: Clash.meta有如下三种内置策略
 
 ## COMPATIBLE
 
-兼容,在策略组筛选不出节点时出现,等效`DIRECT`
+兼容,在策略组筛选不出节点时出现,等效 `DIRECT`

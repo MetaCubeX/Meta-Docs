@@ -4,8 +4,6 @@ hide:
   - toc
 ---
 
-# Clash 服务运行
-
 ## 使用 systemd
 
 - 下载二进制可执行文件 [releases](https://github.com/MetaCubeX/Clash.Meta/releases)

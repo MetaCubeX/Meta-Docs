@@ -1,4 +1,3 @@
-# Tun 模式
 
 ```yaml
 tun:

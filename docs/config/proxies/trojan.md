@@ -1,5 +1,3 @@
-# Trojan
-
 ```yaml
   - name: "trojan"
     type: trojan

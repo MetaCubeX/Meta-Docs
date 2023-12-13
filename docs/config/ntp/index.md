@@ -1,7 +1,6 @@
 ---
 description: Clash 的 NTP 模块配置
 ---
-# NTP 配置
 ## 示例
 
 以下的拆分说明皆是 `NTP` 下的配置项

@@ -1,5 +1,3 @@
-# SOCKS
-
 ```yaml
 - name: "socks"
   type: socks5

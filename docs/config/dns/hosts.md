@@ -1,8 +1,6 @@
 ---
 description: 配置hosts
 ---
-# hosts
-
 ## 示例
 
 ```yaml

@@ -1,5 +1,3 @@
-# **全局配置**
-
 ## **允许局域网**
 
 允许其他设备经过 Clash 的[代理端口](./inbound/port.md)访问互联网
@@ -130,6 +128,7 @@ external-ui: /path/to/ui/folder
 可以为绝对路径，或者 Clash 工作目录的相对路径
 
 ## **自定义外部用户界面名字**
+
 ```yaml
 external-ui-name: xd      #  合并为 external-ui/xd
 ```

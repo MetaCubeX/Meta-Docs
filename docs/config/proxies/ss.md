@@ -1,5 +1,3 @@
-# Shadowsocks
-
 ```yaml
 - name: "ss1"
   type: ss

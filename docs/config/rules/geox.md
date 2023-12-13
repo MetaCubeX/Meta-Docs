@@ -1,5 +1,3 @@
-# GEO规则
-
 ## GEOSITE
 
 域名集合,匹配集合内的域名,具体参考 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community/tree/master/data)

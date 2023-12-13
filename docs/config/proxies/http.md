@@ -1,5 +1,3 @@
-# HTTP
-
 ```yaml
 - name: "http"
   type: http

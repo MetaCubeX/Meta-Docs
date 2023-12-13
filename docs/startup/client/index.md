@@ -3,15 +3,13 @@ hide:
   # - navigation
   - toc
 ---
-# 支持 Clash.Meta 的工具
-
 ## 在线面板
 
 [Yacd](http://yacd.metacubex.one)
 
 [Metacubexd](http://d.metacubex.one)
 
-***
+---
 
 ## 使用 Meta 的客户端
 
@@ -29,7 +27,7 @@ hide:
 
 [**clashtui**](https://github.com/JohanChane/clashtui)
 
-***
+---
 
 ### Mac OS：
 
@@ -37,7 +35,7 @@ hide:
 
 [**ClashX.Meta**](https://github.com/MetaCubeX/ClashX.Meta)
 
-***
+---
 
 ### Linux：
 
@@ -45,31 +43,31 @@ hide:
 
 [**clashtui**](https://github.com/JohanChane/clashtui)
 
-***
+---
 
 ### OpenWRT:
 
 [**OpenClash**](https://github.com/vernesong/OpenClash)
 
-***
+---
 
 ### Merlin (KoolCenter 固件/paldier SWRT 固件）:
 
 [**merlinclashcat**](https://t.me/merlinclashcat)
 
-***
+---
 
 ### Android:
 
 [**Clash.Meta for Android**](https://github.com/MetaCubeX/ClashMetaForAndroid/releases/tag/Prerelease-alpha)
 
-***
+---
 
 ### iOS
 
 [-MFI-](https://t.me/meta_for_ios)
 
-***
+---
 
 ### Shell:
 

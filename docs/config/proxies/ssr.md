@@ -1,5 +1,3 @@
-# ShadowsocksR
-
 ```yaml
   - name: "ssr"
     type: ssr

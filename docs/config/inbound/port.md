@@ -1,5 +1,3 @@
-# **代理端口**
-
 ### http(s) 代理端口
 
 ```yaml
@@ -24,6 +22,7 @@ mixed-port: 7892
 ```
 
 ### 透明代理端口
+
 !!! note
 
     redirect端口仅限 Linux(Android) 以及 macOS 适用，tproxy 端口仅限 linux(Android) 适用

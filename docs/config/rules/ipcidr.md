@@ -1,8 +1,6 @@
 ---
 description: 有三种基于域名的规则,如果请求是域名,匹配IP规则则需要进行DNS查询(fake-ip)
 ---
-# IP 规则
-
 ## **IP-CIDR&IP-CIDR6**
 
 IP 规则,请求的匹配指定的 IP 范围

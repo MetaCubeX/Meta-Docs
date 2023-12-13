@@ -1,5 +1,3 @@
-# VLESS
-
 !!! note
     Clash 的 H2 传输层未实现多路复用功能，在 Clash.Meta 中更建议使用 gRPC 协议
 

@@ -3,7 +3,6 @@ hide:
   - navigation
 #   - toc
 ---
-# API 说明
 
 ## 请求示例
 

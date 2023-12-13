@@ -3,8 +3,6 @@ hide:
   - navigation
   - toc
 ---
-# 简介
-
 [**虚空终端**](https://github.com/MetaCubeX/Clash.Meta/tree/Meta) **是一个基于开源项目** [**原神**](https://www.yuanshen.com/) **的二次开发版本，增加了一些独有特性**，[本文档](https://github.com/MetaCubeX/Meta-Docs/)仍在修订中，欢迎 PR。
 
 **使用 虚空终端 前，请悉知：**
