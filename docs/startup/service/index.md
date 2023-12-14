@@ -6,24 +6,24 @@ hide:
 
 ## 使用 systemd
 
-- 下载二进制可执行文件 [releases](https://github.com/MetaCubeX/Clash.Meta/releases)
+- 下载二进制可执行文件 [releases](https://github.com/MetaCubeX/mihomo/releases)
 
-- 将下载的二进制可执行文件重名名为 `Clash-Meta` 并移动到 `/usr/local/bin/`
+- 将下载的二进制可执行文件重名名为 `mihomo` 并移动到 `/usr/local/bin/`
 
-- 以守护进程的方式，运行 Clash-Meta。
+- 以守护进程的方式，运行 mihomo。
 
-使用以下命令将 Clash 二进制文件复制到 /usr/local/bin, 配置文件复制到 /etc/Clash-Meta:
+使用以下命令将 Clash 二进制文件复制到 /usr/local/bin, 配置文件复制到 /etc/mihomo:
 
 ```shell
-cp Clash-Meta /usr/local/bin
-cp config.yaml /etc/Clash-Meta
+cp mihomo /usr/local/bin
+cp config.yaml /etc/mihomo
 ```
 
-创建 systemd 配置文件 `/etc/systemd/system/Clash-Meta.service`:
+创建 systemd 配置文件 `/etc/systemd/system/mihomo.service`:
 
 ```ini
 [Unit]
-Description=Clash-Meta Daemon, Another Clash Kernel.
+Description=mihomo Daemon, Another Clash Kernel.
 After=network.target NetworkManager.service systemd-networkd.service iwd.service
 
 [Service]
@@ -34,7 +34,7 @@ CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIM
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME
 Restart=always
 ExecStartPre=/usr/bin/sleep 1s
-ExecStart=/usr/local/bin/Clash-Meta -d /etc/Clash-Meta
+ExecStart=/usr/local/bin/mihomo -d /etc/mihomo
 ExecReload=/bin/kill -HUP $MAINPID
 
 [Install]
@@ -47,27 +47,27 @@ WantedBy=multi-user.target
 systemctl daemon-reload
 ```
 
-启用 Clash-Meta 服务：
+启用 mihomo 服务：
 
 ```shell
-systemctl enable Clash-Meta
+systemctl enable mihomo
 ```
 
-使用以下命令立即启动 Clash-Meta:
+使用以下命令立即启动 mihomo:
 
 ```shell
-systemctl start Clash-Meta
+systemctl start mihomo
 ```
 
-使用以下命令使 Clash-Meta 重新加载:
+使用以下命令使 mihomo 重新加载:
 
 ```shell
-systemctl reload Clash-Meta
+systemctl reload mihomo
 ```
 
-使用以下命令检查 Clash-Meta 的运行状况和日志:
+使用以下命令检查 mihomo 的运行状况和日志:
 
 ```shell
-systemctl status Clash-Meta
+systemctl status mihomo
 journalctl -xe
 ```
