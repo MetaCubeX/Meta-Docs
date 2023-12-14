@@ -20,21 +20,34 @@ allow-lan: true
 bind-address: "*"
 ```
 
-http(s) 和 socks 代理的用户验证
+允许连接的IP地址段，仅作用于 `allow-lan` 为 `true`
+默认值为`0.0.0.0/0`和`::/0`
+```yaml
+lan-allowed-ips:
+- 0.0.0.0/0
+- ::/0
+```
+禁止连接的IP地址段,黑名单优先级高于白名单,默认值为空
+```yaml
+lan-disallowed-ips:
+- 192.168.0.3/32
+```
 
+`http(s)`和`socks`代理的用户验证
 ```yaml
 authentication:
-  - "user1:pass1"
-  - "user2:pass2"
+- "user1:pass1"
+- "user2:pass2"
 ```
 
 设置允许跳过验证的IP段
-
 ```yaml
 skip-auth-prefixes:
-  - 127.0.0.1/8
-  - ::1/128
+- 127.0.0.1/8
+- ::1/128
 ```
+
+
 
 ## **运行模式**
 
@@ -217,7 +230,7 @@ global-client-fingerprint: chrome
 
 ## **GEO数据模式**
 
-更改geoip使用文件,mmdb或者dat,可选 `true / false`,`true`为dat,此项有默认值 `false`
+更改geoip使用文件,mmdb或者dat,可选 `true`/`false`,`true`为dat,此项有默认值 `false`
 
 ```yaml
 geodata-mode: true 
@@ -234,6 +247,15 @@ geodata-mode: true
 geodata-loader: memconservative
 ```
 
+## **自动更新 GEO**
+```yaml
+geo-auto-update: false
+```
+更新间隔,单位小时
+```yaml
+geo-update-interval: 24
+```
+
 ## **自定 GEO 下载地址**
 
 ```yaml
@@ -243,7 +265,7 @@ geox-url:
   mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
 ```
 
-## **自定客户端UA**
+## **自定全局UA**
 
 自定义外部资源下载时使用的的UA,默认为 `clash.meta`
 
