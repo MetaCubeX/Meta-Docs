@@ -65,9 +65,19 @@ systemctl start mihomo
 systemctl reload mihomo
 ```
 
-使用以下命令检查 mihomo 的运行状况和日志:
+使用以下命令检查 mihomo 的运行状况:
 
 ```shell
 systemctl status mihomo
-journalctl -xe
+```
+
+
+使用以下命令检查 mihomo 的运行日志:
+
+```shell
+journalctl -u meta -o cat -e
+```
+或
+```shell
+journalctl -u meta -o cat -f
 ```
