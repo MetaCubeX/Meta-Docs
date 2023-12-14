@@ -15,6 +15,55 @@ hide:
 常见的操作系统与对应的二进制文件：
 
 
+=== "Windows"
+    === "amd64/x86_64"
+        === "amd64 v1"
+            windows-amd64-compatible
+        === "amd64 v3"
+            windows-amd64
+    === "386/x86_32"
+        windows-386
+    === "arm64/armv8"
+        windows-arm64
+    === "armv7"
+        windows-armv7
+
+=== "Linux"
+    === "amd64/x86_64"
+        === "amd64 v1"
+            linux-amd64-compatible
+        === "amd64 v3"
+            linux-amd64
+    === "386/x86_32"
+        linux-386
+    === "arm64/armv8"
+        linux-arm64
+    === "armv7"
+        linux-armv7
+    === "riscv64"
+        linux-riscv64
+
+=== "MacOS"
+    === "amd64/x86_64"
+        darwin-amd64
+    === "arm64/armv8"
+        darwin-arm64
+
+=== "FreeBSD"
+    === "amd64/x86_64"
+        freebsd-amd64
+    === "386/x86_32"
+        freebsd-386
+    === "arm64/armv8"
+        freebsd-arm64
+
+=== "Android"
+    === "arm64"
+        android-arm64
+
+上面是画饼.先用下面的
+
+
   <label for="os">Select Operating System:</label>
   <select id="os" disabled>
     <option value="linux">Linux</option>
