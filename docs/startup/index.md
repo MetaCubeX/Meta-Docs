@@ -8,12 +8,9 @@ hide:
 
 ## 使用预编译的二进制文件
 
-您可以在这里下载 Clash.Meta 的内核二进制文件：<https://github.com/MetaCubeX/mihomo/releases>
+您可以在github下载 mihomo 的内核二进制文件： [github release](https://github.com/MetaCubeX/mihomo/releases)
 
----
-
-常见的操作系统与对应的二进制文件：
-
+或者在下方选择下载常见的操作系统对应的二进制文件
 
 === "Windows"
     === "amd64/x86_64"
