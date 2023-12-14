@@ -16,7 +16,7 @@ hide:
 
 
   <label for="os">Select Operating System:</label>
-  <select id="os">
+  <select id="os" disabled>
     <option value="linux">Linux</option>
     <option value="windows">Windows</option>
     <option value="darwin">MacOS</option>
@@ -24,7 +24,7 @@ hide:
   </select>
 
   <label for="arch">Select Architecture:</label>
-  <select id="arch">
+  <select id="arch" disabled>
     <option value="amd64">amd64</option>
     <option value="arm">arm</option>
     <!-- Add more options as needed -->
@@ -32,7 +32,7 @@ hide:
 
   <div id="download-section">
     <h2>Avaiable files:</h2>
-    <ul id="download-list"></ul>
+    <ul id="download-list">Loading...</ul>
   </div>
 
   <script>
@@ -79,11 +79,17 @@ hide:
       downloadSection.style.display = 'block';
     }
 
-    // Attach the updateDownloadLinks function to the change event of the architecture dropdown
-    osSelect.addEventListener('change', updateDownloadLinks);
-    archSelect.addEventListener('change', updateDownloadLinks);
-
-    // Optionally, you can call updateDownloadLinks initially if you want to show the links immediately
-    getFileList().then(updateDownloadLinks);
+    getFileList().then(() => {
+      // Enable select items when fetch is complete
+      osSelect.removeAttribute('disabled');
+      archSelect.removeAttribute('disabled');
+      // Optionally, you can call updateDownloadLinks initially if you want to show the links immediately
+      updateDownloadLinks()
+      // Attach the updateDownloadLinks function to the change event of the architecture dropdown
+      osSelect.addEventListener('change', updateDownloadLinks);
+      archSelect.addEventListener('change', updateDownloadLinks);
+    }, () => {
+      downloadList.innerHTML = 'Load Failed';
+    });
   }
   </script>
