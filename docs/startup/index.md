@@ -17,128 +17,167 @@ hide:
 
 === "Windows"
     === "amd64/x86_64"
-        === "amd64 v1"
-            windows-amd64-compatible
-        === "amd64 v3"
-            windows-amd64
+        <div id="download-section">
+          <div id="windows-amd64">
+            <ul id="download-list-windows-amd64">加载中...</ul>
+          </div>
+        </div>
     === "386/x86_32"
-        windows-386
+        <div id="download-section">
+          <div id="windows-386">
+            <ul id="download-list-windows-386">加载中...</ul>
+          </div>
+        </div>
     === "arm64/armv8"
-        windows-arm64
+        <div id="download-section">
+          <div id="windows-arm64">
+            <ul id="download-list-windows-arm64">加载中...</ul>
+          </div>
+        </div>
     === "armv7"
-        windows-armv7
+        <div id="download-section">
+          <div id="windows-arm32v7">
+            <ul id="download-list-windows-arm32v7">加载中...</ul>
+          </div>
+        </div>
 
 === "Linux"
     === "amd64/x86_64"
-        === "amd64 v1"
-            linux-amd64-compatible
-        === "amd64 v3"
-            linux-amd64
+        <div id="download-section">
+          <div id="linux-amd64">
+            <ul id="download-list-linux-amd64">加载中...</ul>
+          </div>
+        </div>
     === "386/x86_32"
-        linux-386
+        <div id="download-section">
+          <div id="linux-386">
+            <ul id="download-list-linux-386">加载中...</ul>
+          </div>
+        </div>
     === "arm64/armv8"
-        linux-arm64
+        <div id="download-section">
+          <div id="linux-arm64">
+            <ul id="download-list-linux-arm64">加载中...</ul>
+          </div>
+        </div>
     === "armv7"
-        linux-armv7
+        <div id="download-section">
+          <div id="linux-armv7">
+            <ul id="download-list-linux-armv7">加载中...</ul>
+          </div>
+        </div>
     === "riscv64"
-        linux-riscv64
+        <div id="download-section">
+          <div id="linux-riscv64">
+            <ul id="download-list-linux-riscv64">加载中...</ul>
+          </div>
+        </div>
+    === "mips"
+        <div id="download-section">
+          <div id="linux-mips">
+            <ul id="download-list-linux-mips">加载中...</ul>
+          </div>
+        </div>
 
 === "MacOS"
     === "amd64/x86_64"
-        darwin-amd64
+        <div id="download-section">
+          <div id="darwin-amd64">
+            <ul id="download-list-darwin-amd64">加载中...</ul>
+          </div>
+        </div>
     === "arm64/armv8"
-        darwin-arm64
+        <div id="download-section">
+          <div id="darwin-arm64">
+            <ul id="download-list-darwin-arm64">加载中...</ul>
+          </div>
+        </div>
 
 === "FreeBSD"
     === "amd64/x86_64"
-        freebsd-amd64
+        <div id="download-section">
+          <div id="freebsd-amd64">
+            <ul id="download-list-freebsd-amd64">加载中...</ul>
+          </div>
+        </div>
     === "386/x86_32"
-        freebsd-386
+        <div id="download-section">
+          <div id="freebsd-386">
+            <ul id="download-list-freebsd-386">加载中...</ul>
+          </div>
+        </div>
     === "arm64/armv8"
-        freebsd-arm64
+        <div id="download-section">
+          <div id="freebsd-arm64">
+            <ul id="download-list-freebsd-arm64">加载中...</ul>
+          </div>
+        </div>
 
 === "Android"
     === "arm64"
-        android-arm64
+        <div id="download-section">
+          <div id="android-arm64">
+            <ul id="download-list-android-arm64">加载中...</ul>
+          </div>
+        </div>
 
-上面是画饼.先用下面的
 
+<script>
+  const downloadSections = {
+    'windows-amd64': document.getElementById('download-list-windows-amd64'),
+    'windows-386': document.getElementById('download-list-windows-386'),
+    'windows-arm64': document.getElementById('download-list-windows-arm64'),
+    'windows-arm32v7': document.getElementById('download-list-windows-arm32v7'),
+    'linux-amd64': document.getElementById('download-list-linux-amd64'),
+    'linux-386': document.getElementById('download-list-linux-386'),
+    'linux-arm64': document.getElementById('download-list-linux-arm64'),
+    'linux-armv7': document.getElementById('download-list-linux-armv7'),
+    'linux-riscv64': document.getElementById('download-list-linux-riscv64'),
+    'linux-mips': document.getElementById('download-list-linux-mips'),
+    'darwin-amd64': document.getElementById('download-list-darwin-amd64'),
+    'darwin-arm64': document.getElementById('download-list-darwin-arm64'),
+    'freebsd-amd64': document.getElementById('download-list-freebsd-amd64'),
+    'freebsd-386': document.getElementById('download-list-freebsd-386'),
+    'freebsd-arm64': document.getElementById('download-list-freebsd-arm64'),
+    'android-arm64': document.getElementById('download-list-android-arm64'),
+  };
 
-  <label for="os">Select Operating System:</label>
-  <select id="os" disabled>
-    <option value="linux">Linux</option>
-    <option value="windows">Windows</option>
-    <option value="darwin">MacOS</option>
-    <!-- Add more options as needed -->
-  </select>
+  const fileList = [];
 
-  <label for="arch">Select Architecture:</label>
-  <select id="arch" disabled>
-    <option value="amd64">amd64</option>
-    <option value="arm">arm</option>
-    <!-- Add more options as needed -->
-  </select>
+  const getFileList = async () => {
+    const link = 'https://api.github.com/repos/MetaCubeX/mihomo/releases/tags/Prerelease-Alpha';
+    const { assets } = await fetch(link).then(r => r.json());
+    assets.forEach(({ name, browser_download_url: url }) => {
+      fileList.push({ name, url });
+    });
+  };
 
-  <div id="download-section">
-    <h2>Avaiable files:</h2>
-    <ul id="download-list">Loading...</ul>
-  </div>
+  const updateDownloadLinks = () => {
+    for (const sectionId in downloadSections) {
+      const section = downloadSections[sectionId];
+      section.innerHTML = '';
 
-  <script>
-  {
-    const downloadList = document.getElementById('download-list');
-    const osSelect = document.getElementById('os');
-    const archSelect = document.getElementById('arch');
+      const filteredFiles = fileList.filter(({ name }) => name.includes(sectionId));
 
-    const fileList = [];
-
-    const getFileList = async () => {
-      const link = 'https://api.github.com/repos/MetaCubeX/mihomo/releases/tags/Prerelease-Alpha'
-      const {assets} = await fetch(link).then(r => r.json());
-      for (const {name, browser_download_url: url} of assets) {
-        if (name === 'version.txt') continue;
-        fileList.push({name, url});
-      }
-    }
-
-    const updateDownloadLinks = () => {
-      const os = osSelect.value;
-      const arch = archSelect.value;
-
-      // Filter files based on user selection
-      const filteredFiles = fileList.filter(({name}) => {
-        return name.includes(os) && name.includes(arch);
+      filteredFiles.forEach(({ name, url }) => {
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.textContent = name;
+        link.download = name;
+        link.href = url;
+        listItem.appendChild(link);
+        section.appendChild(listItem);
       });
 
-      // Display the download links
-      const downloadList = document.getElementById('download-list');
-      downloadList.innerHTML = '';
-      for (const {name, url} of filteredFiles) {
-        const listItem = document.createElement('li');
-        const button = document.createElement('a')
-        button.textContent = name;
-        button.download = name;
-        button.href = url;
-        listItem.appendChild(button)
-        downloadList.appendChild(listItem);
-      }
-
-      // Show the download section
-      const downloadSection = document.getElementById('download-section');
-      downloadSection.style.display = 'block';
+      section.style.display = filteredFiles.length > 0 ? 'block' : 'none';
     }
+  };
 
-    getFileList().then(() => {
-      // Enable select items when fetch is complete
-      osSelect.removeAttribute('disabled');
-      archSelect.removeAttribute('disabled');
-      // Optionally, you can call updateDownloadLinks initially if you want to show the links immediately
-      updateDownloadLinks()
-      // Attach the updateDownloadLinks function to the change event of the architecture dropdown
-      osSelect.addEventListener('change', updateDownloadLinks);
-      archSelect.addEventListener('change', updateDownloadLinks);
-    }, () => {
-      downloadList.innerHTML = 'Load Failed';
-    });
-  }
-  </script>
+  getFileList().then(() => {
+    updateDownloadLinks();
+  }, () => {
+    for (const sectionId in downloadSections) {
+      downloadSections[sectionId].innerHTML = '加载失败';
+    }
+  });
+</script>
