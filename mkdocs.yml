@@ -88,7 +88,7 @@ nav:
     - web面板: startup/web.md
     - 客户端: startup/client/index.md
     - 创建运行服务: startup/service/index.md
-    - 非官方支持的工具: startup/client/client.md
+    - 第三方工具: startup/client/client.md
     - 常见问题: startup/faq/index.md
   #- 基础使用:
   #  - Windows:
