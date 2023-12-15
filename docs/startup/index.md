@@ -8,9 +8,7 @@ hide:
 
 ## 使用预编译的二进制文件
 
-您可以在github下载 mihomo 的内核二进制文件： [github release](https://github.com/MetaCubeX/mihomo/releases)
-
-或者在下方选择下载常见的操作系统对应的二进制文件
+请在下方选择下载常见的操作系统对应的二进制文件
 
 === "Windows"
     === "amd64/x86_64"
@@ -175,7 +173,7 @@ hide:
     updateDownloadLinks()
   }, () => {
     for (const sectionId in downloadSections) {
-      downloadSections[sectionId].innerHTML = '加载失败'
+      downloadSections[sectionId].innerHTML = `加载失败，您可以在 github 下载 mihomo 的内核二进制文件： <a href="${githubLink}" target="_blank">github release</a>`
     }
   })
 </script>
