@@ -12,168 +12,78 @@ hide:
 
 === "Windows"
     === "amd64/x86_64"
-        <div id="download-section">
-          <div id="windows-amd64">
-            <ul id="download-list-windows-amd64">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="windows-amd64"><ul>加载中...</ul></div>
     === "386/x86_32"
-        <div id="download-section">
-          <div id="windows-386">
-            <ul id="download-list-windows-386">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="windows-386"><ul>加载中...</ul></div>
     === "arm64/armv8"
-        <div id="download-section">
-          <div id="windows-arm64">
-            <ul id="download-list-windows-arm64">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="windows-arm64"><ul>加载中...</ul></div>
     === "armv7"
-        <div id="download-section">
-          <div id="windows-arm32v7">
-            <ul id="download-list-windows-arm32v7">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="windows-arm32v7"><ul>加载中...</ul></div>
 
 === "Linux"
     === "amd64/x86_64"
-        <div id="download-section">
-          <div id="linux-amd64">
-            <ul id="download-list-linux-amd64">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="linux-amd64"><ul>加载中...</ul></div>
     === "386/x86_32"
-        <div id="download-section">
-          <div id="linux-386">
-            <ul id="download-list-linux-386">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="linux-386"><ul>加载中...</ul></div>
     === "arm64/armv8"
-        <div id="download-section">
-          <div id="linux-arm64">
-            <ul id="download-list-linux-arm64">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="linux-arm64"><ul>加载中...</ul></div>
     === "armv7"
-        <div id="download-section">
-          <div id="linux-armv7">
-            <ul id="download-list-linux-armv7">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="linux-armv7"><ul>加载中...</ul></div>
     === "riscv64"
-        <div id="download-section">
-          <div id="linux-riscv64">
-            <ul id="download-list-linux-riscv64">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="linux-riscv64"><ul>加载中...</ul></div>
     === "mips"
-        <div id="download-section">
-          <div id="linux-mips">
-            <ul id="download-list-linux-mips">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="linux-mips"><ul>加载中...</ul></div>
 
 === "MacOS"
     === "amd64/x86_64"
-        <div id="download-section">
-          <div id="darwin-amd64">
-            <ul id="download-list-darwin-amd64">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="darwin-amd64"><ul>加载中...</ul></div>
     === "arm64/armv8"
-        <div id="download-section">
-          <div id="darwin-arm64">
-            <ul id="download-list-darwin-arm64">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="darwin-arm64"><ul>加载中...</ul></div>
 
 === "FreeBSD"
     === "amd64/x86_64"
-        <div id="download-section">
-          <div id="freebsd-amd64">
-            <ul id="download-list-freebsd-amd64">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="freebsd-amd64"><ul>加载中...</ul></div>
     === "386/x86_32"
-        <div id="download-section">
-          <div id="freebsd-386">
-            <ul id="download-list-freebsd-386">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="freebsd-386"><ul>加载中...</ul></div>
     === "arm64/armv8"
-        <div id="download-section">
-          <div id="freebsd-arm64">
-            <ul id="download-list-freebsd-arm64">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="freebsd-arm64"><ul>加载中...</ul></div>
 
 === "Android"
     === "arm64"
-        <div id="download-section">
-          <div id="android-arm64">
-            <ul id="download-list-android-arm64">加载中...</ul>
-          </div>
-        </div>
+        <div class="download-list" data-keyword="android-arm64"><ul>加载中...</ul></div>
 
 
 <script>
-  const downloadSections = {
-    'windows-amd64': document.getElementById('download-list-windows-amd64'),
-    'windows-386': document.getElementById('download-list-windows-386'),
-    'windows-arm64': document.getElementById('download-list-windows-arm64'),
-    'windows-arm32v7': document.getElementById('download-list-windows-arm32v7'),
-    'linux-amd64': document.getElementById('download-list-linux-amd64'),
-    'linux-386': document.getElementById('download-list-linux-386'),
-    'linux-arm64': document.getElementById('download-list-linux-arm64'),
-    'linux-armv7': document.getElementById('download-list-linux-armv7'),
-    'linux-riscv64': document.getElementById('download-list-linux-riscv64'),
-    'linux-mips': document.getElementById('download-list-linux-mips'),
-    'darwin-amd64': document.getElementById('download-list-darwin-amd64'),
-    'darwin-arm64': document.getElementById('download-list-darwin-arm64'),
-    'freebsd-amd64': document.getElementById('download-list-freebsd-amd64'),
-    'freebsd-386': document.getElementById('download-list-freebsd-386'),
-    'freebsd-arm64': document.getElementById('download-list-freebsd-arm64'),
-    'android-arm64': document.getElementById('download-list-android-arm64'),
-  }
-
   const fileList = []
+  const divList = document.querySelectorAll('div.download-list')
   const githubLink = 'https://github.com/MetaCubeX/mihomo/releases'
 
   const getFileList = async () => {
     const link = 'https://api.github.com/repos/MetaCubeX/mihomo/releases/tags/Prerelease-Alpha'
     const { assets } = await fetch(link).then(r => r.json())
-    assets.forEach(({ name, browser_download_url: url }) => {
-      fileList.push({ name, url })
-    })
-  }
-
-  const updateDownloadLinks = () => {
-    for (const sectionId in downloadSections) {
-      const section = downloadSections[sectionId]
-      section.innerHTML = ''
-
-      const filteredFiles = fileList.filter(({ name }) => name.includes(sectionId))
-
-      filteredFiles.forEach(({ name, url }) => {
-        const listItem = document.createElement('li')
-        const link = document.createElement('a')
-        link.textContent = name
-        link.download = name
-        link.href = url
-        listItem.appendChild(link)
-        section.appendChild(listItem)
-      })
-
-      section.style.display = filteredFiles.length > 0 ? 'block' : 'none'
-    }
+    for (const { name, browser_download_url: url } of assets) fileList.push({ name, url })
   }
 
   getFileList().then(() => {
-    updateDownloadLinks()
+    for (const div of divList) {
+      const keyword = div.getAttribute('data-keyword')
+      const ul = div.querySelector('ul')
+      ul.innerHTML = ''
+      for (const { name, url } of fileList) {
+        if (!name.includes(keyword)) continue
+        const a = document.createElement('a')
+        const li = document.createElement('li')
+        a.href = url
+        a.download = name
+        a.innerText = name
+        li.appendChild(a)
+        ul.appendChild(li)
+      }
+    }
   }, () => {
-    for (const sectionId in downloadSections) {
-      downloadSections[sectionId].innerHTML = `加载失败，您可以在 github 下载 mihomo 的内核二进制文件： <a href="${githubLink}" target="_blank">github release</a>`
+    for (const div of divList) {
+      const ul = div.querySelector('ul')
+      ul.innerHTML = `加载失败，您可以在 github 下载 mihomo 的内核二进制文件： <a href="${githubLink}" target="_blank">github release</a>`
     }
   })
 </script>
