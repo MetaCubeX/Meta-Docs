@@ -137,44 +137,45 @@ hide:
     'freebsd-386': document.getElementById('download-list-freebsd-386'),
     'freebsd-arm64': document.getElementById('download-list-freebsd-arm64'),
     'android-arm64': document.getElementById('download-list-android-arm64'),
-  };
+  }
 
-  const fileList = [];
+  const fileList = []
+  const githubLink = 'https://github.com/MetaCubeX/mihomo/releases'
 
   const getFileList = async () => {
-    const link = 'https://api.github.com/repos/MetaCubeX/mihomo/releases/tags/Prerelease-Alpha';
-    const { assets } = await fetch(link).then(r => r.json());
+    const link = 'https://api.github.com/repos/MetaCubeX/mihomo/releases/tags/Prerelease-Alpha'
+    const { assets } = await fetch(link).then(r => r.json())
     assets.forEach(({ name, browser_download_url: url }) => {
-      fileList.push({ name, url });
-    });
-  };
+      fileList.push({ name, url })
+    })
+  }
 
   const updateDownloadLinks = () => {
     for (const sectionId in downloadSections) {
-      const section = downloadSections[sectionId];
-      section.innerHTML = '';
+      const section = downloadSections[sectionId]
+      section.innerHTML = ''
 
-      const filteredFiles = fileList.filter(({ name }) => name.includes(sectionId));
+      const filteredFiles = fileList.filter(({ name }) => name.includes(sectionId))
 
       filteredFiles.forEach(({ name, url }) => {
-        const listItem = document.createElement('li');
-        const link = document.createElement('a');
-        link.textContent = name;
-        link.download = name;
-        link.href = url;
-        listItem.appendChild(link);
-        section.appendChild(listItem);
-      });
+        const listItem = document.createElement('li')
+        const link = document.createElement('a')
+        link.textContent = name
+        link.download = name
+        link.href = url
+        listItem.appendChild(link)
+        section.appendChild(listItem)
+      })
 
-      section.style.display = filteredFiles.length > 0 ? 'block' : 'none';
+      section.style.display = filteredFiles.length > 0 ? 'block' : 'none'
     }
-  };
+  }
 
   getFileList().then(() => {
-    updateDownloadLinks();
+    updateDownloadLinks()
   }, () => {
     for (const sectionId in downloadSections) {
-      downloadSections[sectionId].innerHTML = '加载失败';
+      downloadSections[sectionId].innerHTML = '加载失败'
     }
-  });
+  })
 </script>
