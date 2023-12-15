@@ -123,7 +123,7 @@ nav:
         - tunnel: config/inbound/listeners/tunnel.md
     - 出站代理:
       - 通用字段:
-        - config/proxies/index.md
+        - 通用字段: config/proxies/index.md
         - dialer-proxy: config/proxies/dialer-proxy.md
         - sing-mux: config/proxies/sing-mux.md
       - DIRECT: config/proxies/direct.md
@@ -169,7 +169,7 @@ nav:
     - 规则集合: 
       - 规则集合: config/rule-providers/index.md
       - 规则集合内容: config/rule-providers/content.md
-    # - 子规则: config/sub-rules.md
+    - 子规则: config/sub-rule.md
     - 流量隧道: config/tunnels.md
     - NTP: config/ntp/index.md
     - 实验性: config/experimental.md
