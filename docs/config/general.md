@@ -32,8 +32,8 @@ lan-allowed-ips:
 lan-disallowed-ips:
 - 192.168.0.3/32
 ```
-
-`http(s)`和`socks`代理的用户验证
+### 用户验证
+`http(s)`/`socks`/`mixed`代理的用户验证
 ```yaml
 authentication:
 - "user1:pass1"

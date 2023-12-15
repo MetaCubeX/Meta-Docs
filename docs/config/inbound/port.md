@@ -1,3 +1,5 @@
+[http/socks/mixed端口验证与外部访问](../general.md/#_1)
+
 ### http(s) 代理端口
 
 ```yaml
@@ -9,8 +11,6 @@ port: 7890
 ```yaml
 socks-port: 7891
 ```
-
-[验证与外部访问](../general.md/#允许局域网)
 
 ### 混合端口
 
