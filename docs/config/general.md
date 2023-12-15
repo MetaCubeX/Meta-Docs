@@ -21,19 +21,25 @@ bind-address: "*"
 ```
 
 允许连接的IP地址段，仅作用于 `allow-lan` 为 `true`
-默认值为`0.0.0.0/0`和`::/0`
+默认值为 `0.0.0.0/0`和 `::/0`
+
 ```yaml
 lan-allowed-ips:
 - 0.0.0.0/0
 - ::/0
 ```
+
 禁止连接的IP地址段,黑名单优先级高于白名单,默认值为空
+
 ```yaml
 lan-disallowed-ips:
 - 192.168.0.3/32
 ```
+
 ### 用户验证
+
 `http(s)`/`socks`/`mixed`代理的用户验证
+
 ```yaml
 authentication:
 - "user1:pass1"
@@ -41,13 +47,12 @@ authentication:
 ```
 
 设置允许跳过验证的IP段
+
 ```yaml
 skip-auth-prefixes:
 - 127.0.0.1/8
 - ::1/128
 ```
-
-
 
 ## **运行模式**
 
@@ -79,7 +84,7 @@ log-level: info
 
 是否允许内核接受 IPv6 流量
 
-可选值 `true/false,`默认为 `false`
+可选值 `true/false,`默认为 `true`
 
 ```yaml
 ipv6: true
@@ -248,10 +253,13 @@ geodata-loader: memconservative
 ```
 
 ## **自动更新 GEO**
+
 ```yaml
 geo-auto-update: false
 ```
+
 更新间隔,单位小时
+
 ```yaml
 geo-update-interval: 24
 ```
