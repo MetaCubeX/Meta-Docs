@@ -4,7 +4,7 @@
 ## REJECT
 拒绝,拦截数据出站
 
-### REJECT-DROP
+## REJECT-DROP
 拒绝,与`REJECT`不同的是,该策略将静默抛弃请求
 
 ## PASS
