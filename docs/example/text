@@ -1,6 +1,6 @@
 ######### 锚点 start #######
 # 策略组相关
-pr: &pr {type: select, proxies: [默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择, DIRECT]}
+pr: &pr {type: select, proxies: [默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择, 直连]}
 #这里是订阅更新和延迟测试相关的
 p: &p {type: http, interval: 3600, health-check: {enable: true, url: 'https://www.gstatic.com/generate_204', interval: 300}}
 ######### 锚点 end #######
@@ -76,9 +76,12 @@ dns:
     "rule-set:geolocation-!cn":
       - 'https://dns.cloudflare.com/dns-query#dns'
       - 'https://dns.google/dns-query#dns'
-
+proxies:
+- name: "直连"
+  type: direct
+  udp: true
 proxy-groups:
-  - {name: 默认, type: select, proxies: [自动选择, DIRECT, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点]}
+  - {name: 默认, type: select, proxies: [自动选择, 直连, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点]}
   - {name: dns, type: select, proxies: [自动选择, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点]}
   - {name: Google, <<: *pr}
   - {name: Telegram, <<: *pr}
@@ -92,7 +95,7 @@ proxy-groups:
   - {name: NETFLIX, <<: *pr}
   - {name: Spotify, <<: *pr}
   - {name: Github, <<: *pr}
-  - {name: 国内, type: select, proxies: [DIRECT, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}
+  - {name: 国内, type: select, proxies: [直连, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}
   - {name: 其他, <<: *pr}
 
 #分隔,下面是地区分组
@@ -106,7 +109,7 @@ proxy-groups:
   - {name: 自动选择, type: url-test, include-all-providers: true, tolerance: 10}
 
 rules:
-  - GEOIP,lan,DIRECT,no-resolve
+  - GEOIP,lan,直连,no-resolve
   - RULE-SET,biliintl_domain,哔哩东南亚
   - RULE-SET,ehentai_domain,ehentai
   - RULE-SET,github_domain,Github
