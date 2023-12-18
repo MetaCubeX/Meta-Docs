@@ -1,10 +1,8 @@
 ######### 锚点 start #######
 # 策略组相关
-pr: &pr {type: select, proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,DIRECT]}
-
+pr: &pr {type: select, proxies: [默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择, DIRECT]}
 #这里是订阅更新和延迟测试相关的
-p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
-
+p: &p {type: http, interval: 3600, health-check: {enable: true, url: 'https://www.gstatic.com/generate_204', interval: 300}}
 ######### 锚点 end #######
 
 
