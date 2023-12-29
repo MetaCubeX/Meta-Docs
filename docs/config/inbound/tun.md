@@ -9,19 +9,30 @@ tun:
   # device: utun0
   # mtu: 9000
   # strict-route: true
+  # gso: true
+  # gso-max-size: 65536
+  # udp-timeout: 300
+  # endpoint-independent_nat: false
+  # include-interface:
+  # - eth0
+  # exclude-interface:
+  # - eth1
   # inet4-route-address:
   # - 0.0.0.0/1
   # - 128.0.0.0/1
   # inet6-route-address:
   # - "::/1"
   # - "8000::/1"
-  # endpoint-independent_nat: false
+  # inet4-route-exclude-address:
+  # - 192.168.0.0/16
+  # inet6-route-exclude-address:
+  # - fc00::/7
   # include-uid:
   # - 0
   # include-uid-range:
   # - 1000-99999
   # exclude-uid:
-  #- 1000
+  # - 1000
   # exclude-uid-range:
   # - 1000-99999
   # include-android-user:
@@ -45,7 +56,7 @@ enable: true
 
 ### stack
 
-tun 模式堆栈,如无使用问题,建议使用 `system` 栈;MacOS 用户推荐 `gvisor`栈
+tun 模式堆栈,如无使用问题,建议使用 `mixed`栈,默认 `gvisor`
 
 可用值： `system/gvisor/mixed`
 
@@ -94,8 +105,8 @@ dns 劫持,一般设置为 `any:53` 即可, 即劫持所有 53 端口的 udp 流
 
 ```yaml
 dns-hijack:
-  - any:53
-  - tcp://any:53
+- any:53
+- tcp://any:53
 ```
 
 !!! warning ""
@@ -123,24 +134,30 @@ strict-route: true
 mtu: 9000
 ```
 
-### inet4-route-address
+### gso
 
-启用 `auto_route`时使用自定义 ipv4 路由而不是默认路由,一般无需配置。
+启用通用分段卸载
+!!! notes ""
+    仅支持 Linux
 
 ```yaml
-inet4-route-address:
-  - 0.0.0.0/1
-  - 128.0.0.0/1
+gso: true
 ```
 
-### inet6-route-address
+### gso-max-size
 
-启用 `auto-route`时使用自定义 ipv6 路由而不是默认路由,一般无需配置。
+数据块的最大长度
 
 ```yaml
-inet6-route-address:
-  - "::/1"
-  - "8000::/1"
+gso-max-size: 65536
+```
+
+### udp-timeout
+
+UDP NAT 过期时间,以秒为单位,默认为 300(5 分钟)
+
+```yaml
+udp-timeout: 300
 ```
 
 ### endpoint-independent-nat
@@ -151,13 +168,69 @@ inet6-route-address:
 endpoint-independent-nat: false
 ```
 
+### include-interface
+
+限制被路由的接口,默认不限制,与 `exclude-interface` 冲突,不可一起配置
+
+```yaml
+include-interface:
+- eth0
+```
+
+### exclude-interface
+
+排除路由的接口,与 `include-interface` 冲突,不可一起配置
+
+```yaml
+exclude-interface:
+- eth1
+```
+
+### inet4-route-address
+
+启用 `auto_route`时使用自定义路由而不是默认路由,一般无需配置。
+
+```yaml
+inet4-route-address:
+- 0.0.0.0/1
+- 128.0.0.0/1
+```
+
+### inet6-route-address
+
+启用 `auto-route`时使用自定义路由而不是默认路由,一般无需配置。
+
+```yaml
+inet6-route-address:
+- "::/1"
+- "8000::/1"
+```
+
+### inet4-route-exclude-address
+
+启用 `auto_route` 时排除自定义路由
+
+```yaml
+inet4-route-exclude-address:
+- 192.168.0.0/16
+```
+
+### inet6-route-exclude-address
+
+启用 `auto_route` 时排除自定义路由
+
+```yaml
+inet6-route-exclude-address:
+- fc00::/7
+```
+
 ### include-uid
 
 包含的用户,使其被Tun路由流量,未被配置的用户不会被Tun路由流量,默认不限制
 
 ```yaml
 include-uid:
-  - 0
+- 0
 ```
 
 !!! note ""
@@ -169,7 +242,7 @@ include-uid:
 
 ```yaml
 include-uid-range:
-  - 1000-99999
+- 1000-99999
 ```
 
 ### exclude-uid
@@ -178,7 +251,7 @@ include-uid-range:
 
 ```yaml
 exclude-uid:
-  - 1000
+- 1000
 ```
 
 ### exclude-uid-range
@@ -187,7 +260,7 @@ exclude-uid:
 
 ```yaml
 exclude-uid-range:
-  - 1000-99999
+- 1000-99999
 ```
 
 ### include-android-user
@@ -196,8 +269,8 @@ exclude-uid-range:
 
 ```yaml
 include-android-user:
-  - 0
-  - 10
+- 0
+- 10
 ```
 
 !!! note ""
@@ -215,7 +288,7 @@ include-android-user:
 
 ```yaml
 include-package:
-  - com.android.chrome
+- com.android.chrome
 ```
 
 ### exclude-package
@@ -224,8 +297,11 @@ include-package:
 
 ```yaml
 exclude-package:
-  - com.android.captiveportallogin
+- com.android.captiveportallogin
 ```
+
+### file-descriptor
+文件描述符
 
 ## Tun 的协议栈网络回环测试
 
