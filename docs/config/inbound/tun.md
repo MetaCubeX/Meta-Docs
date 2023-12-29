@@ -188,7 +188,7 @@ exclude-interface:
 
 ### inet4-route-address
 
-启用 `auto_route`时使用自定义路由而不是默认路由,一般无需配置。
+启用 `auto_route`时路由自定义网段而不是默认路由,一般无需配置。
 
 ```yaml
 inet4-route-address:
@@ -198,7 +198,7 @@ inet4-route-address:
 
 ### inet6-route-address
 
-启用 `auto-route`时使用自定义路由而不是默认路由,一般无需配置。
+启用 `auto-route`时路由自定义网段而不是默认路由,一般无需配置。
 
 ```yaml
 inet6-route-address:
@@ -208,7 +208,7 @@ inet6-route-address:
 
 ### inet4-route-exclude-address
 
-启用 `auto_route` 时排除自定义路由
+启用 `auto_route` 时排除自定义网段
 
 ```yaml
 inet4-route-exclude-address:
@@ -217,7 +217,7 @@ inet4-route-exclude-address:
 
 ### inet6-route-exclude-address
 
-启用 `auto_route` 时排除自定义路由
+启用 `auto_route` 时排除自定义网段
 
 ```yaml
 inet6-route-exclude-address:
