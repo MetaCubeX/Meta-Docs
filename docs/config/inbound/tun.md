@@ -30,11 +30,11 @@ tun:
   # include-uid:
   # - 0
   # include-uid-range:
-  # - 1000-99999
+  # - 1000:9999
   # exclude-uid:
   # - 1000
   # exclude-uid-range:
-  # - 1000-99999
+  # - 1000:9999
   # include-android-user:
   # - 0
   # - 10
@@ -242,7 +242,7 @@ include-uid:
 
 ```yaml
 include-uid-range:
-- 1000-99999
+- 1000:9999
 ```
 
 ### exclude-uid
@@ -260,7 +260,7 @@ exclude-uid:
 
 ```yaml
 exclude-uid-range:
-- 1000-99999
+- 1000:9999
 ```
 
 ### include-android-user
