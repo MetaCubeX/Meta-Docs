@@ -140,14 +140,14 @@ nav:
       - WireGuard: config/proxies/wg.md
     - 策略组:
       - 策略组配置: config/proxy-groups/index.md
-      - 内置策略: config/proxy-groups/built-in.md
       - 手动选择: config/proxy-groups/select.md
       - 自动选择: config/proxy-groups/url-test.md
       - 自动回退: config/proxy-groups/fallback.md
       - 负载均衡: config/proxy-groups/load-balance.md
       - 链式代理: config/proxy-groups/relay.md
-      - 筛选代理集合: config/proxy-groups/filter.md
-      - 指定接口及路由标记: config/proxy-groups/if-mark.md
+      - 内置策略: config/proxy-groups/built-in.md
+    #  - 筛选代理集合: config/proxy-groups/filter.md
+    #  - 指定接口及路由标记: config/proxy-groups/if-mark.md
     - 代理集合:
       - 代理集合配置: config/proxy-providers/index.md
       - 代理集合内容: config/proxy-providers/content.md

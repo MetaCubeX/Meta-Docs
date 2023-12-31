@@ -43,10 +43,10 @@ proxies:
 
 ### udp
 
-非必须项,是否允许UDP通过代理
+非必须项,是否允许UDP通过代理,默认为`false`
 
 !!! note
-    此选项在 TUIC 等基于 UDP 的协议默认开启
+    此选项在`TUIC`等基于`UDP`或者`VMess`等默认`UoT`的协议中默认开启
 
 ### interface-name
 
