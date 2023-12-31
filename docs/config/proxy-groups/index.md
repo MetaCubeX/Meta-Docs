@@ -12,11 +12,11 @@ proxy-groups:
   exclude-filter: "美|日"
   exclude-type: "Shadowsocks|Http"
   proxies:
-    - DIRECT
-    - ss
+  - DIRECT
+  - ss
   use:
-    - provider1
-    - provider1
+  - provider1
+  - provider1
 ```
 
 ## name
@@ -65,27 +65,18 @@ proxy-groups:
     会使[`use`](./index.md#use)失效
 
 ## filter
-
 筛选满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点
-
-```yaml
-filter: "(?i)港|hk|hongkong|hong kong"
-```
+!!! info ""
+    仅作用于引入代理集合
 
 ## exclude-filter
-
 排除满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点
-
-```yaml
-exclude-filter: "(?i)港|hk|hongkong|hong kong"
-```
+!!! info ""
+    仅作用于引入代理集合
 
 ## exclude-type
-
 排除节点类型
-
-```yaml
-exclude-type: "Shadowsocks|Http"
-```
+!!! info ""
+    仅作用于引入代理集合
 
 注意，`proxy-groups` 与 `proxy-providers` 写法不同，不支持正则表达式，通过 `|` 分隔

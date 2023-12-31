@@ -1,21 +1,19 @@
 ---
 description: 负载均衡将按照算法随机选择节点
 ---
-## 配置示例
 
 ```yaml
 proxy-groups:
-  - name: "load-balance"
-    type: load-balance
-    proxies:
-      - ss1
-      - ss2
-      - vmess1
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-   #lazy: true
-   #disable-udp: true
-   #strategy: consistent-hashing # or round-robin
+- name: "load-balance"
+  type: load-balance
+  proxies:
+  - ss1
+  - ss2
+  - vmess1
+  url: 'https://www.gstatic.com/generate_204'
+  interval: 300
+  #lazy: true
+  #strategy: consistent-hashing # or round-robin
 ```
 ## 通用字段
 参阅 [通用字段](./index.md)

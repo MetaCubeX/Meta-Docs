@@ -6,9 +6,8 @@ proxy-groups:
 - name: "自动选择"
   type: url-test
   proxies:
-    - ss
-    - ss
-    - vmess
+  - ss
+  - vmess
   url: 'https://www.gstatic.com/generate_204'
   interval: 300
   #tolerance: 50
