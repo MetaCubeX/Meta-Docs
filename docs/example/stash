@@ -64,11 +64,11 @@ proxy-groups:
 - {name: 自动选择, type: url-test, include-all: true, tolerance: 10, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png"}
 - {name: 全部节点, type: select, include-all: true, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Global.png"}
 
-- {name: 香港自动选择, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/HK.png"}
-- {name: 台湾自动选择, type: select, include-all: true, filter: "(?i)台|tw|taiwan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/TW.png"}
-- {name: 日本自动选择, type: select, include-all: true, filter: "(?i)日|jp|japan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/JP.png"}
-- {name: 美国自动选择, type: select, include-all: true, filter: "(?i)美|us|unitedstates|united states", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/US.png"}
-- {name: 新加坡自动选择, type: select, include-all: true, filter: "(?i)(新|sg|singapore)", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/SG.png"}
+- {name: 香港自动选择, type: url-test, include-all: true, filter: "(?i)港|hk|hongkong|hong kong", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/HK.png"}
+- {name: 台湾自动选择, type: url-test, include-all: true, filter: "(?i)台|tw|taiwan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/TW.png"}
+- {name: 日本自动选择, type: url-test, include-all: true, filter: "(?i)日|jp|japan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/JP.png"}
+- {name: 美国自动选择, type: url-test, include-all: true, filter: "(?i)美|us|unitedstates|united states", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/US.png"}
+- {name: 新加坡自动选择, type: url-test, include-all: true, filter: "(?i)(新|sg|singapore)", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/SG.png"}
 
 rules:
 - GEOIP,lan,直连,no-resolve

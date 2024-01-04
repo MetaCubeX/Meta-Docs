@@ -1,6 +1,3 @@
----
-description: 有三种基于域名的规则
----
 ## DOMAIN
 
 域名规则，如果请求的域完全匹配，则会匹配上此规则
@@ -10,7 +7,7 @@ rules:
 - DOMAIN,google.com,auto
 ```
 
-## **DOMAIN-SUFFIX**
+## DOMAIN-SUFFIX
 
 域名后缀规则，如果请求的域名后缀匹配，则会匹配上此规则
 
@@ -21,7 +18,7 @@ rules:
 - DOMAIN-SUFFIX,google.com,auto
 ```
 
-## **DOMAIN-KEYWORD**
+## DOMAIN-KEYWORD
 
 域名关键词规则，如果请求的域名中包含关键字，则会匹配上此规则
 

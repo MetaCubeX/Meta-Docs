@@ -1,18 +1,11 @@
----
-description: 有三种基于域名的规则,如果请求是域名,匹配IP规则则需要进行DNS查询(fake-ip)
----
-## **IP-CIDR&IP-CIDR6**
+## IP-CIDR&IP-CIDR6
 
-IP 规则,请求的匹配指定的 IP 范围
+IP范围 规则,请求的匹配指定的 IP 范围
 
 ```yaml
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT
 - IP-CIDR6,2620:0:2d0:200::7/32,auto
-```
-
-```yaml
-
 ```
 
 ### **no-resolve**
@@ -28,9 +21,9 @@ rules:
 - IP-CIDR,127.0.0.1/8,DIRECT,no-resolve
 ```
 
-## **SRC-IP-CIDR**
+## SRC-IP-CIDR
 
-来源 IP 规则,匹配请求的客户端 IP 地址
+来源IP范围规则,匹配请求的客户端 IP 地址范围
 
 ```yaml
 rules:

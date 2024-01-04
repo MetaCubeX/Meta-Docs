@@ -156,7 +156,7 @@ nav:
     - 规则:
       - 规则配置: config/rules/index.md
       - 域名规则: config/rules/domain.md
-      - IP规则: config/rules/ipcidr.md
+      - IP规则: config/rules/ip.md
       - 端口规则: config/rules/port.md
       - 进程规则: config/rules/process.md
       - 逻辑规则: config/rules/logic.md

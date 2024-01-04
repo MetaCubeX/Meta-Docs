@@ -4,24 +4,23 @@
         ######### 锚点 start #######
         # 策略组相关
         pr: &pr {type: select, proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]}
-        
-        #这里是订阅更新和延迟测试相关的
+
+    #这里是订阅更新和延迟测试相关的
         p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
-        
-        ######### 锚点 end #######
-        
-        
-        # url 里填写自己的订阅,名称不能重复
+
+    ######### 锚点 end #######
+
+    # url 里填写自己的订阅,名称不能重复
         proxy-providers:
           provider1:
             <<: *p
             url: ""
-        
-          provider2:
+
+    provider2:
             <<: *p
             url: ""
-        
-        ipv6: true
+
+    ipv6: true
         allow-lan: true
         mixed-port: 7890
         unified-delay: false
@@ -29,21 +28,21 @@
         external-controller: 127.0.0.1:9090
         external-ui: ui
         external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
-        
-        geodata-mode: true
+
+    geodata-mode: true
         geox-url:
           geoip: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
           geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
           mmdb: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
-        
-        find-process-mode: strict
+
+    find-process-mode: strict
         global-client-fingerprint: chrome
-        
-        profile:
+
+    profile:
           store-selected: true
           store-fake-ip: true
-        
-        sniffer:
+
+    sniffer:
           enable: true
           sniff:
             HTTP:
@@ -55,16 +54,16 @@
               ports: [443, 8443]
           skip-domain:
             - "Mijia Cloud"
-        
-        tun:
+
+    tun:
           enable: true
           stack: mixed
           dns-hijack:
             - "any:53"
           auto-route: true
           auto-detect-interface: true
-        
-        dns:
+
+    dns:
           enable: true
           listen: :1053
           ipv6: true
@@ -106,8 +105,8 @@
           - {name: Github, <<: *pr}
           - {name: 国内, type: select, proxies: [直连, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}
           - {name: 其他, <<: *pr}
-        
-        #分隔,下面是地区分组
+
+    #分隔,下面是地区分组
           - {name: 香港, type: select , include-all-providers: true, filter: "(?i)港|hk|hongkong|hong kong"}
           - {name: 台湾, type: select , include-all-providers: true, filter: "(?i)台|tw|taiwan"}
           - {name: 日本, type: select , include-all-providers: true, filter: "(?i)日|jp|japan"}
@@ -116,8 +115,8 @@
           - {name: 其它地区, type: select , include-all-providers: true, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"}
           - {name: 全部节点, type: select , include-all-providers: true}
           - {name: 自动选择, type: url-test, include-all-providers: true, tolerance: 10}
-        
-        rules:
+
+    rules:
           - GEOIP,lan,直连,no-resolve
           - GEOSITE,biliintl,哔哩东南亚
           - GEOSITE,ehentai,ehentai
@@ -132,17 +131,14 @@
           - GEOSITE,spotify,Spotify
           - GEOSITE,pixiv,Pixiv
           - GEOSITE,geolocation-!cn,其他
-        
-          - GEOIP,google,Google
+
+    - GEOIP,google,Google
           - GEOIP,netflix,NETFLIX
           - GEOIP,telegram,Telegram
           - GEOIP,twitter,Twitter
           - GEOSITE,CN,国内
           - GEOIP,CN,国内
-          - MATCH,其他
-        ```
-    === "link"
-        ```text
+          - MATCH,其他``    === "link"        ``text
         https://wiki.metacubex.one/example/geox
         ```
 
@@ -152,24 +148,23 @@
         ######### 锚点 start #######
         # 策略组相关
         pr: &pr {type: select, proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]}
-        
-        #这里是订阅更新和延迟测试相关的
+
+    #这里是订阅更新和延迟测试相关的
         p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
-        
-        ######### 锚点 end #######
-        
-        
-        # url 里填写自己的订阅,名称不能重复
+
+    ######### 锚点 end #######
+
+    # url 里填写自己的订阅,名称不能重复
         proxy-providers:
           provider1:
             <<: *p
             url: ""
-        
-          provider2:
+
+    provider2:
             <<: *p
             url: ""
-        
-        ipv6: true
+
+    ipv6: true
         allow-lan: true
         mixed-port: 7890
         unified-delay: false
@@ -177,15 +172,15 @@
         external-controller: 127.0.0.1:9090
         external-ui: ui
         external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
-        
-        find-process-mode: strict
+
+    find-process-mode: strict
         global-client-fingerprint: chrome
-        
-        profile:
+
+    profile:
           store-selected: true
           store-fake-ip: true
-        
-        sniffer:
+
+    sniffer:
           enable: true
           sniff:
             HTTP:
@@ -204,8 +199,8 @@
             - "any:53"
           auto-route: true
           auto-detect-interface: true
-        
-        dns:
+
+    dns:
           enable: true
           listen: :1053
           ipv6: true
@@ -250,8 +245,8 @@
           - {name: Github, <<: *pr}
           - {name: 国内, type: select, proxies: [直连, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}
           - {name: 其他, <<: *pr}
-        
-        #分隔,下面是地区分组
+
+    #分隔,下面是地区分组
           - {name: 香港, type: select , include-all-providers: true, filter: "(?i)港|hk|hongkong|hong kong"}
           - {name: 台湾, type: select , include-all-providers: true, filter: "(?i)台|tw|taiwan"}
           - {name: 日本, type: select , include-all-providers: true, filter: "(?i)日|jp|japan"}
@@ -260,8 +255,8 @@
           - {name: 其它地区, type: select , include-all-providers: true, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"}
           - {name: 全部节点, type: select , include-all-providers: true}
           - {name: 自动选择, type: url-test, include-all-providers: true, tolerance: 10}
-        
-        rules:
+
+    rules:
           - GEOIP,lan,直连,no-resolve
           - RULE-SET,biliintl_domain,哔哩东南亚
           - RULE-SET,ehentai_domain,ehentai
@@ -276,16 +271,16 @@
           - RULE-SET,spotify_domain,Spotify
           - RULE-SET,pixiv_domain,Pixiv
           - RULE-SET,geolocation-!cn,其他
-        
-          - RULE-SET,google_ip,Google
+
+    - RULE-SET,google_ip,Google
           - RULE-SET,netflix_ip,NETFLIX
           - RULE-SET,telegram_ip,Telegram
           - RULE-SET,twitter_ip,Twitter
           - RULE-SET,cn_domain,国内
           - RULE-SET,cn_ip,国内
           - MATCH,其他
-        
-        rule-anchor:
+
+    rule-anchor:
           ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: yaml}
           domain: &domain {type: http, interval: 86400, behavior: domain, format: yaml}
         rule-providers:
@@ -334,8 +329,8 @@
           geolocation-!cn:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml"
-        
-          cn_ip:
+
+    cn_ip:
             <<: *ip
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml"
           google_ip:
@@ -349,10 +344,7 @@
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.yaml"
           telegram_ip:
             <<: *ip
-            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.yaml"
-        ```
-    === "link"
-        ```text
+            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.yaml"``    === "link"        ``text
         https://wiki.metacubex.one/example/yaml
         ```
 
@@ -362,24 +354,23 @@
         ######### 锚点 start #######
         # 策略组相关
         pr: &pr {type: select, proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]}
-        
-        #这里是订阅更新和延迟测试相关的
+
+    #这里是订阅更新和延迟测试相关的
         p: &p {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
-        
-        ######### 锚点 end #######
-        
-        
-        # url 里填写自己的订阅,名称不能重复
+
+    ######### 锚点 end #######
+
+    # url 里填写自己的订阅,名称不能重复
         proxy-providers:
           provider1:
             <<: *p
             url: ""
-        
-          provider2:
+
+    provider2:
             <<: *p
             url: ""
-        
-        ipv6: true
+
+    ipv6: true
         allow-lan: true
         mixed-port: 7890
         unified-delay: false
@@ -387,15 +378,15 @@
         external-controller: 127.0.0.1:9090
         external-ui: ui
         external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
-        
-        find-process-mode: strict
+
+    find-process-mode: strict
         global-client-fingerprint: chrome
-        
-        profile:
+
+    profile:
           store-selected: true
           store-fake-ip: true
-        
-        sniffer:
+
+    sniffer:
           enable: true
           sniff:
             HTTP:
@@ -414,8 +405,8 @@
             - "any:53"
           auto-route: true
           auto-detect-interface: true
-        
-        dns:
+
+    dns:
           enable: true
           listen: :1053
           ipv6: true
@@ -460,8 +451,8 @@
           - {name: Github, <<: *pr}
           - {name: 国内, type: select, proxies: [直连, 默认, 香港, 台湾, 日本, 新加坡, 美国, 其它地区, 全部节点, 自动选择]}
           - {name: 其他, <<: *pr}
-        
-        #分隔,下面是地区分组
+
+    #分隔,下面是地区分组
           - {name: 香港, type: select , include-all-providers: true, filter: "(?i)港|hk|hongkong|hong kong"}
           - {name: 台湾, type: select , include-all-providers: true, filter: "(?i)台|tw|taiwan"}
           - {name: 日本, type: select , include-all-providers: true, filter: "(?i)日|jp|japan"}
@@ -470,8 +461,8 @@
           - {name: 其它地区, type: select , include-all-providers: true, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"}
           - {name: 全部节点, type: select , include-all-providers: true}
           - {name: 自动选择, type: url-test, include-all-providers: true, tolerance: 10}
-        
-        rules:
+
+    rules:
           - GEOIP,lan,直连,no-resolve
           - RULE-SET,biliintl_domain,哔哩东南亚
           - RULE-SET,ehentai_domain,ehentai
@@ -486,16 +477,16 @@
           - RULE-SET,spotify_domain,Spotify
           - RULE-SET,pixiv_domain,Pixiv
           - RULE-SET,geolocation-!cn,其他
-        
-          - RULE-SET,google_ip,Google
+
+    - RULE-SET,google_ip,Google
           - RULE-SET,netflix_ip,NETFLIX
           - RULE-SET,telegram_ip,Telegram
           - RULE-SET,twitter_ip,Twitter
           - RULE-SET,cn_domain,国内
           - RULE-SET,cn_ip,国内
           - MATCH,其他
-        
-        rule-anchor:
+
+    rule-anchor:
           ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: text}
           domain: &domain {type: http, interval: 86400, behavior: domain, format: text}
         rule-providers:
@@ -544,8 +535,8 @@
           geolocation-!cn:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.list"
-        
-          cn_ip:
+
+    cn_ip:
             <<: *ip
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.list"
           google_ip:
@@ -559,10 +550,7 @@
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.list"
           telegram_ip:
             <<: *ip
-            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"
-        ```
-    === "link"
-        ```text
+            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"``    === "link"        ``text
         https://wiki.metacubex.one/example/text
         ```
 
@@ -575,14 +563,14 @@
         #这里是订阅更新和延迟测试相关的
         p: &p {type: http, interval: 3600, health-check: {enable: true, url: "https://www.gstatic.com/generate_204", interval: 300}}
         ######### 锚点 end #######
-        
-        # url 里填写自己的订阅,名称不能重复
+
+    # url 里填写自己的订阅,名称不能重复
         proxy-providers:
           provider1:
             <<: *p
             url: ""
           provider2:
-            <<: *p
+            <<:*p
             url: ""
         ipv6: true
         allow-lan: true
@@ -633,14 +621,14 @@
         - {name: 其它地区, type: select, include-all: true, filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Available.png"}
         - {name: 自动选择, type: url-test, include-all: true, tolerance: 10, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png"}
         - {name: 全部节点, type: select, include-all: true, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Global.png"}
-        
-        - {name: 香港自动选择, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/HK.png"}
-        - {name: 台湾自动选择, type: select, include-all: true, filter: "(?i)台|tw|taiwan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/TW.png"}
-        - {name: 日本自动选择, type: select, include-all: true, filter: "(?i)日|jp|japan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/JP.png"}
-        - {name: 美国自动选择, type: select, include-all: true, filter: "(?i)美|us|unitedstates|united states", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/US.png"}
-        - {name: 新加坡自动选择, type: select, include-all: true, filter: "(?i)(新|sg|singapore)", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/SG.png"}
-        
-        rules:
+
+    - {name: 香港自动选择, type: url-test, include-all: true, filter: "(?i)港|hk|hongkong|hong kong", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/HK.png"}
+        - {name: 台湾自动选择, type: url-test, include-all: true, filter: "(?i)台|tw|taiwan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/TW.png"}
+        - {name: 日本自动选择, type: url-test, include-all: true, filter: "(?i)日|jp|japan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/JP.png"}
+        - {name: 美国自动选择, type: url-test, include-all: true, filter: "(?i)美|us|unitedstates|united states", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/US.png"}
+        - {name: 新加坡自动选择, type: url-test, include-all: true, filter: "(?i)(新|sg|singapore)", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/SG.png"}
+
+    rules:
         - GEOIP,lan,直连,no-resolve
         - RULE-SET,biliintl_domain,哔哩东南亚
         - RULE-SET,ehentai_domain,ehentai
@@ -655,16 +643,16 @@
         - RULE-SET,spotify_domain,Spotify
         - RULE-SET,pixiv_domain,Pixiv
         - RULE-SET,geolocation-!cn,其他
-        
-        - RULE-SET,google_ip,Google
+
+    - RULE-SET,google_ip,Google
         - RULE-SET,netflix_ip,NETFLIX
         - RULE-SET,telegram_ip,Telegram
         - RULE-SET,twitter_ip,Twitter
         - RULE-SET,cn_domain,国内
         - RULE-SET,cn_ip,国内
         - MATCH,其他
-        
-        rule-anchor:
+
+    rule-anchor:
           ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: text}
           domain: &domain {type: http, interval: 86400, behavior: domain, format: text}
         rule-providers:
@@ -713,8 +701,8 @@
           geolocation-!cn:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.list"
-        
-          cn_ip:
+
+    cn_ip:
             <<: *ip
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.list"
           google_ip:
@@ -728,9 +716,6 @@
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.list"
           telegram_ip:
             <<: *ip
-            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"
-        ```
-    === "link"
-        ```text
+            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.list"``    === "link"        ``text
         https://wiki.metacubex.one/example/stash
         ```
