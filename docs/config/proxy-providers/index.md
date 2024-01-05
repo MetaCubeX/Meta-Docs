@@ -14,6 +14,7 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
+      expected-status: 204
 
   provider2:
     type: file
@@ -74,3 +75,7 @@ https://www.gstatic.com/generate_204
 #### interval
 
 健康检查间隔时间，单位为秒
+
+#### expected-status
+
+参阅 [期望状态](../proxy-groups/index.md#expected-status)
