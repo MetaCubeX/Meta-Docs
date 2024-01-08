@@ -1,7 +1,7 @@
 site_name: 虚空终端 Docs
 repo_url: https://github.com/MetaCubeX/mihomo
-repo_name: MetaCubeX/Clash.Meta
-copyright: Copyright &copy 2023 Clash.Meta
+repo_name: MetaCubeX/mihomo
+copyright: Copyright &copy 2023 mihomo
 edit_uri: "https://github.com/MetaCubeX/Meta-Docs/blob/main/docs/"
 dev_addr: "127.0.0.1:11451"
 extra:
