@@ -35,7 +35,7 @@ rules:
 
 ip 类规则可用 no-resolve, 需书写在括号内
 
-关于 [no-resolve](ipcidr.md#no-resolve)
+关于 [no-resolve](ip.md#no-resolve)
 
 示例
 

@@ -20,7 +20,7 @@ rules:
 
 ### no-resolve
 
-关于 [no-resolve](ipcidr.md#no-resolve)
+关于 [no-resolve](ip.md#no-resolve)
 
 ```yaml
 rules:
