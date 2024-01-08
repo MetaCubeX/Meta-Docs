@@ -27,6 +27,8 @@
 
 ### domain
 
+`domain`类规则集合内容通配应遵守[clash通配符](../index.md#_7)
+
 === "yaml"
     ```yaml
     payload:
