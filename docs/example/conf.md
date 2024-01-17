@@ -641,7 +641,7 @@
         - GEOIP,lan,直连,no-resolve
         - RULE-SET,biliintl_domain,哔哩东南亚
         - RULE-SET,ehentai_domain,ehentai
-        - RULE-SET,github_domain,Github
+        - RULE-SET,github_domain,其他
         - RULE-SET,twitter_domain,Twitter
         - RULE-SET,youtube_domain,YouTube
         - RULE-SET,google_domain,Google
@@ -650,7 +650,7 @@
         - RULE-SET,bilibili_domain,哔哩哔哩
         - RULE-SET,bahamut_domain,巴哈姆特
         - RULE-SET,spotify_domain,Spotify
-        - RULE-SET,pixiv_domain,Pixiv
+        - RULE-SET,pixiv_domain,其他
         - RULE-SET,geolocation-!cn,其他
 
         - RULE-SET,google_ip,Google
