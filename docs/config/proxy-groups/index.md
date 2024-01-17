@@ -11,6 +11,9 @@ proxy-groups:
   filter: "(?i)港|hk|hongkong|hong kong"
   exclude-filter: "美|日"
   exclude-type: "Shadowsocks|Http"
+  expected-status: 204
+  hidden: true
+  icon: xxx
   proxies:
   - DIRECT
   - ss
@@ -20,12 +23,12 @@ proxy-groups:
 ```
 
 ## name
-策略组的名字
+必须项,策略组的名字
 !!! note
     如有特殊符号,应当使用引号将其包裹
 
 ## type
-策略组的类型
+必须项,策略组的类型
 
 ## proxies
 引入[出站代理](../proxies/index.md)或其他策略组
@@ -107,3 +110,11 @@ expected-status: 400-503
 ```yaml
 expected-status: 200/302/400-503
 ```
+
+## hidden
+
+在api返回`hidden`状态,以隐藏该策略组展示(需要使用api的前端适配)
+
+## icon
+
+在api返回`icon`所输入的字符串,以在该策略组显示(需要使用api的前端适配)

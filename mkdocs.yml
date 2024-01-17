@@ -122,10 +122,9 @@ nav:
         - Hysteria2: config/inbound/listeners/hysteria2.md
         - tunnel: config/inbound/listeners/tunnel.md
     - 出站代理:
-      - 通用字段:
-        - 通用字段: config/proxies/index.md
-        - dialer-proxy: config/proxies/dialer-proxy.md
-        - sing-mux: config/proxies/sing-mux.md
+      - 通用字段: config/proxies/index.md
+      - dialer-proxy: config/proxies/dialer-proxy.md
+      - sing-mux: config/proxies/sing-mux.md
       - DIRECT: config/proxies/direct.md
       - HTTP: config/proxies/http.md
       - SOCKS: config/proxies/socks.md
