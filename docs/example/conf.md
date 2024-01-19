@@ -16,7 +16,7 @@
             <<: *p
             url: ""
 
-        provider2:
+          provider2:
             <<: *p
             url: ""
 
@@ -163,7 +163,7 @@
             <<: *p
             url: ""
 
-        provider2:
+          provider2:
             <<: *p
             url: ""
 
@@ -372,7 +372,7 @@
             <<: *p
             url: ""
 
-        provider2:
+          provider2:
             <<: *p
             url: ""
 
