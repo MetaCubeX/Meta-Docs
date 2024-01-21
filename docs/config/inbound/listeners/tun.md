@@ -12,27 +12,27 @@ listeners:
   - 198.19.0.1/30
   inet6-address:
   - "fdfe:dcba:9877::1/126"
-  # strict_route: true
-  # inet4_route_address:由
+  # strict-route: true
+  # inet4-route-address:由
   # - 0.0.0.0/1
   # - 128.0.0.0/1
-  # inet6_route_address:
+  # inet6-route-address:
   # - "::/1"
   # - "8000::/1"
-  # endpoint_independent_nat: false
-  # include_uid:
+  # endpoint-independent-nat: false
+  # include-uid:
   # - 0
-  # include_uid_range:
+  # include-uid-range:
   # - 1000-99999
-  # exclude_uid:
+  # exclude-uid:
   # - 1000
-  # exclude_uid_range:
+  # exclude-uid-range:
   # - 1000-99999
-  # include_android_user:
+  # include-android-user:
   # - 0
   # - 10
-  # include_package:
+  # include-package:
   # - com.android.chrome
-  # exclude_package:
+  # exclude-package:
   # - com.android.captiveportallogin
 ```

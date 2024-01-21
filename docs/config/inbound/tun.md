@@ -12,7 +12,7 @@ tun:
   # gso: true
   # gso-max-size: 65536
   # udp-timeout: 300
-  # endpoint-independent_nat: false
+  # endpoint-independent-nat: false
   # include-interface:
   # - eth0
   # exclude-interface:
@@ -188,7 +188,7 @@ exclude-interface:
 
 ### inet4-route-address
 
-启用 `auto_route`时路由自定义网段而不是默认路由,一般无需配置。
+启用 `auto-route`时路由自定义网段而不是默认路由,一般无需配置。
 
 ```yaml
 inet4-route-address:
@@ -208,7 +208,7 @@ inet6-route-address:
 
 ### inet4-route-exclude-address
 
-启用 `auto_route` 时排除自定义网段
+启用 `auto-route` 时排除自定义网段
 
 ```yaml
 inet4-route-exclude-address:
@@ -217,7 +217,7 @@ inet4-route-exclude-address:
 
 ### inet6-route-exclude-address
 
-启用 `auto_route` 时排除自定义网段
+启用 `auto-route` 时排除自定义网段
 
 ```yaml
 inet6-route-exclude-address:
@@ -234,7 +234,7 @@ include-uid:
 ```
 
 !!! note ""
-    UID 规则仅在 Linux 下被支持,并且需要 `auto_route`
+    UID 规则仅在 Linux 下被支持,并且需要 `auto-route`
 
 ### include-uid-range
 
@@ -274,7 +274,7 @@ include-android-user:
 ```
 
 !!! note ""
-    Android 用户和应用规则仅在 Android 下被支持,并且需要 `auto_route`
+    Android 用户和应用规则仅在 Android 下被支持,并且需要 `auto-route`
 
 | 常用用户 | ID  |
 | -------- | --- |
