@@ -1,4 +1,5 @@
-```yaml
+```{.yaml linenums="1"}
+proxies:
 - name: "ss1"
   type: ss
   server: server
@@ -16,7 +17,7 @@
     enabled: false
 ```
 
-## 标准字段
+[通用字段](./index.md)
 
 ### cipher
 
@@ -52,7 +53,7 @@ UDP over TCP 的协议版本，默认 2。可选值 1、2。
 
 ### SMUX
 
-```yaml
+```{.yaml linenums="1"}
   smux:
     enabled: false
     protocol: smux # smux/yamux/h2mux
@@ -76,7 +77,7 @@ UDP over TCP 的协议版本，默认 2。可选值 1、2。
 
 #### obfs
 
-```yaml
+```{.yaml linenums="1"}
   plugin: obfs
   plugin-opts:
     mode: tls
@@ -85,7 +86,7 @@ UDP over TCP 的协议版本，默认 2。可选值 1、2。
 
 #### v2ray-plugin
 
-```yaml
+```{.yaml linenums="1"}
   plugin: v2ray-plugin
   plugin-opts:
     mode: websocket # no QUIC now
@@ -104,7 +105,7 @@ UDP over TCP 的协议版本，默认 2。可选值 1、2。
 
 #### shadow-tls
 
-```yaml
+```{.yaml linenums="1"}
   plugin: shadow-tls
   client-fingerprint: chrome
   plugin-opts:
@@ -115,7 +116,7 @@ UDP over TCP 的协议版本，默认 2。可选值 1、2。
 
 #### restls
 
-```yaml
+```{.yaml linenums="1"}
   plugin: restls
   client-fingerprint: chrome  # 可以是chrome, ios, firefox, safari中的一个
   plugin-opts:

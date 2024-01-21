@@ -2,23 +2,23 @@
 ### dialer-proxy
 指定当前 `proxy` 通过下一跳的 `dialer-proxy` 建立网络连接, 值可以为代理组、代理（proxy-groups, proxy）的同一 `name` 字段
 
-```yaml
+```{.yaml linenums="1"}
 proxies:
-  - name: "SS1"
-    type: ss
-    server: server
-    port: 443
-    dialer-proxy: SS2
-    ...
+- name: "SS1"
+  type: ss
+  server: server
+  port: 443
+  dialer-proxy: SS2
+  ...
 
-  - name: "SS2"
-    type: ss
-    server: server
-    port: 443
-    ...
+- name: "SS2"
+  type: ss
+  server: server
+  port: 443
+  ...
 
 rules:
-  match,SS1
+- match,SS1
 
 ```
 

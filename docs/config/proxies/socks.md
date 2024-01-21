@@ -1,4 +1,5 @@
-```yaml
+```{.yaml linenums="1"}
+proxies:
 - name: "socks"
   type: socks5
   server: server
@@ -11,3 +12,4 @@
   # udp: true
   # ip-version: ipv6
 ```
+[通用字段](./index.md)

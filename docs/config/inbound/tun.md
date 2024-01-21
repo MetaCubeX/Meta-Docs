@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 tun:
   enable: true
   stack: system
@@ -50,7 +50,7 @@ tun:
 
 可用值：`true/false`
 
-```yaml
+```{.yaml linenums="1"}
 enable: true
 ```
 
@@ -60,7 +60,7 @@ tun 模式堆栈,如无使用问题,建议使用 `mixed`栈,默认 `gvisor`
 
 可用值： `system/gvisor/mixed`
 
-```yaml
+```{.yaml linenums="1"}
 stack: system
 ```
 
@@ -75,7 +75,7 @@ stack: system
 
 指定 tun 网卡名称,MacOS 设备只能使用 utun 开头的网卡名
 
-```yaml
+```{.yaml linenums="1"}
 device: utun0
 ```
 
@@ -85,7 +85,7 @@ device: utun0
 
 可选：`true/false`
 
-```yaml
+```{.yaml linenums="1"}
 auto-route: true
 ```
 
@@ -95,7 +95,7 @@ auto-route: true
 
 可用值：`true/false`
 
-```yaml
+```{.yaml linenums="1"}
 auto-detect-interface: true
 ```
 
@@ -103,7 +103,7 @@ auto-detect-interface: true
 
 dns 劫持,一般设置为 `any:53` 即可, 即劫持所有 53 端口的 udp 流量
 
-```yaml
+```{.yaml linenums="1"}
 dns-hijack:
 - any:53
 - tcp://any:53
@@ -122,7 +122,7 @@ dns-hijack:
 
 可用值：`true/false`
 
-```yaml
+```{.yaml linenums="1"}
 strict-route: true
 ```
 
@@ -130,7 +130,7 @@ strict-route: true
 
 最大传输单元, 可用值为 `1-65534`, 会影响极限状态下的速率,一般用户默认即可。
 
-```yaml
+```{.yaml linenums="1"}
 mtu: 9000
 ```
 
@@ -140,7 +140,7 @@ mtu: 9000
 !!! notes ""
     仅支持 Linux
 
-```yaml
+```{.yaml linenums="1"}
 gso: true
 ```
 
@@ -148,7 +148,7 @@ gso: true
 
 数据块的最大长度
 
-```yaml
+```{.yaml linenums="1"}
 gso-max-size: 65536
 ```
 
@@ -156,7 +156,7 @@ gso-max-size: 65536
 
 UDP NAT 过期时间,以秒为单位,默认为 300(5 分钟)
 
-```yaml
+```{.yaml linenums="1"}
 udp-timeout: 300
 ```
 
@@ -164,7 +164,7 @@ udp-timeout: 300
 
 启用独立于端点的 NAT,性能可能会略有下降,所以不建议在不需要的时候开启。
 
-```yaml
+```{.yaml linenums="1"}
 endpoint-independent-nat: false
 ```
 
@@ -172,7 +172,7 @@ endpoint-independent-nat: false
 
 限制被路由的接口,默认不限制,与 `exclude-interface` 冲突,不可一起配置
 
-```yaml
+```{.yaml linenums="1"}
 include-interface:
 - eth0
 ```
@@ -181,7 +181,7 @@ include-interface:
 
 排除路由的接口,与 `include-interface` 冲突,不可一起配置
 
-```yaml
+```{.yaml linenums="1"}
 exclude-interface:
 - eth1
 ```
@@ -190,7 +190,7 @@ exclude-interface:
 
 启用 `auto-route`时路由自定义网段而不是默认路由,一般无需配置。
 
-```yaml
+```{.yaml linenums="1"}
 inet4-route-address:
 - 0.0.0.0/1
 - 128.0.0.0/1
@@ -200,7 +200,7 @@ inet4-route-address:
 
 启用 `auto-route`时路由自定义网段而不是默认路由,一般无需配置。
 
-```yaml
+```{.yaml linenums="1"}
 inet6-route-address:
 - "::/1"
 - "8000::/1"
@@ -210,7 +210,7 @@ inet6-route-address:
 
 启用 `auto-route` 时排除自定义网段
 
-```yaml
+```{.yaml linenums="1"}
 inet4-route-exclude-address:
 - 192.168.0.0/16
 ```
@@ -219,7 +219,7 @@ inet4-route-exclude-address:
 
 启用 `auto-route` 时排除自定义网段
 
-```yaml
+```{.yaml linenums="1"}
 inet6-route-exclude-address:
 - fc00::/7
 ```
@@ -228,7 +228,7 @@ inet6-route-exclude-address:
 
 包含的用户,使其被Tun路由流量,未被配置的用户不会被Tun路由流量,默认不限制
 
-```yaml
+```{.yaml linenums="1"}
 include-uid:
 - 0
 ```
@@ -240,7 +240,7 @@ include-uid:
 
 包含的用户范围,使其被Tun路由流量,未被配置的用户不会被Tun路由流量
 
-```yaml
+```{.yaml linenums="1"}
 include-uid-range:
 - 1000:9999
 ```
@@ -249,7 +249,7 @@ include-uid-range:
 
 排除用户,使其避免被Tun路由流量
 
-```yaml
+```{.yaml linenums="1"}
 exclude-uid:
 - 1000
 ```
@@ -258,7 +258,7 @@ exclude-uid:
 
 排除用户范围,使其避免被Tun路由流量
 
-```yaml
+```{.yaml linenums="1"}
 exclude-uid-range:
 - 1000:9999
 ```
@@ -267,7 +267,7 @@ exclude-uid-range:
 
 包含的Android用户,使其被Tun路由流量,未被配置的用户不会被Tun路由流量
 
-```yaml
+```{.yaml linenums="1"}
 include-android-user:
 - 0
 - 10
@@ -286,7 +286,7 @@ include-android-user:
 
 包含的Android应用包名,使其被Tun路由流量,未配置的应用包不会被Tun路由流量
 
-```yaml
+```{.yaml linenums="1"}
 include-package:
 - com.android.chrome
 ```
@@ -295,7 +295,7 @@ include-package:
 
 排除Android应用包名,使其避免被Tun路由流量
 
-```yaml
+```{.yaml linenums="1"}
 exclude-package:
 - com.android.captiveportallogin
 ```

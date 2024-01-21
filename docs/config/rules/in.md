@@ -2,7 +2,7 @@
 
 匹配流量入站的类型
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - IN-TYPE,INNER,proxy
 ```
@@ -18,7 +18,7 @@ HTTP/SOCKS/TUN/TPROXY/REDIR/INNER
 
 匹配入站用户名,目前仅vmess入站支持配置用户名
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - IN-USER,meta,DIERCT
 ```
@@ -27,7 +27,7 @@ rules:
 
 匹配入站名称
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - IN-NAME,ss,PROXY
 ```

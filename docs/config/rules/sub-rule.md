@@ -3,7 +3,7 @@
 匹配到规则时,将请求送往另一规则流程,括号内可以使用任意规则。
 如果在 sub-rule 内没匹配到，则会退回常规规则流程
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - SUB-RULE,(NETWORK,UDP),rule1
 ```
@@ -12,7 +12,7 @@ rules:
 
 假设配置文件如下：
 
-```yaml
+```{.yaml linenums="1"}
 sub-rules:
   rule1:
     - DOMAIN-SUFFIX,google.com,ss1

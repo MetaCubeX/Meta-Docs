@@ -2,7 +2,7 @@
 
 IP范围 规则,请求的匹配指定的 IP 范围
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - IP-CIDR,127.0.0.0/8,DIRECT
 - IP-CIDR6,2620:0:2d0:200::7/32,auto
@@ -16,7 +16,7 @@ rules:
 
 如 `enhanced-mode`为 `redir-host`,则此选项无效
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - IP-CIDR,127.0.0.1/8,DIRECT,no-resolve
 ```
@@ -25,7 +25,7 @@ rules:
 
 来源IP范围规则,匹配请求的客户端 IP 地址范围
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - SRC-IP-CIDR,192.168.1.201/32,DIRECT
 ```

@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 proxies:
 - name: "direct"
   type: direct
@@ -8,4 +8,4 @@ proxies:
   routing-mark: 1234
 ```
 
-都是通用字段,看 [通用字段](./index.md)
+[通用字段](./index.md)

@@ -2,7 +2,7 @@
 
 目标端口规则，匹配请求的目标端口
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - DST-PORT,22,DIRECT
 ```
@@ -11,7 +11,7 @@ rules:
 
 来源端口规则，匹配请求来源的端口
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - SRC-PORT,7890,DIRECT
 ```
@@ -24,21 +24,21 @@ rules:
 
 匹配 114 和 514 端口
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - DST-PORT,114/514,DIRECT
 ```
 
 匹配 114 到 514 端口
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - DST-PORT,114-514,DIRECT
 ```
 
 匹配 114 和 233 以及 514 到 1919 端口
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - DST-PORT,114/233/514-1919,DIRECT
 ```

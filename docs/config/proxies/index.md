@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 proxies:
 - name: "ss"
   type: ss
@@ -15,6 +15,8 @@ proxies:
 
   smux:
     enable: false
+    brutal-opts:
+      enabled: false
 ```
 
 ## proxies
@@ -39,7 +41,7 @@ proxies:
 
 ### ip-version
 
-设置节点使用 IP 版本,可选: `dual，ipv4，ipv6，ipv4-prefer，ipv6-prefer`,默认使用 dual
+设置节点使用 IP 版本,可选: `dual`/`ipv4`/`ipv6`/`ipv4-prefer`/`ipv6-prefer`,默认使用`dual`
 
 * ipv4: 仅使用 IPv4
 * ipv6: 仅使用 IPv6
@@ -63,11 +65,11 @@ proxies:
 
 ### tfo
 
-启用`TCP Fast Open`
+启用`TCP Fast Open`,仅生效于`TCP`协议
 
 ### mptcp
 
-启用`TCP Multi Path`
+启用`TCP Multi Path`,仅生效于`TCP`协议
 
 ### dialer-proxy
 
@@ -75,4 +77,10 @@ proxies:
 
 ### smux
 
-参阅 [sing-mux](./sing-mux.md)
+仅支持[`Shadowsocks`](./ss.md)/[`VMess`](./vmess.md)/[`VLESS`](./vless.md)/[`Trojan`](./trojan.md)协议,参阅 [sing-mux](./sing-mux.md)
+
+#### brutal-opts
+
+TCP Brutal
+ 
+参阅 [brutal-opts](./sing-mux.md#brutal-opts)

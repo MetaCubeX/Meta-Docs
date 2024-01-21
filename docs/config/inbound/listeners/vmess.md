@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 listeners:
 - name: vmess-in
   type: vmess

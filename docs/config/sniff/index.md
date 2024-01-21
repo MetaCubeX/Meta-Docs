@@ -6,7 +6,7 @@ Meta内置了Sniffer域名嗅器,通过读取握手包内的域名字段,将IP�
 
 ## 示例
 
-```yaml
+```{.yaml linenums="1"}
 sniffer:
   enable: false
   force-dns-mapping: true

@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 smux:
   enabled: true
   protocol: smux

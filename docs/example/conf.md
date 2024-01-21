@@ -1,6 +1,6 @@
 === "GeoX"
     === "config"
-        ```yaml
+        ```{.yaml linenums="1"}
         ######### 锚点 start #######
         # 策略组相关
         pr: &pr {type: select, proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]}
@@ -147,7 +147,7 @@
 
 === "RULE-SET(yaml)"
     === "config"
-        ```yaml
+        ```{.yaml linenums="1"}
         ######### 锚点 start #######
         # 策略组相关
         pr: &pr {type: select, proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]}
@@ -356,7 +356,7 @@
 
 === "RULE-SET(text)"
     === "config"
-        ```yaml
+        ```{.yaml linenums="1"}
         ######### 锚点 start #######
         # 策略组相关
         pr: &pr {type: select, proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]}
@@ -565,7 +565,7 @@
 
 === "Stash(私货)"
     === "config"
-        ```yaml
+        ```{.yaml linenums="1"}
         ######### 锚点 start #######
         # 策略组相关
         pr: &pr {type: select, proxies: [默认, 香港, 香港自动选择, 台湾, 台湾自动选择, 日本, 日本自动选择, 新加坡, 新加坡自动选择, 美国, 美国自动选择, 其它地区, 全部节点, 自动选择, 直连]}

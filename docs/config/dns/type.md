@@ -1,49 +1,56 @@
 ## UDP
 
-```yaml
+```{.yaml linenums="1"}
 - 223.5.5.5
 - udp://223.5.5.5
 ```
 
 ## TCP
 
-```yaml
+```{.yaml linenums="1"}
 - tcp://8.8.8.8
 ```
 
 ## DNS over TLS
 
-```yaml
+```{.yaml linenums="1"}
 - tls://1.1.1.1
 ```
 
 ## DNS over HTTPS
 
-```yaml
+```{.yaml linenums="1"}
 - https://doh.pub/dns-query
 ```
 
 ## DNS over HTTP/3
 
-```yaml
+```{.yaml linenums="1"}
 - https://dns.alidns.com/dns-query#h3=true
 ```
 
 ## DNS over QUIC
 
-```yaml
+```{.yaml linenums="1"}
 - quic://dns.adguard.com:784
 ```
 
 ## system
 
-```yaml
+仅限`Windows`/`MacOS`/`Linux`
+
+```{.yaml linenums="1"}
 - system://
 - system
 ```
 
 ## dhcp
 
-```yaml
-- dhcp://en0 # dns from dhcp
+```{.yaml linenums="1"}
+- dhcp://en0
+```
+
+仅限cmfa,使用系统dns
+```{.yaml linenums="1"}
+- dhcp://system
 ```

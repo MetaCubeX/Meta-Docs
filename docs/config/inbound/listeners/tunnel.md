@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 listeners:
 - name: tunnel-in
   type: tunnel

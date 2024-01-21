@@ -2,7 +2,7 @@
 
 匹配入站流量的类型
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - NETWORK,tcp,proxy
 ```

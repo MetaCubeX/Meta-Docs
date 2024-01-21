@@ -3,7 +3,7 @@ description: 配置hosts
 ---
 ## 示例
 
-```yaml
+```{.yaml linenums="1"}
 hosts:
   '*.clash.dev': 127.0.0.1
   'alpha.clash.dev': '::1'

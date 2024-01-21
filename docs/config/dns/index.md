@@ -5,7 +5,7 @@ description: Clash 的 DNS 模块配置
 
 以下的拆分说明皆是 `DNS` 下的配置项
 
-```yaml
+```{.yaml linenums="1"}
 dns:
   enable: true
   prefer-h3: true
@@ -49,7 +49,7 @@ dns:
 
 是否启用，如为 false，则使用系统 DNS 解析
 
-```yaml
+```{.yaml linenums="1"}
 dns:
   enable: true
 ```
@@ -60,7 +60,7 @@ dns:
 
 是否开启 DOH 的 http/3
 
-```yaml
+```{.yaml linenums="1"}
 prefer-h3: true
 ```
 
@@ -68,7 +68,7 @@ prefer-h3: true
 
 DNS 服务监听
 
-```yaml
+```{.yaml linenums="1"}
 listen: 0.0.0.0:1053
 ```
 
@@ -78,7 +78,7 @@ listen: 0.0.0.0:1053
 
 是否解析 IPV6, 如为 false, 则回应 AAAA 的空解析
 
-```yaml
+```{.yaml linenums="1"}
 ipv6: true
 ```
 
@@ -88,7 +88,7 @@ ipv6: true
 
 Clash 的 DNS 处理模式
 
-```yaml
+```{.yaml linenums="1"}
 enhanced-mode: fake-ip
 ```
 
@@ -98,7 +98,7 @@ enhanced-mode: fake-ip
 
 fakeip 下的 IP 段设置，tun 网卡的默认 IP 也使用此值
 
-```yaml
+```{.yaml linenums="1"}
 fake-ip-range: 198.18.0.1/16
 ```
 
@@ -106,7 +106,7 @@ fake-ip-range: 198.18.0.1/16
 
 fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
-```yaml
+```{.yaml linenums="1"}
 fake-ip-filter:
   - '+.lan'
   - '+.local'
@@ -119,7 +119,7 @@ fake-ip-filter:
 
 是否查询系统 hosts
 
-```yaml
+```{.yaml linenums="1"}
 use-hosts: true
 ```
 
@@ -129,7 +129,7 @@ use-hosts: true
 
 必须为 IP, 可为加密 DNS
 
-```yaml
+```{.yaml linenums="1"}
 default-nameserver:
   - 114.114.114.114
   - 8.8.8.8
@@ -144,7 +144,7 @@ default-nameserver:
 !!! note
     **以下仅作为书写演示，建议根据自己需求写**
 
-```yaml
+```{.yaml linenums="1"}
 nameserver-policy:
   'www.baidu.com': '114.114.114.114'
   '+.internal.crop.com': '10.0.0.1'
@@ -158,7 +158,7 @@ nameserver-policy:
 
 默认的域名解析服务器，如不配置 `fallback/proxy-server-nameserver` , 则所有域名都由 nameserver 解析
 
-```yaml
+```{.yaml linenums="1"}
 nameserver:
   - tls://dot.pub
   - https://dns.alidns.com/dns-query
@@ -168,7 +168,7 @@ nameserver:
 
 代理节点域名解析服务器，仅用于解析代理节点的域名
 
-```yaml
+```{.yaml linenums="1"}
 proxy-server-nameserver:
  - https://doh.pub/dns-query
 ```
@@ -179,7 +179,7 @@ proxy-server-nameserver:
 
 配置 `fallback`后默认启用 `fallback-filter`,`geoip-code`为 cn
 
-```yaml
+```{.yaml linenums="1"}
 fallback:
   - tls://dns.google
   - https://1.0.0.1/dns-query
@@ -219,7 +219,7 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 
 这些域名被视为已污染，匹配到这些域名，会直接使用 `fallback`解析，不去使用 `nameserver`
 
-```yaml
+```{.yaml linenums="1"}
 fallback-filter:
     geoip: true
     geoip-code: CN
@@ -243,7 +243,7 @@ fallback-filter:
 
 书写规范应带引号，以防出现特殊字符，如需过代理查询，应配置 `proxy-server-nameserver`, 以防出现鸡蛋问题
 
-```yaml
+```{.yaml linenums="1"}
 nameserver:
   - 'tls://dns.google#proxy'
 ```
@@ -252,21 +252,21 @@ nameserver:
 
 此选项与 `perfer-h3` 不冲突，填写后强制启用 HTTP/3 建立 DOH 连接，使用前需确保 DOH 服务器支持 HTTP/3
 
-```yaml
+```{.yaml linenums="1"}
 nameserver:
   - 'https://dns.cloudflare.com/dns-query#h3=true'
 ```
 
 ### 指定 DNS 出口网卡
 
-```yaml
+```{.yaml linenums="1"}
 nameserver:
   - 'tls://8.8.4.4#en0'
 ```
 
 ### 指定策略组和使用 http/3
 
-```yaml
+```{.yaml linenums="1"}
 nameserver:
   - 'https://mozilla.cloudflare-dns.com/dns-query#proxy&h3=true'
 ```

@@ -4,7 +4,7 @@ Clash.Meta 使用流量入站,可以作为服务器。
 
 用于监听局域网流量的入站,适用于无加密传输：
 
-```yaml
+```{.yaml linenums="1"}
 listeners:
   - name: socks5-in-1
     type: socks
@@ -100,7 +100,7 @@ listeners:
 
 用于加密传输流量的入站如下：
 
-```yaml
+```{.yaml linenums="1"}
 listeners:
   - name: shadowsocks-in-1
     type: shadowsocks
@@ -154,7 +154,7 @@ listeners:
 
 入口配置与 Listener 等价，传入流量将和 socks,mixed 等入口一样按照 mode 所指定的方式进行匹配处理
 
-```yaml
+```{.yaml linenums="1"}
 # shadowsocks,vmess 入口配置（传入流量将和socks,mixed等入口一样按照mode所指定的方式进行匹配处理）
 ss-config: ss://2022-blake3-aes-256-gcm:vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=@:23456
 vmess-config: vmess://1:9d0cb9d0-964f-4ef6-897d-6c6b3ccf9e68@:12345

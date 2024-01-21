@@ -2,7 +2,7 @@
 
 域名集合,匹配集合内的域名,具体参考 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community/tree/master/data)
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - GEOSITE,google,proxy
 - GEOSITE,cn,DIRECT
@@ -12,7 +12,7 @@ rules:
 
 国家IP代码规则,匹配集合内相应的IP范围
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - GEOIP,CN,DIRECT
 - GEOIP,LAN,DIRECT
@@ -22,7 +22,7 @@ rules:
 
 关于 [no-resolve](ip.md#no-resolve)
 
-```yaml
+```{.yaml linenums="1"}
 rules:
 - GEOIP,lan,DIRECT,no-resolve
 ```

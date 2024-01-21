@@ -3,7 +3,8 @@
 
 #### VLESS-xtls-rprx-vision
 
-```yaml
+```{.yaml linenums="1"}
+proxies:
 - name: "vless-vision"
   type: vless
   server: server
@@ -19,6 +20,8 @@
   # skip-cert-verify: true
 ```
 
+[通用字段](./index.md)
+
 !!! note
     Meta 的 `xtls-*` 流控实际上与 Xray-core 中的 `xtls-*-udp443` 等效，如需拦截 443 端口的 UDP 流量，请使用逻辑规则：
 
@@ -26,7 +29,8 @@
 
 #### VLESS-reality-vision
 
-```yaml
+```{.yaml linenums="1"}
+proxies:
 - name: "vless-reality-vision"
   type: vless
   server: server
@@ -45,7 +49,8 @@
 
 #### VLESS-reality-grpc
 
-```yaml
+```{.yaml linenums="1"}
+proxies:
 - name: "vless-reality-grpc"
   type: vless
   server: server
@@ -66,7 +71,7 @@
 
 #### VLESS-TCP-TLS
 
-```yaml
+```{.yaml linenums="1"}
 - name: "vless-tcp"
   type: vless
   server: server
@@ -82,7 +87,7 @@
 
 #### VLESS-WS-TLS
 
-```yaml
+```{.yaml linenums="1"}
 - name: "vless-ws"
   type: vless
   server: server

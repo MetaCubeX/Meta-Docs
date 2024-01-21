@@ -4,7 +4,7 @@
 
 可选值 `true/false`
 
-```yaml
+```{.yaml linenums="1"}
 allow-lan: true
 ```
 
@@ -16,14 +16,14 @@ allow-lan: true
 
 ***`[aaaa::a8aa:ff:fe09:57d8]`*** 绑定单个 IPV6 地址
 
-```yaml
+```{.yaml linenums="1"}
 bind-address: "*"
 ```
 
 允许连接的IP地址段，仅作用于 `allow-lan` 为 `true`
 默认值为 `0.0.0.0/0`和 `::/0`
 
-```yaml
+```{.yaml linenums="1"}
 lan-allowed-ips:
 - 0.0.0.0/0
 - ::/0
@@ -31,7 +31,7 @@ lan-allowed-ips:
 
 禁止连接的IP地址段,黑名单优先级高于白名单,默认值为空
 
-```yaml
+```{.yaml linenums="1"}
 lan-disallowed-ips:
 - 192.168.0.3/32
 ```
@@ -40,7 +40,7 @@ lan-disallowed-ips:
 
 `http(s)`/`socks`/`mixed`代理的用户验证
 
-```yaml
+```{.yaml linenums="1"}
 authentication:
 - "user1:pass1"
 - "user2:pass2"
@@ -48,7 +48,7 @@ authentication:
 
 设置允许跳过验证的IP段
 
-```yaml
+```{.yaml linenums="1"}
 skip-auth-prefixes:
 - 127.0.0.1/8
 - ::1/128
@@ -62,7 +62,7 @@ skip-auth-prefixes:
 
 此项拥有默认值，默认为规则模式
 
-```yaml
+```{.yaml linenums="1"}
 mode: rule
 ```
 
@@ -70,7 +70,7 @@ mode: rule
 
 Clash 内核输出日志的等级，仅在控制台和控制页面输出
 
-```yaml
+```{.yaml linenums="1"}
 log-level: info
 ```
 
@@ -86,7 +86,7 @@ log-level: info
 
 可选值 `true/false,`默认为 `true`
 
-```yaml
+```{.yaml linenums="1"}
 ipv6: true
 ```
 
@@ -94,7 +94,7 @@ ipv6: true
 
 控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备[耗电问题](https://github.com/vernesong/OpenClash/issues/2614)的临时措施。
 
-```yaml
+```{.yaml linenums="1"}
 keep-alive-interval: 30
 ```
 
@@ -109,7 +109,7 @@ keep-alive-interval: 30
 * ***`strict`*** 默认，由 Clash 判断是否开启
 * ***`off`*** 不匹配进程，推荐在路由器上使用此模式
 
-```yaml
+```{.yaml linenums="1"}
 find-process-mode: strict
 ```
 
@@ -119,19 +119,19 @@ find-process-mode: strict
 
 API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP
 
-```yaml
+```{.yaml linenums="1"}
 external-controller: 127.0.0.1:9090
 ```
 
 HTTPS-API 监听地址，需要配置 `tls` 部分证书和其私钥配置，使用 TLS 也必须填写 `external-controller`
 
-```yaml
+```{.yaml linenums="1"}
 external-controller-tls: 127.0.0.1:9443
 ```
 
 API 的访问密钥
 
-```yaml
+```{.yaml linenums="1"}
 secret: ""
 ```
 
@@ -139,7 +139,7 @@ secret: ""
 
 可以将静态网页资源（比如 Clash-dashboard) 运行在 Clash API, 路径为 API 地址/ui
 
-```yaml
+```{.yaml linenums="1"}
 external-ui: /path/to/ui/folder
 ```
 
@@ -147,7 +147,7 @@ external-ui: /path/to/ui/folder
 
 ## **自定义外部用户界面名字**
 
-```yaml
+```{.yaml linenums="1"}
 external-ui-name: xd      #  合并为 external-ui/xd
 ```
 
@@ -155,7 +155,7 @@ external-ui-name: xd      #  合并为 external-ui/xd
 
 ## **自定义外部用户界面下载地址**
 
-```yaml
+```{.yaml linenums="1"}
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" #从 GitHub Pages 分支获取
 ```
 
@@ -165,7 +165,7 @@ external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-
 
 可选值 `true/false`
 
-```yaml
+```{.yaml linenums="1"}
 profile:
   store-selected: true
   # 储存 API 对策略组的选择，以供下次启动时使用
@@ -179,7 +179,7 @@ profile:
 
 可选值 `true/false`
 
-```yaml
+```{.yaml linenums="1"}
 unified-delay: true
 ```
 
@@ -187,7 +187,7 @@ unified-delay: true
 
 可选值 `true/false`
 
-```yaml
+```{.yaml linenums="1"}
 tcp-concurrent: true
 ```
 
@@ -195,7 +195,7 @@ tcp-concurrent: true
 
 Clash 的流量出站接口
 
-```yaml
+```{.yaml linenums="1"}
 interface-name: en0
 ```
 
@@ -203,7 +203,7 @@ interface-name: en0
 
 为 Linux 下的出站连接提供默认流量标记
 
-```yaml
+```{.yaml linenums="1"}
 routing-mark: 6666
 ```
 
@@ -211,7 +211,7 @@ routing-mark: 6666
 
 目前仅用于 API 的 https
 
-```yaml
+```{.yaml linenums="1"}
 tls:
   certificate: string # 证书 PEM 格式，或者 证书的路径
   private-key: string # 证书对应的私钥 PEM 格式，或者私钥路径
@@ -223,7 +223,7 @@ tls:
 
 目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan.
 
-```yaml
+```{.yaml linenums="1"}
 global-client-fingerprint: chrome
 ```
 
@@ -237,7 +237,7 @@ global-client-fingerprint: chrome
 
 更改geoip使用文件,mmdb或者dat,可选 `true`/`false`,`true`为dat,此项有默认值 `false`
 
-```yaml
+```{.yaml linenums="1"}
 geodata-mode: true 
 ```
 
@@ -248,25 +248,25 @@ geodata-mode: true
 * `standard`：标准加载器
 * `memconservative`：专为内存受限(小内存)设备优化的加载器(默认值)
 
-```yaml
+```{.yaml linenums="1"}
 geodata-loader: memconservative
 ```
 
 ## **自动更新 GEO**
 
-```yaml
+```{.yaml linenums="1"}
 geo-auto-update: false
 ```
 
 更新间隔,单位小时
 
-```yaml
+```{.yaml linenums="1"}
 geo-update-interval: 24
 ```
 
 ## **自定 GEO 下载地址**
 
-```yaml
+```{.yaml linenums="1"}
 geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
@@ -277,6 +277,6 @@ geox-url:
 
 自定义外部资源下载时使用的的UA,默认为 `clash.meta`
 
-```yaml
+```{.yaml linenums="1"}
 global-ua: clash.meta
 ```

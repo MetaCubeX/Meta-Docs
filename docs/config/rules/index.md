@@ -17,7 +17,7 @@ Clash 的规则都有三个部分 (MATCH / IP类规则 除外）, 分别为：�
 !!! note
     这只是一个示例，请不要照搬
 
-```yaml
+```{.yaml linenums="1"}
 rules:
   - DOMAIN-SUFFIX,google.com,auto
   - DOMAIN-KEYWORD,google,auto

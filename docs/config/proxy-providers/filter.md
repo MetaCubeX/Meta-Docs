@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 proxy-providers:
   provider1:
     type: http
@@ -18,7 +18,7 @@ proxy-providers:
 ## filter
 
 筛选满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点
-```yaml
+```{.yaml linenums="1"}
 filter: "(?i)港|hk|hongkong|hong kong"
 ```
 
@@ -27,7 +27,7 @@ filter: "(?i)港|hk|hongkong|hong kong"
 ## exclude-filter
 排除满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点
 
-```yaml
+```{.yaml linenums="1"}
 exclude-filter: "(?i)港|hk|hongkong|hong kong"
 ```
 

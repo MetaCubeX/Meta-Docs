@@ -1,6 +1,7 @@
 TUIC是一个轻量的基于QUIC的代理协议,由rust编写,你可以在[这里](https://github.com/EAimTY/tuic)找到更多信息
 
-```yaml
+```{.yaml linenums="1"}
+proxies:
 - name: tuic
   server: www.example.com
   port: 10443
@@ -23,21 +24,7 @@ TUIC是一个轻量的基于QUIC的代理协议,由rust编写,你可以在[这�
   # sni: example.com
 ```
 
-### name
-
-代理名称,书写时请确保不会与其他代理节点重名
-
-### server
-
-代理节点服务器的地址,可以是域名或IP地址
-
-### port
-
-代理服务器的端口
-
-### type
-
-代理类型,此处为 `tuic`
+[通用字段](./index.md)
 
 ### token
 

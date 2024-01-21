@@ -1,5 +1,5 @@
 流量转发隧道,可以转发tcp/udp流量,也可经过代理转发
-```yaml
+```{.yaml linenums="1"}
 tunnels:
 - tcp/udp,127.0.0.1:6553,114.114.114.114:53,proxy
 - network: [tcp, udp]
@@ -8,12 +8,12 @@ tunnels:
   proxy: proxy
 ```
 ## 单行
-```yaml
+```{.yaml linenums="1"}
 tunnels:
 - tcp/udp,127.0.0.1:6553,8.8.8.8:53,proxy
 ```
 ## 多行
-```yaml
+```{.yaml linenums="1"}
 tunnels:
 - network: [tcp, udp]
   address: 127.0.0.1:6553

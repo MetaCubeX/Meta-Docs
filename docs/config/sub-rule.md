@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 sub-rules:
   rule1:
     - DOMAIN-SUFFIX,baidu.com,DIRECT

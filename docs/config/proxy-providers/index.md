@@ -3,7 +3,7 @@ description: 用户可以单独将一些代理放入特定文件中，通过引�
 ---
 ## 示例
 
-```yaml
+```{.yaml linenums="1"}
 proxy-providers:
   provider1:
     type: http

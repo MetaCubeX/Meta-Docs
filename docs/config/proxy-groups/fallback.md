@@ -2,7 +2,7 @@
 description: 当代理节点url测试超时时,按照节点顺序选择
 ---
 
-```yaml
+```{.yaml linenums="1"}
 proxy-groups:
 - name: "fallback"
   type: fallback

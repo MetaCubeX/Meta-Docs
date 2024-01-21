@@ -3,7 +3,7 @@ description: 代理链,若落地协议支持 UDP over TCP 则可支持 UDP
 ---
 ## 配置示例
 
-```yaml
+```{.yaml linenums="1"}
 Proxy Groups:
 # Traffic: Clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
 - name: "relay"

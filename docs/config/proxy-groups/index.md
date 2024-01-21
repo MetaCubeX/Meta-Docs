@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 proxy-groups:
 - name: "proxy"
   type: select
@@ -95,19 +95,19 @@ proxy-groups:
 
 匹配 200 和 302 状态码
 
-```yaml
+```{.yaml linenums="1"}
 expected-status: 200/302
 ```
 
 匹配 400 到 503 状态码
 
-```yaml
+```{.yaml linenums="1"}
 expected-status: 400-503
 ```
 
 匹配 200 和 302 以及 400 到 503 状态码
 
-```yaml
+```{.yaml linenums="1"}
 expected-status: 200/302/400-503
 ```
 

@@ -1,7 +1,7 @@
 ### classical
 
 === "yaml"
-    ```yaml
+    ```{.yaml linenums="1"}
     payload:
     - DOMAIN-SUFFIX,google.com
     - DOMAIN-KEYWORD,google
@@ -30,7 +30,7 @@
 `domain`类规则集合内容通配应遵守[clash通配符](../index.md#_7)
 
 === "yaml"
-    ```yaml
+    ```{.yaml linenums="1"}
     payload:
     - '.blogger.com'
     - '*.*.microsoft.com'
@@ -49,7 +49,7 @@
 
 
 === "yaml"
-    ```yaml
+    ```{.yaml linenums="1"}
     payload:
     - '192.168.1.0/24'
     - '10.0.0.0.1/32'

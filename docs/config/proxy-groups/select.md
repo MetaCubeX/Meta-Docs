@@ -1,7 +1,7 @@
 ---
 description: 手动选择一个策略/代理节点
 ---
-```yaml
+```{.yaml linenums="1"}
 proxy-groups:
 - name: Proxy
   type: select

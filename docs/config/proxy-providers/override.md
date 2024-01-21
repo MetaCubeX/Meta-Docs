@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 proxy-providers:
   "hy":
     type: file

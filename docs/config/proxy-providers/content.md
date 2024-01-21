@@ -2,7 +2,7 @@
 
 一个合法的代理集合必须包含 `proxies:`字段
 
-```yaml
+```{.yaml linenums="1"}
 proxies:
   - name: "ss1"
     type: ss
@@ -29,7 +29,7 @@ meta额外支持URI以及base64后的URI
 
     `YAML`/`URI`/`base64`不可写在同一文件,`URI`/`base64`不需要`proxies:`字段,直接书写即可
 === "URI"
-    ```yaml
+    ```{.yaml linenums="1"}
     ss://YWVzLTI1Ni1nY206bWV0YUAxMjcuMC4wLjE6NDQz#home
     vmess://eyJhZGQiOiIxMjcuMC4wLjEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiMTIyMzQ1Njc4OSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNDQzIiwicHMiOiJ2bWVzcyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
     ```

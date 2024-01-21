@@ -2,7 +2,7 @@
 description: 负载均衡将按照算法随机选择节点
 ---
 
-```yaml
+```{.yaml linenums="1"}
 proxy-groups:
 - name: "load-balance"
   type: load-balance

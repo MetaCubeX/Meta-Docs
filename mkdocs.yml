@@ -39,6 +39,10 @@ theme:
     - content.code.copy
     # - toc.integrate
   palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -96,7 +100,8 @@ nav:
     - 完整示例: example/index.md
     - 快捷配置: example/conf.md
   - 配置:
-    - 语法: config/index.md
+    - config/index.md
+    - 语法: config/syntax.md
     - 全局配置: config/general.md
     - DNS:
       - DNS配置: config/dns/index.md
@@ -137,6 +142,11 @@ nav:
       - Hysteria2: config/proxies/hysteria2.md
       - TUIC: config/proxies/tuic.md
       - WireGuard: config/proxies/wg.md
+    - 代理集合:
+      - 代理集合配置: config/proxy-providers/index.md
+      - 代理集合内容: config/proxy-providers/content.md
+      - 筛选代理集合: config/proxy-providers/filter.md
+      - 覆写节点内容: config/proxy-providers/override.md
     - 策略组:
       - 策略组配置: config/proxy-groups/index.md
       - 手动选择: config/proxy-groups/select.md
@@ -145,13 +155,6 @@ nav:
       - 负载均衡: config/proxy-groups/load-balance.md
       - 链式代理: config/proxy-groups/relay.md
       - 内置策略: config/proxy-groups/built-in.md
-    #  - 筛选代理集合: config/proxy-groups/filter.md
-    #  - 指定接口及路由标记: config/proxy-groups/if-mark.md
-    - 代理集合:
-      - 代理集合配置: config/proxy-providers/index.md
-      - 代理集合内容: config/proxy-providers/content.md
-      - 筛选代理集合: config/proxy-providers/filter.md
-      - 覆写节点内容: config/proxy-providers/override.md
     - 规则:
       - 规则配置: config/rules/index.md
       - 域名规则: config/rules/domain.md
@@ -171,5 +174,5 @@ nav:
     - 子规则: config/sub-rule.md
     - 流量隧道: config/tunnels.md
     - NTP: config/ntp/index.md
-    - 实验性: config/experimental.md
+    #- 实验性: config/experimental.md
   - APIs: api/index.md

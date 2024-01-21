@@ -1,6 +1,6 @@
 以下是两种常见的 DNS 配置：
 
-```yaml
+```{.yaml linenums="1"}
 dns:
   ...
   ipv6: true

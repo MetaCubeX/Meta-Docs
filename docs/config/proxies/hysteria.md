@@ -1,6 +1,7 @@
 [配置参考](https://hysteria.network/zh/docs/advanced-usage/#%e5%ae%a2%e6%88%b7%e7%ab%af)
 
-```yaml
+```{.yaml linenums="1"}
+proxies:
 - name: "hysteria"
   type: hysteria
   server: server.com
@@ -27,3 +28,4 @@
   # fingerprint: xxxx
   # fast-open: true # 启用 Fast Open (降低连接建立延迟),默认为 false
 ```
+[通用字段](./index.md)

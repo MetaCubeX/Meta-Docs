@@ -1,4 +1,5 @@
-```yaml
+```{.yaml linenums="1"}
+proxies:
   - name: "ssr"
     type: ssr
     server: server
@@ -11,3 +12,4 @@
     # protocol-param: "#"
     # udp: true
 ```
+[通用字段](./index.md)

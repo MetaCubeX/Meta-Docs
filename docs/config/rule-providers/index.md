@@ -1,4 +1,4 @@
-```yaml
+```{.yaml linenums="1"}
 rule-providers:
   google:
     type: http

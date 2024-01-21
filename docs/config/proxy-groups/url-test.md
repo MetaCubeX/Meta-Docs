@@ -1,7 +1,7 @@
 ---
 description: 自动选择将按照 url 测试结果使用延迟最低的一个策略/代理节点
 ---
-```yaml
+```{.yaml linenums="1"}
 proxy-groups:
 - name: "自动选择"
   type: url-test

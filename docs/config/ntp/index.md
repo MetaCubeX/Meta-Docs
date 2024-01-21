@@ -5,7 +5,7 @@ description: Clash 的 NTP 模块配置
 
 以下的拆分说明皆是 `NTP` 下的配置项
 
-```yaml
+```{.yaml linenums="1"}
 ntp:
   enable: true
   write-to-system: true
@@ -20,7 +20,7 @@ ntp:
 
 是否启用 NTP 服务
 
-```yaml
+```{.yaml linenums="1"}
 ntp:
   enable: true
 ```
