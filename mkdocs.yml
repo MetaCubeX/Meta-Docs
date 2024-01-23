@@ -70,6 +70,7 @@ markdown_extensions:
       toc_depth: 3
       anchorlink: true
   - admonition
+  - md_in_html
   - pymdownx.details
   - pymdownx.critic
   - pymdownx.caret
@@ -83,7 +84,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
 
 nav:
   - 简介: index.md
