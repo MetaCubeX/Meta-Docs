@@ -14,11 +14,7 @@ extra:
       link: https://github.com/MetaCubeX/mihomo
     - icon: material/file-document
       link: https://github.com/MetaCubeX/Meta-Docs
-plugins:
-  - search
-  - awesome-pages
-  - git-revision-date-localized:
-      locale: zh
+
 theme:
   name: material
   logo: assets/images.jpeg
@@ -88,8 +84,28 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
 
+plugins:
+  - search
+  - awesome-pages
+  # - i18n:
+  #     docs_structure: suffix
+  #     fallback_to_default: true
+  #     languages:
+  #       - build: true
+  #         default: true
+  #         locale: en
+  #         name: English
+  #       - build: true
+  #         default: false
+  #         locale: zh
+  #         name: 简体中文
+  #         nav_translations:
+  #           Home: 开始
+  - git-revision-date-localized:
+      locale: zh
+
 nav:
-  - 简介: index.md
+  - Home: index.md
   - 安装:
     - 安装: startup/index.md
     - web面板: startup/web.md
