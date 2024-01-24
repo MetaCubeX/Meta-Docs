@@ -75,9 +75,9 @@ systemctl status mihomo
 使用以下命令检查 mihomo 的运行日志:
 
 ```shell
-journalctl -u meta -o cat -e
+journalctl -u mihomo -o cat -e
 ```
 或
 ```shell
-journalctl -u meta -o cat -f
+journalctl -u mihomo -o cat -f
 ```
