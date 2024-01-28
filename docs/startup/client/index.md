@@ -1,8 +1,6 @@
 
 ## Windows
 
-[**clash-verge**](https://github.com/MetaCubeX/clash-verge)
-
 [**Clash.Mini**](https://github.com/MetaCubeX/Clash.Mini)
 
 
