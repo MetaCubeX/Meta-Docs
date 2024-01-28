@@ -10,6 +10,7 @@ proxies:
   routing-mark: 1234
   tfo: false
   mptcp: false
+  skip-cert-verify: false
 
   dialer-proxy: ss1
 
@@ -71,6 +72,10 @@ proxies:
 
 启用`TCP Multi Path`,仅生效于`TCP`协议
 
+### skip-cert-verify
+
+跳过证书验证,仅适用于使用`tls`的协议
+
 ### dialer-proxy
 
 参阅 [dialer-proxy](./dialer-proxy.md)
@@ -82,5 +87,5 @@ proxies:
 #### brutal-opts
 
 TCP Brutal
- 
+
 参阅 [brutal-opts](./sing-mux.md#brutal-opts)

@@ -1,12 +1,12 @@
 # Meta-Docs
 
-[Clash.Meta](https://github.com/MetaCubeX/Clash.Meta/tree/Alpha) 的文档
+[mihomo](https://github.com/MetaCubeX/mihomo/tree/Alpha) 的文档
 
 ## 使用方法
 
 ### 设置虚拟环境
 
-python3.11以上依赖虚拟环境运行,不能直接运行
+部分操作系统python3.11以上依赖虚拟环境运行,不能直接运行
 
 ##### 安装virtualenv
 
@@ -51,7 +51,7 @@ use venv/bin/activate.nu
 
 * fish
 
-```fish
+```bash
 source venv/bin/activate.fish
 ```
 

@@ -1,20 +1,21 @@
----
-description: 用户可以单独将一些代理放入特定文件中，通过引用该文件，用户可以快速将这些相同的代理填充到不同的策略组中
----
-## 示例
-
 ```{.yaml linenums="1"}
 proxy-providers:
   provider1:
     type: http
-    url: ""
+    url: "http://test.com"
     path: ./proxy_providers/provider1.yaml
     interval: 3600
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
+      timeout: 5000
       expected-status: 204
+    override:
+      udp: true
+    filter: "(?i)港|hk|hongkong|hong kong"
+    exclude-filter: "xxx"
+    exclude-type: "ss|http"
 
   provider2:
     type: file
@@ -25,57 +26,98 @@ proxy-providers:
       interval: 300
 ```
 
-### name
+## name
 
-如 `provider1`, 为 provider 的 name,不能重复
+必须, 如`provider1`,不能重复,建议不要和[策略组](../proxy-groups/index.md#name)名称重复
 
-### type
+## type
 
-provider 类型，可选 `http/file`
+必须, `provider`类型,可选`http/file`
+
+## url
+
+类型为`http`是则需要配置
+
+## path
+
+可选,文件路径,不可重复,不填写时会使用url的MD5作为此文件的文件名
+
+由于安全问题,此路径将限制只允许在 `HomeDir`(有启动参数 -d 配置)中,如果想存储到任意位置配置环境变量 `SKIP_SAFE_PATH_CHECK=1`
+
+## interval
+
+更新`provider`的时间,单位为秒
+
+## health-check
+
+健康检查(延迟测试)
+
+### enable
+
+是否启用,可选 `true/false`
 
 ### url
 
-类型为 `http`是则需要配置
+健康检查地址,推荐使用以下地址之一
 
-### path
+=== "Cloudflare"
 
-文件路径，不可重复,可选，不填写时会使用MD5作为此文件的文件名
+    ```yaml
+    https://cp.cloudflare.com
+    ```
 
-由于安全问题，此路径将限制只允许在 HomeDir（有启动参数 -d 配置） 中，如果想存储到任意位置配置环境变量 `SKIP_SAFE_PATH_CHECK=1`
+=== "Google"
+
+    ```yaml
+    https://www.gstatic.com/generate_204
+    ```
 
 ### interval
 
-更新 provider 的时间，单位为秒
+健康检查间隔时间,单位为秒
 
-### health-check
+### timeout
 
-健康检查（测试延迟）
+健康检查超时时间,单位为毫秒
 
-#### enable
+## lazy
 
-是否启用，可选 `true/false`
+懒惰状态,默认为`true`,不使用该集合节点时,不进行测试
 
-#### url
-
-健康检查地址，推荐使用以下地址之一：
-
-Cloudflare:
-
-```
-https://cp.cloudflare.com/generate_204
-```
-
-Google：
-
-```
-http://www.gstatic.com/generate_204
-https://www.gstatic.com/generate_204
-```
-
-#### interval
-
-健康检查间隔时间，单位为秒
-
-#### expected-status
+### expected-status
 
 参阅 [期望状态](../proxy-groups/index.md#expected-status)
+
+## override
+
+覆写节点内容,以下为支持的字段
+
+[udp](../proxies/index.md#udp)
+
+[up](../proxies/hysteria2.md)
+
+[down](../proxies/hysteria2.md)
+
+[skip-cert-verify](../proxies/index.md#skip-cert-verify)
+
+[dialer-proxy](../proxies/index.md#dialer-proxy)
+
+[interface-name](../proxies/index.md#interface-name)
+
+[routing-mark](../proxies/index.md#routing-mark)
+
+[ip-version](../proxies/index.md#ip-version)
+
+## filter
+
+筛选满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点
+
+## exclude-filter
+
+排除满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点
+
+## exclude-type
+
+不支持正则表达式,通过 `|` 分割,根据节点类型排除
+
+注意,`proxy-groups` 与 `proxy-providers` 写法不同

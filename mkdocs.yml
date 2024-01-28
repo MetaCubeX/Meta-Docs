@@ -164,8 +164,6 @@ nav:
     - 代理集合:
       - 代理集合配置: config/proxy-providers/index.md
       - 代理集合内容: config/proxy-providers/content.md
-      - 筛选代理集合: config/proxy-providers/filter.md
-      - 覆写节点内容: config/proxy-providers/override.md
     - 策略组:
       - 策略组配置: config/proxy-groups/index.md
       - 手动选择: config/proxy-groups/select.md
