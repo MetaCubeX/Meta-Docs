@@ -6,8 +6,8 @@ experimental:
 
 ## quic-go-disable-gso
 
-禁用`GSO`
+Disable GSO (Generic Segmentation Offload).
 
 ## quic-go-disable-ecn
 
-禁用`ECN`
+Disable ECN (Explicit Congestion Notification).

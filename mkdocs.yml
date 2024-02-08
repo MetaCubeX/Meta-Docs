@@ -90,6 +90,8 @@ plugins:
   - i18n:
       docs_structure: suffix
       fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
       languages:
         - build: true
           default: true
@@ -153,6 +155,7 @@ plugins:
             规则集合内容: rule-providers configuration
             子规则: sub-rule
             流量隧道: tunnels
+            实验性配置: experimental
 
   - git-revision-date-localized:
       locale: zh
@@ -244,5 +247,5 @@ nav:
     - 子规则: config/sub-rule.md
     - 流量隧道: config/tunnels.md
     - NTP: config/ntp/index.md
-    #- 实验性: config/experimental.md
+    - 实验性配置: config/experimental.md
   - APIs: api/index.md
