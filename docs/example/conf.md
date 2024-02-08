@@ -78,7 +78,7 @@
           proxy-server-nameserver:
             - https://doh.pub/dns-query
           nameserver-policy:
-            "geosite:private":
+            "geosite:cn,private":
               - https://doh.pub/dns-query
               - https://dns.alidns.com/dns-query
             "geosite:geolocation-!cn":
@@ -130,13 +130,13 @@
           - GEOSITE,bahamut,巴哈姆特
           - GEOSITE,spotify,Spotify
           - GEOSITE,pixiv,Pixiv
+          - GEOSITE,CN,国内
           - GEOSITE,geolocation-!cn,其他
 
           - GEOIP,google,Google
           - GEOIP,netflix,NETFLIX
           - GEOIP,telegram,Telegram
           - GEOIP,twitter,Twitter
-          - GEOSITE,CN,国内
           - GEOIP,CN,国内
           - MATCH,其他
         ```
@@ -221,7 +221,7 @@
           proxy-server-nameserver:
             - https://doh.pub/dns-query
           nameserver-policy:
-            "rule-set:private":
+            "rule-set:cn_domain,private":
               - https://doh.pub/dns-query
               - https://dns.alidns.com/dns-query
             "rule-set:geolocation-!cn":
@@ -273,13 +273,13 @@
           - RULE-SET,bahamut_domain,巴哈姆特
           - RULE-SET,spotify_domain,Spotify
           - RULE-SET,pixiv_domain,Pixiv
+          - RULE-SET,cn_domain,国内
           - RULE-SET,geolocation-!cn,其他
 
           - RULE-SET,google_ip,Google
           - RULE-SET,netflix_ip,NETFLIX
           - RULE-SET,telegram_ip,Telegram
           - RULE-SET,twitter_ip,Twitter
-          - RULE-SET,cn_domain,国内
           - RULE-SET,cn_ip,国内
           - MATCH,其他
 
@@ -430,7 +430,7 @@
           proxy-server-nameserver:
             - https://doh.pub/dns-query
           nameserver-policy:
-            "rule-set:private":
+            "rule-set:cn_domain,private":
               - https://doh.pub/dns-query
               - https://dns.alidns.com/dns-query
             "rule-set:geolocation-!cn":
@@ -482,13 +482,13 @@
           - RULE-SET,bahamut_domain,巴哈姆特
           - RULE-SET,spotify_domain,Spotify
           - RULE-SET,pixiv_domain,Pixiv
+          - RULE-SET,cn_domain,国内
           - RULE-SET,geolocation-!cn,其他
 
           - RULE-SET,google_ip,Google
           - RULE-SET,netflix_ip,NETFLIX
           - RULE-SET,telegram_ip,Telegram
           - RULE-SET,twitter_ip,Twitter
-          - RULE-SET,cn_domain,国内
           - RULE-SET,cn_ip,国内
           - MATCH,其他
 

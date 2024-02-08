@@ -74,7 +74,7 @@ dns:
   proxy-server-nameserver:
     - https://doh.pub/dns-query
   nameserver-policy:
-    "geosite:private":
+    "geosite:cn,private":
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
     "geosite:geolocation-!cn":
@@ -126,12 +126,12 @@ rules:
   - GEOSITE,bahamut,巴哈姆特
   - GEOSITE,spotify,Spotify
   - GEOSITE,pixiv,Pixiv
+  - GEOSITE,CN,国内
   - GEOSITE,geolocation-!cn,其他
 
   - GEOIP,google,Google
   - GEOIP,netflix,NETFLIX
   - GEOIP,telegram,Telegram
   - GEOIP,twitter,Twitter
-  - GEOSITE,CN,国内
   - GEOIP,CN,国内
   - MATCH,其他

@@ -14,22 +14,21 @@
 
 [**clashtui**](https://github.com/JohanChane/clashtui)
 
-
 ## MacOS
 
 [**clash-verge**](https://github.com/MetaCubeX/clash-verge)
 
-### Linux：
+### Linux
 
 [**clash-verge**](https://github.com/MetaCubeX/clash-verge)
 
 [**clashtui**](https://github.com/JohanChane/clashtui)
 
-## Merlin (KoolCenter 固件/paldier SWRT 固件）:
+## Merlin (KoolCenter 固件/paldier SWRT 固件)
 
 [**merlinclashcat**](https://t.me/merlinclashcat)
 
-## OpenWRT:
+## OpenWRT
 
 [**OpenClash**](https://github.com/vernesong/OpenClash)
 
@@ -42,6 +41,3 @@
 [**Clash Tproxy Android**](https://t.me/e58695/59)
 
 [**Clash.Meta for Magisk**](https://t.me/MagiskChangeKing/126)
-
-
-

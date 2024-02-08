@@ -4,11 +4,11 @@ hide:
   - toc
 ---
 
-为了开始使用 mihomo, 你可以从以下安装方式中选择一个为当前系统安装 mihomo
+To start using Mihomo, you can choose one of the following installation methods for your current system.
 
-## 使用预编译的二进制文件
+## Using Precompiled Binary Files
 
-请在下方选择下载常见的操作系统对应的二进制文件
+Please select and download the binary file corresponding to your common operating system from the options below.
 
 === "Windows"
     === "amd64/x86_64"

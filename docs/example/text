@@ -70,7 +70,7 @@ dns:
   proxy-server-nameserver:
     - https://doh.pub/dns-query
   nameserver-policy:
-    "rule-set:private":
+    "rule-set:cn_domain,private":
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
     "rule-set:geolocation-!cn":
@@ -122,13 +122,13 @@ rules:
   - RULE-SET,bahamut_domain,巴哈姆特
   - RULE-SET,spotify_domain,Spotify
   - RULE-SET,pixiv_domain,Pixiv
+  - RULE-SET,cn_domain,国内
   - RULE-SET,geolocation-!cn,其他
 
   - RULE-SET,google_ip,Google
   - RULE-SET,netflix_ip,NETFLIX
   - RULE-SET,telegram_ip,Telegram
   - RULE-SET,twitter_ip,Twitter
-  - RULE-SET,cn_domain,国内
   - RULE-SET,cn_ip,国内
   - MATCH,其他
 

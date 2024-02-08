@@ -4,22 +4,22 @@ hide:
   - toc
 ---
 
-## 使用 systemd
+## Using systemd
 
-- 下载二进制可执行文件 [releases](https://github.com/MetaCubeX/mihomo/releases)
+- Download the binary executable file from [releases](https://github.com/MetaCubeX/mihomo/releases).
 
-- 将下载的二进制可执行文件重名名为 `mihomo` 并移动到 `/usr/local/bin/`
+- Rename the downloaded binary executable file to `mihomo` and move it to `/usr/local/bin/`.
 
-- 以守护进程的方式，运行 mihomo。
+- Run Mihomo as a daemon.
 
-使用以下命令将 Clash 二进制文件复制到 /usr/local/bin, 配置文件复制到 /etc/mihomo:
+Use the following commands to copy the Mihomo binary file to /usr/local/bin and the configuration file to /etc/mihomo:
 
 ```shell
 cp mihomo /usr/local/bin
 cp config.yaml /etc/mihomo
 ```
 
-创建 systemd 配置文件 `/etc/systemd/system/mihomo.service`:
+Create a systemd configuration file `/etc/systemd/system/mihomo.service`:
 
 ```ini
 [Unit]
@@ -41,43 +41,43 @@ ExecReload=/bin/kill -HUP $MAINPID
 WantedBy=multi-user.target
 ```
 
-使用以下命令重新加载 systemd:
+Reload systemd using the following command:
 
 ```shell
 systemctl daemon-reload
 ```
 
-启用 mihomo 服务：
+Enable the Mihomo service:
 
 ```shell
 systemctl enable mihomo
 ```
 
-使用以下命令立即启动 mihomo:
+Start Mihomo immediately with the following command:
 
 ```shell
 systemctl start mihomo
 ```
 
-使用以下命令使 mihomo 重新加载:
+Reload Mihomo with the following command:
 
 ```shell
 systemctl reload mihomo
 ```
 
-使用以下命令检查 mihomo 的运行状况:
+Check the status of Mihomo with the following command:
 
 ```shell
 systemctl status mihomo
 ```
 
-使用以下命令检查 mihomo 的运行日志:
+Check the running logs of Mihomo with the following command:
 
 ```shell
 journalctl -u mihomo -o cat -e
 ```
 
-或
+Or
 
 ```shell
 journalctl -u mihomo -o cat -f

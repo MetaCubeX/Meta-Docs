@@ -1,8 +1,6 @@
-
 ## Windows
 
 [**Clash.Mini**](https://github.com/MetaCubeX/Clash.Mini)
-
 
 ## Mac OS
 
@@ -11,6 +9,3 @@
 ## Android
 
 [**Clash.Meta for Android**](https://github.com/MetaCubeX/ClashMetaForAndroid/releases/tag/Prerelease-alpha)
-
-
-
