@@ -1,18 +1,18 @@
 <div class="grid cards" markdown>
 
-- :material-login: &nbsp; __[入站][inbound]__
+- :material-login: &nbsp; __[Inbounds][inbound]__
 
     test
 
-- :material-shuffle-variant: &nbsp; __[路由规则][rule]__
+- :material-shuffle-variant: &nbsp; __[Routing Rules][rule]__
 
     test
 
-- :material-logout: &nbsp; __[出站代理][proxie]__
+- :material-logout: &nbsp; __[Outbound Proxies][proxie]__
 
     test
 
-- :material-format-list-group: &nbsp; __[策略组][proxy-group]__
+- :material-format-list-group: &nbsp; __[Proxy Groups][proxy-group]__
 
     test
 
