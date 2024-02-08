@@ -16,4 +16,4 @@ Proxy Groups:
 
 ### 关于UDP
 
-relay支持传输UDP，前提是代理链的头尾节点都要支持 UDP over TCP。目前支持 udp 的协议有 vmess/vless/trojan/ss/ssr/tuic
+relay支持传输UDP，前提是代理链的头尾节点都要支持 UDP over TCP。目前支持 udp 的协议有 `vmess`/`vless`/`trojan`/`ss`/`ssr`/`tuic`

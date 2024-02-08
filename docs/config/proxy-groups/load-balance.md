@@ -20,7 +20,6 @@ proxy-groups:
 
 负载均衡策略
 
-`consistent-hashing` 将会把相同顶级域名的请求分配给策略组内的同一个代理节点
+* `consistent-hashing` 将会把相同顶级域名的请求分配给策略组内的同一个代理节点
 
-`round-robin` 将会把所有的请求分配给策略组内不同的代理节点
-
+* `round-robin` 将会把所有的请求分配给策略组内不同的代理节点

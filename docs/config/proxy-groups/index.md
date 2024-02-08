@@ -31,6 +31,7 @@ proxy-groups:
 ## name
 
 必须项,策略组的名字
+
 !!! note
     如有特殊符号,应当使用引号将其包裹
 
@@ -60,7 +61,7 @@ proxy-groups:
 
 ### timeout
 
-健康检查超时时间,单位为毫秒
+健康检查超时时间,单位为毫秒(ms)
 
 ## disable-udp
 
@@ -107,14 +108,10 @@ proxy-groups:
 ## exclude-filter
 
 排除满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点
-!!! info ""
-    仅作用于引入代理集合
 
 ## exclude-type
 
 排除节点类型
-!!! info ""
-    仅作用于引入代理集合
 
 注意，`proxy-groups` 与 `proxy-providers` 写法不同，不支持正则表达式，通过 `|` 分隔
 
