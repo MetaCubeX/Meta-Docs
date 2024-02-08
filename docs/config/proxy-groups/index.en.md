@@ -30,14 +30,14 @@ proxy-groups:
 
 ## name
 
-Required field, the name of the strategy group.
+Required field, the name of the proxy-groups.
 
 !!! note
     If there are special symbols, they should be enclosed in quotes.
 
 ## type
 
-Required field, the type of the strategy group.
+Required field, the type of the proxy-groups.
 
 ## proxies
 
@@ -57,7 +57,7 @@ Health check interval. If not 0, periodic testing is enabled.
 
 ## lazy
 
-Lazy status, default is true. When the current strategy group is not selected, no testing is performed.
+Lazy status, default is true. When the current proxy-groups is not selected, no testing is performed.
 
 ### timeout
 
@@ -65,17 +65,17 @@ Health check timeout, measured in milliseconds (ms).
 
 ## disable-udp
 
-Disable `UDP` for this strategy group.
+Disable `UDP` for this proxy-groups.
 
 ## interface-name
 
-Specify the [outbound interface](../general.md#_11) for the strategy group.
+Specify the [outbound interface](../general.md#_11) for the proxy-groups.
 !!! info ""
     Priority: Proxies > Proxy Groups > Global
 
 ## routing-mark
 
-Attach a [routing mark](../general.md#_12)when the strategy group goes outbound.
+Attach a [routing mark](../general.md#_12)when the proxy-groups goes outbound.
 !!! info ""
     Priority: Proxies > Proxy Groups > Global
 
@@ -146,8 +146,8 @@ expected-status: 200/302/400-503
 
 ## hidden
 
-Returns hidden status in the API to hide the display of this strategy group (requires front-end adaptation using the API).
+Returns hidden status in the API to hide the display of this proxy-groups (requires front-end adaptation using the API).
 
 ## icon
 
-Returns the string entered in icon in the API to display in this strategy group (requires front-end adaptation using the API).
+Returns the string entered in icon in the API to display in this proxy-groups (requires front-end adaptation using the API).
