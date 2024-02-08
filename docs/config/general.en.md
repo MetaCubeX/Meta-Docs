@@ -1,4 +1,4 @@
-## **Allow LAN**
+## Allow LAN
 
 Allows other devices to access the internet through Clash proxy port.
 
@@ -34,7 +34,7 @@ lan-disallowed-ips:
 - 192.168.0.3/32
 ```
 
-**User Authentication**
+## User Authentication
 
 User authentication for http(s), socks, and mixed proxies.
 
@@ -52,7 +52,7 @@ skip-auth-prefixes:
 - ::1/128
 ```
 
-**Operation Mode**
+## Operation Mode
 
 - `rule` Rule-based matching
 - `global` Global proxy (requires selecting proxy/strategy in GLOBAL proxy group)
@@ -64,7 +64,7 @@ defaulting to `rule` mode.
 mode: rule
 ```
 
-**Log Level**
+## Log Level
 
 Controls the logging level of Clash core, only output to console and control page.
 
@@ -78,7 +78,7 @@ log-level: info
 - `info` Outputs general operational logs, as well as logs of error and warning levels.
 - `debug` Outputs as much information as possible during runtime.
 
-**IPv6**
+## IPv6
 
 Whether to allow the kernel to accept IPv6 traffic.
 
@@ -88,7 +88,7 @@ default is `true`.
 ipv6: true
 ```
 
-**TCP Keep Alive Interval**
+## TCP Keep Alive Interval
 
 Controls the interval at which Clash sends out TCP Keep Alive packets to reduce temporary measures for mobile device power consumption.
 
@@ -100,7 +100,7 @@ The time Clash discovers and closes an invalid TCP connection:
 
 1 * keep-alive-interval + 9 * keep-alive-interval
 
-**Process Matching Mode**
+## Process Matching Mode
 
 Controls whether Clash matches processes.
 
@@ -112,7 +112,7 @@ Controls whether Clash matches processes.
 find-process-mode: strict
 ```
 
-**External Control (API)**
+## External Control (API)
 
 External controller, allows controlling your Clash kernel using RESTful API.
 
@@ -134,7 +134,7 @@ Access key for the API.
 secret: ""
 ```
 
-**External User Interface**
+## External User Interface
 
 Allows running static webpage resources (such as Clash-dashboard) on Clash API, path is API address/ui.
 
@@ -144,7 +144,7 @@ external-ui: /path/to/ui/folder
 
 Can be an absolute path or a relative path to the Clash working directory.
 
-**Custom External User Interface Name**
+## Custom External User Interface Name
 
 ```{.yaml linenums="1"}
 external-ui-name: xd      # Merged into external-ui/xd
@@ -152,13 +152,13 @@ external-ui-name: xd      # Merged into external-ui/xd
 
 Not mandatory, will be updated to the specified folder during updates, if not configured, it will be updated directly to the `external-ui` directory.
 
-**Custom External User Interface Download URL**
+## Custom External User Interface Download URL
 
 ```{.yaml linenums="1"}
 external-ui-url: "<https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip>" # Get from GitHub Pages branch
 ```
 
-**Cache**
+## Cache
 
 In Clash official, profile should be an extension configuration, but in Clash.meta, it is only used as a cache item.
 
@@ -173,7 +173,7 @@ profile:
 # Stores the fakeip mapping table, using the original mapping address when the domain connects again
 ```
 
-**Unified Delay**
+## Unified Delay
 
 Change delay calculation method, remove additional delays such as handshakes.
 
@@ -181,13 +181,13 @@ Change delay calculation method, remove additional delays such as handshakes.
 unified-delay: true
 ```
 
-**TCP Concurrency**
+## TCP Concurrency
 
 ```{.yaml linenums="1"}
 tcp-concurrent: true
 ```
 
-**Outbound Interface**
+## Outbound Interface
 
 Clash's traffic outbound interface.
 
@@ -195,7 +195,7 @@ Clash's traffic outbound interface.
 interface-name: en0
 ```
 
-**Routing Mark**
+## Routing Mark
 
 Provides a default traffic mark for outbound connections on Linux.
 
@@ -203,7 +203,7 @@ Provides a default traffic mark for outbound connections on Linux.
 routing-mark: 6666
 ```
 
-**TLS**
+## TLS
 
 Currently only used for https in API.
 
@@ -213,7 +213,7 @@ tls:
   private-key: string # Private key PEM format corresponding to the certificate, or private key path
 ```
 
-**Global Client Fingerprint**
+## Global Client Fingerprint
 
 Global TLS fingerprint, lower priority than client-fingerprint inside proxy.
 
@@ -227,7 +227,7 @@ global-client-fingerprint: chrome
     Options: `chrome`, `firefox`, `safari`, `iOS`, `android`, `edge`, `360`, `qq`, `random`
     If `random` is selected, a modern browser fingerprint will be generated based on Cloudflare Radar data.
 
-**GEO Data Mode**
+## GEO Data Mode
 
 Change the geoip usage file, `mmdb` or `dat`,`true` is `dat`, with a default value of `false`.
 
@@ -235,7 +235,7 @@ Change the geoip usage file, `mmdb` or `dat`,`true` is `dat`, with a default val
 geodata-mode: true
 ```
 
-**GEO File Loading Mode**
+## GEO File Loading Mode
 
 Optional loading modes are as follows:
 
@@ -246,7 +246,7 @@ Optional loading modes are as follows:
 geodata-loader: memconservative
 ```
 
-**Auto Update GEO**
+## Auto Update GEO
 
 ```{.yaml linenums="1"}
 geo-auto-update: false
@@ -258,7 +258,7 @@ Update interval, in hours.
 geo-update-interval: 24
 ```
 
-**Custom GEO Download Address**
+## Custom GEO Download Address
 
 ```{.yaml linenums="1"}
 geox-url:
@@ -267,7 +267,7 @@ geox-url:
   mmdb: "<https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb>"
 ```
 
-**Custom Global UA**
+## Custom Global UA
 
 Custom UA used when downloading external resources, default is clash.meta.
 
