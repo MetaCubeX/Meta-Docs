@@ -6,9 +6,11 @@ proxy-providers:
     health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 300}
     override:
       udp: true
+      name-prefix: prefix
+      name-suffix: suffix
 ```
 
-覆写支持字段
+## 覆写支持字段
 
 [udp](../proxies/index.md#udp)
 
@@ -25,3 +27,11 @@ proxy-providers:
 [routing-mark](../proxies/index.md#routing-mark)
 
 [ip-version](../proxies/index.md#ip-version)
+
+### name-prefix
+
+添加节点名称前缀
+
+### name-suffix
+
+添加节点名称后缀
