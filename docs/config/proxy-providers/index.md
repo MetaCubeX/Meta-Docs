@@ -12,7 +12,16 @@ proxy-providers:
       timeout: 5000
       expected-status: 204
     override:
+      skip-cert-verify: true
       udp: true
+      down: "50 Mbps"
+      up: "10 Mbps"
+      dialer-proxy: proxy
+      interface-name: tailscale0
+      routing-mark: 233
+      ip-version: ipv4-prefer
+      name-prefix: "provider1 prefix |"
+      name-suffix: "| provider1 suffix"
     filter: "(?i)港|hk|hongkong|hong kong"
     exclude-filter: "xxx"
     exclude-type: "ss|http"
@@ -61,13 +70,11 @@ proxy-providers:
 健康检查地址,推荐使用以下地址之一
 
 === "Cloudflare"
-
     ```yaml
     https://cp.cloudflare.com
     ```
 
 === "Google"
-
     ```yaml
     https://www.gstatic.com/generate_204
     ```
@@ -92,21 +99,31 @@ proxy-providers:
 
 覆写节点内容,以下为支持的字段
 
-[udp](../proxies/index.md#udp)
+### name-prefix
 
-[up](../proxies/hysteria2.md)
+为节点名称添加固定前缀
 
-[down](../proxies/hysteria2.md)
+### name-suffix
 
-[skip-cert-verify](../proxies/index.md#skip-cert-verify)
+为节点名称添加固定后缀
 
-[dialer-proxy](../proxies/index.md#dialer-proxy)
+### 配置项
 
-[interface-name](../proxies/index.md#interface-name)
+参阅`Hysteria`/`Hysteria2`  [up](../proxies/hysteria2.md)
 
-[routing-mark](../proxies/index.md#routing-mark)
+参阅`Hysteria`/`Hysteria2`  [down](../proxies/hysteria2.md)
 
-[ip-version](../proxies/index.md#ip-version)
+参阅通用字段  [skip-cert-verify](../proxies/index.md#skip-cert-verify)
+
+参阅通用字段  [udp](../proxies/index.md#udp)
+
+参阅通用字段  [dialer-proxy](../proxies/index.md#dialer-proxy)
+
+参阅通用字段  [interface-name](../proxies/index.md#interface-name)
+
+参阅通用字段  [routing-mark](../proxies/index.md#routing-mark)
+
+参阅通用字段  [ip-version](../proxies/index.md#ip-version)
 
 ## filter
 

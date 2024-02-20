@@ -30,8 +30,8 @@ proxy-providers:
 
 ### name-prefix
 
-添加节点名称前缀
+为节点名称添加固定前缀
 
 ### name-suffix
 
-添加节点名称后缀
+为节点名称添加固定后缀
