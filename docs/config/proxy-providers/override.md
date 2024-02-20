@@ -28,10 +28,10 @@ proxy-providers:
 
 [ip-version](../proxies/index.md#ip-version)
 
-### name-prefix
+### additional-prefix
 
 为节点名称添加固定前缀
 
-### name-suffix
+### additional-suffix
 
 为节点名称添加固定后缀
