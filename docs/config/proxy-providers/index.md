@@ -20,8 +20,8 @@ proxy-providers:
       interface-name: tailscale0
       routing-mark: 233
       ip-version: ipv4-prefer
-      name-prefix: "provider1 prefix |"
-      name-suffix: "| provider1 suffix"
+      additional-prefix: "provider1 prefix |"
+      additional-suffix: "| provider1 suffix"
     filter: "(?i)港|hk|hongkong|hong kong"
     exclude-filter: "xxx"
     exclude-type: "ss|http"
@@ -99,11 +99,11 @@ proxy-providers:
 
 覆写节点内容,以下为支持的字段
 
-### name-prefix
+### additional-prefix
 
 为节点名称添加固定前缀
 
-### name-suffix
+### additional-suffix
 
 为节点名称添加固定后缀
 
