@@ -206,6 +206,7 @@ nav:
       - dialer-proxy: config/proxies/dialer-proxy.md
       - sing-mux: config/proxies/sing-mux.md
       - DIRECT: config/proxies/direct.md
+      - DNS: config/proxies/dns.md
       - HTTP: config/proxies/http.md
       - SOCKS: config/proxies/socks.md
       - Shadowsocks: config/proxies/ss.md
