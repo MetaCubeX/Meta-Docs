@@ -28,4 +28,5 @@ proxies:
   # fingerprint: xxxx
   # fast-open: true # 启用 Fast Open (降低连接建立延迟),默认为 false
 ```
+
 [通用字段](./index.md)

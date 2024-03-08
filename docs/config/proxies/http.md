@@ -12,4 +12,5 @@ proxies:
   # fingerprint: xxxx # 同 experimental.fingerprints 使用 sha256 指纹,配置协议独立的指纹,将忽略 experimental.fingerprints
   # ip-version: dual
 ```
+
 [通用字段](./index.md)
