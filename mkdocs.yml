@@ -218,6 +218,7 @@ nav:
       - Hysteria2: config/proxies/hysteria2.md
       - TUIC: config/proxies/tuic.md
       - WireGuard: config/proxies/wg.md
+      - SSH: config/proxies/ssh.md
     - 代理集合:
       - 代理集合配置: config/proxy-providers/index.md
       - 代理集合内容: config/proxy-providers/content.md
