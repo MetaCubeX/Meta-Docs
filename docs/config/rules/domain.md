@@ -26,3 +26,12 @@ rules:
 rules:
 - DOMAIN-KEYWORD,ad,REJECT
 ```
+
+## DOMAIN-REGEX
+
+域名正则表达式，如果请求的域名中匹配到正则，则会匹配上此规则
+
+```{.yaml linenums="1"}
+rules:
+- DOMAIN-REGEX,^bili.*dns,REJECT
+```
