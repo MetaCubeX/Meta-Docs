@@ -1,4 +1,6 @@
-## **允许局域网**
+# 全局配置
+
+## 允许局域网
 
 允许其他设备经过 Clash 的[代理端口](./inbound/port.md)访问互联网
 
@@ -8,7 +10,7 @@
 allow-lan: true
 ```
 
-绑定地址,仅允许其他设备通过这个地址访问
+绑定地址，仅允许其他设备通过这个地址访问
 
 ***`"*"`*** 绑定所有 IP 地址
 
@@ -20,7 +22,7 @@ allow-lan: true
 bind-address: "*"
 ```
 
-允许连接的IP地址段，仅作用于 `allow-lan` 为 `true`
+允许连接的 IP 地址段，仅作用于 `allow-lan` 为 `true`
 默认值为 `0.0.0.0/0`和 `::/0`
 
 ```{.yaml linenums="1"}
@@ -29,7 +31,7 @@ lan-allowed-ips:
 - ::/0
 ```
 
-禁止连接的IP地址段,黑名单优先级高于白名单,默认值为空
+禁止连接的 IP 地址段，黑名单优先级高于白名单，默认值为空
 
 ```{.yaml linenums="1"}
 lan-disallowed-ips:
@@ -46,7 +48,7 @@ authentication:
 - "user2:pass2"
 ```
 
-设置允许跳过验证的IP段
+设置允许跳过验证的 IP 段
 
 ```{.yaml linenums="1"}
 skip-auth-prefixes:
@@ -54,10 +56,10 @@ skip-auth-prefixes:
 - ::1/128
 ```
 
-## **运行模式**
+## 运行模式
 
 * ***`rule`*** 规则匹配
-* ***`global`*** 全局代理(需要在GLOBAL策略组选择代理/策略)
+* ***`global`*** 全局代理 (需要在 GLOBAL 策略组选择代理/策略)
 * ***`direct`*** 全局直连
 
 此项拥有默认值，默认为规则模式
@@ -66,7 +68,7 @@ skip-auth-prefixes:
 mode: rule
 ```
 
-## **日志级别**
+## 日志级别
 
 Clash 内核输出日志的等级，仅在控制台和控制页面输出
 
@@ -80,7 +82,7 @@ log-level: info
 * ***`info`*** 输出一般运行的内容，以及 error 和 warning 级别的日志
 * ***`debug`*** 尽可能的输出运行中所有的信息
 
-## **IPv6**
+## IPv6
 
 是否允许内核接受 IPv6 流量
 
@@ -90,7 +92,7 @@ log-level: info
 ipv6: true
 ```
 
-## **TCP Keep Alive 间隔**
+## TCP Keep Alive 间隔
 
 控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备[耗电问题](https://github.com/vernesong/OpenClash/issues/2614)的临时措施。
 
@@ -101,7 +103,7 @@ keep-alive-interval: 30
 此时 Clash 发现并关闭一个无效 TCP 连接用时：
 `1*keep-alive-interval + 9*keep-alive-interval`
 
-## **进程匹配模式**
+## 进程匹配模式
 
 控制是否让 Clash 去匹配进程
 
@@ -113,7 +115,7 @@ keep-alive-interval: 30
 find-process-mode: strict
 ```
 
-## **外部控制 (API)**
+## 外部控制 (API)
 
 外部控制器，可以使用 RESTful API 来控制你的 Clash 内核
 
@@ -135,9 +137,9 @@ API 的访问密钥
 secret: ""
 ```
 
-## **外部用户界面**
+## 外部用户界面
 
-可以将静态网页资源（比如 Clash-dashboard) 运行在 Clash API, 路径为 API 地址/ui
+可以将静态网页资源 (比如 Clash-dashboard) 运行在 Clash API, 路径为 API 地址/ui
 
 ```{.yaml linenums="1"}
 external-ui: /path/to/ui/folder
@@ -145,7 +147,7 @@ external-ui: /path/to/ui/folder
 
 可以为绝对路径，或者 Clash 工作目录的相对路径
 
-## **自定义外部用户界面名字**
+## 自定义外部用户界面名字
 
 ```{.yaml linenums="1"}
 external-ui-name: xd      #  合并为 external-ui/xd
@@ -153,13 +155,13 @@ external-ui-name: xd      #  合并为 external-ui/xd
 
 非必须，更新时会更新到指定文件夹，不配置则直接更新到 external-ui 目录
 
-## **自定义外部用户界面下载地址**
+## 自定义外部用户界面下载地址
 
 ```{.yaml linenums="1"}
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" #从 GitHub Pages 分支获取
 ```
 
-## **缓存**
+## 缓存
 
 在 Clash 官方中，profile 应为扩展配置，但在 Clash.meta, 仅作为缓存项使用
 
@@ -173,9 +175,9 @@ profile:
   # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射地址
 ```
 
-## **统一延迟**
+## 统一延迟
 
-更换延迟计算方式,去除握手等额外延迟
+更换延迟计算方式，去除握手等额外延迟
 
 可选值 `true/false`
 
@@ -183,7 +185,7 @@ profile:
 unified-delay: true
 ```
 
-## **TCP并发**
+## TCP 并发
 
 可选值 `true/false`
 
@@ -191,7 +193,7 @@ unified-delay: true
 tcp-concurrent: true
 ```
 
-## **出站接口**
+## 出站接口
 
 Clash 的流量出站接口
 
@@ -199,7 +201,7 @@ Clash 的流量出站接口
 interface-name: en0
 ```
 
-## **路由标记**
+## 路由标记
 
 为 Linux 下的出站连接提供默认流量标记
 
@@ -207,7 +209,7 @@ interface-name: en0
 routing-mark: 6666
 ```
 
-## **TLS**
+## TLS
 
 目前仅用于 API 的 https
 
@@ -217,7 +219,7 @@ tls:
   private-key: string # 证书对应的私钥 PEM 格式，或者私钥路径
 ```
 
-## **全局客户端指纹**
+## 全局客户端指纹
 
 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint。
 
@@ -228,53 +230,52 @@ global-client-fingerprint: chrome
 ```
 
 !!! note
-    可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random"
+    可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random", 若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
 
-    若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
+## GEOIP 数据模式
 
-## **GEO数据模式**
-
-更改geoip使用文件,mmdb或者dat,可选 `true`/`false`,`true`为dat,此项有默认值 `false`
+更改 geoip 使用文件，mmdb 或者 dat，可选 `true`/`false`,`true`为 dat，此项有默认值 `false`
 
 ```{.yaml linenums="1"}
 geodata-mode: true 
 ```
 
-## **GEO文件加载模式**
+## GEO 文件加载模式
 
 可选的加载模式如下
 
 * `standard`：标准加载器
-* `memconservative`：专为内存受限(小内存)设备优化的加载器(默认值)
+* `memconservative`：专为内存受限 (小内存) 设备优化的加载器 (默认值)
 
 ```{.yaml linenums="1"}
 geodata-loader: memconservative
 ```
 
-## **自动更新 GEO**
+## 自动更新 GEO
 
 ```{.yaml linenums="1"}
 geo-auto-update: false
 ```
 
-更新间隔,单位小时
+更新间隔，单位小时
 
 ```{.yaml linenums="1"}
 geo-update-interval: 24
 ```
 
-## **自定 GEO 下载地址**
+## 自定 GEO 下载地址
 
 ```{.yaml linenums="1"}
 geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
   mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
 ```
 
-## **自定全局UA**
+## 自定全局 UA
 
-自定义外部资源下载时使用的的UA,默认为 `clash.meta`
+自定义外部资源下载时使用的的 UA，默认为 `clash.meta`
 
 ```{.yaml linenums="1"}
 global-ua: clash.meta
