@@ -1,41 +1,162 @@
-## 关于规则
-
-### 优先级
-
-规则将按照从上到下的顺序匹配，列表顶部的规则优先级高于其底下的规则
-
-### 策略
-
-策略包含代理和策略组，每一条规则都必须有一个策略
-
-## 规则语法
-
-Clash 的规则都有三个部分 (MATCH / IP类规则 除外）, 分别为：类型，匹配内容，策略
-
-### 示例
-
-!!! note
-    这只是一个示例，请不要照搬
+# 路由规则
 
 ```{.yaml linenums="1"}
 rules:
+  - DOMAIN,ad.com,REJECT
   - DOMAIN-SUFFIX,google.com,auto
   - DOMAIN-KEYWORD,google,auto
-  - DOMAIN,ad.com,REJECT
-  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
-  - IP-CIDR,127.0.0.0/8,DIRECT
+  - DOMAIN-REGEX,^abc.*com,PROXY
+  - GEOSITE,youtube,PROXY
+
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR6,2620:0:2d0:200::7/32,auto
+  - IP-SUFFIX,8.8.8.8/24,PROXY
+  - IP-ASN,13335,DIRECT
   - GEOIP,CN,DIRECT
+
+  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  - SRC-IP-SUFFIX,192.168.1.201/8,DIRECT
+
   - DST-PORT,80,DIRECT
   - SRC-PORT,7777,DIRECT
-  - IN-TYPE,SOCKS/HTTP,auto
+
+  - IN-PORT,7890,PROXY
+  - IN-TYPE,SOCKS/HTTP,PROXY
+  - IN-USER,mihomo,PROXY
+  - IN-NAME,ss,PROXY
+
+  - PROCESS-PATH,/usr/bin/wget,PROXY
+  - PROCESS-NAME,curl,PROXY
+  - PROCESS-NAME,com.termux,PROXY
+  - UID,1001,DIRECT
+
+  - NETWORK,udp,DIRECT
+  - DSCP,4,DIRECT
+
+  - RULE-SET,providername,proxy
   - AND,((DOMAIN,baidu.com),(NETWORK,UDP)),DIRECT
   - OR,((NETWORK,UDP),(DOMAIN,baidu.com)),REJECT
   - NOT,((DOMAIN,baidu.com)),PROXY
-  - RULE-SET,providername,proxy
-  - PROCESS-NAME,curl,PROXY
-  - SUB-RULE,(AND,((NETWORK,UDP))),sub-rule
-  - GEOSITE,youtube,PROXY
-  - GEOIP,cn,DIRECT
+  - SUB-RULE,(NETWORK,tcp),sub-rule
+
   - MATCH,auto
 ```
+
+## 优先级
+
+规则将按照从上到下的顺序匹配，列表顶部的规则优先级高于其底下的规则
+
+!!! warning ""
+    如请求为udp,而代理节点没有udp支持(例如`ss`节点没写`udp: true`),则会继续向下匹配
+
+### DOMAIN
+
+匹配完整域名
+
+### DOMAIN-SUFFIX
+
+匹配域名后缀
+
+例：`google.com`匹配`www.google.com`/`mail.google.com`和`google.com`,但不匹配`content-google.com`
+
+### DOMAIN-KEYWORD
+
+匹配域名关键字
+
+### DOMAIN-REGEX
+
+匹配域名正则表达式
+
+### GEOSITE
+
+匹配Geosite内的域名,部分内容参考 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community/tree/master/data)
+
+### IP-CIDR & IP-CIDR6
+
+匹配IP地址范围,`IP-CIDR`和`IP-CIDR6`效果是一样的,`IP-CIDR6`只是一个别名
+
+### IP-SUFFIX
+
+匹配IP后缀范围
+
+### IP-ASN
+
+匹配IP所属ASN
+
+### GEOIP
+
+匹配IP所属国家代码
+
+### SRC-IP-CIDR
+
+匹配来源IP地址范围
+
+### SRC-IP-SUFFIX
+
+匹配来源IP后缀范围
+
+### DST-PORT
+
+匹配请求目标端口
+
+### SRC-PORT
+
+匹配请求来源端口
+
+### IN-PORT
+
+匹配[入站端口](../inbound/listeners/index.md#port)
+
+### IN-TYPE
+
+匹配[入站类型](../inbound/listeners/index.md#type)
+
+### IN-USER
+
+匹配[入站](../inbound/listeners/index.md)用户名
+
+### IN-NAME
+
+匹配[入站名称](../inbound/listeners/index.md#name)
+
+### PROCESS-PATH
+
+匹配完整进程路径
+
+### PROCESS-NAME
+
+匹配进程名称,在`Android`平台可以匹配包名
+
+### UID
+
+匹配`Linux`USER ID
+
+### NETWORK
+
+匹配`tcp`或者`udp`
+
+### DSCP
+
+匹配`DSCP`标记(仅限tproxy udp入站)
+
+### RULE-SET
+
+引用规则集合,需配置[rule-providers](../rule-providers/index.md)
+
+### AND & OR & NOT
+
+逻辑规则,需要注意括号的使用
+
+### SUB-RULE
+
+匹配至[子规则](../sub-rule.md),需要注意括号的使用
+
+### MATCH
+
+匹配所有请求,无需条件
+
+## no-resolve
+
+当请求为域名匹配到IP相关规则时,mihomo将请求DNS查询来检查域名的IP是否匹配此条规则,可以选择`no-resolve`选项以跳过域名去进行 dns 解析
+
+如在更早的匹配中触发了解析,则依旧会匹配到添加了“`no-resolve`”选项的 IP 规则

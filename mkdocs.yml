@@ -230,19 +230,19 @@ nav:
       - 负载均衡: config/proxy-groups/load-balance.md
       - 链式代理: config/proxy-groups/relay.md
       - 内置策略: config/proxy-groups/built-in.md
-    - 规则:
-      - 规则配置: config/rules/index.md
-      - 域名规则: config/rules/domain.md
-      - IP规则: config/rules/ip.md
-      - 端口规则: config/rules/port.md
-      - 进程规则: config/rules/process.md
-      - 逻辑规则: config/rules/logic.md
-      - GEO规则: config/rules/geox.md
-      - 入站规则: config/rules/in.md
-      - 网络类型规则: config/rules/network.md
-      - 引用规则集合: config/rules/rule-set.md
-      - 引用子规则: config/rules/sub-rule.md
-      - 最终匹配: config/rules/match.md
+    - 路由规则:
+      - config/rules/index.md
+      # - 域名规则: config/rules/domain.md
+      # - IP规则: config/rules/ip.md
+      # - 端口规则: config/rules/port.md
+      # - 进程规则: config/rules/process.md
+      # - 逻辑规则: config/rules/logic.md
+      # - GEO规则: config/rules/geox.md
+      # - 入站规则: config/rules/in.md
+      # - 网络类型规则: config/rules/network.md
+      # - 引用规则集合: config/rules/rule-set.md
+      # - 引用子规则: config/rules/sub-rule.md
+      # - 最终匹配: config/rules/match.md
     - 规则集合: 
       - 规则集合: config/rule-providers/index.md
       - 规则集合内容: config/rule-providers/content.md
