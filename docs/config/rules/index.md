@@ -26,6 +26,7 @@ rules:
   - IN-NAME,ss,PROXY
 
   - PROCESS-PATH,/usr/bin/wget,PROXY
+  - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
   - PROCESS-NAME,curl,PROXY
   - PROCESS-NAME,com.termux,PROXY
   - UID,1001,DIRECT
