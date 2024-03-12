@@ -27,7 +27,7 @@ proxies:
 
 [通用字段](./index.md)
 
-# VMess-h2
+## VMess-h2
 
 ```{.yaml linenums="1"}
 proxies:
@@ -48,7 +48,7 @@ proxies:
     path: /
 ```
 
-# VMess-http
+## VMess-http
 
 ```{.yaml linenums="1"}
 proxies:
@@ -72,7 +72,7 @@ proxies:
   # ip-version: ipv4 # 设置使用 IP 类型偏好，可选：ipv4，ipv6，dual，默认值：dual
 ```
 
-# VMess-gRPC
+## VMess-gRPC
 
 ```{.yaml linenums="1"}
 proxies:

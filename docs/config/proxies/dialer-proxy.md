@@ -1,6 +1,6 @@
+# dialer-proxy
 
-### dialer-proxy
-指定当前 `proxy` 通过下一跳的 `dialer-proxy` 建立网络连接, 值可以为代理组、代理（proxy-groups, proxy）的同一 `name` 字段
+指定当前 `proxy` 通过下一跳的 `dialer-proxy` 建立网络连接，值可以为代理组、代理（proxy-groups, proxy）的同一 `name` 字段
 
 ```{.yaml linenums="1"}
 proxies:

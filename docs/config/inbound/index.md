@@ -1,8 +1,8 @@
-Clash.Meta 使用流量入站,可以作为服务器。
+Clash.Meta 使用流量入站，可以作为服务器。
 
 ## 局域网入站
 
-用于监听局域网流量的入站,适用于无加密传输：
+用于监听局域网流量的入站，适用于无加密传输：
 
 ```{.yaml linenums="1"}
 listeners:
@@ -146,9 +146,9 @@ listeners:
 ```
 
 !!! note
- proxy 如果不为空,则将该入站流量交由指定[proxy](../proxies/index.md)处理
+    proxy 如果不为空，则将该入站流量交由指定[proxy](../proxies/index.md)处理
 
- rule 如果定义的 [子规则 (sub-rule)](../rules/sub-rule.md)不存在 则直接使用 rules
+    rule 如果定义的 [子规则 (sub-rule)](../sub-rule.md)不存在 则直接使用 rules
 
 ## 入口配置
 

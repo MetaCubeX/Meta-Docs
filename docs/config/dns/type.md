@@ -50,7 +50,7 @@
 - dhcp://en0
 ```
 
-仅限cmfa,使用系统dns
+仅限 cmfa，使用系统 dns
 ```{.yaml linenums="1"}
 - dhcp://system
 ```

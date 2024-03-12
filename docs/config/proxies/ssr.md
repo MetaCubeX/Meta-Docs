@@ -1,3 +1,5 @@
+# ShadowsocksR
+
 ```{.yaml linenums="1"}
 proxies:
   - name: "ssr"
@@ -12,4 +14,5 @@ proxies:
     # protocol-param: "#"
     # udp: true
 ```
+
 [通用字段](./index.md)

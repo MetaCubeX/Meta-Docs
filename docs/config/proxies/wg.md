@@ -1,6 +1,8 @@
+# WireGuard
+
 ## 简化写法
 
-如果只有一个peer，可以使用简化写法。
+如果只有一个 peer，可以使用简化写法。
 
 ```{.yaml linenums="1"}
 proxies:
@@ -24,9 +26,9 @@ proxies:
 
 ## 完整写法
 
-完整写法可以指定多个peer。
+完整写法可以指定多个 peer。
 
-如果使用多个peer，每一个peer的`allowed-ips`需要做区分；此时顶层段落的`server, port, ip, ipv6, public-key, pre-shared-key, reserved`等字段均会被忽略，不过`private-key`仍然在顶层指定。
+如果使用多个 peer，每一个 peer 的`allowed-ips`需要做区分；此时顶层段落的`server, port, ip, ipv6, public-key, pre-shared-key, reserved`等字段均会被忽略，不过`private-key`仍然在顶层指定。
 
 ```{.yaml linenums="1"}
 proxies:
@@ -53,25 +55,25 @@ proxies:
 
 ### ip
 
-本机在Wireguard网络中使用的IPv4地址
+本机在 Wireguard 网络中使用的 IPv4 地址
 
 ### ipv6
 
-可选字段，本机在Wireguard网络中使用的IPv6地址
+可选字段，本机在 Wireguard 网络中使用的 IPv6 地址
 
 ### private-key
 
-base64编码的Wireguard客户端私钥
+base64 编码的 Wireguard 客户端私钥
 
 可以使用`wg genkey | tee privatekey | wg pubkey > publickey`命令生成一对可用的公私钥文件
 
 ### public-key
 
-base64编码的Wireguard服务端公钥
+base64 编码的 Wireguard 服务端公钥
 
 ### allowed-ips
 
-可选字段，限制客户端的哪些IP段的流量由服务端进行转发。一般情况下可填`['0.0.0.0/0']`
+可选字段，限制客户端的哪些 IP 段的流量由服务端进行转发。一般情况下可填`['0.0.0.0/0']`
 
 ### pre-shared-key
 
@@ -79,23 +81,23 @@ base64编码的Wireguard服务端公钥
 
 ### reserved
 
-可选字段，Wireguard协议保留字段的值，部分WARP节点需要使用
+可选字段，Wireguard 协议保留字段的值，部分 WARP 节点需要使用
 
 ### mtu
 
-可选字段，设置MTU值
+可选字段，设置 MTU 值
 
 ### remote-dns-resolve
 
-可选字段，是否强制dns远程解析，默认值为false
+可选字段，是否强制 dns 远程解析，默认值为 false
 
 ### dns
 
-可选字段，当`remote-dns-resolve`为true时生效，指定远程解析使用的dns服务器
+可选字段，当`remote-dns-resolve`为 true 时生效，指定远程解析使用的 dns 服务器
 
-## 从Wireguard标准配置文件翻译
+## 从 Wireguard 标准配置文件翻译
 
-假设有如下Wireguard标准配置文件：
+假设有如下 Wireguard 标准配置文件：
 
 ```ini
 [Interface]
@@ -111,7 +113,7 @@ Endpoint = <远端地址>:<远端端口>
 PublicKey = <远端公钥>
 ```
 
-对应的clash节点配置为：
+对应的 clash 节点配置为：
 
 ```{.yaml linenums="1"}
 - name: "wg"

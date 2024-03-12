@@ -1,3 +1,5 @@
+# Shadowsocks
+
 ```{.yaml linenums="1"}
 proxies:
 - name: "ss1"
@@ -19,9 +21,9 @@ proxies:
 
 [通用字段](./index.md)
 
-### cipher
+## cipher
 
-加密方法,支持:
+加密方法，支持：
 
 aes-128-gcm aes-192-gcm aes-256-gcm
 
@@ -35,41 +37,27 @@ chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
 2022-blake3-aes-128-gcm 2022-blake3-aes-256-gcm 2022-blake3-chacha20-poly1305
 
-### password
+## password
 
 Shadowsocks 密码
 
-### udp
+## udp
 
-是否使用 udp,默认 true
+是否使用 udp，默认 true
 
-### udp-over-tcp
+## udp-over-tcp
 
-是否使用 UDP over TCP,默认 false
+是否使用 UDP over TCP，默认 false
 
-### udp-over-tcp-version
+## udp-over-tcp-version
 
 UDP over TCP 的协议版本，默认 2。可选值 1、2。
-
-### SMUX
-
-```{.yaml linenums="1"}
-  smux:
-    enabled: false
-    protocol: smux # smux/yamux/h2mux
-    # max-connections: 4 # Maximum connections. Conflict with max-streams.
-    # min-streams: 4 # Minimum multiplexed streams in a connection before opening a new connection. Conflict with max-streams.
-    # max-streams: 0 # Maximum multiplexed streams in a connection before opening a new connection. Conflict with max-connections and min-streams.
-    # padding: false # Enable padding. Requires sing-box server version 1.3-beta9 or later.
-    # statistic: false # 控制是否将底层连接显示在面板中，方便打断底层连接
-    # only-tcp: false # 如果设置为true, smux的设置将不会对udp生效，udp连接会直接走底层协议
-```
 
 ## 插件
 
 ### plugin
 
-插件,支持 `obfs`/`v2ray-plugin`/`shadow-tls`/`restls`
+插件，支持 `obfs`/`v2ray-plugin`/`shadow-tls`/`restls`
 
 ### plugin-opts
 

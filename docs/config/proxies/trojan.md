@@ -1,3 +1,5 @@
+# Trojan
+
 ```{.yaml linenums="1"}
 proxies:
 - name: "trojan"
@@ -17,7 +19,7 @@ proxies:
 
 [通用字段](./index.md)
 
-# Trojan-grpc
+## Trojan-grpc
 
 ```{.yaml linenums="1"}
 proxies:
@@ -35,7 +37,7 @@ proxies:
     grpc-service-name: "example"
 ```
 
-# Trojan-ws
+## Trojan-ws
 
 ```{.yaml linenums="1"}
 proxies:
@@ -56,7 +58,7 @@ proxies:
   #   v2ray-http-upgrade: false
 ```
 
-# Trojan-xtls
+## Trojan-xtls
 
 ```{.yaml linenums="1"}
 proxies:

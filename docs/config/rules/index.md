@@ -47,7 +47,7 @@ rules:
 规则将按照从上到下的顺序匹配，列表顶部的规则优先级高于其底下的规则
 
 !!! warning ""
-    如请求为udp,而代理节点没有udp支持(例如`ss`节点没写`udp: true`),则会继续向下匹配
+    如请求为 udp，而代理节点没有 udp 支持 (例如`ss`节点没写`udp: true`),则会继续向下匹配
 
 ### DOMAIN
 
@@ -69,31 +69,31 @@ rules:
 
 ### GEOSITE
 
-匹配Geosite内的域名,部分内容参考 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community/tree/master/data)
+匹配 Geosite 内的域名，部分内容参考 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community/tree/master/data)
 
 ### IP-CIDR & IP-CIDR6
 
-匹配IP地址范围,`IP-CIDR`和`IP-CIDR6`效果是一样的,`IP-CIDR6`只是一个别名
+匹配 IP 地址范围，`IP-CIDR`和`IP-CIDR6`效果是一样的，`IP-CIDR6`只是一个别名
 
 ### IP-SUFFIX
 
-匹配IP后缀范围
+匹配 IP 后缀范围
 
 ### IP-ASN
 
-匹配IP所属ASN
+匹配 IP 所属 ASN
 
 ### GEOIP
 
-匹配IP所属国家代码
+匹配 IP 所属国家代码
 
 ### SRC-IP-CIDR
 
-匹配来源IP地址范围
+匹配来源 IP 地址范围
 
 ### SRC-IP-SUFFIX
 
-匹配来源IP后缀范围
+匹配来源 IP 后缀范围
 
 ### DST-PORT
 
@@ -125,7 +125,7 @@ rules:
 
 ### PROCESS-NAME
 
-匹配进程名称,在`Android`平台可以匹配包名
+匹配进程名称，在`Android`平台可以匹配包名
 
 ### UID
 
@@ -137,15 +137,15 @@ rules:
 
 ### DSCP
 
-匹配`DSCP`标记(仅限tproxy udp入站)
+匹配`DSCP`标记 (仅限 tproxy udp 入站)
 
 ### RULE-SET
 
-引用规则集合,需配置[rule-providers](../rule-providers/index.md)
+引用规则集合，需配置[rule-providers](../rule-providers/index.md)
 
 ### AND & OR & NOT
 
-逻辑规则,需要注意括号的使用
+逻辑规则，需要注意括号的使用
 
 ### SUB-RULE
 
@@ -153,10 +153,10 @@ rules:
 
 ### MATCH
 
-匹配所有请求,无需条件
+匹配所有请求，无需条件
 
 ## no-resolve
 
-当请求为域名匹配到IP相关规则时,mihomo将请求DNS查询来检查域名的IP是否匹配此条规则,可以选择`no-resolve`选项以跳过域名去进行 dns 解析
+当请求为域名匹配到 IP 相关规则时，mihomo 将请求 DNS 查询来检查域名的 IP 是否匹配此条规则，可以选择`no-resolve`选项以跳过域名去进行 dns 解析
 
-如在更早的匹配中触发了解析,则依旧会匹配到添加了“`no-resolve`”选项的 IP 规则
+如在更早的匹配中触发了解析，则依旧会匹配到添加了“`no-resolve`”选项的 IP 规则

@@ -1,3 +1,5 @@
+# SSH
+
 ```{.yaml linenums="1"}
 proxies:
 - name: "ssh-out"
@@ -14,11 +16,11 @@ proxies:
 
 ## username
 
-SSH用户
+SSH 用户
 
 ## password
 
-SSH密码
+SSH 密码
 
 ## privateKey
 

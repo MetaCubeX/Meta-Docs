@@ -1,3 +1,5 @@
+# Hysteria2
+
 [配置参考](https://hysteria.network/zh/docs/advanced-usage/#%e5%ae%a2%e6%88%b7%e7%ab%af)
 
 ```{.yaml linenums="1"}

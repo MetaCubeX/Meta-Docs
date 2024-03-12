@@ -1,7 +1,9 @@
+# VLESS
+
 !!! note
     Clash 的 H2 传输层未实现多路复用功能，在 Clash.Meta 中更建议使用 gRPC 协议
 
-#### VLESS-xtls-rprx-vision
+## VLESS-xtls-rprx-vision
 
 ```{.yaml linenums="1"}
 proxies:
@@ -23,11 +25,9 @@ proxies:
 [通用字段](./index.md)
 
 !!! note
-    Meta 的 `xtls-*` 流控实际上与 Xray-core 中的 `xtls-*-udp443` 等效，如需拦截 443 端口的 UDP 流量，请使用逻辑规则：
+    Meta 的 `xtls-*` 流控实际上与 Xray-core 中的 `xtls-*-udp443` 等效，如需拦截 443 端口的 UDP 流量，请使用逻辑规则：`AND,((NETWORK,UDP),(DST-PORT,443)),REJECT`
 
-    `AND,((NETWORK,UDP),(DST-PORT,443)),REJECT`
-
-#### VLESS-reality-vision
+## VLESS-reality-vision
 
 ```{.yaml linenums="1"}
 proxies:
@@ -47,7 +47,7 @@ proxies:
   client-fingerprint: chrome # cannot be empty
 ```
 
-#### VLESS-reality-grpc
+## VLESS-reality-grpc
 
 ```{.yaml linenums="1"}
 proxies:
@@ -69,7 +69,7 @@ proxies:
     short-id: 10f897e26c4b9478
 ```
 
-#### VLESS-TCP-TLS
+## VLESS-TCP-TLS
 
 ```{.yaml linenums="1"}
 - name: "vless-tcp"
@@ -85,7 +85,7 @@ proxies:
 
 ```
 
-#### VLESS-WS-TLS
+## VLESS-WS-TLS
 
 ```{.yaml linenums="1"}
 - name: "vless-ws"

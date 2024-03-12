@@ -1,3 +1,5 @@
+# SOCKS
+
 ```{.yaml linenums="1"}
 proxies:
 - name: "socks"
@@ -12,4 +14,5 @@ proxies:
   # udp: true
   # ip-version: ipv6
 ```
+
 [通用字段](./index.md)

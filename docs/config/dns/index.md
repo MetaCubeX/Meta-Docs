@@ -1,9 +1,4 @@
----
-description: Clash 的 DNS 模块配置
----
-## 示例
-
-以下的拆分说明皆是 `DNS` 下的配置项
+# DNS
 
 ```{.yaml linenums="1"}
 dns:
@@ -45,97 +40,43 @@ dns:
 
 ## enable
 
-可选值 `true/false`
-
 是否启用，如为 false，则使用系统 DNS 解析
-
-```{.yaml linenums="1"}
-dns:
-  enable: true
-```
 
 ## prefer-h3
 
-可选值 `true/false`
-
-是否开启 DOH 的 http/3
-
-```{.yaml linenums="1"}
-prefer-h3: true
-```
+优先使用 DOH 的 http/3
 
 ## listen
 
 DNS 服务监听
 
-```{.yaml linenums="1"}
-listen: 0.0.0.0:1053
-```
-
 ## IPV6
 
-可选值 `true/false`
-
 是否解析 IPV6, 如为 false, 则回应 AAAA 的空解析
-
-```{.yaml linenums="1"}
-ipv6: true
-```
 
 ## enhanced-mode
 
 可选值 `fake-ip / redir-host`
 
-Clash 的 DNS 处理模式
-
-```{.yaml linenums="1"}
-enhanced-mode: fake-ip
-```
+mihomo 的 DNS 处理模式
 
 ## fake-ip-range
 
-格式为 `ip/掩码`
-
-fakeip 下的 IP 段设置，tun 网卡的默认 IP 也使用此值
-
-```{.yaml linenums="1"}
-fake-ip-range: 198.18.0.1/16
-```
+fakeip 下的 IP 段设置，tun 网卡的默认 IP 也使用此值作为参考
 
 ## fake-ip-filter
 
 fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
-```{.yaml linenums="1"}
-fake-ip-filter:
-  - '+.lan'
-  - '+.local'
-  - localhost.ptlogin2.qq.com
-```
-
 ## use-hosts
 
-可选值 `true/false`
-
-是否查询系统 hosts
-
-```{.yaml linenums="1"}
-use-hosts: true
-```
+是否查询 hosts
 
 ## default-nameserver
 
 默认 DNS, 用于解析 DNS 服务器 的域名
-
-必须为 IP, 可为加密 DNS
-
-```{.yaml linenums="1"}
-default-nameserver:
-  - 114.114.114.114
-  - 8.8.8.8
-  - tls://223.5.5.5:853
-  - https://223.5.5.5/dns-query
-```
+!!! node ""
+    必须为 IP, 可为加密 DNS
 
 ## nameserver-policy
 
@@ -151,27 +92,16 @@ nameserver-policy:
   'geosite:geolocation-!cn': [tls://8.8.4.4, https://1.0.0.1/dns-query]
   'www.baidu.com,+.google.cn': https://doh.pub/dns-query
   'geosite:private,apple': https://dns.alidns.com/dns-query
-  'rule-set:google': 8.8.8.8
+  'rule-set:google,cloudflare': 8.8.8.8
 ```
 
 ## nameserver
 
 默认的域名解析服务器，如不配置 `fallback/proxy-server-nameserver` , 则所有域名都由 nameserver 解析
 
-```{.yaml linenums="1"}
-nameserver:
-  - tls://dot.pub
-  - https://dns.alidns.com/dns-query
-```
-
 ## proxy-server-nameserver
 
 代理节点域名解析服务器，仅用于解析代理节点的域名
-
-```{.yaml linenums="1"}
-proxy-server-nameserver:
- - https://doh.pub/dns-query
-```
 
 ## fallback
 
@@ -179,19 +109,11 @@ proxy-server-nameserver:
 
 配置 `fallback`后默认启用 `fallback-filter`,`geoip-code`为 cn
 
-```{.yaml linenums="1"}
-fallback:
-  - tls://dns.google
-  - https://1.0.0.1/dns-query
-```
-
 ## fallback-filter
 
 后备域名解析服务器筛选，满足条件的将使用 `fallback`结果或只使用 `fallback`解析
 
 ### geoip
-
-可选值为 `true/false`
 
 是否启用 fallback filter
 
@@ -218,20 +140,6 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 ### domain
 
 这些域名被视为已污染，匹配到这些域名，会直接使用 `fallback`解析，不去使用 `nameserver`
-
-```{.yaml linenums="1"}
-fallback-filter:
-    geoip: true
-    geoip-code: CN
-    geosite:
-      - gfw
-    ipcidr:
-      - 240.0.0.0/4
-    domain:
-      - '+.google.com'
-      - '+.facebook.com'
-      - '+.youtube.com'
-```
 
 ## 部分特殊写法
 

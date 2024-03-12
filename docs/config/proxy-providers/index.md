@@ -1,3 +1,5 @@
+# 代理集合
+
 ```{.yaml linenums="1"}
 proxy-providers:
   provider1:
@@ -37,11 +39,11 @@ proxy-providers:
 
 ## name
 
-必须, 如`provider1`,不能重复,建议不要和[策略组](../proxy-groups/index.md#name)名称重复
+必须，如`provider1`,不能重复，建议不要和[策略组](../proxy-groups/index.md#name)名称重复
 
 ## type
 
-必须, `provider`类型,可选`http/file`
+必须，`provider`类型，可选`http/file`
 
 ## url
 
@@ -49,25 +51,25 @@ proxy-providers:
 
 ## path
 
-可选,文件路径,不可重复,不填写时会使用url的MD5作为此文件的文件名
+可选，文件路径，不可重复，不填写时会使用 url 的 MD5 作为此文件的文件名
 
-由于安全问题,此路径将限制只允许在 `HomeDir`(有启动参数 -d 配置)中,如果想存储到任意位置配置环境变量 `SKIP_SAFE_PATH_CHECK=1`
+由于安全问题，此路径将限制只允许在 `HomeDir`(有启动参数 -d 配置) 中，如果想存储到任意位置配置环境变量 `SKIP_SAFE_PATH_CHECK=1`
 
 ## interval
 
-更新`provider`的时间,单位为秒
+更新`provider`的时间，单位为秒
 
 ## health-check
 
-健康检查(延迟测试)
+健康检查 (延迟测试)
 
 ### enable
 
-是否启用,可选 `true/false`
+是否启用，可选 `true/false`
 
 ### url
 
-健康检查地址,推荐使用以下地址之一
+健康检查地址，推荐使用以下地址之一
 
 === "Cloudflare"
     ```yaml
@@ -81,15 +83,15 @@ proxy-providers:
 
 ### interval
 
-健康检查间隔时间,单位为秒
+健康检查间隔时间，单位为秒
 
 ### timeout
 
-健康检查超时时间,单位为毫秒
+健康检查超时时间，单位为毫秒
 
 ## lazy
 
-懒惰状态,默认为`true`,不使用该集合节点时,不进行测试
+懒惰状态，默认为`true`,不使用该集合节点时，不进行测试
 
 ### expected-status
 
@@ -97,7 +99,7 @@ proxy-providers:
 
 ## override
 
-覆写节点内容,以下为支持的字段
+覆写节点内容，以下为支持的字段
 
 ### additional-prefix
 
@@ -135,6 +137,6 @@ proxy-providers:
 
 ## exclude-type
 
-不支持正则表达式,通过 `|` 分割,根据节点类型排除
+不支持正则表达式，通过 `|` 分割，根据节点类型排除
 
-注意,`proxy-groups` 与 `proxy-providers` 写法不同
+注意，`proxy-groups` 与 `proxy-providers` 写法不同

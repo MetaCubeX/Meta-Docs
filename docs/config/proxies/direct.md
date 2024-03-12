@@ -1,3 +1,5 @@
+# DIRECT
+
 ```{.yaml linenums="1"}
 proxies:
 - name: "direct"
