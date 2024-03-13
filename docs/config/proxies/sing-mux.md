@@ -1,4 +1,4 @@
-# SING-MUX
+# sing-mux
 
 ```{.yaml linenums="1"}
 smux:
@@ -24,8 +24,8 @@ smux:
 
 多路复用协议，支持如下协议，默认使用 `h2mux`
 
-| 协议     | 描述                                |
-|---------|------------------------------------|
+| 协议     | 描述                                  |
+|---------|--------------------------------------|
 | `smux`  | <https://github.com/xtaci/smux>      |
 | `yamux` | <https://github.com/hashicorp/yamux> |
 | `h2mux` | <https://golang.org/x/net/http2>     |

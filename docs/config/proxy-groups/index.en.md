@@ -1,3 +1,5 @@
+# Common fields
+
 ```{.yaml linenums="1"}
 proxy-groups:
 - name: "proxy"
@@ -85,8 +87,6 @@ Include all [proxies](../proxies/index.md) and [proxy-providers](../proxy-provid
 
 !!! info ""
     Excludes proxy-groups, you can include other proxy-groups in [`proxies`](./index.md#proxies).
-
-    Will make [`include-all-proxies`](./index.md#include-all-proxies) and [`include-all-providers`](./index.md#include-all-providers) ineffective.
 
 ## include-all-proxies
 

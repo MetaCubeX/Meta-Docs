@@ -8,6 +8,7 @@ proxies:
   type: hysteria2
   server: server.com
   port: 443
+  # ports: 10000-20000/443
   #  up和down均不写或为0则使用BBR流控
   # up: "30 Mbps" # 若不写单位，默认为 Mbps
   # down: "200 Mbps" # 若不写单位，默认为 Mbps

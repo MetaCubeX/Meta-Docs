@@ -1,3 +1,5 @@
+# rule-provider
+
 ```{.yaml linenums="1"}
 rule-providers:
   google:

@@ -1,4 +1,6 @@
-### classical
+# rule-providers 文件内容
+
+## classical
 
 === "yaml"
     ```{.yaml linenums="1"}
@@ -25,7 +27,7 @@
     SRC-PORT,7777
     ```
 
-### domain
+## domain
 
 `domain`类规则集合内容通配应遵守[clash通配符](../index.md#_7)
 
@@ -37,7 +39,6 @@
     - 'books.itunes.apple.com'
     ```
 
-
 === "text"
     ```text
     .blogger.com
@@ -45,8 +46,7 @@
     books.itunes.apple.com
     ```
 
-### ipcidr
-
+## ipcidr
 
 === "yaml"
     ```{.yaml linenums="1"}
@@ -60,4 +60,3 @@
     192.168.1.0/24
     10.0.0.0.1/32
     ```
-

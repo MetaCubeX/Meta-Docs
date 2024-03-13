@@ -1,4 +1,6 @@
-Clash uses `yaml` as the configuration file format.
+# Syntax
+
+mihomo uses `yaml` as the configuration file format.
 
 `yaml` is case-sensitive and uses indentation to represent hierarchical relationships. Tabs are not allowed for indentation; only spaces are permitted. The number of spaces for indentation is not critical, as long as elements at the same level are left-aligned.
 
@@ -62,7 +64,7 @@ tun: { enable: true, stack: system, auto-route: true, auto-detect-interface: tru
 
 Lines starting with - form an array and are used for multiple values within an object.
 
-### Multiline
+### Multiline Arrays
 
 ```{.yaml linenums="1"}
 a:
@@ -71,7 +73,7 @@ a:
   - d
 ```
 
-### Single-line JSON Extension
+### Single-line JSON Arrays
 
 ```{.yaml linenums="1"}
 a: [b, c, d]

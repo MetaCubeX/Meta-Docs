@@ -1,4 +1,6 @@
-Clash 使用 `yaml` 作为配置文件格式
+# 语法
+
+mihomo 使用 `yaml` 作为配置文件格式
 
 `yaml` 大小写敏感,使用缩进表示层级关系,缩进不允许使用 tab, 只允许空格,缩进的空格数不重要,只要相同层级的元素左对齐即可
 
@@ -18,7 +20,7 @@ socks-port: 7891
 
 因`yaml`格式为`json`的超集,所以可以直接使用`json`的写法
 
-#### 多行
+### 多行
 
 ```{.yaml linenums="1"}
 tun:
@@ -28,7 +30,7 @@ tun:
   auto-detect-interface: true
 ```
 
-#### 多行json扩展
+### 多行json
 
 ```{.yaml linenums="1"}
 tun: { 
@@ -39,12 +41,14 @@ tun: {
   }
 ```
 
-#### 单行json扩展
+### 单行json
 
 ```{.yaml linenums="1"}
 tun: { enable: true, stack: system, auto-route: true, auto-detect-interface: true}
 ```
-#### 全json(不推荐)
+
+### 全json
+
 ```{.json linenums="1"}
 {
   "tun": {
@@ -60,7 +64,7 @@ tun: { enable: true, stack: system, auto-route: true, auto-detect-interface: tru
 
 以`-`开头的行表示构成一个数组,用于一个对象内的多个值
 
-#### 多行
+### 多行数组
 
 ```{.yaml linenums="1"}
 a:
@@ -69,7 +73,7 @@ a:
   - d
 ```
 
-#### 单行json扩展
+### 单行json数组
 
 ```{.yaml linenums="1"}
 a: [b, c, d]

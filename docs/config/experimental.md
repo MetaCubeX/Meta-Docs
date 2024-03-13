@@ -1,3 +1,5 @@
+# 实验性配置
+
 ```{.yaml linenums="1"}
 experimental:
   quic-go-disable-gso: false

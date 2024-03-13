@@ -1,3 +1,5 @@
+# 通用字段
+
 ```{.yaml linenums="1"}
 proxy-groups:
 - name: "proxy"
@@ -84,8 +86,6 @@ proxy-groups:
 引入所有[出站代理](../proxies/index.md)以及[代理集合](../proxy-providers/index.md)
 !!! info ""
     引入不包含策略组,可在[proxies](./index.md#proxies)引入其他策略组
-
-    会使[`include-all-proxies`](./index.md#include-all-proxies)和[`include-all-providers`](./index.md#include-all-providers)失效
 
 ## include-all-proxies
 
