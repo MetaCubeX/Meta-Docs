@@ -158,6 +158,6 @@ rules:
 
 ## no-resolve
 
-当请求为域名匹配到 IP 相关规则时，mihomo 将请求 DNS 查询来检查域名的 IP 是否匹配此条规则，可以选择`no-resolve`选项以跳过域名去进行 dns 解析
+域名开始匹配关于 `目标IP` 规则时，mihomo 将触发 dns 解析来检查域名的 `目标IP` 是否匹配规则，可以选择 `no-resolve` 选项以跳过 dns 解析
 
-如在更早的匹配中触发了解析，则依旧会匹配到添加了“`no-resolve`”选项的 IP 规则
+如在更早的匹配中触发了 dns 解析，则依旧会匹配到添加了 `no-resolve` 选项的 `目标IP` 类规则
