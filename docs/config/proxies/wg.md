@@ -28,18 +28,18 @@ proxies:
 
 完整写法可以指定多个 peer。
 
-如果使用多个 peer，每一个 peer 的`allowed-ips`需要做区分；此时顶层段落的`server, port, ip, ipv6, public-key, pre-shared-key, reserved`等字段均会被忽略，不过`private-key`仍然在顶层指定。
+如果使用多个 peer，每一个 peer 的`allowed-ips`需要做区分；此时顶层段落的`server, port, public-key, pre-shared-key, reserved`等字段均会被忽略，不过`private-key`仍然在顶层指定。
 
 ```{.yaml linenums="1"}
 proxies:
 - name: "wg"
   type: wireguard
+  ip: 172.16.0.2
+  ipv6: fd01:5ca1:ab1e:80fa:ab85:6eea:213f:f4a5
   private-key: eCtXsJZ27+4PbhDkHnB923tkUn2Gj59wZw5wFA75MnU=
   peers:
     - server: 162.159.192.1
       port: 2480
-      ip: 172.16.0.2
-      ipv6: fd01:5ca1:ab1e:80fa:ab85:6eea:213f:f4a5
       public-key: Cr8hWlKvtDt7nrvf+f0brNQQzabAqrjfBvas9pmowjo=
       allowed-ips: ['0.0.0.0/0']
       # pre-shared-key: 31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=
@@ -118,12 +118,12 @@ PublicKey = <远端公钥>
 ```{.yaml linenums="1"}
 - name: "wg"
   type: wireguard
+  ip: <本机组网IP，IPv4往这里填>
+  ipv6: <本机组网IP，IPv6往这里填>  # 没有v6地址直接删除
   private-key: <本机私钥>
   peers:
     - server: <远端地址>
       port: <远端端口>
-      ip: <本机组网IP，IPv4往这里填>
-      ipv6: <本机组网IP，IPv6往这里填>  # 没有v6地址直接删除
       public-key: <远端公钥>
       allowed-ips: ['0.0.0.0/0']     # 分流由clash处理
       # reserved: [209,98,59]        # 如果需要自己填
