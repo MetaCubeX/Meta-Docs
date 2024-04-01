@@ -125,33 +125,21 @@ plugins:
             域名嗅探: Domain sniffing
             通用字段: Common fields
             入站: Inbounds
-            代理端口: Proxy port
-            出站代理: proxies
-            代理集合: proxy-providers
+            代理端口: Proxy Port
+            出站代理: Proxies
+            代理集合: Proxy-Providers
             代理集合配置: proxy-providers configuration
             代理集合内容: proxy-providers contents
-            策略组: proxy-groups
+            策略组: Proxy-Groups
             策略组配置: proxy-groups configuration
-            手动选择: select
-            自动选择: url-test
-            自动回退: fallback
-            负载均衡: load-balance
-            链式代理: relay
-            内置策略: built-in
-            规则: rules
-            规则配置: rules configuration
-            域名规则: domain
-            IP规则: ip
-            端口规则: port
-            进程规则: process
-            逻辑规则: logic
-            GEO规则: geox
-            入站规则: inbound
-            网络类型规则: network
-            引用规则集合: rule-set
-            引用子规则: sub-rule
-            最终匹配: match
-            规则集合: rule-providers
+            手动选择: Select
+            自动选择: Url-Test
+            自动回退: Fallback
+            负载均衡: Load-Balance
+            链式代理: Relay
+            内置策略: Built-In
+            路由规则: Route Rules
+            规则集合: Rule-Providers
             规则集合内容: rule-providers configuration
             子规则: sub-rule
             流量隧道: tunnels
@@ -168,9 +156,14 @@ nav:
     - 客户端: startup/client/index.md
     - 创建运行服务: startup/service/index.md
     - 第三方工具: startup/client/client.md
-    - 常见问题: startup/faq/index.md
-  #- 基础使用:
-  #  - Windows:
+  - 手册:
+    - 常见问题: faq/index.md
+    - 关于fakeip: faq/fakeip.md
+    - 大致工作流程:
+      - 流量入站: faq/in.md
+      - 流量处理: faq/route.md
+      - 流量发出: faq/out.md
+      - DNS处理: faq/dns.md
   - 示例:
     - 完整示例: example/index.md
     - 快捷配置: example/conf.md
