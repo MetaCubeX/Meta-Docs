@@ -1,3 +1,5 @@
+# SOCKS
+
 ```{.yaml linenums="1"}
 listeners:
 - name: socks-in
@@ -6,13 +8,14 @@ listeners:
   listen: 0.0.0.0
   udp: true
 ```
+
 ## [通用字段](./index.md)
 
 ## 协议配置
 
 ### udp
 
-是否监听UDP
+是否监听 UDP
 
 ### 用户验证
 

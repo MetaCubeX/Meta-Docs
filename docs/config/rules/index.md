@@ -2,45 +2,49 @@
 
 ```{.yaml linenums="1"}
 rules:
-  - DOMAIN,ad.com,REJECT
-  - DOMAIN-SUFFIX,google.com,auto
-  - DOMAIN-KEYWORD,google,auto
-  - DOMAIN-REGEX,^abc.*com,PROXY
-  - GEOSITE,youtube,PROXY
+- DOMAIN,ad.com,REJECT
+- DOMAIN-SUFFIX,google.com,auto
+- DOMAIN-KEYWORD,google,auto
+- DOMAIN-REGEX,^abc.*com,PROXY
+- GEOSITE,youtube,PROXY
 
-  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR6,2620:0:2d0:200::7/32,auto
-  - IP-SUFFIX,8.8.8.8/24,PROXY
-  - IP-ASN,13335,DIRECT
-  - GEOIP,CN,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR6,2620:0:2d0:200::7/32,auto
+- IP-SUFFIX,8.8.8.8/24,PROXY
+- IP-ASN,13335,DIRECT
+- GEOIP,CN,DIRECT
 
-  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
-  - SRC-IP-SUFFIX,192.168.1.201/8,DIRECT
+- SRC-GEOIP,cn.DIRECT
+- SCR-IP-ASN,9808,DIRECT
+- SRC-IP-CIDR,192.168.1.201/32,DIRECT
+- SRC-IP-SUFFIX,192.168.1.201/8,DIRECT
 
-  - DST-PORT,80,DIRECT
-  - SRC-PORT,7777,DIRECT
+- DST-PORT,80,DIRECT
+- SRC-PORT,7777,DIRECT
 
-  - IN-PORT,7890,PROXY
-  - IN-TYPE,SOCKS/HTTP,PROXY
-  - IN-USER,mihomo,PROXY
-  - IN-NAME,ss,PROXY
+- IN-PORT,7890,PROXY
+- IN-TYPE,SOCKS/HTTP,PROXY
+- IN-USER,mihomo,PROXY
+- IN-NAME,ss,PROXY
 
-  - PROCESS-PATH,/usr/bin/wget,PROXY
-  - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
-  - PROCESS-NAME,curl,PROXY
-  - PROCESS-NAME,com.termux,PROXY
-  - UID,1001,DIRECT
+- PROCESS-PATH,/usr/bin/wget,PROXY
+- PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
 
-  - NETWORK,udp,DIRECT
-  - DSCP,4,DIRECT
+- PROCESS-NAME,curl,PROXY
+- PROCESS-NAME,chrome.exe,PROXY
+- PROCESS-NAME,com.termux,PROXY
+- UID,1001,DIRECT
 
-  - RULE-SET,providername,proxy
-  - AND,((DOMAIN,baidu.com),(NETWORK,UDP)),DIRECT
-  - OR,((NETWORK,UDP),(DOMAIN,baidu.com)),REJECT
-  - NOT,((DOMAIN,baidu.com)),PROXY
-  - SUB-RULE,(NETWORK,tcp),sub-rule
+- NETWORK,udp,DIRECT
+- DSCP,4,DIRECT
 
-  - MATCH,auto
+- RULE-SET,providername,proxy
+- AND,((DOMAIN,baidu.com),(NETWORK,UDP)),DIRECT
+- OR,((NETWORK,UDP),(DOMAIN,baidu.com)),REJECT
+- NOT,((DOMAIN,baidu.com)),PROXY
+- SUB-RULE,(NETWORK,tcp),sub-rule
+
+- MATCH,auto
 ```
 
 ## 优先级
@@ -87,6 +91,14 @@ rules:
 ### GEOIP
 
 匹配 IP 所属国家代码
+
+### SRC-GEOIP
+
+匹配来源 IP 所属国家代码
+
+### SRC-IP-ASN
+
+匹配来源 IP 所属 ASN
 
 ### SRC-IP-CIDR
 

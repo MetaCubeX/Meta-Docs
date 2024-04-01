@@ -19,4 +19,4 @@ proxy-groups:
 
 ## tolerance
 
-节点切换容差,单位ms
+节点切换容差，单位 ms

@@ -2,6 +2,8 @@
 
 ## classical
 
+`classical` 支持[路由规则](../rules/index.md)的全部类型 (rule-set/sub-rule 除外)
+
 === "yaml"
     ```{.yaml linenums="1"}
     payload:
@@ -29,7 +31,7 @@
 
 ## domain
 
-`domain`类规则集合内容通配应遵守[clash通配符](../index.md#_7)
+`domain`类规则集合内容通配应遵守[clash 通配符](../syntax.md#_8)
 
 === "yaml"
     ```{.yaml linenums="1"}

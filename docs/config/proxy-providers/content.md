@@ -29,6 +29,6 @@
     ```
 
 !!! note
-    base64的uri通常为提供商提供给v2ray/xray的订阅链接内容
+    base64 的 uri 通常为提供商提供给 v2ray/xray 的订阅链接内容
 
     `YAML`/`uri`/`base64`不可写在同一文件,`uri`/`base64`不需要`proxies:`字段,直接书写即可
