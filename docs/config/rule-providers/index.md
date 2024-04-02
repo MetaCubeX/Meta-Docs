@@ -21,7 +21,7 @@ rule-providers:
 
 ## url
 
-类型为`http`是则必须配置
+类型为`http`则必须配置
 
 ## path
 
