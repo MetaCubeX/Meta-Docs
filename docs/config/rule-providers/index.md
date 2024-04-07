@@ -32,7 +32,7 @@ rule-providers:
 
 ## interval
 
-更新`provider`的时间，支持整数格式以及持续时间格式，整数格式单位为秒
+更新`provider`的时间，整数格式单位为秒
 
 ## proxy
 

@@ -178,3 +178,17 @@ fake-ip-filter:
   - "+.xboxlive.com"
   - localhost.ptlogin2.qq.com
 ```
+
+## 时间格式
+
+mihomo 支持两种时间格式，分别是整数和持续时间
+
+=== "整数格式"
+    ```{.yaml linenums="1"}
+    interval: 3600
+    ```
+
+=== "持续时间格式"
+    ```{.yaml linenums="1"}
+    interval: 1h
+    ```
