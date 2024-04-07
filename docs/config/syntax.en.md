@@ -171,3 +171,17 @@ fake-ip-filter:
   - "+.xboxlive.com"
   - localhost.ptlogin2.qq.com
 ```
+
+## Time Format
+
+Mihome supports two time formats: integer and duration.
+
+=== "Integer format"
+    ```{.yaml linenums="1"}
+    interval: 3600
+    ```
+
+=== "Duration format"
+    ```{.yaml linenums="1"}
+    interval: 1h
+    ```
