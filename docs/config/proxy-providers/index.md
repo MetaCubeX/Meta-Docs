@@ -65,7 +65,7 @@ proxy-providers:
 
 ## interval
 
-更新`provider`的时间，单位为秒
+更新`provider`的时间，支持整数格式以及持续时间格式，整数格式单位为秒
 
 ## proxy
 
@@ -99,11 +99,11 @@ proxy-providers:
 
 ### health-check.interval
 
-健康检查间隔时间，单位为秒
+健康检查间隔时间，支持整数格式以及持续时间格式，整数格式单位为秒
 
 ### health-check.timeout
 
-健康检查超时时间，单位为毫秒
+健康检查超时时间，支持整数格式以及持续时间格式，整数格式单位为毫秒
 
 ### health-check.lazy
 
