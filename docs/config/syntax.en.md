@@ -172,6 +172,7 @@ fake-ip-filter:
   - localhost.ptlogin2.qq.com
 ```
 
+<!-- 
 ## Time Format
 
 Mihome supports two time formats: integer and duration.
@@ -185,3 +186,4 @@ Mihome supports two time formats: integer and duration.
     ```{.yaml linenums="1"}
     interval: 1h
     ```
+-->

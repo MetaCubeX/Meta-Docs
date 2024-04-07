@@ -179,6 +179,7 @@ fake-ip-filter:
   - localhost.ptlogin2.qq.com
 ```
 
+<!--
 ## 时间格式
 
 mihomo 支持两种时间格式，分别是整数和持续时间
@@ -191,4 +192,5 @@ mihomo 支持两种时间格式，分别是整数和持续时间
 === "持续时间格式"
     ```{.yaml linenums="1"}
     interval: 1h
-    ```
+    ``` 
+-->

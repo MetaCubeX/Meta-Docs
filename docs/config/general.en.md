@@ -94,7 +94,7 @@ ipv6: true
 
 Controls the interval at which Clash sends out TCP Keep Alive packets to reduce temporary measures for mobile device power consumption.
 
-Integer format, unit is seconds
+unit is seconds
 
 ```{.yaml linenums="1"}
 keep-alive-interval: 30
@@ -256,7 +256,7 @@ geodata-loader: memconservative
 geo-auto-update: false
 ```
 
-Update interval, integer format in hours
+Update interval, unit is hours
 
 ```{.yaml linenums="1"}
 geo-update-interval: 24
