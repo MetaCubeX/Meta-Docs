@@ -7,6 +7,7 @@ rule-providers:
     path: ./rule1.yaml 
     url: "https://raw.githubusercontent.com/../Google.yaml"
     interval: 600
+    proxy: DIRECT
     behavior: classical
     format: yaml
 ```
@@ -32,6 +33,10 @@ rule-providers:
 ## interval
 
 更新`provider`的时间，单位为秒
+
+## proxy
+
+经过指定代理进行下载/更新
 
 ## behavior
 

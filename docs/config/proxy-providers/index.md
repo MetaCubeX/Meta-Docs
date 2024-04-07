@@ -7,11 +7,19 @@ proxy-providers:
     url: "http://test.com"
     path: ./proxy_providers/provider1.yaml
     interval: 3600
+    proxy: DIRECT
+    header:
+      User-Agent:
+      - "Clash/v1.18.0"
+      - "mihomo/1.18.3"
+      Authorization:
+      - 'token 1231231'
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
       timeout: 5000
+      lazy: true
       expected-status: 204
     override:
       skip-cert-verify: true
@@ -59,15 +67,23 @@ proxy-providers:
 
 更新`provider`的时间，单位为秒
 
+## proxy
+
+经过指定代理进行下载/更新
+
+## header
+
+自定义 http 请求头
+
 ## health-check
 
 健康检查 (延迟测试)
 
-### enable
+### health-check.enable
 
 是否启用，可选 `true/false`
 
-### url
+### health-check.url
 
 健康检查地址，推荐使用以下地址之一
 
@@ -81,19 +97,19 @@ proxy-providers:
     https://www.gstatic.com/generate_204
     ```
 
-### interval
+### health-check.interval
 
 健康检查间隔时间，单位为秒
 
-### timeout
+### health-check.timeout
 
 健康检查超时时间，单位为毫秒
 
-## lazy
+### health-check.lazy
 
 懒惰状态，默认为`true`,不使用该集合节点时，不进行测试
 
-### expected-status
+### health-check.expected-status
 
 参阅 [期望状态](../proxy-groups/index.md#expected-status)
 
@@ -101,11 +117,11 @@ proxy-providers:
 
 覆写节点内容，以下为支持的字段
 
-### additional-prefix
+### override.additional-prefix
 
 为节点名称添加固定前缀
 
-### additional-suffix
+### override.additional-suffix
 
 为节点名称添加固定后缀
 

@@ -157,8 +157,9 @@ nav:
     - 创建运行服务: startup/service/index.md
     - 第三方工具: startup/client/client.md
   - 手册:
-    - 常见问题: faq/index.md
-    - 关于fakeip: faq/fakeip.md
+    - faq/index.md
+    - 常见问题: faq/faq.md
+    - 关于 fakeip: faq/fakeip.md
     - 大致工作流程:
       - 流量入站: faq/in.md
       - 流量处理: faq/route.md
