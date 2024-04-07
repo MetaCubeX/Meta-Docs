@@ -96,7 +96,7 @@ ipv6: true
 
 控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备[耗电问题](https://github.com/vernesong/OpenClash/issues/2614)的临时措施。
 
-仅支持整数格式
+整数格式单位为秒
 
 ```{.yaml linenums="1"}
 keep-alive-interval: 30
@@ -259,7 +259,7 @@ geodata-loader: memconservative
 geo-auto-update: false
 ```
 
-更新间隔，单位小时，仅支持整数格式
+更新间隔，整数格式单位为小时
 
 ```{.yaml linenums="1"}
 geo-update-interval: 24
