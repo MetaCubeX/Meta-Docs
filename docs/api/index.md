@@ -119,7 +119,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 请求方法：`GET`
 
-- 对指定策略组内的节点/策略组进行测试，并返回新的延迟信息，URL 需携带`?url=xxx&timeout=5000&expected=204`，按需修改
+- 对指定策略组内的节点/策略组进行测试，并返回新的延迟信息，URL 需携带`?url=xxx&timeout=5000`，按需修改
 
 ## 代理
 
@@ -143,7 +143,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 请求方法：`GET`
 
-- 对指定代理进行测试，并返回新的延迟信息，URL 需携带`?url=xxx&timeout=5000&expected=204`，按需修改
+- 对指定代理进行测试，并返回新的延迟信息，URL 需携带`?url=xxx&timeout=5000`，按需修改
 
 ## 代理集合
 
