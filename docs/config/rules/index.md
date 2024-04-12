@@ -110,15 +110,15 @@ rules:
 
 ### DST-PORT
 
-匹配请求目标端口
+匹配请求目标[端口范围](../syntax.md#_13)
 
 ### SRC-PORT
 
-匹配请求来源端口
+匹配请求来源[端口范围](../syntax.md#_13)
 
 ### IN-PORT
 
-匹配[入站端口](../inbound/listeners/index.md#port)
+匹配[入站端口](../inbound/listeners/index.md#port),可用[端口范围](../syntax.md#_13)
 
 ### IN-TYPE
 
