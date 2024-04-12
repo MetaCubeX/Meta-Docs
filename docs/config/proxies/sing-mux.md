@@ -54,20 +54,20 @@ smux:
 
 ## only-tcp
 
-是否仅允许 tcp，如果设置为 true,smux 的设置将不会对 udp 生效，udp 连接会直接走节点默认 udp 协议传输
+仅允许 tcp，如果设置为 true,smux 的设置将不会对 udp 生效，udp 连接会直接走节点默认 udp 协议传输
 
 ## padding
 
-是否启用填充
+启用填充
 
 ## brutal-opts
 
 TCP Brutal 设置
 
-### enabled
+### brutal-opts.enabled
 
 启用 TCP Brutal 拥塞控制算法
 
-### up/down
+### brutal-opts.up/down
 
 上传和下载带宽，以默认以 Mbps 为单位

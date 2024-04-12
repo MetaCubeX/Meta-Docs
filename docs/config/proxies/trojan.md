@@ -7,70 +7,38 @@ proxies:
   server: server
   port: 443
   password: yourpsk
-  # client-fingerprint: random # Available: "chrome","firefox","safari","random","none"
-  # fingerprint: xxxx
-  # udp: true
-  # sni: example.com # aka server name
-  # alpn:
-  #   - h2
-  #   - http/1.1
-  # skip-cert-verify: true
+  udp: true
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: random
+  sni: example.com
+  fingerprint: xxxx
+  skip-cert-verify: true
+  reality-opts:
+    public-key: xxx
+    short-id: xxx
+  grpc-opts:
+    grpc-service-name: "example"
+  ws-opts:
+    path: /path
+    headers:
+      Host: example.com
+    v2ray-http-upgrade: false
 ```
 
 [通用字段](./index.md)
 
-## Trojan-grpc
+[TLS 配置](./tls.md)
 
-```{.yaml linenums="1"}
-proxies:
-- name: trojan-grpc
-  server: server
-  port: 443
-  type: trojan
-  password: "example"
-  network: grpc
-  sni: example.com
-  # skip-cert-verify: true
-  # fingerprint: xxxx
-  udp: true
-  grpc-opts:
-    grpc-service-name: "example"
-```
+## password
 
-## Trojan-ws
+必须，trojan 服务器密码
 
-```{.yaml linenums="1"}
-proxies:
-- name: trojan-ws
-  server: server
-  port: 443
-  type: trojan
-  password: "example"
-  network: ws
-  sni: example.com
-  # skip-cert-verify: true
-  # fingerprint: xxxx
-  udp: true
-  # ws-opts:
-  #   path: /path
-  #   headers:
-  #     Host: example.com
-  #   v2ray-http-upgrade: false
-```
+## network
 
-## Trojan-xtls
+传输层，支持 ws/grpc，不配置则为 tcp
 
-```{.yaml linenums="1"}
-proxies:
-- name: "trojan-xtls"
-  type: trojan
-  server: server
-  port: 443
-  password: yourpsk
-  flow: "xtls-rprx-direct" # xtls-rprx-origin xtls-rprx-direct
-  flow-show: true
-  # udp: true
-  # sni: example.com # aka server name
-  # skip-cert-verify: true
-  # fingerprint: xxxx
-```
+## grpc-opts
+
+## ws-opts

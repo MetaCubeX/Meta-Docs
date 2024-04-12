@@ -1,3 +1,5 @@
+# DNS
+
 ```{.yaml linenums="1"}
 proxies:
 - name: "dns-out"

@@ -197,6 +197,7 @@ nav:
         - tunnel: config/inbound/listeners/tunnel.md
     - 出站代理:
       - 通用字段: config/proxies/index.md
+      - TLS配置: config/proxies/tls.md
       - dialer-proxy: config/proxies/dialer-proxy.md
       - sing-mux: config/proxies/sing-mux.md
       - DIRECT: config/proxies/direct.md

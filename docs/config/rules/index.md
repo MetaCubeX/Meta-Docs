@@ -142,7 +142,7 @@ rules:
 
 ### UID
 
-匹配`Linux`USER ID
+匹配 Linux USER ID
 
 ### NETWORK
 

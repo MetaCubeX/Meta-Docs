@@ -131,7 +131,7 @@ proxy-providers:
 
 参阅`Hysteria`/`Hysteria2`  [down](../proxies/hysteria2.md)
 
-参阅通用字段  [skip-cert-verify](../proxies/index.md#skip-cert-verify)
+参阅通用字段  [skip-cert-verify](../proxies/tls.md#skip-cert-verify)
 
 参阅通用字段  [udp](../proxies/index.md#udp)
 

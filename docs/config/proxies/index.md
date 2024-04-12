@@ -2,7 +2,7 @@
 
 ```{.yaml linenums="1"}
 proxies:
-- name: "ss"
+- name: "ss-out2"
   type: ss
   server: server
   port: 443
@@ -12,31 +12,25 @@ proxies:
   routing-mark: 1234
   tfo: false
   mptcp: false
-  skip-cert-verify: false
 
   dialer-proxy: ss1
-
-  smux:
-    enable: false
-    brutal-opts:
-      enabled: false
 ```
 
 ## proxies
 
-代理节点书写以 `proxies`为开头，其内容为数组
+代理节点，内容为数组
 
 ### name
 
-必须项，代理名称，书写时请确保不会与其他代理节点重名
+必须，代理名称，不可重复
 
 ### type
 
-必须项，代理节点类型
+必须，代理节点类型
 
 ### server
 
-必须项，代理节点服务器 (域名/ip)
+必须，代理节点服务器 (域名/ip)
 
 ### port
 
@@ -44,19 +38,21 @@ proxies:
 
 ### ip-version
 
-设置节点使用 IP 版本，可选：`dual`/`ipv4`/`ipv6`/`ipv4-prefer`/`ipv6-prefer`,默认使用`dual`
+代理软件出站使用的 ip 版本，如果不是 direct，则会影响 server 为域名时使用的 ip 地址
+
+可选：`dual`/`ipv4`/`ipv6`/`ipv4-prefer`/`ipv6-prefer` ,默认使用 `dual`
 
 * ipv4: 仅使用 IPv4
 * ipv6: 仅使用 IPv6
-* ipv4-prefer : 优先使用 IPv4，对于 TCP 会进行双栈解析，并发链接但是优先使用 IPv4 链接，UDP 则为双栈解析，获取结果中的第一个 IPv4
+* ipv4-prefer: 优先使用 IPv4，对于 TCP 会进行双栈解析，并发链接但是优先使用 IPv4 链接，UDP 则为双栈解析，获取结果中的第一个 IPv4
 * ipv6-prefer:优先使用 IPv6，对于 TCP 会进行双栈解析，并发链接但是优先使用 IPv6 链接，UDP 则为双栈解析，获取结果中的第一个 IPv6
 
 ### udp
 
-是否允许 UDP 通过代理，默认为`false`
+是否允许 UDP 通过代理，默认为 `false`
 
 !!! note
-    此选项在`TUIC`等基于`UDP`或者`VMess`等默认`UoT`的协议中默认开启
+    此选项在 `TUIC` 等基于 `UDP` 的协议以及 `direct` 和 `dns` 类型中默认开启
 
 ### interface-name
 
@@ -68,26 +64,12 @@ proxies:
 
 ### tfo
 
-启用`TCP Fast Open`, 仅生效于`TCP`协议
+启用 `TCP Fast Open`, 仅生效于 `TCP` 协议
 
 ### mptcp
 
-启用`TCP Multi Path`, 仅生效于`TCP`协议
-
-### skip-cert-verify
-
-跳过证书验证，仅适用于使用`tls`的协议
+启用 `TCP Multi Path`, 仅生效于 `TCP` 协议
 
 ### dialer-proxy
 
 参阅 [dialer-proxy](./dialer-proxy.md)
-
-### smux
-
-仅支持[`Shadowsocks`](./ss.md)/[`VMess`](./vmess.md)/[`VLESS`](./vless.md)/[`Trojan`](./trojan.md)协议，参阅 [sing-mux](./sing-mux.md)
-
-#### brutal-opts
-
-TCP Brutal
-
-参阅 [brutal-opts](./sing-mux.md#brutal-opts)

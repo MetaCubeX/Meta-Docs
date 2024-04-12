@@ -232,7 +232,7 @@ global-client-fingerprint: chrome
 ```
 
 !!! note
-    可选："chrome", "firefox", "safari", "iOS", "android", "edge", "360"," qq", "random", 若选择 "random", 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
+    可选：`chrome`, `firefox`, `safari`, `iOS`, `android`, `edge`, `360`, `qq`, `random`, 若选择 `random`, 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
 
 ## GEOIP 数据模式
 
