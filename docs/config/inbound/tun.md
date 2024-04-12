@@ -8,63 +8,55 @@ tun:
   auto-detect-interface: true
   dns-hijack:
     - any:53
-  # device: utun0
-  # mtu: 9000
-  # strict-route: true
-  # gso: true
-  # gso-max-size: 65536
-  # udp-timeout: 300
-  # endpoint-independent-nat: false
-  # include-interface:
-  # - eth0
-  # exclude-interface:
-  # - eth1
-  # inet4-route-address:
-  # - 0.0.0.0/1
-  # - 128.0.0.0/1
-  # inet6-route-address:
-  # - "::/1"
-  # - "8000::/1"
-  # inet4-route-exclude-address:
-  # - 192.168.0.0/16
-  # inet6-route-exclude-address:
-  # - fc00::/7
-  # include-uid:
-  # - 0
-  # include-uid-range:
-  # - 1000:9999
-  # exclude-uid:
-  # - 1000
-  # exclude-uid-range:
-  # - 1000:9999
-  # include-android-user:
-  # - 0
-  # - 10
-  # include-package:
-  # - com.android.chrome
-  # exclude-package:
-  # - com.android.captiveportallogin
+    - tcp://any:53
+  device: utun0
+  mtu: 9000
+  strict-route: true
+  gso: true
+  gso-max-size: 65536
+  udp-timeout: 300
+  endpoint-independent-nat: false
+  include-interface:
+  - eth0
+  exclude-interface:
+  - eth1
+  inet4-route-address:
+  - 0.0.0.0/1
+  - 128.0.0.0/1
+  inet6-route-address:
+  - "::/1"
+  - "8000::/1"
+  inet4-route-exclude-address:
+  - 192.168.0.0/16
+  inet6-route-exclude-address:
+  - fc00::/7
+  include-uid:
+  - 0
+  include-uid-range:
+  - 1000:9999
+  exclude-uid:
+  - 1000
+  exclude-uid-range:
+  - 1000:9999
+  include-android-user:
+  - 0
+  - 10
+  include-package:
+  - com.android.chrome
+  exclude-package:
+  - com.android.captiveportallogin
+  table-index: 2022
 ```
 
 ## enable
 
-是否启用 tun 模式来路由全局流量。
-
-可用值：`true/false`
-
-```{.yaml linenums="1"}
-enable: true
-```
+启用 tun
 
 ## stack
 
 tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `gvisor`
 
 可用值： `system/gvisor/mixed`
-
-```{.yaml linenums="1"}
-stack: system
-```
 
 !!! note "协议栈之间的区别"
     * `system` 使用系统协议栈，可以提供更稳定/全面的 tun 体验，且占用相对其他堆栈更低
@@ -76,163 +68,84 @@ stack: system
 
 指定 tun 网卡名称，MacOS 设备只能使用 utun 开头的网卡名
 
-```{.yaml linenums="1"}
-device: utun0
-```
-
 ## auto-route
 
 自动设置全局路由，可以自动将全局流量路由进入 tun 网卡。
-
-可选：`true/false`
-
-```{.yaml linenums="1"}
-auto-route: true
-```
 
 ## auto-detect-interface
 
 自动选择流量出口接口，多出口网卡同时连接的设备建议手动指定出口网卡
 
-可用值：`true/false`
-
-```{.yaml linenums="1"}
-auto-detect-interface: true
-```
-
 ## dns-hijack
 
-dns 劫持，一般设置为 `any:53` 即可，即劫持所有 53 端口的 udp 流量
-
-```{.yaml linenums="1"}
-dns-hijack:
-- any:53
-- tcp://any:53
-```
+dns 劫持，将匹配到的连接导入内部 [dns](../dns/index.md) 模块，不书写协议则为 udp://
 
 !!! warning ""
-    `MacOS` 无法自动劫持发往局域网的 dns 请求
-
-    `Android` 如开启 `私人dns` 则无法自动劫持 dns 请求
-
-    `linux` 如果 `systemd-resolved` 开启无法自动劫持 dns 请求
+    * 在 `MacOS`/`Windows` 无法自动劫持发往局域网的 dns 请求
+    * 在 `Android` 如开启 `私人dns` 则无法自动劫持 dns 请求
+    * 在 `Linux` 如果 `systemd-resolved` 开启则无法自动劫持 dns 请求
 
 ## strict-route
 
-严格路由，它可以防止地址泄漏，并使 DNS 劫持在 Android 和使用 systemd-resolved 的 Linux 上工作，但你的设备将无法被其他设备访问
+启用 `auto-route` 时执行严格的路由规则，它可以防止地址泄漏，并使 DNS 劫持在 Android 上工作，但你的设备将无法被其他设备访问
 
-可用值：`true/false`
+在 Linux 中：
 
-```{.yaml linenums="1"}
-strict-route: true
-```
+* 让不支持的网络无法到达
+
+* 将所有连接路由到 tun
+
+在 Windows 中：
+
+* 添加防火墙规则以阻止 Windows 的 [普通多宿主 DNS 解析行为](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197552%28v%3Dws.10%29) 造成的 DNS 泄露
 
 ## mtu
 
-最大传输单元，可用值为 `1-65534`, 会影响极限状态下的速率，一般用户默认即可。
-
-```{.yaml linenums="1"}
-mtu: 9000
-```
+最大传输单元，会影响极限状态下的速率，一般用户默认即可。
 
 ## gso
 
-启用通用分段卸载
-!!! notes ""
-    仅支持 Linux
-
-```{.yaml linenums="1"}
-gso: true
-```
+启用通用分段卸载，仅支持 Linux
 
 ## gso-max-size
 
 数据块的最大长度
 
-```{.yaml linenums="1"}
-gso-max-size: 65536
-```
-
 ## udp-timeout
 
 UDP NAT 过期时间，以秒为单位，默认为 300(5 分钟)
-
-```{.yaml linenums="1"}
-udp-timeout: 300
-```
 
 ## endpoint-independent-nat
 
 启用独立于端点的 NAT，性能可能会略有下降，所以不建议在不需要的时候开启。
 
-```{.yaml linenums="1"}
-endpoint-independent-nat: false
-```
-
 ## include-interface
 
 限制被路由的接口，默认不限制，与 `exclude-interface` 冲突，不可一起配置
-
-```{.yaml linenums="1"}
-include-interface:
-- eth0
-```
 
 ## exclude-interface
 
 排除路由的接口，与 `include-interface` 冲突，不可一起配置
 
-```{.yaml linenums="1"}
-exclude-interface:
-- eth1
-```
-
 ## inet4-route-address
 
 启用 `auto-route`时路由自定义网段而不是默认路由，一般无需配置。
-
-```{.yaml linenums="1"}
-inet4-route-address:
-- 0.0.0.0/1
-- 128.0.0.0/1
-```
 
 ## inet6-route-address
 
 启用 `auto-route`时路由自定义网段而不是默认路由，一般无需配置。
 
-```{.yaml linenums="1"}
-inet6-route-address:
-- "::/1"
-- "8000::/1"
-```
-
 ## inet4-route-exclude-address
 
 启用 `auto-route` 时排除自定义网段
-
-```{.yaml linenums="1"}
-inet4-route-exclude-address:
-- 192.168.0.0/16
-```
 
 ## inet6-route-exclude-address
 
 启用 `auto-route` 时排除自定义网段
 
-```{.yaml linenums="1"}
-inet6-route-exclude-address:
-- fc00::/7
-```
-
 ## include-uid
 
 包含的用户，使其被 Tun 路由流量，未被配置的用户不会被 Tun 路由流量，默认不限制
-
-```{.yaml linenums="1"}
-include-uid:
-- 0
-```
 
 !!! note ""
     UID 规则仅在 Linux 下被支持,并且需要 `auto-route`
@@ -241,38 +154,17 @@ include-uid:
 
 包含的用户范围，使其被 Tun 路由流量，未被配置的用户不会被 Tun 路由流量
 
-```{.yaml linenums="1"}
-include-uid-range:
-- 1000:9999
-```
-
 ## exclude-uid
 
 排除用户，使其避免被 Tun 路由流量
-
-```{.yaml linenums="1"}
-exclude-uid:
-- 1000
-```
 
 ## exclude-uid-range
 
 排除用户范围，使其避免被 Tun 路由流量
 
-```{.yaml linenums="1"}
-exclude-uid-range:
-- 1000:9999
-```
-
 ## include-android-user
 
 包含的 Android 用户，使其被 Tun 路由流量，未被配置的用户不会被 Tun 路由流量
-
-```{.yaml linenums="1"}
-include-android-user:
-- 0
-- 10
-```
 
 !!! note ""
     Android 用户和应用规则仅在 Android 下被支持,并且需要 `auto-route`
@@ -287,23 +179,17 @@ include-android-user:
 
 包含的 Android 应用包名，使其被 Tun 路由流量，未配置的应用包不会被 Tun 路由流量
 
-```{.yaml linenums="1"}
-include-package:
-- com.android.chrome
-```
-
 ## exclude-package
 
 排除 Android 应用包名，使其避免被 Tun 路由流量
 
-```{.yaml linenums="1"}
-exclude-package:
-- com.android.captiveportallogin
-```
-
 ## file-descriptor
 
 文件描述符
+
+## table-index
+
+创建路由表使用的编号
 
 ## Tun 的协议栈网络回环测试
 
