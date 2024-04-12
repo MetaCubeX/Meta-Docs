@@ -18,13 +18,7 @@ proxies:
   reality-opts:
     public-key: xxx
     short-id: xxx
-  grpc-opts:
-    grpc-service-name: "example"
-  ws-opts:
-    path: /path
-    headers:
-      Host: example.com
-    v2ray-http-upgrade: false
+  network: grpc
 ```
 
 [通用字段](./index.md)
@@ -39,6 +33,4 @@ proxies:
 
 传输层，支持 ws/grpc，不配置则为 tcp
 
-## grpc-opts
-
-## ws-opts
+参阅 [传输层配置](./transport.md)

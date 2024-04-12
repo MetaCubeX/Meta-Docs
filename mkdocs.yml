@@ -198,6 +198,7 @@ nav:
     - 出站代理:
       - 通用字段: config/proxies/index.md
       - TLS配置: config/proxies/tls.md
+      - 传输层配置: config/proxies/transport.md
       - dialer-proxy: config/proxies/dialer-proxy.md
       - sing-mux: config/proxies/sing-mux.md
       - DIRECT: config/proxies/direct.md

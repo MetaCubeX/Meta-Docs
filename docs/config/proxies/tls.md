@@ -8,7 +8,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-  skip-cert-verify: xxx
+  skip-cert-verify: true
   client-fingerprint: random
   reality-opts:
     public-key: xxxx
