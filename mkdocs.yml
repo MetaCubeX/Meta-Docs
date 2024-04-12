@@ -226,8 +226,7 @@ nav:
       - 负载均衡: config/proxy-groups/load-balance.md
       - 链式代理: config/proxy-groups/relay.md
       - 内置策略: config/proxy-groups/built-in.md
-    - 路由规则:
-      - config/rules/index.md
+    - 路由规则: config/rules/index.md
       # - 域名规则: config/rules/domain.md
       # - IP规则: config/rules/ip.md
       # - 端口规则: config/rules/port.md
