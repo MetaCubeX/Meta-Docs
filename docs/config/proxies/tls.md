@@ -4,6 +4,8 @@
 proxies:
 - name: "tls-example"
   tls: true
+  sni: example.com
+  servername: example.com
   fingerprint: xxx
   alpn:
   - h2
@@ -18,6 +20,10 @@ proxies:
 ## tls
 
 启用 tls，仅适用于使用 `tls` 的协议，`trojan` 协议强制启用
+
+## sni/servername
+
+服务器名称指示，在 [`VMess`](./vmess.md)/[`VLESS`](./vless.md) 中为 `servername`，如果为空，则为 `server` 中的地址
 
 ## fingerprint
 

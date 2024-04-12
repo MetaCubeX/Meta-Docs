@@ -41,10 +41,6 @@ chacha20-ietf-poly1305 xchacha20-ietf-poly1305
 
 Shadowsocks 密码
 
-## udp
-
-启用 udp，默认 false
-
 ## udp-over-tcp
 
 启用 UDP over TCP，默认 false

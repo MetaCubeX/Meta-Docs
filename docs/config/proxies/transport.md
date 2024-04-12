@@ -27,6 +27,9 @@ proxies:
     v2ray-http-upgrade-fast-open: false
 ```
 
+!!! note
+    Clash 的 H2 传输层未实现多路复用功能，如果需要使用多路复用，在 Mihomo 中更建议使用 gRPC 协议，或者 sing-mux
+
 ## http-opts
 
 `http` 传输层设置，仅传输层为 `http` 时生效

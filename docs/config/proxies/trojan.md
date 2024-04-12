@@ -8,22 +8,27 @@ proxies:
   port: 443
   password: yourpsk
   udp: true
+
+  sni: example.com
   alpn:
   - h2
   - http/1.1
   client-fingerprint: random
-  sni: example.com
   fingerprint: xxxx
   skip-cert-verify: true
   reality-opts:
-    public-key: xxx
-    short-id: xxx
+    public-key: xxxx
+    short-id: xxxx
+
   network: grpc
+
+  smux:
+    enabled: false
 ```
 
 [通用字段](./index.md)
 
-[TLS 配置](./tls.md)
+[TLS 字段](./tls.md)
 
 ## password
 
@@ -31,6 +36,10 @@ proxies:
 
 ## network
 
-传输层，支持 ws/grpc，不配置则为 tcp
+传输层，支持 ws/grpc，不配置或配置其他值则为 tcp
 
 参阅 [传输层配置](./transport.md)
+
+## smux
+
+参阅 [sing-mux](./sing-mux.md)

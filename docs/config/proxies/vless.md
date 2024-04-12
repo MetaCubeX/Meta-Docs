@@ -1,106 +1,59 @@
 # VLESS
 
-!!! note
-    Clash 的 H2 传输层未实现多路复用功能，在 Clash.Meta 中更建议使用 gRPC 协议
-
-## VLESS-xtls-rprx-vision
-
 ```{.yaml linenums="1"}
 proxies:
-- name: "vless-vision"
+- name: "vless"
   type: vless
   server: server
   port: 443
-  uuid: uuid
-  network: tcp
-  tls: true
   udp: true
-  flow: xtls-rprx-vision 
-  client-fingerprint: chrome
-  # xudp: true #default
-  # fingerprint: xxxx
-  # skip-cert-verify: true
-```
+  uuid: uuid
+  flow: xtls-rprx-vision
+  packet-encoding: xudp
 
-[通用字段](./index.md)
+  tls: true
+  servername: example.com
+  alpn:
+  - h2
+  - http/1.1
+  fingerprint: xxxx
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  reality-opts:
+    public-key: xxxx
+    short-id: xxxx
+
+  network: grpc
+
+  smux:
+    enabled: false
+```
 
 !!! note
     Meta 的 `xtls-*` 流控实际上与 Xray-core 中的 `xtls-*-udp443` 等效，如需拦截 443 端口的 UDP 流量，请使用逻辑规则：`AND,((NETWORK,UDP),(DST-PORT,443)),REJECT`
 
-## VLESS-reality-vision
+[通用字段](./index.md)
 
-```{.yaml linenums="1"}
-proxies:
-- name: "vless-reality-vision"
-  type: vless
-  server: server
-  port: 443
-  uuid: uuid
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  servername: speed.cloudflare.com # REALITY servername
-  reality-opts:
-    public-key: xxx
-    short-id: xxx # optional
-  client-fingerprint: chrome # cannot be empty
-```
+[TLS 字段](./tls.md)
 
-## VLESS-reality-grpc
+## uuid
 
-```{.yaml linenums="1"}
-proxies:
-- name: "vless-reality-grpc"
-  type: vless
-  server: server
-  port: 443
-  uuid: uuid
-  network: grpc
-  tls: true
-  udp: true
-  flow:
-  client-fingerprint: chrome
-  servername: testingcf.jsdelivr.net # REALITY servername
-  grpc-opts:
-    grpc-service-name: "grpc"
-  reality-opts:
-    public-key: CrrQSjAG_YkHLwvM2M-7XkKJilgL5upBKCp0od0tLhE
-    short-id: 10f897e26c4b9478
-```
+必须，VLESS 用户 ID
 
-## VLESS-TCP-TLS
+## flow
 
-```{.yaml linenums="1"}
-- name: "vless-tcp"
-  type: vless
-  server: server
-  port: 443
-  uuid: uuid
-  network: tcp
-  tls: true
-  servername: example.com # AKA SNI
-  # flow: xtls-rprx-direct # xtls-rprx-origin  # enable XTLS
-  # skip-cert-verify: true
+VLESS 子协议，可用值为 `xtls-rprx-vision`
 
-```
+## packet-encoding
 
-## VLESS-WS-TLS
+UDP 包编码，为空则使用原始编码，可选 `packetaddr` (由 `v2ray 5+` 支持)/ `xudp` (由 `xray` 支持)
 
-```{.yaml linenums="1"}
-- name: "vless-ws"
-  type: vless
-  server: server
-  port: 443
-  uuid: uuid
-  udp: true
-  tls: true
-  network: ws
-  servername: example.com # priority over wss host
-  # skip-cert-verify: true
-  ws-opts:
-    path: "/"
-    headers:
-      Host: example.com
-    # v2ray-http-upgrade: false
-```
+## network
+
+传输层，支持 ws/http/h2/grpc，不配置或配置其他值则为 tcp
+
+参阅 [传输层配置](./transport.md)
+
+## smux
+
+参阅 [sing-mux](./sing-mux.md)
