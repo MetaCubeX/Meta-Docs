@@ -75,14 +75,16 @@ gRPC 服务名称
 
 请求头
 
-### max-early-data
+### ws-opts.max-early-data
 
-### early-data-header-name
+Early Data 首包长度阈值
 
-### v2ray-http-upgrade
+### ws-opts.early-data-header-name
+
+### ws-opts.v2ray-http-upgrade
 
 使用 http upgrade
 
-### v2ray-http-upgrade-fast-open
+### ws-opts.v2ray-http-upgrade-fast-open
 
 启用 http upgrade 的 fast open
