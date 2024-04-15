@@ -23,7 +23,7 @@ proxies:
     public-key: xxxx
     short-id: xxxx
 
-  network: grpc
+  network: tcp
 
   smux:
     enabled: false

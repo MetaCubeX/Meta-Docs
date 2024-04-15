@@ -26,7 +26,7 @@ proxies:
     public-key: xxxx
     short-id: xxxx
 
-  network: ws
+  network: tcp
 
   smux:
     enabled: false
