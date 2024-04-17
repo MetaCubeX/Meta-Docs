@@ -126,6 +126,15 @@ API listening address, you can change `127.0.0.1` to `0.0.0.0` to listen on all 
 external-controller: 127.0.0.1:9090
 ```
 
+Unix socket API listening address
+
+!!! warning ""
+    Accessing API endpoints via Unix socket does not verify secrets. If enabled, please ensure security measures are in place.
+
+```{.yaml linenums="1"}
+external-controller-unix: mihomo.sock
+```
+
 HTTPS-API listening address, requires configuring the tls section for certificate and private key configuration, external-controller must also be filled in.
 
 ```{.yaml linenums="1"}

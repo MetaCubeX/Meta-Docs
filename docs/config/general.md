@@ -127,6 +127,15 @@ API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP
 external-controller: 127.0.0.1:9090
 ```
 
+Unix socket API 监听地址
+
+!!! warning ""
+    从Unix socket访问api接口不会验证secret， 如果开启请自行保证安全问题
+
+```{.yaml linenums="1"}
+external-controller-unix: mihomo.sock
+```
+
 HTTPS-API 监听地址，需要配置 `tls` 部分证书和其私钥配置，使用 TLS 也必须填写 `external-controller`
 
 ```{.yaml linenums="1"}
