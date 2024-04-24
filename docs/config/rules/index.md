@@ -126,7 +126,7 @@ rules:
 
 ### IN-USER
 
-匹配[入站](../inbound/listeners/index.md)用户名
+匹配[入站](../inbound/listeners/index.md)用户名，支持使用 `/` 分隔多个用户名
 
 ### IN-NAME
 
