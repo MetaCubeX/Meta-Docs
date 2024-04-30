@@ -137,8 +137,8 @@
           - GEOIP,netflix,NETFLIX
           - GEOIP,telegram,Telegram
           - GEOIP,twitter,Twitter
-          - GEOIP,CN，国内
-          - MATCH，其他
+          - GEOIP,CN,国内
+          - MATCH,其他
         ```
     === "link"
         ```text
@@ -280,8 +280,8 @@
           - RULE-SET,netflix_ip,NETFLIX
           - RULE-SET,telegram_ip,Telegram
           - RULE-SET,twitter_ip,Twitter
-          - RULE-SET,cn_ip，国内
-          - MATCH，其他
+          - RULE-SET,cn_ip,国内
+          - MATCH,其他
 
         rule-anchor:
           ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: yaml}
@@ -489,8 +489,8 @@
           - RULE-SET,netflix_ip,NETFLIX
           - RULE-SET,telegram_ip,Telegram
           - RULE-SET,twitter_ip,Twitter
-          - RULE-SET,cn_ip，国内
-          - MATCH，其他
+          - RULE-SET,cn_ip,国内
+          - MATCH,其他
 
         rule-anchor:
           ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: text}
@@ -632,35 +632,35 @@
         - {name: 自动选择, type: url-test, include-all: true, tolerance: 10, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Auto.png"}
         - {name: 全部节点, type: select, include-all: true, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Global.png"}
 
-        - {name: 香港自动选择，type: url-test, include-all: true, filter: "(?i) 港|hk|hongkong|hong kong", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/HK.png"}
-        - {name: 台湾自动选择，type: url-test, include-all: true, filter: "(?i) 台|tw|taiwan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/TW.png"}
-        - {name: 日本自动选择，type: url-test, include-all: true, filter: "(?i) 日|jp|japan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/JP.png"}
-        - {name: 美国自动选择，type: url-test, include-all: true, filter: "(?i) 美|us|unitedstates|united states", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/US.png"}
-        - {name: 新加坡自动选择，type: url-test, include-all: true, filter: "(?i)(新|sg|singapore)", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/SG.png"}
+        - {name: 香港自动选择,type: url-test, include-all: true, filter: "(?i) 港|hk|hongkong|hong kong", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/HK.png"}
+        - {name: 台湾自动选择,type: url-test, include-all: true, filter: "(?i) 台|tw|taiwan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/TW.png"}
+        - {name: 日本自动选择,type: url-test, include-all: true, filter: "(?i) 日|jp|japan", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/JP.png"}
+        - {name: 美国自动选择,type: url-test, include-all: true, filter: "(?i) 美|us|unitedstates|united states", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/US.png"}
+        - {name: 新加坡自动选择,type: url-test, include-all: true, filter: "(?i)(新|sg|singapore)", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/SG.png"}
 
         rules:
-        - GEOIP,lan，直连，no-resolve
-        - RULE-SET,biliintl_domain，哔哩东南亚
+        - GEOIP,lan,直连,no-resolve
+        - RULE-SET,biliintl_domain,哔哩东南亚
         - RULE-SET,ehentai_domain,ehentai
-        - RULE-SET,github_domain，其他
+        - RULE-SET,github_domain,其他
         - RULE-SET,twitter_domain,Twitter
         - RULE-SET,youtube_domain,YouTube
         - RULE-SET,google_domain,Google
         - RULE-SET,telegram_domain,Telegram
         - RULE-SET,netflix_domain,NETFLIX
-        - RULE-SET,bilibili_domain，哔哩哔哩
-        - RULE-SET,bahamut_domain，巴哈姆特
+        - RULE-SET,bilibili_domain,哔哩哔哩
+        - RULE-SET,bahamut_domain,巴哈姆特
         - RULE-SET,spotify_domain,Spotify
-        - RULE-SET,pixiv_domain，其他
-        - RULE-SET,geolocation-!cn，其他
+        - RULE-SET,pixiv_domain,其他
+        - RULE-SET,geolocation-!cn,其他
 
         - RULE-SET,google_ip,Google
         - RULE-SET,netflix_ip,NETFLIX
         - RULE-SET,telegram_ip,Telegram
         - RULE-SET,twitter_ip,Twitter
-        - RULE-SET,cn_domain，国内
-        - RULE-SET,cn_ip，国内
-        - MATCH，其他
+        - RULE-SET,cn_domain,国内
+        - RULE-SET,cn_ip,国内
+        - MATCH,其他
 
         rule-anchor:
           ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: text}
