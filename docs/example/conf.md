@@ -14,11 +14,11 @@
         proxy-providers:
           provider1:
             <<: *p
-            url: ""
+            url: "https://3.clmurl1.xyz/api/v1/client/subscribe?token=da881ab875345be17c91aacb1875f8c9"
 
           provider2:
             <<: *p
-            url: ""
+            url: "https://as.op.517369.xyz/e0d5ff66-0958-4554-9ecc-37c30bed3555"
 
         ipv6: true
         allow-lan: true
