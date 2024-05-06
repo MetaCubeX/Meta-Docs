@@ -15,6 +15,7 @@ proxy-groups:
   interval: 300
   lazy: true
   timeout: 5000
+  max-failed-times: 5
 
   disable-udp: true
   interface-name: en0
@@ -64,6 +65,10 @@ proxy-groups:
 ## timeout
 
 健康检查超时时间，单位为毫秒
+
+## max-failed-times
+
+最大失败次数，超过则触发一次强制健康检查，默认 5
 
 ## disable-udp
 

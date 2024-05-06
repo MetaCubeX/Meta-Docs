@@ -4,6 +4,8 @@
 dns:
   enable: true
   prefer-h3: true
+  use-hosts: true
+  use-system-hosts: true
   listen: 0.0.0.0:1053
   ipv6: true
   default-nameserver:
@@ -70,7 +72,11 @@ fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
 ## use-hosts
 
-是否查询 hosts
+是否查询配置中的 [hosts](./hosts.md)，默认 true
+
+## use-system-hosts
+
+是否查询系统 hosts，默认 true
 
 ## default-nameserver
 
