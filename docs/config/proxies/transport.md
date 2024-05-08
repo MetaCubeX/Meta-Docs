@@ -1,34 +1,57 @@
 # 传输层配置
 
-```{.yaml linenums="1"}
-proxies:
-- name: "transport-opts-example"
-  http-opts:
-    method: "GET"
-    path:
-    - '/'
-    - '/video'
-    headers:
-      Connection:
-      - keep-alive
-  h2-opts:
-    host:
-    - example.com
-    path: /
-  grpc-opts:
-    grpc-service-name: example
-  ws-opts:
-    path: /path
-    headers:
-      Host: example.com
-    max-early-data:
-    early-data-header-name:
-    v2ray-http-upgrade: false
-    v2ray-http-upgrade-fast-open: false
-```
+=== "http"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "http-opts-example"
+      type: xxxxx
+      network: http
+      http-opts:
+        method: "GET"
+        path:
+        - '/'
+        - '/video'
+        headers:
+          Connection:
+          - keep-alive
+    ```
 
-!!! note
-    Clash 的 H2 传输层未实现多路复用功能，如果需要使用多路复用，在 Mihomo 中更建议使用 gRPC 协议，或者 sing-mux
+=== "h2"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "h2-opts-example"
+      type: xxxxx
+      network: h2
+      h2-opts:
+        host:
+        - example.com
+        path: /
+    ```
+
+=== "grpc"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "grpc-opts-example"
+      type: xxxxx
+      network: grpc
+      grpc-opts:
+        grpc-service-name: example
+    ```
+=== "ws"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "ws-opts-example"
+      type: xxxxx
+      network: ws
+      ws-opts:
+        path: /path
+        headers:
+          Host: example.com
+        max-early-data:
+        early-data-header-name:
+        v2ray-http-upgrade: false
+        v2ray-http-upgrade-fast-open: false
+    ```
 
 ## http-opts
 
@@ -36,15 +59,18 @@ proxies:
 
 ### http-opts.method
 
-请求方法
+http 请求方法
 
 ### http-opts.path
 
-请求路径
+http 请求路径
 
 ### http-opts.headers
 
-请求头
+http 请求头
+
+!!! note
+    Mihomo 的 H2 传输层未实现多路复用功能，如果需要使用多路复用，在 Mihomo 中更建议使用 gRPC 协议，或者 sing-mux
 
 ## h2-opts
 
@@ -56,7 +82,7 @@ proxies:
 
 ### h2-opts.path
 
-请求路径
+http 请求路径
 
 ## grpc-opts
 
