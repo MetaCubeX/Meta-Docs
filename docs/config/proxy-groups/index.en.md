@@ -32,14 +32,14 @@ proxy-groups:
 
 ## name
 
-Required field, the name of the proxy-groups.
+Required. The name of the policy group.
 
 !!! note
     If there are special symbols, they should be enclosed in quotes.
 
 ## type
 
-Required field, the type of the proxy-groups.
+Required. The type of the policy group.
 
 ## proxies
 
@@ -51,19 +51,23 @@ include [proxy-providers](../proxy-providers/index.md)
 
 ## url
 
-Health check test address.
+Health check test URL.
 
 ## interval
 
-Health check interval. If not 0, periodic testing is enabled.
+Health check interval. If not 0, enable periodic testing, in seconds.
 
 ## lazy
 
-Lazy status, default is true. When the current proxy-groups is not selected, no testing is performed.
+Lazy mode. Default is `true`. Do not test unless this policy group is selected.
 
 ### timeout
 
-Health check timeout, measured in milliseconds (ms).
+Health check timeout, in milliseconds.
+
+## max-failed-times
+
+Maximum number of failures before triggering a forced health check. Default is 5.
 
 ## disable-udp
 
@@ -86,29 +90,32 @@ Attach a [routing mark](../general.md#_12)when the proxy-groups goes outbound.
 Include all [proxies](../proxies/index.md) and [proxy-providers](../proxy-providers/index.md).
 
 !!! info ""
-    Excludes proxy-groups, you can include other proxy-groups in [`proxies`](./index.md#proxies).
+    Includes without policy groups. Other policy groups can be included in [`proxies`](./index.md#proxies).
 
 ## include-all-proxies
 
 Include all [proxies](../proxies/index.md)
+
 !!! info ""
-    Excludes proxy-groups, you can include other proxy-groups in [`proxies`](./index.md#proxies).
+    Includes without policy groups. Other policy groups can be included in [`proxies`](./index.md#proxies).
 
 ## include-all-providers
 
 Include all [proxy-providers](../proxy-providers/index.md).
+
 !!! info ""
-    Will make [`use`](./index.md#use) ineffective.
+    This will disable [include proxy-providers](./index.md#use).
 
 ## filter
 
-Filter proxies that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md).
+Filter nodes that meet the keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Multiple regular expressions can be separated by `.
+
 !!! info ""
-    Only applies to include proxy providers.
+    Only applies to include proxy-providers and [include all outbound proxies](./index.md#include-all-proxies).
 
 ## exclude-filter
 
-Exclude proxies that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md).
+Exclude proxies that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Multiple regular expressions can be separated by `.
 
 ## exclude-type
 
