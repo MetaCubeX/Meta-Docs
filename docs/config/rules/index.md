@@ -30,7 +30,7 @@ rules:
 - PROCESS-PATH,/usr/bin/wget,PROXY
 - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
 - PROCESS-PATH-REGEX,.*bin/wget,PROXY
-- PROCESS-PATH-REGEX,(?i).*Application\chrome.*exe*,PROXY
+- PROCESS-PATH-REGEX,(?i).*Application\chrome.*,PROXY
 
 - PROCESS-NAME,curl,PROXY
 - PROCESS-NAME,chrome.exe,PROXY
