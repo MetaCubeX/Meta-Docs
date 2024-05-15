@@ -29,10 +29,15 @@ rules:
 
 - PROCESS-PATH,/usr/bin/wget,PROXY
 - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
+- PROCESS-PATH-REGEX,.*bin/wget,PROXY
+- PROCESS-PATH-REGEX,(?i).*Application\chrome.*exe*,PROXY
 
 - PROCESS-NAME,curl,PROXY
 - PROCESS-NAME,chrome.exe,PROXY
 - PROCESS-NAME,com.termux,PROXY
+- PROCESS-NAME-REGEX,curl$,PROXY
+- PROCESS-NAME-REGEX,(?i)Telegram,PROXY
+- PROCESS-NAME-REGEX,.*telegram.*,PROXY
 - UID,1001,DIRECT
 
 - NETWORK,udp,DIRECT
@@ -66,11 +71,11 @@ rules:
 
 ### DOMAIN-KEYWORD
 
-匹配域名关键字
+使用域名关键字匹配
 
 ### DOMAIN-REGEX
 
-匹配域名正则表达式
+域名正则表达式匹配
 
 ### GEOSITE
 
@@ -134,11 +139,19 @@ rules:
 
 ### PROCESS-PATH
 
-匹配完整进程路径
+使用完整进程路径匹配
+
+### PROCESS-PATH-REGEX
+
+使用进程路径正则表达式匹配
 
 ### PROCESS-NAME
 
-匹配进程名称，在`Android`平台可以匹配包名
+使用进程匹配，在`Android`平台可以匹配包名
+
+### PROCESS-NAME-REGEX
+
+使用进程名称正则表达式匹配，在`Android`平台可以匹配包名
 
 ### UID
 
