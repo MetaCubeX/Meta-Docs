@@ -101,6 +101,12 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 更新面板，须设置 [external-ui](../config/general.md#_7)
 
+### `/upgrade/geo`
+
+请求方法：`POST`
+
+- 更新 GEO 数据库，必须发送数据
+
 ## 策略组
 
 ### `/group`
