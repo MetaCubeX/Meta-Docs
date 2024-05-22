@@ -16,6 +16,10 @@ proxies:
   client-fingerprint: random
   fingerprint: xxxx
   skip-cert-verify: true
+  ss-opts:
+    enabled: false
+    method: aes-128-gcm
+    password: "example"
   reality-opts:
     public-key: xxxx
     short-id: xxxx
@@ -33,6 +37,20 @@ proxies:
 ## password
 
 必须，trojan 服务器密码
+
+## ss-opts
+
+### ss-opfs.enabled
+
+启用 trojan-go 的 shadowsocks AEAD 加密
+
+### ss-opfs.method
+
+加密方法，支持 aes-128-gcm/aes-256-gcm/chacha20-ietf-poly1305
+
+### ss-opfs.password
+
+trojan-go 的 shadowsocks AEAD 加密密码
 
 ## network
 
