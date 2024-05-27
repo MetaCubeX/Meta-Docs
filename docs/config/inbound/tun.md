@@ -87,17 +87,22 @@ dns 劫持，将匹配到的连接导入内部 [dns](../dns/index.md) 模块，�
 
 ## strict-route
 
-启用 `auto-route` 时执行严格的路由规则，它可以防止地址泄漏，并使 DNS 劫持在 Android 上工作，但你的设备将无法被其他设备访问
+启用 `auto-route` 时执行严格的路由规则
 
-在 Linux 中：
+*在 Linux 中*:
 
 * 让不支持的网络无法到达
-
 * 将所有连接路由到 tun
 
-在 Windows 中：
+它可以防止地址泄漏，并使 DNS 劫持在 Android 上工作。
 
-* 添加防火墙规则以阻止 Windows 的 [普通多宿主 DNS 解析行为](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197552%28v%3Dws.10%29) 造成的 DNS 泄露
+*在 Windows 中*:
+
+* 添加防火墙规则以阻止 Windows
+  的 [普通多宿主 DNS 解析行为](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197552%28v%3Dws.10%29)
+  造成的 DNS 泄露
+
+它可能会使某些应用程序（如 VirtualBox）在某些情况下无法正常工作。
 
 ## mtu
 
