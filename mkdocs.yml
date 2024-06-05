@@ -207,6 +207,7 @@ nav:
       - SOCKS: config/proxies/socks.md
       - Shadowsocks: config/proxies/ss.md
       - ShadowsocksR: config/proxies/ssr.md
+      - Snell: config/proxies/snell.md
       - VMess: config/proxies/vmess.md
       - VLESS: config/proxies/vless.md
       - Trojan: config/proxies/trojan.md
