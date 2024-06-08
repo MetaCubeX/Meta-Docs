@@ -127,9 +127,9 @@ proxy-providers:
 
 ### 配置项
 
-参阅`Hysteria`/`Hysteria2`  [up](../proxies/hysteria2.md)
+参阅`Hysteria`/`Hysteria2`  [up](../proxies/hysteria2.md#updown)
 
-参阅`Hysteria`/`Hysteria2`  [down](../proxies/hysteria2.md)
+参阅`Hysteria`/`Hysteria2`  [down](../proxies/hysteria2.md#updown)
 
 参阅通用字段  [skip-cert-verify](../proxies/tls.md#skip-cert-verify)
 
