@@ -7,8 +7,7 @@ proxies:
   server: server.com
   port: 443
   # ports: 1000,2000-3000,4000 # port 不可省略
-  auth_str: yourpassword # 将会在未来某个时候删除
-  # auth-str: yourpassword
+  auth-str: yourpassword
   # obfs: obfs_str
   # alpn:
   #   - h3
@@ -17,12 +16,9 @@ proxies:
   down: "200 Mbps" # 若不写单位,默认为 Mbps
   # sni: server.com
   # skip-cert-verify: false
-  # recv_window_conn: 12582912 # 将会在未来某个时候删除
   # recv-window-conn: 12582912
-  # recv_window: 52428800 # 将会在未来某个时候删除
   # recv-window: 52428800
   # ca: "./my.ca"
-  # ca_str: "xyz" # 将会在未来某个时候删除
   # ca-str: "xyz"
   # disable_mtu_discovery: false
   # fingerprint: xxxx
