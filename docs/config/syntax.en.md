@@ -147,7 +147,7 @@ Clash's `*` wildcard can only match one-level domains.
 
 `*.baidu.com` only matches `tieba.baidu.com` and not `123.tieba.baidu.com` or `baidu.com`.
 
-A single `'*'` only matches domains like `localhost`.
+`*` only matches hostnames without a `.` such as `localhost`.
 
 ### Wildcard `+`
 
