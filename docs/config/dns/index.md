@@ -3,11 +3,12 @@
 ```{.yaml linenums="1"}
 dns:
   enable: true
-  prefer-h3: true
+  prefer-h3: false
   use-hosts: true
   use-system-hosts: true
+  respect-rules: false
   listen: 0.0.0.0:1053
-  ipv6: true
+  ipv6: false
   default-nameserver:
     - 223.5.5.5
   enhanced-mode: fake-ip
@@ -50,7 +51,7 @@ dns:
 
 ## listen
 
-DNS 服务监听
+DNS 服务监听，仅支持 udp
 
 ## IPV6
 
@@ -58,13 +59,13 @@ DNS 服务监听
 
 ## enhanced-mode
 
-可选值 `fake-ip / redir-host`
+可选值 `normal`/`fake-ip`/`redir-host`，默认`normal`
 
 mihomo 的 DNS 处理模式
 
 ## fake-ip-range
 
-fakeip 下的 IP 段设置，tun 网卡的默认 IP 也使用此值作为参考
+fakeip 下的 IP 段设置，[tun](../inbound/tun.md) 的默认 IPV4 地址 也使用此值作为参考
 
 ## fake-ip-filter
 
@@ -78,9 +79,14 @@ fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
 是否查询系统 hosts，默认 true
 
+## respect-rules
+
+dns 连接跟随 rules，需配置 [proxy-server-nameserver](./index.md#proxy-server-nameserver)
+
 ## default-nameserver
 
 默认 DNS, 用于解析 DNS 服务器 的域名
+
 !!! node ""
     必须为 IP, 可为加密 DNS
 
@@ -149,7 +155,7 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 
 ## 部分特殊写法
 
-此部分可用于所有的 DNS 服务器
+此部分可用于发向公网地址的 DNS 服务器，可以使用`&`连接不同的参数
 
 ### DNS 经过代理查询
 

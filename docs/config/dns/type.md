@@ -1,3 +1,5 @@
+# 支持的类型
+
 ## UDP
 
 ```{.yaml linenums="1"}
@@ -51,6 +53,7 @@
 ```
 
 仅限 cmfa，使用系统 dns
+
 ```{.yaml linenums="1"}
 - dhcp://system
 ```
