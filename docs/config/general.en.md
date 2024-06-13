@@ -188,7 +188,7 @@ profile:
 
 ## Unified Delay
 
-Change delay calculation method, remove additional delays such as handshakes.
+When unified delay is enabled, two delay tests are conducted to eliminate latency differences caused by connection handshakes and other variations in different types of nodes.
 
 ```{.yaml linenums="1"}
 unified-delay: true
