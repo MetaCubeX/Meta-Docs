@@ -39,7 +39,6 @@
 
 |项目名称 | 维护状态 |
 |:----|:----|
-|[Clash Meta for Android](https://github.com/MetaCubeX/ClashMetaForAndroid)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
