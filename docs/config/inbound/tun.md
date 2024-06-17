@@ -5,6 +5,7 @@ tun:
   enable: true
   stack: system
   auto-route: true
+  auto-redirect: true
   auto-detect-interface: true
   dns-hijack:
     - any:53
@@ -15,21 +16,25 @@ tun:
   gso: true
   gso-max-size: 65536
   udp-timeout: 300
+  iproute2-table-index: 2022
+  iproute2-rule-index: 9000
   endpoint-independent-nat: false
+  route-address-set:
+    - ruleset-1
+  route-exclude-address-set:
+    - ruleset-2
+  route-address:
+    - 0.0.0.0/1
+    - 128.0.0.0/1
+    - "::/1"
+    - "8000::/1"
+  route-exclude-address:
+  - 192.168.0.0/16
+  - fc00::/7
   include-interface:
   - eth0
   exclude-interface:
   - eth1
-  inet4-route-address:
-  - 0.0.0.0/1
-  - 128.0.0.0/1
-  inet6-route-address:
-  - "::/1"
-  - "8000::/1"
-  inet4-route-exclude-address:
-  - 192.168.0.0/16
-  inet6-route-exclude-address:
-  - fc00::/7
   include-uid:
   - 0
   include-uid-range:
@@ -45,7 +50,18 @@ tun:
   - com.android.chrome
   exclude-package:
   - com.android.captiveportallogin
-  table-index: 2022
+
+## 旧写法
+  inet4-route-address:
+  - 0.0.0.0/1
+  - 128.0.0.0/1
+  inet6-route-address:
+  - "::/1"
+  - "8000::/1"
+  inet4-route-exclude-address:
+  - 192.168.0.0/16
+  inet6-route-exclude-address:
+  - fc00::/7
 ```
 
 ## enable
@@ -70,7 +86,19 @@ tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `gvisor
 
 ## auto-route
 
-自动设置全局路由，可以自动将全局流量路由进入 tun 网卡。
+仅支持 Linux，自动设置全局路由，可以自动将全局流量路由进入 tun 网卡。
+
+## auto-redirect
+
+自动配置 iptables/nftables 以重定向 TCP 连接，需要`auto-route`已启用
+
+*在 Android 中*：
+
+仅转发本地 IPv4 连接。要通过热点或中继共享您的 VPN 连接，请使用 [VPNHotspot](https://github.com/Mygod/VPNHotspot)。
+
+*在 Linux 中*：
+
+带有 auto-route 的 auto-redirect 现在可以在路由器上按预期工作，无需干预。
 
 ## auto-detect-interface
 
@@ -81,9 +109,8 @@ tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `gvisor
 dns 劫持，将匹配到的连接导入内部 [dns](../dns/index.md) 模块，不书写协议则为 udp://
 
 !!! warning ""
-    * 在 `MacOS`/`Windows` 无法自动劫持发往局域网的 dns 请求
+    *在 `MacOS`/`Windows` 无法自动劫持发往局域网的 dns 请求
     * 在 `Android` 如开启 `私人dns` 则无法自动劫持 dns 请求
-    * 在 `Linux` 如果 `systemd-resolved` 开启则无法自动劫持 dns 请求
 
 ## strict-route
 
@@ -120,9 +147,41 @@ dns 劫持，将匹配到的连接导入内部 [dns](../dns/index.md) 模块，�
 
 UDP NAT 过期时间，以秒为单位，默认为 300(5 分钟)
 
+## iproute2-table-index
+
+创建路由表使用的编号
+
+## iproute2-rule-index
+
+创建路由规则使用的编号
+
 ## endpoint-independent-nat
 
 启用独立于端点的 NAT，性能可能会略有下降，所以不建议在不需要的时候开启。
+
+## route-address-set
+
+将指定规则集中的目标 IP CIDR 规则添加到防火墙，不匹配的流量将绕过路由
+仅支持 Linux，且需要 nftables 以及`auto-route` 和 `auto-redirect` 已启用。
+
+!!! warning ""
+    与任意配置中的 routing-mark 冲突
+
+## route-exclude-address-set
+
+将指定规则集中的目标 IP CIDR 规则添加到防火墙，匹配的流量将绕过路由
+仅支持 Linux，且需要 nftables 以及`auto-route` 和 `auto-redirect` 已启用。
+
+!!! warning ""
+    与任意配置中的 routing-mark 冲突
+
+## route-address
+
+启用 `auto-route`时路由自定义路由网段而不是默认路由，一般无需配置。
+
+## route-exclude-address
+
+启用 `auto-route` 时排除自定义网段
 
 ## include-interface
 
@@ -131,22 +190,6 @@ UDP NAT 过期时间，以秒为单位，默认为 300(5 分钟)
 ## exclude-interface
 
 排除路由的接口，与 `include-interface` 冲突，不可一起配置
-
-## inet4-route-address
-
-启用 `auto-route`时路由自定义网段而不是默认路由，一般无需配置。
-
-## inet6-route-address
-
-启用 `auto-route`时路由自定义网段而不是默认路由，一般无需配置。
-
-## inet4-route-exclude-address
-
-启用 `auto-route` 时排除自定义网段
-
-## inet6-route-exclude-address
-
-启用 `auto-route` 时排除自定义网段
 
 ## include-uid
 
@@ -192,9 +235,23 @@ UDP NAT 过期时间，以秒为单位，默认为 300(5 分钟)
 
 文件描述符
 
-## table-index
+## 旧写法，即将废弃
 
-创建路由表使用的编号
+### inet4-route-address
+
+启用 `auto-route`时路由自定义网段而不是默认路由，一般无需配置。
+
+### inet6-route-address
+
+启用 `auto-route`时路由自定义网段而不是默认路由，一般无需配置。
+
+### inet4-route-exclude-address
+
+启用 `auto-route` 时排除自定义网段
+
+### inet6-route-exclude-address
+
+启用 `auto-route` 时排除自定义网段
 
 ## Tun 的协议栈网络回环测试
 
