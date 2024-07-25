@@ -21,21 +21,49 @@ proxies:
 
 [通用字段](./index.md)
 
-## cipher
+## Cipher
 
-加密方法，支持：
+=== "AES"
+    |          方法               |                            |                            |
+    |----------------------------|----------------------------|----------------------------|
+    | aes-128-ctr                | aes-192-ctr                | aes-256-ctr                |
+    | aes-128-cfb                | aes-192-cfb                | aes-256-cfb                |
+    | aes-128-gcm                | aes-192-gcm                | aes-256-gcm                |
+    | aes-128-ccm                | aes-192-ccm                | aes-256-ccm                |
+    | aes-128-gcm-siv            |                            | aes-256-gcm-siv            |
 
-aes-128-gcm aes-192-gcm aes-256-gcm
+=== "CHACHA"
+    | 方法                           |                                |
+    |--------------------------------|--------------------------------|
+    | chacha20-ietf                  |                                |
+    | chacha20                       | xchacha20                      |
+    | chacha20-ietf-poly1305         | xchacha20-ietf-poly1305        |
+    | chacha8-ietf-poly1305          | xchacha8-ietf-poly1305         |
 
-aes-128-cfb aes-192-cfb aes-256-cfb
+=== "2022 Blake3"
+    | 方法                                |
+    |-------------------------------------|
+    | 2022-blake3-aes-128-gcm             |
+    | 2022-blake3-aes-256-gcm             |
+    | 2022-blake3-chacha20-poly1305       |
 
-aes-128-ctr aes-192-ctr aes-256-ctr
+=== "LEA"
+    | 方法               |
+    |--------------------|
+    | lea-128-gcm        |
+    | lea-192-gcm        |
+    | lea-256-gcm        |
 
-rc4-md5 chacha20-ietf xchacha20
-
-chacha20-ietf-poly1305 xchacha20-ietf-poly1305
-
-2022-blake3-aes-128-gcm 2022-blake3-aes-256-gcm 2022-blake3-chacha20-poly1305
+=== "其他"
+    | 方法               |
+    |--------------------|
+    | rabbit128-poly1305|
+    | aegis-128l         |
+    | aegis-256          |
+    | aez-384            |
+    | deoxys-ii-256-128  |
+    | rc4-md5            |
+    | none               |
 
 ## password
 

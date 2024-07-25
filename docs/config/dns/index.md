@@ -157,15 +157,14 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 
 此部分可用于发向公网地址的 DNS 服务器，可以使用`&`连接不同的参数
 
-### DNS 经过代理查询
-
-书写格式为 DNS 服务器后 `#策略组或节点`
+### DNS 指定 代理/接口 进行连接
 
 书写规范应带引号，以防出现特殊字符，如需过代理查询，应配置 `proxy-server-nameserver`, 以防出现鸡蛋问题
 
 ```{.yaml linenums="1"}
 nameserver:
   - 'tls://dns.google#proxy'
+  - 'tls://dns.alidns.com#eth0'
 ```
 
 ### 强制 HTTP/3
@@ -177,16 +176,9 @@ nameserver:
   - 'https://dns.cloudflare.com/dns-query#h3=true'
 ```
 
-### 指定 DNS 出口网卡
+### doh 跳过证书验证
 
 ```{.yaml linenums="1"}
 nameserver:
-  - 'tls://8.8.4.4#en0'
-```
-
-### 指定策略组和使用 http/3
-
-```{.yaml linenums="1"}
-nameserver:
-  - 'https://mozilla.cloudflare-dns.com/dns-query#proxy&h3=true'
+  - 'https://dns.cloudflare.com/dns-query#skip-cert-verify=true'
 ```

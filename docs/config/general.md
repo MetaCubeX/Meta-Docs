@@ -142,6 +142,15 @@ HTTPS-API 监听地址，需要配置 `tls` 部分证书和其私钥配置，使
 external-controller-tls: 127.0.0.1:9443
 ```
 
+在RESTful API端口上开启DOH服务器
+
+!!! warning ""
+    该URL不会验证secret， 如果开启请自行保证安全问题
+
+```{.yaml linenums="1"}
+external-doh-server: /dns-query
+```
+
 API 的访问密钥
 
 ```{.yaml linenums="1"}
