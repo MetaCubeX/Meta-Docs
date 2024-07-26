@@ -40,7 +40,7 @@ rule-providers:
 
 ## behavior
 
-行为，可选`domain`/`ipcidr`/`classical，对应不同格式的 rule-provider 文件格式，请按实际格式填写
+行为，可选`domain`/`ipcidr`/`classical`，对应不同格式的 rule-provider 文件格式，请按实际格式填写
 
 ## format
 
