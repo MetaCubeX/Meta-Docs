@@ -90,21 +90,21 @@ proxy-groups:
 
 ## include-all
 
-引入所有[出站代理](../proxies/index.md)以及[代理集合](../proxy-providers/index.md)
+引入所有[出站代理](../proxies/index.md)以及[代理集合](../proxy-providers/index.md)，顺序将按照名称排序
 
 !!! info ""
     引入不包含策略组,可在[proxies](./index.md#proxies)引入其他策略组
 
 ## include-all-proxies
 
-引入所有[出站代理](../proxies/index.md)
+引入所有[出站代理](../proxies/index.md)，顺序将按照名称排序
 
 !!! info ""
     引入不包含策略组,可在[`proxies`](./index.md#proxies)引入其他策略组
 
 ## include-all-providers
 
-引入所有[代理集合](../proxy-providers/index.md)
+引入所有[代理集合](../proxy-providers/index.md)，顺序将按照名称排序
 
 !!! info ""
     会使[引入代理集合](./index.md#use)失效
