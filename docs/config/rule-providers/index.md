@@ -40,8 +40,10 @@ rule-providers:
 
 ## behavior
 
-`behavior` 参数有三种可选项：`domain` / `ipcidr` / `classical`，对应不同格式的 rule-provider 文件格式，请按实际格式填写
+行为，可选`domain`/`ipcidr`/`classical，对应不同格式的 rule-provider 文件格式，请按实际格式填写
 
 ## format
 
-格式，可选 `yaml` 和 `text`，默认 `yaml`
+格式，可选 `yaml`/`text`/`mrs`，默认 `yaml`
+
+`mrs`目前 `behavior` 仅支持 `domain`，可以通过`mihomo convert-ruleset domain yaml XXX.yaml XXX.mrs`转换得到
