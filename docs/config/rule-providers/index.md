@@ -46,4 +46,4 @@ rule-providers:
 
 格式，可选 `yaml`/`text`/`mrs`，默认 `yaml`
 
-`mrs`目前 `behavior` 仅支持 `domain`，可以通过`mihomo convert-ruleset domain yaml XXX.yaml XXX.mrs`转换得到
+`mrs`目前 `behavior` 仅支持 `domain`/`ipcidr`，可以通过`mihomo convert-ruleset domain/ipcidr yaml XXX.yaml XXX.mrs`转换得到
