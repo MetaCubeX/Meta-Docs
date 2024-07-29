@@ -130,15 +130,6 @@ proxy-providers:
     path: ./proxy_providers/provider2.yaml
 ```
 
-## IPv6 Addresses
-
-In Clash configuration, use `[]` to frame an IPv6 address.
-
-```{.yaml linenums="1"}
-[aaaa::a8aa:ff:fe09:57d8]
-[aaaa::a8aa:ff:fe09:57d9]:853 # 带端口的 IPV6 地址
-```
-
 ## Domain Wildcards
 
 ### Wildcard `*`
