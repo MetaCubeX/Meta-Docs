@@ -132,15 +132,6 @@ proxy-providers:
     path: ./proxy_providers/provider2.yaml
 ```
 
-## **IPV6 地址**
-
-在`Clash`配置中，应当使用`[]`来框选一个 IPV6 地址
-
-```{.yaml linenums="1"}
-[aaaa::a8aa:ff:fe09:57d8]
-[aaaa::a8aa:ff:fe09:57d9]:853 # 带端口的 IPV6 地址
-```
-
 ## 域名通配符
 
 ### 通配符 `*`
