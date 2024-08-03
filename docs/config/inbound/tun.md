@@ -86,11 +86,11 @@ tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `gvisor
 
 ## auto-route
 
-仅支持 Linux，自动设置全局路由，可以自动将全局流量路由进入 tun 网卡。
+自动设置全局路由，可以自动将全局流量路由进入 tun 网卡。
 
 ## auto-redirect
 
-自动配置 iptables/nftables 以重定向 TCP 连接，需要`auto-route`已启用
+仅支持 Linux，自动配置 iptables/nftables 以重定向 TCP 连接，需要`auto-route`已启用
 
 *在 Android 中*：
 
