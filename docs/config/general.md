@@ -142,7 +142,7 @@ HTTPS-API 监听地址，需要配置 `tls` 部分证书和其私钥配置，使
 external-controller-tls: 127.0.0.1:9443
 ```
 
-在RESTful API端口上开启DOH服务器
+在 RESTful API 端口上开启 DOH 服务器
 
 !!! warning ""
     该URL不会验证secret， 如果开启请自行保证安全问题
@@ -197,7 +197,7 @@ profile:
 
 ## 统一延迟
 
-开启统一延迟时，会计算 RTT ，以消除连接握手等带来的不同类型节点的延迟差异
+开启统一延迟时，会计算 RTT，以消除连接握手等带来的不同类型节点的延迟差异
 
 可选值 `true/false`
 

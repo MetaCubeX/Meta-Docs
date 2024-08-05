@@ -1,6 +1,12 @@
+# 配置
+
 <div class="grid cards" markdown>
 
-- :material-login: &nbsp; __[入站][inbound]__
+- :octicons-file-code-24: &nbsp; __[完整示例][example]__
+
+    test
+
+- :material-login: &nbsp; __[流量入站][inbound]__
 
     test
 
@@ -12,16 +18,17 @@
 
     test
 
-- :material-format-list-group: &nbsp; __[策略组][proxy-group]__
+- :material-dns-outline: &nbsp; __[DNS][dns]__
 
     test
 
-- :material-dns-outline: &nbsp; __[DNS][dns]__
+- :material-format-list-group: &nbsp; __[策略组][proxy-group]__
 
     test
 
 </div>
 
+[example]: https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml
 [inbound]: ./inbound/index.md
 [proxy-group]: ./proxy-groups/index.md
 [proxie]: ./proxies/index.md

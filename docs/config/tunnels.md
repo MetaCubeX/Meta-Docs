@@ -1,4 +1,6 @@
-流量转发隧道,可以转发tcp/udp流量,也可经过代理转发
+# TUNNEL
+
+流量转发隧道，可以转发 tcp/udp 流量，也可经过代理转发
 
 ```{.yaml linenums="1"}
 tunnels:
@@ -30,7 +32,7 @@ tunnels:
 
 ### network
 
-需要监听的网络类型,可为tcp/udp
+需要监听的网络类型，可为 tcp/udp
 
 ### address
 
@@ -42,6 +44,6 @@ tunnels:
 
 ### proxy
 
-可选项,经过某个 `proxies`/`proxy-groups` 发送流量
+可选项，经过某个 `proxies`/`proxy-groups` 发送流量
 
 如上示例为   访问`127.0.0.1:6553`为经过`proxy`这个`proxies`/`proxy-groups`访问`8.8.8.8:53`

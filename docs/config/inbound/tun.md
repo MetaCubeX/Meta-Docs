@@ -109,7 +109,7 @@ tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `gvisor
 dns 劫持，将匹配到的连接导入内部 [dns](../dns/index.md) 模块，不书写协议则为 udp://
 
 !!! warning ""
-    *在 `MacOS`/`Windows` 无法自动劫持发往局域网的 dns 请求
+    * 在 `MacOS`/`Windows` 无法自动劫持发往局域网的 dns 请求
     * 在 `Android` 如开启 `私人dns` 则无法自动劫持 dns 请求
 
 ## strict-route
@@ -149,11 +149,11 @@ UDP NAT 过期时间，以秒为单位，默认为 300(5 分钟)
 
 ## iproute2-table-index
 
-创建路由表使用的编号
+`auto-route` 生成的 iproute2 路由表索引，默认使用 `2022`
 
 ## iproute2-rule-index
 
-创建路由规则使用的编号
+`auto-route` 生成的 iproute2 规则起始索引，默认使用 `9000`
 
 ## endpoint-independent-nat
 
@@ -230,10 +230,6 @@ UDP NAT 过期时间，以秒为单位，默认为 300(5 分钟)
 ## exclude-package
 
 排除 Android 应用包名，使其避免被 Tun 路由流量
-
-## file-descriptor
-
-文件描述符
 
 ## 旧写法，即将废弃
 

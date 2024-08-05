@@ -33,6 +33,7 @@ theme:
     - toc.follow
     - content.action.edit
     - content.code.copy
+    - content.code.select
     # - toc.integrate
   palette:
     - media: "(prefers-color-scheme)"
@@ -66,6 +67,7 @@ markdown_extensions:
       toc_depth: 3
       anchorlink: true
   - admonition
+  - attr_list
   - md_in_html
   - pymdownx.details
   - pymdownx.critic
@@ -106,6 +108,7 @@ plugins:
             简介: Introduction
             安装: Install
             示例: Example
+            手册: Handbook
             配置: Configuration
 
             web面板: Web dashboard
@@ -151,26 +154,20 @@ plugins:
 nav:
   - 简介: index.md
   - 安装:
-    - 安装: startup/index.md
-    - web面板: startup/web.md
+    - 常见问题: startup/faq.md
+    - 使用预编译二进制: startup/index.md
     - 客户端: startup/client/index.md
+    - web面板: startup/web.md
+
     - 创建运行服务: startup/service/index.md
     - 第三方工具: startup/client/client.md
   - 手册:
-    - faq/index.md
-    - 常见问题: faq/faq.md
-    - 关于 fakeip: faq/fakeip.md
-    - 大致工作流程:
-      - 流量入站: faq/in.md
-      - 流量处理: faq/route.md
-      - 流量发出: faq/out.md
-      - DNS处理: faq/dns.md
-  - 示例:
-    - 完整示例: example/index.md
+    - handbook/index.md
+    - 语法: handbook/syntax.md
     - 快捷配置: example/conf.md
   - 配置:
     - config/index.md
-    - 语法: config/syntax.md
+    # - 完整示例: config/example.md
     - 全局配置: config/general.md
     - DNS:
       - DNS配置: config/dns/index.md

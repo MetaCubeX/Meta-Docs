@@ -1,8 +1,8 @@
 # 域名嗅探
 
-Clash使用Mapping机制解决透明代理情况下,无法通过Redir端口传递域名的问题；但此机制会导致如果不使用Clash内置的DNS解析服务,就无法准确还原域名,进行域名分流的问题。
+Clash 使用 Mapping 机制解决透明代理情况下，无法通过 Redir 端口传递域名的问题；但此机制会导致如果不使用 Clash 内置的 DNS 解析服务，就无法准确还原域名，进行域名分流的问题。
 
-Meta内置了Sniffer域名嗅器,通过读取握手包内的域名字段,将IP还原成域名,有效解决Mapping机制的短板。
+Meta 内置了 Sniffer 域名嗅器，通过读取握手包内的域名字段，将 IP 还原成域名，有效解决 Mapping 机制的短板。
 
 ## 示例
 
@@ -30,7 +30,7 @@ sniffer:
 
 ### enable
 
-是否启用sniffer
+是否启用 sniffer
 
 ### force-dns-mapping
 
@@ -53,8 +53,8 @@ sniffer:
 
 ### force-domain
 
-需要强制嗅探的域名（默认情况下只对IP进行嗅探）
+需要强制嗅探的域名（默认情况下只对 IP 进行嗅探）
 
 ### skip-domain
 
-需要跳过嗅探的域名。主要解决部分站点sni字段非域名，导致嗅探结果异常的问题，如米家设备`Mijia Cloud`
+需要跳过嗅探的域名。主要解决部分站点 sni 字段非域名，导致嗅探结果异常的问题，如米家设备`Mijia Cloud`
