@@ -13,6 +13,7 @@
 |[clashtui](https://github.com/JohanChane/clashtui)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
+|[mihomo-party](https://github.com/pompurin404/mihomo-party)|维护中 |
 
 ## MacOS
 
@@ -23,6 +24,7 @@
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
+|[mihomo-party](https://github.com/pompurin404/mihomo-party)|维护中 |
 
 ## Linux
 
@@ -34,6 +36,7 @@
 |[clashtui](https://github.com/JohanChane/clashtui)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
+|[mihomo-party](https://github.com/pompurin404/mihomo-party)|维护中 |
 
 ## Android
 
