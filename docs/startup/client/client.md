@@ -61,7 +61,10 @@
 
 |项目名称 | 维护状态 |
 |:----|:----|
-|[Surfing](https://github.com/MoGuangYu/Surfing)|维护中 |
 |[ShellClash](https://github.com/juewuy/ShellClash)|维护中 |
+|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|维护中 |
+|[Box4](https://github.com/CHIZI-0618/box4magisk)|维护中 |
+|[Box for Root](https://github.com/taamarin/box_for_magisk)|维护中 |
+|[Surfing](https://github.com/MoGuangYu/Surfing)|维护中 |
 |[Clash Tproxy Android](https://t.me/e58695/59)|维护中 |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|停止维护 |
