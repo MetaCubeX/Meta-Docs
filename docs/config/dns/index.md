@@ -59,7 +59,7 @@ DNS 服务监听，仅支持 udp
 
 ## enhanced-mode
 
-可选值 `normal`/`fake-ip`/`redir-host`，默认`normal`
+可选值 `fake-ip`/`redir-host`，默认`redir-host`
 
 mihomo 的 DNS 处理模式
 
@@ -73,7 +73,7 @@ fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
 ## use-hosts
 
-是否查询配置中的 [hosts](./hosts.md)，默认 true
+是否回应配置中的 [hosts](./hosts.md)，默认 true
 
 ## use-system-hosts
 
@@ -127,7 +127,7 @@ nameserver-policy:
 
 ### geoip
 
-是否启用 fallback filter
+是否启用 geoip 判断
 
 ### geoip-code
 
