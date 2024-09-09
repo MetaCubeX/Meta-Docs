@@ -1,4 +1,4 @@
-# Common fields
+# General Fields
 
 ```{.yaml linenums="1"}
 proxy-groups:
@@ -15,6 +15,7 @@ proxy-groups:
   interval: 300
   lazy: true
   timeout: 5000
+  max-failed-times: 5
 
   disable-udp: true
   interface-name: en0
@@ -32,120 +33,122 @@ proxy-groups:
 
 ## name
 
-Required. The name of the policy group.
+Required, the name of the proxy group.
 
 !!! note
-    If there are special symbols, they should be enclosed in quotes.
+    If there are special characters, they should be enclosed in quotes.
 
 ## type
 
-Required. The type of the policy group.
+Required, the type of the proxy group.
 
 ## proxies
 
-include [proxies](../proxies/index.md) or other proxy-groups.
+References to [outbound proxies](../proxies/index.md) or other proxy groups.
 
 ## use
 
-include [proxy-providers](../proxy-providers/index.md)
+References to [proxy sets](../proxy-providers/index.md).
 
 ## url
 
-Health check test URL.
+Health check test address.
 
 ## interval
 
-Health check interval. If not 0, enable periodic testing, in seconds.
+Health check interval; if not 0, periodic testing is enabled, measured in seconds.
 
 ## lazy
 
-Lazy mode. Default is `true`. Do not test unless this policy group is selected.
+Lazy state, defaults to `true`. If the current proxy group is not selected, no testing is performed.
 
-### timeout
+## timeout
 
-Health check timeout, in milliseconds.
+Health check timeout, measured in milliseconds.
 
 ## max-failed-times
 
-Maximum number of failures before triggering a forced health check. Default is 5.
+Maximum number of failures; exceeding this triggers a forced health check, default is 5.
 
 ## disable-udp
 
-Disable `UDP` for this proxy-groups.
+Disables `UDP` for this proxy group.
 
 ## interface-name
 
-Specify the [outbound interface](../general.md#_11) for the proxy-groups.
+Specifies the [outbound interface](../general.md#_11) for the proxy group.
+
 !!! info ""
-    Priority: Proxies > Proxy Groups > Global
+    Priority: Proxy Node > Proxy Policy > Global.
 
 ## routing-mark
 
-Attach a [routing mark](../general.md#_12)when the proxy-groups goes outbound.
+The [routing mark](../general.md#_12) attached when the proxy group is outbound.
+
 !!! info ""
-    Priority: Proxies > Proxy Groups > Global
+    Priority: Proxy Node > Proxy Policy > Global.
 
 ## include-all
 
-Include all [proxies](../proxies/index.md) and [proxy-providers](../proxy-providers/index.md).
+Includes all [outbound proxies](../proxies/index.md) and [proxy sets](../proxy-providers/index.md), sorted by name.
 
 !!! info ""
-    Includes without policy groups. Other policy groups can be included in [`proxies`](./index.md#proxies).
+    Inclusion does not include proxy groups; other proxy groups can be included in [proxies](./index.md#proxies).
 
 ## include-all-proxies
 
-Include all [proxies](../proxies/index.md)
+Includes all [outbound proxies](../proxies/index.md), sorted by name.
 
 !!! info ""
-    Includes without policy groups. Other policy groups can be included in [`proxies`](./index.md#proxies).
+    Inclusion does not include proxy groups; other proxy groups can be included in [`proxies`](./index.md#proxies).
 
 ## include-all-providers
 
-Include all [proxy-providers](../proxy-providers/index.md).
+Includes all [proxy sets](../proxy-providers/index.md), sorted by name.
 
 !!! info ""
-    This will disable [include proxy-providers](./index.md#use).
+    This will invalidate [including proxy sets](./index.md#use).
 
 ## filter
 
-Filter nodes that meet the keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Multiple regular expressions can be separated by `.
+Filters nodes that meet keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). You can use ` to separate multiple regular expressions.
 
 !!! info ""
-    Only applies to include proxy-providers and [include all outbound proxies](./index.md#include-all-proxies).
+    This only applies to included proxy sets and [including all outbound proxies](./index.md#include-all-proxies).
 
 ## exclude-filter
 
-Exclude proxies that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Multiple regular expressions can be separated by `.
+Excludes nodes that meet keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). You can use ` to separate multiple regular expressions.
 
 ## exclude-type
 
-Exclude proxies types.
+Excludes node types.
 
-Note that the syntax for `proxy-groups` and `proxy-providers` is different and does not support regular expressions. They are separated by `|`.
+Note that the syntax for `proxy-groups` and `proxy-providers` is different; regular expressions are not supported, and should be separated by `|`.
 
 ## expected-status
 
-Expected HTTP response status code during health check. If this field is configured, the node is considered available only when the response status code is consistent with the expected status. Default is `*`, indicating no requirements for the response status.
+The expected HTTP response status code during health checks. If this field is configured, a node is considered available only when the response status code matches the expected status. The default is `*`, indicating no requirements on the response status.
 
-### Syntax
+### syntax
 
-Use `/` to match multiple status codes, use `-` to match status code ranges, and mix the syntax.
+You can use `/` to match multiple status codes, `-` to match a range of statuses, and mix them.
 
-#### Examples
+#### example
 
-Match status codes 200 and 302:
+Match status codes 200 and 302.
 
 ```{.yaml linenums="1"}
 expected-status: 200/302
 ```
 
-Match status codes from 400 to 503:
+Match status codes from 400 to 503.
 
 ```{.yaml linenums="1"}
 expected-status: 400-503
 ```
 
-Match status codes 200 and 302, as well as from 400 to 503:
+Match status codes 200 and 302, as well as from 400 to 503.
 
 ```{.yaml linenums="1"}
 expected-status: 200/302/400-503
@@ -153,8 +156,8 @@ expected-status: 200/302/400-503
 
 ## hidden
 
-Returns hidden status in the API to hide the display of this proxy-groups (requires front-end adaptation using the API).
+Returns `hidden` status in the API to hide the display of this proxy group (requires front-end adaptation using the API).
 
 ## icon
 
-Returns the string entered in icon in the API to display in this proxy-groups (requires front-end adaptation using the API).
+Returns the string input for `icon` in the API to display in this proxy group (requires front-end adaptation using the API).

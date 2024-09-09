@@ -1,34 +1,23 @@
 # dialer-proxy
 
-指定当前 `proxy` 通过下一跳的 `dialer-proxy` 建立网络连接，值可以为代理组、代理（proxy-groups, proxy）的同一 `name` 字段
-
 ```{.yaml linenums="1"}
 proxies:
-- name: "SS1"
-  type: ss
-  server: server
-  port: 443
-  dialer-proxy: SS2
+- name: "ss1"
+  dialer-proxy: dialer
   ...
 
-- name: "SS2"
-  type: ss
-  server: server
-  port: 443
+- name: "ss2"
   ...
 
-rules:
-- match,SS1
-
+proxy-groups:
+- name: dialer
+  type: select
+  proxies:
+  - ss2
 ```
 
-!!!Note
-    上面的例子通过在客户端的 proxies 内 `SS1` 指定 `proxy-dialer: SS2`，使发往 SS1 的流量先经过 SS2，从而实现指定下一跳代理的效果
+指定当前 `proxies` 通过 `dialer-proxy` 建立网络连接，值可以为[策略组](../proxy-groups/index.md)/[出站代理](../proxies/index.md)的 `name`
 
-```mermaid
-flowchart LR
-  Clash <--> |proxy-proxy-dialer: SS2|SS2
-  SS2 <--> SS1
-  SS1 <--> 目标域名
+上述示例中，ss1 通过 ss2 建立连接
 
-```
+当通过 ss1 代理时，就组成了一条 `内核>ss2>ss1>目标` 的代理链

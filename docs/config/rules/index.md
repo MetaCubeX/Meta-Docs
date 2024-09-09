@@ -115,15 +115,15 @@ rules:
 
 ### DST-PORT
 
-匹配请求目标[端口范围](../syntax.md#_13)
+匹配请求目标[端口范围](../../handbook/syntax.md#_14)
 
 ### SRC-PORT
 
-匹配请求来源[端口范围](../syntax.md#_13)
+匹配请求来源[端口范围](../../handbook/syntax.md#_14)
 
 ### IN-PORT
 
-匹配[入站端口](../inbound/listeners/index.md#port),可用[端口范围](../syntax.md#_13)
+匹配[入站端口](../inbound/listeners/index.md#port),可用[端口范围](../../handbook/syntax.md#_14)
 
 ### IN-TYPE
 
@@ -173,7 +173,7 @@ rules:
 
 `LOGIC_TYPE,((payload1),(payload2)),Proxy`
 
-*payload1*、*payload2* 为其他规则类型和它 payload，如：`DOMAIN,google.com`
+*payload1*、*payload2* 为 规则类型和其他 payload，如：`DOMAIN,google.com`
 
 逻辑规则，需要**注意括号**的使用
 

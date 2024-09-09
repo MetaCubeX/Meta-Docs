@@ -164,10 +164,21 @@ Clash 的通配符 `*` 一次只能匹配一级域名
 
 ```{.yaml linenums="1"}
 fake-ip-filter:
-  - ".lan"
-  - "xbox.*.microsoft.com"
-  - "+.xboxlive.com"
-  - localhost.ptlogin2.qq.com
+- ".lan"
+- "xbox.*.microsoft.com"
+- "+.xboxlive.com"
+- localhost.ptlogin2.qq.com
+```
+
+## 引入域名集合
+
+!!! warning
+    rule-set 仅支持 behavior 为 domain/classical
+
+```{.yaml linenums="1"}
+fake-ip-filter:
+- "rule-set:xxx"
+- "geosite:xxx"
 ```
 
 ## 端口范围
@@ -179,7 +190,7 @@ mihomo 可以使用 `-` 来匹配端口范围，使用 `/` 或者 `,` 来区分�
 匹配 114 到 514 和 810 到 1919 端口，以及 65530 端口
 
 ```{.yaml linenums="1"}
-114-514/810-1919/65530
+114-514/810-1919,65530
 ```
 
 <!--

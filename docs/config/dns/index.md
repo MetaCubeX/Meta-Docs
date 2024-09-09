@@ -13,13 +13,14 @@ dns:
     - 223.5.5.5
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - '*.lan'
-    - localhost.ptlogin2.qq.com
   nameserver-policy:
-    'www.baidu.com': '114.114.114.114'
-    '+.internal.crop.com': '10.0.0.1'
-    'geosite:cn': https://doh.pub/dns-query
+    '+.arpa': '10.0.0.1'
+    'rule-set:cn':
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
@@ -47,7 +48,7 @@ dns:
 
 ## prefer-h3
 
-优先使用 DOH 的 http/3
+DOH 优先使用 http/3
 
 ## listen
 
@@ -71,6 +72,12 @@ fakeip 下的 IP 段设置，[tun](../inbound/tun.md) 的默认 IPV4 地址 也�
 
 fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
+值支持[域名通配](../../handbook/syntax.md#_8)以及[引入域名集合](../../handbook/syntax.md#_13)
+
+## fake-ip-filter-mode: blacklist
+
+可选 `blacklist`/`whitelist`，默认`blacklist``，whitelist` 即只有匹配成功才返回 fake-ip
+
 ## use-hosts
 
 是否回应配置中的 [hosts](./hosts.md)，默认 true
@@ -81,7 +88,7 @@ fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
 ## respect-rules
 
-dns 连接跟随 rules，需配置 [proxy-server-nameserver](./index.md#proxy-server-nameserver)
+dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-nameserver](./index.md#proxy-server-nameserver)
 
 ## default-nameserver
 
@@ -94,22 +101,13 @@ dns 连接跟随 rules，需配置 [proxy-server-nameserver](./index.md#proxy-se
 
 指定域名查询的解析服务器，可使用 geosite, 优先于 `nameserver/fallback 查询`
 
-!!! note
-    **以下仅作为书写演示，建议根据自己需求写**
+键支持[域名通配](../../handbook/syntax.md#_8)
 
-```{.yaml linenums="1"}
-nameserver-policy:
-  'www.baidu.com': '114.114.114.114'
-  '+.internal.crop.com': '10.0.0.1'
-  'geosite:geolocation-!cn': [tls://8.8.4.4, https://1.0.0.1/dns-query]
-  'www.baidu.com,+.google.cn': https://doh.pub/dns-query
-  'geosite:private,apple': https://dns.alidns.com/dns-query
-  'rule-set:google,cloudflare': 8.8.8.8
-```
+值支持字符串/数组
 
 ## nameserver
 
-默认的域名解析服务器，如不配置 `fallback/proxy-server-nameserver` , 则所有域名都由 nameserver 解析
+默认的域名解析服务器
 
 ## proxy-server-nameserver
 
