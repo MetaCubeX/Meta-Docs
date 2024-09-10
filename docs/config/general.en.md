@@ -173,8 +173,6 @@ external-ui-url: "<https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh
 
 ## Cache
 
-In Clash official, profile should be an extension configuration, but in Clash.meta, it is only used as a cache item.
-
 ```{.yaml linenums="1"}
 profile:
   store-selected: true

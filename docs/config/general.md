@@ -183,10 +183,6 @@ external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-
 
 ## 缓存
 
-在 Clash 官方中，profile 应为扩展配置，但在 Clash.meta, 仅作为缓存项使用
-
-可选值 `true/false`
-
 ```{.yaml linenums="1"}
 profile:
   store-selected: true
