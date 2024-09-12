@@ -25,12 +25,6 @@
 - https://doh.pub/dns-query
 ```
 
-## DNS over HTTP/3
-
-```{.yaml linenums="1"}
-- https://dns.alidns.com/dns-query#h3=true
-```
-
 ## DNS over QUIC
 
 ```{.yaml linenums="1"}
@@ -38,8 +32,6 @@
 ```
 
 ## system
-
-仅限`Windows`/`MacOS`/`Linux`
 
 ```{.yaml linenums="1"}
 - system://

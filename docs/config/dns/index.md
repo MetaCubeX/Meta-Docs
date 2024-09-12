@@ -151,13 +151,17 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 
 这些域名被视为已污染，匹配到这些域名，会直接使用 `fallback`解析，不去使用 `nameserver`
 
-## 部分特殊写法
+## 附加参数
 
-此部分可用于发向公网地址的 DNS 服务器，可以使用`&`连接不同的参数
+此部分可用于发向公网地址的 DNS 服务器，使用`#`附加，使用`&`连接不同的参数
 
 ### DNS 指定 代理/接口 进行连接
 
-书写规范应带引号，以防出现特殊字符，如需过代理查询，应配置 `proxy-server-nameserver`, 以防出现鸡蛋问题
+优先使用已有代理，如果不存在该名称的代理则指定接口连接
+
+`#RULES`为遵守路由规则进行连接，等同于[respect-rules](./index.md#respect-rules)
+
+如需经过代理查询，应配置 `proxy-server-nameserver`, 以防出现鸡蛋问题
 
 ```{.yaml linenums="1"}
 nameserver:
@@ -179,4 +183,22 @@ nameserver:
 ```{.yaml linenums="1"}
 nameserver:
   - 'https://dns.cloudflare.com/dns-query#skip-cert-verify=true'
+```
+
+### ecs
+
+指定 dns 查询的 subnet 地址，仅支持 [doh](./type.md#dns-over-https)
+
+```
+nameserver:
+  - 'https://8.8.8.8/dns-query#ecs=1.1.1.1/24'
+```
+
+### ecs-override
+
+强制覆盖 dns 查询的 subnet 地址，仅支持 [doh](./type.md#dns-over-https)
+
+```
+nameserver:
+  - 'https://8.8.8.8/dns-query#ecs=1.1.1.1/24&ecs-override=true'
 ```
