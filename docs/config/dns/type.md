@@ -49,3 +49,14 @@
 ```{.yaml linenums="1"}
 - dhcp://system
 ```
+
+## rcode
+
+```{.yaml linenums="1"}
+- rcode://success            # No error
+- rcode://format_error       # Format error
+- rcode://server_failure     # Server failure
+- rcode://name_error         # Non-existent domain
+- rcode://not_implemented    # Not implemented
+- rcode://refused            # Query refused
+```
