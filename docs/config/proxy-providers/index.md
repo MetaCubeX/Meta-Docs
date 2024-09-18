@@ -32,6 +32,9 @@ proxy-providers:
       ip-version: ipv4-prefer
       additional-prefix: "provider1 prefix |"
       additional-suffix: "| provider1 suffix"
+      proxy-name:
+      - pattern: "IPLC-(.*?)倍"
+        target: "iplc x $1"
     filter: "(?i)港|hk|hongkong|hong kong"
     exclude-filter: "xxx"
     exclude-type: "ss|http"
@@ -124,6 +127,10 @@ proxy-providers:
 ### override.additional-suffix
 
 为节点名称添加固定后缀
+
+### override.proxy-name
+
+对节点名称内容进行替换，支持正则表达式，pattern 为替换内容，target 为替换目标
 
 ### 配置项
 
