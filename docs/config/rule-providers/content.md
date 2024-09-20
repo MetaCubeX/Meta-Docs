@@ -31,7 +31,7 @@
 
 ## domain
 
-`domain`类规则集合内容通配应遵守[clash 通配符](../syntax.md#_8)
+`domain`类规则集合内容通配应遵守[clash 通配符](../../handbook/syntax.md#_8)
 
 === "yaml"
     ```{.yaml linenums="1"}
