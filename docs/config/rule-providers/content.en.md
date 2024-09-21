@@ -1,8 +1,8 @@
-# rule-providers 文件内容
+# Contents of the rule-providers file
 
 ## classical
 
-`classical` 支持[路由规则](../rules/index.md)的全部类型 (rule-set/sub-rule 除外)
+The `classical` type supports all types of [routing rules](../rules/index.md) (except for rule-set/sub-rule).
 
 === "yaml"
     ```{.yaml linenums="1"}
@@ -31,7 +31,7 @@
 
 ## domain
 
-`domain`类规则集合内容通配应遵守[clash 通配符](../../handbook/syntax.md#_8)
+The content of the `domain` rule set must adhere to the [clash wildcard](../../handbook/syntax.md#domain-wildcards).
 
 === "yaml"
     ```{.yaml linenums="1"}

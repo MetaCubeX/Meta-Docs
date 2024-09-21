@@ -76,14 +76,14 @@ Disables `UDP` for this proxy group.
 
 ## interface-name
 
-Specifies the [outbound interface](../general.md#_11) for the proxy group.
+Specifies the [outbound interface](../general.md#outbound-interface) for the proxy group.
 
 !!! info ""
     Priority: Proxy Node > Proxy Policy > Global.
 
 ## routing-mark
 
-The [routing mark](../general.md#_12) attached when the proxy group is outbound.
+The [routing mark](../general.md#routing-mark) attached when the proxy group is outbound.
 
 !!! info ""
     Priority: Proxy Node > Proxy Policy > Global.

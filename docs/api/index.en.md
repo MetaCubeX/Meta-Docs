@@ -3,231 +3,248 @@ hide:
   - navigation
 #   - toc
 ---
+
 # API
 
 ## Request Example
 
-curl example: `curl -H 'Authorization: Bearer ${secret}' http://${controller-api}/version`
+Curl example: `curl -H 'Authorization: Bearer ${secret}' http://${controller-api}/configs?force=true -d '{"path": "", "payload": ""}' -X PUT`
 
-This request includes the `'Authorization: Bearer ${secret}'` header, where:
+This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
-- `${secret}`  is the [api](../config/general.md#api) secret set in the configuration file.
-- `${controller-api}` is the [api](../config/general.md#api) listening address set in the configuration file.
+- `${secret}` is the API key set in the configuration file [api](../config/general.md#external-control-api)
+- `${controller-api}` is the API listening address set in the configuration file [api](../config/general.md#external-control-api)
+- `?force=true` is a parameter that needs to be included in certain requests
+- `'{"path": "", "payload": ""}'` is the data for the resource to be updated
+
+In most cases, the data passed is `'{"path": "", "payload": ""}'`, which can include a new configuration file path.
 
 ## Logs
 
 ### `/logs`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Obtain real-time logs.
+- Retrieve real-time logs.
 
 ## Traffic Information
 
 ### `/traffic`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Obtain real-time traffic, measured in kbps.
+- Retrieve real-time traffic, measured in kbps.
 
 ## Memory Information
 
 ### `/memory`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Obtain real-time memory usage, measured in kb.
+- Retrieve real-time memory usage, measured in kb.
 
 ## Version Information
 
 ### `/version`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Get Clash version.
+- Retrieve the Clash version.
 
 ## Cache
 
 ### `/cache/fakeip/flush`
 
-Request Method: `POST`
+Request method: `POST`
 
-- Clear fake-IP cache
+- Clear the fake IP cache.
 
-## Runtime Configuration
+## Running Configuration
 
 ### `/configs`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Get basic configuration.
+- Retrieve basic configuration.
 
-Request Method: `PUT`
+Request method: `PUT`
 
-- Reload basic configuration.
-- URL must include `?force=true` to force execution and must send data.
-- curl example: `curl "${controller-api}/configs?force=true" -X PUT -d '{"path": "", "payload": ""}'`
+- Reload basic configuration; data must be sent, and the URL must include `?force=true` to enforce execution.
 
-Request Method: `PATCH`
+Request method: `PATCH`
 
-- Update basic configuration by providing the configuration to be modified in JSON format.
-- curl example: `curl ${controller-api}/configs -X PATCH -d '{"mixed-port": 7890}'`
+- Update basic configuration; data must be sent in the format `'{"mixed-port": 7890}'`, modified as needed for the configuration items to be updated.
 
 ### `/configs/geo`
 
-Request Method: `POST`
+Request method: `POST`
 
-- Update GEO database.
-- Must send data, as it automatically reloads the configuration after the update.
-- curl example: `curl "${controller-api}/configs" -X POST -d '{"path": "", "payload": ""}'`
+- Update the GEO database; data must be sent.
 
 ### `/restart`
 
-Request Method: `POST`
+Request method: `POST`
 
-- Restart the kernel.
-- Must send data.
-- curl example: `curl "${controller-api}/restart " -X POST -d '{"path": "", "payload": ""}'`
+- Restart the kernel; data must be sent.
 
-## Update
+## Updates
 
-### `/upgrade/`
+### `/upgrade`
 
-Request Method: `POST`
+Request method: `POST`
 
-- Update the kernel.
-- Must send data, as it automatically reloads the configuration after the update.
-- curl example: `curl "${controller-api}/upgrade" -X POST -d '{"path": "", "payload": ""}'`
+- Update the kernel; data must be sent.
 
 ### `/upgrade/ui`
 
-Request Method: `POST`
+Request method: `POST`
 
-- Update the panel; external-ui must be set.
-- curl example: `curl "${controller-api}/upgrade/ui" -X POST`
+- Update the panel; [external-ui](../config/general.md#external-user-interface) must be set.
+
+### `/upgrade/geo`
+
+Request method: `POST`
+
+- Update the GEO database; data must be sent.
+
+## Policy Groups
+
+### `/group`
+
+Request method: `GET`
+
+- Retrieve policy group information.
+
+### `/group/group_name`
+
+Request method: `GET`
+
+- Retrieve specific policy group information.
+
+### `/group/group_name/delay`
+
+Request method: `GET`
+
+- Test nodes/policy groups within a specified policy group and return new delay information; the URL must include `?url=xxx&timeout=5000`, modified as needed.
 
 ## Proxies
 
 ### `/proxies`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Get proxy information.
+- Retrieve proxy information.
 
-### `/proxies/:name`
+### `/proxies/proxies_name`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Get specific proxy information.
+- Retrieve specific proxy information.
 
-Request Method: `PUT`
+Request method: `PUT`
 
-- Select a specific proxy.
+- Select a specific proxy; data must be included in the format `'{"name":"Japan"}'`.
 
-### `/proxies/:name/delay`
+### `/proxies/proxies_name/delay`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Get delay test information for a specific proxy.
+- Test a specified proxy and return new delay information; the URL must include `?url=xxx&timeout=5000`, modified as needed.
+
+## Proxy Sets
+
+### `/providers/proxies`
+
+Request method: `GET`
+
+- Retrieve all information for all proxy sets.
+
+### `/providers/proxies/providers_name`
+
+Request method: `GET`
+
+- Retrieve information for a specific proxy set.
+
+Request method: `PUT`
+
+- Update the proxy set.
+
+### `/providers/proxies/providers_name/healthcheck`
+
+Request method: `GET`
+
+- Trigger a health check for a specific proxy set.
+
+### `/providers/proxies/providers_name/proxies_name/healthcheck`
+
+- Test a specified proxy within the proxy set and return new delay information; the URL must include `?url=xxx&timeout=5000`, modified as needed.
 
 ## Rules
 
 ### `/rules`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Get rule information.
+- Retrieve rule information.
+
+## Rule Sets
+
+### `/providers/rules`
+
+Request method: `GET`
+
+- Retrieve all information for all rule sets.
+
+### `/providers/rules/providers_name`
+
+Request method: `PUT`
+
+- Update the rule set.
 
 ## Connections
 
 ### `/connections`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Get connection information.
+- Retrieve connection information.
 
-Request Method: `DELETE`
+Request method: `DELETE`
 
 - Close all connections.
 
 ### `/connections/:id`
 
-Request Method: `DELETE`
+Request method: `DELETE`
 
 - Close a specific connection.
-
-## Proxy Providers
-
-### `/providers/proxies`
-
-Request Method: `GET`
-
-- Get information for all proxies in all Proxy Providers.
-
-### `/providers/proxies/:name`
-
-Request Method: `GET`
-
-- Get information for proxies in a specific Proxy Providers.
-
-Request Method: `PUT`
-
-- Update Proxy Providers.
-
-### `/providers/proxies/:name/healthcheck`
-
-Request Method: `GET`
-
-- Trigger health check for a specific  Proxy Providers.
-
-## Rule Providers
-
-### `/providers/rules`
-
-Request Method: `GET`
-
-- Get information for all Rule Providers.
-
-### `/providers/rules/:name`
-
-Request Method: `PUT`
-
-- Update Rule Providers.
 
 ## Domain Query
 
 ### `/dns/query`
 
-Request Method: `GET`
+Request method: `GET`
 
-- Get DNS query data for a specified name and type.
-
-Parameters:
-
-- `name` (required): The domain name to query.
-- `type` (optional): The DNS record type to query (e.g., A, MX, CNAME, etc.).
-
-Example: `GET /dns/query?name=example.com&type=A`
+- Retrieve DNS query data for a specified name and type; the URL must include `?name=example.com&type=A`, modified as needed.
 
 ## DEBUG
 
-`/debug` requires the core to start with [debug log level](../config/general.md#_5)
+`/debug` requires the kernel to be started with the [log level](../config/general.md#log-level) set to `debug`.
 
 ### `/debug/gc`
 
-Request Method: `PUT`
+Request method: `PUT`
 
-- Perform a manual GC.
-- curl example: `curl "${controller-api}/debug/gc" -X PUT`
+- Perform active garbage collection.
 
 ### `/debug/pprof`
 
-Open `http://${controller-api}/debug/pprof` in a browser to view raw DEBUG information, including:
+Open in a browser `http://${controller-api}/debug/pprof` to view raw DEBUG information, where:
 
-- `allocs` shows the memory allocation for each function call, including the size and number of allocations on the stack and heap. This report helps identify memory leaks and frequent memory allocations in the code.
-- `heap` report provides detailed information about the program's use of memory on the heap, including the size, quantity, and address of allocated memory blocks, sorted by size. This report is useful for finding places where memory usage is too high. You can view object sizes in the heap report to identify areas of excessive memory usage.
+- `allocs` indicates memory allocation for each function call, including the size of memory allocated on the stack and heap, as well as the number of allocations. This report is primarily to help identify memory leaks and frequent memory requests in the code.
+- The `heap` report provides detailed information about memory usage on the heap, including the size, number, and address of allocated memory blocks, sorted by size. This report is mainly to locate areas of excessive memory usage; we can check object sizes in the heap report to find areas of high memory consumption.
 
-#### Install [Graphviz](https://graphviz.org/download/) to view graphical debug information
+#### Install [Graphviz](https://graphviz.org/download/) to view graphical debug information.
 
 ##### View Graphical Heap Report
 
@@ -243,8 +260,8 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/heap
 go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/allocs
 ```
 
-[Example output](../assets/image/api/allocs.svg)
+[Sample output](../assets/image/api/allocs.svg)
 
 ##### Submit Output Report
 
-Access `http://${controller-api}/debug/pprof/heap?raw=true` in your browser to download the file and submit any issues you encounter by uploading it to [issues](https://github.com/MetaCubeX/Clash.Meta/issues).
+Access `http://${controller-api}/debug/pprof/heap?raw=true` in a browser to download this file, and upload it to [issues](https://github.com/MetaCubeX/Clash.Meta/issues) to report any problems you encounter.

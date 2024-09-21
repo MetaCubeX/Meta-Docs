@@ -7,6 +7,8 @@ listeners:
   port: 7892
   listen: 0.0.0.0
   udp: true
+  users:
+    - username: password
 ```
 
 ## [通用字段](./index.md)
@@ -19,4 +21,4 @@ listeners:
 
 ### 用户验证
 
-使用全局 [用户验证](../../general.md/#_2)
+如果不填写 users 项，则遵从全局 [用户验证](../../general.md/#_2) 设置，如果填写会忽略全局设置，如想跳过该入站的验证可填写 users: []

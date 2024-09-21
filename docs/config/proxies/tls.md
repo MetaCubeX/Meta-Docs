@@ -35,7 +35,7 @@ proxies:
 
 如果两个对等点都支持 ALPN，则选择的协议将是此列表中的一个，如果没有相互支持的协议则连接将失败。
 
-参阅 [Application-Layer Protocol Negotiation](https://sing-box.sagernet.org/zh/configuration/shared/tls/#alpn:~:text=Application%2DLayer%20Protocol%20Negotiation%E3%80%82)
+参阅 [Application-Layer Protocol Negotiation](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation)
 
 ## skip-cert-verify
 
