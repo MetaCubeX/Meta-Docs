@@ -25,3 +25,5 @@ Load balancing strategy.
 * `consistent-hashing`: Distributes requests with the same top-level domain to the same proxy node within the strategy group.
 
 * `round-robin`: Distributes all requests to different proxy nodes within the strategy group.
+
+* `sticky-sessions`: sticky-sessions.

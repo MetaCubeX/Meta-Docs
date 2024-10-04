@@ -22,10 +22,13 @@ proxy-providers:
       lazy: true
       expected-status: 204
     override:
-      skip-cert-verify: true
+      tfo: false
+      mptcp: false
       udp: true
+      udp-over-tcp: false
       down: "50 Mbps"
       up: "10 Mbps"
+      skip-cert-verify: true
       dialer-proxy: proxy
       interface-name: tailscale0
       routing-mark: 233
@@ -134,13 +137,19 @@ Replace the content of the node name, supporting regular expressions, where patt
 
 ### Configuration Items
 
+Refer to common fields [tfo](../proxies/index.md#tfo)
+
+Refer to common fields [mptcp](../proxies/index.md#mptcp)
+
+Refer to common fields [udp](../proxies/index.md#udp).
+
+Refer to `Shadowsocks` [udp-over-tcp](../proxies/ss.md#udp-over-tcp)
+
 Refer to `Hysteria`/`Hysteria2` [up](../proxies/hysteria2.md#updown).
 
 Refer to `Hysteria`/`Hysteria2` [down](../proxies/hysteria2.md#updown).
 
 Refer to common fields [skip-cert-verify](../proxies/tls.md#skip-cert-verify).
-
-Refer to common fields [udp](../proxies/index.md#udp).
 
 Refer to common fields [dialer-proxy](../proxies/index.md#dialer-proxy).
 

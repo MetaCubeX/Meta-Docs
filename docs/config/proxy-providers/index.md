@@ -22,10 +22,13 @@ proxy-providers:
       lazy: true
       expected-status: 204
     override:
-      skip-cert-verify: true
+      tfo: false
+      mptcp: false
       udp: true
+      udp-over-tcp: false
       down: "50 Mbps"
       up: "10 Mbps"
+      skip-cert-verify: true
       dialer-proxy: proxy
       interface-name: tailscale0
       routing-mark: 233
@@ -134,13 +137,19 @@ proxy-providers:
 
 ### 配置项
 
+参阅通用字段  [tfo](../proxies/index.md#tfo)
+
+参阅通用字段  [mptcp](../proxies/index.md#mptcp)
+
+参阅通用字段  [udp](../proxies/index.md#udp)
+
+参阅`Shadowsocks`  [udp-over-tcp](../proxies/ss.md#udp-over-tcp)
+
 参阅`Hysteria`/`Hysteria2`  [up](../proxies/hysteria2.md#updown)
 
 参阅`Hysteria`/`Hysteria2`  [down](../proxies/hysteria2.md#updown)
 
 参阅通用字段  [skip-cert-verify](../proxies/tls.md#skip-cert-verify)
-
-参阅通用字段  [udp](../proxies/index.md#udp)
 
 参阅通用字段  [dialer-proxy](../proxies/index.md#dialer-proxy)
 
