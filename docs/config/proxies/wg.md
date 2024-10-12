@@ -22,6 +22,17 @@ proxies:
   # dialer-proxy: "ss1"  # 一个出站代理的标识。当值不为空时，将使用指定的 proxy/proxy-group 发出连接
   # remote-dns-resolve: true # 强制dns远程解析，默认值为false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # 仅在remote-dns-resolve为true时生效
+  # 如果存在则开启AmneziaWG功能
+  # amnezia-wg-option:
+  #   jc: 5
+  #   jmin: 500
+  #   jmax: 501
+  #   s1: 30
+  #   s2: 40
+  #   h1: 123456
+  #   h2: 67543
+  #   h4: 32345
+  #   h3: 123123
 ```
 
 ## 完整写法

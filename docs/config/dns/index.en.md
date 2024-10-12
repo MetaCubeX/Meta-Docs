@@ -105,13 +105,21 @@ Keys support [domain wildcards](../../handbook/syntax.md#domain-wildcards).
 
 Values support strings/arrays.
 
+## proxy-server-nameserver
+
+The proxy node domain resolution server is used solely for resolving the domain names of proxy nodes. If left blank, it will follow the configurations of nameserver-policy, nameserver, and fallback.
+
+## direct-nameserver
+
+The DNS server for domain resolution at the direct exit. If left blank, it will follow the configurations of nameserver-policy, nameserver, and fallback.
+
+## direct-nameserver-follow-policy
+
+Indicates whether to adhere to the nameserver-policy. The default is not to comply, and it only takes effect when direct-nameserver is not empty.
+
 ## nameserver
 
 Default domain name resolution server.
-
-## proxy-server-nameserver
-
-Proxy node domain name resolution server, used only for resolving the domain names of proxy nodes.
 
 ## fallback
 

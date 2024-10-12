@@ -18,12 +18,15 @@ proxy-groups:
 
 Refer to [Common Fields](./index.md).
 
-## strategy
+## Strategy
 
-Load balancing strategy.
+Load Balancing Strategies
 
-* `consistent-hashing`: Distributes requests with the same top-level domain to the same proxy node within the strategy group.
+* `round-robin` will distribute all requests among different proxy nodes within the strategy group.
 
-* `round-robin`: Distributes all requests to different proxy nodes within the strategy group.
+* `consistent-hashing` will assign requests with the same `target address` to the same proxy node within the strategy group.
 
-* `sticky-sessions`: sticky-sessions.
+* `sticky-sessions`: requests with the same `source address` and `target address` will be directed to the same proxy node within the strategy group, with a cache expiration of 10 minutes.
+
+!!! note
+    When the `target address` is a domain, it uses top-level domain matching.

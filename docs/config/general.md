@@ -92,18 +92,27 @@ log-level: info
 ipv6: true
 ```
 
-## TCP Keep Alive 间隔
+## TCP Keep Alive 设置
 
-控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备[耗电问题](https://github.com/vernesong/OpenClash/issues/2614)的临时措施。
+修改此项以减少移动设备[耗电问题](https://github.com/vernesong/OpenClash/issues/2614)
 
-单位为秒
+TCP Keep Alive 包的间隔，单位为秒
 
 ```{.yaml linenums="1"}
-keep-alive-interval: 30
+keep-alive-interval: 15
 ```
 
-此时 Clash 发现并关闭一个无效 TCP 连接用时：
-`1*keep-alive-interval + 9*keep-alive-interval`
+TCP Keep Alive 的最大空闲时间
+
+```{.yaml linenums="1"}
+keep-alive-idle: 15
+```
+
+禁用 TCP Keep Alive，在 Amdroid 默认为 true
+
+```{.yaml linenums="1"}
+disable-keep-alive: false
+```
 
 ## 进程匹配模式
 
@@ -127,6 +136,15 @@ API 监听地址，你可以将 127.0.0.1 修改为 0.0.0.0 来监听所有 IP
 external-controller: 127.0.0.1:9090
 ```
 
+API CORS 标头配置
+
+```{.yaml linenums="1"}
+external-controller-cors:
+  allow-origins:
+    - *
+  allow-private-network: true
+```
+
 Unix socket API 监听地址
 
 !!! warning ""
@@ -134,6 +152,15 @@ Unix socket API 监听地址
 
 ```{.yaml linenums="1"}
 external-controller-unix: mihomo.sock
+```
+
+Windows namedpipe API 监听地址
+
+!!! warning ""
+    从Windows namedpipe访问api接口不会验证secret， 如果开启请自行保证安全问题
+
+```{.yaml linenums="1"}
+external-controller-pipe: \\.\pipe\mihomo
 ```
 
 HTTPS-API 监听地址，需要配置 `tls` 部分证书和其私钥配置，使用 TLS 也必须填写 `external-controller`
@@ -295,4 +322,12 @@ geox-url:
 
 ```{.yaml linenums="1"}
 global-ua: clash.meta
+```
+
+## ETag 支持
+
+外部资源下载的 ETag 支持，默认为 `true`
+
+```{.yaml linenums="1"}
+etag-support: true
 ```

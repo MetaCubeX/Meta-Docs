@@ -121,11 +121,16 @@ Request method: `GET`
 
 - Retrieve specific policy group information.
 
+Request method: `DELETE`
+
+- Clear the fixed selection of the automatic policy group.
+
 ### `/group/group_name/delay`
 
 Request method: `GET`
 
-- Test nodes/policy groups within a specified policy group and return new delay information; the URL must include `?url=xxx&timeout=5000`, modified as needed.
+- Test the nodes/strategy groups within the specified strategy group, return new latency information, and clear the fixed selection of the automatic strategy group
+- the URL must include `?url=xxx&timeout=5000`, modified as needed.
 
 ## Proxies
 
@@ -149,7 +154,8 @@ Request method: `PUT`
 
 Request method: `GET`
 
-- Test a specified proxy and return new delay information; the URL must include `?url=xxx&timeout=5000`, modified as needed.
+- Test a specified proxy and return new delay information
+- the URL must include `?url=xxx&timeout=5000`, modified as needed.
 
 ## Proxy Sets
 
@@ -177,7 +183,8 @@ Request method: `GET`
 
 ### `/providers/proxies/providers_name/proxies_name/healthcheck`
 
-- Test a specified proxy within the proxy set and return new delay information; the URL must include `?url=xxx&timeout=5000`, modified as needed.
+- Test a specified proxy within the proxy set and return new delay information
+- the URL must include `?url=xxx&timeout=5000`, modified as needed.
 
 ## Rules
 
@@ -225,7 +232,8 @@ Request method: `DELETE`
 
 Request method: `GET`
 
-- Retrieve DNS query data for a specified name and type; the URL must include `?name=example.com&type=A`, modified as needed.
+- Retrieve DNS query data for a specified name and type
+- the URL must include `?name=example.com&type=A`, modified as needed.
 
 ## DEBUG
 

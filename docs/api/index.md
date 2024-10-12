@@ -121,11 +121,16 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 获取具体的策略组信息
 
+请求方法：`DELETE`
+
+- 清除自动策略组 fixed 选择
+
 ### `/group/group_name/delay`
 
 请求方法：`GET`
 
-- 对指定策略组内的节点/策略组进行测试，并返回新的延迟信息，URL 需携带`?url=xxx&timeout=5000`，按需修改
+- 对指定策略组内的节点/策略组进行测试，返回新的延迟信息，,并清除自动策略组的 fixed 选择
+- URL 需携带`?url=xxx&timeout=5000`，按需修改
 
 ## 代理
 
@@ -149,7 +154,8 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 请求方法：`GET`
 
-- 对指定代理进行测试，并返回新的延迟信息，URL 需携带`?url=xxx&timeout=5000`，按需修改
+- 对指定代理进行测试，并返回新的延迟信息
+- URL 需携带`?url=xxx&timeout=5000`，按需修改
 
 ## 代理集合
 
@@ -177,7 +183,8 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 ### `/providers/proxies/providers_name/proxies_name/healthcheck`
 
-- 对代理集合内的指定代理进行测试，并返回新的延迟信息，URL 需携带`?url=xxx&timeout=5000`，按需修改
+- 对代理集合内的指定代理进行测试，并返回新的延迟信息
+- URL 需携带`?url=xxx&timeout=5000`，按需修改
 
 ## 规则
 
@@ -225,7 +232,8 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 请求方法：`GET`
 
-- 获取指定名称和类型的 DNS 查询数据，URL 需携带`?name=example.com&type=A`，按需修改
+- 获取指定名称和类型的 DNS 查询数据
+- URL 需携带`?name=example.com&type=A`，按需修改
 
 ## DEBUG
 

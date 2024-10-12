@@ -90,19 +90,27 @@ default is `true`.
 ipv6: true
 ```
 
-## TCP Keep Alive Interval
+## TCP Keep Alive Settings
 
-Controls the interval at which Clash sends out TCP Keep Alive packets to reduce temporary measures for mobile device power consumption.
+Modify this item to reduce the [power consumption issue](https://github.com/vernesong/OpenClash/issues/2614) on mobile devices
 
-unit is seconds
+The interval for TCP Keep Alive packets, measured in seconds.
 
 ```{.yaml linenums="1"}
-keep-alive-interval: 30
+keep-alive-interval: 15
 ```
 
-The time Clash discovers and closes an invalid TCP connection:
+The maximum idle time for TCP Keep Alive.
 
-1 × keep-alive-interval + 9 × keep-alive-interval
+```{.yaml linenums="1"}
+keep-alive-idle: 15
+```
+
+Disable TCP Keep Alive; on Android, this is set to true by default.
+
+```{.yaml linenums="1"}
+disable-keep-alive: false
+```
 
 ## Process Matching Mode
 
@@ -126,6 +134,15 @@ API listening address, you can change `127.0.0.1` to `0.0.0.0` to listen on all 
 external-controller: 127.0.0.1:9090
 ```
 
+API CORS Header Configuration
+
+```{.yaml linenums="1"}
+external-controller-cors:
+  allow-origins:
+    - *
+  allow-private-network: true
+```
+
 Unix socket API listening address
 
 !!! warning ""
@@ -133,6 +150,15 @@ Unix socket API listening address
 
 ```{.yaml linenums="1"}
 external-controller-unix: mihomo.sock
+```
+
+Windows Named Pipe API Listening Address
+
+!!! warning ""
+    Accessing the API interface via Windows Named Pipe does not validate the secret. If enabled, please ensure your security.
+
+```{.yaml linenums="1"}
+external-controller-pipe: \\.\pipe\mihomo
 ```
 
 HTTPS-API listening address, requires configuring the tls section for certificate and private key configuration, external-controller must also be filled in.
@@ -285,4 +311,12 @@ Custom UA used when downloading external resources, default is clash.meta.
 
 ```{.yaml linenums="1"}
 global-ua: clash.meta
+```
+
+## ETag Support
+
+ETag support for external resource downloads is enabled by default.
+
+```{.yaml linenums="1"}
+etag-support: true
 ```

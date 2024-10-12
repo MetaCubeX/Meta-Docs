@@ -29,6 +29,9 @@ dns:
     - tls://1.1.1.1
   proxy-server-nameserver:
     - https://doh.pub/dns-query
+  direct-nameserver:
+    - system
+  direct-nameserver-follow-policy: false
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -105,13 +108,21 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 
 值支持字符串/数组
 
+## proxy-server-nameserver
+
+代理节点域名解析服务器，仅用于解析代理节点的域名，如果不填则遵循nameserver-policy、nameserver和fallback的配置
+
+## direct-nameserver
+
+用于direct出口域名解析的 DNS 服务器，如果不填则遵循nameserver-policy、nameserver和fallback的配置
+
+## direct-nameserver-follow-policy
+
+是否遵循nameserver-policy，默认为不遵守，仅当direct-nameserver不为空时生效
+
 ## nameserver
 
 默认的域名解析服务器
-
-## proxy-server-nameserver
-
-代理节点域名解析服务器，仅用于解析代理节点的域名
 
 ## fallback
 
