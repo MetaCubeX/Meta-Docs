@@ -79,7 +79,7 @@ tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `gvisor
     * `gvisor` 通过在用户空间中实现网络协议栈，可以提供更高的安全性和隔离性，同时可以避免操作系统内核和用户空间之间的切换，从而在特定情况下具有更好的网络处理性能
     * `mixed` 混合堆栈，tcp 使用 `system`栈，udp 使用 `gvisor`栈，使用体验可能相对更好
     * [简单性能测试](tun.md#tun_1)
-    * Windows 下如果打开了防火墙需要放行一下内核，否则无法使用 `system` 和 `mixed` 协议栈
+    * Windows 下如果打开了防火墙需要放行一下内核（设置 -> Windows 安全中心 -> 允许应用通过防火墙 -> 选中 verge-mihomo），否则无法使用 `system` 和 `mixed` 协议栈
 
 ## device
 
