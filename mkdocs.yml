@@ -197,7 +197,6 @@ nav:
       - TLS配置: config/proxies/tls.md
       - 传输层配置: config/proxies/transport.md
       - dialer-proxy: config/proxies/dialer-proxy.md
-      - sing-mux: config/proxies/sing-mux.md
       - DIRECT: config/proxies/direct.md
       - DNS: config/proxies/dns.md
       - HTTP: config/proxies/http.md

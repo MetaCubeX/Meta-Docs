@@ -65,7 +65,3 @@ UDP 包编码，为空则使用原始编码，可选 `packetaddr` (由 `v2ray 5+
 传输层，支持 ws/http/h2/grpc，不配置或配置其他值则为 tcp
 
 参阅 [传输层配置](./transport.md)
-
-## smux
-
-参阅 [sing-mux](./sing-mux.md)

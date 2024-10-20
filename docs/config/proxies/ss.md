@@ -77,10 +77,6 @@ Shadowsocks 密码
 
 UDP over TCP 的协议版本，默认 1。可选值 1/2。
 
-## smux
-
-参阅 [sing-mux](./sing-mux.md)
-
 ## 插件
 
 ### plugin

@@ -57,7 +57,3 @@ trojan-go 的 shadowsocks AEAD 加密密码
 传输层，支持 ws/grpc，不配置或配置其他值则为 tcp
 
 参阅 [传输层配置](./transport.md)
-
-## smux
-
-参阅 [sing-mux](./sing-mux.md)
