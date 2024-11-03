@@ -7,7 +7,8 @@ listeners:
   port: 7890
   listen: 0.0.0.0
   users:
-    - username: password
+    - username: username1
+      password: password1
 ```
 
 ## [通用字段](./index.md)

@@ -8,7 +8,8 @@ listeners:
   listen: 0.0.0.0
   udp: true
   users:
-    - username: password
+    - username: username1
+      password: password1
 ```
 
 ## [通用字段](./index.md)
