@@ -108,7 +108,7 @@ TCP Keep Alive 的最大空闲时间
 keep-alive-idle: 15
 ```
 
-禁用 TCP Keep Alive，在 Amdroid 默认为 true
+禁用 TCP Keep Alive，在 Android 默认为 true
 
 ```{.yaml linenums="1"}
 disable-keep-alive: false
