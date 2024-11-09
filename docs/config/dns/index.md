@@ -79,7 +79,7 @@ fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
 ## fake-ip-filter-mode: blacklist
 
-可选 `blacklist`/`whitelist`，默认`blacklist``，whitelist` 即只有匹配成功才返回 fake-ip
+可选 `blacklist`/`whitelist`，默认`blacklist`，`whitelist` 即只有匹配成功才返回 fake-ip
 
 ## use-hosts
 
