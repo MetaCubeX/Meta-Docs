@@ -272,4 +272,4 @@ go tool pprof -http=:8080 http://127.0.0.1:xxxx/debug/pprof/allocs
 
 ##### 提交输出报告
 
-浏览器访问 `http://${controller-api}/debug/pprof/heap?raw=true` 即可下载这个文件，通过上传到 [issues](https://github.com/MetaCubeX/Clash.Meta/issues) 提交你遇到的问题。
+浏览器访问 `http://${controller-api}/debug/pprof/heap?raw=true` 即可下载这个文件，通过上传到 [issues](https://github.com/MetaCubeX/mihomo/issues) 提交你遇到的问题。

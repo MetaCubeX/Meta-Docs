@@ -12,7 +12,7 @@ hide:
 
 - 以守护进程的方式，运行 mihomo。
 
-使用以下命令将 Clash 二进制文件复制到 /usr/local/bin, 配置文件复制到 /etc/mihomo:
+使用以下命令将 mihomo 二进制文件复制到 /usr/local/bin, 配置文件复制到 /etc/mihomo:
 
 ```shell
 cp mihomo /usr/local/bin
