@@ -114,7 +114,7 @@ plugins:
             web面板: Web dashboard
             客户端: Client
             创建运行服务: Create a running service
-            第三方工具: Third-party tools
+            三方工具/客户端: Third-party tools/client
             常见问题: common problem
 
             完整示例: Complete example
@@ -133,8 +133,8 @@ plugins:
             代理集合: Proxy-Providers
             代理集合配置: proxy-providers configuration
             代理集合内容: proxy-providers contents
-            策略组: Proxy-Groups
-            策略组配置: proxy-groups configuration
+            代理组: Proxy-Groups
+            代理组配置: proxy-groups configuration
             手动选择: Select
             自动选择: Url-Test
             自动回退: Fallback
@@ -160,7 +160,7 @@ nav:
     - web面板: startup/web.md
 
     - 创建运行服务: startup/service/index.md
-    - 第三方工具: startup/client/client.md
+    - 三方工具/客户端: startup/client/client.md
   - 手册:
     - handbook/index.md
     - 语法: handbook/syntax.md
@@ -215,8 +215,8 @@ nav:
     - 代理集合:
       - 代理集合配置: config/proxy-providers/index.md
       - 代理集合内容: config/proxy-providers/content.md
-    - 策略组:
-      - 策略组配置: config/proxy-groups/index.md
+    - 代理组:
+      - 代理组配置: config/proxy-groups/index.md
       - 手动选择: config/proxy-groups/select.md
       - 自动选择: config/proxy-groups/url-test.md
       - 自动回退: config/proxy-groups/fallback.md

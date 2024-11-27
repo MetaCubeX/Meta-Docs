@@ -1,9 +1,10 @@
-# 第三方工具
+# 三方工具/客户端
 
 ## Windows
 
 |项目名称 | 维护状态 |
 |:----|:----|
+|[mihomo-party](https://github.com/pompurin404/mihomo-party)|维护中 |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|停止维护 |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|维护中 |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|维护中 |
@@ -13,30 +14,29 @@
 |[clashtui](https://github.com/JohanChane/clashtui)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
-|[mihomo-party](https://github.com/pompurin404/mihomo-party)|维护中 |
 
 ## MacOS
 
 |项目名称 | 维护状态 |
 |:----|:----|
+|[mihomo-party](https://github.com/pompurin404/mihomo-party)|维护中 |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|停止维护 |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|维护中 |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
-|[mihomo-party](https://github.com/pompurin404/mihomo-party)|维护中 |
 
 ## Linux
 
 |项目名称 | 维护状态 |
 |:----|:----|
+|[mihomo-party](https://github.com/pompurin404/mihomo-party)|维护中 |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|停止维护 |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|维护中 |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|维护中 |
 |[clashtui](https://github.com/JohanChane/clashtui)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
-|[mihomo-party](https://github.com/pompurin404/mihomo-party)|维护中 |
 
 ## Android
 
@@ -54,8 +54,8 @@
 
 |项目名称 | 维护状态 |
 |:----|:----|
-|[OpenClash](https://github.com/vernesong/OpenClash)|维护中|
-|[OpenWrt-mihomo](https://github.com/morytyann/OpenWrt-mihomo)|维护中|
+|[OpenClash](https://github.com/vernesong/OpenClash)|维护中 |
+|[OpenWrt-mihomo](https://github.com/morytyann/OpenWrt-mihomo)|维护中 |
 |[openwrt-fchomo](https://github.com/muink/openwrt-fchomo)|维护中|
 
 ## Shell

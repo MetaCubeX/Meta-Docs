@@ -8,6 +8,7 @@ proxy-providers:
     path: ./proxy_providers/provider1.yaml
     interval: 3600
     proxy: DIRECT
+    size-limit: 0
     header:
       User-Agent:
       - "Clash/v1.18.0"
@@ -77,6 +78,10 @@ proxy-providers:
 
 经过指定代理进行下载/更新
 
+## size-limit
+
+限制下载文件的最大大小，默认为 0 即不限制文件大小，单位为字节 (`b`)
+
 ## header
 
 自定义 http 请求头
@@ -135,7 +140,7 @@ proxy-providers:
 
 对节点名称内容进行替换，支持正则表达式，pattern 为替换内容，target 为替换目标
 
-### 配置项
+### override.其余配置项
 
 参阅通用字段  [tfo](../proxies/index.md#tfo)
 
@@ -171,4 +176,4 @@ proxy-providers:
 
 不支持正则表达式，通过 `|` 分割，根据节点类型排除
 
-注意，`proxy-groups` 与 `proxy-providers` 写法不同
+provider 的 `exclude-type` 使用配置文件中的 `type` 类型进行排除

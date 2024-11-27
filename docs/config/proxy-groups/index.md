@@ -122,9 +122,9 @@ proxy-groups:
 
 ## exclude-type
 
-排除节点类型
+不支持正则表达式，通过 `|` 分割，根据节点类型排除，仅排除[引入出站代理](#proxies)
 
-注意，`proxy-groups` 与 `proxy-providers` 写法不同，不支持正则表达式，通过 `|` 分隔
+支持类型请参阅[Adapter Type](https://github.com/MetaCubeX/mihomo/blob/fbead56ec97ae93f904f4476df1741af718c9c2a/constant/adapters.go#L18-L45)
 
 ## expected-status
 

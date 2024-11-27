@@ -122,9 +122,9 @@ Excludes nodes that meet keywords or [regular expressions](https://github.com/zi
 
 ## exclude-type
 
-Excludes node types.
+Regular expressions are not supported. Split by `|`, exclude based on node type, only excluding [ingress outbound proxies](#proxies)
 
-Note that the syntax for `proxy-groups` and `proxy-providers` is different; regular expressions are not supported, and should be separated by `|`.
+For supported types, please refer to [Adapter Type](https://github.com/MetaCubeX/mihomo/blob/fbead56ec97ae93f904f4476df1741af718c9c2a/constant/adapters.go#L18-L45)
 
 ## expected-status
 

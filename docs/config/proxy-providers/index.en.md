@@ -8,6 +8,7 @@ proxy-providers:
     path: ./proxy_providers/provider1.yaml
     interval: 3600
     proxy: DIRECT
+    size-limit: 0
     header:
       User-Agent:
       - "Clash/v1.18.0"
@@ -77,6 +78,10 @@ The update time for the `provider`, measured in seconds.
 
 Download/update through the specified proxy.
 
+## size-limit
+
+The maximum size of downloadable files is restricted, with the default being 0, which means no size limit; the unit is bytes (`b`)
+
 ## Header
 
 Custom HTTP request headers.
@@ -135,7 +140,7 @@ Add a fixed suffix to the node name.
 
 Replace the content of the node name, supporting regular expressions, where pattern is the replacement content and target is the replacement target.
 
-### Configuration Items
+### override.Configuration_items
 
 Refer to common fields [tfo](../proxies/index.md#tfo)
 
@@ -171,4 +176,4 @@ Exclude nodes that meet keywords or [regular expressions](https://github.com/zii
 
 Regular expressions are not supported; use `|` to separate and exclude based on node type.
 
-Note that the syntax for `proxy-groups` and `proxy-providers` is different.
+The `exclude-type` of the provider uses the `type` from the configuration file for exclusion
