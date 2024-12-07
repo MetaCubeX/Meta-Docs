@@ -9,7 +9,7 @@
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|维护中 |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|维护中 |
 |[ClashMetaForWindows_Mini](https://github.com/kogekiplay/ClashMetaForWindows_Mini)|停止维护 |
-|[clashN](https://github.com/2dust/clashN)|维护中 |
+|[clashN](https://github.com/2dust/clashN)|停止维护 |
 |[v2rayN](https://github.com/2dust/v2rayN)|维护中 |
 |[clashtui](https://github.com/JohanChane/clashtui)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
