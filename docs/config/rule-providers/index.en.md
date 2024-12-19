@@ -45,10 +45,14 @@ Behavior, options are `domain` / `ipcidr` / `classical`, corresponding to differ
 
 ## format
 
-Format, options are `yaml` / `text` / `mrs`, default is `yaml`.
+Format, options are `yaml` / `text` / `mrs`/`inline`, default is `yaml`.
 
 Currently, `mrs` behavior only supports `domain` / `ipcidr`. You can convert using `mihomo convert-ruleset domain/ipcidr yaml/text XXX.yaml XXX.mrs`.
 
 ## size-limit
 
 The maximum size of downloadable files is restricted, with the default being 0, which means no size limit; the unit is bytes (`b`)
+
+## payload
+
+Content, only effective when `format` is `inline`

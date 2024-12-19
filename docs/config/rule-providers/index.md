@@ -11,6 +11,8 @@ rule-providers:
     behavior: classical
     format: yaml
     size-limit: 0
+    payload:
+      - 'DOMAIN-SUFFIX,google.com'
 ```
 
 ## name
@@ -45,10 +47,14 @@ rule-providers:
 
 ## format
 
-格式，可选 `yaml`/`text`/`mrs`，默认 `yaml`
+格式，可选 `yaml`/`text`/`mrs`/`inline`，默认 `yaml`
 
 `mrs`目前 `behavior` 仅支持 `domain`/`ipcidr`，可以通过`mihomo convert-ruleset domain/ipcidr yaml/text XXX.yaml XXX.mrs`转换得到
 
 ## size-limit
 
 限制下载文件的最大大小，默认为 0 即不限制文件大小，单位为字节 (`b`)
+
+## payload
+
+内容，仅 `format` 为 `inline` 时生效
