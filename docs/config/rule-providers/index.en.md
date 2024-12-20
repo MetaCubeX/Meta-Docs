@@ -4,7 +4,7 @@
 rule-providers:
   google:
     type: http
-    path: ./rule1.yaml 
+    path: ./rule1.yaml
     url: "https://raw.githubusercontent.com/../Google.yaml"
     interval: 600
     proxy: DIRECT
@@ -19,7 +19,7 @@ Required, such as `google`, must be unique.
 
 ## type
 
-Required, `provider` type, options are `http` / `file`.
+Required, `provider` type, options are `http` / `file` / `inline`.
 
 ## url
 
@@ -45,7 +45,7 @@ Behavior, options are `domain` / `ipcidr` / `classical`, corresponding to differ
 
 ## format
 
-Format, options are `yaml` / `text` / `mrs`/`inline`, default is `yaml`.
+Format, options are `yaml` / `text` / `mrs`, default is `yaml`.
 
 Currently, `mrs` behavior only supports `domain` / `ipcidr`. You can convert using `mihomo convert-ruleset domain/ipcidr yaml/text XXX.yaml XXX.mrs`.
 
@@ -55,4 +55,4 @@ The maximum size of downloadable files is restricted, with the default being 0, 
 
 ## payload
 
-Content, only effective when `format` is `inline`
+Content, only effective when `type` is `inline`
