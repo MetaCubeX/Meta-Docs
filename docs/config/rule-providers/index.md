@@ -4,7 +4,7 @@
 rule-providers:
   google:
     type: http
-    path: ./rule1.yaml 
+    path: ./rule1.yaml
     url: "https://raw.githubusercontent.com/../Google.yaml"
     interval: 600
     proxy: DIRECT
@@ -21,7 +21,7 @@ rule-providers:
 
 ## type
 
-必须，`provider`类型，可选`http` / `file`
+必须，`provider`类型，可选`http` / `file` / `inline`
 
 ## url
 
@@ -47,7 +47,7 @@ rule-providers:
 
 ## format
 
-格式，可选 `yaml`/`text`/`mrs`/`inline`，默认 `yaml`
+格式，可选 `yaml`/`text`/`mrs`，默认 `yaml`
 
 `mrs`目前 `behavior` 仅支持 `domain`/`ipcidr`，可以通过`mihomo convert-ruleset domain/ipcidr yaml/text XXX.yaml XXX.mrs`转换得到
 
@@ -57,4 +57,4 @@ rule-providers:
 
 ## payload
 
-内容，仅 `format` 为 `inline` 时生效
+内容，仅 `type` 为 `inline` 时生效
