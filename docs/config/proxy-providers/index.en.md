@@ -42,23 +42,22 @@ proxy-providers:
     filter: "(?i)港|hk|hongkong|hong kong"
     exclude-filter: "xxx"
     exclude-type: "ss|http"
-
-  provider2:
-    type: file
-    path: ./proxy_providers/provider2.yaml
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
+    payload:
+      - name: "ss1"
+        type: ss
+        server: server
+        port: 443
+        cipher: chacha20-ietf-poly1305
+        password: "password"
 ```
 
 ## Name
 
-This is required, such as `provider1`, and must be unique. It is advisable not to duplicate names with [policy groups](../proxy-groups/index.md#name).
+Required, such as `provider1`, must be unique. It is advisable not to duplicate names with [policy groups](../proxy-groups/index.md#name).
 
 ## Type
 
-This is required, the `provider` type, with options of `http/file`.
+Required, `provider` type, options are `http` / `file` / `inline`.
 
 ## URL
 
@@ -177,3 +176,7 @@ Exclude nodes that meet keywords or [regular expressions](https://github.com/zii
 Regular expressions are not supported; use `|` to separate and exclude based on node type.
 
 The `exclude-type` of the provider uses the `type` from the configuration file for exclusion
+
+## payload
+
+Content, only effective when `type` is `inline`

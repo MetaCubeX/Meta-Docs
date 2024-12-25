@@ -42,23 +42,22 @@ proxy-providers:
     filter: "(?i)港|hk|hongkong|hong kong"
     exclude-filter: "xxx"
     exclude-type: "ss|http"
-
-  provider2:
-    type: file
-    path: ./proxy_providers/provider2.yaml
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
+    payload:
+      - name: "ss1"
+        type: ss
+        server: server
+        port: 443
+        cipher: chacha20-ietf-poly1305
+        password: "password"
 ```
 
 ## name
 
-必须，如`provider1`,不能重复，建议不要和[策略组](../proxy-groups/index.md#name)名称重复
+必须，如`provider1`，不能重复，建议不要和[策略组](../proxy-groups/index.md#name)名称重复
 
 ## type
 
-必须，`provider`类型，可选`http/file`
+必须，`provider`类型，可选`http` / `file` / `inline`
 
 ## url
 
@@ -177,3 +176,7 @@ proxy-providers:
 不支持正则表达式，通过 `|` 分割，根据节点类型排除
 
 provider 的 `exclude-type` 使用配置文件中的 `type` 类型进行排除
+
+## payload
+
+内容，仅 `type` 为 `inline` 时生效
