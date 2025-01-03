@@ -124,7 +124,7 @@ proxy-groups:
 
 不支持正则表达式，通过 `|` 分割，根据节点类型排除，仅排除[引入出站代理](#proxies)
 
-支持类型请参阅[Adapter Type](https://github.com/MetaCubeX/mihomo/blob/fbead56ec97ae93f904f4476df1741af718c9c2a/constant/adapters.go#L18-L45)
+支持类型请参阅[Adapter Type](https://github.com/MetaCubeX/mihomo/blob/fbead56ec97ae93f904f4476df1741af718c9c2a/constant/adapters.go#L18-L45)，无视大小写
 
 ## expected-status
 
