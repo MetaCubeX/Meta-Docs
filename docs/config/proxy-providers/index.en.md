@@ -37,8 +37,8 @@ proxy-providers:
       additional-prefix: "provider1 prefix |"
       additional-suffix: "| provider1 suffix"
       proxy-name:
-      - pattern: "IPLC-(.*?)倍"
-        target: "iplc x $1"
+        - pattern: "IPLC-(.*?)倍"
+          target: "iplc x $1"
     filter: "(?i)港|hk|hongkong|hong kong"
     exclude-filter: "xxx"
     exclude-type: "ss|http"
