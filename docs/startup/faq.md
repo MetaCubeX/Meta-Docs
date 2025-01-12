@@ -13,7 +13,7 @@ alpha 分支为最新提交分支，meta 分支每隔一段时间合并 alpha �
 
 release 中，包的文件名中包含了多个信息，包括
 
-* 程序名称（clash.meta）
+* 程序名称 (`mihomo`)
 * 操作系统（如 android、darwin、freebsd、linux、windows 等）
 * 架构（如 386、amd64、arm32v7、arm64 等）
 * 编译方式

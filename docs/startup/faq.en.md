@@ -13,7 +13,7 @@ The Alpha branch is the latest commit branch, while the Meta branch merges the c
 
 In`release`, the filename of each package includes several pieces of information, including:
 
-* Program name (`clash.meta`)
+* Program name (`mihomo`)
 * Operating system (e.g., `android`, `darwin`, `freebsd`, `linux`, `windows`, etc.)
 * Architecture (e.g., `386`, `amd64`, `arm32v7`, `arm64`, etc.)
 * Compilation method:
