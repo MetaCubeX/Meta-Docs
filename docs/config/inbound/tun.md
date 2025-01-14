@@ -80,8 +80,8 @@ tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `gvisor
     * `mixed` 混合堆栈，tcp 使用 `system`栈，udp 使用 `gvisor`栈，使用体验可能相对更好
     * [简单性能测试](tun.md#tun_1)
     * 如果打开了防火墙，则无法使用 `system` 和 `mixed` 协议栈，通过以下方式放行内核：
-        * Windows: 设置 -> Windows 安全中心 -> 允许应用通过防火墙 -> 选中内核（clash-verge-rev 内核为 verge-mihomo）
-        * MacOS: 一般无需配置，防火墙默认放行签名软件，如果遇到开启防火墙无法使用的情况，可以尝试放行：系统设置 -> 网络 -> 防火墙 -> 选项 -> 添加 Clash App
+        * Windows: 设置 -> Windows 安全中心 -> 允许应用通过防火墙 -> 选中内核
+        * MacOS: 一般无需配置，防火墙默认放行签名软件，如果遇到开启防火墙无法使用的情况，可以尝试放行：系统设置 -> 网络 -> 防火墙 -> 选项 -> 添加 mihomo app
         * Linux: 一般无需配置，防火墙默认不拦截应用，如果遇到开启防火墙无法使用的情况，可以尝试放行 TUN 网卡出站流量（假设 TUN 网卡为 Mihomo）: `sudo iptables -A OUTPUT -o Mihomo -j ACCEPT`
 
 ## device

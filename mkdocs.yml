@@ -197,6 +197,7 @@ nav:
       - TLS配置: config/proxies/tls.md
       - 传输层配置: config/proxies/transport.md
       - dialer-proxy: config/proxies/dialer-proxy.md
+      - 内置代理策略: config/proxies/built-in.md
       - DIRECT: config/proxies/direct.md
       - DNS: config/proxies/dns.md
       - HTTP: config/proxies/http.md
@@ -218,12 +219,12 @@ nav:
       - 代理集合内容: config/proxy-providers/content.md
     - 代理组:
       - 代理组配置: config/proxy-groups/index.md
+      - 内置代理组: config/proxy-groups/built-in.md
       - 手动选择: config/proxy-groups/select.md
       - 自动选择: config/proxy-groups/url-test.md
       - 自动回退: config/proxy-groups/fallback.md
       - 负载均衡: config/proxy-groups/load-balance.md
       - 链式代理: config/proxy-groups/relay.md
-      - 内置策略: config/proxy-groups/built-in.md
     - 路由规则: config/rules/index.md
       # - 域名规则: config/rules/domain.md
       # - IP规则: config/rules/ip.md
