@@ -55,7 +55,7 @@ proxy-groups:
 健康检查测试地址
 
 !!! note
-    只会检查代理组的 proxies 字段的代理，不会检查代理集合（proxy-groups）的代理（通过 use 引入的）。
+    只会检查代理组的 proxies 字段的代理，不会检查代理集合（proxy-providers）的代理（通过 use 引入的）。
 
 ## interval
 
