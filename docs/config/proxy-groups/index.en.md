@@ -54,6 +54,8 @@ References to [proxy sets](../proxy-providers/index.md).
 
 Health check test address.
 
+!!! note It will only check the proxies field of the proxy group, and will not check the proxies of the proxy providers introduced through use.
+
 ## interval
 
 Health check interval; if not 0, periodic testing is enabled, measured in seconds.
