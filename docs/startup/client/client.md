@@ -55,7 +55,7 @@
 |项目名称 | 维护状态 |
 |:----|:----|
 |[OpenClash](https://github.com/vernesong/OpenClash)|维护中 |
-|[OpenWrt-mihomo](https://github.com/morytyann/OpenWrt-mihomo)|维护中 |
+|[OpenWrt-nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)|维护中 |
 |[openwrt-fchomo](https://github.com/muink/openwrt-fchomo)|维护中|
 
 ## Shell
