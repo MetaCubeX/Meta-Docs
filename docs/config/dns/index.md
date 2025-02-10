@@ -55,7 +55,7 @@ DOH 优先使用 http/3
 
 ## listen
 
-DNS 服务监听，仅支持 udp
+DNS 服务监听，支持 udp, tcp
 
 ## IPV6
 

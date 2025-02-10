@@ -52,7 +52,7 @@ DOH will prioritize the use of HTTP/3.
 
 ## listen
 
-DNS service listening, only supports UDP.
+DNS service listening, supports UDP, TCP.
 
 ## IPV6
 
