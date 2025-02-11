@@ -141,7 +141,7 @@ API CORS 标头配置
 ```{.yaml linenums="1"}
 external-controller-cors:
   allow-origins:
-    - *
+    - '*'
   allow-private-network: true
 ```
 

@@ -139,7 +139,7 @@ API CORS Header Configuration
 ```{.yaml linenums="1"}
 external-controller-cors:
   allow-origins:
-    - *
+    - '*'
   allow-private-network: true
 ```
 
