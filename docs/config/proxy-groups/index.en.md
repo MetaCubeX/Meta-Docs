@@ -80,7 +80,7 @@ Disables `UDP` for this proxy group.
 ## interface-name
 
 !!! warning
-    The interface-name in the proxy group will soon be deprecated, please use the [interface-name](../proxies/index.md#interface-name) in the proxy node.
+    The interface-name in the proxy group is deprecated, please use the [interface-name](../proxies/index.md#interface-name) in the proxy node.
 
 Specifies the [outbound interface](../general.md#outbound-interface) for the proxy group.
 
@@ -91,7 +91,7 @@ Specifies the [outbound interface](../general.md#outbound-interface) for the pro
 
 
 !!! warning
-    The routing-mark in the proxy group will soon be deprecated, please use the [routing-mark](../proxies/index.md#routing-mark) in the proxy node.
+    The routing-mark in the proxy group is deprecated, please use the [routing-mark](../proxies/index.md#routing-mark) in the proxy node.
 
 The [routing mark](../general.md#routing-mark) attached when the proxy group is outbound.
 
