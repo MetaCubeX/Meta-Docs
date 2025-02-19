@@ -14,6 +14,7 @@
 |[clashtui](https://github.com/JohanChane/clashtui)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
+|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 
 ## MacOS
 
@@ -25,6 +26,7 @@
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
+|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 
 ## Linux
 
@@ -37,6 +39,7 @@
 |[clashtui](https://github.com/JohanChane/clashtui)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
+|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 
 ## Android
 
@@ -68,4 +71,5 @@
 |[Box for Root](https://github.com/taamarin/box_for_magisk)|维护中 |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|维护中 |
 |[Clash Tproxy Android](https://t.me/e58695/59)|维护中 |
+|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|停止维护 |
