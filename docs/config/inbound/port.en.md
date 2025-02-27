@@ -16,7 +16,7 @@ socks-port: 7891
 
 ## Mixed Port
 
-!!! node
+!!! note
     The mixed port is a special port that supports both HTTP(S) and SOCKS5 protocols. You can connect to this port using any program that supports HTTP or SOCKS proxies.
 
 ```{.yaml linenums="1"}
