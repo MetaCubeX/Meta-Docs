@@ -80,7 +80,7 @@ proxy-groups:
 ## interface-name
 
 !!! warning
-    代理组中的 interface-name 即将被弃用，请使用代理节点中的[interface-name](../proxies/index.md#interface-name)
+    代理组中的 interface-name 已弃用，请使用代理节点中的[interface-name](../proxies/index.md#interface-name)
 
 指定策略组的[出站接口](../general.md#_11)
 
@@ -90,7 +90,7 @@ proxy-groups:
 ## routing-mark
 
 !!! warning
-    代理组中的 routing-mark 即将被弃用，请使用代理节点中的[routing-mark](../proxies/index.md#routing-mark)
+    代理组中的 routing-mark 已弃用，请使用代理节点中的[routing-mark](../proxies/index.md#routing-mark)
 
 策略组出站时附带[路由标记](../general.md#_12)
 

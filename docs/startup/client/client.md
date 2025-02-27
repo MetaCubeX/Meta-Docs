@@ -16,6 +16,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|维护中 |
+|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 
 ## MacOS
 
@@ -29,6 +30,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|维护中 |
+|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 
 ## Linux
 
@@ -43,6 +45,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|维护中 |
+|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 
 ## Android
 
@@ -61,8 +64,8 @@
 |项目名称 | 维护状态 |
 |:----|:----|
 |[OpenClash](https://github.com/vernesong/OpenClash)|维护中 |
-|[OpenWrt-mihomo](https://github.com/morytyann/OpenWrt-mihomo)|维护中 |
-|[openwrt-fchomo](https://github.com/muink/openwrt-fchomo)|维护中|
+|[OpenWrt-nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)|维护中 |
+|[openwrt-fchomo](https://github.com/fcshark-org/openwrt-fchomo)|维护中|
 
 ## Shell
 
@@ -74,4 +77,5 @@
 |[Box for Root](https://github.com/taamarin/box_for_magisk)|维护中 |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|维护中 |
 |[Clash Tproxy Android](https://t.me/e58695/59)|维护中 |
+|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|停止维护 |
