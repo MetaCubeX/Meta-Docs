@@ -10,4 +10,6 @@ listeners:
     - username: user
       uuid: 9d0cb9d0-964f-4ef6-897d-6c6b3ccf9e68
       alterId: 0
+  certificate: ./server.crt
+  private-key: ./server.key
 ```
