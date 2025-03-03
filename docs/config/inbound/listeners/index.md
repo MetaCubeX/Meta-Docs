@@ -24,7 +24,7 @@ listeners:
 
 ## port
 
-监听端口
+监听端口，支持使用ports格式，格式参考[端口范围](../../../handbook//syntax.md#_14)
 
 ## rule
 
