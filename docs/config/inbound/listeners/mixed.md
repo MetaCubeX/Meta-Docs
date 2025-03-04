@@ -10,6 +10,8 @@ listeners:
   users:
     - username: username1
       password: password1
+  certificate: ./server.crt
+  private-key: ./server.key
 ```
 
 ## [通用字段](./index.md)
