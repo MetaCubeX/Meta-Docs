@@ -3,6 +3,7 @@
 ```{.yaml linenums="1"}
 dns:
   enable: true
+  cache-algorithm: arc
   prefer-h3: false
   use-hosts: true
   use-system-hosts: true
@@ -48,6 +49,13 @@ dns:
 ## enable
 
 是否启用，如为 false，则使用系统 DNS 解析
+
+## cache-algorithm
+
+支持的算法:
+
+- lru: Least Recently Used, 默认值
+- arc: Adaptive Replacement Cache
 
 ## prefer-h3
 
@@ -164,7 +172,19 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 
 ## 附加参数
 
-此部分可用于发向公网地址的 DNS 服务器，使用`#`附加，使用`&`连接不同的参数
+此部分可用于发向公网地址的 DNS 服务器，使用`#`附加，使用`&`连接不同的参数。
+
+支持范围:
+
+|              | [nameserver](./index.md#nameserver) | [fallback](./index.md#fallback) | [nameserver-policy](./index.md#nameserver-policy) | [proxy-server-nameserver](./index.md#proxy-server-nameserver) | [direct-nameserver](./index.md#direct-nameserver) | [default-nameserver](./index.md#default-nameserver) | [WireGuard.dns](../proxies/wg.md#dns) |
+|--------------|---------------------------|-------------------|---------------------|-------------------------|---------------------|----------------------|------------------------------------|
+| 指定代理/接口      | ✓                         | ✓                 | ✓                   | ✓                       | ✓                   | ✓                    | ✓                                  |
+| 强制 HTTP/3    | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
+| 跳过证书验证       | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
+| ecs          | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
+| ecs-override | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
+
+> 以上表格中的 `✓` 表示支持[所有的类型](./type.md)
 
 ### DNS 指定 代理/接口 进行连接
 

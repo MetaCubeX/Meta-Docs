@@ -3,6 +3,7 @@
 ```{.yaml linenums="1"}
 dns:
   enable: true
+  cache-algorithm: arc
   prefer-h3: false
   use-hosts: true
   use-system-hosts: true
@@ -45,6 +46,13 @@ dns:
 ## enable
 
 Whether to enable; if set to false, the system DNS resolution will be used.
+
+## cache-algorithm
+
+supports the following algorithms:
+
+- lru: Least Recently Used, default value
+- arc: Adaptive Replacement Cache
 
 ## prefer-h3
 
@@ -162,6 +170,18 @@ These domains are considered polluted; matching these domains will directly use 
 ## Additional Parameters
 
 This section can be used to send DNS queries to public address DNS servers, using `#` to append and `&` to connect different parameters.
+
+supports:
+
+|              | [nameserver](./index.md#nameserver) | [fallback](./index.md#fallback) | [nameserver-policy](./index.md#nameserver-policy) | [proxy-server-nameserver](./index.md#proxy-server-nameserver) | [direct-nameserver](./index.md#direct-nameserver) | [default-nameserver](./index.md#default-nameserver) | [WireGuard.dns](../proxies/wg.md#dns) |
+|--------------|---------------------------|-------------------|---------------------|-------------------------|---------------------|----------------------|------------------------------------|
+| spec proxy/interface      | ✓                         | ✓                 | ✓                   | ✓                       | ✓                   | ✓                    | ✓                                  |
+| Force HTTP/3    | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
+| skip-cert-verify       | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
+| ecs          | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
+| ecs-override | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
+
+> `✓` means supporting [all type](./type.md)
 
 ### DNS specifies proxy/interface for connection
 
