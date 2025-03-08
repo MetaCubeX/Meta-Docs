@@ -97,7 +97,7 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 
 默认 DNS, 用于解析 DNS 服务器 的域名
 
-!!! node ""
+!!! note ""
     必须为 IP, 可为加密 DNS
 
 ## nameserver-policy

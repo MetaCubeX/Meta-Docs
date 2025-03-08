@@ -29,7 +29,7 @@ listeners:
 
 Hysteria 用户以及认证密码，格式为`用户名: 密码`
 
-!!! node ""
+!!! note ""
     用户名不参与认证,仅用于[入站规则](../../rules/index.md#in-user)匹配
 
 ### up/down

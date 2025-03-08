@@ -94,7 +94,7 @@ DNS connections comply with [routing rules](../rules/index.md), requiring config
 
 Default DNS, used for resolving the domain names of DNS servers.
 
-!!! node ""
+!!! note ""
     Must be an IP, can be encrypted DNS.
 
 ## nameserver-policy
