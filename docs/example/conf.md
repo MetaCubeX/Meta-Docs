@@ -74,26 +74,18 @@
         dns:
           enable: true
           ipv6: true
-          respect-rules: true
           enhanced-mode: fake-ip
           fake-ip-filter:
             - "*"
             - "+.lan"
             - "+.local"
             - "+.market.xiaomi.com"
+          default-nameserver:
+            - tls://223.5.5.5
+            - tls://223.6.6.6
           nameserver:
-            - https://120.53.53.53/dns-query
-            - https://223.5.5.5/dns-query
-          proxy-server-nameserver:
-            - https://120.53.53.53/dns-query
-            - https://223.5.5.5/dns-query
-          nameserver-policy:
-            "geosite:cn,private":
-              - https://120.53.53.53/dns-query
-              - https://223.5.5.5/dns-query
-            "geosite:geolocation-!cn":
-              - "https://dns.cloudflare.com/dns-query"
-              - "https://dns.google/dns-query"
+            - https://doh.pub/dns-query
+            - https://dns.alidns.com/dns-query
 
         proxy-groups:
 
@@ -288,26 +280,18 @@
         dns:
           enable: true
           ipv6: true
-          respect-rules: true
           enhanced-mode: fake-ip
           fake-ip-filter:
             - "*"
             - "+.lan"
             - "+.local"
             - "+.market.xiaomi.com"
+          default-nameserver:
+            - tls://223.5.5.5
+            - tls://223.6.6.6
           nameserver:
-            - https://120.53.53.53/dns-query
-            - https://223.5.5.5/dns-query
-          proxy-server-nameserver:
-            - https://120.53.53.53/dns-query
-            - https://223.5.5.5/dns-query
-          nameserver-policy:
-            "rule-set:cn_domain,private_domain":
-              - https://120.53.53.53/dns-query
-              - https://223.5.5.5/dns-query
-            "rule-set:geolocation-!cn":
-              - "https://dns.cloudflare.com/dns-query"
-              - "https://dns.google/dns-query"
+            - https://doh.pub/dns-query
+            - https://dns.alidns.com/dns-query
         
         proxy-groups:
         
