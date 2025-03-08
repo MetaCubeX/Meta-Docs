@@ -25,11 +25,11 @@ proxies:
 
 ## idle-session-check-interval
 
-检查空闲会话的时间间隔。默认值：30秒。
+检查空闲会话的时间间隔。默认值：30 秒。
 
 ## idle-session-timeout
 
-在检查中，关闭闲置时间超过此值的会话。默认值：30秒。
+在检查中，关闭闲置时间超过此值的会话。默认值：30 秒。
 
 ## min-idle-session
 

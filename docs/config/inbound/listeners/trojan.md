@@ -1,22 +1,21 @@
-# VMESS
+# Trojan
 
 ```{.yaml linenums="1"}
 listeners:
-- name: vmess-in-1
-  type: vmess
-  port: 10814 # 支持使用ports格式，例如200,302 or 200,204,401-429,501-503
+- name: trojan-in-1
+  type: trojan
+  port: 10819 # 支持使用ports格式，例如200,302 or 200,204,401-429,501-503
   listen: 0.0.0.0
   # rule: sub-rule-name1 # 默认使用 rules，如果未找到 sub-rule 则直接使用 rules
   # proxy: proxy # 如果不为空则直接将该入站流量交由指定 proxy 处理 (当 proxy 不为空时，这里的 proxy 名称必须合法，否则会出错)
   users:
     - username: 1
-      uuid: 9d0cb9d0-964f-4ef6-897d-6c6b3ccf9e68
-      alterId: 1
+      password: 9d0cb9d0-964f-4ef6-897d-6c6b3ccf9e68
   # ws-path: "/" # 如果不为空则开启 websocket 传输层
   # grpc-service-name: "GunService" # 如果不为空则开启 grpc 传输层
   # 下面两项如果填写则开启 tls（需要同时填写）
-  # certificate: ./server.crt
-  # private-key: ./server.key
+  certificate: ./server.crt
+  private-key: ./server.key
   # 如果填写reality-config则开启reality（注意不可与certificate和private-key同时填写）
   # reality-config:
   #   dest: test.com:443
@@ -25,4 +24,9 @@ listeners:
   #     - 0123456789abcdef
   #   server-names:
   #     - test.com
+  # ss-option: # like trojan-go's `shadowsocks` config
+  #   enabled: false
+  #   method: aes-128-gcm # aes-128-gcm/aes-256-gcm/chacha20-ietf-poly1305
+  #   password: "example"
+  ### 注意，对于trojan listener, 至少需要填写 “certificate和private-key” 或 “reality-config” 或 “ss-option” 的其中一项 ###
 ```

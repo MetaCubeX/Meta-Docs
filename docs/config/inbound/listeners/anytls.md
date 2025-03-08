@@ -17,7 +17,7 @@ listeners:
 [通用字段](./index.md)
 
 !!! warning ""
-    证书和私钥是必要的
+    `certificate` 和 `private-key` 是必要的
 
 ## padding-scheme
 

@@ -188,6 +188,8 @@ nav:
         - tun: config/inbound/listeners/tun.md
         - ShadowSocks: config/inbound/listeners/ss.md
         - VMess: config/inbound/listeners/vmess.md
+        - VLESS: config/inbound/listeners/vless.md
+        - Trojan: config/inbound/listeners/trojan.md
         - AnyTLS: config/inbound/listeners/anytls.md
         - TUIC v4: config/inbound/listeners/tuic-v4.md
         - TUIC v5: config/inbound/listeners/tuic-v5.md

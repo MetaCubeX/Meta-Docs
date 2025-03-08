@@ -22,6 +22,11 @@ proxies:
     - h3
   ca: "./my.ca"
   ca-str: "xyz"
+  ###quic-go特殊配置项，不要随意修改除非你知道你在干什么###
+  # initial-stream-receive-window： 8388608
+  # max-stream-receive-window： 8388608
+  # initial-connection-receive-window： 20971520
+  # max-connection-receive-window： 20971520
 ```
 
 [通用字段](./index.md)
