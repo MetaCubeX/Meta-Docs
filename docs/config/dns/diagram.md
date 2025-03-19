@@ -34,8 +34,11 @@ rules:
 
 ## 流程
 
-!!! note
+!!! note ""
     此部分仅说明 dns 模块的处理过程
+
+!!! warning ""
+    direct-nameserver 重新解析仅限 tcp 连接
 
 ```mermaid
 flowchart TD
@@ -74,7 +77,7 @@ flowchart TD
   NameServer -- 未配置 fallback --> GetIP
 
   GetIP -- 匹配到直连并配置了 direct-nameserver --> DirectNS
-  DirectNS --> GetIP
+  DirectNS --> Direct
 
   GetIP -- IP 匹配到代理 --> Proxy[发送域名给代理]
   Domain -- 域名匹配到代理 --> Proxy
