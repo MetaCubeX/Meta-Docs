@@ -81,7 +81,7 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
 
 ### plugin
 
-插件，支持 `obfs`/`v2ray-plugin`/`shadow-tls`/`restls`
+插件，支持 `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`
 
 ### plugin-opts
 
@@ -111,6 +111,23 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
           # headers:
           #   custom: value
           # v2ray-http-upgrade: false
+    ```
+
+=== "gost-plugin"
+    ```{.yaml linenums="1"}
+      plugin: gost-plugin
+      plugin-opts:
+        mode: websocket
+          # tls: true # wss
+          # 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
+          # 配置指纹将实现 SSL Pining 效果
+          # fingerprint: xxxx
+          # skip-cert-verify: true
+          # host: bing.com
+          # path: "/"
+          # mux: true
+          # headers:
+          #   custom: value
     ```
 
 === "shadow-tls"

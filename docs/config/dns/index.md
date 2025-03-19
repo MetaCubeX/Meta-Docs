@@ -52,7 +52,7 @@ dns:
 
 ## cache-algorithm
 
-支持的算法:
+支持的算法：
 
 - lru: Least Recently Used, 默认值
 - arc: Adaptive Replacement Cache
@@ -118,15 +118,15 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 
 ## proxy-server-nameserver
 
-代理节点域名解析服务器，仅用于解析代理节点的域名，如果不填则遵循nameserver-policy、nameserver和fallback的配置
+代理节点域名解析服务器，仅用于解析代理节点的域名，如果不填则遵循 nameserver-policy、nameserver 和 fallback 的配置
 
 ## direct-nameserver
 
-用于direct出口域名解析的 DNS 服务器，如果不填则遵循nameserver-policy、nameserver和fallback的配置
+用于 direct 出口域名解析的 DNS 服务器，如果不填则遵循 nameserver-policy、nameserver 和 fallback 的配置
 
 ## direct-nameserver-follow-policy
 
-是否遵循nameserver-policy，默认为不遵守，仅当direct-nameserver不为空时生效
+是否遵循 nameserver-policy，默认为不遵守，仅当 direct-nameserver 不为空时生效
 
 ## nameserver
 
@@ -174,7 +174,7 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 
 此部分可用于发向公网地址的 DNS 服务器，使用`#`附加，使用`&`连接不同的参数。
 
-支持范围:
+支持范围：
 
 |              | [nameserver](./index.md#nameserver) | [fallback](./index.md#fallback) | [nameserver-policy](./index.md#nameserver-policy) | [proxy-server-nameserver](./index.md#proxy-server-nameserver) | [direct-nameserver](./index.md#direct-nameserver) | [default-nameserver](./index.md#default-nameserver) | [WireGuard.dns](../proxies/wg.md#dns) |
 |--------------|---------------------------|-------------------|---------------------|-------------------------|---------------------|----------------------|------------------------------------|

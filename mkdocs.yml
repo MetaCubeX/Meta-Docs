@@ -165,6 +165,7 @@ nav:
     - handbook/index.md
     - 语法: handbook/syntax.md
     - 快捷配置: example/conf.md
+    # - dns工作原理: handbook/dns.md
   - 配置:
     - config/index.md
     # - 完整示例: config/example.md

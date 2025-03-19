@@ -1,78 +1,83 @@
-以下是两种常见的 DNS 配置：
+# 解析流程
+
+## 示例配置
 
 ```{.yaml linenums="1"}
-hosts:
-  'alpha.clash.dev': '::1'
-
 dns:
-  ...
-  ipv6: true
-  enhanced-mode: redir-host / fake-ip
-  fake-ip-range: 28.0.0.1/8
-  fake-ip-filter:
-    - '*'
-    - '+.lan'
   nameserver:
     - https://doh.pub/dns-query
   fallback:
     - https://8.8.8.8/dns-query
+  direct-nameserver:
+    - system
   nameserver-policy:
     "geosite:cn,private":
-      - https://doh.pub/dns-query
-      - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    geosite:
+      - gfw
+    ipcidr:
+      - 240.0.0.0/4
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+
+rules:
+- DOMAIN-SUFFIX,google.com,PROXY
+- GEOIP,CN,DIRECT
+- MATCH,PROXY
 ```
 
-## 主流程
+## 流程
 
-此流程图为了更直观和简单地说明 Clash.Meta 的 DNS 工作流程，忽略了 Clash 内部的 DNS 映射处理。
+!!! note
+    此部分仅说明 dns 模块的处理过程
 
 ```mermaid
 flowchart TD
-  Start[客户端发起请求] --> rule[匹配规则]
-  rule -->  Domain[匹配到基于域名的规则]
-  rule --> IP[匹配到基于 IP 的规则]
+  Rule[匹配规则]
+  Domain[匹配到域名规则]
+  IP[匹配到目标 IP 规则]
+  Resolve[解析域名]
 
-  Domain -- 域名匹配到直连规则 --> DNS
-  IP --> DNS[通过 Clash DNS 解析域名]
+  NameServer[使用 nameserver 查询]
+  Policy[匹配 nameserver-policy]
+  Concurrent[使用 nameserver 和 fallback 并发查询]
+  Filter[匹配 fallback-filter]
+  DirectNS[使用 direct-nameserver 重新解析]
 
-  DNS --> Redir-host/FakeIP
-  Redir-host/FakeIP -- 查询 DNS 缓存 --> Cache
+  GetIP[查询得到IP]
 
-  Domain -- 域名匹配到代理规则 --> Remote[通过代理服务器解析域名并建立连接]
+  Proxy[发送域名给代理]
+  Direct[使用 IP 直接连接]
 
-  Cache -- Redir-host/FakeIP-Direct 未命中 --> DnsResolve[[域名解析]]
-  Cache -- Cache 命中 --> Get
-  Cache -- FakeIP 未命中,代理域名 --> Remote
+  Rule -->  Domain
+  Rule --> IP
 
-  DnsResolve --> Get[查询得到 IP]
-  Get -- 缓存 DNS 结果 --> Cache[(Cache)]
-  Get --> End[通过 IP 直接/通过代理建立连接]
+  Domain -- 域名匹配到直连 --> Resolve
+  Domain -- 域名匹配到直连并配置了 direct-nameserver --> DirectNS
 
-```
+  IP --> Resolve
 
-### 域名解析详细
+  Resolve -- 配置了 nameserver-policy --> Policy
+  Policy -- 未匹配到 --> NameServer
+  Policy --> GetIP
+  Resolve -- 未配置 nameserver-policy --> NameServer
 
-主流程中 **域名解析** 的详细流程(基于 v1.19.3):
+  NameServer -- 配置了 fallback --> Concurrent
+  Concurrent --> Filter
+  Filter --> GetIP
+  NameServer -- 未配置 fallback --> GetIP
 
-```mermaid
-flowchart TD
-  Start(域名) --> DirectResolverValid{配置了 direct-nameserver}
+  GetIP -- 匹配到直连并配置了 direct-nameserver --> DirectNS
+  DirectNS --> GetIP
 
-  DirectResolverValid -- 是 --> DirectResolver{遵循 nameserver-policy}
-  DirectResolver -- 否 --> DirectResolver_Lookup[使用 direct-nameserver 解析]
-  DirectResolver -- 是 --> DirectResolver_NSPolicy[匹配 nameserver-policy 并查询 ]
-  DirectResolver_NSPolicy -- 没匹配到 --> DirectResolver_Lookup
-  DirectResolver_NSPolicy -- 匹配成功 --> End
-  DirectResolver_Lookup --> End
+  GetIP -- IP 匹配到代理 --> Proxy[发送域名给代理]
+  Domain -- 域名匹配到代理 --> Proxy
 
-  DirectResolverValid -- 否 --> NSPolicy[匹配 nameserver-policy 并<br>并发查询]
-  NSPolicy -- 匹配成功 --> End(查询得到 IP)
-  NSPolicy -- 没匹配到 --> FB_DOMAIN[匹配 fallback 的域名规则并<br>并发查询]
-  FB_DOMAIN -- 匹配成功 --> End
-  FB_DOMAIN -- 没匹配到 --> NS[nameserver 并发查询<br>得到 ip]
-  NS -- 解析的 ip --> FB_IP_Match{匹配 fallback 的 ip 规则}
-  FB_IP_Match -- 是 --> FB_IP[fallback 对原域名并发查询]
-  FB_IP_Match -- 否 --> End
-  FB_IP --> End
-
+  GetIP -- IP 匹配到直连 --> Direct
 ```
