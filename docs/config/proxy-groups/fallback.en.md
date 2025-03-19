@@ -12,7 +12,7 @@ proxy-groups:
   #lazy: true
 ```
 
-If the currently selected node times out, the system will switch to the next available node in sequence.
+If the current node times out, the first available node will be selected in the order of proxies
 
 ## Common Fields
 
