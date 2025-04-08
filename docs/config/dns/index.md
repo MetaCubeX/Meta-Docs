@@ -101,6 +101,9 @@ fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
 dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-nameserver](./index.md#proxy-server-nameserver)
 
+!!! note ""
+    强烈不建议和 `prefer-h3` 一起使用
+
 ## default-nameserver
 
 默认 DNS, 用于解析 DNS 服务器 的域名
