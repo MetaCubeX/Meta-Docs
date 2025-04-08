@@ -98,6 +98,9 @@ Whether to query the system hosts; default is true.
 
 DNS connections comply with [routing rules](../rules/index.md), requiring configuration of [proxy-server-nameserver](./index.md#proxy-server-nameserver).
 
+!!! note ""
+    It is strongly not recommended to use it with `prefer-h3`.
+
 ## default-nameserver
 
 Default DNS, used for resolving the domain names of DNS servers.
