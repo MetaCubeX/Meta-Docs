@@ -177,6 +177,7 @@ nav:
       - 解析流程: config/dns/diagram.md
     - 域名嗅探: config/sniff/index.md
     - 入站:
+      - 入站配置: config/inbound/index.md
       - 代理端口: config/inbound/port.md
       - Tun: config/inbound/tun.md
       - listeners:
