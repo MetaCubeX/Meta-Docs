@@ -53,6 +53,12 @@
 |:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 
+## HarmonyOS NEXT
+
+|项目名称 | 维护状态 |
+|:----|:----|
+|[ClashNEXT](https://github.com/xiaobaigroup/hapapp)|维护中 |
+
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
 
 |项目名称 | 维护状态 |
