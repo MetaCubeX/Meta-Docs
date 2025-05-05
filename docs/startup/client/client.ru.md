@@ -53,6 +53,12 @@
 |:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|В разработке |
 
+## HarmonyOS NEXT
+
+|Название проекта | Статус поддержки |
+|:----|:----|
+|[ClashNEXT](https://github.com/xiaobaigroup/hapapp)|В разработке |
+
 ## Merlin (прошивка KoolCenter/прошивка paldier SWRT)
 
 |Название проекта | Статус поддержки |
