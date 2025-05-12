@@ -183,6 +183,9 @@ external-ui: /path/to/ui/folder
 
 Can be an absolute path or a relative path to the Clash working directory.
 
+!!! note
+    Note that if the path is not in the Clash working directory, please manually set the `SAFE_PATHS` environment variable to add it to the safe path. The syntax of this environment variable is the same as the PATH environment variable parsing rules of this operating system (i.e., semicolon-separated in Windows and colon-separated in other systems).
+
 ## Custom External User Interface Name
 
 ```{.yaml linenums="1"}
