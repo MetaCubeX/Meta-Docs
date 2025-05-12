@@ -19,6 +19,9 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 In most cases, the data passed is `'{"path": "", "payload": ""}'`, which can include a new configuration file path.
 
+!!! note
+    Note that if the path is not in the Clash working directory, please manually set the `SAFE_PATHS` environment variable to add it to the safe path. The syntax of this environment variable is the same as the PATH environment variable parsing rules of this operating system (i.e., semicolon-separated in Windows and colon-separated in other systems).
+
 ## Logs
 
 ### `/logs`
