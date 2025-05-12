@@ -19,6 +19,9 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 大多数情况传入的数据都为`'{"path": "", "payload": ""}'`，可以附带新的配置文件路径
 
+!!! note
+    注意，如果路径不在 Clash 工作目录，请手动设置`SAFE_PATHS`环境变量将其加入安全路径，该环境变量的语法同本操作系统的PATH环境变量解析规则（即Windows下以分号分割，其他系统下以冒号分割）。
+
 ## 日志
 
 ### `/logs`
