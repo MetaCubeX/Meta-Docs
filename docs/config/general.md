@@ -194,6 +194,9 @@ external-ui: /path/to/ui/folder
 
 可以为绝对路径，或者 Clash 工作目录的相对路径
 
+!!! note
+    注意，如果路径不在 Clash 工作目录，请手动设置`SAFE_PATHS`环境变量将其加入安全路径，该环境变量的语法同本操作系统的PATH环境变量解析规则（即Windows下以分号分割，其他系统下以冒号分割）。
+
 ## 自定义外部用户界面名字
 
 ```{.yaml linenums="1"}
