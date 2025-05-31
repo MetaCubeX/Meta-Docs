@@ -38,7 +38,8 @@ rules:
     此部分仅说明 dns 模块的处理过程
 
 !!! warning ""
-    direct-nameserver 重新解析仅限 tcp 连接
+    ~~direct-nameserver 重新解析仅限 tcp 连接~~
+    direct-nameserver 重新解析在v1.19.10后同样应用于 UDP 连接（对于Tun入站仅限Fakeip模式下）
 
 ```mermaid
 flowchart TD
