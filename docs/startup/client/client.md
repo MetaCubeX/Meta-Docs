@@ -15,8 +15,10 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
-|[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|维护中 |
+|[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
+|[Sparkle](https://github.com/xishang0128/sparkle)|维护中 |
+|[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 
 ## MacOS
 
@@ -29,8 +31,10 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
-|[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|维护中 |
+|[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
+|[Sparkle](https://github.com/xishang0128/sparkle)|维护中 |
+|[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 
 ## Linux
 
@@ -44,7 +48,8 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
-|[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|维护中 |
+|[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
+|[Sparkle](https://github.com/xishang0128/sparkle)|维护中 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 
 ## Android
@@ -52,6 +57,13 @@
 |项目名称 | 维护状态 |
 |:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
+|[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
+
+## iOS
+
+|项目名称 | 维护状态 |
+|:----|:----|
+|[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
 
