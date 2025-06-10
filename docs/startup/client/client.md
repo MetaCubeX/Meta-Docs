@@ -17,7 +17,6 @@
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
-|[Sparkle](https://github.com/xishang0128/sparkle)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 
 ## MacOS
@@ -33,7 +32,6 @@
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
-|[Sparkle](https://github.com/xishang0128/sparkle)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 
 ## Linux
@@ -49,7 +47,6 @@
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
-|[Sparkle](https://github.com/xishang0128/sparkle)|维护中 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 
 ## Android
