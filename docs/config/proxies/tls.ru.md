@@ -15,6 +15,10 @@ proxies:
   reality-opts:
     public-key: xxxx
     short-id: xxxx
+    support-x25519mlkem768: true
+  ech-opts:
+    enable: true
+    config: base64_encoded_config
 ```
 
 ## tls
@@ -59,3 +63,19 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 ### reality-opts.short-id
 
 Один из short id сервера 
+
+### reality-opts.support-x25519mlkem768
+
+Поддержка обмена ключами X25519-MLKEM768.
+
+## ech-opts
+
+Настройки ECH (Encrypted Client Hello), если `enable` установлено в `true`, то ECH будет включен.
+
+### ech-opts.enable
+
+Включает ECH (Encrypted Client Hello). Если не пусто, то ECH будет включен.
+
+### ech-opts.config
+
+Конфигурация ECH в base64 формате, которая будет использоваться для установления защищенного соединения.

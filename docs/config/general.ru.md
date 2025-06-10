@@ -232,6 +232,8 @@ unified-delay: true
 
 ## TCP одновременность
 
+Включить одновременные TCP-соединения, которые будут использовать все IP-адреса, разрешенные DNS для соединений, используя первое успешное соединение.
+
 Возможные значения: `true/false`
 
 ```{.yaml linenums="1"}
@@ -240,7 +242,7 @@ tcp-concurrent: true
 
 ## Интерфейс исходящего соединения
 
-Интерфейс для исходящего трафика Clash
+Интерфейс для исходящего трафика mihomo
 
 ```{.yaml linenums="1"}
 interface-name: en0
@@ -262,6 +264,13 @@ routing-mark: 6666
 tls:
   certificate: string # Сертификат в формате PEM или путь к сертификату
   private-key: string # Приватный ключ в формате PEM или путь к приватному ключу
+  ech-key: |-
+    -----BEGIN ECH KEYS-----
+    ACATwY30o/RKgD6hgeQxwrSiApLaCgU+HKh7B6SUrAHaDwBD/g0APwAAIAAgHjzK
+    madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
+    dC5jb20AAA==
+    -----END ECH KEYS-----
+  # ECH ключи, если не пустые, ECH будет включен.
 ```
 
 ## Глобальный отпечаток клиента

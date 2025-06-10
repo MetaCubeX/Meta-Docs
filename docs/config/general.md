@@ -195,7 +195,7 @@ external-ui: /path/to/ui/folder
 可以为绝对路径，或者 Clash 工作目录的相对路径
 
 !!! note
-    注意，如果路径不在 Clash 工作目录，请手动设置`SAFE_PATHS`环境变量将其加入安全路径，该环境变量的语法同本操作系统的PATH环境变量解析规则（即Windows下以分号分割，其他系统下以冒号分割）。
+    注意，如果路径不在 Clash 工作目录，请手动设置`SAFE_PATHS`环境变量将其加入安全路径，该环境变量的语法同本操作系统的 PATH 环境变量解析规则（即 Windows 下以分号分割，其他系统下以冒号分割）。
 
 ## 自定义外部用户界面名字
 
@@ -233,6 +233,8 @@ unified-delay: true
 
 ## TCP 并发
 
+启用 TCP 并发连接，将会使用 dns 解析出的所有 IP 地址进行连接，使用第一个成功的连接
+
 可选值 `true/false`
 
 ```{.yaml linenums="1"}
@@ -241,7 +243,7 @@ tcp-concurrent: true
 
 ## 出站接口
 
-Clash 的流量出站接口
+mihomo 的流量出站接口
 
 ```{.yaml linenums="1"}
 interface-name: en0
@@ -263,6 +265,13 @@ routing-mark: 6666
 tls:
   certificate: string # 证书 PEM 格式，或者 证书的路径
   private-key: string # 证书对应的私钥 PEM 格式，或者私钥路径
+  ech-key: |-
+    -----BEGIN ECH KEYS-----
+    ACATwY30o/RKgD6hgeQxwrSiApLaCgU+HKh7B6SUrAHaDwBD/g0APwAAIAAgHjzK
+    madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
+    dC5jb20AAA==
+    -----END ECH KEYS-----
+  # ECH 密钥，如果填写则会启用 ECH
 ```
 
 ## 全局客户端指纹

@@ -15,6 +15,10 @@ proxies:
   reality-opts:
     public-key: xxxx
     short-id: xxxx
+    support-x25519mlkem768: true
+  ech-opts:
+    enable: true
+    config: base64_encoded_config
 ```
 
 ## tls
@@ -60,3 +64,18 @@ reality 服务端私钥对应的公钥
 ### reality-opts.short-id
 
 服务端 short id 之一
+
+### reality-opts.support-x25519mlkem768
+
+支持 X25519-MLKEM768 密钥交换
+
+## ech-opts
+
+### ech-opts.enable
+
+启用 ECH（Encrypted Client Hello），如果不为空，则启用 ECH
+
+### ech-opts.config
+
+ECH 配置，base64 编码的配置内容
+

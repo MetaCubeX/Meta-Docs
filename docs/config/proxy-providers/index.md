@@ -180,3 +180,5 @@ provider 的 `exclude-type` 使用配置文件中的 `type` 类型进行排除
 ## payload
 
 内容，仅 `type` 为 `inline` 时生效
+
+当 `http` 或 `file` 解析失败时，也可以使用 payload 作为备用代理

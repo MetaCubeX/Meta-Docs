@@ -177,17 +177,18 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 
 此部分可用于发向公网地址的 DNS 服务器，使用`#`附加，使用`&`连接不同的参数。
 
-支持范围：
+除了指定代理/接口和 ecs，其余项的值均为 bool（true/false）
 
-|              | [nameserver](./index.md#nameserver) | [fallback](./index.md#fallback) | [nameserver-policy](./index.md#nameserver-policy) | [proxy-server-nameserver](./index.md#proxy-server-nameserver) | [direct-nameserver](./index.md#direct-nameserver) | [default-nameserver](./index.md#default-nameserver) | [WireGuard.dns](../proxies/wg.md#dns) |
-|--------------|---------------------------|-------------------|---------------------|-------------------------|---------------------|----------------------|------------------------------------|
-| 指定代理/接口      | ✓                         | ✓                 | ✓                   | ✓                       | ✓                   | ✓                    | ✓                                  |
-| 强制 HTTP/3    | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
-| 跳过证书验证       | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
-| ecs          | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
-| ecs-override | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
+### 示例
 
-> 以上表格中的 `✓` 表示支持[所有的类型](./type.md)
+```{.yaml linenums="1"}
+dns:
+  nameserver:
+  - 'https://8.8.8.8/dns-query#proxy&ecs=1.1.1.1/24&ecs-override=true'
+proxies:
+- name: proxy
+  type: ss
+```
 
 ### DNS 指定 代理/接口 进行连接
 
@@ -197,42 +198,28 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 
 如需经过代理查询，应配置 `proxy-server-nameserver`, 以防出现鸡蛋问题
 
-```{.yaml linenums="1"}
-nameserver:
-  - 'tls://dns.google#proxy'
-  - 'tls://dns.alidns.com#eth0'
-```
+### h3
 
-### 强制 HTTP/3
+强制 HTTP/3
 
 此选项与 `prefer-h3` 不冲突，填写后强制启用 HTTP/3 建立 DOH 连接，使用前需确保 DOH 服务器支持 HTTP/3
 
-```{.yaml linenums="1"}
-nameserver:
-  - 'https://dns.cloudflare.com/dns-query#h3=true'
-```
+### skip-cert-verify
 
-### doh 跳过证书验证
-
-```{.yaml linenums="1"}
-nameserver:
-  - 'https://dns.cloudflare.com/dns-query#skip-cert-verify=true'
-```
+跳过 TLS 证书验证
 
 ### ecs
 
-指定 dns 查询的 subnet 地址，仅支持 [doh](./type.md#dns-over-https)
-
-```
-nameserver:
-  - 'https://8.8.8.8/dns-query#ecs=1.1.1.1/24'
-```
+指定 dns 查询的 subnet 地址
 
 ### ecs-override
 
-强制覆盖 dns 查询的 subnet 地址，仅支持 [doh](./type.md#dns-over-https)
+强制覆盖 dns 查询的 subnet 地址
 
-```
-nameserver:
-  - 'https://8.8.8.8/dns-query#ecs=1.1.1.1/24&ecs-override=true'
-```
+### disable-ipv4
+
+丢弃 A 回应
+
+### disable-ipv6
+
+丢弃 AAAA 回应

@@ -15,6 +15,10 @@ proxies:
   reality-opts:
     public-key: xxxx
     short-id: xxxx
+    support-x25519mlkem768: true
+  ech-opts:
+    enable: true
+    config: base64_encoded_config
 ```
 
 ## TLS
@@ -56,3 +60,18 @@ Public key corresponding to the reality server's private key.
 ### reality-opts.short-id
 
 One of the server's short IDs.
+
+### reality-opts.support-x25519mlkem768
+
+Support for X25519-MLKEM768 key exchange.
+
+## ECH Options
+
+### ech-opts.enable
+
+Enables ECH (Encrypted Client Hello). If not empty, ECH will be enabled.
+
+### ech-opts.config
+
+Base64-encoded configuration for ECH.
+

@@ -172,64 +172,51 @@ These domains are considered polluted; matching these domains will directly use 
 
 ## Additional Parameters
 
-This section can be used to send DNS queries to public address DNS servers, using `#` to append and `&` to connect different parameters.
+This section can be used for DNS servers directed to public network addresses, using `#` for addition and `&` to connect different parameters.
 
-supports:
+Except for specifying the proxy/interface and ecs, the values of the remaining items are all bool (true/false).
 
-|              | [nameserver](./index.md#nameserver) | [fallback](./index.md#fallback) | [nameserver-policy](./index.md#nameserver-policy) | [proxy-server-nameserver](./index.md#proxy-server-nameserver) | [direct-nameserver](./index.md#direct-nameserver) | [default-nameserver](./index.md#default-nameserver) | [WireGuard.dns](../proxies/wg.md#dns) |
-|--------------|---------------------------|-------------------|---------------------|-------------------------|---------------------|----------------------|------------------------------------|
-| spec proxy/interface      | ✓                         | ✓                 | ✓                   | ✓                       | ✓                   | ✓                    | ✓                                  |
-| Force HTTP/3    | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
-| skip-cert-verify       | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
-| ecs          | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
-| ecs-override | DOH                       | DOH               | DOH                 | DOH                     | DOH                 | DOH                  | DOH                                |
+### Example
 
-> `✓` means supporting [all type](./type.md)
+```{.yaml linenums="1"}
+dns:
+  nameserver:
+  - 'https://8.8.8.8/dns-query#proxy&ecs=1.1.1.1/24&ecs-override=true'
+proxies:
+- name: proxy
+  type: ss
+```
 
 ### DNS specifies proxy/interface for connection
 
-Prioritize existing proxies; if a proxy with that name does not exist, specify the interface for connection.
+Prefer using existing proxies; if a proxy with that name does not exist, specify the interface for connection.
 
-`#RULES` is for connecting according to routing rules, equivalent to [respect-rules](./index.md#respect-rules).
+`#RULES` is to connect in accordance with routing rules, equivalent to [respect-rules](./index.md#respect-rules).
 
-If queries need to go through a proxy, configure `proxy-server-nameserver` to avoid issues.
+If querying through a proxy is required, `proxy-server-nameserver` should be configured to prevent egg issues.
 
-```{.yaml linenums="1"}
-nameserver:
-  - 'tls://dns.google#proxy'
-  - 'tls://dns.alidns.com#eth0'
-```
+### h3
 
-### Force HTTP/3
+Force HTTP/3
 
-This option does not conflict with `prefer-h3`; when filled in, it forces the use of HTTP/3 to establish DOH connections. Ensure that the DOH server supports HTTP/3 before use.
+This option does not conflict with `prefer-h3`. After filling it in, it forces the use of HTTP/3 to establish a DOH connection. Please ensure that the DOH server supports HTTP/3 before using it.
 
-```{.yaml linenums="1"}
-nameserver:
-  - 'https://dns.cloudflare.com/dns-query#h3=true'
-```
+### skip-cert-verify
 
-### Skip certificate verification for DOH
-
-```{.yaml linenums="1"}
-nameserver:
-  - 'https://dns.cloudflare.com/dns-query#skip-cert-verify=true'
-```
+Skip TLS certificate verification
 
 ### ecs
 
-Specify the subnet address for DNS queries, only supports [doh](./type.md#dns-over-https).
-
-```
-nameserver:
-  - 'https://8.8.8.8/dns-query#ecs=1.1.1.1/24'
-```
+Specify the subnet address for DNS queries
 
 ### ecs-override
 
-Force override of the subnet address for DNS queries, only supports [doh](./type.md#dns-over-https).
+Forcefully override the subnet address of DNS queries
 
-```
-nameserver:
-  - 'https://8.8.8.8/dns-query#ecs=1.1.1.1/24&ecs-override=true'
-```
+### disable-ipv4
+
+Discard A responses
+
+### disable-ipv6
+
+Discard AAAA response

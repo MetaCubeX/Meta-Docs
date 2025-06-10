@@ -223,13 +223,15 @@ unified-delay: true
 
 ## TCP Concurrency
 
+Enable TCP concurrent connections, which will use all IP addresses resolved by DNS for connections, using the first successful connection.
+
 ```{.yaml linenums="1"}
 tcp-concurrent: true
 ```
 
 ## Outbound Interface
 
-Clash's traffic outbound interface.
+mihomo's traffic outbound interface.
 
 ```{.yaml linenums="1"}
 interface-name: en0
@@ -251,6 +253,13 @@ Currently only used for https in API.
 tls:
   certificate: string # Certificate PEM format or certificate path
   private-key: string # Private key PEM format corresponding to the certificate, or private key path
+  ech-key: |-
+    -----BEGIN ECH KEYS-----
+    ACATwY30o/RKgD6hgeQxwrSiApLaCgU+HKh7B6SUrAHaDwBD/g0APwAAIAAgHjzK
+    madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
+    dC5jb20AAA==
+    -----END ECH KEYS-----
+  # ECH keys, if not empty, ECH will be enabled.
 ```
 
 ## Global Client Fingerprint

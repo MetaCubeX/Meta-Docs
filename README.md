@@ -6,9 +6,9 @@
 
 ### 设置虚拟环境
 
-部分操作系统python3.11以上依赖虚拟环境运行,不能直接运行
+部分操作系统 python3.11 以上依赖虚拟环境运行，不能直接运行
 
-##### 安装virtualenv
+##### 安装 virtualenv
 
 * debian
   * bash/zsh/fish

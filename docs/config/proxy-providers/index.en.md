@@ -180,3 +180,5 @@ The `exclude-type` of the provider uses the `type` from the configuration file f
 ## payload
 
 Content, only effective when `type` is `inline`
+
+When the `http` or `file` parsing fails, the payload can also be used as a backup proxy.
