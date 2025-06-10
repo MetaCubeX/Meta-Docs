@@ -4,7 +4,7 @@
 
 |Название проекта | Статус поддержки |
 |:----|:----|
-|[mihomo-party](https://github.com/mihomo-party-org/mihomo-party)|В разработке |
+|[sparkle](https://github.com/xishang0128/sparkle)|В разработке |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|Не поддерживается |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|В разработке |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|В разработке |
@@ -22,7 +22,7 @@
 
 |Название проекта | Статус поддержки |
 |:----|:----|
-|[mihomo-party](https://github.com/mihomo-party-org/mihomo-party)|В разработке |
+|[sparkle](https://github.com/xishang0128/sparkle)|В разработке |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|Не поддерживается |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|В разработке |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|В разработке |
@@ -36,7 +36,7 @@
 
 |Название проекта | Статус поддержки |
 |:----|:----|
-|[mihomo-party](https://github.com/mihomo-party-org/mihomo-party)|В разработке |
+|[sparkle](https://github.com/xishang0128/sparkle)|В разработке |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|Не поддерживается |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|В разработке |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|В разработке |
