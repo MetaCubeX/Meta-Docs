@@ -29,7 +29,7 @@ Must be configured if the type is `http`.
 
 Optional, file path, must be unique. If not provided, the MD5 of the URL will be used as the filename.
 
-For security reasons, this path is restricted to only allow locations within `HomeDir` (configured with the -d startup parameter). If you want to store it in any location, set the environment variable `SKIP_SAFE_PATH_CHECK=1`.
+For security reasons, this path is restricted to only allow locations within `HomeDir` (configured with the -d startup parameter). If you want to store it in other locations, please specify additional safe paths by setting the `SAFE_PATHS` environment variable. The syntax of this environment variable is the same as the PATH environment variable parsing rules of this operating system (that is, it is separated by semicolons in Windows and by colons in other systems).
 
 ## interval
 
