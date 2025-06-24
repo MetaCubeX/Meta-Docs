@@ -84,7 +84,7 @@ proxies:
 
 ## dialer-proxy
 
-Указывает, что текущий `proxies` устанавливает сетевые соединения через `dialer-proxy`. Значение может быть `name` из [группы политик](../proxy-groups/index.md) или [исходящих прокси](../proxies/index.md)
+Указывает, что текущий `proxies` устанавливает сетевые соединения через `dialer-proxy`. Значение может быть `name` из [группы политик](../proxy-groups/index.md) или [исходящих прокси](../proxies/index.md). Для использования обратитесь к [документу dialer-proxy](../proxies/dialer-proxy.md)
 
 ## smux
 
