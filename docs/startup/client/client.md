@@ -55,6 +55,7 @@
 |:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
+|[FlyClash](https://github.com/GtxFury/FlyClash)|维护中 |
 
 ## iOS
 
