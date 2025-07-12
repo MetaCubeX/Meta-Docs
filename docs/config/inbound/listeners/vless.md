@@ -18,6 +18,7 @@ listeners:
   # certificate: ./server.crt
   # private-key: ./server.key
   # 如果填写reality-config则开启reality（注意不可与certificate和private-key同时填写）
+  fingerprint: xxxx
   reality-config:
     dest: test.com:443
     private-key: jNXHt1yRo0vDuchQlIP6Z0ZvjT3KtzVI-T4E7RoLJS0 # 可由 mihomo generate reality-keypair 命令生成
@@ -27,3 +28,6 @@ listeners:
       - test.com
   ### 注意，对于vless listener, 至少需要填写 “certificate和private-key” 或 “reality-config” 的其中一项 ###
 ```
+
+## fingerprint
+设置传输指纹，用于标识自身设备 `chrome/firefox/safari/edge/android/ios/other`

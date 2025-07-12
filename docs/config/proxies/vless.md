@@ -16,7 +16,6 @@ proxies:
   alpn:
   - h2
   - http/1.1
-  fingerprint: xxxx
   client-fingerprint: chrome
   skip-cert-verify: true
   reality-opts:
@@ -48,9 +47,24 @@ VLESS 子协议，可用值为 `xtls-rprx-vision`
 
 UDP 包编码，为空则使用原始编码，可选 `packetaddr` (由 `v2ray 5+` 支持)/ `xudp` (由 `xray` 支持)
 
+## client-fingerprint
+客户端发送请求的指纹，用于标识自身设备 `chrome/firefox/safari/edge/android/ios/other`
+
+## skip-cert-verify
+
+是否跳过SSL证书验证 `true/false`
+
+## reality-opts
+
+如果使用 reality，则此项必须配置
+
+*reality-opts.public-key*
+> 必须，reality 私钥
+
+*reality-opts.short-id*
+> 必须，reality short id （这是由于mihomo vless 服务端也必须配置 short id 才能正常工作导致的，如果通过其它工具搭建服务端，则可按需配置此项）
+
 ## network
 
 传输层，支持 ws/http/h2/grpc，不配置或配置其他值则为 tcp
-
 参阅 [传输层配置](./transport.md)
-
