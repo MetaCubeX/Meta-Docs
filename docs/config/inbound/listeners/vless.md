@@ -29,5 +29,33 @@ listeners:
   ### 注意，对于vless listener, 至少需要填写 “certificate和private-key” 或 “reality-config” 的其中一项 ###
 ```
 
+## SSL证书
+与 `reality-config` 互斥
+
+*certificate*
+
+> 公钥路径 `string`
+
+*private-key*
+
+> 私钥路径 `string`
+
+
 ## fingerprint
 设置传输指纹，用于标识自身设备 `chrome/firefox/safari/edge/android/ios/other`
+
+## reality-config
+
+与 `ssl证书` 互斥， `reality` 配置项
+
+*dest*
+> 必要,设置 reality 的模拟目标地址，必须带端口号
+
+*private-key*
+> 必要, reality 的私钥，可使用 `mihomo generate reality-keypair` 生成密钥对
+
+*short-id*
+> 必要, 可使用 `openssl rand -hex 8` 生成短ID
+
+*server-names*
+> 必要，客户端的 server names 列表

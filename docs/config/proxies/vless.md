@@ -37,7 +37,7 @@ proxies:
 
 ## uuid
 
-必须，VLESS 用户 ID
+必要，VLESS 用户 ID
 
 ## flow
 
@@ -56,13 +56,13 @@ UDP 包编码，为空则使用原始编码，可选 `packetaddr` (由 `v2ray 5+
 
 ## reality-opts
 
-如果使用 reality，则此项必须配置
+如果使用 reality，则此项必要配置
 
 *reality-opts.public-key*
-> 必须，reality 私钥
+> 必要，reality 私钥
 
 *reality-opts.short-id*
-> 必须，reality short id （这是由于mihomo vless 服务端也必须配置 short id 才能正常工作导致的，如果通过其它工具搭建服务端，则可按需配置此项）
+> 必要，reality short id （这是由于mihomo vless 服务端也必须配置 short id 才能正常工作导致的，如果通过其它工具搭建服务端，则可按需配置此项）
 
 ## network
 
