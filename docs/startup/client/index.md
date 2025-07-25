@@ -2,7 +2,7 @@
 
 ## Windows
 
-[**Clash.Mini**](https://github.com/MetaCubeX/Clash.Mini)
+[**Clash.Mini**](https://github.com/MetaCubeX/Clash.Mini)(停止更新)
 
 ## Mac OS
 
