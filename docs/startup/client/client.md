@@ -88,6 +88,7 @@
 |[Clash Tproxy Android](https://t.me/e58695/59)|维护中 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|停止维护 |
+|[Clash.Mihomo](https://github.com/Chuhe2399/Clash.Mihomo)|维护中 |
 
 ## HarmonyOS NEXT(OpenHarmony)
 
