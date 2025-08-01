@@ -29,7 +29,7 @@ release 中，包的文件名中包含了多个信息，包括
 
 可以根据这些信息选择你需要下载的可执行文件。
 
-👉[在此了解](https://github.com/golang/go/wiki/MinimumRequirements#amd64)更多关于 GOAMD64 标签的信息
+👉[在此了解](https://go.dev/wiki/MinimumRequirements#amd64)更多关于 GOAMD64 标签的信息
 
 👉[在此了解](https://go.dev/doc/go1.20#ports)更多关于 Golang1.20 版本的系统兼容性信息
 
