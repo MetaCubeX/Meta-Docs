@@ -48,6 +48,7 @@
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
+|[mihoro](https://github.com/spencerwooo/mihoro)|维护中 |
 
 ## Android
 
