@@ -75,6 +75,7 @@
 |[OpenClash](https://github.com/vernesong/OpenClash)|维护中 |
 |[OpenWrt-nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)|维护中 |
 |[openwrt-fchomo](https://github.com/fcshark-org/openwrt-fchomo)|维护中|
+|[openwrt-nekobox](https://github.com/Thaolga/openwrt-nekobox)|维护中|
 
 ## Shell
 
