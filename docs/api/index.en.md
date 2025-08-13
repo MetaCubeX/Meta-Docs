@@ -30,6 +30,12 @@ Request method: `GET`
 
 - Retrieve real-time logs.
 
+### `/logs?level=log_level`
+
+Request Method: `GET`
+
+- Retrieve logs of a specified level. Possible values: info, debug, warning, error
+
 ## Traffic Information
 
 ### `/traffic`
