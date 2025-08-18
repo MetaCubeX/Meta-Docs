@@ -67,6 +67,7 @@
 |项目名称 | 维护状态 |
 |:----|:----|
 |[merlinclashcat](https://t.me/merlinclashcat)|维护中|
+|[vClash](https://github.com/vxiaov/vClash)|维护中 |
 
 ## OpenWRT
 
