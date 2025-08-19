@@ -9,6 +9,15 @@ listeners:
   cipher: 2022-blake3-aes-256-gcm
   password: vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=
   udp: true
+  # shadow-tls:
+  #   enable: false # 设置为true时开启
+  #   version: 3 # 支持v1/v2/v3
+  #   password: password # v2设置项
+  #   users: # v3设置项
+  #     - name: 1
+  #       password: password
+  #   handshake:
+  #     dest: test.com:443
 ```
 
 ## [通用字段](./index.md)
