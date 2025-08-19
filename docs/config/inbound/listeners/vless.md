@@ -32,5 +32,15 @@ listeners:
       - 0123456789abcdef
     server-names:
       - test.com
+  #   #下列两个 limit 为选填，可对未通过验证的回落连接限速，bytesPerSec 默认为 0 即不启用
+  #   #回落限速是一种特征，不建议启用，如果您是面板/一键脚本开发者，务必让这些参数随机化
+  #   limit-fallback-upload:
+  #     after-bytes: 0 # 传输指定字节后开始限速
+  #     bytes-per-sec: 0 # 基准速率（字节/秒）
+  #     burst-bytes-per-sec: 0 # 突发速率（字节/秒），大于 bytesPerSec 时生效
+  #   limit-fallback-download:
+  #     after-bytes: 0 # 传输指定字节后开始限速
+  #     bytes-per-sec: 0 # 基准速率（字节/秒）
+  #     burst-bytes-per-sec: 0 # 突发速率（字节/秒），大于 bytesPerSec 时生效
   ### 注意，对于vless listener, 至少需要填写 “certificate和private-key” 或 “reality-config” 的其中一项 ###
 ```
