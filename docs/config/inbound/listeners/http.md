@@ -11,6 +11,13 @@ listeners:
       password: password1
   certificate: ./server.crt
   private-key: ./server.key
+  # 如果填写则开启ech（可由 mihomo generate ech-keypair <明文域名> 生成）
+  # ech-key: |
+  #   -----BEGIN ECH KEYS-----
+  #   ACATwY30o/RKgD6hgeQxwrSiApLaCgU+HKh7B6SUrAHaDwBD/g0APwAAIAAgHjzK
+  #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
+  #   dC5jb20AAA==
+  #   -----END ECH KEYS-----
 ```
 
 ## [通用字段](./index.md)
