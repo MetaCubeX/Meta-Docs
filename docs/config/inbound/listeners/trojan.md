@@ -16,6 +16,13 @@ listeners:
   # 下面两项如果填写则开启 tls（需要同时填写）
   certificate: ./server.crt
   private-key: ./server.key
+  # 如果填写则开启ech（可由 mihomo generate ech-keypair <明文域名> 生成）
+  # ech-key: |
+  #   -----BEGIN ECH KEYS-----
+  #   ACATwY30o/RKgD6hgeQxwrSiApLaCgU+HKh7B6SUrAHaDwBD/g0APwAAIAAgHjzK
+  #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
+  #   dC5jb20AAA==
+  #   -----END ECH KEYS-----
   # 如果填写reality-config则开启reality（注意不可与certificate和private-key同时填写）
   # reality-config:
   #   dest: test.com:443
@@ -24,6 +31,16 @@ listeners:
   #     - 0123456789abcdef
   #   server-names:
   #     - test.com
+  #   #下列两个 limit 为选填，可对未通过验证的回落连接限速，bytesPerSec 默认为 0 即不启用
+  #   #回落限速是一种特征，不建议启用，如果您是面板/一键脚本开发者，务必让这些参数随机化
+  #   limit-fallback-upload:
+  #     after-bytes: 0 # 传输指定字节后开始限速
+  #     bytes-per-sec: 0 # 基准速率（字节/秒）
+  #     burst-bytes-per-sec: 0 # 突发速率（字节/秒），大于 bytesPerSec 时生效
+  #   limit-fallback-download:
+  #     after-bytes: 0 # 传输指定字节后开始限速
+  #     bytes-per-sec: 0 # 基准速率（字节/秒）
+  #     burst-bytes-per-sec: 0 # 突发速率（字节/秒），大于 bytesPerSec 时生效
   # ss-option: # like trojan-go's `shadowsocks` config
   #   enabled: false
   #   method: aes-128-gcm # aes-128-gcm/aes-256-gcm/chacha20-ietf-poly1305
