@@ -135,7 +135,7 @@ proxy-providers:
 ## 域名通配符
 
 !!! note
-    本节中的域名通配符与(路由规则中的`DOMAIN-WILDCARD`)[../config/rules/#domain-wildcard]并不相同
+    本节中的域名通配符与[路由规则中的`DOMAIN-WILDCARD`](../config/rules/#domain-wildcard)并不相同
 
 ### 通配符 `*`
 
