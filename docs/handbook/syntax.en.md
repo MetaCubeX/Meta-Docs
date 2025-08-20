@@ -134,6 +134,9 @@ proxy-providers:
 
 ## Domain Wildcards
 
+!!! note
+    The domain wildcard in this section is not the same as [`DOMAIN-WILDCARD` in the routing rules](../config/rules/#domain-wildcard).
+
 ### Wildcard `*`
 
 Clash's wildcard `*` can only match one level of domain at a time.
