@@ -78,12 +78,13 @@
 |[OpenWrt-nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)|维护中 |
 |[openwrt-fchomo](https://github.com/fcshark-org/openwrt-fchomo)|维护中|
 |[openwrt-nekobox](https://github.com/Thaolga/openwrt-nekobox)|维护中|
+|[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 
 ## Shell
 
 |项目名称 | 维护状态 |
 |:----|:----|
-|[ShellClash](https://github.com/juewuy/ShellClash)|维护中 |
+|[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 |[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|维护中 |
 |[Box4](https://github.com/CHIZI-0618/box4magisk)|维护中 |
 |[Box for Root](https://github.com/taamarin/box_for_magisk)|维护中 |
