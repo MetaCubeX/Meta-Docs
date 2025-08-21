@@ -69,6 +69,7 @@
 |:----|:----|
 |[merlinclashcat](https://t.me/merlinclashcat)|维护中|
 |[vClash](https://github.com/vxiaov/vClash)|维护中 |
+|[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 
 ## OpenWRT
 
