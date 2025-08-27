@@ -33,6 +33,16 @@ proxies:
   #   h2: 67543
   #   h4: 32345
   #   h3: 123123
+  #   # AmneziaWG v1.5
+  #   i1: <b 0xf6ab3267fa><c><b 0xf6ab><t><r 10><wt 10>
+  #   i2: <b 0xf6ab3267fa><r 100>
+  #   i3: ""
+  #   i4: ""
+  #   i5: ""
+  #   j1: <b 0xffffffff><c><b 0xf6ab><t><r 10>
+  #   j2: <c><b 0xf6ab><t><wt 1000>
+  #   j3: <t><b 0xf6ab><c><r 10>
+  #   itime: 60
 ```
 
 ## Полная запись
