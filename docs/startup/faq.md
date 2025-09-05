@@ -34,3 +34,5 @@ release 中，包的文件名中包含了多个信息，包括
 👉[在此了解](https://go.dev/doc/go1.20#ports)更多关于 Golang1.20 版本的系统兼容性信息
 
 👉[在此了解](http://www.loongnix.cn/zh/toolchain/Golang/downloads-Go1.21/index.html)更多关于`loongarch64`abi 版本的信息
+
+对于macos用户：根据[go wiki](https://go.dev/doc/go1.25#darwin)，go1.25开始不再支持macos11，请macos11用户下载带有`go124`标签的二进制文件，macos10.15用户下载带有`go122`标签的二进制文件，macoc10.13用户下载带有`go120`标签的二进制文件
