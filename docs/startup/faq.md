@@ -38,3 +38,5 @@ release 中，包的文件名中包含了多个信息，包括
 对于macos用户：根据[go wiki](https://go.dev/doc/go1.25#darwin)，go1.25开始不再支持macos11，请macos11用户下载带有`go124`标签的二进制文件，macos10.15用户下载带有`go122`标签的二进制文件，macoc10.13用户下载带有`go120`标签的二进制文件
 
 对于windows用户：目前官方构建的所有版本均支持win7及更高版本的系统（非官方构建不保证这一点）
+
+对于linux用户：根据[go wiki](https://go.dev/doc/go1.24#linux)，go1.24开始仅支持3.2+版本内核，请2.6.32~3.1版本内核用户下载带有`go123`标签的二进制文件
