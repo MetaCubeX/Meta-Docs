@@ -36,3 +36,5 @@ Check details of system compatibility information about Golang version 1.20 [her
 For macOS users: According to the [Go wiki](https://go.dev/doc/go1.25#darwin), Go 1.25 no longer supports macOS 11. macOS 11 users are advised to download the binary with the `go124` tag, macOS 10.15 users are advised to download the binary with the `go122` tag, and macOS 10.13 users are advised to download the binary with the `go120` tag.
 
 For Windows users: All official builds currently support Windows 7 and higher (unofficial builds are not guaranteed).
+
+For Linux users: According to the [go wiki](https://go.dev/doc/go1.24#linux), Go 1.24 only supports kernels 3.2 and higher. For kernels 2.6.32 to 3.1, please download the binary tagged `go123`.
