@@ -5,6 +5,7 @@ rules:
 - DOMAIN,ad.com,REJECT
 - DOMAIN-SUFFIX,google.com,auto
 - DOMAIN-KEYWORD,google,auto
+- DOMAIN-WILDCARD,*.google.com,auto
 - DOMAIN-REGEX,^abc.*com,PROXY
 - GEOSITE,youtube,PROXY
 
@@ -71,7 +72,11 @@ rules:
 
 ### DOMAIN-KEYWORD
 
-使用域名关键字匹配
+域名关键字匹配
+
+### DOMAIN-WILDCARD
+
+通配符匹配，仅支持`*`和`?`通配符
 
 ### DOMAIN-REGEX
 

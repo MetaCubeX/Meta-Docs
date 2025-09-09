@@ -5,6 +5,7 @@ rules:
 - DOMAIN,ad.com,REJECT
 - DOMAIN-SUFFIX,google.com,auto
 - DOMAIN-KEYWORD,google,auto
+- DOMAIN-WILDCARD,*.google.com,auto
 - DOMAIN-REGEX,^abc.*com,PROXY
 - GEOSITE,youtube,PROXY
 
@@ -72,6 +73,10 @@ rules:
 ### DOMAIN-KEYWORD
 
 Сопоставляет по ключевым словам домена.
+
+### DOMAIN-WILDCARD
+
+Сопоставление с подстановочными знаками, поддерживает только подстановочные знаки `*` и `?`.
 
 ### DOMAIN-REGEX
 

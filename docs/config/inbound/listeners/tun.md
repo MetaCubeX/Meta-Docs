@@ -1,5 +1,7 @@
 # TUN
 
+注意，listeners中的tun仅提供给高级用户使用，普通用户应使用顶层配置中的tun
+
 ```{.yaml linenums="1"}
 listeners:
 - name: tun-in

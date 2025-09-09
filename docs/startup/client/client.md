@@ -48,6 +48,7 @@
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
+|[mihoro](https://github.com/spencerwooo/mihoro)|维护中 |
 
 ## Android
 
@@ -68,6 +69,8 @@
 |项目名称 | 维护状态 |
 |:----|:----|
 |[merlinclashcat](https://t.me/merlinclashcat)|维护中|
+|[vClash](https://github.com/vxiaov/vClash)|维护中 |
+|[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 
 ## OpenWRT
 
@@ -76,12 +79,14 @@
 |[OpenClash](https://github.com/vernesong/OpenClash)|维护中 |
 |[OpenWrt-nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)|维护中 |
 |[openwrt-fchomo](https://github.com/fcshark-org/openwrt-fchomo)|维护中|
+|[openwrt-nekobox](https://github.com/Thaolga/openwrt-nekobox)|维护中|
+|[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 
 ## Shell
 
 |项目名称 | 维护状态 |
 |:----|:----|
-|[ShellClash](https://github.com/juewuy/ShellClash)|维护中 |
+|[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 |[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|维护中 |
 |[Box4](https://github.com/CHIZI-0618/box4magisk)|维护中 |
 |[Box for Root](https://github.com/taamarin/box_for_magisk)|维护中 |
@@ -89,3 +94,11 @@
 |[Clash Tproxy Android](https://t.me/e58695/59)|维护中 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|停止维护 |
+|[Clash.Mihomo](https://github.com/Chuhe2399/Clash.Mihomo)|维护中 |
+|[Box for Android](https://github.com/boxproxy/box/)|维护中 |
+
+## HarmonyOS NEXT(OpenHarmony)
+
+|项目名称 | 维护状态 |
+|:----|:----|
+|[ClashBox](https://github.com/xiaobaigroup/ClashBox)|维护中 |

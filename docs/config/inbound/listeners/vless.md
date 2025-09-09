@@ -14,9 +14,22 @@ listeners:
       flow: xtls-rprx-vision
   # ws-path: "/" # 如果不为空则开启 websocket 传输层
   # grpc-service-name: "GunService" # 如果不为空则开启 grpc 传输层
+  # -------------------------
+  # vless encryption服务端配置：
+  # （原生外观 / 只 XOR 公钥 / 全随机数。只允许 1-RTT 模式 / 同时允许 1-RTT 模式与 600 秒复用的 0-RTT 模式）
+  # / 是只能选一个，后面 base64 至少一个，无限串联，使用 mihomo generate vless-x25519 和 mihomo generate vless-mlkem768 生成，替换值时需去掉括号
+  # -------------------------
+  # decryption: "mlkem768x25519plus.native/xorpub/random.1rtt/600s.(X25519 PrivateKey).(ML-KEM-768 Seed)..."
   # 下面两项如果填写则开启 tls（需要同时填写）
   # certificate: ./server.crt
   # private-key: ./server.key
+  # 如果填写则开启ech（可由 mihomo generate ech-keypair <明文域名> 生成）
+  # ech-key: |
+  #   -----BEGIN ECH KEYS-----
+  #   ACATwY30o/RKgD6hgeQxwrSiApLaCgU+HKh7B6SUrAHaDwBD/g0APwAAIAAgHjzK
+  #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
+  #   dC5jb20AAA==
+  #   -----END ECH KEYS-----
   # 如果填写reality-config则开启reality（注意不可与certificate和private-key同时填写）
   reality-config:
     dest: test.com:443
@@ -25,5 +38,15 @@ listeners:
       - 0123456789abcdef
     server-names:
       - test.com
-  ### 注意，对于vless listener, 至少需要填写 “certificate和private-key” 或 “reality-config” 的其中一项 ###
+    #下列两个 limit 为选填，可对未通过验证的回落连接限速，bytesPerSec 默认为 0 即不启用
+    #回落限速是一种特征，不建议启用，如果您是面板/一键脚本开发者，务必让这些参数随机化
+    limit-fallback-upload:
+      after-bytes: 0 # 传输指定字节后开始限速
+      bytes-per-sec: 0 # 基准速率（字节/秒）
+      burst-bytes-per-sec: 0 # 突发速率（字节/秒），大于 bytesPerSec 时生效
+    limit-fallback-download:
+      after-bytes: 0 # 传输指定字节后开始限速
+      bytes-per-sec: 0 # 基准速率（字节/秒）
+      burst-bytes-per-sec: 0 # 突发速率（字节/秒），大于 bytesPerSec 时生效
+  ### 注意，对于vless listener, 至少需要填写 “certificate和private-key” 或 “reality-config” 或 “decryption” 的其中一项 ###
 ```
