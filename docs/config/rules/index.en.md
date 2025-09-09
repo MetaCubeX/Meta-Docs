@@ -5,6 +5,7 @@ rules:
 - DOMAIN,ad.com,REJECT
 - DOMAIN-SUFFIX,google.com,auto
 - DOMAIN-KEYWORD,google,auto
+- DOMAIN-WILDCARD,*.google.com,auto
 - DOMAIN-REGEX,^abc.*com,PROXY
 - GEOSITE,youtube,PROXY
 
@@ -72,6 +73,11 @@ For example, `google.com` matches `www.google.com`, `mail.google.com`, and `goog
 ### DOMAIN-KEYWORD
 
 Matches using domain keywords.
+
+
+### DOMAIN-WILDCARD
+
+Wildcard matching, only supports `*` and `?` wildcards.
 
 ### DOMAIN-REGEX
 

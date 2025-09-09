@@ -30,6 +30,12 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 获取实时日志
 
+### `/logs?level=log_level`
+
+请求方法：`GET`
+
+- 获取指定等级日志 可选值：info、debug、warning、error
+
 ## 流量信息
 
 ### `/traffic`

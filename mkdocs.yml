@@ -207,6 +207,7 @@ plugins:
 nav:
   - 简介: index.md
   - 安装:
+    - startup/index.md
     - 常见问题: startup/faq.md
     - 使用预编译二进制: startup/index.md
     - 客户端: startup/client/index.md
