@@ -20,8 +20,6 @@ proxies:
   fingerprint: xxxx
   alpn:
     - h3
-  ca: "./my.ca"
-  ca-str: "xyz"
   ###специальные настройки quic-go, не изменяйте без необходимости, если не знаете, что делаете###
   # initial-stream-receive-window： 8388608
   # max-stream-receive-window： 8388608
