@@ -18,8 +18,6 @@ proxies:
   # skip-cert-verify: false
   # recv-window-conn: 12582912
   # recv-window: 52428800
-  # ca: "./my.ca"
-  # ca-str: "xyz"
   # disable_mtu_discovery: false
   # fingerprint: xxxx
   # fast-open: true # включить Fast Open (снижает задержку установки соединения), по умолчанию false
