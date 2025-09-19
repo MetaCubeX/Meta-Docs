@@ -18,10 +18,8 @@ proxies:
   # skip-cert-verify: false
   # recv-window-conn: 12582912
   # recv-window: 52428800
-  # ca: "./my.ca"
-  # ca-str: "xyz"
   # disable_mtu_discovery: false
-  # fingerprint: xxxx
+  # fingerprint: xxxx # 配置指纹将实现 SSL Pining 效果, 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
   # fast-open: true # 启用 Fast Open (降低连接建立延迟),默认为 false
 ```
 
