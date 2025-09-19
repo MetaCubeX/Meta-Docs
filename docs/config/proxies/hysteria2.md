@@ -17,11 +17,9 @@ proxies:
 
   sni: server.com
   skip-cert-verify: false
-  fingerprint: xxxx
+  fingerprint: xxxx # 配置指纹将实现 SSL Pining 效果, 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
   alpn:
     - h3
-  ca: "./my.ca"
-  ca-str: "xyz"
   ###quic-go特殊配置项，不要随意修改除非你知道你在干什么###
   # initial-stream-receive-window： 8388608
   # max-stream-receive-window： 8388608
