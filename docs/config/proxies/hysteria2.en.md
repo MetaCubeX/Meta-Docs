@@ -20,8 +20,6 @@ proxies:
   fingerprint: xxxx
   alpn:
     - h3
-  ca: "./my.ca"
-  ca-str: "xyz"
 ```
 
 [Common Fields](./index.md)
