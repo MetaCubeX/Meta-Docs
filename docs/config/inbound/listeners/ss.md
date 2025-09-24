@@ -18,6 +18,30 @@ listeners:
   #       password: password
   #   handshake:
   #     dest: test.com:443
+  # kcp-tun:
+  #   enable: false
+  #   key: it's a secrect # pre-shared secret between client and server
+  #   crypt: aes # aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, sm4, none, null
+  #   mode: fast # profiles: fast3, fast2, fast, normal, manual
+  #   conn: 1 # set num of UDP connections to server
+  #   autoexpire: 0 # set auto expiration time(in seconds) for a single UDP connection, 0 to disable
+  #   scavengettl: 600 # set how long an expired connection can live (in seconds)
+  #   mtu: 1350 # set maximum transmission unit for UDP packets
+  #   sndwnd: 128 # set send window size(num of packets)
+  #   rcvwnd: 512 # set receive window size(num of packets)
+  #   datashard: 10 # set reed-solomon erasure coding - datashard
+  #   parityshard: 3 # set reed-solomon erasure coding - parityshard
+  #   dscp: 0 # set DSCP(6bit)
+  #   nocomp: false # disable compression
+  #   acknodelay: false # flush ack immediately when a packet is received
+  #   nodelay: 0
+  #   interval: 50
+  #   resend: false
+  #   sockbuf: 4194304 # per-socket buffer in bytes
+  #   smuxver: 1 # specify smux version, available 1,2
+  #   smuxbuf: 4194304 # the overall de-mux buffer in bytes
+  #   streambuf: 2097152 # per stream receive buffer in bytes, smux v2+
+  #   keepalive: 10 # seconds between heartbeats
 ```
 
 ## [通用字段](./index.md)
