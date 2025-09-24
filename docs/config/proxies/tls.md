@@ -11,6 +11,8 @@ proxies:
   - h2
   - http/1.1
   skip-cert-verify: true
+  # certificate: xxxx
+  # private-key: xxx
   client-fingerprint: random
   reality-opts:
     public-key: xxxx
@@ -48,6 +50,14 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 ## skip-cert-verify
 
 跳过证书验证，仅适用于使用 `tls` 的协议
+
+## certificate
+
+如果填写则开启 [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/)（需要和private-key同时填写），内容为证书 PEM 格式，或者 证书的路径
+
+## private-key
+
+如果填写则开启 [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/)（需要和certificate同时填写），内容为证书对应的私钥 PEM 格式，或者私钥路径
 
 ## client-fingerprint
 
