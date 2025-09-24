@@ -21,7 +21,7 @@ listeners:
   # kcp-tun:
   #   enable: false
   #   key: it's a secrect # pre-shared secret between client and server
-  #   crypt: aes # aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, sm4, none, null
+  #   crypt: aes # aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none, null
   #   mode: fast # profiles: fast3, fast2, fast, normal, manual
   #   conn: 1 # set num of UDP connections to server
   #   autoexpire: 0 # set auto expiration time(in seconds) for a single UDP connection, 0 to disable
