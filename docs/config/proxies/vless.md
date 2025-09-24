@@ -60,9 +60,13 @@ vless encryption客户端配置：
 / 是只能选一个，后面 base64 至少一个，无限串联，使用  `mihomo generate vless-x25519` 和 `mihomo generate vless-mlkem768` 生成，替换值时需去掉括号
 
 Padding 是可选的参数，仅作用于 1-RTT 以消除握手的长度特征，双端默认值均为 "100-111-1111.75-0-111.50-0-3333"：
+
 * 在 1-RTT client/server hello 后以 100% 的概率粘上随机 111 到 1111 字节的 padding
+
 * 以 75% 的概率等待随机 0 到 111 毫秒（"probability-from-to"）
+
 * 再次以 50% 的概率发送随机 0 到 3333 字节的 padding（若为 0 则不 Write()）
+
 * 服务端、客户端可以设置不同的 padding 参数，按 len、gap 的顺序无限串联，第一个 padding 需概率 100%、至少 35 字节
 
 ## network
