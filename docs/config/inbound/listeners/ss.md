@@ -36,7 +36,7 @@ listeners:
   #   acknodelay: false # flush ack immediately when a packet is received
   #   nodelay: 0
   #   interval: 50
-  #   resend: false
+  #   resend: 0
   #   sockbuf: 4194304 # per-socket buffer in bytes
   #   smuxver: 1 # specify smux version, available 1,2
   #   smuxbuf: 4194304 # the overall de-mux buffer in bytes
