@@ -11,6 +11,8 @@ proxies:
   - h2
   - http/1.1
   skip-cert-verify: true
+  # certificate: xxxx
+  # private-key: xxx
   client-fingerprint: random
   reality-opts:
     public-key: xxxx
@@ -47,6 +49,14 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 ## skip-cert-verify
 
 Пропустить проверку сертификата, применяется только к протоколам, использующим `tls`
+
+## certificate
+
+Если заполнено, включает [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/) (необходимо указать private-key). Содержимое — сертификат в формате PEM или путь к сертификату.
+
+## private-key
+
+Если заполнено, включает [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/) (необходимо указать certificate). Содержимое — закрытый ключ, соответствующий сертификату в формате PEM, или путь к закрытому ключу.
 
 ## client-fingerprint
 
