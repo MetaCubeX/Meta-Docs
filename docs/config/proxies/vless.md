@@ -57,7 +57,7 @@ vless encryption客户端配置：
 
 （native/xorpub 的 XTLS Vision 可以 Splice。只使用 1-RTT 模式 / 若服务端发的 ticket 中秒数不为零则 0-RTT 复用）
 
-/ 是只能选一个，后面 base64 至少一个，无限串联，使用  mihomo generate vless-x25519 和 mihomo generate vless-mlkem768 生成，替换值时需去掉括号
+/ 是只能选一个，后面 base64 至少一个，无限串联，使用  `mihomo generate vless-x25519` 和 `mihomo generate vless-mlkem768` 生成，替换值时需去掉括号
 
 Padding 是可选的参数，仅作用于 1-RTT 以消除握手的长度特征，双端默认值均为 "100-111-1111.75-0-111.50-0-3333"：
 * 在 1-RTT client/server hello 后以 100% 的概率粘上随机 111 到 1111 字节的 padding
