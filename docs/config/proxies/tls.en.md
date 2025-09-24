@@ -11,6 +11,8 @@ proxies:
   - h2
   - http/1.1
   skip-cert-verify: true
+  # certificate: xxxx
+  # private-key: xxx
   client-fingerprint: random
   reality-opts:
     public-key: xxxx
@@ -21,19 +23,19 @@ proxies:
     config: base64_encoded_config
 ```
 
-## TLS
+## tls
 
 Enables TLS, applicable only to protocols that use `tls`, with the `trojan` protocol requiring it to be enabled.
 
-## SNI/Servername
+## sni/servername
 
 The server name indication, referred to as `servername` in [`VMess`](./vmess.md)/[`VLESS`](./vless.md). If left empty, it defaults to the address in `server`.
 
-## Fingerprint
+## fingerprint
 
 Certificate fingerprint, applicable only to protocols that use `tls`.
 
-## ALPN
+## alpn
 
 List of supported Application Layer Protocol Negotiation options, arranged in order of priority.
 
@@ -41,15 +43,23 @@ If both peers support ALPN, the selected protocol will be one from this list; if
 
 Refer to [Application-Layer Protocol Negotiation](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation)
 
-## Skip Cert Verify
+## skip-cert-verify
 
 Bypasses certificate verification, applicable only to protocols that use `tls`.
 
-## Client Fingerprint
+## certificate
+
+If filled, this enables [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/) (must be filled in with private-key). The content is the certificate in PEM format or the path to the certificate.
+
+## private-key
+
+If filled, this enables [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/) (must be filled in with certificate). The content is the private key corresponding to the certificate in PEM format or the path to the private key.
+
+## client-fingerprint
 
 Client uTLS fingerprint, applicable only to [`VMess`](./vmess.md)/[`VLESS`](./vless.md)/[`Trojan`](./trojan.md) protocols. For optional details, refer to [Global Client Fingerprint](../general.md#global-client-fingerprint).
 
-## Reality Options
+## reality-opts
 
 Configuration for reality; if not empty, reality will be enabled.
 
@@ -65,7 +75,7 @@ One of the server's short IDs.
 
 Support for X25519-MLKEM768 key exchange.
 
-## ECH Options
+## ech-opts
 
 ### ech-opts.enable
 
