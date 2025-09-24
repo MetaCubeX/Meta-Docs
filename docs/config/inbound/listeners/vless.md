@@ -21,8 +21,11 @@ listeners:
   # -------------------------
   # decryption: "mlkem768x25519plus.native/xorpub/random.1rtt/600s.(X25519 PrivateKey).(ML-KEM-768 Seed)..."
   # 下面两项如果填写则开启 tls（需要同时填写）
-  # certificate: ./server.crt
-  # private-key: ./server.key
+  # certificate: ./server.crt # 证书 PEM 格式，或者 证书的路径
+  # private-key: ./server.key # 证书对应的私钥 PEM 格式，或者私钥路径
+  # 下面两项为mTLS配置项，如果client-auth-type设置为 "verify-if-given" 或 "require-and-verify" 则client-auth-cert必须不为空
+  # client-auth-type: "" # 可选值：""、"request"、"require-any"、"verify-if-given"、"require-and-verify"
+  # client-auth-cert: string # 证书 PEM 格式，或者 证书的路径
   # 如果填写则开启ech（可由 mihomo generate ech-keypair <明文域名> 生成）
   # ech-key: |
   #   -----BEGIN ECH KEYS-----
