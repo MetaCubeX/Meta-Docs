@@ -66,7 +66,7 @@
 
 |Название проекта | Статус поддержки |
 |:----|:----|
-|[merlinclashcat](https://t.me/merlinclashcat)|Поддерживается|
+|[merlinclashcat](https://t.me/merlinclashcat)|Поддерживается |
 
 ## OpenWRT
 
@@ -74,7 +74,8 @@
 |:----|:----|
 |[OpenClash](https://github.com/vernesong/OpenClash)|Поддерживается |
 |[OpenWrt-nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)|Поддерживается |
-|[openwrt-fchomo](https://github.com/fcshark-org/openwrt-fchomo)|Поддерживается|
+|[openwrt-fchomo](https://github.com/fcshark-org/openwrt-fchomo)|Поддерживается |
+|[SSClash](https://github.com/zerolabnet/SSClash)|Поддерживается |
 
 ## Shell
 
