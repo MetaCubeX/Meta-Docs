@@ -82,6 +82,7 @@
 |[openwrt-fchomo](https://github.com/fcshark-org/openwrt-fchomo)|维护中|
 |[openwrt-nekobox](https://github.com/Thaolga/openwrt-nekobox)|维护中|
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
+|[SSClash](https://github.com/zerolabnet/SSClash)|维护中 |
 
 ## Shell
 
