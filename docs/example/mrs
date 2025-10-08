@@ -255,11 +255,12 @@ rules:
   - RULE-SET,netflix_domain,NETFLIX
   - RULE-SET,netflix_ip,NETFLIX
   - RULE-SET,bahamut_domain,巴哈姆特
-  - RULE-SET,game-!cn,外服游戏
+  - RULE-SET,game-platforms-download@cn,游戏下载
+  - RULE-SET,games-!cn@cn,游戏下载
+  - RULE-SET,games-!cn,外服游戏
   - RULE-SET,bilibili_domain,哔哩哔哩
   - RULE-SET,microsoft_domain,Microsoft
   - RULE-SET,apple_domain,Apple
-  - RULE-SET,game-platforms-download,游戏下载
   - RULE-SET,geolocation-!cn,其他
   - RULE-SET,cn_domain,国内
   - RULE-SET,geolocation-cn,国内
@@ -303,7 +304,13 @@ rule-providers:
   bahamut_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bahamut.mrs"
-  game-!cn:
+  game-platforms-download@cn:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-game-platforms-download@cn.mrs"
+  games-!cn@cn:
+    <<: *domain
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games-!cn@cn.mrs"
+  games-!cn:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games-!cn.mrs"
   bilibili_domain:
@@ -315,9 +322,6 @@ rule-providers:
   apple_domain:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs"
-  game-platforms-download:
-    <<: *domain
-    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-game-platforms-download.mrs"
   geolocation-!cn:
     <<: *domain
     url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
