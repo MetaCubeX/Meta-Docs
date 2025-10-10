@@ -19,6 +19,7 @@
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|维护中 |
+|[Clash](https://github.com/Butanediol/Clash)|维护中 |
 
 ## MacOS
 
