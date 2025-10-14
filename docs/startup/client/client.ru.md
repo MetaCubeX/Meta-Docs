@@ -19,6 +19,7 @@
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|поддерживается |
+|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|поддерживается |
 
 ## MacOS
 
@@ -34,6 +35,7 @@
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|поддержка прекращена |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается |
+|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|поддерживается |
 
 ## Linux
 
@@ -50,6 +52,7 @@
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|поддержка прекращена |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|поддерживается |
 |[mihoro](https://github.com/spencerwooo/mihoro)|поддерживается |
+|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|поддерживается |
 
 ## Android
 
