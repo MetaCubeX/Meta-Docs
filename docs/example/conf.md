@@ -243,11 +243,15 @@
         unified-delay: false
         tcp-concurrent: false
         external-controller: 127.0.0.1:9090
+        secret: "123456"     #自行修改为复杂密码
         external-ui: ui
         external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 
-        find-process-mode: strict
-        global-client-fingerprint: chrome
+        find-process-mode: always
+        global-client-fingerprint: firefox
+        keep-alive-interval: 15
+        keep-alive-idle: 15
+        disable-keep-alive: false
 
         profile:
           store-selected: true
