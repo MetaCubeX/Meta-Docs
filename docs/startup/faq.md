@@ -15,10 +15,10 @@ release 中，包的文件名中包含了多个信息，包括
 
 * 程序名称 (`mihomo`)
 * 操作系统（如 android、darwin、freebsd、linux、windows 等）
-* 架构（如 386、amd64、arm32v7、arm64 等）
+* 架构（如 arm64-v8a、arm32-v7a、x86、x86-64 等）
 * 编译方式
 >
-> * `v1/2/3`：仅适用于AMD64平台，用于标记[CPU指令集等级](https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels)
+> * `v1/2/3`：仅适用于arm64平台，用于标记[CPU指令集等级](https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels)
 > * ~~`默认（无额外标识）`: 使用 GOAMD64=v3 标签编译的默认版本~~
 > * ~~`compatible`: 使用 GOAMD64=v1 标签进行编译。该版本是为了兼容特定的操作系统或架构而编译的。~~
 > * `go120`: 使用 Golang1.20 版本进行编译。该版本是为了兼容特定的操作系统或架构而编译的。
