@@ -442,12 +442,13 @@
           - RULE-SET,google@cn,国内
           - RULE-SET,youtube,YouTube
           - RULE-SET,google,Google
-          - RULE-SET,bing@cn,国内
+          - RULE-SET,microsoft@cn,国内
           - RULE-SET,bing,Bing
+          - RULE-SET,github,Github
+          - RULE-SET,microsoft,Microsoft
           - RULE-SET,telegram,Telegram
           - RULE-SET,twitter,Twitter
           - RULE-SET,ai-!cn,国外AI
-          - RULE-SET,github,Github
           - RULE-SET,spotify,Spotify
           - RULE-SET,tiktok,Tiktok
           - RULE-SET,netflix,NETFLIX
@@ -456,8 +457,6 @@
           - RULE-SET,game-platforms-download@cn,国内
           - RULE-SET,games-!cn@cn,国内
           - RULE-SET,games-!cn,外服游戏
-          - RULE-SET,microsoft@cn,国内
-          - RULE-SET,microsoft,Microsoft
           - RULE-SET,apple@cn,国内
           - RULE-SET,apple,Apple
           - RULE-SET,cn,国内
@@ -489,12 +488,18 @@
           google:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"
-          bing@cn:
+          microsoft@cn:
             <<: *domain
-            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bing@cn.mrs"
+            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft@cn.mrs"
           bing:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bing.mrs"
+          github:
+            <<: *domain
+            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"
+          microsoft:
+            <<: *domain
+            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"
           telegram:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"
@@ -504,9 +509,6 @@
           ai-!cn:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs"
-          github:
-            <<: *domain
-            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"
           spotify:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs"
@@ -531,21 +533,12 @@
           games-!cn:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-games-!cn.mrs"
-          microsoft@cn:
-            <<: *domain
-            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft@cn.mrs"
-          microsoft:
-            <<: *domain
-            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"
           apple@cn:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple@cn.mrs"
           apple:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs"
-          geolocation-!cn:
-            <<: *domain
-            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
           cn:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"
@@ -555,6 +548,9 @@
           geolocation-cn:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-cn.mrs"
+          geolocation-!cn:
+            <<: *domain
+            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
 
           private_ip:
             <<: *ip
