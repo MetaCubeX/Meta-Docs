@@ -301,10 +301,9 @@
           proxy-server-nameserver:
             - https://dns.alidns.com/dns-query
             - https://doh.pub/dns-query
-          nameserver-policy:
-            rule-set:private,cn,tld-cn,geolocation-cn:
-              - https://dns.alidns.com/dns-query
-              - https://doh.pub/dns-query
+          direct-nameserver:
+            - https://dns.alidns.com/dns-query
+            - https://doh.pub/dns-query
           respect-rules: true
         
         proxy-groups:
