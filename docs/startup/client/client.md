@@ -20,7 +20,7 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|维护中 |
 |[Clash](https://github.com/Butanediol/Clash)|维护中 |
-|[NeedyClash](https://github.com/Lythrilla/NeedyClash)|维护中 |
+|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 
 ## MacOS
 
