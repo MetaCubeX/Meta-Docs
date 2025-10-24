@@ -107,3 +107,9 @@
 |项目名称 | 维护状态 |
 |:----|:----|
 |[ClashBox](https://github.com/xiaobaigroup/ClashBox)|维护中 |
+
+## Steam OS
+
+|项目名称 | 维护状态 |
+|:----|:----|
+|[DeckyClash](https://github.com/chenx-dust/DeckyClash)|维护中 |
