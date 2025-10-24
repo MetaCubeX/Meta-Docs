@@ -101,6 +101,7 @@
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|停止维护 |
 |[Clash.Mihomo](https://github.com/Chuhe2399/Clash.Mihomo)|维护中 |
 |[Box for Android](https://github.com/boxproxy/box/)|维护中 |
+|[mihomo-magisk](https://github.com/AlliotTech/mihomo-magisk)|维护中 |
 
 ## HarmonyOS NEXT(OpenHarmony)
 
