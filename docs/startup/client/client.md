@@ -19,6 +19,7 @@
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|维护中 |
+|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 
 ## MacOS
 
@@ -34,6 +35,7 @@
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
+|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 
 ## Linux
 
@@ -50,6 +52,7 @@
 |[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[mihoro](https://github.com/spencerwooo/mihoro)|维护中 |
+|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 
 ## Android
 
