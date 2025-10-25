@@ -287,8 +287,7 @@
             - "*"
             - +.lan
             - +.local
-            - time.*.com
-            - ntp.*.com
+            - "ruleset:category-ntp"
             - +.market.xiaomi.com
           use-hosts: false
           use-system-hosts: false
@@ -550,6 +549,9 @@
           geolocation-!cn:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
+          category-ntp:
+            <<: *domain
+            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ntp.mrs"
 
           private_ip:
             <<: *ip
