@@ -106,7 +106,7 @@ The maximum idle time for TCP Keep Alive.
 keep-alive-idle: 15
 ```
 
-Disable TCP Keep Alive; on Android, this is set to true by default.
+Disable TCP Keep Alive; on Android, this is forcibly enabled by default.
 
 ```{.yaml linenums="1"}
 disable-keep-alive: false
