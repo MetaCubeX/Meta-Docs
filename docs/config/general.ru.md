@@ -108,7 +108,7 @@ keep-alive-interval: 15
 keep-alive-idle: 15
 ```
 
-Отключение TCP Keep Alive, на Android по умолчанию true
+Отключить TCP Keep Alive; на Android это принудительно включено по умолчанию (то есть Keep Alive всегда отключён).
 
 ```{.yaml linenums="1"}
 disable-keep-alive: false
