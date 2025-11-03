@@ -20,6 +20,7 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|维护中 |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
+|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 
 ## MacOS
 
@@ -36,6 +37,7 @@
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
+|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 
 ## Linux
 
@@ -53,6 +55,7 @@
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[mihoro](https://github.com/spencerwooo/mihoro)|维护中 |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
+|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 
 ## Android
 
@@ -61,6 +64,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[FlyClash](https://github.com/GtxFury/FlyClash-Android)|维护中 |
+|[YumeBox](https://github.com/YumeYuka/YumeBox)|维护中 |
 
 ## iOS
 
@@ -102,6 +106,8 @@
 |[Clash.Mihomo](https://github.com/Chuhe2399/Clash.Mihomo)|维护中 |
 |[Box for Android](https://github.com/boxproxy/box/)|维护中 |
 |[mihomo-magisk](https://github.com/AlliotTech/mihomo-magisk)|维护中 |
+|[Clash MIX](https://github.com/AXEVO/Clash-MIX)|维护中 |
+|[akashaProxy](https://github.com/akashaProxy/akashaProxy)|维护中 |
 
 ## HarmonyOS NEXT(OpenHarmony)
 
