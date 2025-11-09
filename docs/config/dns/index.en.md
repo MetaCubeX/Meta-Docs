@@ -14,6 +14,7 @@ dns:
     - 223.5.5.5
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  # fake-ip-range6: fdfe:dcba:9876::1/64
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - '*.lan'
@@ -75,6 +76,10 @@ This refers to the DNS processing mode of mihomo.
 ## fake-ip-range
 
 Settings for the IP range under fakeip; the default IPV4 address for [tun](../inbound/tun.md) also uses this value as a reference.
+
+## fake-ip-range6
+
+Settings for the IPv6 range under fakeip.
 
 ## fake-ip-filter
 
