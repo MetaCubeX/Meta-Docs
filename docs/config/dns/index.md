@@ -14,6 +14,7 @@ dns:
     - 223.5.5.5
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  # fake-ip-range6: fdfe:dcba:9876::1/64
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - '*.lan'
@@ -78,6 +79,10 @@ mihomo 的 DNS 处理模式
 ## fake-ip-range
 
 fakeip 下的 IP 段设置，[tun](../inbound/tun.md) 的默认 IPV4 地址 也使用此值作为参考
+
+## fake-ip-range6
+
+fakeip 下的 IPv6 段设置
 
 ## fake-ip-filter
 
