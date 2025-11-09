@@ -14,6 +14,7 @@ dns:
     - 223.5.5.5
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  # fake-ip-range6: fdfe:dcba:9876::1/64
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - '*.lan'
@@ -78,6 +79,10 @@ dns:
 ## fake-ip-range
 
 Настройка диапазона IP для режима fakeip. Адрес IPv4 по умолчанию для [tun](../inbound/tun.md) также использует это значение в качестве ориентира.
+
+## fake-ip-range6
+
+Настройка диапазона IPv6 для режима fakeip.
 
 ## fake-ip-filter
 
