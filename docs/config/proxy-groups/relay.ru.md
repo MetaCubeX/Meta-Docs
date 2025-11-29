@@ -1,5 +1,9 @@
 # Relay
 
+!!! warning
+    Стратегия relay устарела; вместо нее используйте [dialer-proxy](../proxies/index.md#dialer-proxy).
+
+<!--
 ```{.yaml linenums="1"}
 Proxy Groups:
 # Traffic: Clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
@@ -22,3 +26,4 @@ Proxy Groups:
 ## О UDP
 
 Relay поддерживает передачу UDP при условии, что начальный и конечный узлы прокси-цепочки поддерживают UDP через TCP. В настоящее время протоколы, поддерживающие UDP, включают `vmess`, `vless`, `trojan`, `ss`, `ssr` и `tuic`. 
+-->
