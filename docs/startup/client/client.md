@@ -21,6 +21,8 @@
 |[FlyClash](https://github.com/GtxFury/FlyClash)|维护中 |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
+|[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|维护中 |
+|[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 
 ## MacOS
 
@@ -38,6 +40,7 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
+|[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 
 ## Linux
 
@@ -56,6 +59,7 @@
 |[mihoro](https://github.com/spencerwooo/mihoro)|维护中 |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
+|[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 
 ## Android
 
@@ -65,6 +69,8 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[FlyClash](https://github.com/GtxFury/FlyClash-Android)|维护中 |
 |[YumeBox](https://github.com/YumeYuka/YumeBox)|维护中 |
+|[LiClash](https://t.me/appshub_chat/557)|维护中 |
+|[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 
 ## iOS
 
@@ -120,3 +126,4 @@
 |项目名称 | 维护状态 |
 |:----|:----|
 |[DeckyClash](https://github.com/chenx-dust/DeckyClash)|维护中 |
+|[ToMoon](https://github.com/YukiCoco/ToMoon)|维护中 |
