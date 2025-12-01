@@ -18,6 +18,7 @@ dns:
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - '*.lan'
+  # fake-ip-ttl: 1
   nameserver-policy:
     '+.arpa': '10.0.0.1'
     'rule-set:cn':
@@ -87,9 +88,13 @@ Fakeip filtering; the following addresses will not receive fakeip mappings for c
 
 Values support [domain wildcards](../../handbook/syntax.md#domain-wildcards) and [importing domain sets](../../handbook/syntax.md#introducing-domain-sets).
 
-## fake-ip-filter-mode: blacklist
+## fake-ip-filter-mode
 
 Optional values are `blacklist`/`whitelist`, default is `blacklist`. In `whitelist`, only successful matches will return fake-ip.
+
+## fake-ip-ttl
+
+Configure the TTL returned by fakeip queries; do not modify it unless absolutely necessary.
 
 ## use-hosts
 
