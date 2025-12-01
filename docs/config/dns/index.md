@@ -18,6 +18,7 @@ dns:
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - '*.lan'
+  # fake-ip-ttl: 1
   nameserver-policy:
     '+.arpa': '10.0.0.1'
     'rule-set:cn':
@@ -90,9 +91,13 @@ fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
 值支持[域名通配](../../handbook/syntax.md#_8)以及[引入域名集合](../../handbook/syntax.md#_13)
 
-## fake-ip-filter-mode: blacklist
+## fake-ip-filter-mode
 
 可选 `blacklist`/`whitelist`，默认`blacklist`，`whitelist` 即只有匹配成功才返回 fake-ip
+
+## fake-ip-ttl
+
+配置fakeip查询返回的TTL，非必要情况下请勿修改
 
 ## use-hosts
 
