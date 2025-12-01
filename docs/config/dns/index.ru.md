@@ -18,6 +18,7 @@ dns:
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - '*.lan'
+  # fake-ip-ttl: 1
   nameserver-policy:
     '+.arpa': '10.0.0.1'
     'rule-set:cn':
@@ -90,9 +91,13 @@ dns:
 
 Значения поддерживают [маску доменов](../../handbook/syntax.md#_8) и [импорт наборов доменов](../../handbook/syntax.md#_13)
 
-## fake-ip-filter-mode: blacklist
+## fake-ip-filter-mode
 
 Возможные режимы: `blacklist`/`whitelist`, по умолчанию `blacklist`. При выборе `whitelist` возвращается fake-ip только для доменов, соответствующих фильтру.
+
+## fake-ip-ttl
+
+Настройте TTL, возвращаемый запросами fakeip; не изменяйте его без крайней необходимости.
 
 ## use-hosts
 
