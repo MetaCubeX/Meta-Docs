@@ -21,7 +21,7 @@ proxies:
 
 ## transport
 
-协议，目前只支持 `TCP`
+协议，目前支持 `TCP` 和 `UDP`
 
 ## multiplexing
 
