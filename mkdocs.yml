@@ -248,6 +248,7 @@ nav:
         - Trojan: config/inbound/listeners/trojan.md
         - AnyTLS: config/inbound/listeners/anytls.md
         - Mieru: config/inbound/listeners/mieru.md
+        - Sudoku: config/inbound/listeners/sudoku.md
         - TUIC v4: config/inbound/listeners/tuic-v4.md
         - TUIC v5: config/inbound/listeners/tuic-v5.md
         - Hysteria2: config/inbound/listeners/hysteria2.md
@@ -264,12 +265,13 @@ nav:
       - SOCKS: config/proxies/socks.md
       - Shadowsocks: config/proxies/ss.md
       - ShadowsocksR: config/proxies/ssr.md
-      - Mieru: config/proxies/mieru.md
       - Snell: config/proxies/snell.md
       - VMess: config/proxies/vmess.md
       - VLESS: config/proxies/vless.md
       - Trojan: config/proxies/trojan.md
       - AnyTLS: config/proxies/anytls.md
+      - Mieru: config/proxies/mieru.md
+      - Sudoku: config/proxies/sudoku.md
       - Hysteria: config/proxies/hysteria.md
       - Hysteria2: config/proxies/hysteria2.md
       - TUIC: config/proxies/tuic.md
