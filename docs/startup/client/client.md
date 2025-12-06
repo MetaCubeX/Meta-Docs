@@ -68,7 +68,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[FlyClash](https://github.com/GtxFury/FlyClash-Android)|维护中 |
-|[YumeBox](https://github.com/YumeYuka/YumeBox)|维护中 |
+|[YumeBox](https://github.com/YumeLira/YumeBox)|维护中 |
 |[LiClash](https://t.me/appshub_chat/557)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 
