@@ -41,6 +41,7 @@
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
+|[ClashMac](https://github.com/666OS/ClashMac)|维护中 |
 
 ## Linux
 
@@ -69,7 +70,7 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[FlyClash](https://github.com/GtxFury/FlyClash-Android)|维护中 |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|维护中 |
-|[LiClash](https://t.me/appshub_chat/557)|维护中 |
+|[LiClash](https://t.me/appshub_channel)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 
 ## iOS
