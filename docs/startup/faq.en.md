@@ -21,7 +21,7 @@ In`release`, the filename of each package includes several pieces of information
 > * `v1/2/3`: only for AMD64 platforms, used to mark [CPU instruction set level](https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels)
 > * ~~`default(not specified in file name)`: Default version compiled with GOAMD64=v3 tag.~~
 > * ~~`compatible`: Compiled with GOAMD64=v1 tag for compatibility with specific OS or architecture.~~
-> * `go120`: Compiled with Golang1.20 for compatibility with specific OS or architecture.
+> * `go120`: Compiled with Golang1.20 for compatibility with specific OS or architecture. Without the `go` tag, the code is compiled using the latest Golang version.
 > * `abi1/2`: ABI version for `loongarch64`, specific details can be found at <http://www.loongnix.cn/zh/toolchain/Golang/downloads-Go1.21/index.html>
 >
 * Compile branch (e.g., `alpha`)
