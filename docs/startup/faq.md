@@ -21,7 +21,7 @@ release 中，包的文件名中包含了多个信息，包括
 > * `v1/2/3`：仅适用于AMD64平台，用于标记[CPU指令集等级](https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels)
 > * ~~`默认（无额外标识）`: 使用 GOAMD64=v3 标签编译的默认版本~~
 > * ~~`compatible`: 使用 GOAMD64=v1 标签进行编译。该版本是为了兼容特定的操作系统或架构而编译的。~~
-> * `go120`: 使用 Golang1.20 版本进行编译。该版本是为了兼容特定的操作系统或架构而编译的。
+> * `go120`: 使用 Golang1.20 版本进行编译。该版本是为了兼容特定的操作系统或架构而编译的。不带go标签时为采用最新Golang版本编译。
 > * `abi1/2`: `loongarch64`的 abi 版本
 >
 * 分支（alpha）
