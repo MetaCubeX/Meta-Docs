@@ -105,7 +105,7 @@
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 |[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|维护中 |
 |[Box4](https://github.com/CHIZI-0618/box4magisk)|维护中 |
-|[Box for Root](https://github.com/taamarin/box_for_magisk)|停止维护 |
+|[Box for Root](https://github.com/taamarin/box_for_magisk)|维护中 |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|维护中 |
 |[Clash Tproxy Android](https://t.me/e58695/59)|维护中 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
