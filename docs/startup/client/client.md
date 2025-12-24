@@ -23,6 +23,7 @@
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
+|[wxhsalc](https://github.com/Butanediol/wxhsalc)|维护中 |
 
 ## MacOS
 
