@@ -14,6 +14,9 @@ proxy-groups:
   type: select
   proxies:
   - ss2
+
+rules:
+  - MATCH,ss1
 ```
 
 Указывает, что текущий `proxies` устанавливает сетевые соединения через `dialer-proxy`. Значение может быть `name` из [группы политик](../proxy-groups/index.md) или [исходящих прокси](../proxies/index.md)
