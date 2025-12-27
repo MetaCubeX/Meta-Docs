@@ -14,6 +14,9 @@ proxy-groups:
   type: select
   proxies:
   - ss2
+
+rules:
+  - MATCH,ss1
 ```
 
 指定当前 `proxies` 通过 `dialer-proxy` 建立网络连接，值可以为[策略组](../proxy-groups/index.md)/[出站代理](../proxies/index.md)的 `name`
