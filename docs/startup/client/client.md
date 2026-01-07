@@ -62,6 +62,7 @@
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
+|[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 
 ## Android
 
