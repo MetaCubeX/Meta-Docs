@@ -274,6 +274,9 @@ tls:
   # ECH 密钥，如果填写则会启用 ECH
 ```
 
+!!! note
+    自v1.19.18版本开始，当`certificate`, `private-key` 或 `ech-key`为本地文件时支持自动重载。
+
 ## 全局客户端指纹
 
 全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint。
