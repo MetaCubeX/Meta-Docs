@@ -262,6 +262,9 @@ tls:
   # ECH keys, if not empty, ECH will be enabled.
 ```
 
+!!! note
+    Starting from version v1.19.18, automatic reloading is supported when `certificate`, `private-key`, or `ech-key` are local files.
+
 ## Global Client Fingerprint
 
 Global TLS fingerprint, lower priority than client-fingerprint inside proxy.
