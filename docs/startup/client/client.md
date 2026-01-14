@@ -4,7 +4,7 @@
 
 |项目名称 | 维护状态 |
 |:----|:----|
-|[sparkle](https://github.com/INKCR0W/sparkle)|维护中 |
+|[sparkle](https://github.com/xishang0128/mihomo-party)|维护中 |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|停止维护 |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|维护中 |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|维护中 |
