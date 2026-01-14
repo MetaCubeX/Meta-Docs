@@ -267,6 +267,9 @@ tls:
 
 ## Global Client Fingerprint
 
+!!! warning
+    Global TLS fingerprinting has been deprecated. Please set the client-fingerprint directly within the proxy.
+
 Global TLS fingerprint, lower priority than client-fingerprint inside proxy.
 
 Currently supports TCP/grpc/WS/HTTP transport with TLS, supported protocols are `VLESS`, `Vmess`, and `trojan`.
