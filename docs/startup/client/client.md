@@ -115,6 +115,7 @@
 |[mihomo-magisk](https://github.com/AlliotTech/mihomo-magisk)|维护中 |
 |[Clash MIX](https://github.com/AXEVO/Clash-MIX)|维护中 |
 |[akashaProxy](https://github.com/akashaProxy/akashaProxy)|维护中 |
+|[Maodie Launcher](https://github.com/SherlockChiang/Maodie-Launcher)|维护中 |
 
 ## HarmonyOS NEXT(OpenHarmony)
 
