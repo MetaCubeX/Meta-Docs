@@ -30,17 +30,17 @@ rules:
 
 - PROCESS-PATH,/usr/bin/wget,PROXY
 - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
+- PROCESS-PATH-WILDCARD,/usr/*/wget,PROXY
 - PROCESS-PATH-REGEX,.*bin/wget,PROXY
 - PROCESS-PATH-REGEX,(?i).*Application\\chrome.*,PROXY
-- PROCESS-PATH-WILDCARD,/usr/*/wget,PROXY
 
 - PROCESS-NAME,curl,PROXY
 - PROCESS-NAME,chrome.exe,PROXY
 - PROCESS-NAME,com.termux,PROXY
+- PROCESS-NAME-WILDCARD,*telegram*,PROXY
 - PROCESS-NAME-REGEX,curl$,PROXY
 - PROCESS-NAME-REGEX,(?i)Telegram,PROXY
 - PROCESS-NAME-REGEX,.*telegram.*,PROXY
-- PROCESS-NAME-WILDCARD,*telegram*,PROXY
 - UID,1001,DIRECT
 
 - NETWORK,udp,DIRECT
@@ -151,10 +151,6 @@ rules:
 
 使用完整进程路径匹配
 
-### PROCESS-PATH-REGEX
-
-使用进程路径正则表达式匹配
-
 ### PROCESS-PATH-WILDCARD
 
 使用进程路径通配符匹配，仅支持`*`和`?`通配符
@@ -162,13 +158,13 @@ rules:
 !!! note
     注意这里的通配符和配置文件其他地方的[Clash格式通配符](../../handbook/syntax.md#_8)不相同
 
+### PROCESS-PATH-REGEX
+
+使用进程路径正则表达式匹配
+
 ### PROCESS-NAME
 
 使用进程匹配，在`Android`平台可以匹配包名
-
-### PROCESS-NAME-REGEX
-
-使用进程名称正则表达式匹配，在`Android`平台可以匹配包名
 
 ### PROCESS-NAME-WILDCARD
 
@@ -176,6 +172,10 @@ rules:
 
 !!! note
     注意这里的通配符和配置文件其他地方的[Clash格式通配符](../../handbook/syntax.md#_8)不相同
+
+### PROCESS-NAME-REGEX
+
+使用进程名称正则表达式匹配，在`Android`平台可以匹配包名
 
 ### UID
 
