@@ -59,10 +59,6 @@ If filled, this enables [mTLS](https://www.cloudflare.com/learning/access-manage
 
 Client uTLS fingerprint, applicable only to [`VMess`](./vmess.md)/[`VLESS`](./vless.md)/[`Trojan`](./trojan.md) protocols.
 
-```{.yaml linenums="1"}
-global-client-fingerprint: chrome
-```
-
 !!! note
     Options: `chrome`, `firefox`, `safari`, `iOS`, `android`, `edge`, `360`, `qq`, `random`
     If `random` is selected, a modern browser fingerprint will be generated based on Cloudflare Radar data.
