@@ -60,7 +60,10 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 ## client-fingerprint
 
-Отпечаток клиента utls, применяется только к протоколам [`VMess`](./vmess.md)/[`VLESS`](./vless.md)/[`Trojan`](./trojan.md), возможные значения см. [глобальный отпечаток клиента](../general.md#_14)
+Отпечаток клиента utls, применяется только к протоколам [`VMess`](./vmess.md)/[`VLESS`](./vless.md)/[`Trojan`](./trojan.md).
+
+!!! note
+    Возможные значения: `chrome`, `firefox`, `safari`, `iOS`, `android`, `edge`, `360`, `qq`, `random`. При выборе `random` генерируется отпечаток современного браузера на основе данных вероятности Cloudflare Radar.
 
 ## reality-opts
 
