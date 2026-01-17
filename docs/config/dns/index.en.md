@@ -230,3 +230,7 @@ Discard A responses
 ### disable-ipv6
 
 Discard AAAA response
+
+### disable-qtype-\<int\>
+
+Discarding specific types of responses, for example, `disable-qtype-65` can block DNS resolution for HTTPS (TYPE65) types.
