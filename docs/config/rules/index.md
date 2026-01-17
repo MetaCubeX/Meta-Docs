@@ -78,6 +78,9 @@ rules:
 
 通配符匹配，仅支持`*`和`?`通配符
 
+!!! note
+    注意这里的通配符和配置文件其他地方的[Clash格式通配符](../../handbook/syntax.md#_8)不相同
+
 ### DOMAIN-REGEX
 
 域名正则表达式匹配
@@ -150,6 +153,10 @@ rules:
 
 使用进程路径正则表达式匹配
 
+### PROCESS-PATH-WILDCARD
+
+使用进程路径通配符匹配，仅支持`*`和`?`通配符
+
 ### PROCESS-NAME
 
 使用进程匹配，在`Android`平台可以匹配包名
@@ -157,6 +164,10 @@ rules:
 ### PROCESS-NAME-REGEX
 
 使用进程名称正则表达式匹配，在`Android`平台可以匹配包名
+
+### PROCESS-NAME-WILDCARD
+
+使用进程名称通配符匹配，仅支持`*`和`?`通配符，在`Android`平台可以匹配包名
 
 ### UID
 
