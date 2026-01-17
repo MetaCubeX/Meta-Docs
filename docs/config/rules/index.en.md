@@ -30,12 +30,14 @@ rules:
 
 - PROCESS-PATH,/usr/bin/wget,PROXY
 - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
+- PROCESS-PATH-WILDCARD,/usr/*/wget,PROXY
 - PROCESS-PATH-REGEX,.*bin/wget,PROXY
 - PROCESS-PATH-REGEX,(?i).*Application\\chrome.*,PROXY
 
 - PROCESS-NAME,curl,PROXY
 - PROCESS-NAME,chrome.exe,PROXY
 - PROCESS-NAME,com.termux,PROXY
+- PROCESS-NAME-WILDCARD,*telegram*,PROXY
 - PROCESS-NAME-REGEX,curl$,PROXY
 - PROCESS-NAME-REGEX,(?i)Telegram,PROXY
 - PROCESS-NAME-REGEX,.*telegram.*,PROXY
@@ -74,10 +76,12 @@ For example, `google.com` matches `www.google.com`, `mail.google.com`, and `goog
 
 Matches using domain keywords.
 
-
 ### DOMAIN-WILDCARD
 
 Wildcard matching, only supports `*` and `?` wildcards.
+
+!!! note
+    Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#_8) elsewhere in the configuration file.
 
 ### DOMAIN-REGEX
 
@@ -147,6 +151,13 @@ Matches the [inbound name](../inbound/listeners/index.md#name).
 
 Matches using the full process path.
 
+### PROCESS-PATH-WILDCARD
+
+Process path wildcard matching is used, supporting only `*` and `?` wildcards.
+
+!!! note
+    Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#_8) elsewhere in the configuration file.
+
 ### PROCESS-PATH-REGEX
 
 Matches using regular expressions for the process path.
@@ -154,6 +165,13 @@ Matches using regular expressions for the process path.
 ### PROCESS-NAME
 
 Matches using the process name; on the `Android` platform, it can match package names.
+
+### PROCESS-NAME-WILDCARD
+
+Uses process name wildcard matching, supporting only `*` and `?` wildcards. On the Android platform, it can also match package names.
+
+!!! note
+    Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#_8) elsewhere in the configuration file.
 
 ### PROCESS-NAME-REGEX
 
