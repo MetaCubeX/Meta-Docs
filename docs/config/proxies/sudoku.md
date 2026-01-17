@@ -14,7 +14,11 @@ proxies:
     # custom-table: xpxvvpvv
     # custom-tables: ["xpxvvpvv", "vxpvxvvp"]
     http-mask: true
-    # http-mask-strategy: random
+    # http-mask-mode: legacy
+    # http-mask-tls: true
+    # http-mask-host: ""
+    # path-root: ""
+    # http-mask-multiplex: off
     enable-pure-downlink: false
 ```
 
@@ -52,9 +56,25 @@ proxies:
 
 是否启用http掩码
 
-## http-mask-strategy
+## http-mask-mode
 
-可选：random（默认）、post、websocket；仅在 http-mask=true 时生效
+可选：legacy（默认）、stream、poll、auto；stream/poll/auto 支持走 CDN/反代
+
+## http-mask-tls
+
+可选：仅在 http-mask-mode 为 stream/poll/auto 时生效；true 强制 https；false 强制 http（不会根据端口自动推断）
+
+## http-mask-host
+
+可选：覆盖 Host/SNI（支持 example.com 或 example.com:443）；仅在 http-mask-mode 为 stream/poll/auto 时生效
+
+## path-root
+
+可选：HTTP 隧道端点一级路径前缀（双方需一致），例如 "aabbcc" => /aabbcc/session、/aabbcc/stream、/aabbcc/api/v1/upload
+
+## http-mask-multiplex
+
+可选：off（默认）、auto（复用 h1.1 keep-alive / h2 连接，减少每次建链 RTT）、on（单条隧道内多路复用多个目标连接；仅在 http-mask-mode=stream/poll/auto 生效）
 
 ## enable-pure-downlink
 
