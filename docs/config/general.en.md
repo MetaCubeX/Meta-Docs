@@ -268,19 +268,7 @@ tls:
 ## Global Client Fingerprint
 
 !!! warning
-    Global TLS fingerprinting has been deprecated. Please set the client-fingerprint directly within the proxy.
-
-Global TLS fingerprint, lower priority than client-fingerprint inside proxy.
-
-Currently supports TCP/grpc/WS/HTTP transport with TLS, supported protocols are `VLESS`, `Vmess`, and `trojan`.
-
-```{.yaml linenums="1"}
-global-client-fingerprint: chrome
-```
-
-!!! note
-    Options: `chrome`, `firefox`, `safari`, `iOS`, `android`, `edge`, `360`, `qq`, `random`
-    If `random` is selected, a modern browser fingerprint will be generated based on Cloudflare Radar data.
+    Global TLS fingerprinting has been deprecated. Please set the [client-fingerprint](./proxies/tls.md#client-fingerprint) directly within the proxy.
 
 ## GEO Data Mode
 
