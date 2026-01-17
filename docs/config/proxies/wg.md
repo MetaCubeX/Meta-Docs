@@ -105,6 +105,10 @@ base64 编码的 Wireguard 服务端公钥
 
 可选字段，Wireguard 协议保留字段的值，部分 WARP 节点需要使用
 
+### persistent-keepalive
+
+可选字段，定期发送数据包来维持连接的持久性
+
 ### mtu
 
 可选字段，设置 MTU 值
