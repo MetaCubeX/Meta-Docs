@@ -93,7 +93,22 @@ dns:
 
 ## fake-ip-filter-mode
 
-Возможные режимы: `blacklist`/`whitelist`, по умолчанию `blacklist`. При выборе `whitelist` возвращается fake-ip только для доменов, соответствующих фильтру.
+Возможные режимы: `blacklist`/`whitelist`/`rule`, по умолчанию `blacklist`. При выборе `whitelist` возвращается fake-ip только для доменов, соответствующих фильтру.
+
+Когда параметр `fake-ip-filter-mode` установлен в значение `rule`, включается режим на основе правил, и синтаксис `fake-ip-filter` изменяется:
+
+```{.yaml linenums="1"}
+dns:
+  fake-ip-filter-mode: rule
+  fake-ip-filter: # Логика сопоставления фиктивных IP-адресов соответствует правилам маршрутизации (сверху вниз), а синтаксис также согласован и поддерживает GEOSITE, RuleSet, DOMAIN* и MATCH.
+    - RULE-SET,reject-domain,fake-ip # Для пользовательского поведения набора правил необходимо установить параметр domain/classical; если установить параметр classical, будут действовать только правила уровня домена.
+    - RULE-SET,proxy-domain,fake-ip
+    - GEOSITE,gfw,fake-ip
+    - DOMAIN,www.baidu.com,real-ip
+    - DOMAIN-SUFFIX,qq.com,real-ip
+    - DOMAIN-SUFFIX,jd.com,fake-ip
+    - MATCH,fake-ip # fake-ip or real-ip
+```
 
 ## fake-ip-ttl
 
