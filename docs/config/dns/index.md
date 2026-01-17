@@ -93,7 +93,22 @@ fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
 ## fake-ip-filter-mode
 
-可选 `blacklist`/`whitelist`，默认`blacklist`，`whitelist` 即只有匹配成功才返回 fake-ip
+可选 `blacklist`/`whitelist`/`rule`，默认`blacklist`，`whitelist` 即只有匹配成功才返回 fake-ip
+
+当`fake-ip-filter-mode`设置为`rule`时，开启规则模式，此时`fake-ip-filter`的写法发生改变:
+
+```{.yaml linenums="1"}
+dns:
+  fake-ip-filter-mode: rule
+  fake-ip-filter: # fake-ip 与路由 rules 匹配逻辑一致(自上而下)，语法也一致，支持GEOSITE、RuleSet、DOMAIN*、MATCH
+    - RULE-SET,reject-domain,fake-ip # 自定义 RuleSet behavior 必须为 domain/classical，当为 classical 时仅会生效域名类规则
+    - RULE-SET,proxy-domain,fake-ip
+    - GEOSITE,gfw,fake-ip
+    - DOMAIN,www.baidu.com,real-ip
+    - DOMAIN-SUFFIX,qq.com,real-ip
+    - DOMAIN-SUFFIX,jd.com,fake-ip
+    - MATCH,fake-ip # 最后 fake-ip or real-ip
+```
 
 ## fake-ip-ttl
 
