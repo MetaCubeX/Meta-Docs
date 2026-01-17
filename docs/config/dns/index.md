@@ -236,4 +236,4 @@ proxies:
 
 ### disable-qtype-\<int\>
 
-丢弃特定类型的回应， 例如`disable-qtype-65`可以屏蔽HTTPS（TYPE65）
+丢弃特定类型的回应， 例如`disable-qtype-65`可以屏蔽HTTPS（TYPE65）类型的dns解析
