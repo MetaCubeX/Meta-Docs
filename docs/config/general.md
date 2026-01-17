@@ -280,18 +280,7 @@ tls:
 ## 全局客户端指纹
 
 !!! warning
-    全局 TLS 指纹已经被弃用，请直接在 proxy 内设置 client-fingerprint
-
-全局 TLS 指纹，优先低于 proxy 内的 client-fingerprint。
-
-目前支持开启 TLS 传输的 TCP/grpc/WS/HTTP , 支持协议有 VLESS,Vmess 和 trojan.
-
-```{.yaml linenums="1"}
-global-client-fingerprint: chrome
-```
-
-!!! note
-    可选：`chrome`, `firefox`, `safari`, `ios`, `android`, `edge`, `360`, `qq`, `random`, 若选择 `random`, 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
+    全局 TLS 指纹已经被弃用，请直接在 proxy 内设置 [client-fingerprint](./proxies/tls.md#client-fingerprint)
 
 ## GEOIP 数据模式
 
