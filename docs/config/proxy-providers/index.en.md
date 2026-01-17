@@ -11,7 +11,6 @@ proxy-providers:
     size-limit: 0
     header:
       User-Agent:
-      - "Clash/v1.18.0"
       - "mihomo/1.18.3"
       Authorization:
       - 'token 1231231'
