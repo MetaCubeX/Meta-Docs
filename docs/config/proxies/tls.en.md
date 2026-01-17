@@ -57,7 +57,7 @@ If filled, this enables [mTLS](https://www.cloudflare.com/learning/access-manage
 
 ## client-fingerprint
 
-Client uTLS fingerprint, applicable only to [`VMess`](./vmess.md)/[`VLESS`](./vless.md)/[`Trojan`](./trojan.md) protocols.
+Client uTLS fingerprint, applicable only to [`VMess`](./vmess.md)/[`VLESS`](./vless.md)/[`Trojan`](./trojan.md)/[`AnyTLS`](./anytls.md) protocols.
 
 !!! note
     Options: `chrome`, `firefox`, `safari`, `iOS`, `android`, `edge`, `360`, `qq`, `random`
