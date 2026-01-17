@@ -11,6 +11,11 @@ rule-providers:
     behavior: classical
     format: yaml
     size-limit: 0
+    header:
+      User-Agent:
+      - "mihomo/1.18.3"
+      Authorization:
+      - 'token 1231231'
     payload:
       - 'DOMAIN-SUFFIX,google.com'
 ```
@@ -54,6 +59,10 @@ rule-providers:
 ## size-limit
 
 Ограничение максимального размера загружаемых файлов, по умолчанию 0, что означает отсутствие ограничения размера; единица измерения - байты (`b`)
+
+## header
+
+Пользовательские HTTP-заголовки запроса.
 
 ## payload
 
