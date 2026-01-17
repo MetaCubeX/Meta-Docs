@@ -13,7 +13,7 @@ proxies:
   skip-cert-verify: true
   # certificate: xxxx
   # private-key: xxx
-  client-fingerprint: random
+  client-fingerprint: chrome
   reality-opts:
     public-key: xxxx
     short-id: xxxx
