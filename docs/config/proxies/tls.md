@@ -61,7 +61,14 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 ## client-fingerprint
 
-客户端 utls 指纹，仅适用于 [`VMess`](./vmess.md)/[`VLESS`](./vless.md)/[`Trojan`](./trojan.md) 协议，可选项参阅[全局客户端指纹](../general.md#_14)
+客户端 utls 指纹，仅适用于 [`VMess`](./vmess.md)/[`VLESS`](./vless.md)/[`Trojan`](./trojan.md) 协议
+
+```{.yaml linenums="1"}
+global-client-fingerprint: chrome
+```
+
+!!! note
+    可选：`chrome`, `firefox`, `safari`, `ios`, `android`, `edge`, `360`, `qq`, `random`, 若选择 `random`, 则按 Cloudflare Radar 数据按概率生成一个现代浏览器指纹。
 
 ## reality-opts
 
