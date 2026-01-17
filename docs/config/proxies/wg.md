@@ -17,6 +17,7 @@ proxies:
   allowed-ips: ['0.0.0.0/0']
   # pre-shared-key: 31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=
   # reserved: [209,98,59]  # 字符串格式也是合法的，如"U4An"
+  # persistent-keepalive: 0
   udp: true
   # mtu: 1408
   # dialer-proxy: "ss1"  # 一个出站代理的标识。当值不为空时，将使用指定的 proxy/proxy-group 发出连接
