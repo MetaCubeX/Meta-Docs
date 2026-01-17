@@ -32,6 +32,7 @@ rules:
 - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
 - PROCESS-PATH-REGEX,.*bin/wget,PROXY
 - PROCESS-PATH-REGEX,(?i).*Application\\chrome.*,PROXY
+- PROCESS-PATH-WILDCARD,/usr/*/wget,PROXY
 
 - PROCESS-NAME,curl,PROXY
 - PROCESS-NAME,chrome.exe,PROXY
@@ -39,6 +40,7 @@ rules:
 - PROCESS-NAME-REGEX,curl$,PROXY
 - PROCESS-NAME-REGEX,(?i)Telegram,PROXY
 - PROCESS-NAME-REGEX,.*telegram.*,PROXY
+- PROCESS-NAME-WILDCARD,*telegram*,PROXY
 - UID,1001,DIRECT
 
 - NETWORK,udp,DIRECT
