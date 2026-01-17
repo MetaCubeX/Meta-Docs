@@ -90,7 +90,23 @@ Values support [domain wildcards](../../handbook/syntax.md#domain-wildcards) and
 
 ## fake-ip-filter-mode
 
-Optional values are `blacklist`/`whitelist`, default is `blacklist`. In `whitelist`, only successful matches will return fake-ip.
+Optional values are `blacklist`/`whitelist`/`rule`, default is `blacklist`. In `whitelist`, only successful matches will return fake-ip.
+
+When `fake-ip-filter-mode` is set to `rule`, rule mode is enabled. The syntax of `fake-ip-filter` changes as follows:
+
+```{.yaml linenums="1"}
+dns:
+  fake-ip-filter-mode: rule
+  fake-ip-filter: # The fake-ip matching logic is consistent with the routing rules (top-down), and the syntax is also consistent, supporting GEOSITE, RuleSet, DOMAIN*, and MATCH.
+    - RULE-SET,reject-domain,fake-ip # Custom RuleSet behavior must be set to domain/classical; when set to classical, only domain-level rules will take effect.
+    - RULE-SET,proxy-domain,fake-ip
+    - GEOSITE,gfw,fake-ip
+    - DOMAIN,www.baidu.com,real-ip
+    - DOMAIN-SUFFIX,qq.com,real-ip
+    - DOMAIN-SUFFIX,jd.com,fake-ip
+    - MATCH,fake-ip # fake-ip or real-ip
+```
+
 
 ## fake-ip-ttl
 
