@@ -281,16 +281,7 @@ tls:
 !!! warning
     Глобальная TLS-синхронизация устарела. Пожалуйста, устанавливайте клиентский отпечаток непосредственно в прокси-сервере.
 
-Глобальный отпечаток TLS, приоритет ниже, чем client-fingerprint внутри proxy.
-
-В настоящее время поддерживается для TCP/grpc/WS/HTTP с включенным TLS, поддерживаемые протоколы: VLESS, Vmess и trojan.
-
-```{.yaml linenums="1"}
-global-client-fingerprint: chrome
-```
-
-!!! note
-    Возможные значения: `chrome`, `firefox`, `safari`, `iOS`, `android`, `edge`, `360`, `qq`, `random`. При выборе `random` генерируется отпечаток современного браузера на основе данных вероятности Cloudflare Radar.
+Глобальный отпечаток TLS, приоритет ниже, чем [client-fingerprint](./proxies/tls.md#client-fingerprint) внутри proxy.
 
 ## Режим данных GEOIP
 
