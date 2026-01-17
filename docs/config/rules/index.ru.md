@@ -30,12 +30,14 @@ rules:
 
 - PROCESS-PATH,/usr/bin/wget,PROXY
 - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
+- PROCESS-PATH-WILDCARD,/usr/*/wget,PROXY
 - PROCESS-PATH-REGEX,.*bin/wget,PROXY
 - PROCESS-PATH-REGEX,(?i).*Application\\chrome.*,PROXY
 
 - PROCESS-NAME,curl,PROXY
 - PROCESS-NAME,chrome.exe,PROXY
 - PROCESS-NAME,com.termux,PROXY
+- PROCESS-NAME-WILDCARD,*telegram*,PROXY
 - PROCESS-NAME-REGEX,curl$,PROXY
 - PROCESS-NAME-REGEX,(?i)Telegram,PROXY
 - PROCESS-NAME-REGEX,.*telegram.*,PROXY
@@ -77,6 +79,9 @@ rules:
 ### DOMAIN-WILDCARD
 
 Сопоставление с подстановочными знаками, поддерживает только подстановочные знаки `*` и `?`.
+
+!!! note
+    Обратите внимание, что используемые здесь подстановочные знаки отличаются от [подстановочных знаков формата Clash](../../handbook/syntax.md#_8) в других местах конфигурационного файла.
 
 ### DOMAIN-REGEX
 
@@ -146,6 +151,13 @@ rules:
 
 Сопоставляет по полному пути процесса.
 
+### DOMAIN-WILDCARD
+
+Используется сопоставление путей обработки с помощью символов подстановки, поддерживаются только символы подстановки `*` и `?`.
+
+!!! note
+    Обратите внимание, что используемые здесь подстановочные знаки отличаются от [подстановочных знаков формата Clash](../../handbook/syntax.md#_8) в других местах конфигурационного файла.
+
 ### PROCESS-PATH-REGEX
 
 Сопоставляет с использованием регулярных выражений для пути процесса.
@@ -153,6 +165,13 @@ rules:
 ### PROCESS-NAME
 
 Сопоставляет по имени процесса; на платформе `Android` может сопоставлять имена пакетов.
+
+### DOMAIN-WILDCARD
+
+Использует сопоставление по подстановочным знакам в именах процессов, поддерживая только подстановочные знаки `*` и `?`. На платформе Android также может сопоставлять имена пакетов.
+
+!!! note
+    Обратите внимание, что используемые здесь подстановочные знаки отличаются от [подстановочных знаков формата Clash](../../handbook/syntax.md#_8) в других местах конфигурационного файла.
 
 ### PROCESS-NAME-REGEX
 
