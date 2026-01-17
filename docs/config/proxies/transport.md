@@ -36,6 +36,7 @@
       network: grpc
       grpc-opts:
         grpc-service-name: example
+        # grpc-user-agent: "grpc-go/1.36.0"
     ```
 === "ws"
     ```{.yaml linenums="1"}
@@ -91,6 +92,10 @@ http 请求路径
 ### grpc-opts.grpc-service-name
 
 gRPC 服务名称
+
+### grpc-opts.grpc-user-agent
+
+gRPC UserAgent
 
 ## ws-opts
 
