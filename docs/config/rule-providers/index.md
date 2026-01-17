@@ -11,6 +11,11 @@ rule-providers:
     behavior: classical
     format: yaml
     size-limit: 0
+    header:
+      User-Agent:
+      - "mihomo/1.18.3"
+      Authorization:
+      - 'token 1231231'
     payload:
       - 'DOMAIN-SUFFIX,google.com'
 ```
@@ -54,6 +59,10 @@ rule-providers:
 ## size-limit
 
 限制下载文件的最大大小，默认为 0 即不限制文件大小，单位为字节 (`b`)
+
+## header
+
+自定义 http 请求头
 
 ## payload
 
