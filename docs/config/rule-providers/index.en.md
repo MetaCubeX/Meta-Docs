@@ -11,6 +11,11 @@ rule-providers:
     behavior: classical
     format: yaml
     size-limit: 0
+    header:
+      User-Agent:
+      - "mihomo/1.18.3"
+      Authorization:
+      - 'token 1231231'
 ```
 
 ## name
@@ -52,6 +57,10 @@ Currently, `mrs` behavior only supports `domain` / `ipcidr`. You can convert usi
 ## size-limit
 
 The maximum size of downloadable files is restricted, with the default being 0, which means no size limit; the unit is bytes (`b`)
+
+## Header
+
+Custom HTTP request headers.
 
 ## payload
 
