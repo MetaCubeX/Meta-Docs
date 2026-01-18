@@ -80,6 +80,8 @@ Matches using domain keywords.
 
 Wildcard matching, only supports `*` and `?` wildcards.
 
+Here `*` matches zero or more characters, `?` matches exactly one character.
+
 !!! note
     Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#_8) elsewhere in the configuration file.
 
@@ -155,6 +157,8 @@ Matches using the full process path.
 
 Process path wildcard matching is used, supporting only `*` and `?` wildcards.
 
+Here `*` matches zero or more characters, `?` matches exactly one character.
+
 !!! note
     Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#_8) elsewhere in the configuration file.
 
@@ -169,6 +173,8 @@ Matches using the process name; on the `Android` platform, it can match package 
 ### PROCESS-NAME-WILDCARD
 
 Uses process name wildcard matching, supporting only `*` and `?` wildcards. On the Android platform, it can also match package names.
+
+Here `*` matches zero or more characters, `?` matches exactly one character.
 
 !!! note
     Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#_8) elsewhere in the configuration file.
