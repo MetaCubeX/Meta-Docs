@@ -20,6 +20,9 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|поддерживается |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|поддерживается |
+|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|поддерживается |
+|[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|поддерживается |
+|[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 
 ## MacOS
 
@@ -36,6 +39,9 @@
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|поддерживается |
+|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|поддерживается |
+|[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
+|[ClashMac](https://github.com/666OS/ClashMac)|поддерживается |
 
 ## Linux
 
@@ -53,6 +59,8 @@
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|поддерживается |
 |[mihoro](https://github.com/spencerwooo/mihoro)|поддерживается |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|поддерживается |
+|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|поддерживается |
+|[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 
 ## Android
 
@@ -61,6 +69,9 @@
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается |
 |[FlyClash](https://github.com/GtxFury/FlyClash-Android)|поддерживается |
+|[YumeBox](https://github.com/YumeLira/YumeBox)|поддерживается |
+|[LiClash](https://t.me/appshub_channel)|поддерживается |
+|[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 
 ## iOS
 
@@ -82,7 +93,7 @@
 |:----|:----|
 |[OpenClash](https://github.com/vernesong/OpenClash)|поддерживается |
 |[OpenWrt-nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)|поддерживается |
-|[openwrt-fchomo](https://github.com/fcshark-org/openwrt-fchomo)|поддерживается|
+|[FullCombo Shark](https://github.com/fcshark-org/openwrt-fchomo)|поддерживается|
 |[openwrt-nekobox](https://github.com/Thaolga/openwrt-nekobox)|поддерживается|
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
 |[SSClash](https://github.com/zerolabnet/SSClash)|поддерживается |
@@ -101,9 +112,20 @@
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|поддержка прекращена |
 |[Clash.Mihomo](https://github.com/Chuhe2399/Clash.Mihomo)|поддерживается |
 |[Box for Android](https://github.com/boxproxy/box/)|поддерживается |
+|[mihomo-magisk](https://github.com/AlliotTech/mihomo-magisk)|поддерживается |
+|[Clash MIX](https://github.com/AXEVO/Clash-MIX)|поддерживается |
+|[akashaProxy](https://github.com/akashaProxy/akashaProxy)|поддерживается |
+|[Maodie Launcher](https://github.com/SherlockChiang/Maodie-Launcher)|поддерживается |
 
 ## HarmonyOS NEXT (OpenHarmony)
 
 |Название проекта | Статус поддержки |
 |:----|:----|
 |[ClashBox](https://github.com/xiaobaigroup/ClashBox)|поддерживается |
+
+## Steam OS
+
+|Название проекта | Статус поддержки |
+|:----|:----|
+|[DeckyClash](https://github.com/chenx-dust/DeckyClash)|поддерживается |
+|[ToMoon](https://github.com/YukiCoco/ToMoon)|поддерживается |
