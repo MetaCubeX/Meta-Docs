@@ -61,7 +61,7 @@ rules:
 !!! note
     没有特殊需求的情况下，在自己被中转的VPS落地中搭建的节点请勿选择任何udp类协议如hy2/tuic/wg，以及带有tls伪装类协议如reality/shadowtls，您的订阅节点可能不能正常通过这些协议，这里建议选择最简单的ss aead或者vmess协议
 
-### 通过socks连接订阅节点
+### 通过特定socks连接订阅节点
 
 ```{.yaml linenums="1"}
 proxies:
@@ -84,9 +84,10 @@ rules:
   - MATCH,select1
 ```
 
-该实例适用于需要通过一个socks才能访问外网的情况（如内外网隔离环境），将环境提供的socks配置填入socks1，将订阅地址填入provider1中，此时通过浏览器访问时显示的是订阅中节点的IP
+该实例适用于需要通过一个特定socks才能访问外网的情况（如内外网隔离环境），将环境提供的socks配置填入socks1，将订阅地址填入provider1中，此时通过浏览器访问时显示的是订阅中节点的IP
 
-注：这里只是示范了dialer-proxy的相关配置，您可能还需要更多的配置才能保证订阅下载，dns解析等流程同样通过该socks进行
+!!! note
+    这里只是示范了dialer-proxy的相关配置，您可能还需要更多的配置才能保证订阅下载，dns解析等流程同样通过该socks
 
 ## relay迁移
 
