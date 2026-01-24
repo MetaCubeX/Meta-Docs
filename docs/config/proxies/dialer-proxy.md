@@ -31,6 +31,33 @@ rules:
   * 内核对外看起来只是在访问ss2（即你的宽带运营商不知道ss1的存在）
   * 只有ss2的服务端知道在访问ss1（ss2的服务端也只知道在访问ss1，并不知道在访问什么目标网站）
 
+## 常见实例
+
+### 通过订阅节点中转自己的VPS落地
+
+```{.yaml linenums="1"}
+proxies:
+- name: "ss1"
+  dialer-proxy: dialer
+  ...
+
+proxy-providers:
+  provider1:
+    type: http
+    url: "http://test.com"
+
+proxy-groups:
+- name: dialer
+  type: select
+  use:
+  - provider1
+
+rules:
+  - MATCH,ss1
+```
+
+这里将订阅地址填入provider1中，你自己VPS中搭建的节点填入ss1中即可，此时通过浏览器访问时显示的是ss1的IP。
+
 ## relay迁移
 
 relay类型的proxy-group将被废弃，而proxy-group并不直接支持dialer-proxy，因此针对部分使用场景，给出参考方案
