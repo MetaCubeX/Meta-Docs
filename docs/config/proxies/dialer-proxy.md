@@ -59,7 +59,7 @@ rules:
 这里将订阅地址填入provider1中，将你自己VPS中搭建的节点填入ss1中即可，此时通过浏览器访问时显示的是ss1的IP
 
 !!! note
-    没有特殊需求的情况下，中转自己VPS落地中搭建的节点请勿使用任何udp类协议如hy2/tuic/wg，以及带有tls伪装类协议如reality/shadowtls，您的订阅节点可能不能正常通过这些协议
+    没有特殊需求的情况下，在自己被中转的VPS落地中搭建的节点请勿选择任何udp类协议如hy2/tuic/wg，以及带有tls伪装类协议如reality/shadowtls，您的订阅节点可能不能正常通过这些协议，这里建议选择最简单的ss aead或者vmess协议
 
 ## relay迁移
 
