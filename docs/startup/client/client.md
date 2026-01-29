@@ -23,6 +23,7 @@
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
+|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
 
 ## MacOS
 
@@ -61,6 +62,7 @@
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
+|[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 
 ## Android
 
@@ -72,6 +74,7 @@
 |[YumeBox](https://github.com/YumeLira/YumeBox)|维护中 |
 |[LiClash](https://t.me/appshub_channel)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
+|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
 
 ## iOS
 
