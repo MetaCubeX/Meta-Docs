@@ -90,5 +90,5 @@ reality 服务端私钥对应的公钥
 
 ### ech-opts.config
 
-ECH 配置，base64 编码的配置内容
+ECH 配置，如果为空则通过dns解析，不为空则通过该值指定，格式为经过base64编码的ech参数（dig +short TYPE65 tls-ech.dev）
 
