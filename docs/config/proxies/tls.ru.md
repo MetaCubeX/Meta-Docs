@@ -87,8 +87,8 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 ### ech-opts.enable
 
-Включает ECH (Encrypted Client Hello). Если не пусто, то ECH будет включен.
+Включает ECH (Encrypted Client Hello). Установка значения true включает ECH.
 
 ### ech-opts.config
 
-Конфигурация ECH в base64 формате, которая будет использоваться для установления защищенного соединения.
+Конфигурация ECH: Если поле пустое, используется разрешение DNS; в противном случае значение указывается в виде параметра ech, закодированного в base64 (dig +short TYPE65 tls-ech.dev).
