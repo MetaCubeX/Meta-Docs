@@ -23,6 +23,9 @@ proxies:
 
 [TLS 字段](./tls.md)
 
+!!! tip
+    Mihomo不支持AnyTLS+Reality的组合（未来也不会支持），如果您想隐藏SNI请配合[ECH](./tls.md#ech-opts)使用，如果您非要使用Reality请选择[Vmess](./vmess.md)、[VLESS](./vless.md)、[Trojan](./trojan.md)协议。
+
 ## idle-session-check-interval
 
 检查空闲会话的时间间隔。默认值：30 秒。
