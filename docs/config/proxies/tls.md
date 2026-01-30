@@ -86,7 +86,7 @@ reality 服务端私钥对应的公钥
 
 ### ech-opts.enable
 
-启用 ECH（Encrypted Client Hello），如果不为空，则启用 ECH
+启用 ECH（Encrypted Client Hello），如果为true，则启用 ECH
 
 ### ech-opts.config
 
