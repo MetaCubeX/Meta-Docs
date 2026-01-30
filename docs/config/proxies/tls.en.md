@@ -83,9 +83,9 @@ Support for X25519-MLKEM768 key exchange.
 
 ### ech-opts.enable
 
-Enables ECH (Encrypted Client Hello). If not empty, ECH will be enabled.
+Enables ECH (Encrypted Client Hello). Setting it to true enables ECH.
 
 ### ech-opts.config
 
-Base64-encoded configuration for ECH.
+The ECH configuration, if empty, will be resolved via DNS; otherwise, it will be specified by this value, in the format of base64 encoded ech parameters (dig +short TYPE65 tls-ech.dev).
 
