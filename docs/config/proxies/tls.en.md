@@ -87,7 +87,7 @@ Enables ECH (Encrypted Client Hello). Setting it to true enables ECH.
 
 ### ech-opts.config
 
-The ECH configuration, if empty, will be resolved via DNS; otherwise, it will be specified by this value, in the format of base64 encoded ech parameters (dig +short TYPE65 tls-ech.dev).
+The ECH configuration, if empty, will be resolved via DNS; otherwise, it will be specified by this value, in the format of base64 encoded ech parameters (For example, `AEn+DQBFKwAgACABWIHUGj4u+PIggYXcR5JF0gYk3dCRioBW8uJq9H4mKAAIAAEAAQABAANAEnB1YmxpYy50bHMtZWNoLmRldgAA`).
 
 !!! info
     You can use the command `mihomo generate ech-keypair test.com` to generate a compliant self-signed ECH configuration pair for both the server and client. Please replace `test.com` with the SNI domain name you want to expose. The content after `Config:` in the output can be filled here, and the content after `Key:` should be filled in the server-side ECH configuration (`ech-key` in mihomo's listeners).
