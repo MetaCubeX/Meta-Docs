@@ -91,7 +91,7 @@ rules:
 
 ## relay迁移
 
-relay类型的proxy-group将被废弃，而proxy-group并不直接支持dialer-proxy，因此针对部分使用场景，给出参考方案
+relay类型的proxy-group已经被废弃，而proxy-group并不直接支持dialer-proxy，因此针对部分使用场景，给出参考方案
 
 ### relay中包含多个select
 
