@@ -33,7 +33,17 @@ The server name indication, referred to as `servername` in [`VMess`](./vmess.md)
 
 ## fingerprint
 
-Certificate fingerprint, applicable only to protocols that use `tls`.
+Certificate fingerprint, applicable only to protocols that use `tls`. You can obtain the fingerprint using the following command:
+```bash
+openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
+```
+Alternatively, you can obtain it through the "Certificates" section of the "SHA256 Fingerprint" in Chrome's "Certificate Viewer".
+
+!!! warning
+
+    * Currently, only leaf certificates (i.e., certificates containing the SNI name) are guaranteed to have their fingerprints available in this field. Entering fingerprints for other types of certificates (such as intermediate or root certificates) will result in undefined behavior.
+
+    * The fingerprint in this field is the fingerprint of the complete certificate, not the "certificate public key fingerprint" defined in HPKP. Please do not confuse them.
 
 ## alpn
 
