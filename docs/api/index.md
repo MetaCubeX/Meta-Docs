@@ -17,232 +17,283 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 - `?force=true` 为携带参数，部分请求需携带
 - `'{"path": "", "payload": ""}'` 为要更新的资源的数据
 
-大多数情况传入的数据都为`'{"path": "", "payload": ""}'`，可以附带新的配置文件路径
-
 !!! note
-    注意，如果路径不在 Clash 工作目录，请手动设置`SAFE_PATHS`环境变量将其加入安全路径，该环境变量的语法同本操作系统的PATH环境变量解析规则（即Windows下以分号分割，其他系统下以冒号分割）。
+    如果需要传入路径，注意，如果路径不在 mihomo 工作目录，请手动设置`SAFE_PATHS`环境变量将其加入安全路径，该环境变量的语法同本操作系统的 PATH 环境变量解析规则（即 Windows 下以分号分割，其他系统下以冒号分割）。
 
 ## 日志
 
 ### `/logs`
 
-请求方法：`GET`
+!!! info ""
+    获取实时日志
 
-- 获取实时日志
-
-### `/logs?level=log_level`
-
-请求方法：`GET`
-
-- 获取指定等级日志 可选值：info、debug、warning、error
+- 请求方法：`GET` / `WS`
+- 可选参数：`?level=log_level`, 其中 `log_level` 可选值为 `info`, `warning`, `error`, `debug`
 
 ## 流量信息
 
 ### `/traffic`
 
-请求方法：`GET`
+!!! info ""
+    获取实时流量，单位 kbps
 
-- 获取实时流量，单位 kbps
+- 请求方法：`GET` / `WS`
 
 ## 内存信息
 
 ### `/memory`
 
-请求方法：`GET`
+!!! info ""
+    获取实时内存占用，单位 kb
 
-- 获取实时内存占用，单位 kb
+- 请求方法：`GET` / `WS`
 
 ## 版本信息
 
 ### `/version`
 
-请求方法：`GET`
+!!! info ""
+    获取 mihomo 版本信息
 
-- 获取 Clash 版本
+- 请求方法：`GET`
 
 ## 缓存
 
 ### `/cache/fakeip/flush`
 
-请求方法：`POST`
+!!! info ""
+    清除 fakeip 缓存
 
-- 清除 fakeip 缓存
+- 请求方法：`POST`
+
+### `/cache/dns/flush`
+
+!!! info ""
+    清除 dns 缓存
+
+- 请求方法：`POST`
 
 ## 运行配置
 
 ### `/configs`
 
-请求方法：`GET`
+!!! info ""
+    获取基本配置
 
-- 获取基本配置
+- 请求方法：`GET`
 
-请求方法：`PUT`
+!!! info ""
+    重新加载基本配置
 
-- 重新加载基本配置，必须发送数据，URL 需携带 `?force=true` 强制执行
+- 请求方法：`PUT`
+- 携带参数：`?force=true`
 
-请求方法：`PATCH`
+!!! info ""
+    更新基本配置
 
-- 更新基本配置，必须发送数据，格式为`'{"mixed-port": 7890}'`，按需修改为需要更新的配置项
+- 请求方法：`PATCH`
+- 携带数据：`'{"mixed-port": 7890}'`
 
 ### `/configs/geo`
 
-请求方法：`POST`
+!!! info ""
+    更新 GEO 数据库
 
-- 更新 GEO 数据库，必须发送数据
+- 请求方法：`POST`
+- 发送数据：`'{"path": "", "payload": ""}'`
 
 ### `/restart`
 
-请求方法：`POST`
+!!! info ""
+    重启内核
 
-- 重启内核，必须发送数据
+- 请求方法：`POST`
+- 发送数据：`'{"path": "", "payload": ""}'`
 
 ## 更新
 
 ### `/upgrade`
 
-请求方法：`POST`
+!!! info ""
+    更新内核
 
-- 更新内核，必须发送数据
+- 请求方法：`POST`
+- 发送数据：`'{"path": "", "payload": ""}'`
 
 ### `/upgrade/ui`
 
-请求方法：`POST`
+!!! info ""
+    更新面板，须设置 [external-ui](../config/general.md#_7)
 
-- 更新面板，须设置 [external-ui](../config/general.md#_7)
+- 请求方法：`POST`
 
 ### `/upgrade/geo`
 
-请求方法：`POST`
+!!! info ""
+    更新 GEO 数据库
 
-- 更新 GEO 数据库，必须发送数据
+- 请求方法：`POST`
+- 发送数据：`'{"path": "", "payload": ""}'`
 
 ## 策略组
 
 ### `/group`
 
-请求方法：`GET`
+!!! info ""
+    获取策略组信息
 
-- 获取策略组信息
+- 请求方法：`GET`
 
 ### `/group/group_name`
 
-请求方法：`GET`
+!!! info ""
+    获取具体的策略组信息
 
-- 获取具体的策略组信息
+- 请求方法：`GET`
 
-请求方法：`DELETE`
+!!! info ""
+    清除自动策略组 fixed 选择
 
-- 清除自动策略组 fixed 选择
+- 请求方法：`DELETE`
 
 ### `/group/group_name/delay`
 
-请求方法：`GET`
+!!! info ""
+    对指定策略组内的节点/策略组进行测试，返回新的延迟信息，并清除自动策略组的 fixed 选择
 
-- 对指定策略组内的节点/策略组进行测试，返回新的延迟信息，,并清除自动策略组的 fixed 选择
-- URL 需携带`?url=xxx&timeout=5000`，按需修改
+- 请求方法：`GET`
+- 携带参数：`?url=xxx&timeout=5000`
 
 ## 代理
 
 ### `/proxies`
 
-请求方法：`GET`
+!!! info ""
+    获取代理信息
 
-- 获取代理信息
+- 请求方法：`GET`
 
 ### `/proxies/proxies_name`
 
-请求方法：`GET`
+!!! info ""
+    获取具体的代理信息
 
-- 获取具体的代理信息
+- 请求方法：`GET`
 
-请求方法：`PUT`
+!!! info ""
+    选择特定的代理
 
-- 选择特定的代理，需携带数据，格式为`'{"name":"日本"}'`
+- 请求方法：`PUT`
+- 携带数据：`'{"name":"日本"}'`
 
 ### `/proxies/proxies_name/delay`
 
-请求方法：`GET`
+!!! info ""
+    对指定代理进行测试，并返回新的延迟信息
 
-- 对指定代理进行测试，并返回新的延迟信息
-- URL 需携带`?url=xxx&timeout=5000`，按需修改
+- 请求方法：`GET`
+- 携带参数：`?url=xxx&timeout=5000`
 
 ## 代理集合
 
 ### `/providers/proxies`
 
-请求方法：`GET`
+!!! info ""
+    获取所有代理集合的所有信息
 
-- 获取所有代理集合的所有信息
+- 请求方法：`GET`
 
 ### `/providers/proxies/providers_name`
 
-请求方法：`GET`
+!!! info ""
+    获取特定代理集合的信息
 
-- 获取特定代理集合的信息
+- 请求方法：`GET`
 
-请求方法：`PUT`
+!!! info ""
+    更新代理集合
 
-- 更新代理集合
+- 请求方法：`PUT`
 
 ### `/providers/proxies/providers_name/healthcheck`
 
-请求方法：`GET`
+!!! info ""
+    触发特定代理集合的健康检查
 
-- 触发特定代理集合的健康检查
+- 请求方法：`GET`
 
 ### `/providers/proxies/providers_name/proxies_name/healthcheck`
 
-- 对代理集合内的指定代理进行测试，并返回新的延迟信息
-- URL 需携带`?url=xxx&timeout=5000`，按需修改
+!!! info ""
+    对代理集合内的指定代理进行测试，并返回新的延迟信息
+
+- 请求方法：`GET`
+- 携带参数：`?url=xxx&timeout=5000`
 
 ## 规则
 
 ### `/rules`
 
-请求方法：`GET`
+!!! info ""
+    获取规则信息
 
-- 获取规则信息
+- 请求方法：`GET`
+
+### `/rules/disable`
+
+!!! info ""
+    禁用规则，其中 key 为规则的索引，value 为是否禁用该规则，为临时操作，重启后失效
+
+- 请求方法：`PATCH`
+- 携带数据：`'{"0": false,"1": true}'`
 
 ## 规则集合
 
 ### `/providers/rules`
 
-请求方法：`GET`
+!!! info ""
+    获取所有规则集合的所有信息
 
-- 获取所有规则集合的所有信息
+- 请求方法：`GET`
 
 ### `/providers/rules/providers_name`
 
-请求方法：`PUT`
+!!! info ""
+    更新规则集合
 
-- 更新规则集合
+- 请求方法：`PUT`
 
 ## 连接
 
 ### `/connections`
 
-请求方法：`GET`
+!!! info ""
+    获取连接信息
 
-- 获取连接信息
+- 请求方法：`GET` / `WS`
+- 可选参数：`?interval=milliseconds`, 其中 `milliseconds` 为刷新间隔，默认值为 1000 毫秒
 
-请求方法：`DELETE`
+!!! info ""
+    关闭所有连接
 
-- 关闭所有连接
+- 请求方法：`DELETE`
 
 ### `/connections/:id`
 
-请求方法：`DELETE`
+!!! info ""
+    关闭特定连接
 
-- 关闭特定连接
+- 请求方法：`DELETE`
 
 ## 域名查询
 
 ### `/dns/query`
 
-请求方法：`GET`
+!!! info ""
+    获取指定名称和类型的 DNS 查询数据
 
-- 获取指定名称和类型的 DNS 查询数据
-- URL 需携带`?name=example.com&type=A`，按需修改
+- 请求方法：`GET`
+- 携带参数：`?name=example.com&type=A`
 
 ## DEBUG
 
@@ -250,9 +301,10 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 ### `/debug/gc`
 
-请求方法：`PUT`
+!!! info ""
+    进行主动 GC
 
-- 进行主动 GC
+- 请求方法：`PUT`
 
 ### `/debug/pprof`
 

@@ -17,232 +17,275 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 - `?force=true` is a parameter that needs to be included in certain requests
 - `'{"path": "", "payload": ""}'` is the data for the resource to be updated
 
-In most cases, the data passed is `'{"path": "", "payload": ""}'`, which can include a new configuration file path.
-
 !!! note
-    Note that if the path is not in the Clash working directory, please manually set the `SAFE_PATHS` environment variable to add it to the safe path. The syntax of this environment variable is the same as the PATH environment variable parsing rules of this operating system (i.e., semicolon-separated in Windows and colon-separated in other systems).
+    If you need to pass a path, please note that if the path is not in the mihomo working directory, please manually set the `SAFE_PATHS` environment variable to add it to the safe path. The syntax of this environment variable is the same as the PATH environment variable parsing rules of this operating system (i.e., semicolon-separated in Windows and colon-separated in other systems).
 
 ## Logs
 
 ### `/logs`
 
-Request method: `GET`
+!!! info ""
+    Retrieve real-time logs
 
-- Retrieve real-time logs.
-
-### `/logs?level=log_level`
-
-Request Method: `GET`
-
-- Retrieve logs of a specified level. Possible values: info, debug, warning, error
+- Request method: `GET` / `WS`
+- Optional parameter: `?level=log_level`, where `log_level` can be `info`, `warning`, `error`, `debug`
 
 ## Traffic Information
 
 ### `/traffic`
 
-Request method: `GET`
+!!! info ""
+    Retrieve real-time traffic, measured in kbps
 
-- Retrieve real-time traffic, measured in kbps.
+- Request method: `GET` / `WS`
 
 ## Memory Information
 
 ### `/memory`
 
-Request method: `GET`
+!!! info ""
+    Retrieve real-time memory usage, measured in kb
 
-- Retrieve real-time memory usage, measured in kb.
+- Request method: `GET` / `WS`
 
 ## Version Information
 
 ### `/version`
 
-Request method: `GET`
+!!! info ""
+    Retrieve the Clash version
 
-- Retrieve the Clash version.
+- Request method: `GET`
 
 ## Cache
 
 ### `/cache/fakeip/flush`
 
-Request method: `POST`
+!!! info ""
+    Clear the fake IP cache
 
-- Clear the fake IP cache.
+- Request method: `POST`
+
+### `/cache/dns/flush`
+
+!!! info ""
+    Clear the DNS cache
+
+- Request method: `POST`
 
 ## Running Configuration
 
 ### `/configs`
 
-Request method: `GET`
+!!! info ""
+    Retrieve basic configuration
 
-- Retrieve basic configuration.
+- Request method: `GET`
 
-Request method: `PUT`
+!!! info ""
+    Reload basic configuration
 
-- Reload basic configuration; data must be sent, and the URL must include `?force=true` to enforce execution.
+- Request method: `PUT`
+- Parameter: `?force=true`
 
-Request method: `PATCH`
+!!! info ""
+    Update basic configuration
 
-- Update basic configuration; data must be sent in the format `'{"mixed-port": 7890}'`, modified as needed for the configuration items to be updated.
+- Request method: `PATCH`
+- Data: `'{"mixed-port": 7890}'`
 
 ### `/configs/geo`
 
-Request method: `POST`
+!!! info ""
+    Update the GEO database
 
-- Update the GEO database; data must be sent.
+- Request method: `POST`
+- Data: `'{"path": "", "payload": ""}'`
 
 ### `/restart`
 
-Request method: `POST`
+!!! info ""
+    Restart the kernel
 
-- Restart the kernel; data must be sent.
+- Request method: `POST`
+- Data: `'{"path": "", "payload": ""}'`
 
 ## Updates
 
 ### `/upgrade`
 
-Request method: `POST`
+!!! info ""
+    Update the kernel
 
-- Update the kernel; data must be sent.
+- Request method: `POST`
+- Data: `'{"path": "", "payload": ""}'`
 
 ### `/upgrade/ui`
 
-Request method: `POST`
+!!! info ""
+    Update the panel; [external-ui](../config/general.md#external-user-interface) must be set
 
-- Update the panel; [external-ui](../config/general.md#external-user-interface) must be set.
+- Request method: `POST`
 
 ### `/upgrade/geo`
 
-Request method: `POST`
+!!! info ""
+    Update the GEO database
 
-- Update the GEO database; data must be sent.
+- Request method: `POST`
+- Data: `'{"path": "", "payload": ""}'`
 
 ## Policy Groups
 
 ### `/group`
 
-Request method: `GET`
+!!! info ""
+    Retrieve policy group information
 
-- Retrieve policy group information.
+- Request method: `GET`
 
 ### `/group/group_name`
 
-Request method: `GET`
+!!! info ""
+    Retrieve specific policy group information
 
-- Retrieve specific policy group information.
+- Request method: `GET`
 
-Request method: `DELETE`
+!!! info ""
+    Clear the fixed selection of the automatic policy group
 
-- Clear the fixed selection of the automatic policy group.
+- Request method: `DELETE`
 
 ### `/group/group_name/delay`
 
-Request method: `GET`
+!!! info ""
+    Test the nodes/strategy groups within the specified strategy group, return new latency information, and clear the fixed selection of the automatic strategy group
 
-- Test the nodes/strategy groups within the specified strategy group, return new latency information, and clear the fixed selection of the automatic strategy group
-- the URL must include `?url=xxx&timeout=5000`, modified as needed.
+- Request method: `GET`
+- Parameter: `?url=xxx&timeout=5000`
 
 ## Proxies
 
 ### `/proxies`
 
-Request method: `GET`
+!!! info ""
+    Retrieve proxy information
 
-- Retrieve proxy information.
+- Request method: `GET`
 
 ### `/proxies/proxies_name`
 
-Request method: `GET`
+!!! info ""
+    Retrieve specific proxy information
 
-- Retrieve specific proxy information.
+- Request method: `GET`
 
-Request method: `PUT`
+!!! info ""
+    Select a specific proxy
 
-- Select a specific proxy; data must be included in the format `'{"name":"Japan"}'`.
+- Request method: `PUT`
+- Data: `'{"name":"Japan"}'`
 
 ### `/proxies/proxies_name/delay`
 
-Request method: `GET`
+!!! info ""
+    Test a specified proxy and return new delay information
 
-- Test a specified proxy and return new delay information
-- the URL must include `?url=xxx&timeout=5000`, modified as needed.
+- Request method: `GET`
+- Parameter: `?url=xxx&timeout=5000`
 
 ## Proxy Sets
 
 ### `/providers/proxies`
 
-Request method: `GET`
+!!! info ""
+    Retrieve all information for all proxy sets
 
-- Retrieve all information for all proxy sets.
+- Request method: `GET`
 
 ### `/providers/proxies/providers_name`
 
-Request method: `GET`
+!!! info ""
+    Retrieve information for a specific proxy set
 
-- Retrieve information for a specific proxy set.
+- Request method: `GET`
 
-Request method: `PUT`
+!!! info ""
+    Update the proxy set
 
-- Update the proxy set.
+- Request method: `PUT`
 
 ### `/providers/proxies/providers_name/healthcheck`
 
-Request method: `GET`
+!!! info ""
+    Trigger a health check for a specific proxy set
 
-- Trigger a health check for a specific proxy set.
+- Request method: `GET`
 
 ### `/providers/proxies/providers_name/proxies_name/healthcheck`
 
-- Test a specified proxy within the proxy set and return new delay information
-- the URL must include `?url=xxx&timeout=5000`, modified as needed.
+!!! info ""
+    Test a specified proxy within the proxy set and return new delay information
+
+- Request method: `GET`
+- Parameter: `?url=xxx&timeout=5000`
 
 ## Rules
 
 ### `/rules`
 
-Request method: `GET`
+!!! info ""
+    Retrieve rule information
 
-- Retrieve rule information.
+- Request method: `GET`
 
 ## Rule Sets
 
 ### `/providers/rules`
 
-Request method: `GET`
+!!! info ""
+    Retrieve all information for all rule sets
 
-- Retrieve all information for all rule sets.
+- Request method: `GET`
 
 ### `/providers/rules/providers_name`
 
-Request method: `PUT`
+!!! info ""
+    Update the rule set
 
-- Update the rule set.
+- Request method: `PUT`
 
 ## Connections
 
 ### `/connections`
 
-Request method: `GET`
+!!! info ""
+    Retrieve connection information
 
-- Retrieve connection information.
+- Request method: `GET` / `WS`
+- Optional parameter: `?interval=milliseconds`, where `milliseconds` is the refresh interval, default value is 1000 milliseconds
 
-Request method: `DELETE`
+!!! info ""
+    Close all connections
 
-- Close all connections.
+- Request method: `DELETE`
 
 ### `/connections/:id`
 
-Request method: `DELETE`
+!!! info ""
+    Close a specific connection
 
-- Close a specific connection.
+- Request method: `DELETE`
 
 ## Domain Query
 
 ### `/dns/query`
 
-Request method: `GET`
+!!! info ""
+    Retrieve DNS query data for a specified name and type
 
-- Retrieve DNS query data for a specified name and type
-- the URL must include `?name=example.com&type=A`, modified as needed.
+- Request method: `GET`
+- Parameter: `?name=example.com&type=A`
 
 ## DEBUG
 
@@ -250,9 +293,10 @@ Request method: `GET`
 
 ### `/debug/gc`
 
-Request method: `PUT`
+!!! info ""
+    Perform active garbage collection
 
-- Perform active garbage collection.
+- Request method: `PUT`
 
 ### `/debug/pprof`
 
