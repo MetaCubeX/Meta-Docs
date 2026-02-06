@@ -9,6 +9,7 @@ proxies:
   server: server.com
   port: 443
   ports: 443-8443
+  hop-interval: 30
   password: yourpassword
   up: "30 Mbps"
   down: "200 Mbps"
@@ -34,6 +35,10 @@ proxies:
 ## ports
 
 При настройке включает прыжки по портам, игнорирует `port`, формат описан в [диапазон портов](../../handbook/syntax.md#_14)
+
+## hop-interval
+
+Интервал переключения портов в секундах, по умолчанию 30.
 
 ## password
 
