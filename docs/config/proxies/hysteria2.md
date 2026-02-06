@@ -9,6 +9,7 @@ proxies:
   server: server.com
   port: 443
   ports: 443-8443
+  hop-interval: 30
   password: yourpassword
   up: "30 Mbps"
   down: "200 Mbps"
@@ -34,6 +35,10 @@ proxies:
 ## ports
 
 配置则启用端口跳跃，忽略`port`，格式参考[端口范围](../../handbook/syntax.md#_14)
+
+## hop-interval
+
+端口跳跃的间隔，单位为秒，默认为 30
 
 ## password
 
