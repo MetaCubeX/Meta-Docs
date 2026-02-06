@@ -9,6 +9,7 @@ proxies:
   server: server.com
   port: 443
   ports: 443-8443
+  hop-interval: 30
   password: yourpassword
   up: "30 Mbps"
   down: "200 Mbps"
@@ -26,22 +27,26 @@ proxies:
 
 [TLS Fields](./tls.md)
 
-## Ports
+## ports
 
 Configuring this enables port jumping, ignoring `port`. Refer to [Port Range](../../handbook/syntax.md#port-ranges) for format.
 
-## Password
+## password
 
 Authentication password.
 
-## Up/Down
+## hop-interval
+
+Port hop interval, in seconds, default is 30.
+
+## up/down
 
 Brutal rate control; if no unit is specified, the default is Mbps.
 
-## Obfs
+## obfs
 
 QUIC traffic obfuscator type, can only be set to `salamander`. If left empty, it is disabled.
 
-## Obfs-password
+## obfs-password
 
 QUIC traffic obfuscator password.
