@@ -8,14 +8,10 @@ proxies:
   port: 443
   private-key: "BASE64_ENCODED_PRIVATE_KEY"
   public-key: "BASE64_ENCODED_PUBLIC_KEY"
-  # ip: 172.16.0.2/32
-  # ipv6: fd00::2/128
-  # uri: "/.well-known/masque/udp"
-  # sni: server.com
-  # mtu: 1280
-  # udp: true
-  # congestion-controller: bbr
-  # cwnd: 10
+  ip: 172.16.0.2/32
+  ipv6: fd00::2/128
+  mtu: 1280
+  udp: true
   # remote-dns-resolve: true
   # dns:
   #   - 8.8.8.8
@@ -40,14 +36,6 @@ Local IPv4 address in CIDR format (e.g., 172.16.0.2/32).
 
 Local IPv6 address in CIDR format (e.g., fd00::2/128).
 
-## uri
-
-MASQUE URI path, defaults to `/.well-known/masque/udp`.
-
-## sni
-
-TLS SNI (Server Name Indication), defaults to `masque`.
-
 ## mtu
 
 MTU size for the TUN device, defaults to 1280.
@@ -55,14 +43,6 @@ MTU size for the TUN device, defaults to 1280.
 ## udp
 
 Whether to enable UDP support, defaults to false.
-
-## congestion-controller
-
-Congestion control algorithm, available options: `cubic`/`new_reno`/`bbr`.
-
-## cwnd
-
-Congestion window size.
 
 ## remote-dns-resolve
 
