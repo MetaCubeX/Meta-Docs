@@ -32,6 +32,8 @@ dns:
     - tls://1.1.1.1
   proxy-server-nameserver:
     - https://doh.pub/dns-query
+  proxy-server-nameserver-policy:
+    'www.yournode.com': '114.114.114.114'
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -145,6 +147,10 @@ Values support strings/arrays.
 ## proxy-server-nameserver
 
 The proxy node domain resolution server is used solely for resolving the domain names of proxy nodes. If left blank, it will follow the configurations of nameserver-policy, nameserver, and fallback.
+
+## proxy-server-nameserver-policy
+
+The format is the same as nameserver-policy, and it is only used for node domain name resolution. It takes effect only if proxy-server-nameserver is not empty.
 
 ## direct-nameserver
 
