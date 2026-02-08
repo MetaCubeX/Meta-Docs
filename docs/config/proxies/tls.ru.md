@@ -21,6 +21,7 @@ proxies:
   ech-opts:
     enable: true
     config: base64_encoded_config
+    # query-server-name: xxx.com
 ```
 
 ## tls
@@ -104,3 +105,7 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 !!! info
     Вы можете использовать команду `mihomo generate ech-keypair test.com` для генерации совместимой пары самоподписанных конфигурационных ключей ECH как для сервера, так и для клиента. Пожалуйста, замените `test.com` на имя домена SNI, который вы хотите сделать доступным. Содержимое после `Config:` в выводе можно заполнить здесь, а содержимое после `Key:` следует заполнить в конфигурации ECH на стороне сервера (`ech-key` в списке слушателей mihomo).
+
+### ech-opts.query-server-name
+
+Этот параметр необязателен; если он не пуст, он используется для указания доменного имени при разрешении через DNS.
