@@ -21,6 +21,7 @@ proxies:
   ech-opts:
     enable: true
     config: base64_encoded_config
+    # query-server-name: xxx.com
 ```
 
 ## tls
@@ -102,3 +103,7 @@ ECH 配置，如果为空则通过dns解析，不为空则通过该值指定，�
 
 !!! info
     您可以通过`mihomo generate ech-keypair test.com`命令为服务器端和客户端生成符合要求的自签名ech配置对，请将`test.com`自行替换为您想要对外展现的SNI域名，输出中`Config:`后的内容可填在此处，`Key:`后的内容应填在服务端的ECH配置（mihomo的listeners中为`ech-key`）中
+
+### ech-opts.query-server-name
+
+可选项，不为空时用于指定通过dns解析时的域名
