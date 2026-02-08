@@ -41,7 +41,9 @@ Alternatively, you can obtain it through the "Certificates" section of the "SHA2
 
 !!! warning
 
-    * Currently, only leaf certificates (i.e., certificates containing the SNI name) are guaranteed to have their fingerprints available in this field. Entering fingerprints for other types of certificates (such as intermediate or root certificates) will result in undefined behavior.
+    * When a leaf certificate (i.e., a certificate containing an SNI name) is entered, only the fingerprint of the certificate sent by the server is verified; no additional checks are performed.
+
+    * When the fingerprint of other types of certificates (such as intermediate or root certificates) is entered, it will be verified whether the certificate chain sent by the server was issued by that certificate. From v1.19.20 onwards, the SNI/servername requirement must also be met.
 
     * The fingerprint in this field is the fingerprint of the complete certificate, not the "certificate public key fingerprint" defined in HPKP. Please do not confuse them.
 
