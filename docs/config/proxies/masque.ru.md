@@ -8,14 +8,10 @@ proxies:
   port: 443
   private-key: "BASE64_ENCODED_PRIVATE_KEY"
   public-key: "BASE64_ENCODED_PUBLIC_KEY"
-  # ip: 172.16.0.2/32
-  # ipv6: fd00::2/128
-  # uri: "/.well-known/masque/udp"
-  # sni: server.com
-  # mtu: 1280
-  # udp: true
-  # congestion-controller: bbr
-  # cwnd: 10
+  ip: 172.16.0.2/32
+  ipv6: fd00::2/128
+  mtu: 1280
+  udp: true
   # remote-dns-resolve: true
   # dns:
   #   - 8.8.8.8
@@ -40,14 +36,6 @@ proxies:
 
 Локальный IPv6-адрес в формате CIDR (например, fd00::2/128)
 
-## uri
-
-Путь URI MASQUE, по умолчанию `/.well-known/masque/udp`
-
-## sni
-
-TLS SNI (Server Name Indication), по умолчанию `masque`
-
 ## mtu
 
 Размер MTU устройства TUN, по умолчанию 1280
@@ -55,14 +43,6 @@ TLS SNI (Server Name Indication), по умолчанию `masque`
 ## udp
 
 Включить ли поддержку UDP, по умолчанию false
-
-## congestion-controller
-
-Алгоритм контроля перегрузки, доступные варианты: `cubic`/`new_reno`/`bbr`
-
-## cwnd
-
-Размер окна перегрузки
 
 ## remote-dns-resolve
 
