@@ -8,14 +8,10 @@ proxies:
   port: 443
   private-key: "BASE64_ENCODED_PRIVATE_KEY"
   public-key: "BASE64_ENCODED_PUBLIC_KEY"
-  # ip: 172.16.0.2/32
-  # ipv6: fd00::2/128
-  # uri: "/.well-known/masque/udp"
-  # sni: server.com
-  # mtu: 1280
-  # udp: true
-  # congestion-controller: bbr
-  # cwnd: 10
+  ip: 172.16.0.2/32
+  ipv6: fd00::2/128
+  mtu: 1280
+  udp: true
   # remote-dns-resolve: true
   # dns:
   #   - 8.8.8.8
@@ -40,14 +36,6 @@ proxies:
 
 本地 IPv6 地址，CIDR 格式（如 fd00::2/128）
 
-## uri
-
-MASQUE URI 路径，默认为 `/.well-known/masque/udp`
-
-## sni
-
-TLS SNI（服务器名称指示），默认为 `masque`
-
 ## mtu
 
 TUN 设备的 MTU 大小，默认为 1280
@@ -55,14 +43,6 @@ TUN 设备的 MTU 大小，默认为 1280
 ## udp
 
 是否启用 UDP 支持，默认为 false
-
-## congestion-controller
-
-拥塞控制算法，可选项为 `cubic`/`new_reno`/`bbr`
-
-## cwnd
-
-拥塞窗口大小
 
 ## remote-dns-resolve
 
