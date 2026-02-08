@@ -21,6 +21,7 @@ proxies:
   ech-opts:
     enable: true
     config: base64_encoded_config
+    # query-server-name: xxx.com
 ```
 
 ## tls
@@ -103,3 +104,7 @@ The ECH configuration, if empty, will be resolved via DNS; otherwise, it will be
 
 !!! info
     You can use the command `mihomo generate ech-keypair test.com` to generate a compliant self-signed ECH configuration pair for both the server and client. Please replace `test.com` with the SNI domain name you want to expose. The content after `Config:` in the output can be filled here, and the content after `Key:` should be filled in the server-side ECH configuration (`ech-key` in mihomo's listeners).
+
+### ech-opts.query-server-name
+
+Optional, if not empty, it is used to specify the domain name when resolving via DNS.
