@@ -32,6 +32,8 @@ dns:
     - tls://1.1.1.1
   proxy-server-nameserver:
     - https://doh.pub/dns-query
+  proxy-server-nameserver-policy:
+    'www.yournode.com': '114.114.114.114'
   direct-nameserver:
     - system
   direct-nameserver-follow-policy: false
@@ -147,6 +149,10 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 ## proxy-server-nameserver
 
 代理节点域名解析服务器，仅用于解析代理节点的域名，如果不填则遵循 nameserver-policy、nameserver 和 fallback 的配置
+
+## proxy-server-nameserver-policy
+
+格式同nameserver-policy，仅用于节点域名解析，当且仅当proxy-server-nameserver不为空时生效
 
 ## direct-nameserver
 
