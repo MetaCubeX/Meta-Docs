@@ -59,7 +59,7 @@ Health check test address.
 
 ## interval
 
-Health check interval; if not 0, periodic testing is enabled, measured in seconds.
+Health check interval; if not 0, periodic testing is enabled, measured in seconds. (If the proxy-group type is select, this setting has no effect and automatic health checks will not be enabled.)
 
 ## lazy
 
