@@ -24,6 +24,7 @@
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
+|[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 
 ## MacOS
 
@@ -43,6 +44,7 @@
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[ClashMac](https://github.com/666OS/ClashMac)|维护中 |
+|[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 
 ## Linux
 
@@ -63,6 +65,7 @@
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
+|[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 
 ## Android
 
@@ -72,7 +75,7 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
 |[FlyClash](https://github.com/GtxFury/FlyClash-Android)|维护中 |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|维护中 |
-|[LiClash](https://t.me/appshub_channel)|维护中 |
+|[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
 
