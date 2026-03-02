@@ -42,6 +42,8 @@
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[ClashMac](https://github.com/666OS/ClashMac)|поддерживается |
+|[ClashBar](https://github.com/Sitoi/ClashBar)|поддерживается |
+
 
 ## Linux
 
