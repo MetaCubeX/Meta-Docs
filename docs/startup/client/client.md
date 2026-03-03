@@ -84,6 +84,7 @@
 |项目名称 | 维护状态 |
 |:----|:----|
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
+|[Connect Now](https://apps.apple.com/app/connect-now/id6749354119)|维护中 |
 
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
 
