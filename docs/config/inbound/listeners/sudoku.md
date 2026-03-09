@@ -15,9 +15,14 @@ listeners:
   # custom-tables: ["xpxvvpvv", "vxpvxvvp"] # 可选，自定义字节布局列表（x/v/p），用于 xvp 模式轮换；非空时覆盖 custom-table
   handshake-timeout: 5   # optional
   enable-pure-downlink: false # 是否启用混淆下行，false的情况下能在保证数据安全的前提下极大提升下行速度，与客户端保持相同(如果此处为false，则要求aead不可为none)
+  httpmask:
+    disable: false # true 禁用所有 HTTP 伪装/隧道
+    mode: legacy # 可选：legacy（默认）、stream（split-stream）、poll、auto（先 stream 再 poll）、ws（WebSocket 隧道）
+    # path_root: "" # 可选：HTTP 隧道端点一级路径前缀（双方需一致），例如 "aabbcc" 或 "/aabbcc/" => /aabbcc/session、/aabbcc/stream、/aabbcc/api/v1/upload、/aabbcc/ws
+  #
+  # 可选：当启用 HTTPMask 且识别到“像 HTTP 但不符合 tunnel/auth”的请求时，将原始字节透传给 fallback（常用于与其他服务共端口）：
+  # fallback: "127.0.0.1:80"
   disable-http-mask: false # 可选：禁用 http 掩码/隧道（默认为 false）
-  # http-mask-mode: legacy # 可选：legacy（默认）、stream、poll、auto；stream/poll/auto 支持走 CDN/反代
-  # path-root: "" # 可选：HTTP 隧道端点一级路径前缀（双方需一致），例如 "aabbcc" => /aabbcc/session、/aabbcc/stream、/aabbcc/api/v1/upload
 
 ```
 
