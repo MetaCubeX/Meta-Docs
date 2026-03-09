@@ -252,6 +252,7 @@ nav:
         - TUIC v4: config/inbound/listeners/tuic-v4.md
         - TUIC v5: config/inbound/listeners/tuic-v5.md
         - Hysteria2: config/inbound/listeners/hysteria2.md
+        - TrustTunnel: config/inbound/listeners/trusttunnel.md
         - tunnel: config/inbound/listeners/tunnel.md
     - 出站代理:
       - 通用字段: config/proxies/index.md
