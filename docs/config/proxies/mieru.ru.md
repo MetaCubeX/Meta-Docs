@@ -11,6 +11,7 @@ proxies:
     username: user
     password: password
     multiplexing: MULTIPLEXING_LOW
+    traffic-pattern: ""
 ```
 
 [Общие поля](./index.md)
@@ -26,3 +27,8 @@ proxies:
 ## multiplexing
 
 Мультиплексирование, возможные значения: `MULTIPLEXING_OFF`, `MULTIPLEXING_LOW`, `MULTIPLEXING_MIDDLE`, `MULTIPLEXING_HIGH`. `MULTIPLEXING_OFF` отключает функцию мультиплексирования. По умолчанию `MULTIPLEXING_LOW` 
+
+## traffic-pattern
+
+Для тонкой настройки работы сети используется строка base64; формат строки можно узнать в [официальной документации mieru](https://github.com/enfein/mieru/blob/main/docs/traffic-pattern.md)
+
