@@ -129,3 +129,9 @@
 |:----|:----|
 |[DeckyClash](https://github.com/chenx-dust/DeckyClash)|поддерживается |
 |[ToMoon](https://github.com/YukiCoco/ToMoon)|поддерживается |
+
+## Docker
+
+|Название проекта | Статус поддержки |
+|:----|:----|
+|[mihomo-sub](https://github.com/pure-white-ice-cream/mihomo-sub)|поддерживается |
