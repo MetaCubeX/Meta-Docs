@@ -43,15 +43,15 @@ proxies:
 
 ## table-type
 
-可选值：prefer_ascii、prefer_entropy 前者全ascii映射，后者保证熵值（汉明1）低于3
+可选值：prefer_ascii、prefer_entropy、up_ascii_down_entropy、up_entropy_down_ascii
 
 ## custom-table
 
-可选，自定义字节布局，必须包含2个x、2个p、4个v，可随意组合。启用此处则需配置`table-type`为`prefer_entropy`
+可选，自定义字节布局，必须包含2个x、2个p、4个v，可随意组合；只对 entropy 方向生效
 
 ## custom-tables
 
-可选，自定义字节布局列表（x/v/p），用于 xvp 模式轮换；非空时覆盖 custom-table
+可选，自定义字节布局列表（x/v/p），非空时覆盖 custom-table
 
 ## httpmask.disable
 
