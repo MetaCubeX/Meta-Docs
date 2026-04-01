@@ -46,6 +46,7 @@
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[ClashMac](https://github.com/666OS/ClashMac)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
+|[ClashBar](https://github.com/Sitoi/ClashBar)|维护中 |
 
 ## Linux
 
