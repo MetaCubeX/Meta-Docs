@@ -14,6 +14,10 @@ listeners:
       flow: xtls-rprx-vision
   # ws-path: "/" # 如果不为空则开启 websocket 传输层
   # grpc-service-name: "GunService" # 如果不为空则开启 grpc 传输层
+  # xhttp-config: # 如果不为空则开启 xhttp 传输层
+  #   path: "/"
+  #   host: ""
+  #   mode: auto # Available: "stream-one", "stream-up" or "packet-up"
   # -------------------------
   # vless encryption服务端配置：
   # （原生外观 / 只 XOR 公钥 / 全随机数。1-RTT 每次下发随机 300 到 600 秒的 ticket 以便 0-RTT 复用 / 只允许 1-RTT）
