@@ -37,6 +37,7 @@
       grpc-opts:
         grpc-service-name: example
         # grpc-user-agent: 
+        # ping-interval: 0
     ```
 === "ws"
     ```{.yaml linenums="1"}
@@ -149,6 +150,10 @@ gRPC 服务名称
 ### grpc-opts.grpc-user-agent
 
 gRPC UserAgent
+
+### grpc-opts.ping-interval
+
+gRPC 心跳包间隔，默认关闭，单位为秒
 
 ## ws-opts
 
