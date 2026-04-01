@@ -53,6 +53,59 @@
         v2ray-http-upgrade: false
         v2ray-http-upgrade-fast-open: false
     ```
+=== "xhttp"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "xhttp-opts-example"
+      type: vless
+      server: server
+      port: 443
+      uuid: uuid
+      udp: true
+      tls: true
+      network: xhttp
+      alpn:
+        - h2
+      # ech-opts: ...
+      # reality-opts: ...
+      # skip-cert-verify: false
+      # fingerprint: ...
+      # certificate: ...
+      # private-key: ...
+      servername: xxx.com
+      client-fingerprint: chrome
+      encryption: ""
+      xhttp-opts:
+        path: "/"
+        host: xxx.com
+        # mode: "stream-one" # Available: "stream-one", "stream-up" or "packet-up"
+        # headers:
+        #   X-Forwarded-For: ""
+        # no-grpc-header: false
+        # x-padding-bytes: "100-1000"
+        # download-settings:
+        #   ## xhttp part
+        #   path: "/"
+        #   host: xxx.com
+        #   headers:
+        #     X-Forwarded-For: ""
+        #   no-grpc-header: false
+        #   x-padding-bytes: "100-1000"
+        #   ## proxy part
+        #   server: server
+        #   port: 443
+        #   tls: true
+        #   alpn:
+        #     - h2
+        #   ech-opts: ...
+        #   reality-opts: ...
+        #   skip-cert-verify: false
+        #   fingerprint: ...
+        #   certificate: ...
+        #   private-key: ...
+        #   servername: xxx.com
+        #   client-fingerprint: chrome
+    ```
 
 ## http-opts
 
@@ -122,3 +175,10 @@ Early Data 首包长度阈值
 ### ws-opts.v2ray-http-upgrade-fast-open
 
 启用 http upgrade 的 fast open
+
+## xhttp-opts
+
+`xhttp` 传输层设置，仅传输层为 `xhttp` 时生效
+
+!!! note
+    仅VLESS支持xhttp传输层，请勿在其他协议上使用
