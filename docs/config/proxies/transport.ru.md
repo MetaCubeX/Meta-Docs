@@ -36,7 +36,8 @@
       network: grpc
       grpc-opts:
         grpc-service-name: example
-        # grpc-user-agent: 
+        # grpc-user-agent:
+        # ping-interval: 0 
     ```
 === "ws"
     ```{.yaml linenums="1"}
@@ -52,6 +53,59 @@
         early-data-header-name:
         v2ray-http-upgrade: false
         v2ray-http-upgrade-fast-open: false
+    ```
+=== "xhttp"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "xhttp-opts-example"
+      type: vless
+      server: server
+      port: 443
+      uuid: uuid
+      udp: true
+      tls: true
+      network: xhttp
+      alpn:
+        - h2
+      # ech-opts: ...
+      # reality-opts: ...
+      # skip-cert-verify: false
+      # fingerprint: ...
+      # certificate: ...
+      # private-key: ...
+      servername: xxx.com
+      client-fingerprint: chrome
+      encryption: ""
+      xhttp-opts:
+        path: "/"
+        host: xxx.com
+        # mode: "stream-one" # Available: "stream-one", "stream-up" or "packet-up"
+        # headers:
+        #   X-Forwarded-For: ""
+        # no-grpc-header: false
+        # x-padding-bytes: "100-1000"
+        # download-settings:
+        #   ## xhttp part
+        #   path: "/"
+        #   host: xxx.com
+        #   headers:
+        #     X-Forwarded-For: ""
+        #   no-grpc-header: false
+        #   x-padding-bytes: "100-1000"
+        #   ## proxy part
+        #   server: server
+        #   port: 443
+        #   tls: true
+        #   alpn:
+        #     - h2
+        #   ech-opts: ...
+        #   reality-opts: ...
+        #   skip-cert-verify: false
+        #   fingerprint: ...
+        #   certificate: ...
+        #   private-key: ...
+        #   servername: xxx.com
+        #   client-fingerprint: chrome
     ```
 
 ## http-opts
@@ -97,6 +151,10 @@
 
 gRPC UserAgent
 
+### grpc-opts.ping-interval
+
+Интервал пульсации gRPC (по умолчанию отключен), единица измерения — секунды.
+
 ## ws-opts
 
 Настройки транспортного уровня `ws`, действуют только когда транспортный уровень - `ws`
@@ -124,3 +182,10 @@ gRPC UserAgent
 ### ws-opts.v2ray-http-upgrade-fast-open
 
 Включить fast open для HTTP upgrade 
+
+## xhttp-opts
+
+Параметр транспортного уровня `xhttp` вступает в силу только тогда, когда транспортный уровень — `xhttp`.
+
+!!! note
+    VLESS поддерживает только транспортный уровень xhttp; пожалуйста, не используйте его с другими протоколами.
