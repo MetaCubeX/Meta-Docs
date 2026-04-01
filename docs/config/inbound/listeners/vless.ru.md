@@ -14,6 +14,10 @@ listeners:
       flow: xtls-rprx-vision
   # ws-path: "/" # если не пусто, то включается транспортный уровень websocket
   # grpc-service-name: "GunService" # если не пусто, то включается транспортный уровень grpc
+  # xhttp-config: # Если поле не пустое, включите транспортный уровень xhttp.
+  #   path: "/"
+  #   host: ""
+  #   mode: auto # Available: "stream-one", "stream-up" or "packet-up"
   # -------------------------
   # Конфигурация vless encryption на стороне сервера:
   # (нативный вид / только XOR публичного ключа / полностью случайный. 1-RTT каждый раз выдает случайный ticket на 300-600 секунд для повторного использования 0-RTT / разрешен только 1-RTT)
