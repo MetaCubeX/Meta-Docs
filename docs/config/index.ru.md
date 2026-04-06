@@ -22,7 +22,7 @@
 
     test
 
-- :material-format-list-group: &nbsp; __[Группы политик][proxy-group]__
+- :material-format-list-group: &nbsp; __[Группы прокси][proxy-group]__
 
     test
 
