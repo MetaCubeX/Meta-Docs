@@ -263,7 +263,9 @@ Early Data 首包长度阈值
 
 ### xhttp-opts.reuse-settings.max-concurrency
 
-最多同时存在多少条连接，连接数达到该值前每个新的代理请求都会开启一条新的连接，此后会开始复用已有的连接。该值与 max-connections 冲突，只能二选一
+最多同时存在多少条连接，连接数达到该值前每个新的代理请求都会开启一条新的连接，此后会开始复用已有的连接
+
+该值与 max-connections 冲突，只能二选一
 
 ### xhttp-opts.reuse-settings.c-max-reuse-times
 
