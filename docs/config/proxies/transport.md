@@ -257,3 +257,7 @@ Early Data 首包长度阈值
 
 TCP/QUIC 连接持续该时间后将不会被分配新的 HTTP 请求，将在内部最后一个 HTTP 请求关闭后断开
 
+### xhttp-opts.download-settings
+
+上下行分离设置。注意：此项用于覆盖原始配置，每一项如果不填写则会沿用上行参数
+
