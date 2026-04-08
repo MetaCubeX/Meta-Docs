@@ -38,6 +38,9 @@
         grpc-service-name: example
         # grpc-user-agent: 
         # ping-interval: 0
+        # max-connections: 1 # Maximum connections. Conflict with max-streams.
+        # min-streams: 0 # Minimum multiplexed streams in a connection before opening a new connection. Conflict with max-streams.
+        # max-streams: 0 # Maximum multiplexed streams in a connection before opening a new connection. Conflict with max-connections and min-streams.
     ```
 === "ws"
     ```{.yaml linenums="1"}
@@ -84,6 +87,13 @@
         #   X-Forwarded-For: ""
         # no-grpc-header: false
         # x-padding-bytes: "100-1000"
+        # sc-max-each-post-bytes: 1000000
+        # reuse-settings: # aka XMUX
+        #   max-connections: "16-32"
+        #   max-concurrency: "0"
+        #   c-max-reuse-times: "0"
+        #   h-max-request-times: "600-900"
+        #   h-max-reusable-secs: "1800-3000"
         # download-settings:
         #   ## xhttp part
         #   path: "/"
@@ -92,6 +102,13 @@
         #     X-Forwarded-For: ""
         #   no-grpc-header: false
         #   x-padding-bytes: "100-1000"
+        #   sc-max-each-post-bytes: 1000000
+        #   reuse-settings: # aka XMUX
+        #     max-connections: "16-32"
+        #     max-concurrency: "0"
+        #     c-max-reuse-times: "0"
+        #     h-max-request-times: "600-900"
+        #     h-max-reusable-secs: "1800-3000"
         #   ## proxy part
         #   server: server
         #   port: 443
