@@ -38,9 +38,9 @@
         grpc-service-name: example
         # grpc-user-agent: 
         # ping-interval: 0
-        # max-connections: 1 # Maximum connections. Conflict with max-streams.
-        # min-streams: 0 # Minimum multiplexed streams in a connection before opening a new connection. Conflict with max-streams.
-        # max-streams: 0 # Maximum multiplexed streams in a connection before opening a new connection. Conflict with max-connections and min-streams.
+        # max-connections: 1
+        # min-streams: 0
+        # max-streams: 0
     ```
 === "ws"
     ```{.yaml linenums="1"}
