@@ -18,6 +18,9 @@ listeners:
   #   path: "/"
   #   host: ""
   #   mode: auto # Available: "stream-one", "stream-up" or "packet-up"
+  #   no-sse-header: false
+  #   sc-stream-up-server-secs: "20-80"
+  #   sc-max-each-post-bytes: 1000000
   # -------------------------
   # vless encryption服务端配置：
   # （原生外观 / 只 XOR 公钥 / 全随机数。1-RTT 每次下发随机 300 到 600 秒的 ticket 以便 0-RTT 复用 / 只允许 1-RTT）
