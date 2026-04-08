@@ -18,6 +18,9 @@ listeners:
   #   path: "/"
   #   host: ""
   #   mode: auto # Available: "stream-one", "stream-up" or "packet-up"
+  #   no-sse-header: false
+  #   sc-stream-up-server-secs: "20-80"
+  #   sc-max-each-post-bytes: 1000000
   # -------------------------
   # Конфигурация vless encryption на стороне сервера:
   # (нативный вид / только XOR публичного ключа / полностью случайный. 1-RTT каждый раз выдает случайный ticket на 300-600 секунд для повторного использования 0-RTT / разрешен только 1-RTT)
