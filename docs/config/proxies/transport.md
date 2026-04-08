@@ -259,11 +259,11 @@ Early Data 首包长度阈值
 
 ### xhttp-opts.reuse-settings.max-connections
 
-每条 TCP/QUIC 连接中最多同时存在多少代理请求，连接中的代理请求数量达到该值后 core 会建立新的连接，以容纳更多的代理请求。
+每条底层连接中最多同时存在多少代理请求，连接中的代理请求数量达到该值后会建立新的连接，以容纳更多的代理请求
 
 ### xhttp-opts.reuse-settings.max-concurrency
 
-最多同时存在多少条连接，连接数达到该值前每个新的代理请求都会开启一条新的连接，此后 core 会开始复用已有的连接。该值与 max-connections 冲突，只能二选一
+最多同时存在多少条连接，连接数达到该值前每个新的代理请求都会开启一条新的连接，此后会开始复用已有的连接。该值与 max-connections 冲突，只能二选一
 
 ### xhttp-opts.reuse-settings.c-max-reuse-times
 
