@@ -204,3 +204,31 @@ Early Data 首包长度阈值
 
 !!! note
     仅VLESS支持xhttp传输层，请勿在其他协议上使用
+
+### xhttp-opts.path
+
+请求路径
+
+### xhttp-opts.host
+
+主机名
+
+### xhttp-opts.mode
+
+模式，可选值：`auto`, `stream-one`, `stream-up` or `packet-up`
+
+### xhttp-opts.headers
+
+请求头
+
+### xhttp-opts.no-grpc-header
+
+设置stream-up/one上行是否发送`Content-Type: application/grpc`头伪装成 gRPC
+
+### xhttp-opts.x-padding-bytes
+
+客户端发的 request header 均默认包含 `Referer: ...?x_padding=XXX...` ，默认长度为 100-1000，每次请求随机，服务端默认会检查它是否在服务端允许的范围内
+
+### xhttp-opts.sc-max-each-post-bytes
+
+客户端每个 POST 最多携带多少数据，默认值 1000000 即 1MB，该值应小于 CDN 等 HTTP 中间盒所允许的最大值，服务端也会拒绝大于该值的 POST
