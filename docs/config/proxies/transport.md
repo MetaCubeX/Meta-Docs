@@ -89,8 +89,8 @@
         # x-padding-bytes: "100-1000"
         # sc-max-each-post-bytes: 1000000
         # reuse-settings: # aka XMUX
-        #   max-connections: "16-32"
-        #   max-concurrency: "0"
+        #   max-concurrency: "16-32"
+        #   max-connections: "0"
         #   c-max-reuse-times: "0"
         #   h-max-request-times: "600-900"
         #   h-max-reusable-secs: "1800-3000"
@@ -104,8 +104,8 @@
         #   x-padding-bytes: "100-1000"
         #   sc-max-each-post-bytes: 1000000
         #   reuse-settings: # aka XMUX
-        #     max-connections: "16-32"
-        #     max-concurrency: "0"
+        #     max-concurrency: "16-32"
+        #     max-connections: "0"
         #     c-max-reuse-times: "0"
         #     h-max-request-times: "600-900"
         #     h-max-reusable-secs: "1800-3000"
@@ -259,15 +259,15 @@ Early Data 首包长度阈值
 
 注意：和原版实现不同，此项没有默认值，如果不填写则不开启链接复用，即每次打开一个新的底层链接
 
+### xhttp-opts.reuse-settings.max-concurrency
+
+每条底层连接中最多同时存在多少代理请求，连接中的代理请求数量达到该值后会建立新的连接，以容纳更多的代理请求
+
 ### xhttp-opts.reuse-settings.max-connections
 
 最多同时存在多少条连接，连接数达到该值前每个新的代理请求都会开启一条新的连接，此后会开始复用已有的连接
 
 该值与 max-concurrency 冲突，只能二选一
-
-### xhttp-opts.reuse-settings.max-concurrency
-
-每条底层连接中最多同时存在多少代理请求，连接中的代理请求数量达到该值后会建立新的连接，以容纳更多的代理请求
 
 ### xhttp-opts.reuse-settings.c-max-reuse-times
 
