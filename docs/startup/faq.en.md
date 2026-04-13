@@ -33,7 +33,9 @@ Check details between different architectural levels [here](https://go.dev/wiki/
 
 Check details of system compatibility information about Golang version 1.20 [here](https://go.dev/doc/go1.20#ports).
 
-For macOS users: According to the [Go wiki](https://go.dev/doc/go1.25#darwin), Go 1.25 no longer supports macOS 11. macOS 11 users are advised to download the binary with the `go124` tag, macOS 10.15 users are advised to download the binary with the `go122` tag, and macOS 10.13 users are advised to download the binary with the `go120` tag.
+~~For macOS users: According to the [Go wiki](https://go.dev/doc/go1.25#darwin), Go 1.25 no longer supports macOS 11. macOS 11 users are advised to download the binary with the `go124` tag, macOS 10.15 users are advised to download the binary with the `go122` tag, and macOS 10.13 users are advised to download the binary with the `go120` tag.~~
+
+For macOS users: Currently, all official builds support macOS 10.13 and later (Unofficial builds are not guaranteed to support this; we maintain [our own forked version of Golang](https://github.com/MetaCubeX/go) for compiling.)
 
 For Windows users: Currently, all official builds support Windows 7 and higher. (Unofficial builds are not guaranteed to support this; we maintain [our own forked version of Golang](https://github.com/MetaCubeX/go) for compiling.)
 
