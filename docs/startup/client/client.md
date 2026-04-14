@@ -1,10 +1,10 @@
 # 三方工具/客户端
-这里的工具/客户端均为使用或带有mihomo内核，我们**并不直接控制**这些工具/客户端开发，它们未必包括官方版本的最新功能和修复，任何由**非内核**产生的问题请反馈给各三方工具/客户端
+这里的工具/客户端均为使用或带有 mihomo 内核，我们**并不直接控制**这些工具/客户端开发，它们未必包括官方版本的最新功能和修复，任何由**非内核**产生的问题请反馈给各三方工具/客户端
 
 ## Windows
 
-|项目名称 | 维护状态 |
-|:----|:----|
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
 |[sparkle](https://github.com/xishang0128/sparkle)|维护中 |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|停止维护 |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|维护中 |
@@ -16,9 +16,8 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
-|[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
-|[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
+|[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|维护中 |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
@@ -29,8 +28,8 @@
 
 ## MacOS
 
-|项目名称 | 维护状态 |
-|:----|:----|
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
 |[sparkle](https://github.com/xishang0128/sparkle)|维护中 |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|停止维护 |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|维护中 |
@@ -38,20 +37,19 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
-|[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
-|[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
+|[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
-|[ClashMac](https://github.com/666OS/ClashMac)|维护中 |
+|[ClashMac](https://github.com/666OS/ClashMac)|维护中 | 不开源，构建不可复现 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|维护中 |
 
 ## Linux
 
-|项目名称 | 维护状态 |
-|:----|:----|
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
 |[sparkle](https://github.com/xishang0128/sparkle)|维护中 |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|停止维护 |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|维护中 |
@@ -60,7 +58,6 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
-|[mihomo-purity](https://github.com/mihomo-purity/mihomo-purity)|停止维护 |
 |[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[mihoro](https://github.com/spencerwooo/mihoro)|维护中 |
 |[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
@@ -71,11 +68,11 @@
 
 ## Android
 
-|项目名称 | 维护状态 |
-|:----|:----|
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
-|[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
-|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|维护中 |
+|[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
+|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|维护中 | 不开源，构建不可复现 |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
@@ -83,22 +80,22 @@
 
 ## iOS
 
-|项目名称 | 维护状态 |
-|:----|:----|
-|[ClashMi](https://github.com/KaringX/clashmi)|维护中 |
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
+|[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
 
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
 
-|项目名称 | 维护状态 |
-|:----|:----|
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
 |[merlinclashcat](https://t.me/merlinclashcat)|维护中|
 |[vClash](https://github.com/vxiaov/vClash)|维护中 |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 
 ## OpenWRT
 
-|项目名称 | 维护状态 |
-|:----|:----|
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
 |[OpenClash](https://github.com/vernesong/OpenClash)|维护中 |
 |[OpenWrt-nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)|维护中 |
 |[FullCombo Shark](https://github.com/fcshark-org/openwrt-fchomo)|维护中|
@@ -108,8 +105,8 @@
 
 ## Shell
 
-|项目名称 | 维护状态 |
-|:----|:----|
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 |[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|维护中 |
 |[Box4](https://github.com/CHIZI-0618/box4magisk)|维护中 |
@@ -127,13 +124,13 @@
 
 ## HarmonyOS NEXT(OpenHarmony)
 
-|项目名称 | 维护状态 |
-|:----|:----|
-|[ClashBox](https://github.com/xiaobaigroup/ClashBox)|维护中 |
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
+|[ClashBox](https://github.com/xiaobaigroup/ClashBox)|维护中 | 前端开源，构建不可复现 |
 
 ## Steam OS
 
-|项目名称 | 维护状态 |
-|:----|:----|
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
 |[DeckyClash](https://github.com/chenx-dust/DeckyClash)|维护中 |
 |[ToMoon](https://github.com/YukiCoco/ToMoon)|维护中 |
