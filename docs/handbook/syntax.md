@@ -132,10 +132,10 @@ proxy-providers:
     path: ./proxy_providers/provider2.yaml
 ```
 
-## 域名通配符
+## 域名通配符 {#domain-wildcards}
 
 !!! note
-    本节中的域名通配符与[路由规则中的`DOMAIN-WILDCARD`](../config/rules/#domain-wildcard)并不相同
+  本节中的域名通配符与[路由规则中的`DOMAIN-WILDCARD`](../config/rules/index.md#domain-wildcard)并不相同
 
 ### 通配符 `*`
 
@@ -173,7 +173,7 @@ fake-ip-filter:
 - localhost.ptlogin2.qq.com
 ```
 
-## 引入域名集合
+## 引入域名集合 {#introducing-domain-sets}
 
 !!! warning
     rule-set 仅支持 behavior 为 domain/classical
@@ -184,7 +184,7 @@ fake-ip-filter:
 - "geosite:xxx"
 ```
 
-## 端口范围
+## 端口范围 {#port-ranges}
 
 mihomo 可以使用 `-` 来匹配端口范围，使用 `/` 或者 `,` 来区分多个端口/端口范围
 

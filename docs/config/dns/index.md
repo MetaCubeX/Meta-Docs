@@ -91,7 +91,7 @@ fakeip 下的 IPv6 段设置
 
 fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
 
-值支持[域名通配](../../handbook/syntax.md#_8)以及[引入域名集合](../../handbook/syntax.md#_13)
+值支持[域名通配](../../handbook/syntax.md#domain-wildcards)以及[引入域名集合](../../handbook/syntax.md#introducing-domain-sets)
 
 ## fake-ip-filter-mode
 
@@ -142,7 +142,7 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 
 指定域名查询的解析服务器，可使用 geosite, 优先于 `nameserver/fallback 查询`
 
-键支持[域名通配](../../handbook/syntax.md#_8)
+键支持[域名通配](../../handbook/syntax.md#domain-wildcards)
 
 值支持字符串/数组
 

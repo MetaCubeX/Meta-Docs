@@ -229,7 +229,7 @@ Enable TCP concurrent connections, which will use all IP addresses resolved by D
 tcp-concurrent: true
 ```
 
-## Outbound Interface
+## Outbound Interface {#outbound-interface}
 
 mihomo's traffic outbound interface.
 
@@ -237,7 +237,7 @@ mihomo's traffic outbound interface.
 interface-name: en0
 ```
 
-## Routing Mark
+## Routing Mark {#routing-mark}
 
 Provides a default traffic mark for outbound connections on Linux.
 

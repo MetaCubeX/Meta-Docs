@@ -132,10 +132,10 @@ proxy-providers:
     path: ./proxy_providers/provider2.yaml
 ```
 
-## Подстановочные знаки для доменов
+## Подстановочные знаки для доменов {#domain-wildcards}
 
 !!! note
-    Подстановочные знаки для доменов в этом разделе отличаются от [`DOMAIN-WILDCARD` в правилах маршрутизации](../config/rules/#domain-wildcard)
+  Подстановочные знаки для доменов в этом разделе отличаются от [`DOMAIN-WILDCARD` в правилах маршрутизации](../config/rules/index.md#domain-wildcard)
 
 ### Подстановочный знак `*`
 
@@ -173,7 +173,7 @@ fake-ip-filter:
 - localhost.ptlogin2.qq.com
 ```
 
-## Использование наборов доменов
+## Использование наборов доменов {#introducing-domain-sets}
 
 !!! warning
     rule-set поддерживает только поведение domain/classical
@@ -184,7 +184,7 @@ fake-ip-filter:
 - "geosite:xxx"
 ```
 
-## Диапазоны портов
+## Диапазоны портов {#port-ranges}
 
 Mihomo может использовать `-` для сопоставления диапазонов портов, а также `/` или `,` для разделения нескольких портов/диапазонов портов.
 

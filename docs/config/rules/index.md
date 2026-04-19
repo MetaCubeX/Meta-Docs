@@ -83,7 +83,7 @@ rules:
 这里，`*` 匹配零个或多个字符，`?` 匹配一个字符
 
 !!! note
-    注意这里的通配符和配置文件其他地方的[Clash格式通配符](../../handbook/syntax.md#_8)不相同
+    注意这里的通配符和配置文件其他地方的[Clash格式通配符](../../handbook/syntax.md#domain-wildcards)不相同
 
 ### DOMAIN-REGEX
 
@@ -127,15 +127,15 @@ rules:
 
 ### DST-PORT
 
-匹配请求目标[端口范围](../../handbook/syntax.md#_14)
+匹配请求目标[端口范围](../../handbook/syntax.md#port-ranges)
 
 ### SRC-PORT
 
-匹配请求来源[端口范围](../../handbook/syntax.md#_14)
+匹配请求来源[端口范围](../../handbook/syntax.md#port-ranges)
 
 ### IN-PORT
 
-匹配[入站端口](../inbound/listeners/index.md#port),可用[端口范围](../../handbook/syntax.md#_14)
+匹配[入站端口](../inbound/listeners/index.md#port),可用[端口范围](../../handbook/syntax.md#port-ranges)
 
 ### IN-TYPE
 
@@ -160,7 +160,7 @@ rules:
 这里，`*` 匹配零个或多个字符，`?` 匹配一个字符
 
 !!! note
-    注意这里的通配符和配置文件其他地方的[Clash格式通配符](../../handbook/syntax.md#_8)不相同
+    注意这里的通配符和配置文件其他地方的[Clash格式通配符](../../handbook/syntax.md#domain-wildcards)不相同
 
 ### PROCESS-PATH-REGEX
 
@@ -177,7 +177,7 @@ rules:
 这里，`*` 匹配零个或多个字符，`?` 匹配一个字符
 
 !!! note
-    注意这里的通配符和配置文件其他地方的[Clash格式通配符](../../handbook/syntax.md#_8)不相同
+    注意这里的通配符和配置文件其他地方的[Clash格式通配符](../../handbook/syntax.md#domain-wildcards)不相同
 
 ### PROCESS-NAME-REGEX
 

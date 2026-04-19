@@ -132,10 +132,10 @@ proxy-providers:
     path: ./proxy_providers/provider2.yaml
 ```
 
-## Domain Wildcards
+## Domain Wildcards {#domain-wildcards}
 
 !!! note
-    The domain wildcard in this section is not the same as [`DOMAIN-WILDCARD` in the routing rules](../config/rules/#domain-wildcard).
+  The domain wildcard in this section is not the same as [`DOMAIN-WILDCARD` in the routing rules](../config/rules/index.md#domain-wildcard).
 
 ### Wildcard `*`
 
@@ -173,7 +173,7 @@ fake-ip-filter:
 - localhost.ptlogin2.qq.com
 ```
 
-## Introducing Domain Sets
+## Introducing Domain Sets {#introducing-domain-sets}
 
 !!! warning
     The rule-set only supports behavior as domain/classical.
@@ -184,7 +184,7 @@ fake-ip-filter:
 - "geosite:xxx"
 ```
 
-## Port Ranges
+## Port Ranges {#port-ranges}
 
 Mihomo can use `-` to match port ranges, and `/` or `,` to separate multiple ports/port ranges.
 

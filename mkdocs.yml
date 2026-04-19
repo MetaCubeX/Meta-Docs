@@ -22,7 +22,6 @@ theme:
   features:
     - search.highlight
     - navigation.tracking
-    - navigation.instant
     # - navigation.expand
     - navigation.path
     - navigation.indexes
