@@ -44,16 +44,16 @@ sniffer:
 
 需要嗅探的协议设置，仅支持 `HTTP`/`TLS`/`QUIC`
 
-- `ports`: [端口范围](../../handbook/syntax.md#_14)
+- `ports`: [端口范围](../../handbook/syntax.md#port-ranges)
 - `override-destination`: 覆盖全局`override-destination`设置
 
 ## force-domain
 
-强制进行嗅探的域名列表，使用[域名通配](../../handbook/syntax.md#_8)
+强制进行嗅探的域名列表，使用[域名通配](../../handbook/syntax.md#domain-wildcards)
 
 ## skip-domain
 
-跳过嗅探的域名列表，使用[域名通配](../../handbook/syntax.md#_8)
+跳过嗅探的域名列表，使用[域名通配](../../handbook/syntax.md#domain-wildcards)
 
 ## skip-src-address
 

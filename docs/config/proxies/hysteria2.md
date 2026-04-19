@@ -34,7 +34,7 @@ proxies:
 
 ## ports
 
-配置则启用端口跳跃，忽略`port`，格式参考[端口范围](../../handbook/syntax.md#_14)
+配置则启用端口跳跃，忽略`port`，格式参考[端口范围](../../handbook/syntax.md#port-ranges)
 
 ## hop-interval
 

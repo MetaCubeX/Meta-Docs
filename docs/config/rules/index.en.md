@@ -83,7 +83,7 @@ Wildcard matching, only supports `*` and `?` wildcards.
 Here `*` matches zero or more characters, `?` matches exactly one character.
 
 !!! note
-    Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#_8) elsewhere in the configuration file.
+    Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#domain-wildcards) elsewhere in the configuration file.
 
 ### DOMAIN-REGEX
 
@@ -160,7 +160,7 @@ Process path wildcard matching is used, supporting only `*` and `?` wildcards.
 Here `*` matches zero or more characters, `?` matches exactly one character.
 
 !!! note
-    Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#_8) elsewhere in the configuration file.
+    Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#domain-wildcards) elsewhere in the configuration file.
 
 ### PROCESS-PATH-REGEX
 
@@ -177,7 +177,7 @@ Uses process name wildcard matching, supporting only `*` and `?` wildcards. On t
 Here `*` matches zero or more characters, `?` matches exactly one character.
 
 !!! note
-    Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#_8) elsewhere in the configuration file.
+    Note that the wildcards here are different from the [Clash format wildcards](../../handbook/syntax.md#domain-wildcards) elsewhere in the configuration file.
 
 ### PROCESS-NAME-REGEX
 

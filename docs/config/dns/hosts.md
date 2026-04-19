@@ -8,7 +8,7 @@ hosts:
   baidu.com: google.com
 ```
 
-键支持[域名通配](../../handbook/syntax.md#_8)
+键支持[域名通配](../../handbook/syntax.md#domain-wildcards)
 
 值支持字符串/数组，域名重定向不支持数组
 

@@ -241,7 +241,7 @@ unified-delay: true
 tcp-concurrent: true
 ```
 
-## 出站接口
+## 出站接口 {#outbound-interface}
 
 mihomo 的流量出站接口
 
@@ -249,7 +249,7 @@ mihomo 的流量出站接口
 interface-name: en0
 ```
 
-## 路由标记
+## 路由标记 {#routing-mark}
 
 为 Linux 下的出站连接提供默认流量标记
 
