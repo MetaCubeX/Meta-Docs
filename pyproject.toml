@@ -1,0 +1,16 @@
+[project]
+name = "meta-docs"
+version = "0.1.0"
+description = "Documentation site for mihomo"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mkdocs-awesome-pages-plugin",
+    "mkdocs-git-revision-date-localized-plugin",
+    "mkdocs-material",
+    "mkdocs-static-i18n",
+    "mkdocs-toc-sidebar-plugin",
+]
+
+[tool.uv]
+package = false

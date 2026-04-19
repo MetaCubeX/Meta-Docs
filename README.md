@@ -10,20 +10,20 @@
 
 ##### 安装 virtualenv
 
-* debian
-  * bash/zsh/fish
+- debian
+  - bash/zsh/fish
 
   ```bash
   apt update && apt install virtualenv
   ```
 
-  * nushell
+  - nushell
 
   ```nushell
   apt update ; apt install virtualenv
   ```
 
-* archlinux
+- archlinux
 
   ```bash
   pacman -Syu python-virtualenv
@@ -31,63 +31,86 @@
 
 ##### 创建虚拟环境
 
-```bash
-virtualenv venv
-```
-
-##### 使用虚拟环境
-
-* bash/zsh
+### 安装 uv
 
 ```bash
-source venv/bin/activate
+推荐使用 [uv](https://docs.astral.sh/uv/) 管理 Python 和项目依赖。
 ```
 
-* nushell
+Windows:
 
-```nushell
-use venv/bin/activate.nu
+```powershell
+winget install --id=astral-sh.uv
 ```
 
-* fish
+macOS / Linux:
 
 ```bash
-source venv/bin/activate.fish
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-##### 退出虚拟环境
+### 安装 Python
+
+项目使用 Python 3.11，首次使用可执行：
 
 ```bash
-deactivate
+uv python install
 ```
 
-##### 确认是否处于虚拟环境
+### 同步依赖
+
+`uv` 会自动创建并管理项目根目录下的 `.venv`。
 
 ```bash
-which python3
+uv sync
 ```
 
-### 设置源
+### 设置镜像源（可选）
 
-```bash
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-```
+如果访问 PyPI 较慢，可以临时设置 `UV_DEFAULT_INDEX`：
 
-### 安装依赖
+- PowerShell
 
-```bash
-pip install -r requirements.txt
-```
+  ```powershell
+  $env:UV_DEFAULT_INDEX = "https://pypi.tuna.tsinghua.edu.cn/simple"
+  ```
+
+- bash/zsh
+
+  ```bash
+  export UV_DEFAULT_INDEX="https://pypi.tuna.tsinghua.edu.cn/simple"
+  ```
 
 ### 预览修改
 
 ```bash
-mkdocs serve
+uv run mkdocs serve
 ```
 
-### 参考文档
+### 构建文档
 
-<https://squidfunk.github.io/mkdocs-material/setup/>
-<https://squidfunk.github.io/mkdocs-material/reference/>
+```bash
+uv run mkdocs build
+```
 
-推荐使用 [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) 对文档进行格式化。
+### 使用虚拟环境（可选）
+
+如果你确实需要手动进入虚拟环境，可以使用：
+
+- PowerShell
+
+  ```powershell
+  .\.venv\Scripts\Activate.ps1
+  ```
+
+- bash/zsh
+
+  ```bash
+  source .venv/bin/activate
+  ```
+
+退出虚拟环境：
+
+```bash
+deactivate
+```

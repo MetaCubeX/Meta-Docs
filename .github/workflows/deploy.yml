@@ -14,14 +14,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: '0'
-      - uses: actions/setup-python@v4
+      - uses: astral-sh/setup-uv@v6
         with:
-          python-version: 3.x
-          cache: 'pip'
+          enable-cache: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
       - run: |
           echo "COMMIT_MSG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-      - run: pip install -r requirements.txt
-      - run: mkdocs build
+      - run: uv sync --frozen
+      - run: uv run mkdocs build
       - name: Git push assets to "gh-pages" branch
         run: |
           cd site || exit 1
