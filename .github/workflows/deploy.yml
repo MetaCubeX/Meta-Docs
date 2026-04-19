@@ -11,18 +11,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
-          fetch-depth: '0'
-      - uses: astral-sh/setup-uv@v6
+          fetch-depth: "0"
+      - uses: astral-sh/setup-uv@cec208311dfd045dd5311c1add060b2062131d57 # v8.0.0
         with:
           enable-cache: true
-      - uses: actions/setup-python@v5
-        with:
-          python-version-file: .python-version
+
       - run: |
           echo "COMMIT_MSG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-      - run: uv sync --frozen
+      - run: uv sync
       - run: uv run mkdocs build
       - name: Git push assets to "gh-pages" branch
         run: |

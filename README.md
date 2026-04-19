@@ -4,33 +4,6 @@
 
 ## 使用方法
 
-### 设置虚拟环境
-
-部分操作系统 python3.11 以上依赖虚拟环境运行，不能直接运行
-
-##### 安装 virtualenv
-
-- debian
-  - bash/zsh/fish
-
-  ```bash
-  apt update && apt install virtualenv
-  ```
-
-  - nushell
-
-  ```nushell
-  apt update ; apt install virtualenv
-  ```
-
-- archlinux
-
-  ```bash
-  pacman -Syu python-virtualenv
-  ```
-
-##### 创建虚拟环境
-
 ### 安装 uv
 
 ```bash
