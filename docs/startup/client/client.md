@@ -25,6 +25,8 @@
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
+|[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|维护中 |
+|[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 
 ## MacOS
 
@@ -46,6 +48,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|维护中 |
 |[CatBar](https://github.com/QuentinHsu/cat-bar)|维护中 |
+|[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 
 ## Linux
 
@@ -66,6 +69,7 @@
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
+|[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 
 ## Android
 

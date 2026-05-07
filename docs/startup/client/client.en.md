@@ -25,6 +25,8 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Maintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
+|[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|Maintained |
+|[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 
 ## MacOS
 
@@ -45,6 +47,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ClashMac](https://github.com/666OS/ClashMac)|Maintained | Closed-source; build is not reproducible |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|Maintained |
+|[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 
 ## Linux
 
@@ -65,6 +68,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|Maintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
+|[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 
 ## Android
 

@@ -25,6 +25,8 @@
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддерживается |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
+|[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|поддерживается |
+|[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 
 ## MacOS
 
@@ -45,6 +47,7 @@
 |[ClashMac](https://github.com/666OS/ClashMac)|поддерживается | Закрытый исходный код, сборка невоспроизводима |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|поддерживается |
+|[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 
 ## Linux
 
@@ -65,6 +68,7 @@
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
+|[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 
 ## Android
 
