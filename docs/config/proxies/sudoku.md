@@ -27,11 +27,11 @@ proxies:
 
 ## key
 
-如果你使用sudoku生成的ED25519密钥对，请填写密钥对中的私钥，否则填入和服务端相同的uuid
+如果你使用 sudoku 生成的 ED25519 密钥对，请填写密钥对中的私钥，否则填入和服务端相同的 uuid
 
 ## aead-method
 
-可选值：`chacha20-poly1305`、`aes-128-gcm`、`none` 我们保证在none的情况下sudoku混淆层仍然确保安全
+可选值：`chacha20-poly1305`、`aes-128-gcm`、`none` 我们保证在 none 的情况下 sudoku 混淆层仍然确保安全
 
 ## padding-min
 
@@ -47,7 +47,7 @@ proxies:
 
 ## custom-table
 
-可选，自定义字节布局，必须包含2个x、2个p、4个v，可随意组合；只对 entropy 方向生效
+可选，自定义字节布局，必须包含 2 个 x、2 个 p、4 个 v，可随意组合；只对 entropy 方向生效
 
 ## custom-tables
 
@@ -79,4 +79,4 @@ proxies:
 
 ## enable-pure-downlink
 
-是否启用混淆下行，false的情况下能在保证数据安全的前提下极大提升下行速度，与服务端端保持相同(如果此处为false，则要求aead不可为none)
+是否启用混淆下行，false 的情况下能在保证数据安全的前提下极大提升下行速度，与服务端端保持相同 (如果此处为 false，则要求 aead 不可为 none)

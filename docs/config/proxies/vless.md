@@ -51,7 +51,7 @@ UDP 包编码，为空则使用原始编码，可选 `packetaddr` (由 `v2ray 5+
 
 ## encryption
 
-vless encryption客户端配置：
+vless encryption 客户端配置：
 
 `encryption: "mlkem768x25519plus.native/xorpub/random.1rtt/0rtt.(padding len).(padding gap).(X25519 Password).(ML-KEM-768 Client)..."`
 

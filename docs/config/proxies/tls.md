@@ -38,15 +38,15 @@ proxies:
 ```bash
 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 ```
-获取，也可以通过Chrome浏览器的“证书查看器”中“SHA256指纹”的“证书”项获取
+获取，也可以通过 Chrome 浏览器的“证书查看器”中“SHA256 指纹”的“证书”项获取
 
 !!! warning
 
-    * 当填入的是叶子证书（即包含sni名称的证书）时，只验证服务端发来的证书是否符合该指纹，不会做额外校验
+    * 当填入的是叶子证书（即包含 sni 名称的证书）时，只验证服务端发来的证书是否符合该指纹，不会做额外校验
     
-    * 当填入的是其他类型的证书（如中级证书或根证书）的指纹，会验证服务端发来的证书链是否由该证书签发，自v1.19.20起还需符合sni/servername的要求
+    * 当填入的是其他类型的证书（如中级证书或根证书）的指纹，会验证服务端发来的证书链是否由该证书签发，自 v1.19.20 起还需符合 sni/servername 的要求
     
-    * 此项中的指纹是完整证书的指纹，不是HPKP中定义的“证书公钥指纹”，请勿混淆
+    * 此项中的指纹是完整证书的指纹，不是 HPKP 中定义的“证书公钥指纹”，请勿混淆
 
 ## alpn
 
@@ -62,11 +62,11 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 ## certificate
 
-如果填写则开启 [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/)（需要和private-key同时填写），内容为证书 PEM 格式，或者 证书的路径
+如果填写则开启 [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/)（需要和 private-key 同时填写），内容为证书 PEM 格式，或者 证书的路径
 
 ## private-key
 
-如果填写则开启 [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/)（需要和certificate同时填写），内容为证书对应的私钥 PEM 格式，或者私钥路径
+如果填写则开启 [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/)（需要和 certificate 同时填写），内容为证书对应的私钥 PEM 格式，或者私钥路径
 
 ## client-fingerprint
 
@@ -95,15 +95,15 @@ reality 服务端私钥对应的公钥
 
 ### ech-opts.enable
 
-启用 ECH（Encrypted Client Hello），如果为true，则启用 ECH
+启用 ECH（Encrypted Client Hello），如果为 true，则启用 ECH
 
 ### ech-opts.config
 
-ECH 配置，如果为空则通过dns解析，不为空则通过该值指定，格式为经过base64编码的ech参数（例如`AEn+DQBFKwAgACABWIHUGj4u+PIggYXcR5JF0gYk3dCRioBW8uJq9H4mKAAIAAEAAQABAANAEnB1YmxpYy50bHMtZWNoLmRldgAA`）
+ECH 配置，如果为空则通过 dns 解析，不为空则通过该值指定，格式为经过 base64 编码的 ech 参数（例如`AEn+DQBFKwAgACABWIHUGj4u+PIggYXcR5JF0gYk3dCRioBW8uJq9H4mKAAIAAEAAQABAANAEnB1YmxpYy50bHMtZWNoLmRldgAA`）
 
 !!! info
-    您可以通过`mihomo generate ech-keypair test.com`命令为服务器端和客户端生成符合要求的自签名ech配置对，请将`test.com`自行替换为您想要对外展现的SNI域名，输出中`Config:`后的内容可填在此处，`Key:`后的内容应填在服务端的ECH配置（mihomo的listeners中为`ech-key`）中
+    您可以通过`mihomo generate ech-keypair test.com`命令为服务器端和客户端生成符合要求的自签名 ech 配置对，请将`test.com`自行替换为您想要对外展现的 SNI 域名，输出中`Config:`后的内容可填在此处，`Key:`后的内容应填在服务端的 ECH 配置（mihomo 的 listeners 中为`ech-key`）中
 
 ### ech-opts.query-server-name
 
-可选项，不为空时用于指定通过dns解析时的域名
+可选项，不为空时用于指定通过 dns 解析时的域名

@@ -30,4 +30,4 @@ proxies:
 
 ## traffic-pattern
 
-一个 base64 字符串用于微调网络行为, 格式请参考[mieru官方文档](https://github.com/enfein/mieru/blob/main/docs/traffic-pattern.md)
+一个 base64 字符串用于微调网络行为，格式请参考[mieru 官方文档](https://github.com/enfein/mieru/blob/main/docs/traffic-pattern.md)

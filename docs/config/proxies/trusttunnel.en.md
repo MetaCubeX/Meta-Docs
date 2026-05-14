@@ -25,32 +25,32 @@ proxies:
   # max-streams: 0
 ```
 
-[通用字段](./index.md)
+[Common fields](./index.md)
 
-[TLS 字段](./tls.md)
+[TLS fields](./tls.md)
 
 ## quic
 
-是否开启 QUIC 协议，默认为 false。
+Whether to enable QUIC. Default: `false`.
 
 ## congestion-controller
 
-设置 QUIC 拥塞控制算法。
+Sets the QUIC congestion control algorithm.
 
 ### max-connections
 
-最大连接数量。
+Maximum number of connections.
 
-与 `max-streams` 冲突
+Conflicts with `max-streams`.
 
 ### min-streams
 
-在打开新连接之前，连接中的最小多路复用流数量
+Minimum number of multiplexed streams in a connection before opening a new connection.
 
-与 `max-streams` 冲突
+Conflicts with `max-streams`.
 
 ### max-streams
 
-在打开新连接之前，连接中的最大多路复用流数量
+Maximum number of multiplexed streams in a connection before opening a new connection.
 
-与 `max-connections` 和 `min-streams` 冲突
+Conflicts with `max-connections` and `min-streams`.

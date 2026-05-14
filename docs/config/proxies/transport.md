@@ -185,7 +185,7 @@ gRPC 心跳包间隔，默认关闭，单位为秒
 
 ### grpc-opts.max-connections
 
-最大连接数量。默认值为1即只使用一条底层链接
+最大连接数量。默认值为 1 即只使用一条底层链接
 
 与 `max-streams` 冲突
 
@@ -231,10 +231,10 @@ Early Data 首包长度阈值
 
 `xhttp` 传输层设置，仅传输层为 `xhttp` 时生效
 
-默认仅支持h2，如果开启h3模式需要设置`alpn: [h3]`，如果开启http1.1模式需要设置`alpn: [http/1.1]`
+默认仅支持 h2，如果开启 h3 模式需要设置`alpn: [h3]`，如果开启 http1.1 模式需要设置`alpn: [http/1.1]`
 
 !!! note
-    仅VLESS支持xhttp传输层，请勿在其他协议上使用
+    仅 VLESS 支持 xhttp 传输层，请勿在其他协议上使用
 
 
 ### xhttp-opts.path
@@ -255,7 +255,7 @@ Early Data 首包长度阈值
 
 ### xhttp-opts.no-grpc-header
 
-设置stream-up/one上行是否发送`Content-Type: application/grpc`头伪装成 gRPC
+设置 stream-up/one 上行是否发送`Content-Type: application/grpc`头伪装成 gRPC
 
 ### xhttp-opts.x-padding-bytes
 
@@ -340,7 +340,7 @@ HTTP 标头的名称。仅当 `x-padding-placement` 为 `header` 或 `queryInHea
 
 ### xhttp-opts.reuse-settings
 
-链接复用设置（即XMUX）
+链接复用设置（即 XMUX）
 
 注意：和原版实现不同，此项没有默认值，如果不填写则不开启链接复用，即每次打开一个新的底层链接
 

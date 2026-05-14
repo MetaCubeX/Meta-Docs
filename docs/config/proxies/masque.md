@@ -85,4 +85,4 @@ TUN 设备的 MTU 大小，默认为 1280
 
 ## network
 
-optional, 默认为quic，masque-h2需要设置为`h2`
+optional, 默认为 quic，masque-h2 需要设置为`h2`

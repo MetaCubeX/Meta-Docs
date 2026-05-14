@@ -27,13 +27,13 @@ rules:
 
 最终表现：
 
-  * 浏览器访问IP查询网站时只会显示ss1的IP（即目标网站不知道ss2的存在）
-  * 内核对外看起来只是在访问ss2（即你的宽带运营商不知道ss1的存在）
-  * 只有ss2的服务端知道在访问ss1（ss2的服务端也只知道在访问ss1，并不知道在访问什么目标网站）
+  * 浏览器访问 IP 查询网站时只会显示 ss1 的 IP（即目标网站不知道 ss2 的存在）
+  * 内核对外看起来只是在访问 ss2（即你的宽带运营商不知道 ss1 的存在）
+  * 只有 ss2 的服务端知道在访问 ss1（ss2 的服务端也只知道在访问 ss1，并不知道在访问什么目标网站）
 
 ## 常见实例
 
-### 通过订阅节点中转自己的VPS落地
+### 通过订阅节点中转自己的 VPS 落地
 
 ```{.yaml linenums="1"}
 proxies:
@@ -56,12 +56,12 @@ rules:
   - MATCH,ss1
 ```
 
-这里将订阅地址填入provider1中，将你自己VPS中搭建的节点填入ss1中即可，此时通过浏览器访问时显示的是ss1的IP
+这里将订阅地址填入 provider1 中，将你自己 VPS 中搭建的节点填入 ss1 中即可，此时通过浏览器访问时显示的是 ss1 的 IP
 
 !!! note
-    没有特殊需求的情况下，在自己被中转的VPS落地中搭建的节点请勿选择任何udp类协议如hy2/tuic/wg，以及带有tls伪装类协议如reality/shadowtls，您的订阅节点可能不能正常通过这些协议，这里建议选择最简单的ss aead或者vmess协议
+    没有特殊需求的情况下，在自己被中转的 VPS 落地中搭建的节点请勿选择任何 udp 类协议如 hy2/tuic/wg，以及带有 tls 伪装类协议如 reality/shadowtls，您的订阅节点可能不能正常通过这些协议，这里建议选择最简单的 ss aead 或者 vmess 协议
 
-### 通过特定socks连接订阅节点
+### 通过特定 socks 连接订阅节点
 
 ```{.yaml linenums="1"}
 proxies:
@@ -84,16 +84,16 @@ rules:
   - MATCH,select1
 ```
 
-该实例适用于需要通过一个特定socks才能访问外网的情况（如内外网隔离环境），将环境提供的socks配置填入socks1，将订阅地址填入provider1中，此时通过浏览器访问时显示的是订阅中节点的IP
+该实例适用于需要通过一个特定 socks 才能访问外网的情况（如内外网隔离环境），将环境提供的 socks 配置填入 socks1，将订阅地址填入 provider1 中，此时通过浏览器访问时显示的是订阅中节点的 IP
 
 !!! note
-    这里只是示范了dialer-proxy的相关配置，您可能还需要更多的配置才能保证订阅下载，dns解析等流程同样通过该socks
+    这里只是示范了 dialer-proxy 的相关配置，您可能还需要更多的配置才能保证订阅下载，dns 解析等流程同样通过该 socks
 
-## relay迁移
+## relay 迁移
 
-relay类型的proxy-group已经被废弃，而proxy-group并不直接支持dialer-proxy，因此针对部分使用场景，给出参考方案
+relay 类型的 proxy-group 已经被废弃，而 proxy-group 并不直接支持 dialer-proxy，因此针对部分使用场景，给出参考方案
 
-### relay中包含多个select
+### relay 中包含多个 select
 
 有如下配置
 
@@ -111,7 +111,7 @@ rules:
   - MATCH,relay-proxy
 ```
 
-迁移到dialer-proxy方案时，需要将proxy3和proxy4定义到proxy-provider中，并通过override设置该provider中所有proxy的dialer-proxy，如下所示：
+迁移到 dialer-proxy 方案时，需要将 proxy3 和 proxy4 定义到 proxy-provider 中，并通过 override 设置该 provider 中所有 proxy 的 dialer-proxy，如下所示：
 
 ```{.yaml linenums="1"}
 proxies:
