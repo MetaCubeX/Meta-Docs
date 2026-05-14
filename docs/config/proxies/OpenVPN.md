@@ -31,6 +31,8 @@ proxies
   udp: true
   # mtu: 1500
   # dialer-proxy: "ss1"
+# remote-dns-resolve: true
+# dns: [ 1.1.1.1, 8.8.8.8 ]    
 ```
 
 [通用字段](./index.md)
@@ -86,3 +88,9 @@ proxies
 ## dialer-proxy
 
 可选，用于指定出站代理的标识，如果不为空，则 OpenVPN 连接通过该代理发出。
+
+## remote-dns-resolve
+可选，是否强制 DNS 远程解析，默认 false。
+
+## dns
+可选，仅在 remote-dns-resolve 为 true 时生效，可指定 DNS 地址列表。
