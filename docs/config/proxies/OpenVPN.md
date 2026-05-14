@@ -31,8 +31,8 @@ proxies
   udp: true
   # mtu: 1500
   # dialer-proxy: "ss1"
-# remote-dns-resolve: true
-# dns: [ 1.1.1.1, 8.8.8.8 ]    
+  # remote-dns-resolve: true
+  # dns: [ 1.1.1.1, 8.8.8.8 ]    
 ```
 
 [通用字段](./index.md)
