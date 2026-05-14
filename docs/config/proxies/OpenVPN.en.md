@@ -34,7 +34,7 @@ proxies
 
 ```
 
-[Common Fields](https://www.google.com/search?q=./index.md)
+[Common Fields](./index.md)
 
 ## server
 
