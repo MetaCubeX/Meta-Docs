@@ -31,7 +31,8 @@ proxies
   udp: true
   # mtu: 1500
   # dialer-proxy: "ss1"
-
+  # remote-dns-resolve: true
+  # dns: [ 1.1.1.1, 8.8.8.8 ]
 ```
 
 [Common Fields](./index.md)
@@ -87,3 +88,8 @@ proxies
 ## dialer-proxy
 
 **Optional.** Specifies the identifier for an outbound proxy. If provided, the OpenVPN connection will be established through this proxy.
+
+## remote-dns-resolve
+Optional, whether to force DNS resolution on the remote server, default is false.
+## dns
+Optional, only effective when remote-dns-resolve is true; allows specifying a list of DNS addresses.
