@@ -81,6 +81,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддерживается |
+|[MonadBox](https://github.com/MonadBoxLab/MonadBox)|поддерживается |
 
 ## iOS
 

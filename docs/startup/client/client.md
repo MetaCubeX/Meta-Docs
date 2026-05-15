@@ -82,6 +82,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
+|[MonadBox](https://github.com/MonadBoxLab/MonadBox)|维护中 |
 
 ## iOS
 

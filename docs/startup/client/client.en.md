@@ -81,6 +81,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Maintained |
+|[MonadBox](https://github.com/MonadBoxLab/MonadBox)|Maintained |
 
 ## iOS
 
