@@ -112,6 +112,7 @@ plugins:
 
             web面板: Web dashboard
             客户端: Client
+            使用预编译二进制: Use prebuilt binaries
             创建运行服务: Create a running service
             三方工具/客户端: Third-party tools/client
             常见问题: common problem
@@ -127,13 +128,18 @@ plugins:
             域名嗅探: Domain sniffing
             通用字段: Common fields
             入站: Inbounds
+            入站配置: inbound configuration
             代理端口: Proxy Port
             出站代理: Proxies
+            TLS配置: TLS configuration
+            传输层配置: transport configuration
+            内置代理策略: built-in proxy policies
             代理集合: Proxy-Providers
             代理集合配置: proxy-providers configuration
             代理集合内容: proxy-providers contents
             代理组: Proxy-Groups
             代理组配置: proxy-groups configuration
+            内置代理组: built-in proxy groups
             手动选择: Select
             自动选择: Url-Test
             自动回退: Fallback
@@ -175,6 +181,7 @@ plugins:
             域名嗅探: Сниффинг доменов
             通用字段: Общие поля
             入站: Входящие соединения
+            入站配置: Настройка входящих соединений
             代理端口: Порт прокси
             出站代理: Прокси
             代理集合: Провайдеры прокси
@@ -281,6 +288,7 @@ nav:
       - SSH: config/proxies/ssh.md
       - MASQUE: config/proxies/masque.md
       - TrustTunnel: config/proxies/trusttunnel.md
+      - OpenVPN: config/proxies/openvpn.md
     - 代理集合:
       - 代理集合配置: config/proxy-providers/index.md
       - 代理集合内容: config/proxy-providers/content.md
