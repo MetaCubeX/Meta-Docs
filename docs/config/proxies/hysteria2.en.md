@@ -22,6 +22,18 @@ proxies:
   fingerprint: xxxx
   alpn:
     - h3
+  # realm-opts:
+  #   enable: true # Must be turned on manually
+  #   server-url: https://realm.hy2.io
+  #   token: public
+  #   realm-id: my-cabin-1f3a8c2e9b
+  #   stun-servers:
+  #     - stun.nextcloud.com:3478
+  #     - stun.sip.us:3478
+  #     - global.stun.twilio.com:3478
+  #   # The following supports entering TLS configuration for the server-url (sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #   # skip-cert-verify： false
+  #   # ......
 ```
 
 [Common Fields](./index.md)
@@ -53,3 +65,5 @@ QUIC traffic obfuscator type, can only be set to `salamander`. If left empty, it
 ## obfs-password
 
 QUIC traffic obfuscator password.
+
+## realm-opts
