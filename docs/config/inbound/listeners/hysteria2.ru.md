@@ -16,6 +16,19 @@ listeners:
   obfs-password: password
   masquerade: ""
   #  bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  #  realm-opts:
+  #    enable: true # Необходимо включить вручную.
+  #    server-url: https://realm.hy2.io
+  #    token: public
+  #    realm-id: my-cabin-1f3a8c2e9b
+  #    stun-servers:
+  #      - stun.nextcloud.com:3478
+  #      - stun.sip.us:3478
+  #      - global.stun.twilio.com:3478
+  #    # proxy: DIRECT # Настройте URL-адрес сервера для подключения через определенный прокси-сервер.
+  #    # Следующая инструкция позволяет ввести конфигурацию TLS для URL-адреса сервера (sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #    # skip-cert-verify： false
+  #    # ......
   alpn:
   - h3
   certificate: ./server.crt # сертификат в формате PEM или путь к сертификату
@@ -74,6 +87,8 @@ listeners:
 |--------------|-------------------------|----------------|
 | `file`       | `file:///var/www`       | Файловый сервер |
 | `http/https` | `http://127.0.0.1:8080` | Обратный прокси |
+
+### realm-opts
 
 ### alpn
 
