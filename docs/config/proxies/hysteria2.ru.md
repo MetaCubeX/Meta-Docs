@@ -22,6 +22,18 @@ proxies:
   fingerprint: xxxx
   alpn:
     - h3
+  # realm-opts:
+  #   enable: true # Необходимо включить вручную.
+  #   server-url: https://realm.hy2.io
+  #   token: public
+  #   realm-id: my-cabin-1f3a8c2e9b
+  #   stun-servers:
+  #     - stun.nextcloud.com:3478
+  #     - stun.sip.us:3478
+  #     - global.stun.twilio.com:3478
+  #   # Следующая инструкция позволяет ввести конфигурацию TLS для URL-адреса сервера (sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #   # skip-cert-verify： false
+  #   # ......
   ###специальные настройки quic-go, не изменяйте без необходимости, если не знаете, что делаете###
   # initial-stream-receive-window： 8388608
   # max-stream-receive-window： 8388608
@@ -56,5 +68,7 @@ proxies:
 Тип маскировки трафика QUIC, можно установить только `salamander`, если пусто, то отключено
 
 ## obfs-password
+
+## realm-opts
 
 Пароль для маскировки трафика QUIC 
