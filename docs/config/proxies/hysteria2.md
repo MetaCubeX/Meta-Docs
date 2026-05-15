@@ -22,6 +22,18 @@ proxies:
   fingerprint: xxxx # 配置指纹将实现 SSL Pining 效果, 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
   alpn:
     - h3
+  # realm-opts:
+  #   enable: true # 必须手动开启
+  #   server-url: https://realm.hy2.io
+  #   token: public
+  #   realm-id: my-cabin-1f3a8c2e9b
+  #   stun-servers:
+  #     - stun.nextcloud.com:3478
+  #     - stun.sip.us:3478
+  #     - global.stun.twilio.com:3478
+  #   # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #   # skip-cert-verify： false
+  #   # ......
   ###quic-go特殊配置项，不要随意修改除非你知道你在干什么###
   # initial-stream-receive-window： 8388608
   # max-stream-receive-window： 8388608
@@ -56,5 +68,7 @@ brutal 速率控制，若不写单位，默认为 Mbps
 QUIC 流量混淆器类型，仅可设为 `salamander`，如果为空则禁用
 
 ## obfs-password
+
+## realm-opts
 
 QUIC 流量混淆器密码
