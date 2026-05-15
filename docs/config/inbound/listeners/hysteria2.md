@@ -16,6 +16,19 @@ listeners:
   obfs-password: password
   masquerade: ""
   #  bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  #  realm-opts:
+  #    enable: true # 必须手动开启
+  #    server-url: https://realm.hy2.io
+  #    token: public
+  #    realm-id: my-cabin-1f3a8c2e9b
+  #    stun-servers:
+  #      - stun.nextcloud.com:3478
+  #      - stun.sip.us:3478
+  #      - global.stun.twilio.com:3478
+  #    # proxy: DIRECT # 设置server-url通过哪个代理进行连接
+  #    # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #    # skip-cert-verify： false
+  #    # ......
   alpn:
   - h3
   certificate: ./server.crt # 证书 PEM 格式，或者 证书的路径
@@ -74,6 +87,8 @@ QUIC 流量混淆器密码
 |--------------|-------------------------|--------------|
 | `file`       | `file:///var/www`       | 作为文件服务器 |
 | `http/https` | `http://127.0.0.1:8080` | 作为反向代理   |
+
+### realm-opts
 
 ### alpn
 
