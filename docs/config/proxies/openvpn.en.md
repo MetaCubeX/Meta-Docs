@@ -80,7 +80,7 @@ Optional, virtual network interface type. Currently only `tun` is supported. Def
 
 ## cipher
 
-Optional, encryption method. Supports `AES-128-GCM` / `AES-256-GCM`. Defaults to `AES-128-GCM`.
+Optional, encryption method. Supports `AES-128-GCM` / `AES-256-GCM`./ `CHACHA20-POLY1305`Defaults to `AES-128-GCM`.
 
 ## auth
 
