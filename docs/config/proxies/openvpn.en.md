@@ -72,7 +72,7 @@ Optional, protocol type. Supports `udp` or `tcp`. Defaults to `udp`.
 
 ## tls-crypt
 
-Optional, TLS encryption key. Copy this from the `<tls-crypt>` tag in your `.ovpn` file; do not include the tags themselves.
+**Required**, TLS encryption key. Copy this from the `<tls-crypt>` tag in your `.ovpn` file; do not include the tags themselves.
 
 ## dev
 

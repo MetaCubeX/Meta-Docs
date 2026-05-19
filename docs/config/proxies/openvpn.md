@@ -72,7 +72,7 @@ proxies:
 
 ## tls-crypt
 
-可选，TLS 加密密钥。从 `.ovpn` 文件的 `<tls-crypt>` 标签中复制，不需要保留标签。
+**必须**，TLS 加密密钥。从 `.ovpn` 文件的 `<tls-crypt>` 标签中复制，不需要保留标签。
 
 ## dev
 
