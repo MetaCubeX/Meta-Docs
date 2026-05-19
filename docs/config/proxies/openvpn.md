@@ -80,7 +80,7 @@ proxies:
 
 ## cipher
 
-可选，加密方式，支持 `AES-128-GCM` / `AES-256-GCM`，默认 `AES-128-GCM`。
+可选，加密方式，支持 `AES-128-GCM` / `AES-256-GCM`/ `CHACHA20-POLY1305`默认 `AES-128-GCM`。
 
 ## auth
 
