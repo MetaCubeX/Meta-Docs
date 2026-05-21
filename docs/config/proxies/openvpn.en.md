@@ -1,5 +1,3 @@
-Here is the complete OpenVPN documentation translated into English, maintaining your formatting rules:
-
 # OpenVPN
 
 ```{.yaml linenums="1"}
