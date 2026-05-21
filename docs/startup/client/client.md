@@ -27,6 +27,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 
 ## MacOS
 
@@ -49,6 +50,7 @@
 |[ClashBar](https://github.com/Sitoi/ClashBar)|维护中 |
 |[CatBar](https://github.com/QuentinHsu/cat-bar)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 
 ## Linux
 
@@ -70,6 +72,7 @@
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 
 ## Android
 
@@ -83,6 +86,7 @@
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|维护中 |
+|[ClashFest](https://github.com/Nemu-x/ClashFest)|维护中 |
 
 ## iOS
 
