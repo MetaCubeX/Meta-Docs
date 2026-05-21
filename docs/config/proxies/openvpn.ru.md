@@ -38,7 +38,7 @@ proxies:
 
 ```
 
-[Общие поля](https://www.google.com/search?q=./index.md)
+[Общие поля](./index.md)
 
 ## server
 
