@@ -48,6 +48,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
+|[clashtui](https://github.com/JohanChane/clashtui)|Maintained |
 
 ## Linux
 

@@ -49,6 +49,7 @@
 |[ClashBar](https://github.com/Sitoi/ClashBar)|维护中 |
 |[CatBar](https://github.com/QuentinHsu/cat-bar)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
+|[clashtui](https://github.com/JohanChane/clashtui)|维护中 |
 
 ## Linux
 
