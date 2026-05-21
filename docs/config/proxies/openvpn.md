@@ -23,10 +23,10 @@ proxies:
       -----BEGIN CERTIFICATE-----
       MIIB...example
       -----END CERTIFICATE-----
-    tls-crypt: |
-      -----BEGIN OpenVPN Static key V1-----
-      ...
-      -----END OpenVPN Static key V1-----
+    # tls-crypt: |
+     # -----BEGIN OpenVPN Static key V1-----
+     #  ...
+     #  -----END OpenVPN Static key V1-----
     # dev: tun
     # cipher: AES-128-GCM
     # auth: SHA256
@@ -72,7 +72,7 @@ proxies:
 
 ## tls-crypt
 
-**必须**，TLS 加密密钥。从 `.ovpn` 文件的 `<tls-crypt>` 标签中复制，不需要保留标签。
+**可选**，TLS 加密密钥。从 `.ovpn` 文件的 `<tls-crypt>` 标签中复制，不需要保留标签。
 
 ## dev
 
@@ -80,11 +80,11 @@ proxies:
 
 ## cipher
 
-可选，加密方式，支持 `AES-128-GCM` / `AES-256-GCM`/ `CHACHA20-POLY1305`默认 `AES-128-GCM`。
+可选，加密方式，支持 `AES-128-GCM` / `AES-256-GCM`/ `AES-128-CBC` / `AES-256-CBC` /`CHACHA20-POLY1305`默认 `AES-128-GCM`， `AES-CBC` 会按 `AES-128-CBC` 处理。
 
 ## auth
 
-可选，数据验证算法，目前仅支持 `SHA256`，默认 `SHA256`。
+可选，数据验证算法，支持 `SHA1` / `SHA256`，默认 SHA256；AEAD cipher 会忽略 auth。
 
 ## udp
 
