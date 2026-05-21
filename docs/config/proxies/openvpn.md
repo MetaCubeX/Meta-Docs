@@ -84,7 +84,7 @@ proxies:
 
 ## auth
 
-可选，数据验证算法，支持 `SHA1` / `SHA256`，默认 SHA256；AEAD cipher 会忽略 auth。
+可选，数据验证算法，支持 `SHA1` / `SHA256`，默认 `SHA256`；AEAD cipher 会忽略 auth。
 
 ## udp
 
