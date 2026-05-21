@@ -24,7 +24,7 @@ proxies:
       MIIB...example
       -----END CERTIFICATE-----
     # tls-crypt: |
-    #   -----BEGIN OpenVPN Static key V1-----
+    #   -----BEGIN OpenVPN Static key V1-----  
     #   ...
     #   -----END OpenVPN Static key V1-----
     # dev: tun
