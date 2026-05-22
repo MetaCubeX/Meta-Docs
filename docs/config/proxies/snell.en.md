@@ -26,6 +26,9 @@ Required. Snell pre-shared key.
 
 Snell version. Supports v1/2/3/4/5. UDP is only supported on v3/4/5.
 
+!!! warning 
+    Although setting it to `5` is supported, Mihomo as a client (outbound) currently does not support Snell v5's QUIC Proxy Mode.
+
 ## reuse
 
 Optional. Supports v4/5. Default is false.
