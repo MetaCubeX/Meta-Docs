@@ -7,16 +7,16 @@ proxies
   server: server
   port: 44046
   psk: yourpsk
-    # version: 4
-    # udp: true
-    # reuse: false
-    # obfs-opts:
-    #   mode: http
-    #   host: bing.com
+  # version: 4
+  # udp: true
+  # reuse: false
+  # obfs-opts:
+  #   mode: http
+  #   host: bing.com
 
 ```
 
-[General Fields](./index.md)
+[Common Fields](./index.md)
 
 ## psk
 
@@ -40,4 +40,4 @@ Snell obfuscation mode. Supports http/tls.
 
 ### obfs-opts.host
 
-Snell obfuscation domain.
+Snell obfuscation hostname.
