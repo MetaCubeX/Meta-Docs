@@ -2,11 +2,11 @@
 
 ```{.yaml linenums="1"}
 proxies
-  - name: "snell"
-    type: snell
-    server: server
-    port: 44046
-    psk: yourpsk
+- name: "snell"
+  type: snell
+  server: server
+  port: 44046
+  psk: yourpsk
     # version: 4
     # udp: true
     # reuse: false
