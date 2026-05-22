@@ -27,6 +27,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 
 ## MacOS
 
@@ -48,6 +49,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 
 ## Linux
 
@@ -69,6 +71,7 @@
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 
 ## Android
 
@@ -82,6 +85,7 @@
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддерживается |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|поддерживается |
+|[ClashFest](https://github.com/Nemu-x/ClashFest)|поддерживается |
 
 ## iOS
 
