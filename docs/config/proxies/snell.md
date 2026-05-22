@@ -2,15 +2,15 @@
 
 ```{.yaml linenums="1"}
 proxies:
-  - name: "snell"
-    type: snell
-    server: server
-    port: 44046
-    psk: yourpsk
-    version: 5
-    # udp: true
-    # reuse: false
-     obfs-opts:
+ - name: "snell"
+  type: snell
+  server: server
+  port: 44046
+   psk: yourpsk
+   version: 5
+  # udp: true
+  # reuse: false
+   obfs-opts:
        mode: http
        host: bing.com
 ```
