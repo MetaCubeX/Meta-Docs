@@ -1,16 +1,18 @@
 # Snell
 
 ```{.yaml linenums="1"}
-proxies
-- name: "snell"
-  type: snell
-  server: server
-  port: 44046
-  psk: yourpsk
-  version: 3
-  obfs-opts:
-    mode: http
-    host: bing.com
+proxies:
+  - name: "snell"
+    type: snell
+    server: server
+    port: 44046
+    psk: yourpsk
+    version: 5
+    # udp: true
+    # reuse: false
+     obfs-opts:
+       mode: http
+       host: bing.com
 ```
 
 [通用字段](./index.md)
@@ -21,7 +23,11 @@ proxies
 
 ## version
 
-snell 版本，仅支持 v1-3，默认为 v1，仅 v3 支持 udp
+snell 版本，支持 v1/2/3/4/5，仅 v3/4/5 支持 udp
+
+## reuse
+
+可选，支持 v4/5，默认为 false
 
 ## obfs-opts
 
