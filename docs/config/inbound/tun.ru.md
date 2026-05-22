@@ -15,6 +15,7 @@ tun:
   strict-route: true
   gso: true
   gso-max-size: 65536
+  inet6-address: fdfe:dcba:9876::1/126
   udp-timeout: 300
   iproute2-table-index: 2022
   iproute2-rule-index: 9000
