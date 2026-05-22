@@ -2,7 +2,7 @@
 
 ```{.yaml linenums="1"}
 proxies
- - name: "snell"
+- name: "snell"
   type: snell
   server: server
   port: 44046
