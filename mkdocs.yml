@@ -261,6 +261,7 @@ nav:
         - Hysteria2 Realm: config/inbound/listeners/hysteria2-realm.md
         - TrustTunnel: config/inbound/listeners/trusttunnel.md
         - tunnel: config/inbound/listeners/tunnel.md
+        - Snell: config/inbound/listeners/snell.md
     - 出站代理:
       - 通用字段: config/proxies/index.md
       - TLS配置: config/proxies/tls.md
