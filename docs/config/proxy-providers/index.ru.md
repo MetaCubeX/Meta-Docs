@@ -166,6 +166,9 @@ proxy-providers:
 
 Фильтрация узлов, соответствующих ключевым словам или [регулярным выражениям](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md), несколько регулярных выражений можно разделить символом `.
 
+!!! tip "Примеры"
+    `"(?i)riga|lv|latvia"` — оставить только узлы с Riga, LV или Latvia в имени (флаг `(?i)` отключает регистр). Для нескольких условий используйте `|` внутри одного regex.
+
 ## exclude-filter
 
 Исключение узлов, соответствующих ключевым словам или [регулярным выражениям](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md), несколько регулярных выражений можно разделить символом `.
