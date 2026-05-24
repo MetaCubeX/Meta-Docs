@@ -143,3 +143,22 @@
 |:----|:----|:----|
 |[DeckyClash](https://github.com/chenx-dust/DeckyClash)|поддерживается |
 |[ToMoon](https://github.com/YukiCoco/ToMoon)|поддерживается |
+
+## Keenetic (Entware)
+
+Инструменты для роутеров Keenetic, которые работают поверх Mihomo или рядом с ним.
+
+| Проект | Назначение |
+|--------|------------|
+| [XKeen](https://github.com/Corvus-Malus/XKeen) | Установка и оркестрация Mihomo (и/или Xray) на Entware, бэкапы, обновление ядер и геофайлов, настройка iptables для прозрачного прокси (TProxy/Mixed/Redirect). |
+| [XKeen-UI](https://github.com/zxc-rv/XKeen-UI) | Веб-панель мониторинга и управления XKeen + Mihomo: логи, редактирование конфигов, переключение ядер, Clash API. |
+| [nfqws2-keenetic](https://github.com/nfqws/nfqws2-keenetic) | Пакеты DPI-обхода: модификация TCP/UDP на уровне NFQUEUE (ветка zapret). Работает параллельно с Mihomo, но требует согласования DNS, sniffer и правил — особенно `fake-ip-filter` и `skip-domain`. |
+| [sign-craze](https://github.com/kittylabassistant/sign-craze) | Оркестратор ядер (sing-box / xray / mihomo), iptables/ipset, опционально nfqws2. Свой Web UI на портах 9090–9092. |
+
+!!! warning "Типичные конфликты"
+    - **TUN vs tproxy**: корневой `tun.auto-route: true` перехватывает маршрут по умолчанию и конфликтует с уже настроенной цепочкой nftables → nfqws → tproxy. Типичная схема на Keenetic — прозрачный tproxy-порт Mihomo без полного TUN-захвата.
+    - **DNS / fake-ip**: для доменов, которые nfqws целит по имени, задавайте `real-ip` в `fake-ip-filter` или ранний `DIRECT` в `rules:` — чтобы Mihomo не подменял ответ DNS.
+    - **Sniffer**: в `skip-domain` заносите зоны `geosite:ru`, `geosite:google`, `geosite:youtube`, `geosite:discord` — иначе sniffer разойдётся с тем, что уже «исправил» nfqws.
+    - **Порты API**: sign-craze использует 9090–9092; Mihomo по умолчанию тоже `external-controller: …:9090`. Разведите порты в `config.yaml`.
+    - **Два оркестратора**: XKeen и sign-craze не стоит запускать одновременно для одной роли — каждый ставит свои iptables-правила и может перезаписывать бинарники.
+    - **QUIC**: решите, кто отвечает за QUIC — Mihomo (REJECT в `rules:`) или nfqws — не дублируйте без понимания.
