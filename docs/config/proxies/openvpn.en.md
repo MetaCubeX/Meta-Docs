@@ -84,7 +84,7 @@ Optional, encryption method. Supports `AES-128-GCM` / `AES-256-GCM` / `AES-128-C
 
 ## auth
 
-Optional, data authentication algorithm. Supports `SHA1` / `SHA256`. Defaults to `SHA256`. AEAD ciphers will ignore the auth configuration.
+Optional, data authentication algorithm. Supports `MD5` /`SHA1` / `SHA256`/ `SHA384` / `SHA512`. Defaults to `SHA256`. AEAD ciphers will ignore the auth configuration.
 
 ## udp
 
