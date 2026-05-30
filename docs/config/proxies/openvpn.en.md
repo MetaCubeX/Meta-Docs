@@ -30,6 +30,7 @@ proxies:
     # dev: tun
     # cipher: AES-128-GCM
     # auth: SHA256
+    # comp-lzo: "no"
     udp: true
     # mtu: 1500
     # dialer-proxy: "ss1"
@@ -85,6 +86,10 @@ Optional, encryption method. Supports `AES-128-GCM` / `AES-256-GCM` / `AES-128-C
 ## auth
 
 Optional, data authentication algorithm. Supports `MD5` /`SHA1` / `SHA256`/ `SHA384` / `SHA512`. Defaults to `SHA256`. AEAD ciphers will ignore the auth configuration.
+
+## comp-lzo
+
+Optional, data compression method. Supported values: `yes`, `no`, `adaptive`.
 
 ## udp
 
