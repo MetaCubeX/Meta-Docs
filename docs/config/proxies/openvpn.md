@@ -30,6 +30,7 @@ proxies:
     # dev: tun
     # cipher: AES-128-GCM
     # auth: SHA256
+    # comp-lzo: "no"
     udp: true
     # mtu: 1500
     # dialer-proxy: "ss1"
@@ -85,6 +86,10 @@ proxies:
 ## auth
 
 可选，数据验证算法，支持 `MD5` /`SHA1` / `SHA256`/ `SHA384` / `SHA512`，默认 `SHA256`；AEAD cipher 会忽略 auth。
+
+## comp-lzo
+
+可选，数据压缩方式。可选值：`yes`、`no`、`adaptive`。
 
 ## udp
 
