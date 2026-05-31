@@ -7,21 +7,28 @@ proxies
   server: server
   port: 44046
   psk: yourpsk
-  version: 3
-  obfs-opts:
-    mode: http
-    host: bing.com
+  # version: 4
+  # udp: true
+  # reuse: false
+  # obfs-opts:
+  #   mode: http
+  #   host: bing.com
+
 ```
 
-[Common fields](./index.md)
+[Common Fields](./index.md)
 
 ## psk
 
-Required, Snell pre-shared key.
+Required. Snell pre-shared key.
 
 ## version
 
-Snell version. Only v1-3 are supported. Default: v1. Only v3 supports UDP.
+Snell version. Supports v1/2/3/4/5. UDP is only supported on v3/4/5.
+
+## reuse
+
+Optional. Supports v4/5. Default is false.
 
 ## obfs-opts
 
@@ -29,7 +36,7 @@ Snell obfuscation settings.
 
 ### obfs-opts.mode
 
-Snell obfuscation mode. Supports `http` and `tls`.
+Snell obfuscation mode. Supports http/tls.
 
 ### obfs-opts.host
 

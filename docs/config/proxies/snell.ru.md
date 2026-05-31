@@ -7,10 +7,13 @@ proxies
   server: server
   port: 44046
   psk: yourpsk
-  version: 3
-  obfs-opts:
-    mode: http
-    host: bing.com
+  # version: 4
+  # udp: true
+  # reuse: false
+  # obfs-opts:
+  #   mode: http
+  #   host: bing.com
+
 ```
 
 [Общие поля](./index.md)
@@ -21,7 +24,11 @@ proxies
 
 ## version
 
-Версия snell, поддерживаются только v1-3, по умолчанию v1, только v3 поддерживает udp
+Версия Snell. Поддерживаются v1/2/3/4/5. UDP поддерживается только в версиях v3/4/5.
+
+## reuse
+
+Необязательный. Поддерживается в v4/5. По умолчанию false.
 
 ## obfs-opts
 
