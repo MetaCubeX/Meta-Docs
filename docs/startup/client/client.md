@@ -16,10 +16,8 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|维护中 |
-|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
@@ -40,9 +38,7 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
-|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[ClashMac](https://github.com/666OS/ClashMac)|维护中 | 不开源，构建不可复现 |
@@ -64,9 +60,7 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[mihoro](https://github.com/spencerwooo/mihoro)|维护中 |
-|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
@@ -123,11 +117,8 @@
 |[Box for Root](https://github.com/taamarin/box_for_magisk)|维护中 |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|维护中 |
 |[Clash Tproxy Android](https://t.me/e58695/59)|维护中 |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|维护中 |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|停止维护 |
-|[Clash.Mihomo](https://github.com/Chuhe2399/Clash.Mihomo)|维护中 |
 |[Box for Android](https://github.com/boxproxy/box/)|维护中 |
-|[mihomo-magisk](https://github.com/AlliotTech/mihomo-magisk)|维护中 |
 |[Clash MIX](https://github.com/AXEVO/Clash-MIX)|维护中 |
 |[akashaProxy](https://github.com/akashaProxy/akashaProxy)|维护中 |
 |[Maodie Launcher](https://github.com/SherlockChiang/Maodie-Launcher)|维护中 |
