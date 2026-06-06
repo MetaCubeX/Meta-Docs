@@ -27,6 +27,8 @@ proxies:
     #  -----BEGIN OpenVPN Static key V1-----
     #  ...
     #  -----END OpenVPN Static key V1-----
+    # ping: 10
+    # ping-restart: 60
     # dev: tun
     # cipher: AES-128-GCM
     # auth: SHA256
@@ -74,6 +76,14 @@ Optional, protocol type. Supports `udp` or `tcp`. Defaults to `udp`.
 ## tls-crypt
 
 **Optional**, TLS encryption key. Copy this from the `<tls-crypt>` tag in your `.ovpn` file; do not include the tags themselves.
+
+## ping
+
+Optional, defaults to `0`.
+
+## ping-restart
+
+Optional, defaults to `0`.
 
 ## dev
 

@@ -27,6 +27,8 @@ proxies:
     #  -----BEGIN OpenVPN Static key V1-----
     #  ...
     #  -----END OpenVPN Static key V1-----
+    # ping: 10
+    # ping-restart: 60
     # dev: tun
     # cipher: AES-128-GCM
     # auth: SHA256
@@ -74,6 +76,14 @@ proxies:
 ## tls-crypt
 
 **Опционально**, ключ шифрования TLS. Скопируйте содержимое тега `<tls-crypt>` из вашего `.ovpn` файла (сами теги копировать не нужно).
+
+## ping
+
+Опционально, по умолчанию `0`.
+
+## ping-restart
+
+Опционально, по умолчанию `0`.
 
 ## dev
 

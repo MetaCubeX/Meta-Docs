@@ -27,6 +27,8 @@ proxies:
     #  -----BEGIN OpenVPN Static key V1-----
     #  ...
     #  -----END OpenVPN Static key V1-----
+    # ping: 10
+    # ping-restart: 60
     # dev: tun
     # cipher: AES-128-GCM
     # auth: SHA256
@@ -74,6 +76,14 @@ proxies:
 ## tls-crypt
 
 **可选**，TLS 加密密钥。从 `.ovpn` 文件的 `<tls-crypt>` 标签中复制，不需要保留标签。
+
+## ping
+
+可选，默认值为`0`。
+
+## ping-restart
+
+可选，默认值为`0`。
 
 ## dev
 
