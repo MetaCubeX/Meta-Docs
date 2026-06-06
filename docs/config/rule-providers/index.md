@@ -61,6 +61,8 @@ rule-providers:
 
 当设置该选项时，如果本地文件不存在，会优先从 Home Dir 的 BundleMRS.7z 中解压该文件，此项的值用于指定在 BundleMRS.7z 中的路径
 
+BundleMRS.7z 可在 https://github.com/MetaCubeX/meta-rules-dat 处下载
+
 ## size-limit
 
 限制下载文件的最大大小，默认为 0 即不限制文件大小，单位为字节 (`b`)
