@@ -92,6 +92,7 @@ Note:
 * For encrypted content, currently only the official ASCII "armor" format from [age-encryption.org/v1](https://age-encryption.org/v1) is supported.
 * For key formats, currently only the x25519 recipient type and the mlkem768-x25519 hybrid post-quantum recipient type from [age-encryption.org/v1](https://age-encryption.org/v1) are supported.
 * Currently, the core does not proactively send the public key to the server. Users need to manually set `X-Age-Public-Key` in the header or upload the public key through other means.
+* The core also supports loading encrypted configuration files using the command-line argument `-age-secret-key` or the environment variable `CLASH_AGE_SECRET_KEY`.
 
 Utilities:
 
