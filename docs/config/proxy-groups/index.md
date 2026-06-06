@@ -14,6 +14,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   interval: 300
   lazy: true
+  empty-fallback: COMPATIBLE
   timeout: 5000
   max-failed-times: 5
 
@@ -64,6 +65,10 @@ proxy-groups:
 ## lazy
 
 懒惰状态，默认为`true`,未选择到当前策略组时，不进行测试
+
+## empty-fallback
+
+当组为空时的回退proxy，默认为`COMPATIBLE`
 
 ## timeout
 
