@@ -92,6 +92,7 @@ proxy-providers:
   * 对于加密内容，目前仅支持 [age-encryption.org/v1](https://age-encryption.org/v1) 的 official ASCII "armor" format
   * 对于key格式，目前仅支持 [age-encryption.org/v1](https://age-encryption.org/v1) 的 x25519 recipient type 和 The mlkem768-x25519 hybrid post-quantum recipient type
   * 目前核心不会主动将公钥发送给服务器，用户需要自行设置header里`X-Age-Public-Key`或者通过其他方式将公钥上传
+  * 核心同样支持命令行参数`-age-secret-key`或`CLASH_AGE_SECRET_KEY`环境变量来加载加密配置文件
 
 实用工具：
 
