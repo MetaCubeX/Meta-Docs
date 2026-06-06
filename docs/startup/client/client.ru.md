@@ -105,6 +105,7 @@
 |[openwrt-nekobox](https://github.com/Thaolga/openwrt-nekobox)|поддерживается|
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
 |[SSClash](https://github.com/zerolabnet/SSClash)|поддерживается |
+|[ShadowSocksR Plus+](https://github.com/fw876/helloworld)|поддерживается |
 
 ## Shell
 
