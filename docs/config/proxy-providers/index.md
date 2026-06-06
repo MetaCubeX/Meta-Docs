@@ -88,10 +88,12 @@ proxy-providers:
 如果设置会age-secret-key尝试通过此secret解密age armor格式加密的配置文件
 
 注意：
+
   * 对于加密内容，目前仅支持 [age-encryption.org/v1](https://age-encryption.org/v1) 的 official ASCII "armor" format
   * 对于key格式，目前仅支持 [age-encryption.org/v1](https://age-encryption.org/v1) 的 x25519 recipient type 和 The mlkem768-x25519 hybrid post-quantum recipient type
 
 实用工具：
+
   * 您可以通过 `mihomo age keygen` 生成符合要求的 x25519 key
   * 您可以通过 `mihomo age keygen-pq` 生成符合要求的 mlkem768-x25519 key
   * 您可以通过 `mihomo age convert <secret_key>` 从 age-secret-key 导出 age-public-key
@@ -99,6 +101,7 @@ proxy-providers:
   * 您可以通过 `mihomo age encrypt <public_key> <source_file> <target_file>` 将未加密文件加密，<source_file> 为 - 时会从标准输入读取，<target_file> 为 - 时会往标准输出写入
 
 参考实现：
+
   * Golang: [FiloSottile/age](https://github.com/FiloSottile/age)
   * Rust: [str4d/rage](https://github.com/str4d/rage)
   * Typescript: [FiloSottile/typage](https://github.com/FiloSottile/typage)
