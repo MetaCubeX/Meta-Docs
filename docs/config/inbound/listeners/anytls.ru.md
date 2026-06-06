@@ -21,13 +21,15 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  ### Обратите внимание, что для любого TLS-слушателя, если параметр "allow-insecure" не равен true, необходимо указать "certificate and private-key". ###
+  # allow-insecure: false # Разрешить ли отключение шифрования TLS (Примечание: используется только при предварительной установке nginx или caddy)
   padding-scheme: "" # https://github.com/anytls/anytls-go/blob/main/docs/protocol.md#cmdupdatepaddingscheme
 ```
 
 [Общие поля](./index.md)
 
 !!! warning ""
-    `certificate` и `private-key` обязательны
+    `certificate` и `private-key` обязательны, Если не указано `allow-insecure: true` (Примечание: это применяется только в том случае, если nginx или caddy используются в качестве предварительных условий).
 
 ## padding-scheme
 
