@@ -10,6 +10,7 @@ rule-providers:
     proxy: DIRECT
     behavior: classical
     format: yaml
+    # path-in-bundle: "geo/geosite/cn.mrs"
     size-limit: 0
     header:
       User-Agent:
@@ -55,6 +56,10 @@ rule-providers:
 格式，可选 `yaml`/`text`/`mrs`，默认 `yaml`
 
 `mrs`目前 `behavior` 仅支持 `domain`/`ipcidr`，可以通过`mihomo convert-ruleset domain/ipcidr yaml/text XXX.yaml XXX.mrs`转换得到
+
+## path-in-bundle
+
+当设置该选项时，如果本地文件不存在，会优先从 Home Dir 的 BundleMRS.7z 中解压该文件，此项的值用于指定在 BundleMRS.7z 中的路径
 
 ## size-limit
 
