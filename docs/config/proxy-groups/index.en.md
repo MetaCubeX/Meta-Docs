@@ -14,6 +14,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   interval: 300
   lazy: true
+  empty-fallback: COMPATIBLE
   timeout: 5000
   max-failed-times: 5
 
@@ -64,6 +65,10 @@ Health check interval; if not 0, periodic testing is enabled, measured in second
 ## lazy
 
 Lazy state, defaults to `true`. If the current proxy group is not selected, no testing is performed.
+
+## empty-fallback
+
+The fallback proxy when the group is empty. The default value is `COMPATIBLE`.
 
 ## timeout
 
