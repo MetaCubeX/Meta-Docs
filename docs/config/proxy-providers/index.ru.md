@@ -103,9 +103,9 @@ proxy-providers:
 
 Эталонные реализации:
 
-* Голанг: [FiloSottile/age](https://github.com/FiloSottile/age)
-* Ржавчина: [str4d/rage](https://github.com/str4d/rage)
-* Машинопись: [FiloSottile/typage](https://github.com/FiloSottile/typage).
+* Golang: [FiloSottile/age](https://github.com/FiloSottile/age)
+* Rust: [str4d/rage](https://github.com/str4d/rage)
+* Typescript: [FiloSottile/typage](https://github.com/FiloSottile/typage).
 
 ## header
 
