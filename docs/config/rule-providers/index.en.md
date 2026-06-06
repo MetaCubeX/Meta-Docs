@@ -61,6 +61,8 @@ Currently, `mrs` behavior only supports `domain` / `ipcidr`. You can convert usi
 
 When this option is set, if the local file does not exist, it will be extracted from BundleMRS.7z in the Home Dir first. The value of this option specifies the path in BundleMRS.7z.
 
+BundleMRS.7z can be downloaded from https://github.com/MetaCubeX/meta-rules-dat
+
 ## size-limit
 
 The maximum size of downloadable files is restricted, with the default being 0, which means no size limit; the unit is bytes (`b`)
