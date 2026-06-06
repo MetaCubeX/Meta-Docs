@@ -9,11 +9,14 @@ proxy-providers:
     interval: 3600
     proxy: DIRECT
     size-limit: 0
+    age-secret-key: AGE-SECRET-KEY-1ZTQLLN0A4U3ZTT3DCZKYN0CGZEZQLWX2DFTXUWMT4ZHR0N2UG6LSW9NT0N
     header:
       User-Agent:
       - "mihomo/1.18.3"
       Authorization:
       - 'token 1231231'
+      # X-Age-Public-Key:
+      # - 'age1xh86kh9v23vattr58yedspm3f57sxvnswu9krr6ns438amekx5gsd09uma'
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -79,6 +82,29 @@ Download/update through the specified proxy.
 ## size-limit
 
 The maximum size of downloadable files is restricted, with the default being 0, which means no size limit; the unit is bytes (`b`)
+
+## age-secret-key
+
+If set, age-secret-key will attempt to decrypt an age armor-formatted configuration file using this secret.
+
+Note:
+
+* For encrypted content, currently only the official ASCII "armor" format from [age-encryption.org/v1](https://age-encryption.org/v1) is supported.
+* For key formats, currently only the x25519 recipient type and the mlkem768-x25519 hybrid post-quantum recipient type from [age-encryption.org/v1](https://age-encryption.org/v1) are supported.
+
+Utilities:
+
+* You can generate a valid x25519 key using `mihomo age keygen`.
+* You can generate a valid mlkem768-x25519 key using `mihomo age keygen-pq`.
+* You can export an age-public key from age-secret-key using `mihomo age convert <secret_key>`.
+* You can decrypts an encrypted file using `mihomo age decrypt <secret_key> <source_file> <target_file>` . `<source_file>` is set to - and reads from standard input; `<target_file>` is set to - and writes to standard output.
+* You can encrypt an unencrypted file using `mihomo age encrypt <public_key> <source_file> <target_file>`. `<source_file>` is set to - and reads from standard input; `<target_file>` is set to - and writes to standard output.
+
+Reference Implementations:
+
+* Golang: [FiloSottile/age](https://github.com/FiloSottile/age)
+* Rust: [str4d/rage](https://github.com/str4d/rage)
+* Typescript: [FiloSottile/typage](https://github.com/FiloSottile/typage)
 
 ## Header
 
