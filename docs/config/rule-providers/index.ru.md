@@ -10,6 +10,7 @@ rule-providers:
     proxy: DIRECT
     behavior: classical
     format: yaml
+    # path-in-bundle: "geo/geosite/cn.mrs"
     size-limit: 0
     header:
       User-Agent:
@@ -55,6 +56,10 @@ rule-providers:
 Формат, возможные значения: `yaml` / `text` / `mrs`, по умолчанию `yaml`.
 
 В настоящее время `mrs` поддерживает только поведение `domain` / `ipcidr`. Вы можете конвертировать, используя `mihomo convert-ruleset domain/ipcidr yaml/text XXX.yaml XXX.mrs`.
+
+## path-in-bundle
+
+Если этот параметр задан, и локальный файл не существует, он будет сначала извлечен из BundleMRS.7z в домашней директории. Значение этого параметра указывает путь в BundleMRS.7z.
 
 ## size-limit
 
