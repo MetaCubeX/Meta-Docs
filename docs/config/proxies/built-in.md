@@ -18,6 +18,10 @@
 
 若在 `SUB-RULE` 中命中 `PASS`，会跳出当前子规则并回到主规则继续匹配，不会继续匹配同一 `sub-rules` 内的后续规则。
 
+## PASS-RULE
+
+绕过。与`PASS`类似，区别是：在 `SUB-RULE` 中命中 `PASS-RULE` 时不会跳出子规则，仅跳过当前命中规则分支，继续在 `sub-rules` 中向后匹配规则。
+
 ## COMPATIBLE
 
 兼容，在策略组筛选不出节点时出现，等效 `DIRECT`
