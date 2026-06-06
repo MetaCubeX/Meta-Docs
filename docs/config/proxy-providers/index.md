@@ -9,11 +9,14 @@ proxy-providers:
     interval: 3600
     proxy: DIRECT
     size-limit: 0
+    age-secret-key: AGE-SECRET-KEY-1ZTQLLN0A4U3ZTT3DCZKYN0CGZEZQLWX2DFTXUWMT4ZHR0N2UG6LSW9NT0N
     header:
       User-Agent:
       - "mihomo/1.18.3"
       Authorization:
       - 'token 1231231'
+      # X-Age-Public-Key:
+      # - 'age1xh86kh9v23vattr58yedspm3f57sxvnswu9krr6ns438amekx5gsd09uma'
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -79,6 +82,26 @@ proxy-providers:
 ## size-limit
 
 限制下载文件的最大大小，默认为 0 即不限制文件大小，单位为字节 (`b`)
+
+## age-secret-key
+
+如果设置会age-secret-key尝试通过此secret解密age armor格式加密的配置文件
+
+注意：
+  * 对于加密内容，目前仅支持 [age-encryption.org/v1](https://age-encryption.org/v1) 的 official ASCII "armor" format
+  * 对于key格式，目前仅支持 [age-encryption.org/v1](https://age-encryption.org/v1) 的 x25519 recipient type 和 The mlkem768-x25519 hybrid post-quantum recipient type
+
+实用工具：
+  * 您可以通过 `mihomo age keygen` 生成符合要求的 x25519 key
+  * 您可以通过 `mihomo age keygen-pq` 生成符合要求的 mlkem768-x25519 key
+  * 您可以通过 `mihomo age convert <secret_key>` 从 age-secret-key 导出 age-public-key
+  * 您可以通过 `mihomo age decrypt <secret_key> <source_file> <target_file>` 将已加密文件解密，<source_file> 为 - 时会从标准输入读取，<target_file> 为 - 时会往标准输出写入
+  * 您可以通过 `mihomo age encrypt <public_key> <source_file> <target_file>` 将未加密文件加密，<source_file> 为 - 时会从标准输入读取，<target_file> 为 - 时会往标准输出写入
+
+参考实现：
+  * Golang: [FiloSottile/age](https://github.com/FiloSottile/age)
+  * Rust: [str4d/rage](https://github.com/str4d/rage)
+  * Typescript: [FiloSottile/typage](https://github.com/FiloSottile/typage)
 
 ## header
 
