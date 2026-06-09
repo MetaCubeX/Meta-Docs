@@ -17,7 +17,7 @@
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|поддерживается |
-|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|поддерживается |
+|[Koala Clash](https://github.com/coolcoala/koala-clash)|поддерживается |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддерживается |
@@ -39,7 +39,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
-|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|поддерживается |
+|[Koala Clash](https://github.com/coolcoala/koala-clash)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[ClashMac](https://github.com/666OS/ClashMac)|поддерживается | Закрытый исходный код, сборка невоспроизводима |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
@@ -60,7 +60,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |
 |[mihoro](https://github.com/spencerwooo/mihoro)|поддерживается |
-|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|поддерживается |
+|[Koala Clash](https://github.com/coolcoala/koala-clash)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
