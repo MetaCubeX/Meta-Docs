@@ -14,6 +14,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   interval: 300
   lazy: true
+  empty-fallback: COMPATIBLE
   timeout: 5000
   max-failed-times: 5
 
@@ -64,6 +65,10 @@ proxy-groups:
 ## lazy
 
 Ленивое состояние, по умолчанию `true`. Если текущая группа прокси не выбрана, тестирование не выполняется.
+
+## empty-fallback
+
+Резервный прокси-сервер, когда группа пуста. Значение по умолчанию — `COMPATIBLE`.
 
 ## timeout
 

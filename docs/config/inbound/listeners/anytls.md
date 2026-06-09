@@ -21,13 +21,15 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  ### 注意，anytls listener, 如果 "allow-insecure" 不为 true, 必须填写 “certificate和private-key” ###
+  # allow-insecure: false # 是否允许不开启tls加密（注意：仅用于有 nginx, caddy 前置的情况）
   padding-scheme: "" # https://github.com/anytls/anytls-go/blob/main/docs/protocol.md#cmdupdatepaddingscheme
 ```
 
 [通用字段](./index.md)
 
 !!! warning ""
-    `certificate` 和 `private-key` 是必要的
+    `certificate` 和 `private-key` 是必要的，除非 `allow-insecure: true`（注意：仅用于有 nginx, caddy 前置的情况）
 
 ## padding-scheme
 

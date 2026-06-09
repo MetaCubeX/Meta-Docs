@@ -9,11 +9,14 @@ proxy-providers:
     interval: 3600
     proxy: DIRECT
     size-limit: 0
+    age-secret-key: AGE-SECRET-KEY-1ZTQLLN0A4U3ZTT3DCZKYN0CGZEZQLWX2DFTXUWMT4ZHR0N2UG6LSW9NT0N
     header:
       User-Agent:
       - "mihomo/1.18.3"
       Authorization:
       - 'token 1231231'
+      # X-Age-Public-Key:
+      # - 'age1xh86kh9v23vattr58yedspm3f57sxvnswu9krr6ns438amekx5gsd09uma'
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -79,6 +82,32 @@ proxy-providers:
 ## size-limit
 
 Ограничение максимального размера загружаемых файлов, по умолчанию 0, что означает отсутствие ограничения размера; единица измерения - байты (`b`)
+
+## age-secret-key
+
+Если задано, age-secret-key попытается расшифровать конфигурационный файл в формате age armor, используя этот секрет.
+
+Примечание:
+
+* Для зашифрованного контента в настоящее время поддерживается только официальный формат ASCII "armor" из [age-encryption.org/v1](https://age-encryption.org/v1).
+* Для форматов ключей в настоящее время поддерживаются только тип получателя x25519 и гибридный постквантовый тип получателя mlkem768-x25519 из [age-encryption.org/v1](https://age-encryption.org/v1).
+* В настоящее время ядро ​​системы не отправляет открытый ключ на сервер автоматически. Пользователям необходимо вручную установить параметр `X-Age-Public-Key` в заголовке или загрузить открытый ключ другими способами.
+* Ядро также поддерживает загрузку зашифрованных файлов конфигурации с помощью аргумента командной строки `-age-secret-key` или переменной среды `CLASH_AGE_SECRET_KEY`.
+
+Утилиты:
+
+* Вы можете сгенерировать действительный ключ x25519 с помощью `mihomo age keygen`.
+* Вы можете сгенерировать действительный ключ mlkem768-x25519 с помощью `mihomo age keygen-pq`.
+* Вы можете экспортировать открытый ключ age из секретного ключа age, используя `mihomo age convert <secret_key>`.
+* Вы можете расшифровывает зашифрованный файл, используя `mihomo age decrypt <secret_key> <source_file> <target_file>` . `<source_file>` устанавливается в значение - и считывает данные из стандартного ввода; `<target_file>` устанавливается в значение - и записывает данные в стандартный вывод.
+* Вы можете зашифровать незашифрованный файл, используя `mihomo age encrypt <public_key> <source_file> <target_file>`. `<source_file>` устанавливается в значение - и считывает данные из стандартного ввода; `<target_file>` устанавливается в значение - и записывает данные в стандартный вывод.
+
+
+Эталонные реализации:
+
+* Golang: [FiloSottile/age](https://github.com/FiloSottile/age)
+* Rust: [str4d/rage](https://github.com/str4d/rage)
+* Typescript: [FiloSottile/typage](https://github.com/FiloSottile/typage).
 
 ## header
 

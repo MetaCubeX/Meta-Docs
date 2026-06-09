@@ -16,10 +16,8 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|Maintained |
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|Maintained |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|Maintained |
-|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|Maintained |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|Maintained |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
@@ -27,6 +25,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 
 ## MacOS
 
@@ -36,19 +35,18 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|Unmaintained |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|Maintained |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|Maintained |
+|[clashtui](https://github.com/JohanChane/clashtui)|Maintained |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|Maintained |
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|Maintained |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
-|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|Maintained |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
 |[ClashMac](https://github.com/666OS/ClashMac)|Maintained | Closed-source; build is not reproducible |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
-|[clashtui](https://github.com/JohanChane/clashtui)|Maintained |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 
 ## Linux
 
@@ -62,14 +60,13 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|Maintained |
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|Maintained |
 |[mihoro](https://github.com/spencerwooo/mihoro)|Maintained |
-|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|Maintained |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|Maintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 
 ## Android
 
@@ -83,12 +80,18 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Maintained |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|Maintained |
+|[ClashFest](https://github.com/Nemu-x/ClashFest)|Maintained |
 
 ## iOS
 
 |Project | Maintenance Status | Notes |
 |:----|:----|:----|
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
+|[Clash Lite](https://apps.apple.com/app/id6761357475)|Maintained | Closed-source |
+|[LinkClashX](https://apps.apple.com/app/id6757075299)|Maintained | Closed-source |
+|[ConnectNow](https://apps.apple.com/app/id6749354119)|Maintained | Closed-source |
+|[Everywhere](https://apps.apple.com/app/id6766003090)|Maintained | Closed-source |
+|[Nextin](https://apps.apple.com/app/id6754002454)|Maintained | Closed-source |
 
 ## Merlin (KoolCenter firmware/paldier SWRT firmware)
 
@@ -108,6 +111,8 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[openwrt-nekobox](https://github.com/Thaolga/openwrt-nekobox)|Maintained|
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|Maintained |
 |[SSClash](https://github.com/zerolabnet/SSClash)|Maintained |
+|[ShadowSocksR Plus+](https://github.com/fw876/helloworld)|Maintained |
+|[openwrt-clashoo](https://github.com/kenzok8/openwrt-clashoo)|Maintained |
 
 ## Shell
 
@@ -119,11 +124,8 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Box for Root](https://github.com/taamarin/box_for_magisk)|Maintained |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|Maintained |
 |[Clash Tproxy Android](https://t.me/e58695/59)|Maintained |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|Maintained |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|Unmaintained |
-|[Clash.Mihomo](https://github.com/Chuhe2399/Clash.Mihomo)|Maintained |
 |[Box for Android](https://github.com/boxproxy/box/)|Maintained |
-|[mihomo-magisk](https://github.com/AlliotTech/mihomo-magisk)|Maintained |
 |[Clash MIX](https://github.com/AXEVO/Clash-MIX)|Maintained |
 |[akashaProxy](https://github.com/akashaProxy/akashaProxy)|Maintained |
 |[Maodie Launcher](https://github.com/SherlockChiang/Maodie-Launcher)|Maintained |

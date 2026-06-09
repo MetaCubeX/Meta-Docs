@@ -19,6 +19,11 @@ proxies:
     ip-version: ipv4-prefer
 ```
 
+!!! note
+    Like other proxy protocols, Tailscale is an optional proxy node. Traffic will only go through Tailscale if you direct it via rules, policy groups, or other routing methods.
+
+    Furthermore, all types of proxies only start connecting when the first matching connection is triggered (i.e., they do not start synchronously with Mihomo). Therefore, a timeout on the first attempt to access the Tailscale node is normal; please try again until Tailscale loads successfully.
+
 ## name
 
 Required, proxy name. Must be unique.

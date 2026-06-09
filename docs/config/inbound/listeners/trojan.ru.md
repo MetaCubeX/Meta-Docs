@@ -48,5 +48,6 @@ listeners:
   #   enabled: false
   #   method: aes-128-gcm # aes-128-gcm/aes-256-gcm/chacha20-ietf-poly1305
   #   password: "example"
-  ### Примечание: для trojan listener необходимо заполнить по крайней мере один из параметров: "certificate и private-key" или "reality-config" или "ss-option" ###
+  ### Обратите внимание, что для троянских программ, если параметр "allow-insecure" не равен true, необходимо заполнить хотя бы одно из следующих полей: "certificate and private-key", "reality-config" или "ss-option". ###
+  # allow-insecure: false # Разрешить ли отключение шифрования TLS (Примечание: только в случаях, когда nginx или caddy установлены предварительно)
 ``` 

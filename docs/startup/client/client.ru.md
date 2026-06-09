@@ -16,10 +16,8 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|поддерживается |
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|поддерживается |
-|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|поддерживается |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|поддерживается |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
@@ -27,6 +25,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 
 ## MacOS
 
@@ -39,15 +38,14 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|поддерживается |
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
-|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|поддерживается |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[ClashMac](https://github.com/666OS/ClashMac)|поддерживается | Закрытый исходный код, сборка невоспроизводима |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 
 ## Linux
 
@@ -61,14 +59,13 @@
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|поддерживается |
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|поддерживается |
 |[mihoro](https://github.com/spencerwooo/mihoro)|поддерживается |
-|[mihomo-tui](https://github.com/potoo0/mihomo-tui)|поддерживается |
 |[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
+|[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 
 ## Android
 
@@ -82,12 +79,18 @@
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддерживается |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|поддерживается |
+|[ClashFest](https://github.com/Nemu-x/ClashFest)|поддерживается |
 
 ## iOS
 
 |Название проекта | Статус поддержки | Примечание |
 |:----|:----|:----|
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
+|[Clash Lite](https://apps.apple.com/app/id6761357475)|поддерживается | Закрытый исходный код |
+|[LinkClashX](https://apps.apple.com/app/id6757075299)|поддерживается | Закрытый исходный код |
+|[ConnectNow](https://apps.apple.com/app/id6749354119)|поддерживается | Закрытый исходный код |
+|[Everywhere](https://apps.apple.com/app/id6766003090)|поддерживается | Закрытый исходный код |
+|[Nextin](https://apps.apple.com/app/id6754002454)|поддерживается | Закрытый исходный код |
 
 ## Merlin (прошивка KoolCenter/paldier SWRT)
 
@@ -107,6 +110,8 @@
 |[openwrt-nekobox](https://github.com/Thaolga/openwrt-nekobox)|поддерживается|
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
 |[SSClash](https://github.com/zerolabnet/SSClash)|поддерживается |
+|[ShadowSocksR Plus+](https://github.com/fw876/helloworld)|поддерживается |
+|[openwrt-clashoo](https://github.com/kenzok8/openwrt-clashoo)|поддерживается |
 
 ## Shell
 
@@ -118,11 +123,8 @@
 |[Box for Root](https://github.com/taamarin/box_for_magisk)|поддерживается |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|поддерживается |
 |[Clash Tproxy Android](https://t.me/e58695/59)|поддерживается |
-|[mihomosh](https://github.com/SamuNatsu/mihomosh)|поддерживается |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|поддержка прекращена |
-|[Clash.Mihomo](https://github.com/Chuhe2399/Clash.Mihomo)|поддерживается |
 |[Box for Android](https://github.com/boxproxy/box/)|поддерживается |
-|[mihomo-magisk](https://github.com/AlliotTech/mihomo-magisk)|поддерживается |
 |[Clash MIX](https://github.com/AXEVO/Clash-MIX)|поддерживается |
 |[akashaProxy](https://github.com/akashaProxy/akashaProxy)|поддерживается |
 |[Maodie Launcher](https://github.com/SherlockChiang/Maodie-Launcher)|поддерживается |

@@ -10,12 +10,15 @@ rule-providers:
     proxy: DIRECT
     behavior: classical
     format: yaml
+    # path-in-bundle: "geo/geosite/cn.mrs"
     size-limit: 0
     header:
       User-Agent:
       - "mihomo/1.18.3"
       Authorization:
       - 'token 1231231'
+    payload:
+      - 'DOMAIN-SUFFIX,google.com'
 ```
 
 ## name
@@ -53,6 +56,12 @@ Behavior, options are `domain` / `ipcidr` / `classical`, corresponding to differ
 Format, options are `yaml` / `text` / `mrs`, default is `yaml`.
 
 Currently, `mrs` behavior only supports `domain` / `ipcidr`. You can convert using `mihomo convert-ruleset domain/ipcidr yaml/text XXX.yaml XXX.mrs`.
+
+## path-in-bundle
+
+When this option is set, if the local file does not exist, it will be extracted from BundleMRS.7z in the Home Dir first. The value of this option specifies the path in BundleMRS.7z.
+
+BundleMRS.7z can be downloaded from https://github.com/MetaCubeX/meta-rules-dat
 
 ## size-limit
 

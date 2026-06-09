@@ -23,13 +23,16 @@ proxies:
       -----BEGIN CERTIFICATE-----
       MIIB...example
       -----END CERTIFICATE-----
-    tls-crypt: |
-      -----BEGIN OpenVPN Static key V1-----
-      ...
-      -----END OpenVPN Static key V1-----
+    # tls-crypt: |
+    #  -----BEGIN OpenVPN Static key V1-----
+    #  ...
+    #  -----END OpenVPN Static key V1-----
+    # ping: 10
+    # ping-restart: 60
     # dev: tun
     # cipher: AES-128-GCM
     # auth: SHA256
+    # comp-lzo: "no"
     udp: true
     # mtu: 1500
     # dialer-proxy: "ss1"
@@ -54,7 +57,7 @@ Optional, protocol type. Supports `udp` or `tcp`. Defaults to `udp`.
 
 ## username / password
 
-**Optional**, username and password for `auth-user-pass` authentication mode.
+**Optional**, the username and password required for `auth-user-pass` authentication mode.
 
 > **Note**: Must choose between these or `cert` / `key`. Both pairs cannot be empty at the same time.
 
@@ -72,7 +75,15 @@ Optional, protocol type. Supports `udp` or `tcp`. Defaults to `udp`.
 
 ## tls-crypt
 
-**Required**, TLS encryption key. Copy this from the `<tls-crypt>` tag in your `.ovpn` file; do not include the tags themselves.
+**Optional**, TLS encryption key. Copy this from the `<tls-crypt>` tag in your `.ovpn` file; do not include the tags themselves.
+
+## ping
+
+Optional, defaults to `0`.
+
+## ping-restart
+
+Optional, defaults to `0`.
 
 ## dev
 
@@ -80,11 +91,15 @@ Optional, virtual network interface type. Currently only `tun` is supported. Def
 
 ## cipher
 
-Optional, encryption method. Supports `AES-128-GCM` / `AES-256-GCM`./ `CHACHA20-POLY1305`Defaults to `AES-128-GCM`.
+Optional, encryption method. Supports `AES-128-GCM` / `AES-256-GCM` / `AES-128-CBC` / `AES-256-CBC` / `CHACHA20-POLY1305`. Defaults to `AES-128-GCM`. `AES-CBC` will be treated as `AES-128-CBC`.
 
 ## auth
 
-Optional, authentication algorithm. Currently only `SHA256` is supported. Defaults to `SHA256`.
+Optional, data authentication algorithm. Supports `MD5` /`SHA1` / `SHA256`/ `SHA384` / `SHA512`. Defaults to `SHA256`. AEAD ciphers will ignore the auth configuration.
+
+## comp-lzo
+
+Optional, data compression method. Supported values: `yes`, `no`, `adaptive`.
 
 ## udp
 
@@ -96,7 +111,7 @@ Optional, Maximum Transmission Unit. Defaults to `1500`.
 
 ## dialer-proxy
 
-Optional, the identifier for an outbound proxy. If set, the OpenVPN connection will be established through the specified proxy.
+Optional, specifies the identifier for an outbound proxy. If set, the OpenVPN connection will be established through the specified proxy.
 
 ## remote-dns-resolve
 

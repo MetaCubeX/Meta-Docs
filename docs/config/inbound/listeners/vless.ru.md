@@ -80,5 +80,6 @@ listeners:
       after-bytes: 0 # начать ограничение скорости после передачи указанного количества байт
       bytes-per-sec: 0 # базовая скорость (байт/сек)
       burst-bytes-per-sec: 0 # пиковая скорость (байт/сек), действует когда больше bytesPerSec
-  ### Примечание: для vless listener необходимо заполнить по крайней мере один из параметров: "certificate и private-key" или "reality-config" или "decryption" ###
+  ### Обратите внимание, что для слушателей Vless, если параметр "allow-insecure" не равен true, необходимо заполнить хотя бы одно из следующих полей: "certificate and private-key", "reality-config" или "decryption". ###
+  # allow-insecure: false # Разрешить ли отключение шифрования TLS (Примечание: только в случаях, когда nginx или caddy установлены предварительно)
 ``` 
