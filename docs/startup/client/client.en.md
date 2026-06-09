@@ -35,6 +35,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|Unmaintained |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|Maintained |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|Maintained |
+|[clashtui](https://github.com/JohanChane/clashtui)|Maintained |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|Maintained |
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |

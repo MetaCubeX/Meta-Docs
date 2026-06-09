@@ -35,6 +35,7 @@
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|поддержка прекращена |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|поддерживается |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|поддерживается |
+|[clashtui](https://github.com/JohanChane/clashtui)|поддерживается |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|поддерживается |
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |

@@ -35,6 +35,7 @@
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|停止维护 |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|维护中 |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|维护中 |
+|[clashtui](https://github.com/JohanChane/clashtui)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
