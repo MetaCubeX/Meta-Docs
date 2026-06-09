@@ -17,7 +17,7 @@
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|维护中 |
-|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
+|[Koala Clash](https://github.com/coolcoala/koala-clash)|维护中 |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
@@ -39,7 +39,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
-|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
+|[Koala Clash](https://github.com/coolcoala/koala-clash)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[ClashMac](https://github.com/666OS/ClashMac)|维护中 | 不开源，构建不可复现 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
@@ -61,7 +61,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[mihoro](https://github.com/spencerwooo/mihoro)|维护中 |
-|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|维护中 |
+|[Koala Clash](https://github.com/coolcoala/koala-clash)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
