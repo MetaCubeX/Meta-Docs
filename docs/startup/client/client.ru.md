@@ -9,7 +9,6 @@
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|поддержка прекращена |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|поддерживается |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|поддерживается |
-|[ClashMetaForWindows_Mini](https://github.com/kogekiplay/ClashMetaForWindows_Mini)|поддержка прекращена |
 |[clashN](https://github.com/2dust/clashN)|поддержка прекращена |
 |[v2rayN](https://github.com/2dust/v2rayN)|поддерживается |
 |[clashtui](https://github.com/JohanChane/clashtui)|поддерживается |
