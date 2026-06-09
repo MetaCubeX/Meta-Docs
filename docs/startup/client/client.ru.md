@@ -86,6 +86,11 @@
 |Название проекта | Статус поддержки | Примечание |
 |:----|:----|:----|
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
+|[Clash Lite](https://apps.apple.com/app/id6761357475)|поддерживается | Закрытый исходный код |
+|[LinkClashX](https://apps.apple.com/app/id6757075299)|поддерживается | Закрытый исходный код |
+|[ConnectNow](https://apps.apple.com/app/id6749354119)|поддерживается | Закрытый исходный код |
+|[Everywhere](https://apps.apple.com/app/id6766003090)|поддерживается | Закрытый исходный код |
+|[Nextin](https://apps.apple.com/app/id6754002454)|поддерживается | Закрытый исходный код |
 
 ## Merlin (прошивка KoolCenter/paldier SWRT)
 
