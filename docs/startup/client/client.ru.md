@@ -106,6 +106,7 @@
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
 |[SSClash](https://github.com/zerolabnet/SSClash)|поддерживается |
 |[ShadowSocksR Plus+](https://github.com/fw876/helloworld)|поддерживается |
+|[openwrt-clashoo](https://github.com/kenzok8/openwrt-clashoo)|поддерживается |
 
 ## Shell
 

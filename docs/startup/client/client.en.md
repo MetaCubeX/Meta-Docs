@@ -106,6 +106,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|Maintained |
 |[SSClash](https://github.com/zerolabnet/SSClash)|Maintained |
 |[ShadowSocksR Plus+](https://github.com/fw876/helloworld)|Maintained |
+|[openwrt-clashoo](https://github.com/kenzok8/openwrt-clashoo)|Maintained |
 
 ## Shell
 

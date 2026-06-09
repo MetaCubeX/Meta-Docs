@@ -107,6 +107,7 @@
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 |[SSClash](https://github.com/zerolabnet/SSClash)|维护中 |
 |[ShadowSocksR Plus+](https://github.com/fw876/helloworld)|维护中 |
+|[openwrt-clashoo](https://github.com/kenzok8/openwrt-clashoo)|维护中 |
 
 ## Shell
 
