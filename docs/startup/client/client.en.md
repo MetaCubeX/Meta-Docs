@@ -86,6 +86,11 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |Project | Maintenance Status | Notes |
 |:----|:----|:----|
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
+|[Clash Lite](https://apps.apple.com/app/id6761357475)|Maintained | Closed-source |
+|[LinkClashX](https://apps.apple.com/app/id6757075299)|Maintained | Closed-source |
+|[ConnectNow](https://apps.apple.com/app/id6749354119)|Maintained | Closed-source |
+|[Everywhere](https://apps.apple.com/app/id6766003090)|Maintained | Closed-source |
+|[Nextin](https://apps.apple.com/app/id6754002454)|Maintained | Closed-source |
 
 ## Merlin (KoolCenter firmware/paldier SWRT firmware)
 
