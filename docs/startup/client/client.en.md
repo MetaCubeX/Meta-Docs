@@ -17,7 +17,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|Maintained |
-|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|Maintained |
+|[Koala Clash](https://github.com/coolcoala/koala-clash)|Maintained |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Maintained |
@@ -39,7 +39,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
-|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|Maintained |
+|[Koala Clash](https://github.com/coolcoala/koala-clash)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
 |[ClashMac](https://github.com/666OS/ClashMac)|Maintained | Closed-source; build is not reproducible |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
@@ -60,7 +60,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |
 |[mihoro](https://github.com/spencerwooo/mihoro)|Maintained |
-|[Koala Clash](https://github.com/coolcoala/clash-verge-rev-lite)|Maintained |
+|[Koala Clash](https://github.com/coolcoala/koala-clash)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|Maintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
