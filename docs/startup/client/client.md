@@ -87,6 +87,11 @@
 |项目名称 | 维护状态 | 备注 |
 |:----|:----|:----|
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
+|[Clash Lite](https://apps.apple.com/app/id6761357475)|维护中 | 未开源 |
+|[LinkClashX](https://apps.apple.com/app/id6757075299)|维护中 | 未开源 |
+|[ConnectNow](https://apps.apple.com/app/id6749354119)|维护中 | 未开源 |
+|[Everywhere](https://apps.apple.com/app/id6766003090)|维护中 | 未开源 |
+|[Nextin](https://apps.apple.com/app/id6754002454)|维护中 | 未开源 |
 
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
 
