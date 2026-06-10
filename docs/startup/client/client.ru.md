@@ -89,7 +89,7 @@
 |[Clash Lite](https://apps.apple.com/app/id6761357475)|поддерживается | Закрытый исходный код |
 |[LinkClashX](https://apps.apple.com/app/id6757075299)|поддерживается | Закрытый исходный код |
 |[ConnectNow](https://apps.apple.com/app/id6749354119)|поддерживается | Закрытый исходный код |
-|[Everywhere](https://apps.apple.com/app/id6766003090)|поддерживается | Закрытый исходный код |
+|[Everywhere](https://github.com/NodePassProject/Everywhere)|поддерживается |
 |[Nextin](https://apps.apple.com/app/id6754002454)|поддерживается | Закрытый исходный код |
 
 ## Merlin (прошивка KoolCenter/paldier SWRT)
