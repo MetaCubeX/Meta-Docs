@@ -70,6 +70,9 @@ Lazy state, defaults to `true`. If the current proxy group is not selected, no t
 
 The fallback proxy when the group is empty. The default value is `COMPATIBLE`.
 
+!!! note
+    You cannot enter the proxy group here; only the proxy name is supported.
+
 ## timeout
 
 Health check timeout, measured in milliseconds.
