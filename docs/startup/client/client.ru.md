@@ -98,7 +98,7 @@
 |[Clash Lite](https://apps.apple.com/app/id6761357475)|поддерживается | Закрытый исходный код |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[ConnectNow](https://apps.apple.com/app/id6749354119)|поддерживается | Закрытый исходный код |
-|[Everywhere](https://apps.apple.com/app/id6766003090)|поддерживается | Закрытый исходный код |
+|[Everywhere](https://github.com/NodePassProject/Everywhere)|поддерживается |
 |[LinkClashX](https://apps.apple.com/app/id6757075299)|поддерживается | Закрытый исходный код |
 |[Nextin](https://apps.apple.com/app/id6754002454)|поддерживается | Закрытый исходный код |
 
