@@ -90,7 +90,7 @@
 |[Clash Lite](https://apps.apple.com/app/id6761357475)|维护中 | 不开源 |
 |[LinkClashX](https://apps.apple.com/app/id6757075299)|维护中 | 不开源 |
 |[ConnectNow](https://apps.apple.com/app/id6749354119)|维护中 | 不开源 |
-|[Everywhere](https://apps.apple.com/app/id6766003090)|维护中 | 不开源 |
+|[Everywhere](https://github.com/NodePassProject/Everywhere)|维护中 |
 |[Nextin](https://apps.apple.com/app/id6754002454)|维护中 | 不开源 |
 
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
