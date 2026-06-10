@@ -80,6 +80,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Maintained |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|Maintained |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|Maintained |
+|[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|Maintained |
 
 ## iOS
 
@@ -118,7 +119,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |Project | Maintenance Status | Notes |
 |:----|:----|:----|
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|Maintained |
-|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|Maintained |
+|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|Unmaintained |
 |[Box4](https://github.com/CHIZI-0618/box4magisk)|Maintained |
 |[Box for Root](https://github.com/taamarin/box_for_magisk)|Maintained |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|Maintained |
