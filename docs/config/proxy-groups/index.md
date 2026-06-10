@@ -70,6 +70,9 @@ proxy-groups:
 
 当组为空时的回退proxy，默认为`COMPATIBLE`
 
+!!! note
+    这里不支持填写策略组，只支持填写proxy
+
 ## timeout
 
 健康检查超时时间，单位为毫秒
