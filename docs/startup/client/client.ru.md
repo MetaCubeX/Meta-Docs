@@ -81,6 +81,7 @@
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддерживается |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|поддерживается |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|поддерживается |
+|[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|поддерживается |
 
 ## iOS
 
