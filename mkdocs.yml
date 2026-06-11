@@ -151,6 +151,7 @@ plugins:
             规则集合内容: rule-providers configuration
             子规则: sub-rule
             流量隧道: tunnels
+            NTP:NTP
             实验性配置: experimental
         - build: true
           default: false
