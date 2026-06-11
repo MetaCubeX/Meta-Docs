@@ -81,6 +81,7 @@
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|维护中 |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|维护中 |
+|[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|维护中 |
 
 ## iOS
 
@@ -119,7 +120,7 @@
 |项目名称 | 维护状态 | 备注 |
 |:----|:----|:----|
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
-|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|维护中 |
+|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|停止维护 |
 |[Box4](https://github.com/CHIZI-0618/box4magisk)|维护中 |
 |[Box for Root](https://github.com/taamarin/box_for_magisk)|维护中 |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|维护中 |
