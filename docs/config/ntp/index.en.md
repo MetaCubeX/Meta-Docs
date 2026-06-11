@@ -35,5 +35,5 @@ Time synchronization interval, in minutes. Defaults to `30`.
 Optional, defaults to `DIRECT`.
 
 !!! note
-By default, NTP initiates direct connections to the target without passing through outbound or routing rules. You can use `dialer-proxy` to force specify a proxy.
+    By default, NTP initiates direct connections to the target without passing through outbound or routing rules. You can use `dialer-proxy` to force specify a proxy.
 
