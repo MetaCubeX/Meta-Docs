@@ -80,6 +80,7 @@
 
 |项目名称 | 维护状态 | 备注 |
 |:----|:----|:----|
+|[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
@@ -142,9 +143,9 @@
 |[Maodie Launcher](https://github.com/SherlockChiang/Maodie-Launcher)|维护中 |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|维护中 |
-|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|维护中 |
 |[akashaProxy](https://github.com/akashaProxy/akashaProxy)|维护中 |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|停止维护 |
+|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|停止维护 |
 
 ## HarmonyOS NEXT(OpenHarmony)
 

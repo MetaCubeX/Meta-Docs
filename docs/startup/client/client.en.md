@@ -80,6 +80,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 
 |Project | Maintenance Status | Notes |
 |:----|:----|:----|
+|[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|Maintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|Maintained |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
@@ -142,9 +143,9 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Maodie Launcher](https://github.com/SherlockChiang/Maodie-Launcher)|Maintained |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|Maintained |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|Maintained |
-|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|Maintained |
 |[akashaProxy](https://github.com/akashaProxy/akashaProxy)|Maintained |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|Unmaintained |
+|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|Unmaintained |
 
 ## HarmonyOS NEXT(OpenHarmony)
 
