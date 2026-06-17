@@ -207,8 +207,61 @@ plugins:
             内置代理策略: Встроенные исходящие соединения
             内置代理组: Предопределенные группы прокси
 
+            # Proxies protocols
+            hosts: Файл hosts
+            Tun: TUN
+            dialer-proxy: Dialer-прокси
+            DIRECT: Прямое подключение
+            DNS: DNS
+            HTTP: HTTP
+            SOCKS: SOCKS
+            Shadowsocks: Shadowsocks
+            ShadowsocksR: ShadowsocksR
+            Snell: Snell
+            VMess: VMess
+            VLESS: VLESS
+            Trojan: Trojan
+            AnyTLS: AnyTLS
+            Mieru: Mieru
+            Sudoku: Sudoku
+            Hysteria: Hysteria
+            Hysteria2: Hysteria2
+            TUIC: TUIC
+            WireGuard: WireGuard
+            Tailscale: Tailscale
+            SSH: SSH
+            MASQUE: MASQUE
+            TrustTunnel: TrustTunnel
+            OpenVPN: OpenVPN
+
+            # Listener protocols
+            listeners: Слушатели
+            http: HTTP
+            socks: SOCKS
+            mixed: Mixed
+            redirect: Redirect
+            tproxy: TProxy
+            tun: TUN
+            ShadowSocks: ShadowSocks
+            VMess: VMess
+            VLESS: VLESS
+            Trojan: Trojan
+            AnyTLS: AnyTLS
+            Mieru: Mieru
+            Sudoku: Sudoku
+            TUIC v4: TUIC v4
+            TUIC v5: TUIC v5
+            Hysteria2: Hysteria2
+            Hysteria2 Realm: Hysteria2 Realm
+            TrustTunnel: TrustTunnel
+            tunnel: Tunnel
+
+            # Other
+            NTP: NTP
+            APIs: API
+
   - git-revision-date-localized:
-      locale: zh
+    locale: zh
 
 nav:
   - 简介: index.md
