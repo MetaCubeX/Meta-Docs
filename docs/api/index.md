@@ -29,6 +29,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`GET` / `WS`
 - 可选参数：`?level=log_level`, 其中 `log_level` 可选值为 `info`, `warning`, `error`, `debug`
+- 可选参数：`?format=structured`, 携带后输出结构化日志（包含 `time`、`level`、`message`、`fields` 字段）
 
 ## 流量信息
 
@@ -118,6 +119,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     更新内核
 
 - 请求方法：`POST`
+- 可选参数：`?channel=xxx` 指定更新通道，`?force=true` 强制更新
 - 发送数据：`'{"path": "", "payload": ""}'`
 
 ### `/upgrade/ui`
@@ -151,11 +153,6 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`GET`
 
-!!! info ""
-    清除自动策略组 fixed 选择
-
-- 请求方法：`DELETE`
-
 ### `/group/group_name/delay`
 
 !!! info ""
@@ -163,6 +160,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`GET`
 - 携带参数：`?url=xxx&timeout=5000`
+- 可选参数：`?expected=xxx`, 期望的 HTTP 响应状态码，支持范围写法（如 `200/204`、`200-299`）
 
 ## 代理
 
@@ -186,6 +184,11 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 - 请求方法：`PUT`
 - 携带数据：`'{"name":"日本"}'`
 
+!!! info ""
+    清除该代理/策略组的 fixed 固定选择（`Selector` 类型除外）
+
+- 请求方法：`DELETE`
+
 ### `/proxies/proxies_name/delay`
 
 !!! info ""
@@ -193,6 +196,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`GET`
 - 携带参数：`?url=xxx&timeout=5000`
+- 可选参数：`?expected=xxx`, 期望的 HTTP 响应状态码，支持范围写法（如 `200/204`、`200-299`）
 
 ## 代理集合
 
@@ -219,6 +223,13 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 !!! info ""
     触发特定代理集合的健康检查
+
+- 请求方法：`GET`
+
+### `/providers/proxies/providers_name/proxies_name`
+
+!!! info ""
+    获取代理集合内指定代理的信息
 
 - 请求方法：`GET`
 
@@ -294,6 +305,26 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`GET`
 - 携带参数：`?name=example.com&type=A`
+
+## 存储
+
+### `/storage/key`
+
+!!! info ""
+    获取指定 key 的存储值，不存在时返回 `null`
+
+- 请求方法：`GET`
+
+!!! info ""
+    写入指定 key 的存储值，数据须为合法 JSON，最大 1MB
+
+- 请求方法：`PUT`
+- 携带数据：`'{"foo": "bar"}'`
+
+!!! info ""
+    删除指定 key 的存储值
+
+- 请求方法：`DELETE`
 
 ## DEBUG
 

@@ -29,6 +29,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `GET` / `WS`
 - Optional parameter: `?level=log_level`, where `log_level` can be `info`, `warning`, `error`, `debug`
+- Optional parameter: `?format=structured`, when present outputs structured logs (with `time`, `level`, `message`, `fields` fields)
 
 ## Traffic Information
 
@@ -118,6 +119,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Update the kernel
 
 - Request method: `POST`
+- Optional parameters: `?channel=xxx` specifies the update channel, `?force=true` forces the update
 - Data: `'{"path": "", "payload": ""}'`
 
 ### `/upgrade/ui`
@@ -151,11 +153,6 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `GET`
 
-!!! info ""
-    Clear the fixed selection of the automatic policy group
-
-- Request method: `DELETE`
-
 ### `/group/group_name/delay`
 
 !!! info ""
@@ -163,6 +160,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `GET`
 - Parameter: `?url=xxx&timeout=5000`
+- Optional parameter: `?expected=xxx`, the expected HTTP response status code, supports ranges (e.g. `200/204`, `200-299`)
 
 ## Proxies
 
@@ -186,6 +184,11 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 - Request method: `PUT`
 - Data: `'{"name":"Japan"}'`
 
+!!! info ""
+    Clear the fixed selection of the proxy/policy group (except for the `Selector` type)
+
+- Request method: `DELETE`
+
 ### `/proxies/proxies_name/delay`
 
 !!! info ""
@@ -193,6 +196,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `GET`
 - Parameter: `?url=xxx&timeout=5000`
+- Optional parameter: `?expected=xxx`, the expected HTTP response status code, supports ranges (e.g. `200/204`, `200-299`)
 
 ## Proxy Sets
 
@@ -222,6 +226,13 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `GET`
 
+### `/providers/proxies/providers_name/proxies_name`
+
+!!! info ""
+    Retrieve information for a specified proxy within the proxy set
+
+- Request method: `GET`
+
 ### `/providers/proxies/providers_name/proxies_name/healthcheck`
 
 !!! info ""
@@ -238,6 +249,14 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve rule information
 
 - Request method: `GET`
+
+### `/rules/disable`
+
+!!! info ""
+    Disable rules, where the key is the rule index and the value is whether to disable the rule. This is a temporary operation and is reset after a restart.
+
+- Request method: `PATCH`
+- Data: `'{"0": false,"1": true}'`
 
 ## Rule Sets
 
@@ -286,6 +305,26 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `GET`
 - Parameter: `?name=example.com&type=A`
+
+## Storage
+
+### `/storage/key`
+
+!!! info ""
+    Retrieve the storage value for the specified key, returns `null` if it does not exist
+
+- Request method: `GET`
+
+!!! info ""
+    Write the storage value for the specified key; the data must be valid JSON, maximum 1MB
+
+- Request method: `PUT`
+- Data: `'{"foo": "bar"}'`
+
+!!! info ""
+    Delete the storage value for the specified key
+
+- Request method: `DELETE`
 
 ## DEBUG
 
