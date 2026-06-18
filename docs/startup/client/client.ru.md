@@ -46,6 +46,7 @@
 |[ClashBar](https://github.com/Sitoi/ClashBar)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
+|[KumoApp](https://github.com/ProjectKumo/KumoApp)|поддерживается |
 
 ## Linux
 
@@ -80,6 +81,7 @@
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддерживается |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|поддерживается |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|поддерживается |
+|[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|поддерживается |
 
 ## iOS
 
@@ -118,7 +120,7 @@
 |Название проекта | Статус поддержки | Примечание |
 |:----|:----|:----|
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
-|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|поддерживается |
+|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|поддержка прекращена |
 |[Box4](https://github.com/CHIZI-0618/box4magisk)|поддерживается |
 |[Box for Root](https://github.com/taamarin/box_for_magisk)|поддерживается |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|поддерживается |

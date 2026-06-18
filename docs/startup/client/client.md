@@ -47,6 +47,7 @@
 |[CatBar](https://github.com/QuentinHsu/cat-bar)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
+|[KumoApp](https://github.com/ProjectKumo/KumoApp)|维护中 |
 
 ## Linux
 

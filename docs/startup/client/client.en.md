@@ -46,6 +46,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ClashBar](https://github.com/Sitoi/ClashBar)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
+|[KumoApp](https://github.com/ProjectKumo/KumoApp)|Maintained |
 
 ## Linux
 
