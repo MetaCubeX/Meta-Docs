@@ -20,6 +20,8 @@ tun:
   iproute2-table-index: 2022
   iproute2-rule-index: 9000
   endpoint-independent-nat: false
+  loopback_address:
+    - 10.7.0.1
   route-address-set:
     - ruleset-1
   route-exclude-address-set:
@@ -172,6 +174,13 @@ UDP NAT 过期时间，以秒为单位，默认为 300(5 分钟)
 
 启用独立于端点的 NAT，性能可能会略有下降，所以不建议在不需要的时候开启。
 
+## loopback_address
+
+通过将目标 IP 重定向至本机的环回地址（Loopback），让发往外网的 TCP 请求直接路由回本地监听的代理端口
+
+!!! tip 
+    将选项值设置为 `10.7.0.1` 可实现与 SideStore/StosVPN 相同的行为。
+    
 ## route-address-set
 
 将指定规则集中的目标 IP CIDR 规则添加到防火墙，不匹配的流量将绕过路由

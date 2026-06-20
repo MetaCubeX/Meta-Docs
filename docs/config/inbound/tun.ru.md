@@ -20,6 +20,8 @@ tun:
   iproute2-table-index: 2022
   iproute2-rule-index: 9000
   endpoint-independent-nat: false
+  loopback_address:
+    - 10.7.0.1
   route-address-set:
     - ruleset-1
   route-exclude-address-set:
@@ -169,6 +171,13 @@ auto-redirect с auto-route теперь может работать на роу
 ## endpoint-independent-nat
 
 Включает NAT, независимый от конечной точки. Производительность может немного снизиться, поэтому не рекомендуется включать, если в этом нет необходимости.
+
+## loopback_address
+
+Перенаправляет целевые IP-адреса на локальный петлевой интерфейс (Loopback), возвращая исходящие TCP-запросы напрямую на локальный порт прокси-сервера.
+
+!!! tip
+    Установка значения `10.7.0.1` позволяет добиться того же поведения, что и в SideStore/StosVPN.
 
 ## route-address-set
 
