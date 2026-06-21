@@ -34,6 +34,9 @@ dns:
     - https://doh.pub/dns-query
   proxy-server-nameserver-policy:
     'www.yournode.com': '114.114.114.114'
+  direct-nameserver:
+    - system
+  direct-nameserver-follow-policy: false
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -45,6 +48,7 @@ dns:
       - '+.google.com'
       - '+.facebook.com'
       - '+.youtube.com'
+  # fallback-lazy-query: false
 ```
 
 ## enable
@@ -201,6 +205,10 @@ Results from these subnets will be considered polluted; when `nameserver` resolv
 ### domain
 
 These domains are considered polluted; matching these domains will directly use `fallback` resolution, not `nameserver`.
+
+### fallback-lazy-query
+
+The default value is `false`. If set to `true`, it will first evaluate whether the results from `nameserver` satisfy the `fallback-filter` conditions before initiating a fallback query.
 
 ## Additional Parameters
 
