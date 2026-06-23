@@ -13,6 +13,7 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # sni: example.com
   # Identifier of an outbound proxy. When non-empty, connections are sent through the specified proxy.
   # dialer-proxy: "ss1"
   # remote-dns-resolve: true # Force remote DNS resolution, default is false
@@ -31,6 +32,7 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # sni: example.com
   network: h2
   # Identifier of an outbound proxy. When non-empty, connections are sent through the specified proxy.
   # dialer-proxy: "ss1"
