@@ -13,6 +13,7 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # sni: example.com
   # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接
   # dialer-proxy: "ss1"
   # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
@@ -31,6 +32,7 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # sni: example.com
   network: h2
   # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接
   # dialer-proxy: "ss1"
@@ -85,4 +87,4 @@ TUN 设备的 MTU 大小，默认为 1280
 
 ## network
 
-optional, 默认为 quic，masque-h2 需要设置为`h2`
+可选, 默认为 quic，masque-h2 需要设置为`h2`
