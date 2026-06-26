@@ -43,6 +43,7 @@
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|维护中 |
+|[KumoApp](https://github.com/ProjectKumo/KumoApp)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |

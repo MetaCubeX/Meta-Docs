@@ -42,6 +42,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|поддерживается |
+|[KumoApp](https://github.com/ProjectKumo/KumoApp)|поддерживается |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
@@ -79,6 +80,7 @@
 
 |Название проекта | Статус поддержки | Примечание |
 |:----|:----|:----|
+|[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|поддерживается |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
@@ -141,9 +143,9 @@
 |[Maodie Launcher](https://github.com/SherlockChiang/Maodie-Launcher)|поддерживается |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
 |[Surfing](https://github.com/MoGuangYu/Surfing)|поддерживается |
-|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|поддерживается |
 |[akashaProxy](https://github.com/akashaProxy/akashaProxy)|поддерживается |
 |[Clash.Meta for Magisk](https://t.me/MagiskChangeKing/126)|поддержка прекращена |
+|[Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)|поддержка прекращена |
 
 ## HarmonyOS NEXT(OpenHarmony)
 

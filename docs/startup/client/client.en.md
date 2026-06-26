@@ -37,12 +37,13 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[CatBar](https://github.com/QuentinHsu/cat-bar)|Maintained |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|Maintained |
-|[ClashMac](https://github.com/666OS/ClashMac)|Maintained | Closed-source，构建不可复现 |
-|[ClashMi](https://github.com/KaringX/clashmi)|Maintained | 前端开源，构建不可复现 |
+|[ClashMac](https://github.com/666OS/ClashMac)|Maintained | Closed-source; build is not reproducible |
+|[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|Maintained |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|Maintained |
+|[KumoApp](https://github.com/ProjectKumo/KumoApp)|Maintained |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
