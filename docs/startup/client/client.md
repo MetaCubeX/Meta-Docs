@@ -83,6 +83,7 @@
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|维护中 |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|维护中 |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|维护中 |
+|[SlClash](https://github.com/songzhengpei/Slclash)|维护中 |
 
 ## iOS
 
