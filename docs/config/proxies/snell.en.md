@@ -1,7 +1,7 @@
 # Snell
 
 ```{.yaml linenums="1"}
-proxies
+proxies:
 - name: "snell"
   type: snell
   server: server
@@ -14,6 +14,21 @@ proxies
   #   mode: http
   #   host: bing.com
 
+- name: "snell-shadow-tls"
+  type: snell
+  server: server
+  port: 44046
+  psk: yourpsk
+  # version: 4
+  # udp: true
+  # reuse: false
+  # client-fingerprint: chrome
+  obfs-opts:
+    mode: shadow-tls
+    host: bing.com
+    password: "shadow_tls_password"
+    version: 2
+    alpn: ["h2"]
 ```
 
 [Common Fields](./index.md)
@@ -36,8 +51,20 @@ Snell obfuscation settings.
 
 ### obfs-opts.mode
 
-Snell obfuscation mode. Supports http/tls.
+Snell obfuscation mode. Supports http/tls/shadow-tls.
 
 ### obfs-opts.host
 
 Snell obfuscation hostname.
+
+### obfs-opts.password
+
+The ShadowTLS password. Required only when `shadow-tls` is used.
+
+### obfs-opts.version
+
+The ShadowTLS version. Supported values are v1/2/3 Required only when `shadow-tls` is used.
+
+### obfs-opts.alpn
+
+Supported values are `h2` and `http/1.1`. Required only when `shadow-tls` is used.
