@@ -43,6 +43,12 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # по умолчанию в Mbps
+  #     down: 1000
 ```
 
 ## [Общие поля](./index.md)

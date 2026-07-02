@@ -82,4 +82,10 @@ listeners:
       burst-bytes-per-sec: 0 # 突发速率（字节/秒），大于 bytesPerSec 时生效
   ### 注意，对于vless listener, 如果 "allow-insecure" 不为 true, 至少需要填写 “certificate和private-key” 或 “reality-config” 或 “decryption” 的其中一项 ###
   # allow-insecure: false # 是否允许不开启tls加密（注意：仅用于有 nginx, caddy 前置的情况）
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # 默认 Mbps
+  #     down: 1000
 ```

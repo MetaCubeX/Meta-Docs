@@ -23,6 +23,12 @@ listeners:
   # 可选：当启用 HTTPMask 且识别到“像 HTTP 但不符合 tunnel/auth”的请求时，将原始字节透传给 fallback（常用于与其他服务共端口）：
   # fallback: "127.0.0.1:80"
   disable-http-mask: false # 可选：禁用 http 掩码/隧道（默认为 false）
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # 默认 Mbps
+  #     down: 1000
 
 ```
 

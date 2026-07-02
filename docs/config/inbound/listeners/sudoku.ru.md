@@ -18,6 +18,12 @@ listeners:
   disable-http-mask: false # Опционально: отключить HTTP маску/туннель (по умолчанию false)
   # http-mask-mode: legacy # Опционально: legacy (по умолчанию), stream, poll, auto; stream/poll/auto поддерживают работу через CDN/прокси
   # path-root: "" # Опционально: префикс пути первого уровня для HTTP туннеля (должен совпадать на обеих сторонах), например "aabbcc" => /aabbcc/session, /aabbcc/stream, /aabbcc/api/v1/upload
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # по умолчанию в Mbps
+  #     down: 1000
 
 ```
 

@@ -45,4 +45,10 @@ listeners:
   #     after-bytes: 0 # начать ограничение скорости после передачи указанного количества байт
   #     bytes-per-sec: 0 # базовая скорость (байт/сек)
   #     burst-bytes-per-sec: 0 # пиковая скорость (байт/сек), действует когда больше bytesPerSec
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # по умолчанию в Mbps
+  #     down: 1000
 ``` 
