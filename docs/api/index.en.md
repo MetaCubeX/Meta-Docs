@@ -44,7 +44,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 ### `/traffic`
 
 !!! info ""
-    Retrieve real-time traffic, measured in kbps
+    Retrieve real-time traffic; `up`/`down` are in bytes/s, `upTotal`/`downTotal` are in bytes
 
 - Request method: `GET` / `WS`
 - Response fields (pushed once per second):
@@ -58,7 +58,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 ### `/memory`
 
 !!! info ""
-    Retrieve real-time memory usage, measured in kb
+    Retrieve real-time memory usage, measured in bytes
 
 - Request method: `GET` / `WS`
 - Response fields (pushed once per second):

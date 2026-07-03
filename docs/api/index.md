@@ -44,7 +44,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 ### `/traffic`
 
 !!! info ""
-    获取实时流量，单位 kbps
+    获取实时流量，`up`/`down` 单位为字节/秒，`upTotal`/`downTotal` 单位为字节
 
 - 请求方法：`GET` / `WS`
 - 返回字段（每秒推送一次）：
@@ -58,7 +58,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 ### `/memory`
 
 !!! info ""
-    获取实时内存占用，单位 kb
+    获取实时内存占用，单位为字节
 
 - 请求方法：`GET` / `WS`
 - 返回字段（每秒推送一次）：
