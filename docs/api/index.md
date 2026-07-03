@@ -206,7 +206,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`GET`
 - 返回字段：
-    - `proxies`：以代理名称为键的对象，每个条目均包含以下**公共字段**：
+    - `proxies`：以代理/策略组名称为键的对象，每个条目均包含以下**公共字段**：
         - `name`：代理/策略组名称
         - `type`：类型（如 `Shadowsocks`、`VMess`、`DIRECT`、`Selector`、`URLTest`、`Fallback`、`LoadBalance` 等）
         - `udp`：是否支持 UDP
