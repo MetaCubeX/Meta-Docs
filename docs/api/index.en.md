@@ -206,9 +206,9 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `GET`
 - Response fields:
-    - `proxies`: object keyed by proxy name; each proxy contains:
-        - `name`: proxy name
-        - `type`: proxy type (e.g. `Shadowsocks`, `VMess`, `DIRECT`, `Selector`, etc.)
+    - `proxies`: object keyed by proxy/group name; every entry shares these **common fields**:
+        - `name`: proxy or group name
+        - `type`: type (e.g. `Shadowsocks`, `VMess`, `DIRECT`, `Selector`, `URLTest`, `Fallback`, `LoadBalance`, etc.)
         - `udp`: whether UDP is supported
         - `uot`: whether UDP over TCP is supported
         - `xudp`: whether XUDP is supported
@@ -222,6 +222,15 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
         - `routing-mark`: routing mark value
         - `provider-name`: name of the proxy provider this proxy belongs to
         - `dialer-proxy`: underlying dialer proxy name
+    - **Policy groups** (`Selector`, `URLTest`, `Fallback`, `LoadBalance`) additionally include:
+        - `now`: currently selected node name (absent for `LoadBalance`)
+        - `all`: array of all node/group names in the group
+        - `testUrl`: health check URL
+        - `hidden`: whether the group is hidden in the dashboard
+        - `icon`: icon URL
+        - `emptyFallback`: fallback node name used when all members are unavailable
+        - `expectedStatus`: expected HTTP response status code for health checks (absent for `Selector`)
+        - `fixed`: currently pinned node name (only `URLTest` and `Fallback`)
 
 ### `/proxies/proxies_name`
 
@@ -229,7 +238,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve specific proxy information
 
 - Request method: `GET`
-- Response fields: proxy object, same fields as a single entry under `/proxies`
+- Response fields: proxy or group object, same fields as a single entry under `/proxies` (regular proxies have only the common fields; policy groups additionally include `now`, `all`, etc.)
 
 !!! info ""
     Select a specific proxy
