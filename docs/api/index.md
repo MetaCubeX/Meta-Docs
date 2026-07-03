@@ -30,6 +30,14 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 - 请求方法：`GET` / `WS`
 - 可选参数：`?level=log_level`, 其中 `log_level` 可选值为 `info`, `warning`, `error`, `debug`
 - 可选参数：`?format=structured`, 携带后输出结构化日志（包含 `time`、`level`、`message`、`fields` 字段）
+- 返回字段（标准模式，每行推送一个 JSON）：
+    - `type`：日志级别，可选值 `info` / `warning` / `error` / `debug`
+    - `payload`：日志内容
+- 返回字段（结构化模式 `?format=structured`）：
+    - `time`：时间字符串（格式 `HH:MM:SS`）
+    - `level`：日志级别
+    - `message`：日志内容
+    - `fields`：附加字段数组
 
 ## 流量信息
 
@@ -39,6 +47,11 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取实时流量，单位 kbps
 
 - 请求方法：`GET` / `WS`
+- 返回字段（每秒推送一次）：
+    - `up`：当前上传速率（字节/秒）
+    - `down`：当前下载速率（字节/秒）
+    - `upTotal`：累计上传字节数
+    - `downTotal`：累计下载字节数
 
 ## 内存信息
 
@@ -48,6 +61,9 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取实时内存占用，单位 kb
 
 - 请求方法：`GET` / `WS`
+- 返回字段（每秒推送一次）：
+    - `inuse`：当前内存使用量（字节）
+    - `oslimit`：系统内存限制（字节，固定为 `0`）
 
 ## 版本信息
 
@@ -57,6 +73,9 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取 mihomo 版本信息
 
 - 请求方法：`GET`
+- 返回字段：
+    - `meta`：是否为 Meta 版本（`true` / `false`）
+    - `version`：版本号字符串
 
 ## 缓存
 
@@ -66,6 +85,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     清除 fakeip 缓存
 
 - 请求方法：`POST`
+- 返回：无（HTTP 204）
 
 ### `/cache/dns/flush`
 
@@ -73,6 +93,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     清除 dns 缓存
 
 - 请求方法：`POST`
+- 返回：无（HTTP 204）
 
 ## 运行配置
 
@@ -82,18 +103,21 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取基本配置
 
 - 请求方法：`GET`
+- 返回字段：当前运行配置的 JSON 对象，包含 `port`、`socks-port`、`mixed-port`、`mode`、`log-level`、`allow-lan`、`ipv6`、`tun` 等字段
 
 !!! info ""
     重新加载基本配置
 
 - 请求方法：`PUT`
 - 携带参数：`?force=true`
+- 返回：无（HTTP 204）
 
 !!! info ""
     更新基本配置
 
 - 请求方法：`PATCH`
 - 携带数据：`'{"mixed-port": 7890}'`
+- 返回：无（HTTP 204）
 
 ### `/configs/geo`
 
@@ -102,6 +126,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`POST`
 - 发送数据：`'{"path": "", "payload": ""}'`
+- 返回：无（HTTP 204）
 
 ### `/restart`
 
@@ -110,6 +135,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`POST`
 - 发送数据：`'{"path": "", "payload": ""}'`
+- 返回：无（HTTP 204）
 
 ## 更新
 
@@ -121,6 +147,8 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 - 请求方法：`POST`
 - 可选参数：`?channel=xxx` 指定更新通道，`?force=true` 强制更新
 - 发送数据：`'{"path": "", "payload": ""}'`
+- 返回字段：
+    - `status`：固定为 `"ok"`
 
 ### `/upgrade/ui`
 
@@ -128,6 +156,8 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     更新面板，须设置 [external-ui](../config/general.md#_7)
 
 - 请求方法：`POST`
+- 返回字段：
+    - `status`：固定为 `"ok"`
 
 ### `/upgrade/geo`
 
@@ -136,6 +166,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`POST`
 - 发送数据：`'{"path": "", "payload": ""}'`
+- 返回：无（HTTP 204）
 
 ## 策略组
 
@@ -145,6 +176,8 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取策略组信息
 
 - 请求方法：`GET`
+- 返回字段：
+    - `proxies`：策略组对象数组，每个对象格式同 `/proxies/proxies_name`
 
 ### `/group/group_name`
 
@@ -152,6 +185,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取具体的策略组信息
 
 - 请求方法：`GET`
+- 返回字段：策略组对象，格式同 `/proxies/proxies_name`
 
 ### `/group/group_name/delay`
 
@@ -161,6 +195,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 - 请求方法：`GET`
 - 携带参数：`?url=xxx&timeout=5000`
 - 可选参数：`?expected=xxx`, 期望的 HTTP 响应状态码，支持范围写法（如 `200/204`、`200-299`）
+- 返回字段：以节点名称为键、延迟毫秒数（`uint16`）为值的 JSON 对象，例如 `{"节点A": 120, "节点B": 350}`
 
 ## 代理
 
@@ -170,6 +205,23 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取代理信息
 
 - 请求方法：`GET`
+- 返回字段：
+    - `proxies`：以代理名称为键的对象，每个代理包含以下字段：
+        - `name`：代理名称
+        - `type`：代理类型（如 `Shadowsocks`、`VMess`、`DIRECT`、`Selector` 等）
+        - `udp`：是否支持 UDP
+        - `uot`：是否支持 UDP over TCP
+        - `xudp`：是否支持 XUDP
+        - `tfo`：是否启用 TCP Fast Open
+        - `mptcp`：是否启用 MPTCP
+        - `smux`：是否启用多路复用
+        - `alive`：当前是否存活
+        - `history`：延迟历史数组，每项含 `time`（时间）和 `delay`（毫秒）
+        - `extra`：额外延迟历史（按测试 URL 分组）
+        - `interface`：绑定的网卡名称
+        - `routing-mark`：路由标记
+        - `provider-name`：所属代理集合名称
+        - `dialer-proxy`：底层拨号代理名称
 
 ### `/proxies/proxies_name`
 
@@ -177,17 +229,20 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取具体的代理信息
 
 - 请求方法：`GET`
+- 返回字段：代理对象，字段同 `/proxies` 中的单个代理条目
 
 !!! info ""
     选择特定的代理
 
 - 请求方法：`PUT`
 - 携带数据：`'{"name":"日本"}'`
+- 返回：无（HTTP 204）
 
 !!! info ""
     清除该代理/策略组的 fixed 固定选择（`Selector` 类型除外）
 
 - 请求方法：`DELETE`
+- 返回：无（HTTP 204）
 
 ### `/proxies/proxies_name/delay`
 
@@ -197,6 +252,8 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 - 请求方法：`GET`
 - 携带参数：`?url=xxx&timeout=5000`
 - 可选参数：`?expected=xxx`, 期望的 HTTP 响应状态码，支持范围写法（如 `200/204`、`200-299`）
+- 返回字段：
+    - `delay`：测试延迟（毫秒，`uint16`）
 
 ## 代理集合
 
@@ -206,6 +263,8 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取所有代理集合的所有信息
 
 - 请求方法：`GET`
+- 返回字段：
+    - `providers`：以集合名称为键的对象，每个集合包含其元信息及代理列表
 
 ### `/providers/proxies/providers_name`
 
@@ -213,11 +272,13 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取特定代理集合的信息
 
 - 请求方法：`GET`
+- 返回字段：代理集合对象，包含集合配置信息及 `proxies` 代理列表
 
 !!! info ""
     更新代理集合
 
 - 请求方法：`PUT`
+- 返回：无（HTTP 204）
 
 ### `/providers/proxies/providers_name/healthcheck`
 
@@ -225,6 +286,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     触发特定代理集合的健康检查
 
 - 请求方法：`GET`
+- 返回：无（HTTP 204）
 
 ### `/providers/proxies/providers_name/proxies_name`
 
@@ -232,6 +294,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取代理集合内指定代理的信息
 
 - 请求方法：`GET`
+- 返回字段：代理对象，字段同 `/proxies/proxies_name`
 
 ### `/providers/proxies/providers_name/proxies_name/healthcheck`
 
@@ -240,6 +303,8 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`GET`
 - 携带参数：`?url=xxx&timeout=5000`
+- 返回字段：
+    - `delay`：测试延迟（毫秒，`uint16`）
 
 ## 规则
 
@@ -249,6 +314,19 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取规则信息
 
 - 请求方法：`GET`
+- 返回字段：
+    - `rules`：规则数组，每个元素包含：
+        - `index`：规则索引（从 0 开始）
+        - `type`：规则类型（如 `DOMAIN`、`IP-CIDR`、`GEOIP` 等）
+        - `payload`：规则匹配内容
+        - `proxy`：目标代理/策略组名称
+        - `size`：规则条目数量（仅 `GEOIP` / `GEOSITE` 类型有效，其他为 `-1`）
+        - `extra`（可选，存在时包含以下字段）：
+            - `disabled`：是否已禁用
+            - `hitCount`：命中次数
+            - `hitAt`：最后命中时间
+            - `missCount`：未命中次数
+            - `missAt`：最后未命中时间
 
 ### `/rules/disable`
 
@@ -257,6 +335,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`PATCH`
 - 携带数据：`'{"0": false,"1": true}'`
+- 返回：无（HTTP 204）
 
 ## 规则集合
 
@@ -266,6 +345,8 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取所有规则集合的所有信息
 
 - 请求方法：`GET`
+- 返回字段：
+    - `providers`：以规则集合名称为键的对象
 
 ### `/providers/rules/providers_name`
 
@@ -273,6 +354,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     更新规则集合
 
 - 请求方法：`PUT`
+- 返回：无（HTTP 204）
 
 ## 连接
 
@@ -283,11 +365,26 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`GET` / `WS`
 - 可选参数：`?interval=milliseconds`, 其中 `milliseconds` 为刷新间隔，默认值为 1000 毫秒
+- 返回字段：
+    - `downloadTotal`：累计下载字节数
+    - `uploadTotal`：累计上传字节数
+    - `memory`：当前内存使用量（字节）
+    - `connections`：活跃连接数组，每项包含：
+        - `id`：连接唯一 ID
+        - `metadata`：连接元数据（源/目标地址、协议、进程名称等）
+        - `upload`：该连接已上传字节数
+        - `download`：该连接已下载字节数
+        - `start`：连接建立时间
+        - `chains`：代理链路数组
+        - `providerChains`：provider 代理链路数组
+        - `rule`：命中规则类型
+        - `rulePayload`：命中规则内容
 
 !!! info ""
     关闭所有连接
 
 - 请求方法：`DELETE`
+- 返回：无（HTTP 204）
 
 ### `/connections/:id`
 
@@ -295,6 +392,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     关闭特定连接
 
 - 请求方法：`DELETE`
+- 返回：无（HTTP 204）
 
 ## 域名查询
 
@@ -305,6 +403,17 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`GET`
 - 携带参数：`?name=example.com&type=A`
+- 返回字段：
+    - `Status`：DNS 响应码（Rcode）
+    - `Question`：查询问题数组
+    - `TC`：是否截断（Truncated）
+    - `RD`：是否期望递归（RecursionDesired）
+    - `RA`：是否支持递归（RecursionAvailable）
+    - `AD`：数据是否已认证（AuthenticatedData）
+    - `CD`：是否禁止检查（CheckingDisabled）
+    - `Answer`（可选）：答案记录数组，每项含 `name`、`type`、`TTL`、`data`
+    - `Authority`（可选）：权威记录数组，格式同 `Answer`
+    - `Additional`（可选）：附加记录数组，格式同 `Answer`
 
 ## 存储
 
@@ -314,17 +423,20 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取指定 key 的存储值，不存在时返回 `null`
 
 - 请求方法：`GET`
+- 返回字段：存储的任意合法 JSON 值，不存在时返回 `null`
 
 !!! info ""
     写入指定 key 的存储值，数据须为合法 JSON，最大 1MB
 
 - 请求方法：`PUT`
 - 携带数据：`'{"foo": "bar"}'`
+- 返回：无（HTTP 204）
 
 !!! info ""
     删除指定 key 的存储值
 
 - 请求方法：`DELETE`
+- 返回：无（HTTP 204）
 
 ## DEBUG
 
@@ -336,6 +448,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     进行主动 GC
 
 - 请求方法：`PUT`
+- 返回：无（HTTP 204）
 
 ### `/debug/pprof`
 

@@ -30,6 +30,14 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 - Request method: `GET` / `WS`
 - Optional parameter: `?level=log_level`, where `log_level` can be `info`, `warning`, `error`, `debug`
 - Optional parameter: `?format=structured`, when present outputs structured logs (with `time`, `level`, `message`, `fields` fields)
+- Response fields (standard mode, one JSON per line):
+    - `type`: log level — `info` / `warning` / `error` / `debug`
+    - `payload`: log message content
+- Response fields (structured mode `?format=structured`):
+    - `time`: time string in `HH:MM:SS` format
+    - `level`: log level
+    - `message`: log message content
+    - `fields`: array of additional fields
 
 ## Traffic Information
 
@@ -39,6 +47,11 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve real-time traffic, measured in kbps
 
 - Request method: `GET` / `WS`
+- Response fields (pushed once per second):
+    - `up`: current upload rate (bytes/s)
+    - `down`: current download rate (bytes/s)
+    - `upTotal`: cumulative uploaded bytes
+    - `downTotal`: cumulative downloaded bytes
 
 ## Memory Information
 
@@ -48,6 +61,9 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve real-time memory usage, measured in kb
 
 - Request method: `GET` / `WS`
+- Response fields (pushed once per second):
+    - `inuse`: current memory in use (bytes)
+    - `oslimit`: OS memory limit (bytes, always `0`)
 
 ## Version Information
 
@@ -57,6 +73,9 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve the Clash version
 
 - Request method: `GET`
+- Response fields:
+    - `meta`: whether this is a Meta build (`true` / `false`)
+    - `version`: version string
 
 ## Cache
 
@@ -66,6 +85,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Clear the fake IP cache
 
 - Request method: `POST`
+- Response: none (HTTP 204)
 
 ### `/cache/dns/flush`
 
@@ -73,6 +93,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Clear the DNS cache
 
 - Request method: `POST`
+- Response: none (HTTP 204)
 
 ## Running Configuration
 
@@ -82,18 +103,21 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve basic configuration
 
 - Request method: `GET`
+- Response fields: JSON object of the current running configuration, including `port`, `socks-port`, `mixed-port`, `mode`, `log-level`, `allow-lan`, `ipv6`, `tun`, and other fields
 
 !!! info ""
     Reload basic configuration
 
 - Request method: `PUT`
 - Parameter: `?force=true`
+- Response: none (HTTP 204)
 
 !!! info ""
     Update basic configuration
 
 - Request method: `PATCH`
 - Data: `'{"mixed-port": 7890}'`
+- Response: none (HTTP 204)
 
 ### `/configs/geo`
 
@@ -102,6 +126,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `POST`
 - Data: `'{"path": "", "payload": ""}'`
+- Response: none (HTTP 204)
 
 ### `/restart`
 
@@ -110,6 +135,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `POST`
 - Data: `'{"path": "", "payload": ""}'`
+- Response: none (HTTP 204)
 
 ## Updates
 
@@ -121,6 +147,8 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 - Request method: `POST`
 - Optional parameters: `?channel=xxx` specifies the update channel, `?force=true` forces the update
 - Data: `'{"path": "", "payload": ""}'`
+- Response fields:
+    - `status`: fixed value `"ok"`
 
 ### `/upgrade/ui`
 
@@ -128,6 +156,8 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Update the panel; [external-ui](../config/general.md#external-user-interface) must be set
 
 - Request method: `POST`
+- Response fields:
+    - `status`: fixed value `"ok"`
 
 ### `/upgrade/geo`
 
@@ -136,6 +166,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `POST`
 - Data: `'{"path": "", "payload": ""}'`
+- Response: none (HTTP 204)
 
 ## Policy Groups
 
@@ -145,6 +176,8 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve policy group information
 
 - Request method: `GET`
+- Response fields:
+    - `proxies`: array of policy group objects, each in the same format as `/proxies/proxies_name`
 
 ### `/group/group_name`
 
@@ -152,6 +185,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve specific policy group information
 
 - Request method: `GET`
+- Response fields: policy group object, same format as `/proxies/proxies_name`
 
 ### `/group/group_name/delay`
 
@@ -161,6 +195,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 - Request method: `GET`
 - Parameter: `?url=xxx&timeout=5000`
 - Optional parameter: `?expected=xxx`, the expected HTTP response status code, supports ranges (e.g. `200/204`, `200-299`)
+- Response fields: JSON object mapping node names to their latency in milliseconds (`uint16`), e.g. `{"Node A": 120, "Node B": 350}`
 
 ## Proxies
 
@@ -170,6 +205,23 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve proxy information
 
 - Request method: `GET`
+- Response fields:
+    - `proxies`: object keyed by proxy name; each proxy contains:
+        - `name`: proxy name
+        - `type`: proxy type (e.g. `Shadowsocks`, `VMess`, `DIRECT`, `Selector`, etc.)
+        - `udp`: whether UDP is supported
+        - `uot`: whether UDP over TCP is supported
+        - `xudp`: whether XUDP is supported
+        - `tfo`: whether TCP Fast Open is enabled
+        - `mptcp`: whether MPTCP is enabled
+        - `smux`: whether stream multiplexing is enabled
+        - `alive`: whether the proxy is currently alive
+        - `history`: array of delay history entries, each with `time` and `delay` (ms)
+        - `extra`: extra delay histories grouped by test URL
+        - `interface`: bound network interface name
+        - `routing-mark`: routing mark value
+        - `provider-name`: name of the proxy provider this proxy belongs to
+        - `dialer-proxy`: underlying dialer proxy name
 
 ### `/proxies/proxies_name`
 
@@ -177,17 +229,20 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve specific proxy information
 
 - Request method: `GET`
+- Response fields: proxy object, same fields as a single entry under `/proxies`
 
 !!! info ""
     Select a specific proxy
 
 - Request method: `PUT`
 - Data: `'{"name":"Japan"}'`
+- Response: none (HTTP 204)
 
 !!! info ""
     Clear the fixed selection of the proxy/policy group (except for the `Selector` type)
 
 - Request method: `DELETE`
+- Response: none (HTTP 204)
 
 ### `/proxies/proxies_name/delay`
 
@@ -197,6 +252,8 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 - Request method: `GET`
 - Parameter: `?url=xxx&timeout=5000`
 - Optional parameter: `?expected=xxx`, the expected HTTP response status code, supports ranges (e.g. `200/204`, `200-299`)
+- Response fields:
+    - `delay`: measured latency in milliseconds (`uint16`)
 
 ## Proxy Sets
 
@@ -206,6 +263,8 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve all information for all proxy sets
 
 - Request method: `GET`
+- Response fields:
+    - `providers`: object keyed by provider name, each containing provider metadata and its proxy list
 
 ### `/providers/proxies/providers_name`
 
@@ -213,11 +272,13 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve information for a specific proxy set
 
 - Request method: `GET`
+- Response fields: proxy provider object including configuration metadata and a `proxies` list
 
 !!! info ""
     Update the proxy set
 
 - Request method: `PUT`
+- Response: none (HTTP 204)
 
 ### `/providers/proxies/providers_name/healthcheck`
 
@@ -225,6 +286,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Trigger a health check for a specific proxy set
 
 - Request method: `GET`
+- Response: none (HTTP 204)
 
 ### `/providers/proxies/providers_name/proxies_name`
 
@@ -232,6 +294,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve information for a specified proxy within the proxy set
 
 - Request method: `GET`
+- Response fields: proxy object, same fields as `/proxies/proxies_name`
 
 ### `/providers/proxies/providers_name/proxies_name/healthcheck`
 
@@ -240,6 +303,8 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `GET`
 - Parameter: `?url=xxx&timeout=5000`
+- Response fields:
+    - `delay`: measured latency in milliseconds (`uint16`)
 
 ## Rules
 
@@ -249,6 +314,19 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve rule information
 
 - Request method: `GET`
+- Response fields:
+    - `rules`: array of rule objects, each containing:
+        - `index`: rule index (0-based)
+        - `type`: rule type (e.g. `DOMAIN`, `IP-CIDR`, `GEOIP`, etc.)
+        - `payload`: rule match content
+        - `proxy`: target proxy or policy group name
+        - `size`: number of entries in the rule set (only valid for `GEOIP` / `GEOSITE`, `-1` otherwise)
+        - `extra` (optional, when present includes):
+            - `disabled`: whether the rule is disabled
+            - `hitCount`: number of times the rule was matched
+            - `hitAt`: timestamp of the last match
+            - `missCount`: number of times the rule was not matched
+            - `missAt`: timestamp of the last miss
 
 ### `/rules/disable`
 
@@ -257,6 +335,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `PATCH`
 - Data: `'{"0": false,"1": true}'`
+- Response: none (HTTP 204)
 
 ## Rule Sets
 
@@ -266,6 +345,8 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve all information for all rule sets
 
 - Request method: `GET`
+- Response fields:
+    - `providers`: object keyed by rule provider name
 
 ### `/providers/rules/providers_name`
 
@@ -273,6 +354,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Update the rule set
 
 - Request method: `PUT`
+- Response: none (HTTP 204)
 
 ## Connections
 
@@ -283,11 +365,26 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `GET` / `WS`
 - Optional parameter: `?interval=milliseconds`, where `milliseconds` is the refresh interval, default value is 1000 milliseconds
+- Response fields:
+    - `downloadTotal`: cumulative downloaded bytes
+    - `uploadTotal`: cumulative uploaded bytes
+    - `memory`: current memory usage (bytes)
+    - `connections`: array of active connection objects, each containing:
+        - `id`: unique connection ID
+        - `metadata`: connection metadata (source/destination address, protocol, process name, etc.)
+        - `upload`: bytes uploaded on this connection
+        - `download`: bytes downloaded on this connection
+        - `start`: connection start time
+        - `chains`: proxy chain array
+        - `providerChains`: provider proxy chain array
+        - `rule`: matched rule type
+        - `rulePayload`: matched rule content
 
 !!! info ""
     Close all connections
 
 - Request method: `DELETE`
+- Response: none (HTTP 204)
 
 ### `/connections/:id`
 
@@ -295,6 +392,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Close a specific connection
 
 - Request method: `DELETE`
+- Response: none (HTTP 204)
 
 ## Domain Query
 
@@ -305,6 +403,17 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 
 - Request method: `GET`
 - Parameter: `?name=example.com&type=A`
+- Response fields:
+    - `Status`: DNS response code (Rcode)
+    - `Question`: array of query questions
+    - `TC`: whether the response is truncated
+    - `RD`: recursion desired flag
+    - `RA`: recursion available flag
+    - `AD`: authenticated data flag
+    - `CD`: checking disabled flag
+    - `Answer` (optional): array of answer records, each with `name`, `type`, `TTL`, `data`
+    - `Authority` (optional): array of authority records, same format as `Answer`
+    - `Additional` (optional): array of additional records, same format as `Answer`
 
 ## Storage
 
@@ -314,17 +423,20 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Retrieve the storage value for the specified key, returns `null` if it does not exist
 
 - Request method: `GET`
+- Response fields: any valid JSON value that was stored, or `null` if the key does not exist
 
 !!! info ""
     Write the storage value for the specified key; the data must be valid JSON, maximum 1MB
 
 - Request method: `PUT`
 - Data: `'{"foo": "bar"}'`
+- Response: none (HTTP 204)
 
 !!! info ""
     Delete the storage value for the specified key
 
 - Request method: `DELETE`
+- Response: none (HTTP 204)
 
 ## DEBUG
 
@@ -336,6 +448,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
     Perform active garbage collection
 
 - Request method: `PUT`
+- Response: none (HTTP 204)
 
 ### `/debug/pprof`
 
