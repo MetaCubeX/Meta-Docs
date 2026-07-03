@@ -206,9 +206,9 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
 
 - 请求方法：`GET`
 - 返回字段：
-    - `proxies`：以代理名称为键的对象，每个代理包含以下字段：
-        - `name`：代理名称
-        - `type`：代理类型（如 `Shadowsocks`、`VMess`、`DIRECT`、`Selector` 等）
+    - `proxies`：以代理/策略组名称为键的对象，每个条目均包含以下**公共字段**：
+        - `name`：代理/策略组名称
+        - `type`：类型（如 `Shadowsocks`、`VMess`、`DIRECT`、`Selector`、`URLTest`、`Fallback`、`LoadBalance` 等）
         - `udp`：是否支持 UDP
         - `uot`：是否支持 UDP over TCP
         - `xudp`：是否支持 XUDP
@@ -222,6 +222,15 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
         - `routing-mark`：路由标记
         - `provider-name`：所属代理集合名称
         - `dialer-proxy`：底层拨号代理名称
+    - 对于**策略组**（`Selector`、`URLTest`、`Fallback`、`LoadBalance`），还额外包含：
+        - `now`：当前选中的节点名称（`LoadBalance` 无此字段）
+        - `all`：组内所有节点/策略组名称数组
+        - `testUrl`：健康检查 URL
+        - `hidden`：是否在面板中隐藏
+        - `icon`：图标 URL
+        - `emptyFallback`：成员全部不可用时的兜底节点名称
+        - `expectedStatus`：期望的 HTTP 响应状态码（`Selector` 无此字段）
+        - `fixed`：当前固定选中的节点名称（仅 `URLTest`、`Fallback`）
 
 ### `/proxies/proxies_name`
 
@@ -229,7 +238,7 @@ curl 示例 `curl -H 'Authorization: Bearer ${secret}'  http://${controller-api}
     获取具体的代理信息
 
 - 请求方法：`GET`
-- 返回字段：代理对象，字段同 `/proxies` 中的单个代理条目
+- 返回字段：代理或策略组对象，字段同 `/proxies` 中的单个条目（普通代理仅含公共字段，策略组另含 `now`、`all` 等字段）
 
 !!! info ""
     选择特定的代理
