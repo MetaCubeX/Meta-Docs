@@ -30,7 +30,6 @@ proxy-groups:
   expected-status: 204
   hidden: true
   icon: "https://example.com/icon.png"
-  icon: xxx
 ```
 
 ## name

@@ -261,7 +261,7 @@ plugins:
             APIs: API
 
   - git-revision-date-localized:
-    locale: zh
+      locale: zh
 
 nav:
   - 简介: index.md
