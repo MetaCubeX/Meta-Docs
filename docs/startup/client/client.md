@@ -25,6 +25,7 @@
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
 
 ## MacOS
 
@@ -48,6 +49,7 @@
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|维护中 |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
 
 ## Linux
 
@@ -68,6 +70,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
 
 ## Android
 
