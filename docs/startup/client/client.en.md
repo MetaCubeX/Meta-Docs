@@ -26,7 +26,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
-|[ClashPlus](https://clashplus.io)|Maintained | Closed-source; build is not reproducible |
+|[ClashPlus](https://clashplus.io)|Maintained | Closed-source |
 
 ## MacOS
 
@@ -43,14 +43,14 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
-|[ClashMac](https://github.com/666OS/ClashMac)|Maintained | Closed-source; build is not reproducible |
+|[ClashMac](https://github.com/666OS/ClashMac)|Maintained | Closed-source |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
-|[ClashPlus](https://clashplus.io)|Maintained | Closed-source; build is not reproducible |
+|[ClashPlus](https://clashplus.io)|Maintained | Closed-source |
 
 ## Linux
 
@@ -72,6 +72,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
+|[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
 
 ## Android
 
@@ -88,7 +89,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|Maintained |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|Maintained |
 |[SlClash](https://github.com/songzhengpei/Slclash)|Maintained |
-|[ClashPlus](https://clashplus.io)|Maintained | Closed-source; build is not reproducible |
+|[ClashPlus](https://clashplus.io)|Maintained | Closed-source |
 
 ## iOS
 
