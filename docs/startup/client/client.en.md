@@ -26,6 +26,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
+|[ClashPlus](https://clashplus.io)|Maintained | Closed-source; build is not reproducible |
 
 ## MacOS
 
@@ -49,6 +50,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
+|[ClashPlus](https://clashplus.io)|Maintained | Closed-source; build is not reproducible |
 
 ## Linux
 
@@ -86,6 +88,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|Maintained |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|Maintained |
 |[SlClash](https://github.com/songzhengpei/Slclash)|Maintained |
+|[ClashPlus](https://clashplus.io)|Maintained | Closed-source; build is not reproducible |
 
 ## iOS
 
@@ -97,6 +100,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ConnectNow](https://apps.apple.com/app/id6749354119)|Maintained | Closed-source |
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|Maintained |
 |[Nextin](https://apps.apple.com/app/id6754002454)|Maintained | Closed-source |
+|[ClashPlus](https://apps.apple.com/app/id6774378761)|Maintained | Closed-source |
 
 ## Merlin (KoolCenter firmware/paldier SWRT firmware)
 
