@@ -25,6 +25,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
 
 ## MacOS
 
@@ -47,6 +48,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|Maintained |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
 
 ## Linux
 
@@ -67,6 +69,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
 
 ## Android
 
