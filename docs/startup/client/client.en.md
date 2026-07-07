@@ -51,6 +51,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
 |[ClashPlus](https://clashplus.io)|Maintained | Closed-source |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
 
 ## Linux
 
@@ -102,6 +103,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|Maintained |
 |[Nextin](https://apps.apple.com/app/id6754002454)|Maintained | Closed-source |
 |[ClashPlus](https://apps.apple.com/app/id6774378761)|Maintained | Closed-source |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
 
 ## Merlin (KoolCenter firmware/paldier SWRT firmware)
 
