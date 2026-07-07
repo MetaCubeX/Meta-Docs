@@ -25,6 +25,7 @@
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
 
 ## MacOS
 
@@ -47,6 +48,7 @@
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
 
 ## Linux
 
@@ -67,6 +69,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
 
 ## Android
 
