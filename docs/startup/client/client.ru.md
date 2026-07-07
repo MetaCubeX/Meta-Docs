@@ -51,6 +51,7 @@
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
 |[ClashPlus](https://clashplus.io)|поддерживается |Закрытый исходный код  |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
 
 ## Linux
 
@@ -102,6 +103,7 @@
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|поддерживается |
 |[Nextin](https://apps.apple.com/app/id6754002454)|поддерживается | Закрытый исходный код |
 |[ClashPlus](https://clashplus.io)|поддерживается |Закрытый исходный код  |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
 
 ## Merlin (прошивка KoolCenter/paldier SWRT)
 
