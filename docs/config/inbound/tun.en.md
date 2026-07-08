@@ -1,6 +1,6 @@
 # TUN
 
-```yaml
+```{.yaml linenums="1"}
 tun:
   enable: true
   stack: system
@@ -20,8 +20,6 @@ tun:
   iproute2-table-index: 2022
   iproute2-rule-index: 9000
   endpoint-independent-nat: false
-  loopback_address:
-    - 10.7.0.1
   route-address-set:
     - ruleset-1
   route-exclude-address-set:
@@ -32,285 +30,239 @@ tun:
     - "::/1"
     - "8000::/1"
   route-exclude-address:
-    - 192.168.0.0/16
-    - fc00::/7
+  - 192.168.0.0/16
+  - fc00::/7
   include-interface:
-    - eth0
+  - eth0
   exclude-interface:
-    - eth1
+  - eth1
   include-uid:
-    - 0
+  - 0
   include-uid-range:
-    - 1000:9999
+  - 1000:9999
   exclude-uid:
-    - 1000
+  - 1000
   exclude-uid-range:
-    - 1000:9999
+  - 1000:9999
   include-android-user:
-    - 0
-    - 10
+  - 0
+  - 10
   include-package:
-    - com.android.chrome
+  - com.android.chrome
   exclude-package:
-    - com.android.captiveportallogin
+  - com.android.captiveportallogin
 
 ## Legacy Syntax
   inet4-route-address:
-    - 0.0.0.0/1
-    - 128.0.0.0/1
+  - 0.0.0.0/1
+  - 128.0.0.0/1
   inet6-route-address:
-    - "::/1"
-    - "8000::/1"
+  - "::/1"
+  - "8000::/1"
   inet4-route-exclude-address:
-    - 192.168.0.0/16
+  - 192.168.0.0/16
   inet6-route-exclude-address:
-    - fc00::/7
+  - fc00::/7
+
 ```
 
 ## enable
 
-Enables TUN mode.
+Enable TUN mode.
 
 ## stack
 
-Specifies the TUN network stack. Unless you encounter compatibility issues, the `mixed` stack is recommended. Default: `gvisor`.
+TUN mode protocol stack. If no usage issues occur, `mixed` stack is recommended. Default is `gvisor`.
 
-Available values: `system`, `gvisor`, `mixed`
+Available values: `system/gvisor/mixed`
 
-!!! note "Differences Between Network Stacks"
-    * `system` uses the operating system's native network stack, providing a more stable and comprehensive TUN experience while consuming fewer resources than the other stacks.
-    * `gvisor` implements the network stack in user space, offering better security and isolation. It also avoids kernel/user-space context switching, which can improve networking performance in certain scenarios.
-    * `mixed` is a hybrid stack that uses the `system` stack for TCP and the `gvisor` stack for UDP, generally providing the best overall experience.
-    * See the [Simple Performance Benchmark](tun.md#tun_1).
-    * If a firewall is enabled, the `system` and `mixed` stacks may not function unless the kernel is allowed through the firewall:
-    * **Windows:** Settings → Windows Security → Allow an app through firewall → Allow the kernel.
-    * **macOS:** Usually no configuration is required, as signed applications are allowed by default. If issues occur with the firewall enabled, try: System Settings → Network → Firewall → Options → Add the Mihomo application.
-    * **Linux:** Normally no configuration is required. If needed, allow outbound traffic on the TUN interface (assuming the TUN interface is named `Mihomo`):`sudo iptables -A OUTPUT -o Mihomo -j ACCEPT`
+!!! note "Differences between protocol stacks"
+* `system` uses the system protocol stack, providing a more stable/comprehensive TUN experience with relatively lower resource usage compared to other stacks.
+* `gvisor` implements the network protocol stack in user space, offering higher security and isolation while avoiding context switching between the OS kernel and user space, which can yield better network processing performance under specific conditions.
+* `mixed` is a hybrid stack where TCP uses the `system` stack and UDP uses the `gvisor` stack, potentially delivering a better overall user experience.
+* [Simple Performance Test](tun.md%23tun_1)
+* If the firewall is turned on, `system` and `mixed` protocol stacks cannot be used. Allow the core binary through the firewall using the following methods:
+* Windows: Settings -> Windows Security -> Allow an app through firewall -> Select the core binary.
+* MacOS: Generally no configuration is required as the firewall allows signed software by default. If you encounter issues where it cannot be used with the firewall enabled, you can try allowing it: System Settings -> Network -> Firewall -> Options -> Add Mihomo app.
+* Linux: Generally no configuration is required as the firewall does not block applications by default. If you encounter issues with the firewall enabled, you can try allowing outbound traffic from the TUN interface (assuming the TUN interface is named Mihomo): `sudo iptables -A OUTPUT -o Mihomo -j ACCEPT`
 
 ## device
 
-Specifies the name of the TUN interface.
-
-On macOS, the interface name must begin with `utun`.
+Specify the name of the TUN network interface. MacOS devices can only use interface names starting with `utun`.
 
 ## auto-route
 
-Automatically configures system routing so that global traffic is routed through the TUN interface.
+Automatically set global routes, which can automatically route global traffic into the TUN network interface.
 
 ## auto-redirect
 
-Linux only. Automatically configures `iptables`/`nftables` to redirect TCP connections. Requires `auto-route` to be enabled.
+Linux only. Automatically configures iptables/nftables to redirect TCP connections. Requires `auto-route` to be enabled.
 
-*On Android:*
+*On Android*:
 
-Only local IPv4 connections are redirected. To share your VPN connection through a hotspot or tethering, use VPNHotspot.
+Only forwards local IPv4 connections. To share your VPN connection via hotspot or tethering, please use [VPNHotspot](https://github.com/Mygod/VPNHotspot).
 
-*On Linux:*
+*On Linux*:
 
-With `auto-route` enabled, `auto-redirect` now works on routers without additional configuration.
+With auto-route enabled, auto-redirect now works on routers as expected without any manual intervention.
 
 ## auto-detect-interface
 
-Automatically detects the outbound network interface.
-
-On devices with multiple active network interfaces, specifying the outbound interface manually is recommended.
+Automatically detect the outbound interface for traffic. It is recommended to manually specify the outbound network interface for devices connected to multiple outbound interfaces simultaneously.
 
 ## dns-hijack
 
-Hijacks matching DNS requests and redirects them to the internal DNS module. If no protocol is specified, `udp://` is assumed.
+DNS hijacking. Redirects matched connections into the internal [DNS](../dns/index.md) module. If no protocol is specified, it defaults to `udp://`.
 
-!!! warning
-    * On **macOS** and **Windows**, DNS requests sent to the local network cannot be hijacked automatically.
-    * On **Android**, DNS hijacking does not work if **Private DNS** is enabled.
+!!! warning ""
+* On `MacOS`/`Windows`, it cannot automatically hijack DNS requests sent to the local network.
+* On `Android`, if `Private DNS` is enabled, DNS requests cannot be automatically hijacked.
 
 ## strict-route
 
-Enables strict routing rules when `auto-route` is enabled.
+Enforces strict routing rules when `auto-route` is enabled.
 
-*On Linux:*
+*On Linux*:
 
-* Blocks unsupported networks.
-* Routes all connections through the TUN interface.
+* Makes unsupported networks unreachable.
+* Routes all connections to the TUN interface.
 
-This helps prevent traffic leaks and enables DNS hijacking on Android.
+It prevents address leaks and allows DNS hijacking to work on Android.
 
-*On Windows:*
+*On Windows*:
 
-* Adds firewall rules to prevent DNS leaks caused by Windows' standard multi-homed DNS resolution behavior.
+* Adds firewall rules to block DNS leaks caused by Windows' [normal multi-homed DNS resolution behavior](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197552%28v%3Dws.10%29).
 
-This may cause certain applications (such as VirtualBox) to stop working in some situations.
+It may cause certain applications (such as VirtualBox) to malfunction under specific scenarios.
 
 ## mtu
 
-Specifies the Maximum Transmission Unit (MTU).
-
-This mainly affects throughput under extreme network conditions. The default value is suitable for most users.
+Maximum Transmission Unit. It affects the transfer rate under extreme conditions. General users can leave it at default.
 
 ## gso
 
-Enables Generic Segmentation Offload (GSO).
-
-Linux only.
+Enable Generic Segmentation Offload. Linux only.
 
 ## gso-max-size
 
-Specifies the maximum size of a GSO packet.
+The maximum length of a data chunk.
 
 ## inet6-address
 
-Specifies the IPv6 address assigned to the TUN interface.
+Specify the IPv6 address of the TUN interface.
 
 !!! note
-    * At startup, Mihomo checks whether any system network interface has IPv6 enabled. If none is found, this feature is disabled automatically. To force-enable the TUN IPv6 address, set the environment variable `SKIP_SYSTEM_IPV6_CHECK=1`.
-    * You must also set the top-level `ipv6` option to `true` for this setting to take effect.
+* Currently, the program will check other system interfaces for IPv6 upon startup. If none exists, this feature will be disabled. To force enable the v6 address for the TUN interface, please manually set the `SKIP_SYSTEM_IPV6_CHECK=1` system environment variable.
+* It requires `ipv6` to be set to `true` in the top-level configuration simultaneously to take effect.
 
 ## udp-timeout
 
-UDP NAT timeout, in seconds.
-
-Default: `300` (5 minutes).
+UDP NAT expiration time, in seconds. Default is 300 (5 minutes).
 
 ## iproute2-table-index
 
-The routing table index used by `auto-route`.
-
-Default: `2022`.
+The iproute2 routing table index generated by `auto-route`. Default is `2022`.
 
 ## iproute2-rule-index
 
-The starting rule index used by `auto-route`.
-
-Default: `9000`.
+The iproute2 rule starting index generated by `auto-route`. Default is `9000`.
 
 ## endpoint-independent-nat
 
-Enables Endpoint-Independent NAT (EIM).
-
-This may slightly reduce performance, so it is not recommended unless required.
-
-## loopback_address
-
-Redirects outbound TCP connections destined for external IP addresses to a local loopback address, allowing them to be handled directly by a locally listening proxy.
-
-!!! tip
-    Setting this option to `10.7.0.1` provides the same behavior as SideStore/StosVPN.
+Enable Endpoint-Independent NAT. Performance might drop slightly, so it is not recommended to enable it when not needed.
 
 ## route-address-set
 
-Adds the destination IP CIDR rules from the specified rule set to the firewall. Traffic that does **not** match these rules bypasses TUN routing.
+Adds destination IP CIDR rules from the specified rule set to the firewall; non-matching traffic will bypass routing.
+Linux only, and requires nftables as well as `auto-route` and `auto-redirect` to be enabled.
 
-Linux only. Requires `nftables`, `auto-route`, and `auto-redirect`.
-
-!!! warning
-    Incompatible with any `routing-mark` configuration.
+!!! warning ""
+Conflicts with `routing-mark` in any configuration.
 
 ## route-exclude-address-set
 
-Adds the destination IP CIDR rules from the specified rule set to the firewall. Matching traffic bypasses TUN routing.
+Adds destination IP CIDR rules from the specified rule set to the firewall; matching traffic will bypass routing.
+Linux only, and requires nftables as well as `auto-route` and `auto-redirect` to be enabled.
 
-Linux only. Requires `nftables`, `auto-route`, and `auto-redirect`.
-
-!!! warning
-    Incompatible with any `routing-mark` configuration.
+!!! warning ""
+Conflicts with `routing-mark` in any configuration.
 
 ## route-address
 
-When `auto-route` is enabled, routes only the specified network ranges instead of using the default route.
-
-In most cases, this does not need to be configured.
+Routes custom routing subnets instead of the default route when `auto-route` is enabled. Generally requires no configuration.
 
 ## route-exclude-address
 
-Excludes the specified network ranges from TUN routing when `auto-route` is enabled.
+Excludes custom subnets when `auto-route` is enabled.
 
 ## include-interface
 
-Limits TUN routing to the specified network interfaces.
-
-By default, there is no restriction.
-
-Cannot be used together with `exclude-interface`.
+Restrict routed interfaces. No restrictions by default. Conflicts with `exclude-interface`, cannot be configured together.
 
 ## exclude-interface
 
-Excludes the specified network interfaces from TUN routing.
-
-Cannot be used together with `include-interface`.
+Exclude interfaces from routing. Conflicts with `include-interface`, cannot be configured together.
 
 ## include-uid
 
-Specifies Linux user IDs whose traffic will be routed through TUN.
+Included users to have their traffic routed by the TUN interface. Users not configured will not have their traffic routed by the TUN interface. No restrictions by default.
 
-Traffic from users not listed will bypass TUN.
-
-By default, there is no restriction.
-
-!!! note
-    UID-based routing is supported only on Linux and requires `auto-route`.
+!!! note ""
+UID rules are supported under Linux only, and require `auto-route`.
 
 ## include-uid-range
 
-Specifies ranges of Linux user IDs whose traffic will be routed through TUN.
+Included user range to have their traffic routed by the TUN interface. Users not configured will not have their traffic routed by the TUN interface.
 
 ## exclude-uid
 
-Excludes specific Linux user IDs from TUN routing.
+Exclude users to prevent their traffic from being routed by the TUN interface.
 
 ## exclude-uid-range
 
-Excludes ranges of Linux user IDs from TUN routing.
+Exclude user range to prevent their traffic from being routed by the TUN interface.
 
 ## include-android-user
 
-Specifies Android user IDs whose traffic will be routed through TUN.
+Included Android users to have their traffic routed by the TUN interface. Users not configured will not have their traffic routed by the TUN interface.
 
-Traffic from users not listed will bypass TUN.
+!!! note ""
+Android user and application rules are supported under Android only, and require `auto-route`.
 
-!!! note
-    Android user and application rules are supported only on Android and require `auto-route`.
-
-| Common User                  | ID  |
-| ---------------------------- | --- |
-| Owner                        | 0   |
-| Work Profile / Clone Profile | 10  |
-| App Clone                    | 999 |
+| Common User | ID |
+| --- | --- |
+| Owner | 0 |
+| Second Space | 10 |
+| App Cloner | 999 |
 
 ## include-package
 
-Specifies Android application package names whose traffic will be routed through TUN.
-
-Applications not listed will bypass TUN.
+Included Android application package names to have their traffic routed by the TUN interface. Application packages not configured will not have their traffic routed by the TUN interface.
 
 ## exclude-package
 
-Excludes Android application package names from TUN routing.
+Exclude Android application package names to prevent their traffic from being routed by the TUN interface.
 
-## Legacy Options (Deprecated)
+## Legacy Syntax, Deprecated Soon
 
 ### inet4-route-address
 
-When `auto-route` is enabled, routes only the specified IPv4 network ranges instead of using the default route.
-
-In most cases, this does not need to be configured.
+Routes custom subnets instead of the default route when `auto-route` is enabled. Generally requires no configuration.
 
 ### inet6-route-address
 
-When `auto-route` is enabled, routes only the specified IPv6 network ranges instead of using the default route.
-
-In most cases, this does not need to be configured.
+Routes custom subnets instead of the default route when `auto-route` is enabled. Generally requires no configuration.
 
 ### inet4-route-exclude-address
 
-Excludes the specified IPv4 network ranges from TUN routing when `auto-route` is enabled.
+Excludes custom subnets when `auto-route` is enabled.
 
 ### inet6-route-exclude-address
 
-Excludes the specified IPv6 network ranges from TUN routing when `auto-route` is enabled.
+Excludes custom subnets when `auto-route` is enabled.
 
-## TUN Network Stack Loopback Performance Test
+## Network Loopback Test for TUN Protocol Stacks
 
-The following benchmark compares the `system`, `gvisor`, and `lwip` stacks (from top to bottom).
-
-The results are for Linux and are provided for reference only. Performance on Windows and macOS may differ.
+From top to bottom are `system/gvisor/lwip` respectively, for reference only. The platform is Linux; Windows and MacOS may vary.
 
 ![iperf](../../assets/image/tun/iperf.png)
