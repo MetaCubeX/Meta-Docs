@@ -150,7 +150,7 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 ## tlsmirror-opts
 
-Когда `tls` установлен в `true`, наличие `tlsmirror-opts` включает tlsmirror. `servername` и `alpn` берутся из верхнего уровня конфигурации.
+Когда `tls` установлен в `true`, наличие `tlsmirror-opts` включает tlsmirror. TLS carrier, используемый tlsmirror, берет `servername`, `alpn`, `skip-cert-verify`, `fingerprint`, `certificate`, `private-key`, `client-fingerprint` и `ech-opts` из того же outbound. Если `servername` пустой, используется `server`.
 
 !!! note
     Сейчас включение tlsmirror поддерживает только VMess. Не используйте его с другими протоколами.

@@ -149,7 +149,7 @@ Optional, if not empty, it is used to specify the domain name when resolving via
 
 ## tlsmirror-opts
 
-When `tls` is `true`, configuring `tlsmirror-opts` enables tlsmirror. `servername` and `alpn` are inherited from the upper-level configuration.
+When `tls` is `true`, configuring `tlsmirror-opts` enables tlsmirror. The TLS carrier used by tlsmirror uses `servername`, `alpn`, `skip-cert-verify`, `fingerprint`, `certificate`, `private-key`, `client-fingerprint`, and `ech-opts` from the same outbound. If `servername` is empty, `server` is used.
 
 !!! note
     Currently, only VMess supports enabling tlsmirror. Do not use it with other protocols.
