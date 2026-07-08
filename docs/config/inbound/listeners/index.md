@@ -6,6 +6,7 @@ listeners:
   type: shadowsocks
   port: 10000
   listen: 0.0.0.0
+  routing-mark: 0
   rule: sub-rule-1
   proxy: proxy
 ```
@@ -25,6 +26,10 @@ listeners:
 ## port
 
 监听端口，支持使用 ports 格式，格式参考[端口范围](../../../handbook/syntax.md#port-ranges)
+
+## routing-mark
+
+为监听 socket 设置 routing-mark，仅支持 Linux
 
 ## rule
 

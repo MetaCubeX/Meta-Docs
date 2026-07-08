@@ -6,6 +6,7 @@ listeners:
   type: tuic
   port: 10003
   listen: 0.0.0.0
+  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
   token:
     - TOKEN
   certificate: ./server.crt # сертификат в формате PEM или путь к сертификату
@@ -33,4 +34,4 @@ listeners:
   #     enabled: true
   #     up: 1000 # по умолчанию в Mbps
   #     down: 1000
-``` 
+```

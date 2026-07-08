@@ -6,6 +6,7 @@ listeners:
   type: tuic
   port: 10004
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   users:
     UUID1: PASSWORD1
     UUID2: PASSWORD2

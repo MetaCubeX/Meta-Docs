@@ -27,6 +27,7 @@ rules:
 - IN-TYPE,SOCKS/HTTP,PROXY
 - IN-USER,mihomo,PROXY
 - IN-NAME,ss,PROXY
+- REMATCH-NAME,rematch1,PROXY
 
 - PROCESS-PATH,/usr/bin/wget,PROXY
 - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
@@ -148,6 +149,10 @@ rules:
 ### IN-NAME
 
 匹配[入站名称](../inbound/listeners/index.md#name)
+
+### REMATCH-NAME
+
+匹配 `rematch` 出站写入的名称
 
 ### PROCESS-PATH
 

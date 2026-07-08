@@ -6,6 +6,7 @@ listeners:
   type: anytls
   port: 10818
   listen: 0.0.0.0
+  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
   users:
     username1: password1
     username2: password2
@@ -33,4 +34,4 @@ listeners:
 
 ## padding-scheme
 
-См. https://github.com/anytls/anytls-go/blob/main/docs/protocol.md#cmdupdatepaddingscheme 
+См. https://github.com/anytls/anytls-go/blob/main/docs/protocol.md#cmdupdatepaddingscheme

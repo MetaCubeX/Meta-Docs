@@ -20,6 +20,21 @@ proxies:
   # dns: [ 1.1.1.1, 8.8.8.8 ] # 仅在 remote-dns-resolve 为 true 时生效
   # congestion-controller: bbr # 默认不开启
   # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  # handshake-timeout: 30
+
+# masque-h3-l4proxy
+- name: "masque-h3-l4proxy"
+  type: masque
+  server: server.com
+  port: 443
+  private-key: BASE64_ENCODED_PRIVATE_KEY
+  public-key: BASE64_ENCODED_PUBLIC_KEY
+  udp: false # 目前 l4proxy 模式不支持 udp
+  network: h3-l4proxy
+  # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
+  # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # 仅在 remote-dns-resolve 为 true 时生效
+  # congestion-controller: bbr # 默认不开启
+  # handshake-timeout: 30
 
 # masque-h2
 - name: "masque-h2"
@@ -38,6 +53,7 @@ proxies:
   # dialer-proxy: "ss1"
   # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # 仅在 remote-dns-resolve 为 true 时生效
+  # handshake-timeout: 30
 ```
 
 ## 获取 masque 配置
@@ -87,4 +103,11 @@ TUN 设备的 MTU 大小，默认为 1280
 
 ## network
 
-可选, 默认为 quic，masque-h2 需要设置为`h2`
+可选，默认为 `quic`。masque-h2 需要设置为 `h2`，h3-l4proxy 模式需要设置为 `h3-l4proxy`
+
+!!! note
+    `h3-l4proxy` 模式目前不支持 UDP。
+
+## handshake-timeout
+
+握手超时时间，单位为秒。默认值为 `0`，表示仅使用外层连接超时

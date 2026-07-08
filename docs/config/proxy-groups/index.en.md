@@ -14,6 +14,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   interval: 300
   lazy: true
+  default-selected: ss
   empty-fallback: COMPATIBLE
   timeout: 5000
   max-failed-times: 5
@@ -55,7 +56,7 @@ References to [proxy sets](../proxy-providers/index.md).
 
 Health check test address.
 
-!!! note 
+!!! note
     It will only check the proxies field of the proxy group, and will not check the proxies of the proxy providers introduced through use.
 
 ## interval
@@ -65,6 +66,10 @@ Health check interval; if not 0, periodic testing is enabled, measured in second
 ## lazy
 
 Lazy state, defaults to `true`. If the current proxy group is not selected, no testing is performed.
+
+## default-selected
+
+The node selected by default. If this field is empty or the node name does not exist, the first node in the group is selected.
 
 ## empty-fallback
 

@@ -20,6 +20,21 @@ proxies:
   # dns: [ 1.1.1.1, 8.8.8.8 ] # Работает только при remote-dns-resolve: true
   # congestion-controller: bbr # По умолчанию отключено
   # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  # handshake-timeout: 30
+
+# masque-h3-l4proxy
+- name: "masque-h3-l4proxy"
+  type: masque
+  server: server.com
+  port: 443
+  private-key: BASE64_ENCODED_PRIVATE_KEY
+  public-key: BASE64_ENCODED_PUBLIC_KEY
+  udp: false # режим l4proxy сейчас не поддерживает UDP
+  network: h3-l4proxy
+  # remote-dns-resolve: true # Принудительное удаленное DNS-разрешение, значение по умолчанию — false
+  # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # Работает только при remote-dns-resolve: true
+  # congestion-controller: bbr # По умолчанию отключено
+  # handshake-timeout: 30
 
 # masque-h2
 - name: "masque-h2"
@@ -38,6 +53,7 @@ proxies:
   # dialer-proxy: "ss1"
   # remote-dns-resolve: true # Принудительное удаленное DNS-разрешение, значение по умолчанию — false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # Работает только при remote-dns-resolve: true
+  # handshake-timeout: 30
 ```
 
 ## Получение конфигурации MASQUE
@@ -87,4 +103,11 @@ proxies:
 
 ## network
 
-Необязательное поле. По умолчанию используется `quic`, для `masque-h2` нужно установить `h2`.
+Необязательное поле. По умолчанию используется `quic`. Для `masque-h2` нужно установить `h2`, для режима h3-l4proxy — `h3-l4proxy`.
+
+!!! note
+    Режим `h3-l4proxy` сейчас не поддерживает UDP.
+
+## handshake-timeout
+
+Таймаут рукопожатия в секундах. Значение по умолчанию `0` означает, что используется только таймаут внешнего соединения.

@@ -44,6 +44,9 @@ dns:
       - gfw
     ipcidr:
       - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+      - 100.64.0.0/10
     domain:
       - '+.google.com'
       - '+.facebook.com'
@@ -195,6 +198,9 @@ Results from the country configured with `geoip-code` will be adopted directly; 
 Optional values are collections included in the corresponding geosite.
 
 Contents of the geosite list are considered polluted; domain names matching the geosite will only use `fallback` resolution, not `nameserver`.
+
+!!! warning ""
+    This field is deprecated. Use [nameserver-policy](./index.md#nameserver-policy) instead.
 
 ### ipcidr
 

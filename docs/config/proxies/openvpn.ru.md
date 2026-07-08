@@ -27,8 +27,12 @@ proxies:
     #  -----BEGIN OpenVPN Static key V1-----
     #  ...
     #  -----END OpenVPN Static key V1-----
+    # peer-info:
+    #   IV_HWADDR: "52:54:00:ff:72:87"
+    #   UV_DEVICE_ID: "laptop-001"
     # ping: 10
     # ping-restart: 60
+    # handshake-timeout: 30
     # dev: tun
     # cipher: AES-128-GCM
     # auth: SHA256
@@ -84,6 +88,14 @@ proxies:
 ## ping-restart
 
 Опционально, по умолчанию `0`.
+
+## peer-info
+
+Опциональные пары ключ-значение peer-info, передаваемые серверу. Они добавляются после встроенных `IV_VER`/`IV_PROTO`/`IV_CIPHERS` и могут использоваться сервером для принятия решения о допуске.
+
+## handshake-timeout
+
+Опциональный таймаут рукопожатия в секундах. Значение по умолчанию `0` означает, что используется только таймаут внешнего соединения.
 
 ## dev
 

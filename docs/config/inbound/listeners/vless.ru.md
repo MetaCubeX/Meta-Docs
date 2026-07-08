@@ -6,6 +6,7 @@ listeners:
   type: vless
   port: 10817 # поддерживает формат ports, например 200,302 или 200,204,401-429,501-503
   listen: 0.0.0.0
+  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
   # rule: sub-rule-name1 # по умолчанию использует rules, если sub-rule не найдено, то напрямую использует rules
   # proxy: proxy # если не пусто, то входящий трафик напрямую передается указанному proxy (когда proxy не пусто, имя proxy должно быть корректным, иначе возникнет ошибка)
   users:
@@ -28,6 +29,8 @@ listeners:
   #   uplink-http-method: POST # Available: POST, PUT, PATCH, DELETE
   #   session-placement: path # Available: path, query, cookie, header
   #   session-key: ""
+  #   session-table: "" # Available: "", "uuid", "ALPHABET", "Alphabet", "BASE36", "Base62", "HEX", "alphabet", "base36", "hex", "number"
+  #   session-length: "16-32" # начальное значение не может быть 0, общее пространство id должно быть больше 2,1 млрд; действует только если session-table не пустой или uuid
   #   seq-placement: path # Available: path, query, cookie, header
   #   seq-key: ""
   #   uplink-data-placement: body # Available: body, cookie, header
@@ -88,4 +91,4 @@ listeners:
   #     enabled: true
   #     up: 1000 # по умолчанию в Mbps
   #     down: 1000
-``` 
+```

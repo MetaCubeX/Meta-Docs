@@ -8,9 +8,10 @@ proxy-groups:
   - ss
   - vmess
   - auto
+  # default-selected: ss
   #disable-udp: true
 ```
 
 ## Общие поля
 
-См. [Общие поля](./index.md) 
+См. [Общие поля](./index.md)

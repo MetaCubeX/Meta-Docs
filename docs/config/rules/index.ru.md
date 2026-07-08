@@ -27,6 +27,7 @@ rules:
 - IN-TYPE,SOCKS/HTTP,PROXY
 - IN-USER,mihomo,PROXY
 - IN-NAME,ss,PROXY
+- REMATCH-NAME,rematch1,PROXY
 
 - PROCESS-PATH,/usr/bin/wget,PROXY
 - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
@@ -149,6 +150,10 @@ rules:
 
 Сопоставляет [имя входящего соединения](../inbound/listeners/index.md#name).
 
+### REMATCH-NAME
+
+Сопоставляет имя, записанное исходящим прокси `rematch`.
+
 ### PROCESS-PATH
 
 Сопоставляет по полному пути процесса.
@@ -229,4 +234,4 @@ rules:
 
 Поддерживает только правила, касающиеся `целевого IP`.
 
-Преобразует сопоставление `целевого IP` в сопоставление `исходного IP`. 
+Преобразует сопоставление `целевого IP` в сопоставление `исходного IP`.

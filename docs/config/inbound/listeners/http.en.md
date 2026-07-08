@@ -6,6 +6,7 @@ listeners:
   type: http
   port: 7890
   listen: 0.0.0.0
+  # routing-mark: 0 # Sets the routing-mark for the listening socket (Linux only)
   users:
     - username: username1
       password: password1

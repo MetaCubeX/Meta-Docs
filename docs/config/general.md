@@ -169,6 +169,12 @@ HTTPS-API 监听地址，需要配置 `tls` 部分证书和其私钥配置，使
 external-controller-tls: 127.0.0.1:9443
 ```
 
+为 `external-controller` 和 `external-controller-tls` 的监听 socket 设置 routing-mark，仅支持 Linux
+
+```{.yaml linenums="1"}
+external-controller-routing-mark: 0
+```
+
 在 RESTful API 端口上开启 DOH 服务器
 
 !!! warning ""
@@ -287,7 +293,7 @@ tls:
 更改 geoip 使用文件，mmdb 或者 dat，可选 `true`/`false`,`true`为 dat，此项有默认值 `false`
 
 ```{.yaml linenums="1"}
-geodata-mode: true 
+geodata-mode: true
 ```
 
 ## GEO 文件加载模式

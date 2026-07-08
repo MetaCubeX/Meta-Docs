@@ -6,6 +6,7 @@ listeners:
   type: vless
   port: 10817 # 支持使用ports格式，例如200,302 or 200,204,401-429,501-503
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   # rule: sub-rule-name1 # 默认使用 rules，如果未找到 sub-rule 则直接使用 rules
   # proxy: proxy # 如果不为空则直接将该入站流量交由指定 proxy 处理 (当 proxy 不为空时，这里的 proxy 名称必须合法，否则会出错)
   users:
@@ -28,6 +29,8 @@ listeners:
   #   uplink-http-method: POST # Available: POST, PUT, PATCH, DELETE
   #   session-placement: path # Available: path, query, cookie, header
   #   session-key: ""
+  #   session-table: "" # Available: "", "uuid", "ALPHABET", "Alphabet", "BASE36", "Base62", "HEX", "alphabet", "base36", "hex", "number"
+  #   session-length: "16-32" # 起始值不可为 0，总的 id 空间必须大于 21 亿，仅当session-table不为空或uuid时生效
   #   seq-placement: path # Available: path, query, cookie, header
   #   seq-key: ""
   #   uplink-data-placement: body # Available: body, cookie, header

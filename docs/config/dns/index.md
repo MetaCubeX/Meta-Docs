@@ -44,6 +44,9 @@ dns:
       - gfw
     ipcidr:
       - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+      - 100.64.0.0/10
     domain:
       - '+.google.com'
       - '+.facebook.com'
@@ -194,6 +197,9 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 可选值为对于的 geosite 内包含的集合
 
 geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 `fallback`解析，不去使用 `nameserver`
+
+!!! warning ""
+    该字段已废弃，请使用 [nameserver-policy](./index.md#nameserver-policy)
 
 ### ipcidr
 

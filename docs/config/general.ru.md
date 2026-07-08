@@ -169,6 +169,12 @@ HTTPS-API прослушивающий адрес, требует настрой
 external-controller-tls: 127.0.0.1:9443
 ```
 
+Устанавливает routing-mark для слушающих сокетов `external-controller` и `external-controller-tls`. Поддерживается только Linux.
+
+```{.yaml linenums="1"}
+external-controller-routing-mark: 0
+```
+
 Запуск DOH-сервера на порту RESTful API
 
 !!! warning ""
@@ -288,7 +294,7 @@ tls:
 Изменение файла, используемого для geoip: mmdb или dat. Возможные значения: `true`/`false`, `true` для dat, по умолчанию `false`
 
 ```{.yaml linenums="1"}
-geodata-mode: true 
+geodata-mode: true
 ```
 
 ## Режим загрузки GEO файлов
@@ -338,4 +344,4 @@ global-ua: clash.meta
 
 ```{.yaml linenums="1"}
 etag-support: true
-``` 
+```

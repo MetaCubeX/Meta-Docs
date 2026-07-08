@@ -22,6 +22,44 @@ proxies:
     enable: true
     config: base64_encoded_config
     # query-server-name: xxx.com
+  tlsmirror-opts:
+    primary-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
+    explicit-nonce-ciphersuites: [
+      156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171,
+      172, 173, 49195, 49196, 49197, 49198, 49199, 49200, 49201, 49202, 49290, 49291,
+      49293, 49316, 49317, 49318, 49319, 49320, 49321, 49322, 49323, 49324, 49325,
+      49326, 49327, 52392, 52393, 52394, 52395, 52396, 52397, 52398
+    ]
+    defer-instance-derived-write-time:
+      base-nanoseconds: 0
+      uniform-random-multiplier-nanoseconds: 0
+    transport-layer-padding:
+      enabled: false
+    connection-enrolment:
+      primary-egress-outbound: ""
+    sequence-watermarking-enabled: false
+    embedded-traffic-generator:
+      steps:
+        - name: example
+          host: example.com
+          path: /
+          method: GET
+          headers:
+            - name: User-Agent
+              value: mihomo
+            - name: Accept
+              values:
+                - text/html
+                - application/xhtml+xml
+          connection-ready: true
+          connection-recall-exit: true
+          h2-do-not-wait-for-download-finish: false
+          wait-time:
+            base-nanoseconds: 1000000000
+            uniform-random-multiplier-nanoseconds: 0
+          next-step:
+            - weight: 1
+              goto-location: 0
 ```
 
 ## tls
@@ -109,3 +147,90 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 ### ech-opts.query-server-name
 
 Этот параметр необязателен; если он не пуст, он используется для указания доменного имени при разрешении через DNS.
+
+## tlsmirror-opts
+
+Когда `tls` установлен в `true`, наличие `tlsmirror-opts` включает tlsmirror. `servername` и `alpn` берутся из верхнего уровня конфигурации.
+
+!!! note
+    Сейчас включение tlsmirror поддерживает только VMess. Не используйте его с другими протоколами.
+
+### tlsmirror-opts.primary-key
+
+Обязательно, base64-кодирование 32-байтового основного ключа.
+
+### tlsmirror-opts.explicit-nonce-ciphersuites
+
+Наборы шифров с явным nonce для носителя TLS 1.2.
+
+### tlsmirror-opts.defer-instance-derived-write-time
+
+Задержка перед первой записью.
+
+### tlsmirror-opts.transport-layer-padding
+
+Настройки заполнения транспортного уровня.
+
+### tlsmirror-opts.connection-enrolment
+
+v2ray-совместимые настройки регистрации соединения. Для исходящего VMess в mihomo `primary-egress-outbound` обычно оставляют пустым.
+
+#### tlsmirror-opts.connection-enrolment.primary-ingress-outbound
+
+Тег контрольного исходящего соединения на стороне inbound для регистрации соединения. Обычно используется для соответствия v2ray-совместимой серверной конфигурации.
+
+#### tlsmirror-opts.connection-enrolment.primary-egress-outbound
+
+Тег контрольного исходящего соединения на стороне outbound для регистрации соединения. Для исходящего VMess в mihomo обычно оставляют пустым; в v2ray можно указать отдельный контрольный outbound tag.
+
+### tlsmirror-opts.sequence-watermarking-enabled
+
+Включать ли sequence watermarking.
+
+### tlsmirror-opts.embedded-traffic-generator
+
+Генерирует дополнительный HTTP carrier-трафик. Протокол определяется `alpn`. Если `steps` не настроен, генератор не включается.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps
+
+Список шагов HTTP carrier-трафика. Шаги выполняются по порядку, если `next-step` не выбрал другой шаг.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.name
+
+Имя шага, используется только как идентификатор.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.host
+
+Целевой host HTTP-запроса.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.path
+
+Путь HTTP-запроса.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.method
+
+Метод HTTP-запроса.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.headers
+
+Список HTTP-заголовков. В каждом элементе `name` задает имя заголовка, `value` задает одно значение, а `values` задает несколько значений.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.connection-ready
+
+Передать proxy-соединение после завершения этого шага.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.connection-recall-exit
+
+Завершить carrier-трафик после закрытия proxy-соединения.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.h2-do-not-wait-for-download-finish
+
+Если carrier-протокол — `h2`, не ждать завершения чтения тела ответа.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.wait-time
+
+Время ожидания после завершения шага. Поля совпадают с [tlsmirror-opts.defer-instance-derived-write-time](#tlsmirror-optsdefer-instance-derived-write-time).
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.next-step
+
+Взвешенный список кандидатов для следующего шага. `weight` — вес, `goto-location` — индекс целевого шага.

@@ -6,6 +6,7 @@ listeners:
   type: anytls
   port: 10818
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   users:
     username1: password1
     username2: password2

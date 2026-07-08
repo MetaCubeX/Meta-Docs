@@ -6,6 +6,7 @@ listeners:
   type: shadowsocks
   port: 10001
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   cipher: 2022-blake3-aes-256-gcm
   password: vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=
   udp: true
@@ -18,6 +19,13 @@ listeners:
   #       password: password
   #   handshake:
   #     dest: test.com:443
+  # res-tls:
+  #   enable: false # 设置为true时开启
+  #   dest: test.com:443
+  #   password: password
+  #   restls-script: ""
+  #   min-record-len: 0
+  #   proxy: ""
   # kcp-tun:
   #   enable: false
   #   key: it's a secrect # pre-shared secret between client and server

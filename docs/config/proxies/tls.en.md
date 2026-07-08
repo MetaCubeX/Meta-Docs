@@ -22,6 +22,44 @@ proxies:
     enable: true
     config: base64_encoded_config
     # query-server-name: xxx.com
+  tlsmirror-opts:
+    primary-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
+    explicit-nonce-ciphersuites: [
+      156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171,
+      172, 173, 49195, 49196, 49197, 49198, 49199, 49200, 49201, 49202, 49290, 49291,
+      49293, 49316, 49317, 49318, 49319, 49320, 49321, 49322, 49323, 49324, 49325,
+      49326, 49327, 52392, 52393, 52394, 52395, 52396, 52397, 52398
+    ]
+    defer-instance-derived-write-time:
+      base-nanoseconds: 0
+      uniform-random-multiplier-nanoseconds: 0
+    transport-layer-padding:
+      enabled: false
+    connection-enrolment:
+      primary-egress-outbound: ""
+    sequence-watermarking-enabled: false
+    embedded-traffic-generator:
+      steps:
+        - name: example
+          host: example.com
+          path: /
+          method: GET
+          headers:
+            - name: User-Agent
+              value: mihomo
+            - name: Accept
+              values:
+                - text/html
+                - application/xhtml+xml
+          connection-ready: true
+          connection-recall-exit: true
+          h2-do-not-wait-for-download-finish: false
+          wait-time:
+            base-nanoseconds: 1000000000
+            uniform-random-multiplier-nanoseconds: 0
+          next-step:
+            - weight: 1
+              goto-location: 0
 ```
 
 ## tls
@@ -108,3 +146,90 @@ The ECH configuration, if empty, will be resolved via DNS; otherwise, it will be
 ### ech-opts.query-server-name
 
 Optional, if not empty, it is used to specify the domain name when resolving via DNS.
+
+## tlsmirror-opts
+
+When `tls` is `true`, configuring `tlsmirror-opts` enables tlsmirror. `servername` and `alpn` are inherited from the upper-level configuration.
+
+!!! note
+    Currently, only VMess supports enabling tlsmirror. Do not use it with other protocols.
+
+### tlsmirror-opts.primary-key
+
+Required, base64 encoding of the 32-byte primary key.
+
+### tlsmirror-opts.explicit-nonce-ciphersuites
+
+Cipher suites with explicit nonce used by the TLS 1.2 carrier.
+
+### tlsmirror-opts.defer-instance-derived-write-time
+
+Delay before the first write.
+
+### tlsmirror-opts.transport-layer-padding
+
+Transport-layer padding settings.
+
+### tlsmirror-opts.connection-enrolment
+
+v2ray-compatible connection enrolment settings. For mihomo VMess outbound, `primary-egress-outbound` is usually left empty.
+
+#### tlsmirror-opts.connection-enrolment.primary-ingress-outbound
+
+Inbound-side control outbound tag used for connection enrolment. Usually used to match v2ray-compatible server configuration.
+
+#### tlsmirror-opts.connection-enrolment.primary-egress-outbound
+
+Outbound-side control outbound tag used for connection enrolment. For mihomo VMess outbound, this is usually left empty; v2ray can set a dedicated control outbound tag.
+
+### tlsmirror-opts.sequence-watermarking-enabled
+
+Whether to enable sequence watermarking.
+
+### tlsmirror-opts.embedded-traffic-generator
+
+Generates extra HTTP carrier traffic. The protocol is determined by `alpn`. It is disabled when `steps` is not configured.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps
+
+List of HTTP carrier traffic steps. Steps run in order unless `next-step` selects another step.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.name
+
+Step name, used only as an identifier.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.host
+
+HTTP request target host.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.path
+
+HTTP request path.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.method
+
+HTTP request method.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.headers
+
+HTTP request header list. Each item uses `name` for the header name, `value` for a single value, or `values` for multiple values.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.connection-ready
+
+Deliver the proxy connection after this step finishes.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.connection-recall-exit
+
+Exit the carrier traffic after the proxy connection is closed.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.h2-do-not-wait-for-download-finish
+
+When the carrier protocol is `h2`, do not wait for the response body to finish reading.
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.wait-time
+
+Wait time after the step finishes. Fields are the same as [tlsmirror-opts.defer-instance-derived-write-time](#tlsmirror-optsdefer-instance-derived-write-time).
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.next-step
+
+Weighted candidate list for the next step. `weight` is the weight, and `goto-location` is the target step index.

@@ -36,7 +36,7 @@
       network: grpc
       grpc-opts:
         grpc-service-name: example
-        # grpc-user-agent: 
+        # grpc-user-agent:
         # ping-interval: 0
         # max-connections: 1
         # min-streams: 0
@@ -56,6 +56,57 @@
         early-data-header-name:
         v2ray-http-upgrade: false
         v2ray-http-upgrade-fast-open: false
+    ```
+=== "mkcp"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "mkcp-opts-example"
+      type: vmess
+      server: server
+      port: 443
+      uuid: uuid
+      alterId: 32
+      cipher: auto
+      network: mkcp
+      mkcp-opts:
+        mtu: 1350
+        tti: 50
+        uplink-capacity: 5
+        downlink-capacity: 20
+        congestion: false
+        write-buffer: 2097152
+        read-buffer: 2097152
+        seed: ""
+        header: ""
+    ```
+=== "mekya"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "mekya-opts-example"
+      type: vmess
+      server: server
+      port: 443
+      uuid: uuid
+      alterId: 32
+      cipher: auto
+      tls: true
+      network: mekya
+      mekya-opts:
+        url: https://server:443/mekya
+        max-write-delay: 80
+        max-request-size: 96000
+        polling-interval-initial: 200
+        h2-pool-size: 8
+        kcp:
+          mtu: 1350
+          tti: 15
+          uplink-capacity: 40
+          downlink-capacity: 2000
+          congestion: false
+          write-buffer: 67108864
+          read-buffer: 67108864
+          seed: ""
+          header: ""
     ```
 === "xhttp"
     ```{.yaml linenums="1"}
@@ -94,6 +145,8 @@
         # uplink-http-method: POST # Available: POST, PUT, PATCH, DELETE
         # session-placement: path # Available: path, query, cookie, header
         # session-key: ""
+        # session-table: "" # Available: "", "uuid", "ALPHABET", "Alphabet", "BASE36", "Base62", "HEX", "alphabet", "base36", "hex", "number"
+        # session-length: "16-32"
         # seq-placement: path # Available: path, query, cookie, header
         # seq-key: ""
         # uplink-data-placement: body # Available: body, cookie, header
@@ -227,6 +280,80 @@ Early Data 首包长度阈值
 
 启用 http upgrade 的 fast open
 
+## mkcp-opts
+
+`mkcp` 传输层设置，仅传输层为 `mkcp` 时生效
+
+!!! note
+    仅 VMess 支持 mKCP 传输层，请勿在其他协议上使用
+
+### mkcp-opts.mtu
+
+最大传输单元
+
+### mkcp-opts.tti
+
+传输时间间隔，单位毫秒
+
+### mkcp-opts.uplink-capacity
+
+上行容量，单位 MB/s
+
+### mkcp-opts.downlink-capacity
+
+下行容量，单位 MB/s
+
+### mkcp-opts.congestion
+
+是否启用拥塞控制
+
+### mkcp-opts.write-buffer
+
+写缓冲区大小，单位字节
+
+### mkcp-opts.read-buffer
+
+读缓冲区大小，单位字节
+
+### mkcp-opts.seed
+
+启用 AES-GCM 认证时使用的种子，留空使用默认认证
+
+### mkcp-opts.header
+
+伪装包头，可选 `none`/`srtp`/`utp`/`wechat-video`/`dtls`/`wireguard`
+
+## mekya-opts
+
+`mekya` 传输层设置，仅传输层为 `mekya` 时生效
+
+!!! note
+    仅 VMess 支持 Mekya 传输层，请勿在其他协议上使用
+
+### mekya-opts.url
+
+Mekya 服务端 URL
+
+### mekya-opts.max-write-delay
+
+首包后的最大聚合等待时间，单位毫秒
+
+### mekya-opts.max-request-size
+
+单次 HTTP 请求的最大负载大小，单位字节
+
+### mekya-opts.polling-interval-initial
+
+空轮询间隔，单位毫秒
+
+### mekya-opts.h2-pool-size
+
+HTTP/2 连接池大小
+
+### mekya-opts.kcp
+
+Mekya 内部 KCP 参数，字段含义同 [mkcp-opts](#mkcp-opts)
+
 ## xhttp-opts
 
 `xhttp` 传输层设置，仅传输层为 `xhttp` 时生效
@@ -300,6 +427,14 @@ HTTP 标头的名称。仅当 `x-padding-placement` 为 `header` 或 `queryInHea
 ### xhttp-opts.session-key
 
 会话 ID 的键名（如果放置位置为`path`，则不适用）
+
+### xhttp-opts.session-table
+
+生成会话 ID 时使用的字符表。可选值：`""`、`uuid`、`ALPHABET`、`Alphabet`、`BASE36`、`Base62`、`HEX`、`alphabet`、`base36`、`hex`、`number`
+
+### xhttp-opts.session-length
+
+会话 ID 长度范围。起始值不可为 `0`，总的 id 空间必须大于 21 亿，仅当 `session-table` 不为空或为 `uuid` 时生效
 
 ### xhttp-opts.seq-placement
 

@@ -6,6 +6,7 @@ listeners:
   type: tuic
   port: 10003
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   token:
     - TOKEN
   certificate: ./server.crt # 证书 PEM 格式，或者 证书的路径

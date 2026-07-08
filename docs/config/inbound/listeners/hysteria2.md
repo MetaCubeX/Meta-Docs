@@ -6,6 +6,7 @@ listeners:
   type: hysteria2
   port: 8443
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   users:
     user1: password1
     user2: password2

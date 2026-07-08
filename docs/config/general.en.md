@@ -167,6 +167,12 @@ HTTPS-API listening address, requires configuring the tls section for certificat
 external-controller-tls: 127.0.0.1:9443
 ```
 
+Sets the routing mark for the listening sockets of `external-controller` and `external-controller-tls`. Linux only.
+
+```{.yaml linenums="1"}
+external-controller-routing-mark: 0
+```
+
 Access key for the API.
 
 ```{.yaml linenums="1"}

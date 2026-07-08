@@ -6,6 +6,7 @@ listeners:
   type: mixed
   port: 7892
   listen: 0.0.0.0
+  # routing-mark: 0 # Sets the routing-mark for the listening socket (Linux only)
   udp: true
   users:
     - username: username1

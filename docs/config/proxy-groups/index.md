@@ -14,6 +14,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   interval: 300
   lazy: true
+  default-selected: ss
   empty-fallback: COMPATIBLE
   timeout: 5000
   max-failed-times: 5
@@ -65,6 +66,10 @@ proxy-groups:
 ## lazy
 
 懒惰状态，默认为`true`,未选择到当前策略组时，不进行测试
+
+## default-selected
+
+默认选择的节点。该项为空或者设置的节点名不存在时，默认选择组中第一个节点
 
 ## empty-fallback
 

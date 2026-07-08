@@ -6,6 +6,7 @@ listeners:
   type: shadowsocks
   port: 10001
   listen: 0.0.0.0
+  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
   cipher: 2022-blake3-aes-256-gcm
   password: vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=
   udp: true
@@ -18,6 +19,13 @@ listeners:
   #       password: password
   #   handshake:
   #     dest: test.com:443
+  # res-tls:
+  #   enable: false
+  #   dest: test.com:443
+  #   password: password
+  #   restls-script: ""
+  #   min-record-len: 0
+  #   proxy: ""
   # kcp-tun:
   #   enable: false
   #   key: it's a secrect # pre-shared secret between client and server
@@ -82,4 +90,4 @@ listeners:
 
 ### udp
 
-Прослушивать ли UDP 
+Прослушивать ли UDP

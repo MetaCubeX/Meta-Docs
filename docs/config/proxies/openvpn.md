@@ -27,8 +27,12 @@ proxies:
     #  -----BEGIN OpenVPN Static key V1-----
     #  ...
     #  -----END OpenVPN Static key V1-----
+    # peer-info:
+    #   IV_HWADDR: "52:54:00:ff:72:87"
+    #   UV_DEVICE_ID: "laptop-001"
     # ping: 10
     # ping-restart: 60
+    # handshake-timeout: 30
     # dev: tun
     # cipher: AES-128-GCM
     # auth: SHA256
@@ -84,6 +88,14 @@ proxies:
 ## ping-restart
 
 可选，默认值为`0`。
+
+## peer-info
+
+可选，透传给服务端的 peer-info 键值对，会追加在内置 `IV_VER`/`IV_PROTO`/`IV_CIPHERS` 之后，用于服务端基于 peer-info 做准入决策。
+
+## handshake-timeout
+
+可选，握手超时时间，单位为秒。默认值为 `0`，表示仅使用外层连接超时。
 
 ## dev
 

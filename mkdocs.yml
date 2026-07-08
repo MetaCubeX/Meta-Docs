@@ -270,6 +270,7 @@ nav:
       - 内置代理策略: config/proxies/built-in.md
       - DIRECT: config/proxies/direct.md
       - DNS: config/proxies/dns.md
+      - Rematch: config/proxies/rematch.md
       - HTTP: config/proxies/http.md
       - SOCKS: config/proxies/socks.md
       - Shadowsocks: config/proxies/ss.md
@@ -313,7 +314,7 @@ nav:
       # - 引用规则集合: config/rules/rule-set.md
       # - 引用子规则: config/rules/sub-rule.md
       # - 最终匹配: config/rules/match.md
-    - 规则集合: 
+    - 规则集合:
       - 规则集合: config/rule-providers/index.md
       - 规则集合内容: config/rule-providers/content.md
     - 子规则: config/sub-rule.md

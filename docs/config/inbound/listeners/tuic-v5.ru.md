@@ -6,6 +6,7 @@ listeners:
   type: tuic
   port: 10004
   listen: 0.0.0.0
+  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
   users:
     UUID1: PASSWORD1
     UUID2: PASSWORD2
@@ -34,4 +35,4 @@ listeners:
   #     enabled: true
   #     up: 1000 # по умолчанию в Mbps
   #     down: 1000
-``` 
+```

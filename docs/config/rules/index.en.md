@@ -27,6 +27,7 @@ rules:
 - IN-TYPE,SOCKS/HTTP,PROXY
 - IN-USER,mihomo,PROXY
 - IN-NAME,ss,PROXY
+- REMATCH-NAME,rematch1,PROXY
 
 - PROCESS-PATH,/usr/bin/wget,PROXY
 - PROCESS-PATH,C:\Program Files\Google\Chrome\Application\chrome.exe,PROXY
@@ -148,6 +149,10 @@ Matches the [inbound](../inbound/listeners/index.md) username, supporting multip
 ### IN-NAME
 
 Matches the [inbound name](../inbound/listeners/index.md#name).
+
+### REMATCH-NAME
+
+Matches the name written by a `rematch` outbound proxy.
 
 ### PROCESS-PATH
 

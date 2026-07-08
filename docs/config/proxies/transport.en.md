@@ -36,7 +36,7 @@
       network: grpc
       grpc-opts:
         grpc-service-name: example
-        # grpc-user-agent: 
+        # grpc-user-agent:
         # ping-interval: 0
         # max-connections: 1
         # min-streams: 0
@@ -56,6 +56,57 @@
         early-data-header-name:
         v2ray-http-upgrade: false
         v2ray-http-upgrade-fast-open: false
+    ```
+=== "mkcp"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "mkcp-opts-example"
+      type: vmess
+      server: server
+      port: 443
+      uuid: uuid
+      alterId: 32
+      cipher: auto
+      network: mkcp
+      mkcp-opts:
+        mtu: 1350
+        tti: 50
+        uplink-capacity: 5
+        downlink-capacity: 20
+        congestion: false
+        write-buffer: 2097152
+        read-buffer: 2097152
+        seed: ""
+        header: ""
+    ```
+=== "mekya"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "mekya-opts-example"
+      type: vmess
+      server: server
+      port: 443
+      uuid: uuid
+      alterId: 32
+      cipher: auto
+      tls: true
+      network: mekya
+      mekya-opts:
+        url: https://server:443/mekya
+        max-write-delay: 80
+        max-request-size: 96000
+        polling-interval-initial: 200
+        h2-pool-size: 8
+        kcp:
+          mtu: 1350
+          tti: 15
+          uplink-capacity: 40
+          downlink-capacity: 2000
+          congestion: false
+          write-buffer: 67108864
+          read-buffer: 67108864
+          seed: ""
+          header: ""
     ```
 === "xhttp"
     ```{.yaml linenums="1"}
@@ -94,6 +145,8 @@
         # uplink-http-method: POST # Available: POST, PUT, PATCH, DELETE
         # session-placement: path # Available: path, query, cookie, header
         # session-key: ""
+        # session-table: "" # Available: "", "uuid", "ALPHABET", "Alphabet", "BASE36", "Base62", "HEX", "alphabet", "base36", "hex", "number"
+        # session-length: "16-32"
         # seq-placement: path # Available: path, query, cookie, header
         # seq-key: ""
         # uplink-data-placement: body # Available: body, cookie, header
@@ -229,6 +282,80 @@ Use HTTP upgrade.
 
 Enable fast open for HTTP upgrade.
 
+## mkcp-opts
+
+`mkcp` transport settings. Only effective when the transport layer is `mkcp`.
+
+!!! note
+    Only VMess supports the mKCP transport layer. Do not use it with other protocols.
+
+### mkcp-opts.mtu
+
+Maximum transmission unit.
+
+### mkcp-opts.tti
+
+Transmission time interval in milliseconds.
+
+### mkcp-opts.uplink-capacity
+
+Uplink capacity in MB/s.
+
+### mkcp-opts.downlink-capacity
+
+Downlink capacity in MB/s.
+
+### mkcp-opts.congestion
+
+Whether to enable congestion control.
+
+### mkcp-opts.write-buffer
+
+Write buffer size in bytes.
+
+### mkcp-opts.read-buffer
+
+Read buffer size in bytes.
+
+### mkcp-opts.seed
+
+Seed used for AES-GCM authentication. Leave empty to use the default authentication.
+
+### mkcp-opts.header
+
+Packet header camouflage. Available values: `none`/`srtp`/`utp`/`wechat-video`/`dtls`/`wireguard`.
+
+## mekya-opts
+
+`mekya` transport settings. Only effective when the transport layer is `mekya`.
+
+!!! note
+    Only VMess supports the Mekya transport layer. Do not use it with other protocols.
+
+### mekya-opts.url
+
+Mekya server URL.
+
+### mekya-opts.max-write-delay
+
+Maximum aggregation wait time after the first packet, in milliseconds.
+
+### mekya-opts.max-request-size
+
+Maximum payload size of a single HTTP request, in bytes.
+
+### mekya-opts.polling-interval-initial
+
+Empty polling interval in milliseconds.
+
+### mekya-opts.h2-pool-size
+
+HTTP/2 connection pool size.
+
+### mekya-opts.kcp
+
+Internal KCP parameters for Mekya. The fields are the same as [mkcp-opts](#mkcp-opts).
+
 ## xhttp-opts
 
 `xhttp` transport settings. Only effective when the transport layer is `xhttp`.
@@ -301,6 +428,14 @@ Placement of the session ID. Options: `path`, `query`, `cookie`, `header`.
 ### xhttp-opts.session-key
 
 Key name for the session ID. Not applicable when placement is `path`.
+
+### xhttp-opts.session-table
+
+Character table used to generate session IDs. Available values: `""`, `uuid`, `ALPHABET`, `Alphabet`, `BASE36`, `Base62`, `HEX`, `alphabet`, `base36`, `hex`, `number`.
+
+### xhttp-opts.session-length
+
+Session ID length range. The start value cannot be `0`; the total ID space must be larger than 2.1 billion. Effective only when `session-table` is non-empty or `uuid`.
 
 ### xhttp-opts.seq-placement
 
