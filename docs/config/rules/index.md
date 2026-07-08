@@ -152,7 +152,7 @@ rules:
 
 ### REMATCH-NAME
 
-匹配 `rematch` 出站写入的名称
+匹配 [`rematch`](../proxies/rematch.md) 出站写入的名称
 
 ### PROCESS-PATH
 

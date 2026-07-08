@@ -152,7 +152,7 @@ Matches the [inbound name](../inbound/listeners/index.md#name).
 
 ### REMATCH-NAME
 
-Matches the name written by a `rematch` outbound proxy.
+Matches the name written by a [`rematch`](../proxies/rematch.md) outbound proxy.
 
 ### PROCESS-PATH
 

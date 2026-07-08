@@ -152,7 +152,7 @@ rules:
 
 ### REMATCH-NAME
 
-Сопоставляет имя, записанное исходящим прокси `rematch`.
+Сопоставляет имя, записанное исходящим прокси [`rematch`](../proxies/rematch.md).
 
 ### PROCESS-PATH
 
