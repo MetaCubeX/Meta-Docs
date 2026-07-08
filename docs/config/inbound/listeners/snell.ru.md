@@ -8,7 +8,7 @@ listeners:
     listen: 0.0.0.0
     # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
     psk: your-password
-    version: 4 # Поддерживаются только 4/5
+    version: 4 # Поддерживаются 1/2/3/4/5
     udp: true # UDP через TCP-туннель, по умолчанию true
     # obfs-opts:
     #   mode: http # Необязательно: http / tls
