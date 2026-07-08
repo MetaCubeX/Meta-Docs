@@ -25,6 +25,8 @@
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
+|[ClashPlus](https://clashplus.io)|поддерживается |Закрытый исходный код  |
 
 ## MacOS
 
@@ -41,12 +43,15 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
-|[ClashMac](https://github.com/666OS/ClashMac)|поддерживается | Закрытый исходный код, сборка невоспроизводима |
+|[ClashMac](https://github.com/666OS/ClashMac)|поддерживается | Закрытый исходный код |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
+|[ClashPlus](https://clashplus.io)|поддерживается |Закрытый исходный код  |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
 
 ## Linux
 
@@ -67,14 +72,16 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
-
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
+|[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
+ 
 ## Android
 
 |Название проекта | Статус поддержки | Примечание |
 |:----|:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
-|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|поддерживается | Закрытый исходный код, сборка невоспроизводима |
+|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|поддерживается | Закрытый исходный код |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|поддерживается |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
@@ -82,6 +89,8 @@
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|поддерживается |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|поддерживается |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|поддерживается |
+|[SlClash](https://github.com/songzhengpei/Slclash)|поддерживается |
+|[ClashPlus](https://clashplus.io)|поддерживается |Закрытый исходный код  |
 
 ## iOS
 
@@ -93,6 +102,8 @@
 |[ConnectNow](https://apps.apple.com/app/id6749354119)|поддерживается | Закрытый исходный код |
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|поддерживается |
 |[Nextin](https://apps.apple.com/app/id6754002454)|поддерживается | Закрытый исходный код |
+|[ClashPlus](https://clashplus.io)|поддерживается |Закрытый исходный код  |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
 
 ## Merlin (прошивка KoolCenter/paldier SWRT)
 

@@ -25,6 +25,8 @@
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
+|[ClashPlus](https://clashplus.io)|维护中 |不开源  |
 
 ## MacOS
 
@@ -41,13 +43,16 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
-|[ClashMac](https://github.com/666OS/ClashMac)|维护中 | 不开源，构建不可复现 |
+|[ClashMac](https://github.com/666OS/ClashMac)|维护中 | 不开源 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|维护中 |
 |[CatBar](https://github.com/QuentinHsu/cat-bar)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|维护中 |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
+|[ClashPlus](https://clashplus.io)|维护中 |不开源  |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|维护中 | 不开源 |
 
 ## Linux
 
@@ -68,6 +73,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
 
 ## Android
 
@@ -75,7 +81,7 @@
 |:----|:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
-|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|维护中 | 不开源，构建不可复现 |
+|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|维护中 | 不开源 |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
@@ -83,6 +89,8 @@
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|维护中 |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|维护中 |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|维护中 |
+|[SlClash](https://github.com/songzhengpei/Slclash)|维护中 |
+|[ClashPlus](https://clashplus.io)|维护中 |不开源  |
 
 ## iOS
 
@@ -94,6 +102,8 @@
 |[ConnectNow](https://apps.apple.com/app/id6749354119)|维护中 | 不开源 |
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|维护中 |
 |[Nextin](https://apps.apple.com/app/id6754002454)|维护中 | 不开源 |
+|[ClashPlus](https://apps.apple.com/app/id6774378761)|维护中 | 不开源 |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|维护中 | 不开源 |
 
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
 
