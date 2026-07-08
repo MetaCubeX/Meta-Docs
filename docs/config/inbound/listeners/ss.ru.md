@@ -44,6 +44,12 @@ listeners:
   #   framesize: 8192 # smux max frame size
   #   streambuf: 2097152 # per stream receive buffer in bytes, smux v2+
   #   keepalive: 10 # seconds between heartbeats
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # по умолчанию в Mbps
+  #     down: 1000
 ```
 
 ## [Общие поля](./index.md)

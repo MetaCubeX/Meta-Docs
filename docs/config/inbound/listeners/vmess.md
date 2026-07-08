@@ -45,4 +45,10 @@ listeners:
   #     after-bytes: 0 # 传输指定字节后开始限速
   #     bytes-per-sec: 0 # 基准速率（字节/秒）
   #     burst-bytes-per-sec: 0 # 突发速率（字节/秒），大于 bytesPerSec 时生效
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # 默认 Mbps
+  #     down: 1000
 ```

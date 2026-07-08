@@ -82,4 +82,10 @@ listeners:
       burst-bytes-per-sec: 0 # пиковая скорость (байт/сек), действует когда больше bytesPerSec
   ### Обратите внимание, что для слушателей Vless, если параметр "allow-insecure" не равен true, необходимо заполнить хотя бы одно из следующих полей: "certificate and private-key", "reality-config" или "decryption". ###
   # allow-insecure: false # Разрешить ли отключение шифрования TLS (Примечание: только в случаях, когда nginx или caddy установлены предварительно)
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # по умолчанию в Mbps
+  #     down: 1000
 ``` 

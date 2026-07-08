@@ -27,4 +27,10 @@ listeners:
   alpn:
     - h3
   max-udp-relay-packet-size: 1500
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # по умолчанию в Mbps
+  #     down: 1000
 ``` 
