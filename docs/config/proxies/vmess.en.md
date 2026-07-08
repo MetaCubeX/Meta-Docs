@@ -25,6 +25,8 @@ proxies:
   reality-opts:
     public-key: xxxx
     short-id: xxxx
+  tlsmirror-opts:
+    primary-key: xxxx
 
   network: tcp
 
