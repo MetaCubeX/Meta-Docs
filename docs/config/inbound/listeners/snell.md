@@ -8,7 +8,7 @@ listeners:
     listen: 0.0.0.0
     # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
     psk: your-password
-    version: 4 # 仅支持 4/5
+    version: 4 # 支持 1/2/3/4/5
     udp: true # UDP over TCP tunnel，默认 true
     # obfs-opts:
     #   mode: http # 可选：http / tls
