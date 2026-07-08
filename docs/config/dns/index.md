@@ -48,6 +48,7 @@ dns:
       - '+.google.com'
       - '+.facebook.com'
       - '+.youtube.com'
+  # fallback-lazy-query: false
 ```
 
 ## enable
@@ -203,6 +204,10 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 ### domain
 
 这些域名被视为已污染，匹配到这些域名，会直接使用 `fallback`解析，不去使用 `nameserver`
+
+### fallback-lazy-query
+
+默认值为 false ，如果为 true 会先判断来自 `nameserver` 的结果是否满足 `fallback-filter` 后再发起查询
 
 ## 附加参数
 
