@@ -8,7 +8,7 @@ listeners:
     listen: 0.0.0.0
     # routing-mark: 0 # Sets the routing-mark for the listening socket (Linux only)
     psk: your-password
-    version: 4 # Only supports 4/5
+    version: 4 # Supports 1/2/3/4/5
     udp: true # UDP over TCP tunnel, defaults to true
     # obfs-opts:
     #   mode: http # Optional: http / tls
