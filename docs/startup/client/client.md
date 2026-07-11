@@ -26,7 +26,6 @@
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
-|[ClashPlus](https://clashplus.io)|维护中 |不开源  |
 
 ## MacOS
 
@@ -51,7 +50,6 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|维护中 |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
-|[ClashPlus](https://clashplus.io)|维护中 |不开源  |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|维护中 | 不开源 |
 
 ## Linux
@@ -90,7 +88,6 @@
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|维护中 |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|维护中 |
 |[SlClash](https://github.com/songzhengpei/Slclash)|维护中 |
-|[ClashPlus](https://clashplus.io)|维护中 |不开源  |
 
 ## iOS
 
@@ -102,7 +99,6 @@
 |[ConnectNow](https://apps.apple.com/app/id6749354119)|维护中 | 不开源 |
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|维护中 |
 |[Nextin](https://apps.apple.com/app/id6754002454)|维护中 | 不开源 |
-|[ClashPlus](https://apps.apple.com/app/id6774378761)|维护中 | 不开源 |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|维护中 | 不开源 |
 
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
