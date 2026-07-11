@@ -162,7 +162,7 @@ Lazy state. Default is `true`. When the nodes in this provider are not in use, h
 
 ### health-check.expected-status
 
-See [Expected Status](../proxy-groups/index.md expected-status).
+See [Expected Status](../proxy-groups/index.md#expected-status).
 
 ## override
 
