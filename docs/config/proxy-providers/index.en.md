@@ -69,7 +69,7 @@ proxy-providers:
 
 ## name
 
-Required. For example, `provider1`. It must be unique and it is recommended not to duplicate names with [Proxy Groups](../proxy-groups/index.md%23name).
+Required. For example, `provider1`. It must be unique and it is recommended not to duplicate names with [Proxy Groups](../proxy-groups/index.md#name).
 
 ## type
 
@@ -139,11 +139,15 @@ Specifies whether to enable it. Available options: `true/false`.
 The health check URL. It is recommended to use one of the following addresses:
 
 === "Cloudflare"
-`yaml https://cp.cloudflare.com `
+    ```yaml
+    https://cp.cloudflare.com
+    ```
 
 === "Google"
-`yaml https://www.gstatic.com/generate_204 `
-
+    ```yaml
+    https://www.gstatic.com/generate_204
+    ```
+    
 ### health-check.interval
 
 The interval time for health checks, in seconds.
