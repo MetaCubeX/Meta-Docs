@@ -1,4 +1,4 @@
-# Провайдеры прокси (Proxy Providers)
+# Провайдеры прокси
 
 ```{.yaml linenums="1"}
 proxy-providers:
