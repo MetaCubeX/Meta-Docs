@@ -41,6 +41,19 @@ proxy-providers:
       proxy-name:
       - pattern: "IPLC-(.*?)倍"
         target: "iplc x $1"
+      # override-expr:
+      #   - '.name = "[provider1] " + .name'                   
+      #   - '.plugin-opts.mode = "tls"'                        
+      #   - '.alpn[] |= upcase'                                
+      #   - 'del(.skip-cert-verify)'                           
+      #   - '.name = (.name | trim | upcase)'                  
+      #   - '.name = "[\(.type)] \(.name):\(.port)"'           
+      #   - '(select(.port == 443) | .tls) = true'             
+      #   - '.tags |= (unique | sort)'                         
+      #   - '.names = [.servers[] | select(.enabled) | .name]' 
+      #   - '.servers |= map(select(.enabled))'                
+      #   - '.options |= with_entries(.key |= upcase)'         
+      #   - '. | with_entries(.key |= upcase)'                 
     filter: "(?i)港|hk|hongkong|hong kong"
     exclude-filter: "xxx"
     exclude-type: "ss|http"
@@ -189,6 +202,25 @@ proxy-providers:
 参阅通用字段  [routing-mark](../proxies/index.md#routing-mark)
 
 参阅通用字段  [ip-version](../proxies/index.md#ip-version)
+
+## override.override-expr
+
+这是一个基于 yq v4 风格的表达式配置覆盖子集。数组项按顺序执行，且生效时间晚于上面介绍的固定字段覆盖（如 `udp: true` 等）。
+
+!!! warning "限制与注意事项"
+    * 每一项最终必须恰好产生一个 mapping。未收集的多结果及 del(.) 不受支持。
+    * 赋值右侧使用管道或 and/or 时必须加括号。from_entries 只接受字符串 key。
+    * sort 只支持标量数组。any/all 只支持无参数形式。
+    * ==/!= 按 yq 的标量文本值比较，不对数组或 mapping 做结构化比较。
+    * <、<=、>、>= 只支持数字、字符串和 null。只有 false 和 null 按假值处理。
+    * 普通函数参数不得产生多个结果；map/filter 等接收表达式的函数允许参数产生结果流。
+    * 函数参数可使用逗号或分号分隔。
+    * 求值采用值语义。越界读取不会扩展源数组，右侧的 flatten/map_values 也不会隐式修改源路径。
+    * 需要修改源路径时请使用 |=。右侧没有结果时保留目标原值，不会自动创建 null。
+    * mapping 流、keys 和 entries 转换按 key 排序，因为 map[string]any 不保留 YAML key 顺序。
+    * 不支持的语言功能：变量（as/$x）、reduce、动态路径（.[$key]）、递归下降（..）。
+    * 不支持的外部功能：多文档、文件/环境访问、YAML tag/样式/注释处理、yq CLI 参数。
+    * 未在上面列出的 yq 语法、运算符和函数也不受支持。条件分支可改用 select 后串联多个赋值。
 
 ## filter
 
