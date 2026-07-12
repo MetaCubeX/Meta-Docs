@@ -86,6 +86,10 @@ proxies:
 
 **可选**，从 `.ovpn` 文件的 `<tls-auth>` 标签中复制，**与 `tls-crypt` 互斥**
 
+## key-direction
+
+**可选**，使用 `tls-auth` 时填写，支持 `"1"` 或 `"0"`；如果不填或为空字符串，则默认为双向模式（`bidirectional`）。
+
 ## tls-crypt
 
 **可选**，TLS 加密密钥。从 `.ovpn` 文件的 `<tls-crypt>` 标签中复制，不需要保留标签。
