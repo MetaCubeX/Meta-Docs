@@ -86,6 +86,10 @@ Optional, protocol type. Supports `udp` or `tcp`. Defaults to `udp`.
 
 **Optional**, copy from the `<tls-auth>` tag in the `.ovpn` file. **Mutually exclusive with `tls-crypt`**.
 
+## key-direction
+
+**Optional**, required when using `tls-auth`, supports `"1"` or `"0"`. If left blank or as an empty string, it defaults to `bidirectional` mode.
+
 ## tls-crypt
 
 **Optional**, TLS encryption key. Copy this from the `<tls-crypt>` tag in your `.ovpn` file; do not include the tags themselves.
