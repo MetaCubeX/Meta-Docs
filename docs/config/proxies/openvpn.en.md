@@ -19,6 +19,11 @@ proxies:
     #   -----BEGIN PRIVATE KEY-----
     #   ...
     #   -----END PRIVATE KEY-----
+    # tls-auth: |
+    #   -----BEGIN OpenVPN Static key V1-----
+    #   ...
+    #   -----END OpenVPN Static key V1-----
+    # key-direction: "1"
     ca: |
       -----BEGIN CERTIFICATE-----
       MIIB...example
@@ -76,6 +81,10 @@ Optional, protocol type. Supports `udp` or `tcp`. Defaults to `udp`.
 ## key
 
 **Optional**, client private key content. Copy this from the `<key>` tag in your `.ovpn` file. Can be omitted when using username/password authentication.
+
+## tls-auth
+
+**Optional**, copy from the `<tls-auth>` tag in the `.ovpn` file. **Mutually exclusive with `tls-crypt`**.
 
 ## tls-crypt
 
