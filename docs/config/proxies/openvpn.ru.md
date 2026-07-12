@@ -19,6 +19,11 @@ proxies:
     #   -----BEGIN PRIVATE KEY-----
     #   ...
     #   -----END PRIVATE KEY-----
+    # tls-auth: |
+    #   -----BEGIN OpenVPN Static key V1-----
+    #   ...
+    #   -----END OpenVPN Static key V1-----
+    # key-direction: "1"
     ca: |
       -----BEGIN CERTIFICATE-----
       MIIB...example
@@ -76,6 +81,10 @@ proxies:
 ## key
 
 **Опционально**, содержимое закрытого ключа клиента. Скопируйте содержимое тега `<key>` из вашего `.ovpn` файла. Можно пропустить при использовании режима с именем пользователя и паролем.
+
+## tls-auth
+
+**Необязательно**, скопируйте из тега `<tls-auth>` в файле `.ovpn`. **Взаимоисключающий с `tls-crypt`**.
 
 ## tls-crypt
 
