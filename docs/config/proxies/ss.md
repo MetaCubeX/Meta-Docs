@@ -88,6 +88,7 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
 插件设置
 
 === "obfs"
+=== "obfs"
     ```{.yaml linenums="1"}
     plugin: obfs
     plugin-opts:
@@ -105,6 +106,7 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
           # 配置指纹将实现 SSL Pining 效果
           # fingerprint: xxxx
           # skip-cert-verify: true
+          # name-cert-verify: example.com # 可选，仅修改证书 DNSName 校验目标，不修改 SNI
           # host: bing.com
           # path: "/"
           # mux: true
@@ -122,7 +124,8 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
           # 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
           # 配置指纹将实现 SSL Pining 效果
           # fingerprint: xxxx
-          # skip-cert-verify: true
+          # skip-cert-verify: true # 可选，仅修改证书 DNSName 校验目标，不修改 SNI
+          # name-cert-verify: example.com
           # host: bing.com
           # path: "/"
           # mux: true
@@ -143,16 +146,14 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
 === "restls"
     ```{.yaml linenums="1"}
       plugin: restls
-      client-fingerprint: chrome  # 可以是chrome, ios, firefox, safari中的一个
+      client-fingerprint: chrome  # one of chrome, ios, firefox, safari
       plugin-opts:
-        host: "www.microsoft.com" # 应当是一个TLS 1.3 服务器
+        host: "www.microsoft.com" # 应当是一个TLS1.3 服务器
         password: [YOUR_RESTLS_PASSWORD]
         version-hint: "tls13"
         # Control your post-handshake traffic through restls-script
         # Hide proxy behaviors like "tls in tls".
         # see https://github.com/3andne/restls/blob/main/Restls-Script:%20Hide%20Your%20Proxy%20Traffic%20Behavior.md
-        # 用restls剧本来控制握手后的行为，隐藏"tls in tls"等特征
-        # 详情：https://github.com/3andne/restls/blob/main/Restls-Script:%20%E9%9A%90%E8%97%8F%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%90%86%E8%A1%8C%E4%B8%BA.md
         restls-script: "300?100<1,400~100,350~100,600~100,300~200,300~100"
     ```
 
@@ -178,10 +179,9 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
         nodelay: 0
         interval: 50
         resend: 0
-        sockbuf: 4194304 # per-socket buffer in bytes
         smuxver: 1 # specify smux version, available 1,2
         smuxbuf: 4194304 # the overall de-mux buffer in bytes
         framesize: 8192 # smux max frame size
         streambuf: 2097152 # per stream receive buffer in bytes, smux v2+
-        keepalive: 10 # seconds between heartbeats
+        keepalive: 10 # seconds between heartbeats        
     ```
