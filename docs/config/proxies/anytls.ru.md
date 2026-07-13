@@ -17,6 +17,7 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
+  # name-cert-verify: example.com
 ```
 
 [Общие поля](./index.md)
@@ -37,3 +38,8 @@ proxies:
 ## min-idle-session
 
 При проверке первые n неактивных сессий остаются открытыми. По умолчанию: n=0 
+
+## name-cert-verify
+
+Необязательно. Изменяет только целевое имя DNSName для проверки сертификата, не меняя SNI.
+
