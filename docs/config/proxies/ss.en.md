@@ -81,7 +81,7 @@ Protocol version for UDP over TCP. Default: `1`. Available values: `1`/`2`.
 
 ### plugin
 
-Plugin. Supports `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`.
+Plugin. Supports `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`/`jls`.
 
 ### plugin-opts
 
