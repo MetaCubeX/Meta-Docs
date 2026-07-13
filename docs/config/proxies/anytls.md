@@ -17,6 +17,7 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
+  # name-cert-verify: example.com
 ```
 
 [通用字段](./index.md)
@@ -37,3 +38,7 @@ proxies:
 ## min-idle-session
 
 在检查中，至少前 n 个空闲会话保持打开状态。默认值：n=0
+
+## name-cert-verify
+
+可选，仅修改证书 DNSName 校验目标，不修改 SNI
