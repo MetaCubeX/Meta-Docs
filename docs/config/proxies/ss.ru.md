@@ -99,12 +99,13 @@ proxies:
     ```{.yaml linenums="1"}
       plugin: v2ray-plugin
       plugin-opts:
-        mode: websocket # QUIC пока не поддерживается
+        mode: websocket # на данный момент QUIC не поддерживается
           # tls: true # wss
-          # Можно получить с помощью openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
-          # Настройка отпечатка реализует эффект SSL Pining
+          # Вы можете получить это с помощью команды: openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
+          # Настройка fingerprint включает привязку SSL-сертификата (SSL pinning)
           # fingerprint: xxxx
           # skip-cert-verify: true
+          # name-cert-verify: example.com # Изменяет только целевое имя DNSName для проверки сертификата, не меняя SNI.
           # host: bing.com
           # path: "/"
           # mux: true
@@ -119,10 +120,11 @@ proxies:
       plugin-opts:
         mode: websocket
           # tls: true # wss
-          # Можно получить с помощью openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
-          # Настройка отпечатка реализует эффект SSL Pining
+          # Вы можете получить это с помощью команды: openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
+          # Настройка fingerprint включает привязку SSL-сертификата (SSL pinning)
           # fingerprint: xxxx
-          # skip-cert-verify: true
+          # skip-cert-verify: true # Изменяет только целевое имя DNSName для проверки сертификата, не меняя SNI.
+          # name-cert-verify: example.com
           # host: bing.com
           # path: "/"
           # mux: true
@@ -137,49 +139,49 @@ proxies:
       plugin-opts:
         host: "cloud.tencent.com"
         password: "shadow_tls_password"
-        version: 2 # поддерживает 1/2/3
+        version: 2 # поддерживаются версии 1/2/3
     ```
 
 === "restls"
     ```{.yaml linenums="1"}
       plugin: restls
-      client-fingerprint: chrome  # может быть одним из chrome, ios, firefox, safari
+      client-fingerprint: chrome  # одно из значений: chrome, ios, firefox, safari
       plugin-opts:
-        host: "www.microsoft.com" # должен быть сервер TLS 1.3
+        host: "[www.microsoft.com](https://www.microsoft.com)" # должен быть сервер с поддержкой TLS 1.3
         password: [YOUR_RESTLS_PASSWORD]
         version-hint: "tls13"
-        # Управляйте своим трафиком после рукопожатия через restls-script
-        # Скрывайте поведение прокси, такое как "tls in tls".
-        # см. https://github.com/3andne/restls/blob/main/Restls-Script:%20Hide%20Your%20Proxy%20Traffic%20Behavior.md
+        # Управление трафиком после рукопожатия (post-handshake) через restls-script
+        # Скрывает поведение прокси-сервера, такое как "tls в tls".
+        # см. [https://github.com/3andne/restls/blob/main/Restls-Script:%20Hide%20Your%20Proxy%20Traffic%20Behavior.md](https://github.com/3andne/restls/blob/main/Restls-Script:%20Hide%20Your%20Proxy%20Traffic%20Behavior.md)
         restls-script: "300?100<1,400~100,350~100,600~100,300~200,300~100"
-    ``` 
+    ```
 
 === "kcptun"
     ```{.yaml linenums="1"}
       plugin: kcptun
       plugin-opts:
-        key: it's a secrect # pre-shared secret between client and server
+        key: it's a secrect # общий секрет (preshared secret) между клиентом и сервером
         crypt: aes # aes, aes-128, aes-128-gcm, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none, null
-        mode: fast # profiles: fast3, fast2, fast, normal, manual
-        conn: 1 # set num of UDP connections to server
-        autoexpire: 0 # set auto expiration time(in seconds) for a single UDP connection, 0 to disable
-        scavengettl: 600 # set how long an expired connection can live (in seconds)
-        mtu: 1350 # set maximum transmission unit for UDP packets
-        ratelimit: 0 # set maximum outgoing speed (in bytes per second) for a single KCP connection, 0 to disable. Also known as packet pacing
-        sndwnd: 128 # set send window size(num of packets)
-        rcvwnd: 512 # set receive window size(num of packets)
-        datashard: 10 # set reed-solomon erasure coding - datashard
-        parityshard: 3 # set reed-solomon erasure coding - parityshard
-        dscp: 0 # set DSCP(6bit)
-        nocomp: false # disable compression
-        acknodelay: false # flush ack immediately when a packet is received
+        mode: fast # профили: fast3, fast2, fast, normal, manual
+        conn: 1 # установить количество UDP-соединений с сервером
+        autoexpire: 0 # установить время автоматического истечения срока действия (в секундах) для одного UDP-соединения, 0 — отключить
+        scavengettl: 600 # установить время жизни истекшего соединения (в секундах)
+        mtu: 1350 # установить максимальный размер единицы передачи (MTU) для UDP-пакетов
+        ratelimit: 0 # установить максимальную исходящую скорость (в байтах в секунду) для одного KCP-соединения, 0 — отключить. Также известно как pacing пакетов
+        sndwnd: 128 # установить размер окна отправки (количество пакетов)
+        rcvwnd: 512 # установить размер окна приема (количество пакетов)
+        datashard: 10 # установить кодирование стирания Рида-Соломона — datashard
+        parityshard: 3 # установить кодирование стирания Рида-Соломона — parityshard
+        dscp: 0 # установить DSCP (6 бит)
+        nocomp: false # отключить сжатие
+        acknodelay: false # немедленно отправлять ack (подтверждение) при получении пакета
         nodelay: 0
         interval: 50
         resend: 0
-        sockbuf: 4194304 # per-socket buffer in bytes
-        smuxver: 1 # specify smux version, available 1,2
-        smuxbuf: 4194304 # the overall de-mux buffer in bytes
-        framesize: 8192 # smux max frame size
-        streambuf: 2097152 # per stream receive buffer in bytes, smux v2+
-        keepalive: 10 # seconds between heartbeats
+        sockbuf: 4194304 # буфер для каждого сокета в байтах
+        smuxver: 1 # указать версию smux, доступны 1, 2
+        smuxbuf: 4194304 # общий буфер демультиплексирования (de-mux) в байтах
+        framesize: 8192 # максимальный размер кадра smux
+        streambuf: 2097152 # буфер приема на один поток в байтах, для smux v2+
+        keepalive: 10 # количество секунд между проверками активности (heartbeats)
     ```
