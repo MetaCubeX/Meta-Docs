@@ -17,6 +17,7 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
+  # name-cert-verify: example.com
 ```
 
 [Common fields](./index.md)
@@ -37,3 +38,7 @@ During checks, sessions idle longer than this value are closed. Default: 30 seco
 ## min-idle-session
 
 During checks, keep at least the first n idle sessions open. Default: n=0.
+
+## name-cert-verify
+
+Optional. Only modifies the certificate's DNSName verification target, without altering the SNI.
