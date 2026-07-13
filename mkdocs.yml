@@ -285,6 +285,7 @@ nav:
       - Hysteria: config/proxies/hysteria.md
       - Hysteria2: config/proxies/hysteria2.md
       - TUIC: config/proxies/tuic.md
+      - ShadowQUIC: config/proxies/shadowquic.md
       - WireGuard: config/proxies/wg.md
       - Tailscale: config/proxies/tailscale.md
       - SSH: config/proxies/ssh.md
