@@ -19,6 +19,7 @@ proxies:
   fingerprint: xxxx
   client-fingerprint: chrome
   skip-cert-verify: true
+  # name-cert-verify: example.com
   reality-opts:
     public-key: xxxx
     short-id: xxxx
@@ -48,6 +49,10 @@ VLESS 子协议，可用值为 `xtls-rprx-vision`
 ## packet-encoding
 
 UDP 包编码，为空则使用原始编码，可选 `packetaddr` (由 `v2ray 5+` 支持)/ `xudp` (由 `xray` 支持)
+
+## name-cert-verify
+
+可选，仅修改证书 DNSName 校验目标，不修改 SNI
 
 ## encryption
 
