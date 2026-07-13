@@ -20,6 +20,7 @@ proxies:
   # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
+  # name-cert-verify: example.com # Only modifies the certificate's DNSName verification target, without altering the SNI.
   fingerprint: xxxx
   alpn:
     - h3
