@@ -189,6 +189,7 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
 === "jls"
     ```{.yaml linenums="1"}
     plugin: jls
+    client-fingerprint: chrome
     plugin-opts:
       host: "www.example.com"
       username: "jls-user"
