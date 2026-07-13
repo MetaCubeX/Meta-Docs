@@ -11,6 +11,7 @@ proxies:
   # tls: true
   # fingerprint: xxxx
   # skip-cert-verify: true
+  # name-cert-verify: example.com
   # udp: true
   # ip-version: ipv6
 ```
@@ -18,3 +19,7 @@ proxies:
 [Common fields](./index.md)
 
 [TLS fields](./tls.md)
+
+## name-cert-verify
+
+Modify only the certificate DNSName verification target, without modifying the SNI.
