@@ -30,6 +30,10 @@ proxies:
 
 [TLS fields](./tls.md)
 
+## name-cert-verify
+
+Optional. Only modifies the certificate's DNSName verification target, without altering the SNI.
+
 ## quic
 
 Whether to enable QUIC. Default: `false`.
