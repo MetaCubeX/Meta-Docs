@@ -11,6 +11,7 @@ proxies:
   - h2
   - http/1.1
   skip-cert-verify: true
+  # name-cert-verify: example.com
   # certificate: xxxx
   # private-key: xxx
   client-fingerprint: chrome
@@ -97,6 +98,10 @@ Refer to [Application-Layer Protocol Negotiation](https://en.wikipedia.org/wiki/
 ## skip-cert-verify
 
 Bypasses certificate verification, applicable only to protocols that use `tls`.
+
+## name-cert-verify
+
+Optional. Only modifies the certificate's DNSName verification target, without altering the SNI.
 
 ## certificate
 
