@@ -52,6 +52,9 @@ proxies:
 
 可选，设置是否开启 0-RTT（零往返时延握手）。
 
+!!! "warning"
+    官方 server 的 0-RTT 路径可能在 JLS 认证完成前读取用户状态（已确认影响 v0.3.11）；使用官方 server 时必须在服务端关闭 zero-rtt
+
 ## keep-alive-interval
 
 可选，发送保持连接活动的心跳包的间隔时间，单位为毫秒
