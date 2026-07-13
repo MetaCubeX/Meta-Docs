@@ -16,6 +16,7 @@ proxies:
   client-fingerprint: random
   fingerprint: xxxx
   skip-cert-verify: true
+  # name-cert-verify: example.com
   ss-opts:
     enabled: false
     method: aes-128-gcm
@@ -37,6 +38,10 @@ proxies:
 ## password
 
 Required, trojan server password.
+
+## name-cert-verify
+
+Optional. Only modifies the certificate's DNSName verification target, without altering the SNI.
 
 ## ss-opts
 
