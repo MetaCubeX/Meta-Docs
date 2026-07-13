@@ -1,6 +1,6 @@
 # Hysteria2
 
-[Configuration Reference](https://hysteria.network/en/docs/advanced-usage/#client-side)
+[Configuration Reference](https://hysteria.network/docs/advanced/Full-Client-Config/)
 
 ```{.yaml linenums="1"}
 proxies:
@@ -14,9 +14,10 @@ proxies:
   up: "30 Mbps"
   down: "200 Mbps"
   # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
-  obfs: salamander # Default is empty; if filled, obfs is enabled. Currently, only salamander is supported.
+  obfs: salamander # Defaults to empty. If filled, obfs will be enabled. Currently supports `salamander` and `gecko`.
   obfs-password: yourpassword
-
+  # obfs-min-packet-size: 512
+  # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
   fingerprint: xxxx
@@ -60,10 +61,18 @@ Brutal rate control; if no unit is specified, the default is Mbps.
 
 ## obfs
 
-QUIC traffic obfuscator type, can only be set to `salamander`. If left empty, it is disabled.
+QUIC traffic obfuscator type. Can be set to `salamander` or `gecko`. If left blank, obfuscation is disabled.
 
 ## obfs-password
 
 QUIC traffic obfuscator password.
+
+## obfs-min-packet-size
+
+Minimum wire packet size (in bytes). Restricted to `gecko` only.
+
+## obfs-max-packet-size
+
+Maximum wire packet size (in bytes). Restricted to `gecko` only.
 
 ## realm-opts
