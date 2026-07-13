@@ -22,4 +22,4 @@ proxies:
 
 ## name-cert-verify
 
-Modify only the certificate DNSName verification target, without modifying the SNI.
+Optional. Only modifies the certificate's DNSName verification target, without altering the SNI.
