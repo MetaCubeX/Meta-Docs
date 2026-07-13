@@ -11,6 +11,7 @@ proxies:
   - h2
   - http/1.1
   skip-cert-verify: true
+  # name-cert-verify: example.com
   # certificate: xxxx
   # private-key: xxx
   client-fingerprint: chrome
@@ -97,6 +98,10 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 ## skip-cert-verify
 
 跳过证书验证，仅适用于使用 `tls` 的协议
+
+## name-cert-verify
+
+可选，仅修改证书 DNSName 校验目标，不修改 SNI
 
 ## certificate
 
