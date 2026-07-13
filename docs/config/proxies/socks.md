@@ -11,6 +11,7 @@ proxies:
   # tls: true
   # fingerprint: xxxx
   # skip-cert-verify: true
+  # name-cert-verify: example.com
   # udp: true
   # ip-version: ipv6
 ```
@@ -18,3 +19,7 @@ proxies:
 [通用字段](./index.md)
 
 [TLS 字段](./tls.md)
+
+## name-cert-verify
+
+仅修改证书 DNSName 校验目标，不修改 SNI
