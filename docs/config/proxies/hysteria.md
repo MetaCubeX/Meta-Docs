@@ -16,6 +16,7 @@ proxies:
   down: "200 Mbps" # 若不写单位,默认为 Mbps
   # sni: server.com
   # skip-cert-verify: false
+  # name-cert-verify: example.com # 可选，仅修改证书 DNSName 校验目标，不修改 SNI
   # recv-window-conn: 12582912
   # recv-window: 52428800
   # disable_mtu_discovery: false
