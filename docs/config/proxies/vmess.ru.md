@@ -22,6 +22,7 @@ proxies:
   fingerprint: xxxx
   client-fingerprint: chrome
   skip-cert-verify: true
+  # name-cert-verify: example.com
   reality-opts:
     public-key: xxxx
     short-id: xxxx
@@ -61,6 +62,11 @@ proxies:
 ## authenticated-length
 
 Параметр протокола. Включает шифрование блоков длины
+
+## name-cert-verify
+
+Необязательно. Изменяет только целевое имя DNSName для проверки сертификата, не меняя SNI.
+
 
 ## network
 
