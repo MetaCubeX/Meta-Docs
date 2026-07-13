@@ -22,4 +22,4 @@ proxies:
 
 ## name-cert-verify
 
-仅修改证书 DNSName 校验目标，不修改 SNI
+可选，仅修改证书 DNSName 校验目标，不修改 SNI
