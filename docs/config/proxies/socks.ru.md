@@ -11,6 +11,7 @@ proxies:
   # tls: true
   # fingerprint: xxxx
   # skip-cert-verify: true
+  # name-cert-verify: example.com
   # udp: true
   # ip-version: ipv6
 ```
@@ -18,3 +19,7 @@ proxies:
 [Общие поля](./index.md)
 
 [Поля TLS](./tls.md) 
+
+## name-cert-verify
+
+Изменить только цель проверки DNSName в сертификате, не изменяя SNI.
