@@ -183,3 +183,13 @@ proxies:
         streambuf: 2097152 # per stream receive buffer in bytes, smux v2+
         keepalive: 10 # seconds between heartbeats
     ```
+
+=== "jls"
+    ```{.yaml linenums="1"}
+    plugin: jls
+    plugin-opts:
+      host: "www.example.com"
+      username: "jls-user"
+      password: "jls-password"
+      # alpn: [h2, http/1.1]
+    ```
