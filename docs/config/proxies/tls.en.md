@@ -22,6 +22,9 @@ proxies:
     enable: true
     config: base64_encoded_config
     # query-server-name: xxx.com
+  jls-opts:
+       username: jls-user
+       password: jls-password
   tlsmirror-opts:
     primary-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
     explicit-nonce-ciphersuites: [
@@ -149,6 +152,10 @@ The ECH configuration, if empty, will be resolved via DNS; otherwise, it will be
 ### ech-opts.query-server-name
 
 Optional, if not empty, it is used to specify the domain name when resolving via DNS.
+
+## jls-opts
+
+Requires `tls: true`. Uses `servername` as the JLS SNI.
 
 ## tlsmirror-opts
 
