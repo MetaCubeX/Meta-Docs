@@ -20,6 +20,7 @@ proxies:
   # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
+  # name-cert-verify: example.com # 仅修改证书 DNSName 校验目标，不修改 SNI
   fingerprint: xxxx # 配置指纹将实现 SSL Pining 效果, 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
   alpn:
     - h3
