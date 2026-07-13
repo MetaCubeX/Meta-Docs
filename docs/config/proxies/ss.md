@@ -186,7 +186,7 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
         keepalive: 10 # seconds between heartbeats
     ```
 
-=== "shadow-tls"
+=== "jls"
     ```{.yaml linenums="1"}
     plugin: jls
     plugin-opts:
@@ -194,4 +194,4 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
       username: "jls-user"
       password: "jls-password"
       # alpn: [h2, http/1.1]
-```
+    ```
