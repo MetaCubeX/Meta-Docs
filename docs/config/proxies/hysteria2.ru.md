@@ -1,6 +1,6 @@
 # Hysteria2
 
-[Справочная конфигурация](https://hysteria.network/zh/docs/advanced-usage/#%e5%ae%a2%e6%88%b7%e7%ab%af)
+[Справочная конфигурация](https://hysteria.network/ru/docs/advanced/Full-Client-Config/)
 
 ```{.yaml linenums="1"}
 proxies:
@@ -14,9 +14,10 @@ proxies:
   up: "30 Mbps"
   down: "200 Mbps"
   # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
-  obfs: salamander # по умолчанию пусто, если указать - включается obfs, в настоящее время поддерживается только salamander
+  obfs: salamander # Тип обфускатора трафика QUIC. Можно установить значение `salamander` или `gecko`. Если оставить пустым, обфускация будет отключена.
   obfs-password: yourpassword
-
+  # obfs-min-packet-size: 512
+  # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
   fingerprint: xxxx
@@ -67,8 +68,16 @@ proxies:
 
 Тип маскировки трафика QUIC, можно установить только `salamander`, если пусто, то отключено
 
+## obfs-min-packet-size
+
+Минимальный размер сетевого пакета (в байтах). Доступно только для `gecko`.
+
+## obfs-max-packet-size
+
+Максимальный размер сетевого пакета (в байтах). Доступно только для `gecko`.
+
 ## obfs-password
 
-## realm-opts
+Пароль для обфускатора трафика QUIC.
 
-Пароль для маскировки трафика QUIC 
+## realm-opts
