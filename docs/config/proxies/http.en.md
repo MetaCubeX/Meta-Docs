@@ -10,6 +10,7 @@ proxies:
   # password: password
   # tls: true # https
   # skip-cert-verify: true
+  # name-cert-verify: example.com
   # sni: custom.com
   # fingerprint: xxxx # Uses the sha256 fingerprint like experimental.fingerprints. If configured, protocol-specific fingerprints ignore experimental.fingerprints
   # ip-version: dual
@@ -19,3 +20,7 @@ proxies:
 [Common fields](./index.md)
 
 [TLS fields](./tls.md)
+
+## name-cert-verify
+
+Modify only the certificate DNSName verification target, without modifying the SNI.
