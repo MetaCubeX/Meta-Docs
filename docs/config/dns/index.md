@@ -250,6 +250,10 @@ proxies:
 
 跳过 TLS 证书验证
 
+### name-cert-verify
+
+仅修改证书 DNSName 校验目标，不修改 SNI
+
 ### ecs
 
 指定 dns 查询的 subnet 地址
