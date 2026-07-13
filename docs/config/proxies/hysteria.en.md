@@ -16,6 +16,7 @@ proxies:
   down: "200 Mbps" # Defaults to Mbps when the unit is omitted
   # sni: server.com
   # skip-cert-verify: false
+  # name-cert-verify: example.com # Only modifies the certificate's DNSName verification target, without altering the SNI.
   # recv-window-conn: 12582912
   # recv-window: 52428800
   # disable_mtu_discovery: false
