@@ -81,7 +81,7 @@ proxies:
 
 ### plugin
 
-Плагин, поддерживает `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`
+Плагин, поддерживает `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`/`jls`
 
 ### plugin-opts
 
