@@ -19,6 +19,7 @@ proxies:
   fingerprint: xxxx
   client-fingerprint: chrome
   skip-cert-verify: true
+  # name-cert-verify: example.com
   reality-opts:
     public-key: xxxx
     short-id: xxxx
@@ -48,6 +49,10 @@ proxies:
 ## packet-encoding
 
 Кодирование UDP-пакетов, если пусто, используется оригинальное кодирование. Возможные значения: `packetaddr` (поддерживается `v2ray 5+`) / `xudp` (поддерживается `xray`)
+
+## name-cert-verify
+
+Необязательно. Изменяет только целевое имя DNSName для проверки сертификата, не меняя SNI.
 
 ## encryption
 
