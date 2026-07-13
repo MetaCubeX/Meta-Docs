@@ -105,6 +105,7 @@ Plugin settings.
           # Configuring a fingerprint enables SSL pinning
           # fingerprint: xxxx
           # skip-cert-verify: true
+          # name-cert-verify: example.com # Only modifies the certificate's DNSName verification target, without altering the SNI.
           # host: bing.com
           # path: "/"
           # mux: true
@@ -122,7 +123,8 @@ Plugin settings.
           # You can get this with openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
           # Configuring a fingerprint enables SSL pinning
           # fingerprint: xxxx
-          # skip-cert-verify: true
+          # skip-cert-verify: true # Only modifies the certificate's DNSName verification target, without altering the SNI.
+          # name-cert-verify: example.com
           # host: bing.com
           # path: "/"
           # mux: true
