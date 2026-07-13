@@ -22,6 +22,9 @@ proxies:
     enable: true
     config: base64_encoded_config
     # query-server-name: xxx.com
+    jls-opts:
+       username: jls-user
+       password: jls-password
   tlsmirror-opts:
     primary-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
     explicit-nonce-ciphersuites: [
@@ -131,6 +134,10 @@ reality 服务端私钥对应的公钥
 ### reality-opts.support-x25519mlkem768
 
 支持 X25519-MLKEM768 密钥交换
+
+## jls-opts
+
+使用 sni 作为 JLS SNI
 
 ## ech-opts
 
