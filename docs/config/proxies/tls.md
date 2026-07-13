@@ -117,6 +117,9 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 reality 配置，如果不为空，则启用 reality
 
+!!! warning
+    由于 xray-core 刻意的[不兼容行为](https://github.com/XTLS/Xray-core/commit/af7eb68028732a8ee3c0e5d6ab2b8a657bb2e770)，我们不会考虑 xray v26.7.11+ 版本的兼容性，如果不能使用请更换服务端（如 [mihomo 原生 listener](../inbound/listeners/index.md)，sing-box 或旧版 xray-core），或用其他协议替代
+
 ### reality-opts.public-key
 
 reality 服务端私钥对应的公钥
