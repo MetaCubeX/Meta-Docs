@@ -156,7 +156,7 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 ## jls-opts
 
-Требуется `tls: true`. Использует `servername` в качестве JLS SNI.
+Использует `sni` в качестве JLS SNI.
 
 ## tlsmirror-opts
 
