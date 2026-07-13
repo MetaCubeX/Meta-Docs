@@ -22,6 +22,7 @@ proxies:
   fingerprint: xxxx
   client-fingerprint: chrome
   skip-cert-verify: true
+  # name-cert-verify: example.com
   reality-opts:
     public-key: xxxx
     short-id: xxxx
@@ -61,6 +62,10 @@ UDP 包编码，为空则使用原始编码，可选 `packetaddr` (由 `v2ray 5+
 ## authenticated-length
 
 协议参数。启用长度块加密
+
+## name-cert-verify
+
+可选，仅修改证书 DNSName 校验目标，不修改 SNI
 
 ## network
 
