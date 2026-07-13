@@ -81,7 +81,7 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
 
 ### plugin
 
-插件，支持 `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`
+插件，支持 `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`/`jls`
 
 ### plugin-opts
 
