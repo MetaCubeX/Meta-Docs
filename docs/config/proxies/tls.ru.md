@@ -117,6 +117,9 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 Настройки reality, если не пусто, включает reality
 
+!!! warning
+    Из-за намеренно [несовместимого поведения](https://github.com/XTLS/Xray-core/commit/af7eb68028732a8ee3c0e5d6ab2b8a657bb2e770) xray-core мы не будем рассматривать совместимость с версиями xray v26.7.11+. Если это не работает, замените сервер (например, [нативный listener mihomo](../inbound/listeners/index.md), sing-box или старую версию xray-core) или используйте другой протокол.
+
 ### reality-opts.public-key
 
 Публичный ключ, соответствующий приватному ключу сервера reality

@@ -118,6 +118,9 @@ Client uTLS fingerprint, applicable only to [`VMess`](./vmess.md)/[`VLESS`](./vl
 
 Configuration for reality; if not empty, reality will be enabled.
 
+!!! warning
+    Due to xray-core's deliberately [incompatible behavior](https://github.com/XTLS/Xray-core/commit/af7eb68028732a8ee3c0e5d6ab2b8a657bb2e770), we will not consider compatibility with xray v26.7.11+ versions. If it cannot be used, replace the server (such as [mihomo native listener](../inbound/listeners/index.md), sing-box, or an older xray-core version) or use another protocol instead.
+
 ### reality-opts.public-key
 
 Public key corresponding to the reality server's private key.
