@@ -1,6 +1,6 @@
 # Hysteria2
 
-[配置参考](https://hysteria.network/zh/docs/advanced-usage/#%e5%ae%a2%e6%88%b7%e7%ab%af)
+[配置参考](https://hysteria.network/zh/docs/advanced/Full-Client-Config/)
 
 ```{.yaml linenums="1"}
 proxies:
@@ -14,9 +14,10 @@ proxies:
   up: "30 Mbps"
   down: "200 Mbps"
   # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
-  obfs: salamander # 默认为空，如果填写则开启obfs，目前仅支持salamander
+  obfs: salamander # 默认为空，如果填写则开启obfs，目前支持salamander和 gecko
   obfs-password: yourpassword
-
+  # obfs-min-packet-size: 512
+  # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
   fingerprint: xxxx # 配置指纹将实现 SSL Pining 效果, 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
@@ -65,9 +66,17 @@ brutal 速率控制，若不写单位，默认为 Mbps
 
 ## obfs
 
-QUIC 流量混淆器类型，仅可设为 `salamander`，如果为空则禁用
+QUIC 流量混淆器类型，可设为 `salamander`或`gecko`，如果为空则禁用
 
 ## obfs-password
+
+## obfs-min-packet-size
+
+最小线上数据包大小（字节）。仅限 `gecko`。
+
+## obfs-max-packet-size
+
+最大线上数据包大小（字节）。仅限 `gecko`。
 
 ## realm-opts
 
