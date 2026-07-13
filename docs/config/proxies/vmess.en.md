@@ -22,6 +22,7 @@ proxies:
   fingerprint: xxxx
   client-fingerprint: chrome
   skip-cert-verify: true
+  # name-cert-verify: example.com
   reality-opts:
     public-key: xxxx
     short-id: xxxx
@@ -61,6 +62,10 @@ Protocol parameter. If enabled, traffic is randomly wasted. It is enabled by def
 ## authenticated-length
 
 Protocol parameter. Enables encrypted length blocks.
+
+## name-cert-verifyOptional.
+
+Only modifies the certificate's DNSName verification target, without altering the SNI.
 
 ## network
 
