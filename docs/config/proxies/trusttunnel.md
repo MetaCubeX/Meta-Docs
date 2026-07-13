@@ -15,6 +15,7 @@ proxies:
   # alpn:
   #   - h2
   # skip-cert-verify: true
+  # name-cert-verify: example.com
   ### quic options
   # quic: true
   # congestion-controller: bbr
@@ -28,6 +29,10 @@ proxies:
 [通用字段](./index.md)
 
 [TLS 字段](./tls.md)
+
+## name-cert-verify
+
+可选，仅修改证书 DNSName 校验目标，不修改 SNI
 
 ## quic
 
