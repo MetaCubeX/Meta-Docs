@@ -187,6 +187,7 @@ Plugin settings.
 === "jls"
     ```{.yaml linenums="1"}
     plugin: jls
+    client-fingerprint: chrome
     plugin-opts:
       host: "www.example.com"
       username: "jls-user"
