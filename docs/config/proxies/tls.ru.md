@@ -11,6 +11,7 @@ proxies:
   - h2
   - http/1.1
   skip-cert-verify: true
+  # name-cert-verify: example.com
   # certificate: xxxx
   # private-key: xxx
   client-fingerprint: chrome
@@ -97,6 +98,10 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 ## skip-cert-verify
 
 Пропустить проверку сертификата, применяется только к протоколам, использующим `tls`
+
+## name-cert-verify
+
+Необязательно. Изменяет только целевое имя DNSName для проверки сертификата, не меняя SNI.
 
 ## certificate
 
