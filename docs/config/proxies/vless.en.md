@@ -19,6 +19,7 @@ proxies:
   fingerprint: xxxx
   client-fingerprint: chrome
   skip-cert-verify: true
+  # name-cert-verify: example.com
   reality-opts:
     public-key: xxxx
     short-id: xxxx
@@ -48,6 +49,10 @@ VLESS sub-protocol. Available value: `xtls-rprx-vision`.
 ## packet-encoding
 
 UDP packet encoding. Empty means raw encoding. Available values: `packetaddr` (supported by `v2ray 5+`)/ `xudp` (supported by `xray`).
+
+## name-cert-verify
+
+Optional. Only modifies the certificate's DNSName verification target, without altering the SNI.
 
 ## encryption
 
