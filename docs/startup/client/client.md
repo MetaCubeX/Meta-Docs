@@ -89,6 +89,7 @@
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|维护中 |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|维护中 |
 |[SlClash](https://github.com/songzhengpei/Slclash)|维护中 |
+|[MikuBox](https://github.com/HatsuneMikuUwU/MikuBoxForAndroid)|维护中 |
 
 ## iOS
 
