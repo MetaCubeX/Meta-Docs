@@ -6,7 +6,8 @@ listeners:
   type: anytls
   port: 10818
   listen: 0.0.0.0
-  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
+  # routing-mark: 0 # устанавливает routing-mark для слушающего сокета (только для Linux)
+  # Если "jls-config" не включен и "allow-insecure" не равен true, поля "certificate" и "private-key" обязательны; не заполняйте их при включенном JLS
   users:
     username1: password1
     username2: password2
