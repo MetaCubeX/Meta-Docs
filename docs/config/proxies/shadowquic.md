@@ -16,6 +16,7 @@ proxies:
   # congestion-controller: cubic
   # up: 100 Mbps 
   # down: 100 Mbps
+  # ignore-client-bandwidth: false 
   # cwnd: 32
   # bbr-profile: "standard"
   # max-datagram-frame-size: 1400
@@ -72,6 +73,10 @@ proxies:
 ## down
 
 可选，设置客户端请求的下载速度，单位支持 Mbps，受接收端上传速度上限限制。填入此项将启用 Brutal 拥塞控制算法；需要通信两端均为 mihomo 且运行 ShadowQUIC
+
+## ignore-client-bandwidth
+
+可选，用于 Brutal 算法。设置是否忽略客户端出站的 `down` 带宽限制，而转为使用入站监听器（listener）的 `down` 限制或自动配置，默认为 `false`
 
 ## cwnd
 
