@@ -14,9 +14,10 @@ proxies:
   # zero-rtt: false
   # keep-alive-interval: 10000
   # congestion-controller: cubic
-  # cwnd: 32
   # up: 100 Mbps
   # down: 100 Mbps
+  # ignore-client-bandwidth: false
+  # cwnd: 32
   # bbr-profile: "standard"
   # max-datagram-frame-size: 1400
   # max-open-streams: 1024
@@ -65,10 +66,6 @@ proxies:
 
 **Optional**, sets the congestion control algorithm. Available values: `cubic`/`new_reno`/`bbr`. Default is `cubic`.
 
-## cwnd
-
-**Optional**, sets the initial congestion window size. Default is `32`.
-
 ## up
 
 **Optional**, sets the client upload speed, supports `Mbps`. Specifying this enables the Brutal congestion control algorithm; requires mihomo ShadowQUIC on both ends.
@@ -76,6 +73,14 @@ proxies:
 ## down
 
 **Optional**, sets the requested client download speed, supports `Mbps`, capped by the receiver's upload speed. Specifying this enables the Brutal congestion control algorithm; requires mihomo ShadowQUIC on both ends.
+
+## ignore-client-bandwidth
+
+**Optional**, used for the Brutal algorithm. Sets whether to ignore the outbound `down` bandwidth of the client and use the listener's `down` bandwidth or automatic configuration instead. Default is `false`.
+
+## cwnd
+
+**Optional**, sets the initial congestion window size. Default is `32`.
 
 ## bbr-profile
 
