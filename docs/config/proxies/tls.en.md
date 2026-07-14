@@ -155,7 +155,7 @@ Optional, if not empty, it is used to specify the domain name when resolving via
 
 ## jls-opts
 
-Uses `sni` as the JLS SNI.
+Requires `tls: true`. Uses `sni` / `servername` from the general configuration as the JLS SNI.
 
 ## tlsmirror-opts
 
