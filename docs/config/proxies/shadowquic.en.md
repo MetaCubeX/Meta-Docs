@@ -15,6 +15,8 @@ proxies:
   # keep-alive-interval: 10000
   # congestion-controller: cubic
   # cwnd: 32
+  # up: 100 Mbps
+  # down: 100 Mbps
   # bbr-profile: "standard"
   # max-datagram-frame-size: 1400
   # max-open-streams: 1024
@@ -66,6 +68,14 @@ proxies:
 ## cwnd
 
 **Optional**, sets the initial congestion window size. Default is `32`.
+
+## up
+
+**Optional**, sets the client upload speed, supports `Mbps`. Specifying this enables the Brutal congestion control algorithm; requires mihomo ShadowQUIC on both ends.
+
+## down
+
+**Optional**, sets the requested client download speed, supports `Mbps`, capped by the receiver's upload speed. Specifying this enables the Brutal congestion control algorithm; requires mihomo ShadowQUIC on both ends.
 
 ## bbr-profile
 
