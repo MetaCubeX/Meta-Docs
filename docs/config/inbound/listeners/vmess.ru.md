@@ -58,6 +58,16 @@ listeners:
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
   # если заполнен reality-config, то включается reality (не может использоваться одновременно с certificate и private-key)
+  # shadow-tls:
+  #   enable: true
+  #   version: 3 # поддерживает v1/v2/v3
+  #   # password: shadow-tls-password # параметр конфигурации v2
+  #   users: # параметр конфигурации v3
+  #     - name: shadow-tls-user
+  #       password: shadow-tls-password
+  #   handshake:
+  #     dest: www.example.com:443
+  #     # proxy: ""
   # reality-config:
   #   dest: test.com:443
   #   private-key: jNXHt1yRo0vDuchQlIP6Z0ZvjT3KtzVI-T4E7RoLJS0 # можно сгенерировать командой mihomo generate reality-keypair
