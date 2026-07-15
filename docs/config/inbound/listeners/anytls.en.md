@@ -21,6 +21,16 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  # shadow-tls:
+    #   enable: true
+    #   version: 3 # 支持 v1/v2/v3
+    #   # password: shadow-tls-password # v2 配置项
+    #   users: # v3 配置项
+    #     - name: shadow-tls-user
+    #       password: shadow-tls-password
+    #   handshake:
+    #     dest: www.example.com:443
+    #     # proxy: ""
   # res-tls:
     #   enable: true
     #   dest: www.example.com:443
