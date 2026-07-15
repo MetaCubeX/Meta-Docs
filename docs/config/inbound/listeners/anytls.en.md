@@ -5,7 +5,7 @@ listeners:
   port: 10818
   listen: 0.0.0.0
   # routing-mark: 0 # set routing-mark for listening socket (Linux only)
-  # When "jls-config" is not enabled and "allow-insecure" is not true, "certificate" and "private-key" must be filled in; do not fill them in when JLS is enabled
+  # When "shadow-tls", "res-tls", and "jls-config" are all disabled and "allow-insecure" is not true, "certificate" and "private-key" must be filled in; do not fill them in when ShadowTLS, ResTLS, or JLS is enabled
   users:
     username1: password1
     username2: password2
@@ -21,6 +21,13 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  # res-tls:
+    #   enable: true
+    #   dest: www.example.com:443
+    #   password: restls-password
+    #   # restls-script: ""
+    #   # min-record-len: 0
+    #   # proxy: ""
   # jls-config: # JLS replaces standard TLS; unauthenticated connections fall back to dest
     #   enable: true
     #   users:
