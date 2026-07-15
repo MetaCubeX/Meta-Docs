@@ -49,7 +49,7 @@ listeners:
     #   # proxy: ""
     #   # rate-limit: 0 # fallback forwarding rate limit, in bit/s; 0 means unlimited
     ### NOTE: For anytls listener, if "allow-insecure" is not true, at least one of "certificate and private-key" or "jls-config" must be filled in ###
-  ### NOTE: For anytls listener, if "allow-insecure" is not true, "certificate and private-key" must be filled in ###
+    ### NOTE: For anytls listener, if "allow-insecure" is not true, at least one of "certificate and private-key" or "shadow-tls" or "res-tls" or "jls-config" must be filled in ###
   # allow-insecure: false # whether to allow disabling TLS encryption (NOTE: only used when upstreamed by nginx, caddy, etc.)
   padding-scheme: "" # https://github.com/anytls/anytls-go/blob/main/docs/protocol.md#cmdupdatepaddingscheme
 ```
