@@ -22,9 +22,12 @@ proxies:
     enable: true
     config: base64_encoded_config
     # query-server-name: xxx.com
+  shadow-tls-opts: 
+    version: 3 
+    password: shadow-tls-password
   jls-opts:
-       username: jls-user
-       password: jls-password
+    username: jls-user
+    password: jls-password
   tlsmirror-opts:
     primary-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
     explicit-nonce-ciphersuites: [
@@ -152,6 +155,14 @@ The ECH configuration, if empty, will be resolved via DNS; otherwise, it will be
 ### ech-opts.query-server-name
 
 Optional, if not empty, it is used to specify the domain name when resolving via DNS.
+
+## shadow-tls-opts
+
+Requires `tls: true`. Uses `sni` / `servername` from the general configuration as the ShadowTLS SNI.
+
+### shadow-tls-opts.version
+
+Supports `v1` / `v2` / `v3`. Defaults to `v2` if left empty.
 
 ## jls-opts
 
