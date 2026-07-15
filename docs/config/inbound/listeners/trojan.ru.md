@@ -27,6 +27,16 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  # shadow-tls:
+  #   enable: true
+  #   version: 3 # поддерживает v1/v2/v3
+  #   # password: shadow-tls-password # параметр конфигурации v2
+  #   users: # параметр конфигурации v3
+  #     - name: shadow-tls-user
+  #       password: shadow-tls-password
+  #   handshake:
+  #     dest: www.example.com:443
+  #     # proxy: ""
   # если заполнен reality-config, то включается reality (не может использоваться одновременно с certificate и private-key)
   # reality-config:
   #   dest: test.com:443
@@ -49,7 +59,7 @@ listeners:
   #   enabled: false
   #   method: aes-128-gcm # aes-128-gcm/aes-256-gcm/chacha20-ietf-poly1305
   #   password: "example"
-  ### Обратите внимание, что для троянских программ, если параметр "allow-insecure" не равен true, необходимо заполнить хотя бы одно из следующих полей: "certificate and private-key", "reality-config" или "ss-option". ###
+ ### ВНИМАНИЕ: Для слушателя trojan, если "allow-insecure" не равен true, необходимо заполнить как минимум одну из опций: "certificate" и "private-key" или "shadow-tls" или "jls-config" или "reality-config" или "ss-option" ###
   # allow-insecure: false # Разрешить ли отключение шифрования TLS (Примечание: только в случаях, когда nginx или caddy установлены предварительно)
   # mux-option:
   #   padding: true
