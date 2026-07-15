@@ -7,8 +7,7 @@ listeners:
   port: 10818
   listen: 0.0.0.0
   # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
-  # 未启用 "jls-config" 且 "allow-insecure" 不为 true 时，必须填写 "certificate" 和 "private-key"；启用 JLS 时不要填写
-  users:
+  # "shadow-tls"、"res-tls" 和 "jls-config" 均未启用且 "allow-insecure" 不为 true 时，必须填写 "certificate" 和 "private-key"；启用 ShadowTLS、ResTLS 或 JLS 时不要填写
     username1: password1
     username2: password2
   certificate: ./server.crt # 证书 PEM 格式，或者 证书的路径
@@ -23,6 +22,13 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  # res-tls:
+    #   enable: true
+    #   dest: www.example.com:443
+    #   password: restls-password
+    #   # restls-script: ""
+    #   # min-record-len: 0
+    #   # proxy: ""
   # jls-config: # JLS 替代普通 TLS；未认证连接回落到 dest
     #   enable: true
     #   users:
