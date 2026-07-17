@@ -56,7 +56,7 @@ proxies:
 可选，设置是否开启 0-RTT（零往返时延握手）。
 
 !!! "warning"
-    官方 server 的 0-RTT 路径可能在 JLS 认证完成前读取用户状态（已确认影响 v0.3.11）；使用官方 server 时必须在服务端关闭 zero-rtt
+    官方 server 的 0-RTT 路径可能在 JLS 认证完成前读取用户状态（已确认影响 v0.3.11）；使用官方 server 如果遇到不通或断联情况，请在服务端关闭 zero-rtt
 
 ## keep-alive-interval
 
