@@ -56,7 +56,7 @@ proxies:
 **Optional**, sets whether to enable QUIC 0-RTT (Zero Round Trip Time) handshake.
 
 !!! "warning"
-    The official server's 0-RTT path may read the user state before JLS authentication is completed (confirmed to affect v0.3.11); when using the official server, zero-rtt must be disabled on the server side.
+    The 0-RTT path of the official server may read the user state before JLS authentication is completed (confirmed to affect v0.3.11); if you encounter connection failures or disconnections when using the official server, please disable zero-rtt on the server side.
 
 ## keep-alive-interval
 
