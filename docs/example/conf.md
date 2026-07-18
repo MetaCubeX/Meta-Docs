@@ -569,6 +569,7 @@
         - RULE-SET,twitter_domain,Twitter
         - RULE-SET,youtube_domain,YouTube
         - RULE-SET,google_domain,Google
+        - RULE-SET,apple_domain,Apple
         - RULE-SET,telegram_domain,Telegram
         - RULE-SET,netflix_domain,NETFLIX
         - RULE-SET,bilibili_domain,哔哩哔哩
@@ -613,6 +614,9 @@
           google_domain:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.list"
+          apple_domain:
+            <<: *domain
+            url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.list"
           telegram_domain:
             <<: *domain
             url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.list"
