@@ -41,6 +41,19 @@ proxy-providers:
       proxy-name:
       - pattern: "IPLC-(.*?)倍"
         target: "iplc x $1"
+      # override-expr:
+      #   - '.name = "[provider1] " + .name'                    
+      #   - '.plugin-opts.mode = "tls"'                        
+      #   - '.alpn[] |= upcase'                                
+      #   - 'del(.skip-cert-verify)'                           
+      #   - '.name = (.name | trim | upcase)'                  
+      #   - '.name = "[\(.type)] \(.name):\(.port)"'           
+      #   - '(select(.port == 443) | .tls) = true'             
+      #   - '.tags |= (unique | sort)'                         
+      #   - '.names = [.servers[] | select(.enabled) | .name]' 
+      #   - '.servers |= map(select(.enabled))'                
+      #   - '.options |= with_entries(.key |= upcase)'         
+      #   - '. | with_entries(.key |= upcase)'                 
     filter: "(?i)港|hk|hongkong|hong kong"
     exclude-filter: "xxx"
     exclude-type: "ss|http"
@@ -51,56 +64,57 @@ proxy-providers:
         port: 443
         cipher: chacha20-ietf-poly1305
         password: "password"
+
 ```
 
-## Name
+## name
 
-Required, such as `provider1`, must be unique. It is advisable not to duplicate names with [policy groups](../proxy-groups/index.md#name).
+Required. For example, `provider1`. It must be unique and it is recommended not to duplicate names with [Proxy Groups](../proxy-groups/index.md#name).
 
-## Type
+## type
 
-Required, `provider` type, options are `http` / `file` / `inline`.
+Required. The type of the `provider`. Available options: `http` / `file` / `inline`.
 
-## URL
+## url
 
-If the type is `http`, this must be configured.
+Required if the `type` is set to `http`.
 
-## Path
+## path
 
-Optional, the file path, must be unique. If not provided, the MD5 of the URL will be used as the filename.
+Optional. The file path. It must be unique. If left empty, the MD5 hash of the URL will be used as the filename.
 
-For security reasons, this path is restricted to only allow locations within `HomeDir` (configured with the -d startup parameter). If you want to store it in other locations, please specify additional safe paths by setting the `SAFE_PATHS` environment variable. The syntax of this environment variable is the same as the PATH environment variable parsing rules of this operating system (that is, it is separated by semicolons in Windows and by colons in other systems).
+Due to security concerns, this path is restricted to the `HomeDir` (configured via the `-d` startup parameter) by default. If you wish to store it in another location, please specify additional safe paths by setting the `SAFE_PATHS` environment variable. The syntax of this environment variable follows the parsing rules of the host operating system's PATH variable (i.e., separated by semicolons on Windows, and by colons on other operating systems).
 
-## Interval
+## interval
 
-The update time for the `provider`, measured in seconds.
+The update interval for the `provider`, in seconds.
 
-## Proxy
+## proxy
 
-Download/update through the specified proxy.
+Downloads/updates through the specified proxy.
 
 ## size-limit
 
-The maximum size of downloadable files is restricted, with the default being 0, which means no size limit; the unit is bytes (`b`)
+Limits the maximum size of the downloaded file. Default is 0, which means no file size limit. The unit is bytes (`b`).
 
 ## age-secret-key
 
-If set, age-secret-key will attempt to decrypt an age armor-formatted configuration file using this secret.
+If configured, the core will attempt to decrypt the age armor-formatted configuration file using this secret key.
 
 Note:
 
-* For encrypted content, currently only the official ASCII "armor" format from [age-encryption.org/v1](https://age-encryption.org/v1) is supported.
-* For key formats, currently only the x25519 recipient type and the mlkem768-x25519 hybrid post-quantum recipient type from [age-encryption.org/v1](https://age-encryption.org/v1) are supported.
-* Currently, the core does not proactively send the public key to the server. Users need to manually set `X-Age-Public-Key` in the header or upload the public key through other means.
-* The core also supports loading encrypted configuration files using the command-line argument `-age-secret-key` or the environment variable `CLASH_AGE_SECRET_KEY`.
+* For encrypted content, only the official ASCII "armor" format of [age-encryption.org/v1](https://age-encryption.org/v1) is currently supported.
+* For the key format, only the x25519 recipient type of [age-encryption.org/v1](https://age-encryption.org/v1) and The mlkem768-x25519 hybrid post-quantum recipient type are currently supported.
+* Currently, the core will not actively send the public key to the server. Users need to manually set the `X-Age-Public-Key` in the header or upload the public key via other methods.
+* The core also supports loading encrypted configuration files via the `-age-secret-key` command-line parameter or the `CLASH_AGE_SECRET_KEY` environment variable.
 
 Utilities:
 
-* You can generate a valid x25519 key using `mihomo age keygen`.
-* You can generate a valid mlkem768-x25519 key using `mihomo age keygen-pq`.
-* You can export an age-public key from age-secret-key using `mihomo age convert <secret_key>`.
-* You can decrypts an encrypted file using `mihomo age decrypt <secret_key> <source_file> <target_file>` . `<source_file>` is set to - and reads from standard input; `<target_file>` is set to - and writes to standard output.
-* You can encrypt an unencrypted file using `mihomo age encrypt <public_key> <source_file> <target_file>`. `<source_file>` is set to - and reads from standard input; `<target_file>` is set to - and writes to standard output.
+* You can generate a compliant x25519 key via `mihomo age keygen`.
+* You can generate a compliant mlkem768-x25519 key via `mihomo age keygen-pq`.
+* You can export the age-public-key from an age-secret-key via `mihomo age convert <secret_key>`.
+* You can decrypt an encrypted file via `mihomo age decrypt <secret_key> <source_file> <target_file>`. When `<source_file>` is `-`, it will read from standard input; when `<target_file>` is `-`, it will write to standard output.
+* You can encrypt an unencrypted file via `mihomo age encrypt <public_key> <source_file> <target_file>`. When `<source_file>` is `-`, it will read from standard input; when `<target_file>` is `-`, it will write to standard output.
 
 Reference Implementations:
 
@@ -108,21 +122,21 @@ Reference Implementations:
 * Rust: [str4d/rage](https://github.com/str4d/rage)
 * Typescript: [FiloSottile/typage](https://github.com/FiloSottile/typage)
 
-## Header
+## header
 
 Custom HTTP request headers.
 
-## Health Check
+## health-check
 
-Health check (latency testing).
+Health Check (Latency Test)
 
 ### health-check.enable
 
-Whether to enable, optional `true/false`.
+Specifies whether to enable it. Available options: `true/false`.
 
 ### health-check.url
 
-Health check address, it is recommended to use one of the following addresses:
+The health check URL. It is recommended to use one of the following addresses:
 
 === "Cloudflare"
     ```yaml
@@ -133,40 +147,40 @@ Health check address, it is recommended to use one of the following addresses:
     ```yaml
     https://www.gstatic.com/generate_204
     ```
-
+    
 ### health-check.interval
 
-Health check interval, measured in seconds.
+The interval time for health checks, in seconds.
 
 ### health-check.timeout
 
-Health check timeout, measured in milliseconds.
+The timeout duration for health checks, in milliseconds.
 
 ### health-check.lazy
 
-Lazy state, defaults to `true`, no testing is performed when this provider node is not in use.
+Lazy state. Default is `true`. When the nodes in this provider are not in use, health checks will not be performed.
 
 ### health-check.expected-status
 
-Refer to [expected status](../proxy-groups/index.md#expected-status).
+See [Expected Status](../proxy-groups/index.md#expected-status).
 
-## Override
+## override
 
-Override node content, the following fields are supported.
+Overrides the configuration of nodes when they are loaded. Supported fields are listed below:
 
 ### override.additional-prefix
 
-Add a fixed prefix to the node name.
+Adds a fixed prefix to the node names.
 
 ### override.additional-suffix
 
-Add a fixed suffix to the node name.
+Adds a fixed suffix to the node names.
 
 ### override.proxy-name
 
-Replace the content of the node name, supporting regular expressions, where pattern is the replacement content and target is the replacement target.
+Replaces content in node names, supporting regular expressions. `pattern` represents the content to be replaced, and `target` represents the replacement target.
 
-### override.Configuration_items
+### override.Other Configurations
 
 Refer to common fields [tfo](../proxies/index.md#tfo)
 
@@ -190,6 +204,26 @@ Refer to common fields [routing-mark](../proxies/index.md#routing-mark).
 
 Refer to common fields [ip-version](../proxies/index.md#ip-version).
 
+## override.override-expr
+
+This is a `yq v4` style subset for expression-based configuration overrides. The array items are executed sequentially and take effect after the fixed-field overrides mentioned above (such as `udp: true`, etc.).
+
+!!! warning "Limitations & Notes"
+    * Each item must ultimately produce exactly one mapping. Uncollected multiple results and `del(.)` are not supported.
+    * Parentheses are mandatory when using pipelines (`|`) or `and`/`or` on the right side of an assignment.
+    * `from_entries` only accepts an entries array with string keys.
+    * `sort` only supports arrays of scalars. `any`/`all` only support their parameterless forms.
+    * `==`/`!=` compare the scalar textual value as per `yq` rules, rather than performing structural comparisons on arrays or mappings.
+    * `<`, `<=`, `>`, `>=` only support numbers, strings, and `null`. Only `false` and `null` are treated as falsy values.
+    * Standard function arguments must not yield multiple results; however, functions that receive expressions (such as `map`/`filter`) allow their arguments to yield result streams.
+    * Function arguments can be separated by commas or semicolons.
+    * Evaluation follows value semantics. Out-of-bounds reads do not extend the source array, and `flatten`/`map_values` on the right side do not implicitly modify the source path.
+    * Use `|=` when you need to modify the source path. If there is no result on the right side, the target retains its original value instead of automatically creating `null`.
+    * Mapping streams, `keys`, and entries transformations are sorted by key, as `map[string]any` does not preserve the original YAML key order.
+    * Unsupported language features: Variables (`as/$x`), `reduce`, dynamic paths (`.[$key]`), recursive descent (`..`).
+    * Unsupported external features: Multi-documents, file/environment access, YAML tag/style/comment handling, `yq` CLI arguments.
+    * Any `yq` syntax, operators, or functions not explicitly listed above are also unsupported. Conditional branching can be achieved using `select` followed by multiple chained assignments.
+    
 ## Filter
 
 Filter nodes that meet keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md), multiple regular expressions can be separated by `.
@@ -198,14 +232,14 @@ Filter nodes that meet keywords or [regular expressions](https://github.com/ziis
 
 Exclude nodes that meet keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md), multiple regular expressions can be separated by `.
 
-## Exclude Type
+## exclude-type
 
-Regular expressions are not supported; use `|` to separate and exclude based on node type.
+Does not support regular expressions. Separated by `|`. Excludes nodes based on their proxy type.
 
-The `exclude-type` of the provider uses the `type` from the configuration file for exclusion
+The `exclude-type` of the provider uses the `type` field defined within the configuration file to perform the exclusion.
 
 ## payload
 
-Content, only effective when `type` is `inline`
+Content. Only takes effect when `type` is set to `inline`.
 
-When the `http` or `file` parsing fails, the payload can also be used as a backup proxy.
+When `http` or `file` parsing fails, the payload can also be used as a fallback backup proxy list.
