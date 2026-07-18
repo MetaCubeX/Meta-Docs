@@ -74,7 +74,7 @@ proxies:
 
 ## tls
 
-Включить tls, применяется только к протоколам, использующим `tls`, протокол `trojan` принудительно включает
+Включает TLS. Применяется только к протоколам, использующим `tls`; для протокола `trojan` TLS включается принудительно.
 
 ## sni/servername
 
@@ -147,8 +147,6 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 Поддержка обмена ключами X25519-MLKEM768.
 
 ## ech-opts
-
-Настройки ECH (Encrypted Client Hello), если `enable` установлено в `true`, то ECH будет включен.
 
 ### ech-opts.enable
 

@@ -119,7 +119,7 @@
       udp: true
       tls: true
       network: xhttp
-      alpn: [h2] # By default, only h2 mode is supported. To enable h3 mode, you need to set alpn: [h3]; to enable HTTP/1.1 mode, you need to set alpn: [http/1.1].
+      alpn: [h2] # По умолчанию поддерживается только h2. Для h3 укажите alpn: [h3], для HTTP/1.1 — alpn: [http/1.1].
       # ech-opts: ...
       # reality-opts: ...
       # skip-cert-verify: false
@@ -133,7 +133,7 @@
       xhttp-opts:
         path: "/"
         host: xxx.com
-        # mode: "stream-one" # Available: "stream-one", "stream-up" or "packet-up"
+        # mode: "stream-one" # Возможные значения: "stream-one", "stream-up" или "packet-up"
         # headers:
         #   X-Forwarded-For: ""
         # no-grpc-header: false
@@ -141,18 +141,18 @@
         # x-padding-obfs-mode: false
         # x-padding-key: x_padding
         # x-padding-header: Referer
-        # x-padding-placement: queryInHeader # Available: queryInHeader, cookie, header, query
-        # x-padding-method: repeat-x # Available: repeat-x, tokenish
-        # uplink-http-method: POST # Available: POST, PUT, PATCH, DELETE
-        # session-placement: path # Available: path, query, cookie, header
+        # x-padding-placement: queryInHeader # Возможные значения: queryInHeader, cookie, header, query
+        # x-padding-method: repeat-x # Возможные значения: repeat-x, tokenish
+        # uplink-http-method: POST # Возможные значения: POST, PUT, PATCH, DELETE
+        # session-placement: path # Возможные значения: path, query, cookie, header
         # session-key: ""
-        # session-table: "" # Available: "", "uuid", "ALPHABET", "Alphabet", "BASE36", "Base62", "HEX", "alphabet", "base36", "hex", "number"
+        # session-table: "" # Возможные значения: "", "uuid", "ALPHABET", "Alphabet", "BASE36", "Base62", "HEX", "alphabet", "base36", "hex", "number"
         # session-length: "16-32"
-        # seq-placement: path # Available: path, query, cookie, header
+        # seq-placement: path # Возможные значения: path, query, cookie, header
         # seq-key: ""
-        # uplink-data-placement: body # Available: body, cookie, header
+        # uplink-data-placement: body # Возможные значения: body, cookie, header
         # uplink-data-key: ""
-        # uplink-chunk-size: 0 # only applicable when uplink-data-placement is not body
+        # uplink-chunk-size: 0 # Применяется только когда uplink-data-placement не равно body
         # sc-max-each-post-bytes: 1000000
         # sc-min-posts-interval-ms: 30
         # reuse-settings: # aka XMUX
@@ -277,8 +277,6 @@ gRPC UserAgent
 
 ### ws-opts.early-data-header-name
 
-Имя заголовка для Early Data
-
 ### ws-opts.v2ray-http-upgrade
 
 Использовать HTTP upgrade
@@ -368,7 +366,7 @@ URL сервера Mekya.
 По умолчанию поддерживается только режим h2. Чтобы включить режим h3, необходимо установить параметр alpn: [h3]; чтобы включить режим HTTP/1.1, необходимо установить параметр alpn: [http/1.1].
 
 !!! note
-    VLESS поддерживает только транспортный уровень xhttp; пожалуйста, не используйте его с другими протоколами.
+    Транспортный уровень xhttp поддерживается только VLESS. Не используйте его с другими протоколами.
 
 ### xhttp-opts.path
 
@@ -396,11 +394,11 @@ URL сервера Mekya.
 
 ### xhttp-opts.x-padding-obfs-mode
 
-Включает обфускацию отступов. По умолчанию — false для обратной совместимости.
+Включает обфускацию заполнения. По умолчанию — false для обратной совместимости.
 
 ### xhttp-opts.x-padding-key
 
-Ключ, используемый для хранения значений отступов. Его значение зависит от `x-padding-placement`:
+Ключ, используемый для хранения значений заполнения. Его назначение зависит от `x-padding-placement`:
 
 * Имя параметра запроса в URL (если placement — `queryInHeader`)
 * Имя cookie
@@ -413,7 +411,7 @@ URL сервера Mekya.
 
 ### xhttp-opts.x-padding-placement
 
-Определяет место размещения значений отступов. Возможные значения: `queryInHeader`, `cookie`, `header`, `query`. Действует только при значении `x-padding-obfs-mode` равном true.
+Определяет место размещения значений заполнения. Возможные значения: `queryInHeader`, `cookie`, `header`, `query`. Действует только при значении `x-padding-obfs-mode` равном true.
 
 ### xhttp-opts.x-padding-method
 
@@ -501,7 +499,7 @@ URL сервера Mekya.
 
 ### xhttp-opts.reuse-settings.h-max-request-times
 
-Максимальное количество раз, когда может быть передано одно соединение. Этот параметр неточен, и запросы GET в Golang имеют автоматические повторные попытки, поэтому заполнять его не рекомендуется.
+Максимальное суммарное количество запросов, которое может обслужить одно соединение. Этот счетчик неточен, а GET-запросы в Golang автоматически повторяются, поэтому указывать этот параметр не рекомендуется.
 
 ### xhttp-opts.reuse-settings.h-max-reusable-secs
 
@@ -515,4 +513,4 @@ URL сервера Mekya.
 
 Настройки разделения загрузки/выгрузки
 
-Примечание: Этот параметр переопределяет исходную конфигурацию. Если какой-либо параметр не указан, будут использоваться параметры загрузки. (Поддерживаются только параметры, указанные в экземпляре; параметры, не указанные в списке, не будут переопределены.)
+Примечание: Этот параметр переопределяет исходную конфигурацию. Если какой-либо параметр не указан, будет использован соответствующий параметр восходящего канала. Поддерживаются только параметры, указанные в примере; параметры вне списка не переопределяются.

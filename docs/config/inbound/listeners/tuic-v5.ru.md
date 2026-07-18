@@ -23,7 +23,7 @@ listeners:
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
   congestion-controller: bbr
-  #  bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  #  bbr-profile: "" # Возможные значения: "standard", "conservative", "aggressive". По умолчанию: "standard"
   max-idle-time: 15000
   authentication-timeout: 1000
   alpn:

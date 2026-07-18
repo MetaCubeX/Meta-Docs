@@ -16,7 +16,7 @@ listeners:
   obfs: salamander
   obfs-password: password
   masquerade: ""
-  #  bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  #  bbr-profile: "" # Возможные значения: "standard", "conservative", "aggressive". По умолчанию: "standard"
   #  realm-opts:
   #    enable: true # Необходимо включить вручную.
   #    server-url: https://realm.hy2.io
@@ -66,7 +66,7 @@ listeners:
 
 ### up/down
 
-Настройки скорости Hysteria, по умолчанию в Mbps, подробнее см. [документацию Hysteria](https://v2.hysteria.network/zh/docs/advanced/Full-Server-Config/#_4)
+Настройки скорости Hysteria, по умолчанию в Mbps, подробнее см. [документацию Hysteria](https://v2.hysteria.network/docs/advanced/Full-Server-Config/#bandwidth)
 
 ### ignore-client-bandwidth
 
@@ -89,7 +89,7 @@ listeners:
 
 Маскировка трафика под HTTP/3, поддерживает только `file` и `http/https`, если пусто, всегда возвращает 404 Not Found
 
-Подробнее см. [документацию Hysteria](https://v2.hysteria.network/zh/docs/advanced/Full-Server-Config/#masquerade)
+Подробнее см. [документацию Hysteria](https://v2.hysteria.network/docs/advanced/Full-Server-Config/#masquerade)
 
 |              | Пример                   | Описание       |
 |--------------|-------------------------|----------------|

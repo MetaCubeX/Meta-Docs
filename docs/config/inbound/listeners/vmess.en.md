@@ -1,6 +1,6 @@
 # VMESS
 
-```yaml
+```{.yaml linenums="1"}
 listeners:
 - name: vmess-in-1
   type: vmess
@@ -57,16 +57,6 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
-  # shadow-tls:
-  #   enable: true
-  #   version: 3 # supports v1/v2/v3
-  #   # password: shadow-tls-password # v2 configuration item
-  #   users: # v3 configuration item
-  #     - name: shadow-tls-user
-  #       password: shadow-tls-password
-  #   handshake:
-  #     dest: www.example.com:443
-  #     # proxy: ""
   # jls-config: # JLS replaces standard TLS; unauthenticated connections fall back to dest
   #   enable: true
   #   users:
@@ -77,6 +67,16 @@ listeners:
   #   # alpn: [h2, http/1.1]
   #   # proxy: ""
   #   # rate-limit: 0 # fallback forwarding rate limit in bit/s; 0 means unlimited
+  # shadow-tls:
+  #   enable: true
+  #   version: 3 # supports v1/v2/v3
+  #   # password: shadow-tls-password # v2 configuration item
+  #   users: # v3 configuration item
+  #     - name: shadow-tls-user
+  #       password: shadow-tls-password
+  #   handshake:
+  #     dest: www.example.com:443
+  #     # proxy: ""
   # res-tls:
   #   enable: true
   #   dest: www.example.com:443

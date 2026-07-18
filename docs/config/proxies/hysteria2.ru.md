@@ -13,7 +13,7 @@ proxies:
   password: yourpassword
   up: "30 Mbps"
   down: "200 Mbps"
-  # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  # bbr-profile: "" # Возможные значения: "standard", "conservative", "aggressive". По умолчанию: "standard"
   obfs: salamander # Тип обфускатора трафика QUIC. Можно установить значение `salamander` или `gecko`. Если оставить пустым, обфускация будет отключена.
   obfs-password: yourpassword
   # obfs-min-packet-size: 512
@@ -21,7 +21,7 @@ proxies:
   sni: server.com
   skip-cert-verify: false
   name-cert-verify: example.com
-  fingerprint: xxxx
+  fingerprint: xxxx # Настройка отпечатка обеспечивает SSL pinning. Получить его можно командой: openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
   alpn:
     - h3
   # realm-opts:
@@ -68,7 +68,11 @@ proxies:
 
 ## obfs
 
-Тип маскировки трафика QUIC, можно установить только `salamander`, если пусто, то отключено
+Тип обфускатора трафика QUIC. Можно установить `salamander` или `gecko`; если значение пустое, обфускация отключена.
+
+## obfs-password
+
+Пароль для обфускатора трафика QUIC.
 
 ## obfs-min-packet-size
 
@@ -77,9 +81,5 @@ proxies:
 ## obfs-max-packet-size
 
 Максимальный размер сетевого пакета (в байтах). Доступно только для `gecko`.
-
-## obfs-password
-
-Пароль для обфускатора трафика QUIC.
 
 ## realm-opts

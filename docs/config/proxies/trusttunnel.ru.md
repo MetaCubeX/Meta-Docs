@@ -1,6 +1,6 @@
 # TrustTunnel
 
-```yaml
+```{.yaml linenums="1"}
 proxies:
 - name: trusttunnel
   type: trusttunnel

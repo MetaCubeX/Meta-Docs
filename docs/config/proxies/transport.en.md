@@ -277,8 +277,6 @@ Early Data first-packet length threshold.
 
 ### ws-opts.early-data-header-name
 
-Early Data header name.
-
 ### ws-opts.v2ray-http-upgrade
 
 Use HTTP upgrade.

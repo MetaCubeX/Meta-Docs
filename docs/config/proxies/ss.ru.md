@@ -160,30 +160,30 @@ proxies:
     ```{.yaml linenums="1"}
       plugin: kcptun
       plugin-opts:
-        key: it's a secrect # pre-shared secret between client and server
+        key: it's a secrect # предварительно согласованный секрет клиента и сервера
         crypt: aes # aes, aes-128, aes-128-gcm, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none, null
-        mode: fast # profiles: fast3, fast2, fast, normal, manual
-        conn: 1 # set num of UDP connections to server
-        autoexpire: 0 # set auto expiration time(in seconds) for a single UDP connection, 0 to disable
-        scavengettl: 600 # set how long an expired connection can live (in seconds)
-        mtu: 1350 # set maximum transmission unit for UDP packets
-        ratelimit: 0 # set maximum outgoing speed (in bytes per second) for a single KCP connection, 0 to disable. Also known as packet pacing
-        sndwnd: 128 # set send window size(num of packets)
-        rcvwnd: 512 # set receive window size(num of packets)
-        datashard: 10 # set reed-solomon erasure coding - datashard
-        parityshard: 3 # set reed-solomon erasure coding - parityshard
-        dscp: 0 # set DSCP(6bit)
-        nocomp: false # disable compression
-        acknodelay: false # flush ack immediately when a packet is received
+        mode: fast # профили: fast3, fast2, fast, normal, manual
+        conn: 1 # количество UDP-соединений с сервером
+        autoexpire: 0 # время автоматического истечения одного UDP-соединения, в секундах; 0 отключает
+        scavengettl: 600 # время жизни истекшего соединения, в секундах
+        mtu: 1350 # максимальная единица передачи для UDP-пакетов
+        ratelimit: 0 # максимальная исходящая скорость одного KCP-соединения, в байтах/с; 0 отключает. Также называется packet pacing
+        sndwnd: 128 # размер окна отправки, в пакетах
+        rcvwnd: 512 # размер окна приема, в пакетах
+        datashard: 10 # число блоков данных для кодирования Рида-Соломона
+        parityshard: 3 # число блоков четности для кодирования Рида-Соломона
+        dscp: 0 # значение DSCP, 6 бит
+        nocomp: false # отключить сжатие
+        acknodelay: false # немедленно отправлять ACK при получении пакета
         nodelay: 0
         interval: 50
         resend: 0
-        sockbuf: 4194304 # per-socket buffer in bytes
-        smuxver: 1 # specify smux version, available 1,2
-        smuxbuf: 4194304 # the overall de-mux buffer in bytes
-        framesize: 8192 # smux max frame size
-        streambuf: 2097152 # per stream receive buffer in bytes, smux v2+
-        keepalive: 10 # seconds between heartbeats
+        sockbuf: 4194304 # буфер одного сокета, в байтах
+        smuxver: 1 # версия smux, возможные значения: 1, 2
+        smuxbuf: 4194304 # общий буфер демультиплексирования, в байтах
+        framesize: 8192 # максимальный размер кадра smux
+        streambuf: 2097152 # буфер приема одного потока, в байтах; smux v2+
+        keepalive: 10 # интервал между heartbeat-пакетами, в секундах
     ```
 
 === "jls"

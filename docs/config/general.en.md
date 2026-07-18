@@ -84,7 +84,7 @@ log-level: info
 
 Whether to allow the kernel to accept IPv6 traffic.
 
-default is `true`.
+Available values: `true/false`. Default: `true`.
 
 ```{.yaml linenums="1"}
 ipv6: true
@@ -288,7 +288,7 @@ tls:
 
 ## GEO Data Mode
 
-Change the geoip usage file, `mmdb` or `dat`,`true` is `dat`, with a default value of `false`.
+Changes the file used for GeoIP data between `mmdb` and `dat`. Available values: `true/false`; `true` selects `dat`. Default: `false`.
 
 ```{.yaml linenums="1"}
 geodata-mode: true

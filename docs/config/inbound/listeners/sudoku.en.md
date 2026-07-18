@@ -18,8 +18,8 @@ listeners:
   enable-pure-downlink: false # false uses bandwidth-optimized downlink; true uses pure Sudoku downlink
   httpmask:
     disable: false # true disables all HTTP masking and tunneling
-    mode: legacy # legacy (default), stream, poll, auto, or ws
-    # path-root: "" # First-level HTTP tunnel path prefix; both sides must match
+    mode: legacy # legacy (default), stream (split-stream), poll, auto (stream first, then poll), or ws (WebSocket tunnel)
+    # path-root: "" # First-level HTTP tunnel path prefix; both sides must match. For example, "aabbcc" or "/aabbcc/" maps to /aabbcc/session, /aabbcc/stream, /aabbcc/api/v1/upload, and /aabbcc/ws
   # Optionally pass rejected HTTPMask traffic to another service sharing the same port:
   # fallback: "127.0.0.1:80"
   # Legacy-compatible forms of the httpmask fields:

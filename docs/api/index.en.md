@@ -70,7 +70,7 @@ This request includes the header `'Authorization: Bearer ${secret}'`, where:
 ### `/version`
 
 !!! info ""
-    Retrieve the Clash version
+    Retrieve the mihomo version
 
 - Request method: `GET`
 - Response fields:

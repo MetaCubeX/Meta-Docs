@@ -18,7 +18,7 @@ proxy-groups:
 
 Refer to [Common Fields](./index.md).
 
-## Strategy
+## strategy
 
 Load Balancing Strategies
 

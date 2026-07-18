@@ -233,11 +233,11 @@ Supported functions include `length`, `keys`, `has`, `contains`, `select`, `reve
     * Unsupported external features: Multi-documents, file/environment access, YAML tag/style/comment handling, `yq` CLI arguments.
     * Any `yq` syntax, operators, or functions not explicitly listed above are also unsupported. Conditional branching can be achieved using `select` followed by multiple chained assignments.
     
-## Filter
+## filter
 
 Filters nodes that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Use `|` to separate multiple regular expressions.
 
-## Exclude Filter
+## exclude-filter
 
 Excludes nodes that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Use `|` to separate multiple regular expressions.
 

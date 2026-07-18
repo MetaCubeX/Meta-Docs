@@ -30,7 +30,7 @@ listeners:
 
 ## Protocol Configuration
 
-### UDP
+### udp
 
 Whether to listen for UDP
 

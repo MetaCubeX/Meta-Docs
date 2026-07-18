@@ -145,7 +145,7 @@ Excludes nodes that match keywords or [regular expressions](https://github.com/z
 
 ## exclude-type
 
-Regular expressions are not supported. Split by `|`, exclude based on node type, only excluding [ingress outbound proxies](#proxies)
+Regular expressions are not supported. Split by `|` and exclude by node type. This applies only to [included outbound proxies](#proxies).
 
 For supported types, please refer to [Adapter Type](https://github.com/MetaCubeX/mihomo/blob/fbead56ec97ae93f904f4476df1741af718c9c2a/constant/adapters.go#L18-L45), ignore case sensitivity
 

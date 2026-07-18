@@ -137,7 +137,7 @@
             type: select
             proxies: [Default,Hong Kong,Taiwan,Japan,Singapore,United States,Other Regions,All Proxies,Auto,Direct]
 
-          # Region groups
+          # Separator; region groups are below
           - name: Hong Kong
             type: select
             include-all: true
@@ -343,7 +343,7 @@
             type: select
             proxies: [Default,Hong Kong,Taiwan,Japan,Singapore,United States,Other Regions,All Proxies,Auto,Direct]
 
-          # Region groups
+          # Separator; region groups are below
           - name: Hong Kong
             type: select
             include-all: true
@@ -545,7 +545,7 @@
         - {name: Spotify, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Spotify.png"}
         - {name: China, type: select, proxies: [Direct, Default, Hong Kong, Hong Kong Auto, Taiwan, Taiwan Auto, Japan, Japan Auto, Singapore, Singapore Auto, United States, United States Auto, Other Regions, All Proxies, Auto], icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/China_Map.png"}
         - {name: Final, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Final.png"}
-          # Region groups
+          # Separator; region groups are below
         - {name: Hong Kong, type: select, include-all: true, filter: "(?i)(?!直连)(港|hk|hongkong|hong kong)", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/HK.png"}
         - {name: Taiwan, type: select, include-all: true, filter: "(?i)(?!直连)(台|tw|taiwan)", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/TW.png"}
         - {name: Japan, type: select, include-all: true, filter: "(?i)(?!直连)(日|jp|japan)", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/JP.png"}

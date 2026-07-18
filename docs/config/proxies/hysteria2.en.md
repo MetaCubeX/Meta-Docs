@@ -21,7 +21,7 @@ proxies:
   sni: server.com
   skip-cert-verify: false
   name-cert-verify: example.com
-  fingerprint: xxxx
+  fingerprint: xxxx # Configuring the fingerprint provides SSL pinning. Obtain it with: openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
   alpn:
     - h3
   # realm-opts:
@@ -37,6 +37,11 @@ proxies:
   #   # skip-cert-verify： false
   #   # name-cert-verify: example.com
   #   # ......
+  ###Special quic-go options. Do not modify them unless you know what you are doing.###
+  # initial-stream-receive-window： 8388608
+  # max-stream-receive-window： 8388608
+  # initial-connection-receive-window： 20971520
+  # max-connection-receive-window： 20971520
 ```
 
 [Common Fields](./index.md)
@@ -47,15 +52,15 @@ proxies:
 
 Configuring this enables port jumping, ignoring `port`. Refer to [Port Range](../../handbook/syntax.md#port-ranges) for format.
 
-## password
-
-Authentication password.
-
 ## hop-interval
 
 Port hop interval, in seconds, default is 30.
 
-Entering "15-30" will randomly select one of the values ​​as the switching interval each time. Only a range is supported (commas are not allowed).
+Entering "15-30" will randomly select one value as the switching interval each time. Only one range is supported (commas are not allowed).
+
+## password
+
+Authentication password.
 
 ## up/down
 

@@ -24,11 +24,11 @@ proxies:
   # reuse: false
   # client-fingerprint: chrome
   obfs-opts:
-    mode: shadow-tls
-    host: bing.com
-    password: "shadow_tls_password"
-    version: 2
-    alpn: ["h2"]
+     mode: shadow-tls
+     host: bing.com
+     password: "shadow_tls_password"
+     version: 2
+     alpn: ["h2"]
 
 - name: "snell-restls"
   type: snell
@@ -93,7 +93,7 @@ The ShadowTLS password. Required only when `shadow-tls` is used.
 
 ### obfs-opts.version
 
-The ShadowTLS version. Supported values are v1/2/3 Required only when `shadow-tls` is used.
+The ShadowTLS version. Supported values are v1/2/3. Required only when `shadow-tls` is used.
 
 ### obfs-opts.alpn
 

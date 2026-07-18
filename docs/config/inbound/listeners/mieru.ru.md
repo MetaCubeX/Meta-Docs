@@ -17,4 +17,4 @@ listeners:
   # user-hint-is-mandatory: false
 ```
 
-[Общие поля](./index.ru.md)
+[Общие поля](./index.md)

@@ -19,7 +19,7 @@ proxies:
   # remote-dns-resolve: true # Принудительное удаленное DNS-разрешение, значение по умолчанию — false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # Работает только при remote-dns-resolve: true
   # congestion-controller: bbr # По умолчанию отключено
-  # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  # bbr-profile: "" # Возможные значения: "standard", "conservative", "aggressive". По умолчанию: "standard"
   # handshake-timeout: 30
 
 # masque-h3-l4proxy

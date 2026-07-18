@@ -18,8 +18,8 @@ listeners:
   enable-pure-downlink: false # false = оптимизированный по пропускной способности режим; true = чистый нисходящий канал Sudoku
   httpmask:
     disable: false # true отключает всю HTTP-маскировку и туннелирование
-    mode: legacy # legacy (по умолчанию), stream, poll, auto, ws
-    # path-root: "" # Префикс пути HTTP-туннеля должен совпадать на обеих сторонах
+    mode: legacy # legacy (по умолчанию), stream (split-stream), poll, auto (сначала stream, затем poll), ws (туннель WebSocket)
+    # path-root: "" # Префикс пути первого уровня HTTP-туннеля должен совпадать на обеих сторонах. Например, "aabbcc" или "/aabbcc/" соответствует /aabbcc/session, /aabbcc/stream, /aabbcc/api/v1/upload и /aabbcc/ws
   # При отклонении HTTPMask исходные данные можно передать другому сервису на том же порту:
   # fallback: "127.0.0.1:80"
   # Совместимые варианты записи параметров объекта httpmask:
@@ -35,4 +35,4 @@ listeners:
 
 ```
 
-[Общие поля](./index.ru.md)
+[Общие поля](./index.md)
