@@ -40,6 +40,8 @@ proxies:
     # handshake-timeout: 30
     # dev: tun
     # cipher: AES-128-GCM
+    # data-ciphers: [AES-256-GCM, AES-128-GCM]
+    # data-ciphers-fallback: AES-128-CBC
     # auth: SHA256
     # comp-lzo: "no"
     udp: true
@@ -117,6 +119,14 @@ proxies:
 ## cipher
 
 可选，加密方式，支持 `AES-128-GCM` / `AES-256-GCM`/ `AES-128-CBC` / `AES-256-CBC` /`CHACHA20-POLY1305`默认 `AES-128-GCM`， `AES-CBC` 会按 `AES-128-CBC` 处理。
+
+## data-ciphers
+
+可选，数据通道 cipher 协商列表，发送 IV_CIPHERS 给服务端；服务端 push 的 cipher 列表与本地列表取交集，取第一个匹配项。
+
+## data-ciphers-fallback
+
+可选，协商失败时的回退 cipher（对应 --data-ciphers-fallback）
 
 ## auth
 

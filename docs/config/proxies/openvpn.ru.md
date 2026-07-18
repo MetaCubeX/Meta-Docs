@@ -40,6 +40,8 @@ proxies:
     # handshake-timeout: 30
     # dev: tun
     # cipher: AES-128-GCM
+    # data-ciphers: [AES-256-GCM, AES-128-GCM]
+    # data-ciphers-fallback: AES-128-CBC
     # auth: SHA256
     # comp-lzo: "no"
     udp: true
@@ -117,6 +119,14 @@ proxies:
 ## cipher
 
 Опционально, метод шифрования, поддерживаются `AES-128-GCM` / `AES-256-GCM` / `AES-128-CBC` / `AES-256-CBC` / `CHACHA20-POLY1305`, по умолчанию `AES-128-GCM`. Значение `AES-CBC` будет обрабатываться как `AES-128-CBC`.
+
+## data-ciphers
+
+Необязательно, список согласования шифров (cipher) для канала данных, отправляет IV_CIPHERS серверу; список шифров, переданный (push) сервером, пересекается с локальным списком, и выбирается первое совпадение.
+
+## data-ciphers-fallback
+
+Необязательно, резервный (fallback) шифр в случае сбоя согласования (соответствует --data-ciphers-fallback)
 
 ## auth
 
