@@ -251,6 +251,10 @@ This option does not conflict with `prefer-h3`. After filling it in, it forces t
 
 Skip TLS certificate verification
 
+### name-cert-verify
+
+Only modifies the certificate's DNSName verification target, without altering the SNI.
+
 ### ecs
 
 Specify the subnet address for DNS queries
