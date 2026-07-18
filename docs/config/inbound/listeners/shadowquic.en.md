@@ -115,11 +115,11 @@ Maximum UDP datagram frame size.
 
 ## recv-window-conn
 
-Connection-level receive window. `0` uses the default value.
+Stream-level receive window. `0` uses the internal default value.
 
 ## recv-window
 
-Stream-level receive window. `0` uses the default value.
+Connection-level receive window. `0` uses the internal default value.
 
 ## disable-mtu-discovery
 

@@ -16,7 +16,7 @@ socks-port: 7891
 
 ## 混合端口
 
-!!! node
+!!! note
     混合端口是一个特殊的端口，它同时支持 HTTP(S) 和 SOCKS5 协议。您可以使用任何支持 HTTP 或 SOCKS 代理的程序连接到这个端口
 
 ```{.yaml linenums="1"}

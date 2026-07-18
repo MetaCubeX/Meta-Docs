@@ -115,11 +115,11 @@ BBR 激进程度，可选值为 `standard` / `conservative` / `aggressive`，默
 
 ## recv-window-conn
 
-连接级接收窗口大小，`0` 表示使用默认值。
+流级接收窗口大小，`0` 表示使用内部默认值。
 
 ## recv-window
 
-流级接收窗口大小，`0` 表示使用默认值。
+连接级接收窗口大小，`0` 表示使用内部默认值。
 
 ## disable-mtu-discovery
 

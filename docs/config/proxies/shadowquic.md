@@ -62,7 +62,7 @@ proxies:
 
 可选，设置是否开启 0-RTT（零往返时延握手）。
 
-!!! "warning"
+!!! warning
     官方 server 的 0-RTT 路径可能在 JLS 认证完成前读取用户状态（已确认影响 v0.3.11）；使用官方 server 如果遇到不通或断联情况，请在服务端关闭 zero-rtt
 
 ## keep-alive-interval
@@ -75,11 +75,11 @@ proxies:
 
 ## up
 
-可选，设置客户端上传速度，单位支持 Mbps。填入此项将启用 Brutal 拥塞控制算法；需要通信两端均为 mihomo 且运行 ShadowQUIC
+可选，设置客户端上传速度。填写后将通过 mihomo 私有扩展协商 Brutal；对端不支持时回退到 `congestion-controller`
 
 ## down
 
-可选，设置客户端请求的下载速度，单位支持 Mbps，受接收端上传速度上限限制。填入此项将启用 Brutal 拥塞控制算法；需要通信两端均为 mihomo 且运行 ShadowQUIC
+可选，设置客户端请求的下载速度，受 Listener 的 `up` 限制。填写后将通过 mihomo 私有扩展协商 Brutal；对端不支持时回退到 `congestion-controller`
 
 ## cwnd
 
@@ -99,11 +99,11 @@ proxies:
 
 ## recv-window-conn
 
-可选，设置连接级别的接收窗口大小，如果设为 `0` 则使用系统默认值
+可选，设置单个流级别的接收窗口大小，如果设为 `0` 则使用内部默认值
 
 ## recv-window
 
-可选，设置单个流级别的接收窗口大小，如果设为 `0` 则使用系统默认值
+可选，设置连接级别的接收窗口大小，如果设为 `0` 则使用内部默认值
 
 ## disable-mtu-discovery
 

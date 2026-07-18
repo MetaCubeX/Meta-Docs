@@ -62,7 +62,7 @@ proxies:
 
 **Optional**, sets whether to enable QUIC 0-RTT (Zero Round Trip Time) handshake.
 
-!!! "warning"
+!!! warning
     The 0-RTT path of the official server may read the user state before JLS authentication is completed (confirmed to affect v0.3.11); if you encounter connection failures or disconnections when using the official server, please disable zero-rtt on the server side.
 
 ## keep-alive-interval
@@ -75,11 +75,11 @@ proxies:
 
 ## up
 
-**Optional**, sets the client upload speed, supports `Mbps`. Specifying this enables the Brutal congestion control algorithm; requires mihomo ShadowQUIC on both ends.
+**Optional**, sets the client upload speed and enables Brutal negotiation through a mihomo private extension. Falls back to `congestion-controller` when unsupported.
 
 ## down
 
-**Optional**, sets the requested client download speed, supports `Mbps`, capped by the receiver's upload speed. Specifying this enables the Brutal congestion control algorithm; requires mihomo ShadowQUIC on both ends.
+**Optional**, sets the requested client download speed, capped by the Listener's `up`, and enables Brutal negotiation through a mihomo private extension. Falls back to `congestion-controller` when unsupported.
 
 ## cwnd
 
@@ -99,11 +99,11 @@ proxies:
 
 ## recv-window-conn
 
-**Optional**, sets the connection-level receive window size. If set to `0`, the system default value will be used.
+**Optional**, sets the receive window size for an individual stream. If set to `0`, the internal default value will be used.
 
 ## recv-window
 
-**Optional**, sets the stream-level receive window size. If set to `0`, the system default value will be used.
+**Optional**, sets the connection-level receive window size. If set to `0`, the internal default value will be used.
 
 ## disable-mtu-discovery
 
