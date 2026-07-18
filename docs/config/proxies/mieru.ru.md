@@ -11,6 +11,7 @@ proxies:
     username: user
     password: password
     multiplexing: MULTIPLEXING_LOW
+    handshake-mode: HANDSHAKE_STANDARD
     traffic-pattern: ""
 ```
 
@@ -27,6 +28,10 @@ proxies:
 ## multiplexing
 
 Мультиплексирование, возможные значения: `MULTIPLEXING_OFF`, `MULTIPLEXING_LOW`, `MULTIPLEXING_MIDDLE`, `MULTIPLEXING_HIGH`. `MULTIPLEXING_OFF` отключает функцию мультиплексирования. По умолчанию `MULTIPLEXING_LOW` 
+
+## handshake-mode
+
+Режим рукопожатия. `HANDSHAKE_STANDARD` (по умолчанию) ожидает завершения рукопожатия; `HANDSHAKE_NO_WAIT` включает рукопожатие 0-RTT.
 
 ## traffic-pattern
 

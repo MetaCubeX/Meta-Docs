@@ -10,6 +10,9 @@ listeners:
   cipher: 2022-blake3-aes-256-gcm
   password: vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=
   udp: true
+  # simple-obfs:
+  #   enable: false # Установите true для включения
+  #   mode: http # Возможные значения: http, tls
   # shadow-tls:
   #   enable: false
   #   version: 3 # v1/v2/v3

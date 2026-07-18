@@ -11,6 +11,7 @@ proxies:
     username: user
     password: password
     multiplexing: MULTIPLEXING_LOW
+    handshake-mode: HANDSHAKE_STANDARD
     traffic-pattern: ""
 ```
 
@@ -27,6 +28,10 @@ proxies:
 ## multiplexing
 
 多路复用，可以使用的值包括 `MULTIPLEXING_OFF`, `MULTIPLEXING_LOW`, `MULTIPLEXING_MIDDLE`, `MULTIPLEXING_HIGH`。其中 `MULTIPLEXING_OFF` 会关闭多路复用功能。默认值为 `MULTIPLEXING_LOW`
+
+## handshake-mode
+
+握手模式。`HANDSHAKE_STANDARD`（默认）等待握手完成；`HANDSHAKE_NO_WAIT` 启用 0-RTT 握手。
 
 ## traffic-pattern
 

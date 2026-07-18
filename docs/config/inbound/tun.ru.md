@@ -44,6 +44,10 @@ tun:
   - 1000
   exclude-uid-range:
   - 1000:9999
+  include-mac-address:
+  - 00:11:22:33:44:55
+  exclude-mac-address:
+  - 00:11:22:33:44:66
   include-android-user:
   - 0
   - 10
@@ -220,6 +224,14 @@ auto-redirect с auto-route теперь может работать на роу
 ## exclude-uid-range
 
 Исключает диапазоны пользователей, чей трафик не будет маршрутизирован через Tun.
+
+## include-mac-address
+
+Ограничивает маршрутизацию устройств локальной сети по MAC-адресу источника. Поддерживается только в Linux и требует включенных `auto-route` и `auto-redirect`.
+
+## exclude-mac-address
+
+Исключает трафик устройств локальной сети по MAC-адресу источника. Поддерживается только в Linux и требует включенных `auto-route` и `auto-redirect`.
 
 ## include-android-user
 

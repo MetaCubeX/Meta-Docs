@@ -44,6 +44,10 @@ tun:
   - 1000
   exclude-uid-range:
   - 1000:9999
+  include-mac-address:
+  - 00:11:22:33:44:55
+  exclude-mac-address:
+  - 00:11:22:33:44:66
   include-android-user:
   - 0
   - 10
@@ -80,7 +84,7 @@ Available values: `system/gvisor/mixed`
 * `system` uses the system protocol stack, providing a more stable/comprehensive TUN experience with relatively lower resource usage compared to other stacks.
 * `gvisor` implements the network protocol stack in user space, offering higher security and isolation while avoiding context switching between the OS kernel and user space, which can yield better network processing performance under specific conditions.
 * `mixed` is a hybrid stack where TCP uses the `system` stack and UDP uses the `gvisor` stack, potentially delivering a better overall user experience.
-* [Simple Performance Test](tun.md%23tun_1)
+* [Simple Performance Test](#network-loopback-test-for-tun-protocol-stacks)
 * If the firewall is turned on, `system` and `mixed` protocol stacks cannot be used. Allow the core binary through the firewall using the following methods:
 * Windows: Settings -> Windows Security -> Allow an app through firewall -> Select the core binary.
 * MacOS: Generally no configuration is required as the firewall allows signed software by default. If you encounter issues where it cannot be used with the firewall enabled, you can try allowing it: System Settings -> Network -> Firewall -> Options -> Add Mihomo app.
@@ -221,6 +225,14 @@ Exclude users to prevent their traffic from being routed by the TUN interface.
 ## exclude-uid-range
 
 Exclude user range to prevent their traffic from being routed by the TUN interface.
+
+## include-mac-address
+
+Restrict routed LAN devices by source MAC address. Linux only; requires `auto-route` and `auto-redirect`.
+
+## exclude-mac-address
+
+Exclude LAN device traffic by source MAC address. Linux only; requires `auto-route` and `auto-redirect`.
 
 ## include-android-user
 

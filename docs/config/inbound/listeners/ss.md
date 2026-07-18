@@ -10,6 +10,9 @@ listeners:
   cipher: 2022-blake3-aes-256-gcm
   password: vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=
   udp: true
+  # simple-obfs:
+  #   enable: false # 设置为 true 时开启
+  #   mode: http # 可选值：http、tls
   # shadow-tls:
   #   enable: false # 设置为true时开启
   #   version: 3 # 支持v1/v2/v3
