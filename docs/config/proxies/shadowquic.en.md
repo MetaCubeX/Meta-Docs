@@ -31,6 +31,9 @@ proxies:
 
 [TLS Fields](./tls.md)
 
+!!! tip
+    ShadowQUIC always enables JLS; [`jls-opts`](./tls.md#jls-opts) does not need to be configured separately.
+
 ## username
 
 **Required**, username used for ShadowQUIC authentication.

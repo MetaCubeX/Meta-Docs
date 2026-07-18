@@ -31,6 +31,9 @@ proxies:
 
 [Поля TLS](./tls.md)
 
+!!! tip
+    ShadowQUIC всегда включает JLS; отдельно настраивать [`jls-opts`](./tls.md#jls-opts) не требуется.
+
 ## username
 
 **Обязательно**, имя пользователя для аутентификации ShadowQUIC.

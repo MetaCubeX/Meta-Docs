@@ -31,6 +31,9 @@ proxies:
 
 [TLS 字段](./tls.md)
 
+!!! tip
+    ShadowQUIC 强制启用 JLS，无需单独配置 [`jls-opts`](./tls.md#jls-opts)。
+
 ## username
 
 必须，用于 ShadowQUIC 的认证用户名

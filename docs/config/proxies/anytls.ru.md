@@ -34,7 +34,7 @@ proxies:
 [Поля TLS](./tls.md)
 
 !!! tip
-    Mihomo не поддерживает комбинацию AnyTLS+Reality (и не будет поддерживать её в будущем). Если вы хотите скрыть SNI, используйте его в сочетании с [ECH](./tls.md#ech-opts). Если вы настаиваете на использовании Reality, выберите протоколы [Vmess](./vmess.md), [VLESS](./vless.md) или [Trojan](./trojan.md).
+    Mihomo не поддерживает комбинацию AnyTLS+Reality (и не будет поддерживать её в будущем). Если вы хотите скрыть SNI, используйте [ECH](./tls.md#ech-opts) или сочетайте AnyTLS с [ShadowTLS](./tls.md#shadow-tls-opts), [ResTLS](./tls.md#restls-opts) либо [JLS](./tls.md#jls-opts). Если вы настаиваете на использовании Reality, выберите протоколы [Vmess](./vmess.md), [VLESS](./vless.md) или [Trojan](./trojan.md).
 
 ## idle-session-check-interval
 
