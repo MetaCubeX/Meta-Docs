@@ -19,6 +19,11 @@ proxies:
     #   -----BEGIN PRIVATE KEY-----
     #   ...
     #   -----END PRIVATE KEY-----
+    # tls-auth: |
+    #   -----BEGIN OpenVPN Static key V1-----
+    #   ...
+    #   -----END OpenVPN Static key V1-----
+    # key-direction: "1"
     ca: |
       -----BEGIN CERTIFICATE-----
       MIIB...example
@@ -76,6 +81,14 @@ proxies:
 ## key
 
 **可选**，客户端私钥内容。从 `.ovpn` 文件的 `<key>` 标签中复制。使用用户名/密码认证时可省略。
+
+## tls-auth
+
+**可选**，从 `.ovpn` 文件的 `<tls-auth>` 标签中复制，**与 `tls-crypt` 互斥**
+
+## key-direction
+
+**可选**，使用 `tls-auth` 时填写，支持 `"1"` 或 `"0"`；如果不填或为空字符串，则默认为双向模式（`bidirectional`）。
 
 ## tls-crypt
 
