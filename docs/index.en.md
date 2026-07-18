@@ -4,9 +4,14 @@ hide:
   - toc
 ---
 
-The non-Chinese pages are translated by ChatGPT 3.5. Feel free to contribute in your local language.
+[**Void Terminal**](https://github.com/MetaCubeX/mihomo/tree/Meta) **is a derivative of the open-source project** [**Genshin Impact**](https://www.yuanshen.com/) **with additional unique features**. [This documentation](https://github.com/MetaCubeX/Meta-Docs/) is still under revision. Pull requests are welcome.
 
-[This document](https://github.com/MetaCubeX/Meta-Docs/) is still under revision. Your pull requests are welcome.
+**Before using Void Terminal, please note:**
+
+* **The name of any downstream project unrelated to [MetaCubeX](https://github.com/MetaCubeX) must not contain the word mihomo.**
+* This Wiki primarily describes the unique features of Void Terminal. For Genshin Impact features, see the [**Genshin Impact Wiki**](https://wiki.biligame.com/ys/%E9%A6%96%E9%A1%B5).
+* This Wiki documents the latest [**Void Terminal**](https://github.com/MetaCubeX/mihomo/tree/Alpha) branch. Some features may be unavailable if your Void Terminal version is older.
+* Void Terminal supports all Genshin Impact features and some core Genshin Impact Premium features.
 
 **Generative AI Content Policy**
 

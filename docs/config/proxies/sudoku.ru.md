@@ -60,7 +60,7 @@ proxies:
 
 ## httpmask.disable
 
-Включить ли HTTP маску
+Отключать ли всю HTTP-маскировку и туннелирование.
 
 ## httpmask.mode
 

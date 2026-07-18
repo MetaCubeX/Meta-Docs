@@ -134,14 +134,14 @@ Includes all [proxy sets](../proxy-providers/index.md), sorted by name.
 
 ## filter
 
-Filters nodes that meet keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). You can use ` to separate multiple regular expressions.
+Filters nodes that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Use `|` to separate multiple regular expressions.
 
 !!! info ""
     This only applies to included proxy sets and [including all outbound proxies](./index.md#include-all-proxies).
 
 ## exclude-filter
 
-Excludes nodes that meet keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). You can use ` to separate multiple regular expressions.
+Excludes nodes that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Use `|` to separate multiple regular expressions.
 
 ## exclude-type
 

@@ -71,6 +71,10 @@ Snell version. Supports v1/2/3/4/5. UDP is only supported on v3/4/5.
 
 Optional. Supports v4/5. Default is false.
 
+## client-fingerprint
+
+Optional. Default is `chrome`.
+
 ## obfs-opts
 
 Snell obfuscation settings.

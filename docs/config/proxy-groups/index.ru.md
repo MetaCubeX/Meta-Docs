@@ -133,14 +133,14 @@ proxy-groups:
 
 ## filter
 
-Фильтрует узлы, соответствующие ключевым словам или [регулярным выражениям](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Можно использовать ` для разделения нескольких регулярных выражений.
+Фильтрует узлы, соответствующие ключевым словам или [регулярным выражениям](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Используйте `|` для разделения нескольких регулярных выражений.
 
 !!! info ""
     Применяется только к включенным наборам прокси и [включению всех исходящих прокси](./index.md#include-all-proxies).
 
 ## exclude-filter
 
-Исключает узлы, соответствующие ключевым словам или [регулярным выражениям](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Можно использовать ` для разделения нескольких регулярных выражений.
+Исключает узлы, соответствующие ключевым словам или [регулярным выражениям](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Используйте `|` для разделения нескольких регулярных выражений.
 
 ## exclude-type
 

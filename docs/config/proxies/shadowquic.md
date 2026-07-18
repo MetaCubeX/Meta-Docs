@@ -105,5 +105,3 @@ proxies:
 ## disable-mtu-discovery
 
 可选，设置是否禁用路径 MTU 发现（Path MTU Discovery），若设为 `true` 则使用固定的 MTU 大小
-
-```

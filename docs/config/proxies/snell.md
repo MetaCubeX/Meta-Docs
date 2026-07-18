@@ -1,7 +1,7 @@
 # Snell
 
 ```{.yaml linenums="1"}
-proxies
+proxies:
 - name: "snell"
   type: snell
   server: server

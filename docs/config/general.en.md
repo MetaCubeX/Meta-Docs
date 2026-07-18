@@ -173,6 +173,15 @@ Sets the routing mark for the listening sockets of `external-controller` and `ex
 external-controller-routing-mark: 0
 ```
 
+Starts a DoH server on the RESTful API port.
+
+!!! warning ""
+    This URL does not verify the API secret. If enabled, make sure it is secured appropriately.
+
+```{.yaml linenums="1"}
+external-doh-server: /dns-query
+```
+
 Access key for the API.
 
 ```{.yaml linenums="1"}
@@ -203,7 +212,7 @@ Not mandatory, will be updated to the specified folder during updates, if not co
 ## Custom External User Interface Download URL
 
 ```{.yaml linenums="1"}
-external-ui-url: "<https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip>" # Get from GitHub Pages branch
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip" # Get from GitHub Pages branch
 ```
 
 ## Cache
@@ -211,17 +220,16 @@ external-ui-url: "<https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh
 ```{.yaml linenums="1"}
 profile:
   store-selected: true
-
-# Stores API selections for strategy groups for use on the next start
-
+  # Stores API selections for strategy groups for use on the next start
   store-fake-ip: true
-
-# Stores the fakeip mapping table, using the original mapping address when the domain connects again
+  # Stores the fakeip mapping table, using the original mapping address when the domain connects again
 ```
 
 ## Unified Delay
 
-When unified delay is enabled, two delay tests are conducted to eliminate latency differences caused by connection handshakes and other variations in different types of nodes.
+When unified delay is enabled, RTT is calculated to eliminate latency differences caused by connection handshakes and other variations between proxy types.
+
+Available values: `true/false`.
 
 ```{.yaml linenums="1"}
 unified-delay: true
@@ -230,6 +238,8 @@ unified-delay: true
 ## TCP Concurrency
 
 Enable TCP concurrent connections, which will use all IP addresses resolved by DNS for connections, using the first successful connection.
+
+Available values: `true/false`.
 
 ```{.yaml linenums="1"}
 tcp-concurrent: true

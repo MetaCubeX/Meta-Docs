@@ -133,14 +133,14 @@ proxy-groups:
 
 ## filter
 
-筛选满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点，可以使用 ` 区分多个正则表达式
+筛选满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点，可以使用 `|` 区分多个正则表达式
 
 !!! info ""
     仅作用于引入代理集合以及[引入所有出站代理](./index.md#include-all-proxies)
 
 ## exclude-filter
 
-排除满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点，可以使用 ` 区分多个正则表达式
+排除满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点，可以使用 `|` 区分多个正则表达式
 
 ## exclude-type
 

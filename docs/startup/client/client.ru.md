@@ -25,7 +25,7 @@
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
-|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается 丨
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
 
 ## MacOS
 
@@ -45,6 +45,7 @@
 |[ClashMac](https://github.com/666OS/ClashMac)|поддерживается | Закрытый исходный код |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|поддерживается |
+|[CatBar](https://github.com/QuentinHsu/cat-bar)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|поддерживается |
