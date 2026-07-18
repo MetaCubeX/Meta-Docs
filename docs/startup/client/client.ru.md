@@ -88,6 +88,7 @@
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|поддерживается |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|поддерживается |
 |[SlClash](https://github.com/songzhengpei/Slclash)|поддерживается |
+|[MikuBox](https://github.com/HatsuneMikuUwU/MikuBoxForAndroid)|поддерживается |
 
 ## iOS
 

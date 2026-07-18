@@ -88,6 +88,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|Maintained |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|Maintained |
 |[SlClash](https://github.com/songzhengpei/Slclash)|Maintained |
+|[MikuBox](https://github.com/HatsuneMikuUwU/MikuBoxForAndroid)|Maintained |
 
 ## iOS
 
