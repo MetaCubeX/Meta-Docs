@@ -23,6 +23,12 @@ proxies:
     enable: true
     config: base64_encoded_config
     # query-server-name: xxx.com
+  shadow-tls-opts: 
+    version: 3 
+    password: shadow-tls-password
+  jls-opts:
+    username: jls-user
+    password: jls-password
   tlsmirror-opts:
     primary-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
     explicit-nonce-ciphersuites: [
@@ -155,6 +161,18 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 ### ech-opts.query-server-name
 
 Этот параметр необязателен; если он не пуст, он используется для указания доменного имени при разрешении через DNS.
+
+## shadow-tls-opts
+
+Требуется включить `tls: true`. Использует `sni` / `servername` из общих настроек в качестве ShadowTLS SNI.
+
+### shadow-tls-opts.version
+
+Поддерживаются версии `v1` / `v2` / `v3`. По умолчанию используется `v2`, если поле оставлено пустым.
+
+## jls-opts
+
+Требуется включить `tls: true`. Использует `sni` / `servername` из общих настроек в качестве JLS SNI.
 
 ## tlsmirror-opts
 
