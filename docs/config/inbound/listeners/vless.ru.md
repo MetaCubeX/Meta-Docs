@@ -83,7 +83,17 @@ listeners:
       after-bytes: 0 # начать ограничение скорости после передачи указанного количества байт
       bytes-per-sec: 0 # базовая скорость (байт/сек)
       burst-bytes-per-sec: 0 # пиковая скорость (байт/сек), действует когда больше bytesPerSec
-  ### Обратите внимание, что для слушателей Vless, если параметр "allow-insecure" не равен true, необходимо заполнить хотя бы одно из следующих полей: "certificate and private-key", "reality-config" или "decryption". ###
+  # shadow-tls:
+  #   enable: true
+  #   version: 3 # поддерживает v1/v2/v3
+  #   # password: shadow-tls-password # параметр конфигурации v2
+  #   users: # параметр конфигурации v3
+  #     - name: shadow-tls-user
+  #       password: shadow-tls-password
+  #   handshake:
+  #     dest: www.example.com:443
+  #     # proxy: ""
+    ### ВНИМАНИЕ: Для слушателя vless, если "allow-insecure" не равен true, необходимо заполнить как минимум одну из опций: «certificate и private-key» или «shadow-tls» или «jls-config» или «reality-config» или «decryption» ###
   # allow-insecure: false # Разрешить ли отключение шифрования TLS (Примечание: только в случаях, когда nginx или caddy установлены предварительно)
   # mux-option:
   #   padding: true
