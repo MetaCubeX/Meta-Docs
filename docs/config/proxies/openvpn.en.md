@@ -126,7 +126,7 @@ Optional, virtual network interface type. Currently only `tun` is supported. Def
 
 ## cipher
 
-Optional, encryption method. Supports `AES-128-GCM` / `AES-256-GCM` / `AES-128-CBC` / `AES-256-CBC` / `CHACHA20-POLY1305`. Defaults to `AES-128-GCM`. `AES-CBC` will be treated as `AES-128-CBC`.
+Optional, encryption method. Supports `AES-128-GCM` / `AES-192-GCM` / `AES-256-GCM` / `AES-128-CBC` / `AES-192-CBC` / `AES-256-CBC` / `CHACHA20-POLY1305`. Defaults to `AES-128-GCM`. `AES-CBC` will be treated as `AES-128-CBC`.
 
 ## data-ciphers
 

@@ -126,7 +126,7 @@ proxies:
 
 ## cipher
 
-可选，加密方式，支持 `AES-128-GCM` / `AES-256-GCM`/ `AES-128-CBC` / `AES-256-CBC` /`CHACHA20-POLY1305`默认 `AES-128-GCM`， `AES-CBC` 会按 `AES-128-CBC` 处理。
+可选，加密方式，支持 `AES-128-GCM` / `AES-192-GCM` / `AES-256-GCM` / `AES-128-CBC` / `AES-192-CBC` / `AES-256-CBC` / `CHACHA20-POLY1305`，默认 `AES-128-GCM`，`AES-CBC` 会按 `AES-128-CBC` 处理。
 
 ## data-ciphers
 
