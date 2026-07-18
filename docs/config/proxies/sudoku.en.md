@@ -13,6 +13,7 @@ proxies:
     table-type: prefer_ascii
     # custom-table: xpxvvpvv
     # custom-tables: ["xpxvvpvv", "vxpvxvvp"]
+    # multiplex: "off"
     httpmask:
       disable: false
       mode: legacy
@@ -53,6 +54,10 @@ Optional custom byte layout. It must contain 2 `x`, 2 `p`, and 4 `v` characters 
 
 Optional list of custom byte layouts (`x`/`v`/`p`). If non-empty, it overrides `custom-table`.
 
+## multiplex
+
+Optional: `off` (default), `auto` (reuse only the underlying HTTPMask connection), `on` (enable Sudoku single-session multi-target mux over raw TCP or HTTPMask).
+
 ## httpmask.disable
 
 Whether to disable all HTTP masking/tunneling.
@@ -75,7 +80,7 @@ Optional. First-level path prefix for the HTTP tunnel endpoint. Both sides must 
 
 ## httpmask.multiplex
 
-Optional: `off` (default), `auto` (reuse h1.1 keep-alive / h2 connections to reduce RTT for each connection setup), `on` (multiplex multiple target connections in a single tunnel; only takes effect when mode is `stream`/`poll`/`auto`; `ws` forces `off`).
+Legacy-compatible setting. If set, it takes precedence over the top-level `multiplex`.
 
 ## enable-pure-downlink
 

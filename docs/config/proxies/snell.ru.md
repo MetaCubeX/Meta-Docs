@@ -30,6 +30,32 @@ proxies
      version: 2
      alpn: ["h2"]
 
+- name: "snell-restls"
+  type: snell
+  server: server
+  port: 44046
+  psk: yourpsk
+  # version: 4
+  # client-fingerprint: chrome
+  obfs-opts:
+    mode: restls
+    host: bing.com
+    password: "restls_password"
+    version-hint: tls13
+
+- name: "snell-jls"
+  type: snell
+  server: server
+  port: 44046
+  psk: yourpsk
+  # version: 4
+  # client-fingerprint: chrome
+  obfs-opts:
+    mode: jls
+    host: bing.com
+    username: jls-user
+    password: "jls_password"
+
 ```
 
 [Общие поля](./index.md)
@@ -56,7 +82,7 @@ proxies
 
 ### obfs-opts.mode
 
-Режим обфускации Snell. Поддерживаются http/tls/shadow-tls.
+Режим обфускации Snell. Поддерживаются http/tls/shadow-tls/restls/jls.
 
 ### obfs-opts.host
 
@@ -73,3 +99,15 @@ proxies
 ### obfs-opts.alpn
 
 Поддерживаются h2 и http1.1. Требуется только при использовании shadow-tls.
+
+### obfs-opts.username
+
+Имя пользователя JLS. Требуется только при использовании `jls`.
+
+### obfs-opts.version-hint
+
+Подсказка версии TLS для Restls. Возможные значения: `tls12` / `tls13`.
+
+### obfs-opts.restls-script
+
+Необязательный скрипт трафика Restls после рукопожатия.

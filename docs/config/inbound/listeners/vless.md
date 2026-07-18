@@ -93,7 +93,24 @@ listeners:
   #   handshake:
   #     dest: www.example.com:443
   #     # proxy: ""
-    ### 注意，对于vless listener, 如果 "allow-insecure" 不为 true, 至少需要填写 “certificate和private-key” 或 “shadow-tls” 或 “jls-config” 或 “reality-config” 或 “decryption” 的其中一项 ###
+  # res-tls:
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
+  # jls-config: # JLS 替代普通 TLS；未认证连接回落到 dest
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # 留空时从 dest 推导
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # fallback 转发限速，单位 bit/s；0 表示不限速
+  ### 注意，对于vless listener, 如果 "allow-insecure" 不为 true, 至少需要填写 “certificate和private-key” 或 “shadow-tls” 或 “res-tls” 或 “jls-config” 或 “reality-config” 或 “decryption” 的其中一项 ###
   # allow-insecure: false # 是否允许不开启tls加密（注意：仅用于有 nginx, caddy 前置的情况）
   # mux-option:
   #   padding: true

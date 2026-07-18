@@ -16,6 +16,7 @@ proxies:
   down: "200 Mbps" # если единица измерения не указана, по умолчанию Mbps
   # sni: server.com
   # skip-cert-verify: false
+  # name-cert-verify: example.com
   # recv-window-conn: 12582912
   # recv-window: 52428800
   # disable_mtu_discovery: false

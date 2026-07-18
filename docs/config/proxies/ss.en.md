@@ -105,6 +105,7 @@ Plugin settings.
           # Configuring a fingerprint enables SSL pinning
           # fingerprint: xxxx
           # skip-cert-verify: true
+          # name-cert-verify: example.com
           # host: bing.com
           # path: "/"
           # mux: true
@@ -123,6 +124,7 @@ Plugin settings.
           # Configuring a fingerprint enables SSL pinning
           # fingerprint: xxxx
           # skip-cert-verify: true
+          # name-cert-verify: example.com
           # host: bing.com
           # path: "/"
           # mux: true

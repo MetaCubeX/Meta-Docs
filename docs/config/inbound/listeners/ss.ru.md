@@ -26,6 +26,16 @@ listeners:
   #   restls-script: ""
   #   min-record-len: 0
   #   proxy: ""
+  # jls-config: # Только оборачивает TCP; при ошибке JLS-аутентификации или обычном TLS соединение прозрачно возвращается на dest
+  #   enable: false
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # Если пусто, выводится из dest
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # Ограничение скорости пересылки, bit/s; 0 означает без ограничения
   # kcp-tun:
   #   enable: false
   #   key: it's a secrect # pre-shared secret between client and server

@@ -37,6 +37,23 @@ listeners:
   #   handshake:
   #     dest: www.example.com:443
   #     # proxy: ""
+  # res-tls:
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
+  # jls-config: # JLS заменяет обычный TLS; неавторизованные соединения перенаправляются на dest
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # Если пусто, выводится из dest
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # Ограничение скорости fallback-пересылки, bit/s; 0 означает без ограничения
   # если заполнен reality-config, то включается reality (не может использоваться одновременно с certificate и private-key)
   # reality-config:
   #   dest: test.com:443
@@ -59,7 +76,7 @@ listeners:
   #   enabled: false
   #   method: aes-128-gcm # aes-128-gcm/aes-256-gcm/chacha20-ietf-poly1305
   #   password: "example"
- ### ВНИМАНИЕ: Для слушателя trojan, если "allow-insecure" не равен true, необходимо заполнить как минимум одну из опций: "certificate" и "private-key" или "shadow-tls" или "jls-config" или "reality-config" или "ss-option" ###
+  ### ВНИМАНИЕ: Для слушателя trojan, если "allow-insecure" не равен true, необходимо заполнить как минимум одну из опций: "certificate" и "private-key" или "shadow-tls" или "res-tls" или "jls-config" или "reality-config" или "ss-option" ###
   # allow-insecure: false # Разрешить ли отключение шифрования TLS (Примечание: только в случаях, когда nginx или caddy установлены предварительно)
   # mux-option:
   #   padding: true

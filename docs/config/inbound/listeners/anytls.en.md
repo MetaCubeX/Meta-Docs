@@ -1,3 +1,5 @@
+# AnyTLS
+
 ```{.yaml linenums="1"}
 listeners:
 - name: anytls-in-1
@@ -22,43 +24,42 @@ listeners:
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
   # shadow-tls:
-    #   enable: true
-    #   version: 3 # 支持 v1/v2/v3
-    #   # password: shadow-tls-password # v2 配置项
-    #   users: # v3 配置项
-    #     - name: shadow-tls-user
-    #       password: shadow-tls-password
-    #   handshake:
-    #     dest: www.example.com:443
-    #     # proxy: ""
+  #   enable: true
+  #   version: 3 # supports v1/v2/v3
+  #   # password: shadow-tls-password # v2 configuration item
+  #   users: # v3 configuration item
+  #     - name: shadow-tls-user
+  #       password: shadow-tls-password
+  #   handshake:
+  #     dest: www.example.com:443
+  #     # proxy: ""
   # res-tls:
-    #   enable: true
-    #   dest: www.example.com:443
-    #   password: restls-password
-    #   # restls-script: ""
-    #   # min-record-len: 0
-    #   # proxy: ""
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
   # jls-config: # JLS replaces standard TLS; unauthenticated connections fall back to dest
-    #   enable: true
-    #   users:
-    #     - username: jls-user
-    #       password: jls-password
-    #   dest: [www.example.com:443](https://www.example.com:443)
-    #   # sni: [www.example.com](https://www.example.com) # inferred from dest if left empty
-    #   # alpn: [h2, http/1.1]
-    #   # proxy: ""
-    #   # rate-limit: 0 # fallback forwarding rate limit, in bit/s; 0 means unlimited
-    ### NOTE: For anytls listener, if "allow-insecure" is not true, at least one of "certificate and private-key" or "jls-config" must be filled in ###
-    ### NOTE: For anytls listener, if "allow-insecure" is not true, at least one of "certificate and private-key" or "shadow-tls" or "res-tls" or "jls-config" must be filled in ###
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # inferred from dest if left empty
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # fallback forwarding rate limit, in bit/s; 0 means unlimited
+  ### NOTE: For anytls listener, if "allow-insecure" is not true, at least one of "certificate and private-key" or "shadow-tls" or "res-tls" or "jls-config" must be filled in ###
   # allow-insecure: false # whether to allow disabling TLS encryption (NOTE: only used when upstreamed by nginx, caddy, etc.)
   padding-scheme: "" # https://github.com/anytls/anytls-go/blob/main/docs/protocol.md#cmdupdatepaddingscheme
 ```
 
 [General Fields](./index.md)
 
-!!! warning 
-    certificate and private-key are required unless allow-insecure: true (NOTE: only used when upstreamed by nginx, caddy, etc.)
+!!! warning ""
+    If `allow-insecure` is not `true`, at least one of `certificate` and `private-key`, `shadow-tls`, `res-tls`, or `jls-config` must be configured.
 
- ## padding-scheme
+## padding-scheme
  
 See https://github.com/anytls/anytls-go/blob/main/docs/protocol.md#cmdupdatepaddingscheme

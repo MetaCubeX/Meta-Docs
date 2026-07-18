@@ -3,20 +3,20 @@
 ```{.yaml linenums="1"}
 proxies:
 - name: shadowquic
-  server: [www.example.com](https://www.example.com)
+  server: www.example.com
   port: 10443
   type: shadowquic
   username: username
   password: password
-  # ip: 127.0.0.1
-  # quic-versions: [v1]
-  # udp-over-stream: false
+  # sni: example.com
+  # alpn: [h3]
+  # quic-versions: [v1] # support v1/v2, default v1
+  # udp-over-stream: false # UDP over stream, default false
   # zero-rtt: false
   # keep-alive-interval: 10000
   # congestion-controller: cubic
   # up: 100 Mbps
   # down: 100 Mbps
-  # ignore-client-bandwidth: false
   # cwnd: 32
   # bbr-profile: "standard"
   # max-datagram-frame-size: 1400
@@ -39,9 +39,13 @@ proxies:
 
 **Required**, password used for ShadowQUIC authentication.
 
-## ip
+## sni
 
-**Optional**, used to override the DNS lookup result of the server address set in the "server" option.
+**Optional**, SNI used by the ShadowQUIC TLS handshake.
+
+## alpn
+
+**Optional**, application-layer protocol negotiation list. Defaults to `h3`.
 
 ## quic-versions
 
@@ -73,10 +77,6 @@ proxies:
 ## down
 
 **Optional**, sets the requested client download speed, supports `Mbps`, capped by the receiver's upload speed. Specifying this enables the Brutal congestion control algorithm; requires mihomo ShadowQUIC on both ends.
-
-## ignore-client-bandwidth
-
-**Optional**, used for the Brutal algorithm. Sets whether to ignore the outbound `down` bandwidth of the client and use the listener's `down` bandwidth or automatic configuration instead. Default is `false`.
 
 ## cwnd
 

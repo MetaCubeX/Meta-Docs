@@ -20,6 +20,7 @@ proxies:
   # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
+  name-cert-verify: example.com
   fingerprint: xxxx # 配置指纹将实现 SSL Pining 效果, 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
   alpn:
     - h3
@@ -32,8 +33,9 @@ proxies:
   #     - stun.nextcloud.com:3478
   #     - stun.sip.us:3478
   #     - global.stun.twilio.com:3478
-  #   # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #   # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, name-cert-verify, fingerprint, certificate, private-key, alpn)
   #   # skip-cert-verify： false
+  #   # name-cert-verify: example.com
   #   # ......
   ###quic-go特殊配置项，不要随意修改除非你知道你在干什么###
   # initial-stream-receive-window： 8388608

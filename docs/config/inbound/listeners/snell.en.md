@@ -22,6 +22,17 @@ listeners:
     #       password: password
     #   handshake:
     #     dest: test.com:443
+    # res-tls:
+    #   enable: false
+    #   dest: test.com:443
+    #   password: restls-password
+    # jls-config:
+    #   enable: false
+    #   users:
+    #     - username: jls-user
+    #       password: jls-password
+    #   dest: test.com:443
+    ## shadow-tls, res-tls and jls-config are mutually exclusive
     # rule: sub-rule-name1
     # proxy: proxy
 ```

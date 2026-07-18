@@ -27,8 +27,9 @@ listeners:
   #      - stun.sip.us:3478
   #      - global.stun.twilio.com:3478
   #    # proxy: DIRECT # Настройте URL-адрес сервера для подключения через определенный прокси-сервер.
-  #    # Следующая инструкция позволяет ввести конфигурацию TLS для URL-адреса сервера (sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #    # Следующая инструкция позволяет ввести конфигурацию TLS для URL-адреса сервера (sni, skip-cert-verify, name-cert-verify, fingerprint, certificate, private-key, alpn)
   #    # skip-cert-verify： false
+  #    # name-cert-verify: example.com
   #    # ......
   alpn:
   - h3

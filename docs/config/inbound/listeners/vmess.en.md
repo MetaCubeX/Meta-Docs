@@ -67,6 +67,23 @@ listeners:
   #   handshake:
   #     dest: www.example.com:443
   #     # proxy: ""
+  # jls-config: # JLS replaces standard TLS; unauthenticated connections fall back to dest
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # inferred from dest when empty
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # fallback forwarding rate limit in bit/s; 0 means unlimited
+  # res-tls:
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
   # if reality-config is filled, enables reality (note: cannot be filled simultaneously with certificate and private-key)
   # reality-config:
   #   dest: test.com:443

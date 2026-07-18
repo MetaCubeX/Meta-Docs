@@ -24,32 +24,32 @@ listeners:
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
   # shadow-tls:
-    #   enable: true
-    #   version: 3 # поддерживает v1/v2/v3
-    #   # password: shadow-tls-password # параметр конфигурации v2
-    #   users: # параметр конфигурации v3
-    #     - name: shadow-tls-user
-    #       password: shadow-tls-password
-    #   handshake:
-    #     dest: www.example.com:443
-    #     # proxy: ""
+  #   enable: true
+  #   version: 3 # поддерживает v1/v2/v3
+  #   # password: shadow-tls-password # параметр конфигурации v2
+  #   users: # параметр конфигурации v3
+  #     - name: shadow-tls-user
+  #       password: shadow-tls-password
+  #   handshake:
+  #     dest: www.example.com:443
+  #     # proxy: ""
   # res-tls:
-    #   enable: true
-    #   dest: www.example.com:443
-    #   password: restls-password
-    #   # restls-script: ""
-    #   # min-record-len: 0
-    #   # proxy: ""
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
   # jls-config: # JLS заменяет обычный TLS; неавторизованные соединения перенаправляются на dest
-    #   enable: true
-    #   users:
-    #     - username: jls-user
-    #       password: jls-password
-    #   dest: www.example.com:443
-    #   # sni: www.example.com # если пусто, выводится из dest
-    #   # alpn: [h2, http/1.1]
-    #   # proxy: ""
-    #   # rate-limit: 0 # ограничение скорости перенаправления (fallback), в бит/с; 0 означает без ограничений
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # если пусто, выводится из dest
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # ограничение скорости перенаправления (fallback), в бит/с; 0 означает без ограничений
   ### ВНИМАНИЕ: Для слушателя anytls, если "allow-insecure" не равен true, необходимо заполнить как минимум одну из опций: "certificate и private-key" или "shadow-tls" или "res-tls" или "jls-config" ###
   # allow-insecure: false # Разрешить ли отключение шифрования TLS (Примечание: используется только при предварительной установке nginx или caddy)
   padding-scheme: "" # https://github.com/anytls/anytls-go/blob/main/docs/protocol.md#cmdupdatepaddingscheme
@@ -58,7 +58,7 @@ listeners:
 [Общие поля](./index.md)
 
 !!! warning ""
-    `certificate` и `private-key` обязательны, Если не указано `allow-insecure: true` (Примечание: это применяется только в том случае, если nginx или caddy используются в качестве предварительных условий).
+    Если `allow-insecure` не равен `true`, необходимо настроить как минимум один вариант: `certificate` и `private-key`, `shadow-tls`, `res-tls` или `jls-config`.
 
 ## padding-scheme
 

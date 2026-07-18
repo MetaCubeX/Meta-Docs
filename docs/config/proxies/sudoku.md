@@ -13,6 +13,7 @@ proxies:
     table-type: prefer_ascii
     # custom-table: xpxvvpvv
     # custom-tables: ["xpxvvpvv", "vxpvxvvp"]
+    # multiplex: "off"
     httpmask:
       disable: false
       mode: legacy
@@ -53,6 +54,10 @@ proxies:
 
 可选，自定义字节布局列表（x/v/p），非空时覆盖 custom-table
 
+## multiplex
+
+可选：`off`（默认）、`auto`（仅复用 HTTPMask 底层连接）、`on`（在原始 TCP 或 HTTPMask 上启用 Sudoku 单会话多目标 mux）
+
 ## httpmask.disable
 
 是否禁用所有 HTTP 伪装/隧道
@@ -75,7 +80,7 @@ proxies:
 
 ## httpmask.multiplex
 
-可选：off（默认）、auto（复用 h1.1 keep-alive / h2 连接，减少每次建链 RTT）、on（单条隧道内多路复用多个目标连接；仅在 mode=stream/poll/auto 生效；ws 强制 off）
+兼容旧配置；设置时优先于顶层 `multiplex`
 
 ## enable-pure-downlink
 

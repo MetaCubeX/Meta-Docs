@@ -32,6 +32,10 @@ proxies:
     #  -----BEGIN OpenVPN Static key V1-----
     #  ...
     #  -----END OpenVPN Static key V1-----
+    # tls-crypt-v2: |
+    #  -----BEGIN OpenVPN tls-crypt-v2 client key-----
+    #  ...
+    #  -----END OpenVPN tls-crypt-v2 client key-----
     # peer-info:
     #   IV_HWADDR: "52:54:00:ff:72:87"
     #   UV_DEVICE_ID: "laptop-001"
@@ -86,7 +90,7 @@ proxies:
 
 ## tls-auth
 
-**可选**，从 `.ovpn` 文件的 `<tls-auth>` 标签中复制，**与 `tls-crypt` 互斥**
+**可选**，从 `.ovpn` 文件的 `<tls-auth>` 标签中复制，**与 `tls-crypt` / `tls-crypt-v2` 互斥**
 
 ## key-direction
 
@@ -94,7 +98,11 @@ proxies:
 
 ## tls-crypt
 
-**可选**，TLS 加密密钥。从 `.ovpn` 文件的 `<tls-crypt>` 标签中复制，不需要保留标签。
+**可选**，TLS 加密密钥。从 `.ovpn` 文件的 `<tls-crypt>` 标签中复制，不需要保留标签。**与 `tls-auth` / `tls-crypt-v2` 互斥**。
+
+## tls-crypt-v2
+
+**可选**，从 `.ovpn` 文件的 `<tls-crypt-v2>` 标签中复制客户端密钥，不需要保留标签。**与 `tls-auth` / `tls-crypt` 互斥**。
 
 ## ping
 

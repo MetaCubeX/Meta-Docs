@@ -20,6 +20,7 @@ proxies:
   # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
+  name-cert-verify: example.com
   fingerprint: xxxx
   alpn:
     - h3
@@ -32,8 +33,9 @@ proxies:
   #     - stun.nextcloud.com:3478
   #     - stun.sip.us:3478
   #     - global.stun.twilio.com:3478
-  #   # Следующая инструкция позволяет ввести конфигурацию TLS для URL-адреса сервера (sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #   # Следующая инструкция позволяет ввести конфигурацию TLS для URL-адреса сервера (sni, skip-cert-verify, name-cert-verify, fingerprint, certificate, private-key, alpn)
   #   # skip-cert-verify： false
+  #   # name-cert-verify: example.com
   #   # ......
   ###специальные настройки quic-go, не изменяйте без необходимости, если не знаете, что делаете###
   # initial-stream-receive-window： 8388608

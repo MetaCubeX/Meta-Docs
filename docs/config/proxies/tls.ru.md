@@ -26,6 +26,9 @@ proxies:
   shadow-tls-opts: 
     version: 3 
     password: shadow-tls-password
+  restls-opts:
+    password: restls-password
+    version-hint: tls13
   jls-opts:
     username: jls-user
     password: jls-password
@@ -170,13 +173,41 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 Поддерживаются версии `v1` / `v2` / `v3`. По умолчанию используется `v2`, если поле оставлено пустым.
 
+### shadow-tls-opts.password
+
+Пароль ShadowTLS.
+
+## restls-opts
+
+Требуется включить `tls: true`. Использует `sni` / `servername` из общих настроек в качестве Restls SNI.
+
+### restls-opts.password
+
+Пароль Restls.
+
+### restls-opts.version-hint
+
+Подсказка версии TLS. Возможные значения: `tls12` / `tls13`.
+
+### restls-opts.restls-script
+
+Необязательный скрипт трафика Restls после рукопожатия.
+
 ## jls-opts
 
 Требуется включить `tls: true`. Использует `sni` / `servername` из общих настроек в качестве JLS SNI.
 
+### jls-opts.username
+
+Имя пользователя JLS.
+
+### jls-opts.password
+
+Пароль JLS.
+
 ## tlsmirror-opts
 
-Когда `tls` установлен в `true`, наличие `tlsmirror-opts` включает tlsmirror. TLS carrier, используемый tlsmirror, берет `servername`, `alpn`, `skip-cert-verify`, `fingerprint`, `certificate`, `private-key`, `client-fingerprint` и `ech-opts` из того же outbound. Если `servername` пустой, используется `server`.
+Когда `tls` установлен в `true`, наличие `tlsmirror-opts` включает tlsmirror. TLS carrier, используемый tlsmirror, берет `servername`, `alpn`, `skip-cert-verify`, `name-cert-verify`, `fingerprint`, `certificate`, `private-key`, `client-fingerprint` и `ech-opts` из того же outbound. Если `servername` пустой, используется `server`.
 
 !!! note
     Сейчас включение tlsmirror поддерживает только VMess. Не используйте его с другими протоколами.

@@ -91,9 +91,26 @@ listeners:
   #     - name: shadow-tls-user
   #       password: shadow-tls-password
   #   handshake:
-  #     dest: [www.example.com:443](https://www.example.com:443)
+  #     dest: www.example.com:443
   #     # proxy: ""
-    ### NOTE: For vless listener, if "allow-insecure" is not true, at least one of "certificate and private-key" or "shadow-tls" or "jls-config" or "reality-config" or "decryption" must be filled in ###
+  # res-tls:
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
+  # jls-config: # JLS replaces standard TLS; unauthenticated connections fall back to dest
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # inferred from dest when empty
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # fallback forwarding rate limit in bit/s; 0 means unlimited
+  ### NOTE: For vless listener, if "allow-insecure" is not true, at least one of "certificate and private-key" or "shadow-tls" or "res-tls" or "jls-config" or "reality-config" or "decryption" must be filled in ###
   # allow-insecure: false # whether to allow disabling TLS encryption (NOTE: only used when upstreamed by nginx, caddy, etc.)
   # mux-option:
   #   padding: true

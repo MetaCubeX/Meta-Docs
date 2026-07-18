@@ -8,15 +8,15 @@ proxies:
   type: shadowquic
   username: username
   password: password
-  # ip: 127.0.0.1
-  # quic-versions: [v1]
-  # udp-over-stream: false
+  # sni: example.com
+  # alpn: [h3]
+  # quic-versions: [v1] # 支持 v1/v2，默认 v1
+  # udp-over-stream: false # UDP over stream，默认 false
   # zero-rtt: false
   # keep-alive-interval: 10000
   # congestion-controller: cubic
   # up: 100 Mbps 
   # down: 100 Mbps
-  # ignore-client-bandwidth: false 
   # cwnd: 32
   # bbr-profile: "standard"
   # max-datagram-frame-size: 1400
@@ -39,9 +39,13 @@ proxies:
 
 必须，用于 ShadowQUIC 的认证密码
 
-## ip
+## sni
 
-可选，用于覆盖“server”选项中设置的服务器地址的 DNS 查找结果
+可选，ShadowQUIC TLS 握手使用的 SNI
+
+## alpn
+
+可选，应用层协议协商列表，默认使用 `h3`
 
 ## quic-versions
 
@@ -73,10 +77,6 @@ proxies:
 ## down
 
 可选，设置客户端请求的下载速度，单位支持 Mbps，受接收端上传速度上限限制。填入此项将启用 Brutal 拥塞控制算法；需要通信两端均为 mihomo 且运行 ShadowQUIC
-
-## ignore-client-bandwidth
-
-可选，用于 Brutal 算法。设置是否忽略客户端出站的 `down` 带宽限制，而转为使用入站监听器（listener）的 `down` 限制或自动配置，默认为 `false`
 
 ## cwnd
 

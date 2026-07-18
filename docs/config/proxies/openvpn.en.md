@@ -32,6 +32,10 @@ proxies:
     #  -----BEGIN OpenVPN Static key V1-----
     #  ...
     #  -----END OpenVPN Static key V1-----
+    # tls-crypt-v2: |
+    #  -----BEGIN OpenVPN tls-crypt-v2 client key-----
+    #  ...
+    #  -----END OpenVPN tls-crypt-v2 client key-----
     # peer-info:
     #   IV_HWADDR: "52:54:00:ff:72:87"
     #   UV_DEVICE_ID: "laptop-001"
@@ -86,7 +90,7 @@ Optional, protocol type. Supports `udp` or `tcp`. Defaults to `udp`.
 
 ## tls-auth
 
-**Optional**, copy from the `<tls-auth>` tag in the `.ovpn` file. **Mutually exclusive with `tls-crypt`**.
+**Optional**, copy from the `<tls-auth>` tag in the `.ovpn` file. **Mutually exclusive with `tls-crypt` / `tls-crypt-v2`**.
 
 ## key-direction
 
@@ -94,7 +98,11 @@ Optional, protocol type. Supports `udp` or `tcp`. Defaults to `udp`.
 
 ## tls-crypt
 
-**Optional**, TLS encryption key. Copy this from the `<tls-crypt>` tag in your `.ovpn` file; do not include the tags themselves.
+**Optional**, TLS encryption key. Copy this from the `<tls-crypt>` tag in your `.ovpn` file; do not include the tags themselves. **Mutually exclusive with `tls-auth` / `tls-crypt-v2`**.
+
+## tls-crypt-v2
+
+**Optional**, copy the client key from the `<tls-crypt-v2>` tag in your `.ovpn` file; do not include the tags themselves. **Mutually exclusive with `tls-auth` / `tls-crypt`**.
 
 ## ping
 

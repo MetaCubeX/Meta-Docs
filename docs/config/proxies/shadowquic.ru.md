@@ -8,15 +8,15 @@ proxies:
   type: shadowquic
   username: username
   password: password
-  # ip: 127.0.0.1
-  # quic-versions: [v1]
-  # udp-over-stream: false
+  # sni: example.com
+  # alpn: [h3]
+  # quic-versions: [v1] # поддерживает v1/v2, по умолчанию v1
+  # udp-over-stream: false # UDP over stream, по умолчанию false
   # zero-rtt: false
   # keep-alive-interval: 10000
   # congestion-controller: cubic
   # up: 100 Mbps
   # down: 100 Mbps
-  # ignore-client-bandwidth: false
   # cwnd: 32
   # bbr-profile: "standard"
   # max-datagram-frame-size: 1400
@@ -39,9 +39,13 @@ proxies:
 
 **Обязательно**, пароль для аутентификации ShadowQUIC.
 
-## ip
+## sni
 
-**Необязательно**, используется для переопределения результатов DNS-запроса адреса сервера, указанного в опции «server».
+**Необязательно**, SNI для TLS-рукопожатия ShadowQUIC.
+
+## alpn
+
+**Необязательно**, список согласования протоколов прикладного уровня. По умолчанию используется `h3`.
 
 ## quic-versions
 
@@ -73,10 +77,6 @@ proxies:
 ## down
 
 **Необязательно**, задает запрашиваемую клиентом скорость скачивания, поддерживаются единицы `Mbps`, ограничивается скоростью отдачи принимающей стороны. Заполнение этого поля включает алгоритм управления перегрузкой Brutal; требуется использование mihomo ShadowQUIC на обоих концах соединения.
-
-## ignore-client-bandwidth
-
-**Необязательно**, используется для алгоритма Brutal. Указывает, следует ли игнорировать ограничение исходящей скорости скачивания (`down`) клиента и использовать вместо него ограничение входящего слушателя (listener `down`) или автоматическую настройку. По умолчанию `false`.
 
 ## cwnd
 

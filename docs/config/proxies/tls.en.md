@@ -26,6 +26,9 @@ proxies:
   shadow-tls-opts: 
     version: 3 
     password: shadow-tls-password
+  restls-opts:
+    password: restls-password
+    version-hint: tls13
   jls-opts:
     username: jls-user
     password: jls-password
@@ -169,13 +172,41 @@ Requires `tls: true`. Uses `sni` / `servername` from the general configuration a
 
 Supports `v1` / `v2` / `v3`. Defaults to `v2` if left empty.
 
+### shadow-tls-opts.password
+
+ShadowTLS password.
+
+## restls-opts
+
+Requires `tls: true`. Uses `sni` / `servername` from the general configuration as the Restls SNI.
+
+### restls-opts.password
+
+Restls password.
+
+### restls-opts.version-hint
+
+TLS version hint. Available values: `tls12` / `tls13`.
+
+### restls-opts.restls-script
+
+Optional Restls carrier traffic script after the handshake.
+
 ## jls-opts
 
 Requires `tls: true`. Uses `sni` / `servername` from the general configuration as the JLS SNI.
 
+### jls-opts.username
+
+JLS username.
+
+### jls-opts.password
+
+JLS password.
+
 ## tlsmirror-opts
 
-When `tls` is `true`, configuring `tlsmirror-opts` enables tlsmirror. The TLS carrier used by tlsmirror uses `servername`, `alpn`, `skip-cert-verify`, `fingerprint`, `certificate`, `private-key`, `client-fingerprint`, and `ech-opts` from the same outbound. If `servername` is empty, `server` is used.
+When `tls` is `true`, configuring `tlsmirror-opts` enables tlsmirror. The TLS carrier used by tlsmirror uses `servername`, `alpn`, `skip-cert-verify`, `name-cert-verify`, `fingerprint`, `certificate`, `private-key`, `client-fingerprint`, and `ech-opts` from the same outbound. If `servername` is empty, `server` is used.
 
 !!! note
     Currently, only VMess supports enabling tlsmirror. Do not use it with other protocols.

@@ -57,16 +57,33 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  # jls-config: # JLS 替代普通 TLS；未认证连接回落到 dest
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # 留空时从 dest 推导
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # fallback 转发限速，单位 bit/s；0 表示不限速
   # shadow-tls:
-    #   enable: true
-    #   version: 3 # 支持 v1/v2/v3
-    #   # password: shadow-tls-password # v2 配置项
-    #   users: # v3 配置项
-    #     - name: shadow-tls-user
-    #       password: shadow-tls-password
-    #   handshake:
-    #     dest: www.example.com:443
-    #     # proxy: ""
+  #   enable: true
+  #   version: 3 # 支持 v1/v2/v3
+  #   # password: shadow-tls-password # v2 配置项
+  #   users: # v3 配置项
+  #     - name: shadow-tls-user
+  #       password: shadow-tls-password
+  #   handshake:
+  #     dest: www.example.com:443
+  #     # proxy: ""
+  # res-tls:
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
   # 如果填写reality-config则开启reality（注意不可与certificate和private-key同时填写）
   # reality-config:
   #   dest: test.com:443

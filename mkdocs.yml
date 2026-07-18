@@ -257,6 +257,7 @@ nav:
         - Sudoku: config/inbound/listeners/sudoku.md
         - TUIC v4: config/inbound/listeners/tuic-v4.md
         - TUIC v5: config/inbound/listeners/tuic-v5.md
+        - ShadowQUIC: config/inbound/listeners/shadowquic.md
         - Hysteria2: config/inbound/listeners/hysteria2.md
         - Hysteria2 Realm: config/inbound/listeners/hysteria2-realm.md
         - TrustTunnel: config/inbound/listeners/trusttunnel.md

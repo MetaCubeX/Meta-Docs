@@ -11,6 +11,7 @@ proxies:
   # tls: true
   # fingerprint: xxxx
   # skip-cert-verify: true
+  # name-cert-verify: example.com
   # udp: true
   # ip-version: ipv6
 ```

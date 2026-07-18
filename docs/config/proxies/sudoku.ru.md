@@ -13,12 +13,14 @@ proxies:
     table-type: prefer_ascii
     # custom-table: xpxvvpvv
     # custom-tables: ["xpxvvpvv", "vxpvxvvp"]
-    http-mask: true
-    # http-mask-mode: legacy
-    # http-mask-tls: true
-    # http-mask-host: ""
-    # path-root: ""
-    # http-mask-multiplex: off
+    # multiplex: "off"
+    httpmask:
+      disable: false
+      mode: legacy
+      tls: true
+      mask-host: ""
+      path-root: ""
+      multiplex: off
     enable-pure-downlink: false
 ```
 
@@ -52,29 +54,33 @@ proxies:
 
 Опционально, список пользовательских раскладок байтов (x/v/p) для ротации в режиме xvp; при наличии переопределяет custom-table
 
-## http-mask
+## multiplex
+
+Необязательно: `off` (по умолчанию), `auto` (повторно использует только нижележащее соединение HTTPMask), `on` (включает Sudoku mux с несколькими целями в одном сеансе поверх raw TCP или HTTPMask).
+
+## httpmask.disable
 
 Включить ли HTTP маску
 
-## http-mask-mode
+## httpmask.mode
 
 Опционально: legacy (по умолчанию), stream, poll, auto; stream/poll/auto поддерживают работу через CDN/прокси
 
-## http-mask-tls
+## httpmask.tls
 
 Опционально: действует только при http-mask-mode в режиме stream/poll/auto; true принудительно включает https; false принудительно включает http (не определяется автоматически по порту)
 
-## http-mask-host
+## httpmask.host
 
 Опционально: переопределяет Host/SNI (поддерживает example.com или example.com:443); действует только при http-mask-mode в режиме stream/poll/auto
 
-## path-root
+## httpmask.path-root
 
 Опционально: префикс пути первого уровня для HTTP туннеля (должен совпадать на обеих сторонах), например "aabbcc" => /aabbcc/session, /aabbcc/stream, /aabbcc/api/v1/upload
 
-## http-mask-multiplex
+## httpmask.multiplex
 
-Опционально: off (по умолчанию), auto (переиспользование h1.1 keep-alive / h2 соединений для уменьшения RTT при каждом установлении соединения), on (мультиплексирование нескольких целевых соединений в одном туннеле; действует только при http-mask-mode=stream/poll/auto)
+Параметр для совместимости со старой конфигурацией. Если задан, имеет приоритет над верхнеуровневым `multiplex`.
 
 ## enable-pure-downlink
 

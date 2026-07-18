@@ -105,6 +105,7 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
           # 配置指纹将实现 SSL Pining 效果
           # fingerprint: xxxx
           # skip-cert-verify: true
+          # name-cert-verify: example.com
           # host: bing.com
           # path: "/"
           # mux: true
@@ -123,6 +124,7 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
           # 配置指纹将实现 SSL Pining 效果
           # fingerprint: xxxx
           # skip-cert-verify: true
+          # name-cert-verify: example.com
           # host: bing.com
           # path: "/"
           # mux: true

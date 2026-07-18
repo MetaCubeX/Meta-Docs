@@ -27,8 +27,9 @@ listeners:
   #      - stun.sip.us:3478
   #      - global.stun.twilio.com:3478
   #    # proxy: DIRECT # 设置server-url通过哪个代理进行连接
-  #    # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #    # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, name-cert-verify, fingerprint, certificate, private-key, alpn)
   #    # skip-cert-verify： false
+  #    # name-cert-verify: example.com
   #    # ......
   alpn:
   - h3

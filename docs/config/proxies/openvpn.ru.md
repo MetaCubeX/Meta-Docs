@@ -32,6 +32,10 @@ proxies:
     #  -----BEGIN OpenVPN Static key V1-----
     #  ...
     #  -----END OpenVPN Static key V1-----
+    # tls-crypt-v2: |
+    #  -----BEGIN OpenVPN tls-crypt-v2 client key-----
+    #  ...
+    #  -----END OpenVPN tls-crypt-v2 client key-----
     # peer-info:
     #   IV_HWADDR: "52:54:00:ff:72:87"
     #   UV_DEVICE_ID: "laptop-001"
@@ -86,7 +90,7 @@ proxies:
 
 ## tls-auth
 
-**Необязательно**, скопируйте из тега `<tls-auth>` в файле `.ovpn`. **Взаимоисключающий с `tls-crypt`**.
+**Необязательно**, скопируйте из тега `<tls-auth>` в файле `.ovpn`. **Взаимоисключающий с `tls-crypt` / `tls-crypt-v2`**.
 
 ## key-direction
 
@@ -94,7 +98,11 @@ proxies:
 
 ## tls-crypt
 
-**Опционально**, ключ шифрования TLS. Скопируйте содержимое тега `<tls-crypt>` из вашего `.ovpn` файла (сами теги копировать не нужно).
+**Опционально**, ключ шифрования TLS. Скопируйте содержимое тега `<tls-crypt>` из вашего `.ovpn` файла (сами теги копировать не нужно). **Взаимоисключающий с `tls-auth` / `tls-crypt-v2`**.
+
+## tls-crypt-v2
+
+**Опционально**, скопируйте клиентский ключ из тега `<tls-crypt-v2>` в файле `.ovpn` (сами теги копировать не нужно). **Взаимоисключающий с `tls-auth` / `tls-crypt`**.
 
 ## ping
 

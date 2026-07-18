@@ -32,6 +32,7 @@ proxy-providers:
       down: "50 Mbps"
       up: "10 Mbps"
       skip-cert-verify: true
+      name-cert-verify: example.com
       dialer-proxy: proxy
       interface-name: tailscale0
       routing-mark: 233
@@ -196,6 +197,8 @@ Refer to `Hysteria`/`Hysteria2` [down](../proxies/hysteria2.md#updown).
 
 Refer to common fields [skip-cert-verify](../proxies/tls.md#skip-cert-verify).
 
+Refer to common fields [name-cert-verify](../proxies/tls.md#name-cert-verify).
+
 Refer to common fields [dialer-proxy](../proxies/index.md#dialer-proxy).
 
 Refer to common fields [interface-name](../proxies/index.md#interface-name).
@@ -207,6 +210,12 @@ Refer to common fields [ip-version](../proxies/index.md#ip-version).
 ## override.override-expr
 
 This is a `yq v4` style subset for expression-based configuration overrides. The array items are executed sequentially and take effect after the fixed-field overrides mentioned above (such as `udp: true`, etc.).
+
+Supported path forms include `.`, `.name`, `."a.b"`, `.["a.b"]`, `.items[0]`, and `.items[-1]`; `[]` can traverse arrays or mappings. Assignment creates missing mappings and non-negative array indexes, but does not update through scalars.
+
+Supported operations include `=`, `|=`, `+=`, `-=`, `*=`, `del(.field)`, pipeline `|`, comma union, `select`, the `//` default operator, common comparisons, and boolean operations. Values support `null` / `~`, booleans, decimal/hex integers, floats, double-quoted strings, arrays, and mappings with double-quoted keys.
+
+Supported functions include `length`, `keys`, `has`, `contains`, `select`, `reverse`, `sort`, `unique`, `flatten`, `any`, `all`, `map`, `map_values`, `filter`, `to_entries`, `from_entries`, `with_entries`, `any_c`, `all_c`, `test`, `sub`, `split`, `join`, `upcase`, `downcase`, `trim`, `tostring`, `tonumber`, `type`, and `not`.
 
 !!! warning "Limitations & Notes"
     * Each item must ultimately produce exactly one mapping. Uncollected multiple results and `del(.)` are not supported.

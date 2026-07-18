@@ -68,6 +68,23 @@ listeners:
   #   handshake:
   #     dest: www.example.com:443
   #     # proxy: ""
+  # jls-config: # JLS заменяет обычный TLS; неавторизованные соединения перенаправляются на dest
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # Если пусто, выводится из dest
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # Ограничение скорости fallback-пересылки, bit/s; 0 означает без ограничения
+  # res-tls:
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
   # reality-config:
   #   dest: test.com:443
   #   private-key: jNXHt1yRo0vDuchQlIP6Z0ZvjT3KtzVI-T4E7RoLJS0 # можно сгенерировать командой mihomo generate reality-keypair

@@ -32,6 +32,7 @@ proxy-providers:
       down: "50 Mbps"
       up: "10 Mbps"
       skip-cert-verify: true
+      name-cert-verify: example.com
       dialer-proxy: proxy
       interface-name: tailscale0
       routing-mark: 233
@@ -195,6 +196,8 @@ proxy-providers:
 
 参阅通用字段  [skip-cert-verify](../proxies/tls.md#skip-cert-verify)
 
+参阅通用字段  [name-cert-verify](../proxies/tls.md#name-cert-verify)
+
 参阅通用字段  [dialer-proxy](../proxies/index.md#dialer-proxy)
 
 参阅通用字段  [interface-name](../proxies/index.md#interface-name)
@@ -206,6 +209,12 @@ proxy-providers:
 ## override.override-expr
 
 这是一个基于 yq v4 风格的表达式配置覆盖子集。数组项按顺序执行，且生效时间晚于上面介绍的固定字段覆盖（如 `udp: true` 等）。
+
+支持的路径形式包括 `.`, `.name`, `."a.b"`, `.["a.b"]`, `.items[0]`, `.items[-1]`，`[]` 可遍历数组或 mapping。赋值会创建缺失的 mapping 和非负数组索引，但不会穿过标量更新。
+
+支持的操作包括 `=`、`|=`、`+=`、`-=`、`*=`、`del(.field)`、管道 `|`、逗号 union、`select`、`//` 默认值运算，以及常见比较和布尔运算。值支持 `null` / `~`、布尔值、十进制/十六进制整数、浮点数、双引号字符串、数组和双引号键的 mapping。
+
+支持的函数包括 `length`、`keys`、`has`、`contains`、`select`、`reverse`、`sort`、`unique`、`flatten`、`any`、`all`、`map`、`map_values`、`filter`、`to_entries`、`from_entries`、`with_entries`、`any_c`、`all_c`、`test`、`sub`、`split`、`join`、`upcase`、`downcase`、`trim`、`tostring`、`tonumber`、`type` 和 `not`。
 
 !!! warning "限制与注意事项"
     * 每一项最终必须恰好产生一个 mapping。未收集的多结果及 del(.) 不受支持。
