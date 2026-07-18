@@ -107,6 +107,14 @@ Optional, virtual network interface type. Currently only `tun` is supported. Def
 
 Optional, encryption method. Supports `AES-128-GCM` / `AES-256-GCM` / `AES-128-CBC` / `AES-256-CBC` / `CHACHA20-POLY1305`. Defaults to `AES-128-GCM`. `AES-CBC` will be treated as `AES-128-CBC`.
 
+## data-ciphers
+
+Optional, data channel cipher negotiation list, sends IV_CIPHERS to the server; the cipher list pushed by the server is intersected with the local list, and the first matching item is selected.
+
+## data-ciphers-fallback
+
+Optional, fallback cipher when negotiation fails (corresponds to --data-ciphers-fallback)
+
 ## auth
 
 Optional, data authentication algorithm. Supports `MD5` /`SHA1` / `SHA256`/ `SHA384` / `SHA512`. Defaults to `SHA256`. AEAD ciphers will ignore the auth configuration.
