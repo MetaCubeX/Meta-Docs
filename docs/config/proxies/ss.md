@@ -81,7 +81,7 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
 
 ### plugin
 
-插件，支持 `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`
+插件，支持 `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`/`jls`
 
 ### plugin-opts
 
@@ -184,4 +184,15 @@ UDP over TCP 的协议版本，默认 1。可选值 1/2。
         framesize: 8192 # smux max frame size
         streambuf: 2097152 # per stream receive buffer in bytes, smux v2+
         keepalive: 10 # seconds between heartbeats
+    ```
+
+=== "jls"
+    ```{.yaml linenums="1"}
+    plugin: jls
+    client-fingerprint: chrome
+    plugin-opts:
+      host: "www.example.com"
+      username: "jls-user"
+      password: "jls-password"
+      # alpn: [h2, http/1.1]
     ```

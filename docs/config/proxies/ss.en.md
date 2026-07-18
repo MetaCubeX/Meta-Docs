@@ -81,7 +81,7 @@ Protocol version for UDP over TCP. Default: `1`. Available values: `1`/`2`.
 
 ### plugin
 
-Plugin. Supports `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`.
+Plugin. Supports `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`/`jls`.
 
 ### plugin-opts
 
@@ -182,4 +182,15 @@ Plugin settings.
         framesize: 8192 # smux max frame size
         streambuf: 2097152 # per stream receive buffer in bytes, smux v2+
         keepalive: 10 # seconds between heartbeats
+    ```
+
+=== "jls"
+    ```{.yaml linenums="1"}
+    plugin: jls
+    client-fingerprint: chrome
+    plugin-opts:
+      host: "www.example.com"
+      username: "jls-user"
+      password: "jls-password"
+      # alpn: [h2, http/1.1]
     ```
