@@ -26,6 +26,7 @@ listeners:
     #   enable: false
     #   dest: test.com:443
     #   password: restls-password
+    #   rate-limit: 0 # Ограничение скорости двусторонней передачи для fallback, в бит/с; 0 — без ограничений.  
     # jls-config:
     #   enable: false
     #   users:
