@@ -44,6 +44,7 @@ listeners:
   #   # restls-script: ""
   #   # min-record-len: 0
   #   # proxy: ""
+  #   # rate-limit: 0 # Ограничение скорости двусторонней передачи для fallback, в бит/с; 0 — без ограничений.
   # jls-config: # JLS заменяет обычный TLS; неавторизованные соединения перенаправляются на dest
   #   enable: true
   #   users:
