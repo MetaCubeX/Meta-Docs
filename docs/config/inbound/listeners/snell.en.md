@@ -26,6 +26,7 @@ listeners:
     #   enable: false
     #   dest: test.com:443
     #   password: restls-password
+    #   rate-limit: 0 # Bidirectional forwarding rate limit for fallback, in bit/s; 0 means unlimited.
     # jls-config:
     #   enable: false
     #   users:
