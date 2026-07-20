@@ -29,6 +29,7 @@ listeners:
   #   restls-script: ""
   #   min-record-len: 0
   #   proxy: ""
+  #   rate-limit: 0 # Bidirectional rate limit for fallback traffic, in bit/s. A value of 0 disables rate limiting.  
   # jls-config: # Wraps TCP only; failed JLS authentication and regular TLS connections transparently fall back to dest
   #   enable: false
   #   users:

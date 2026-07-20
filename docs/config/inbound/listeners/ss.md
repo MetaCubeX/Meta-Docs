@@ -29,6 +29,7 @@ listeners:
   #   restls-script: ""
   #   min-record-len: 0
   #   proxy: ""
+  #   rate-limit: 0 # fallback 双向转发限速，单位 bit/s；0 表示不限速
   # jls-config: # 仅封装 TCP；JLS 认证失败或普通 TLS 连接会透明回落到 dest
   #   enable: false
   #   users:

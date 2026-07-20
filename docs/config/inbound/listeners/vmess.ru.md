@@ -84,6 +84,7 @@ listeners:
   #   # restls-script: ""
   #   # min-record-len: 0
   #   # proxy: ""
+  #   # rate-limit: 0 # Ограничение скорости двусторонней передачи для fallback, в бит/с; 0 — без ограничений.
   # если заполнен reality-config, то включается reality (не может использоваться одновременно с certificate и private-key)
   # reality-config:
   #   dest: test.com:443

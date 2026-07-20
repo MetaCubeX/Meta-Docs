@@ -84,6 +84,7 @@ listeners:
   #   # restls-script: ""
   #   # min-record-len: 0
   #   # proxy: ""
+  #   # rate-limit: 0 # fallback 双向转发限速，单位 bit/s；0 表示不限速
   # 如果填写reality-config则开启reality（注意不可与certificate和private-key同时填写）
   # reality-config:
   #   dest: test.com:443
