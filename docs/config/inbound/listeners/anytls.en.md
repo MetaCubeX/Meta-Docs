@@ -40,6 +40,7 @@ listeners:
   #   # restls-script: ""
   #   # min-record-len: 0
   #   # proxy: ""
+  #   # rate-limit: 0 # Bidirectional forwarding rate limit for fallback, in bit/s; 0 means unlimited.
   # jls-config: # JLS replaces standard TLS; unauthenticated connections fall back to dest
   #   enable: true
   #   users:
