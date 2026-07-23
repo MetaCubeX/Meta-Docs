@@ -17,7 +17,6 @@ listeners:
     # sni: example.com
     # proxy: proxy
     # rate-limit: 0
-    # quic-version-probe: false
   # alpn:
   #   - h3
   # quic-versions: [v1]
@@ -69,17 +68,13 @@ listeners:
 
 Ограничение скорости пересылки в bit/s. `0` означает без ограничения.
 
-### jls-upstream.quic-version-probe
-
-Проверять версию QUIC маскирующего upstream при первом соединении.
-
 ## alpn
 
 Список согласования протоколов прикладного уровня.
 
 ## quic-versions
 
-Локально заданная версия и fallback при ошибке проверки. Поддерживает `v1` / `v2`.
+Версии QUIC, поддерживаемые локальным узлом; поддерживаются `v1` / `v2`.
 
 ## zero-rtt
 

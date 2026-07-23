@@ -17,7 +17,6 @@ listeners:
     # sni: example.com
     # proxy: proxy
     # rate-limit: 0
-    # quic-version-probe: false
   # alpn:
   #   - h3
   # quic-versions: [v1]
@@ -69,17 +68,13 @@ Proxy used for the camouflage upstream.
 
 Forwarding rate limit in bit/s. `0` means unlimited.
 
-### jls-upstream.quic-version-probe
-
-Probe the camouflage upstream QUIC version on the first connection.
-
 ## alpn
 
 Application-layer protocol negotiation list.
 
 ## quic-versions
 
-Local manual version and fallback when probing fails. Supports `v1` / `v2`.
+QUIC versions supported by the local host; supports `v1` / `v2`.
 
 ## zero-rtt
 

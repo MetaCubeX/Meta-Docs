@@ -17,7 +17,6 @@ listeners:
     # sni: example.com
     # proxy: proxy
     # rate-limit: 0
-    # quic-version-probe: false
   # alpn:
   #   - h3
   # quic-versions: [v1]
@@ -69,17 +68,13 @@ JLS 伪装目标 SNI，留空时从 `addr` 推导。
 
 转发限速，单位 bit/s，`0` 表示不限速。
 
-### jls-upstream.quic-version-probe
-
-在首次连接时探测伪装上游版本。
-
 ## alpn
 
 应用层协议协商列表。
 
 ## quic-versions
 
-本机手动配置及探测失败时的版本，支持 `v1` / `v2`。
+本机支持的 QUIC 版本；支持 `v1` / `v2`。
 
 ## zero-rtt
 
