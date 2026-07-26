@@ -38,7 +38,7 @@ proxies:
   #   h3: 123123                                        # AmneziaWG v1.0/v1.5 仅支持单个数值；v2+ 还支持范围值
   #   h4: 32345                                         # AmneziaWG v1.0/v1.5 仅支持单个数值；v2+ 还支持范围值
   #   i1: <b 0xf6ab3267fa><b 0xf6ab><t><r 10>           # AmneziaWG v1.5+
-  #   i2: <b 0xf6ab3267fa><r 100>                        # AmneziaWG v1.5+
+  #   i2: <b 0xf6ab3267fa><r 100>                       # AmneziaWG v1.5+
   #   i3: ""                                            # AmneziaWG v1.5+
   #   i4: ""                                            # AmneziaWG v1.5+
   #   i5: ""                                            # AmneziaWG v1.5+
