@@ -24,8 +24,7 @@ proxies:
   # remote-dns-resolve: true # Force remote DNS resolution, default is false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # Effective only when remote-dns-resolve is true
   # If present, enables AmneziaWG functionality
-  # amnezia-wg-option:
-  
+  # amnezia-wg-option: 
   #   version: 2                                        # Only version 3 uses the v3 implementation; all other values use the legacy implementation
   #   jc: 5                                             # AmneziaWG v1.0+
   #   jmin: 500                                         # AmneziaWG v1.0+
