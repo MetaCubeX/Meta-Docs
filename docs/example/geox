@@ -38,7 +38,6 @@ geox-url:
   asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
 
 find-process-mode: strict
-global-client-fingerprint: chrome
 
 profile:
   store-selected: true
