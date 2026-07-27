@@ -244,9 +244,7 @@
         external-ui: ui
         external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
         
-        find-process-mode: strict
-        global-client-fingerprint: chrome
-        
+        find-process-mode: strict        
         profile:
           store-selected: true
           store-fake-ip: true
