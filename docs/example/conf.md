@@ -39,10 +39,8 @@
           geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
           mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
           asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
-
         find-process-mode: strict
-        global-client-fingerprint: chrome
-
+        
         profile:
           store-selected: true
           store-fake-ip: true
