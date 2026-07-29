@@ -62,6 +62,8 @@ listeners:
   #     - 0123456789abcdef
   #   server-names:
   #     - test.com
+  #   # max-time-difference: 0 # in microseconds
+  #   # proxy: ""
   #   # the following two limits are optional, used to rate-limit fallback connections that fail verification, bytesPerSec defaults to 0 which means disabled
   #   # fallback rate limiting is a fingerprint feature and is not recommended; if you are a panel/one-click script developer, make sure to randomize these parameters
   #   limit-fallback-upload:
