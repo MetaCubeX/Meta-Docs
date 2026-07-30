@@ -25,7 +25,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
-|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 
 ## MacOS
 
@@ -49,7 +49,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|Maintained |
-|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
 
 ## Linux
@@ -71,7 +71,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
-|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source;build is not reproducible |
 
 ## Android
@@ -80,7 +80,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |:----|:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
-|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|Maintained | Closed-source;  |
+|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|Maintained | Closed-source  |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|Maintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
