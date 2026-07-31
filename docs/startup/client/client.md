@@ -49,6 +49,7 @@
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|维护中 |
+|[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|维护中 |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|维护中 | 不开源 |
 
