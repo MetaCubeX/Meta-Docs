@@ -49,6 +49,7 @@
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|поддерживается |
+|[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
 
