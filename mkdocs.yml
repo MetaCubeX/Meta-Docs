@@ -289,6 +289,7 @@ nav:
       - ShadowQUIC: config/proxies/shadowquic.md
       - WireGuard: config/proxies/wg.md
       - Tailscale: config/proxies/tailscale.md
+      - ZeroTier: config/proxies/zerotier.md
       - SSH: config/proxies/ssh.md
       - MASQUE: config/proxies/masque.md
       - TrustTunnel: config/proxies/trusttunnel.md

@@ -90,15 +90,15 @@ Snell 混淆域名
 
 ### obfs-opts.password
 
-shadow-tls密码，仅使用shadow-tls时需填写
+shadow-tls 密码，仅使用 shadow-tls 时需填写
 
 ### obfs-opts.version
 
-shadow-tls版本，支持v1/2/3，仅使用shadow-tls时需填写
+shadow-tls 版本，支持 v1/2/3，仅使用 shadow-tls 时需填写
 
 ### obfs-opts.alpn
 
-支持 h2 和 http1.1，仅使用shadow-tls时需填写
+支持 h2 和 http1.1，仅使用 shadow-tls 时需填写
 
 ### obfs-opts.username
 
