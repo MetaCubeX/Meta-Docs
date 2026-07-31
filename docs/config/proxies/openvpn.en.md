@@ -7,52 +7,13 @@ proxies:
     server: vpn.example.com
     port: 1194
     proto: udp
-    # auth-user-pass mode
     username: "user"
     password: "pass"
-    # Certificate mode (Alternative to the above)
-    # cert: |
-    #   -----BEGIN CERTIFICATE-----
-    #   ...
-    #   -----END CERTIFICATE-----
-    # key: |
-    #   -----BEGIN PRIVATE KEY-----
-    #   ...
-    #   -----END PRIVATE KEY-----
-    # tls-auth: |
-    #   -----BEGIN OpenVPN Static key V1-----
-    #   ...
-    #   -----END OpenVPN Static key V1-----
-    # key-direction: "1"
     ca: |
       -----BEGIN CERTIFICATE-----
       MIIB...example
       -----END CERTIFICATE-----
-    # tls-crypt: |
-    #  -----BEGIN OpenVPN Static key V1-----
-    #  ...
-    #  -----END OpenVPN Static key V1-----
-    # tls-crypt-v2: |
-    #  -----BEGIN OpenVPN tls-crypt-v2 client key-----
-    #  ...
-    #  -----END OpenVPN tls-crypt-v2 client key-----
-    # peer-info:
-    #   IV_HWADDR: "52:54:00:ff:72:87"
-    #   UV_DEVICE_ID: "laptop-001"
-    # ping: 10
-    # ping-restart: 60
-    # handshake-timeout: 30
-    # dev: tun
-    # cipher: AES-128-GCM
-    # data-ciphers: [AES-256-GCM, AES-128-GCM]
-    # data-ciphers-fallback: AES-128-CBC
-    # auth: SHA256
-    # comp-lzo: "no"
     udp: true
-    # mtu: 1500
-    # dialer-proxy: "ss1"
-    # remote-dns-resolve: true
-    # dns: [ 1.1.1.1, 8.8.8.8 ]
 
 ```
 

@@ -10,9 +10,6 @@ proxies:
     password: "password"
     obfs: tls1.2_ticket_auth
     protocol: auth_sha1_v4
-    # obfs-param: domain.tld
-    # protocol-param: "#"
-    # udp: true
 ```
 
 [Common fields](./index.md)

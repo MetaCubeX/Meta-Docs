@@ -2,7 +2,6 @@
 
 ```{.yaml linenums="1"}
 proxies:
-# masque
 - name: "masque"
   type: masque
   server: server.com
@@ -13,30 +12,16 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
-  # sni: example.com
-  # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接
-  # dialer-proxy: "ss1"
-  # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
-  # dns: [ 1.1.1.1, 8.8.8.8 ] # 仅在 remote-dns-resolve 为 true 时生效
-  # congestion-controller: bbr # 默认不开启
-  # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
-  # handshake-timeout: 30
 
-# masque-h3-l4proxy
 - name: "masque-h3-l4proxy"
   type: masque
   server: server.com
   port: 443
   private-key: BASE64_ENCODED_PRIVATE_KEY
   public-key: BASE64_ENCODED_PUBLIC_KEY
-  udp: false # 目前 l4proxy 模式不支持 udp
+  udp: false
   network: h3-l4proxy
-  # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
-  # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # 仅在 remote-dns-resolve 为 true 时生效
-  # congestion-controller: bbr # 默认不开启
-  # handshake-timeout: 30
 
-# masque-h2
 - name: "masque-h2"
   type: masque
   server: server.com
@@ -47,13 +32,7 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
-  # sni: example.com
   network: h2
-  # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接
-  # dialer-proxy: "ss1"
-  # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
-  # dns: [ 1.1.1.1, 8.8.8.8 ] # 仅在 remote-dns-resolve 为 true 时生效
-  # handshake-timeout: 30
 ```
 
 ## 获取 masque 配置

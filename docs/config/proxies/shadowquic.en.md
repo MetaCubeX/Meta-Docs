@@ -8,22 +8,6 @@ proxies:
   type: shadowquic
   username: username
   password: password
-  # sni: example.com
-  # alpn: [h3]
-  # quic-versions: [v1] # support v1/v2, default v1
-  # udp-over-stream: false # UDP over stream, default false
-  # zero-rtt: false
-  # keep-alive-interval: 10000
-  # congestion-controller: cubic
-  # up: 100 Mbps
-  # down: 100 Mbps
-  # cwnd: 32
-  # bbr-profile: "standard"
-  # max-datagram-frame-size: 1400
-  # max-open-streams: 1024
-  # recv-window-conn: 0
-  # recv-window: 0
-  # disable-mtu-discovery: false
 
 ```
 

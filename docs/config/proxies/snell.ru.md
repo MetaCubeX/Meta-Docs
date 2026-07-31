@@ -7,22 +7,12 @@ proxies:
   server: server
   port: 44046
   psk: yourpsk
-  # version: 4
-  # udp: true
-  # reuse: false
-  # obfs-opts:
-  #   mode: http
-  #   host: bing.com
 
 - name: "snell-shadow-tls"
   type: snell
   server: server
   port: 44046
   psk: yourpsk
-  # version: 4
-  # udp: true
-  # reuse: false
-  # client-fingerprint: chrome
   obfs-opts:
      mode: shadow-tls
      host: bing.com
@@ -35,8 +25,6 @@ proxies:
   server: server
   port: 44046
   psk: yourpsk
-  # version: 4
-  # client-fingerprint: chrome
   obfs-opts:
     mode: restls
     host: bing.com
@@ -48,8 +36,6 @@ proxies:
   server: server
   port: 44046
   psk: yourpsk
-  # version: 4
-  # client-fingerprint: chrome
   obfs-opts:
     mode: jls
     host: bing.com

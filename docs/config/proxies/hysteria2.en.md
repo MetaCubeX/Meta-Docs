@@ -13,35 +13,14 @@ proxies:
   password: yourpassword
   up: "30 Mbps"
   down: "200 Mbps"
-  # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
-  obfs: salamander # Defaults to empty. If filled, obfs will be enabled. Currently supports `salamander` and `gecko`.
+  obfs: salamander
   obfs-password: yourpassword
-  # obfs-min-packet-size: 512
-  # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
   name-cert-verify: example.com
-  fingerprint: xxxx # Configuring the fingerprint provides SSL pinning. Obtain it with: openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
+  fingerprint: xxxx
   alpn:
     - h3
-  # realm-opts:
-  #   enable: true # Must be turned on manually
-  #   server-url: https://realm.hy2.io
-  #   token: public
-  #   realm-id: my-cabin-1f3a8c2e9b
-  #   stun-servers:
-  #     - stun.nextcloud.com:3478
-  #     - stun.sip.us:3478
-  #     - global.stun.twilio.com:3478
-  #   # The following supports entering TLS configuration for the server-url (sni, skip-cert-verify, name-cert-verify, fingerprint, certificate, private-key, alpn)
-  #   # skip-cert-verify： false
-  #   # name-cert-verify: example.com
-  #   # ......
-  ###Special quic-go options. Do not modify them unless you know what you are doing.###
-  # initial-stream-receive-window： 8388608
-  # max-stream-receive-window： 8388608
-  # initial-connection-receive-window： 20971520
-  # max-connection-receive-window： 20971520
 ```
 
 [Common Fields](./index.md)

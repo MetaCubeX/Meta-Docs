@@ -79,15 +79,10 @@ proxies:
 
 ## Плагины
 
-### plugin
-
-Плагин, поддерживает `obfs`/`v2ray-plugin`/`gost-plugin`/`shadow-tls`/`restls`/`kcptun`/`jls`
-
-### plugin-opts
-
-Настройки плагина
+`plugin` задаёт тип плагина: `obfs`, `v2ray-plugin`, `gost-plugin`, `shadow-tls`, `restls`, `kcptun` или `jls`. `plugin-opts` содержит настройки выбранного плагина.
 
 === "obfs"
+
     ```{.yaml linenums="1"}
     plugin: obfs
     plugin-opts:
@@ -97,94 +92,137 @@ proxies:
 
 === "v2ray-plugin"
     ```{.yaml linenums="1"}
-      plugin: v2ray-plugin
-      plugin-opts:
-        mode: websocket # QUIC пока не поддерживается
-          # tls: true # wss
-          # Можно получить с помощью openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
-          # Настройка отпечатка реализует эффект SSL Pining
-          # fingerprint: xxxx
-          # skip-cert-verify: true
-          # name-cert-verify: example.com
-          # host: bing.com
-          # path: "/"
-          # mux: true
-          # headers:
-          #   custom: value
-          # v2ray-http-upgrade: false
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      tls: true
+      fingerprint: xxxx
+      skip-cert-verify: true
+      name-cert-verify: example.com
+      host: bing.com
+      path: "/"
+      mux: true
+      headers:
+        custom: value
+      v2ray-http-upgrade: false
     ```
+
+    `mode` фиксирован как `websocket`; QUIC пока не поддерживается.
+
+    - `tls`: включает WSS.
+    - `fingerprint`: SHA-256 отпечаток сертификата. Его можно получить командой `openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem`; при настройке включается SSL pinning.
+    - `skip-cert-verify`: отключает проверку сертификата.
+    - `name-cert-verify`: домен для проверки сертификата.
+    - `host`: WebSocket `Host`.
+    - `path`: путь WebSocket.
+    - `mux`: включает мультиплексирование.
+    - `headers`: пользовательские заголовки запроса WebSocket.
+    - `v2ray-http-upgrade`: включает V2Ray HTTP Upgrade.
 
 === "gost-plugin"
     ```{.yaml linenums="1"}
-      plugin: gost-plugin
-      plugin-opts:
-        mode: websocket
-          # tls: true # wss
-          # Можно получить с помощью openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
-          # Настройка отпечатка реализует эффект SSL Pining
-          # fingerprint: xxxx
-          # skip-cert-verify: true
-          # name-cert-verify: example.com
-          # host: bing.com
-          # path: "/"
-          # mux: true
-          # headers:
-          #   custom: value
+    plugin: gost-plugin
+    plugin-opts:
+      mode: websocket
+      tls: true
+      fingerprint: xxxx
+      skip-cert-verify: true
+      name-cert-verify: example.com
+      host: bing.com
+      path: "/"
+      mux: true
+      headers:
+        custom: value
     ```
+
+    - `tls`: включает WSS.
+    - `fingerprint`: SHA-256 отпечаток сертификата. Его можно получить командой `openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem`; при настройке включается SSL pinning.
+    - `skip-cert-verify`: отключает проверку сертификата.
+    - `name-cert-verify`: домен для проверки сертификата.
+    - `host`: WebSocket `Host`.
+    - `path`: путь WebSocket.
+    - `mux`: включает мультиплексирование.
+    - `headers`: пользовательские заголовки запроса WebSocket.
 
 === "shadow-tls"
     ```{.yaml linenums="1"}
-      plugin: shadow-tls
-      client-fingerprint: chrome
-      plugin-opts:
-        host: "cloud.tencent.com"
-        password: "shadow_tls_password"
-        version: 2 # поддерживает 1/2/3
+    plugin: shadow-tls
+    client-fingerprint: chrome
+    plugin-opts:
+      host: "cloud.tencent.com"
+      password: "shadow_tls_password"
+      version: 2
     ```
+
+    `version` поддерживает `1`, `2` и `3`.
 
 === "restls"
     ```{.yaml linenums="1"}
-      plugin: restls
-      client-fingerprint: chrome  # может быть одним из chrome, ios, firefox, safari
-      plugin-opts:
-        host: "www.microsoft.com" # должен быть сервер TLS 1.3
-        password: [YOUR_RESTLS_PASSWORD]
-        version-hint: "tls13"
-        # Управляйте своим трафиком после рукопожатия через restls-script
-        # Скрывайте поведение прокси, такое как "tls in tls".
-        # см. https://github.com/3andne/restls/blob/main/Restls-Script:%20Hide%20Your%20Proxy%20Traffic%20Behavior.md
-        restls-script: "300?100<1,400~100,350~100,600~100,300~200,300~100"
-    ``` 
+    plugin: restls
+    client-fingerprint: chrome
+    plugin-opts:
+      host: "www.microsoft.com"
+      password: [YOUR_RESTLS_PASSWORD]
+      version-hint: "tls13"
+      restls-script: "300?100<1,400~100,350~100,600~100,300~200,300~100"
+    ```
+
+    - `client-fingerprint`: `chrome`, `ios`, `firefox` или `safari`.
+    - `plugin-opts.host`: должен быть сервером TLS 1.3.
+    - `plugin-opts.restls-script`: управляет трафиком Restls после рукопожатия и скрывает признаки прокси, например «TLS в TLS»; см. [документацию скрипта](https://github.com/3andne/restls/blob/main/Restls-Script:%20Hide%20Your%20Proxy%20Traffic%20Behavior.md).
 
 === "kcptun"
     ```{.yaml linenums="1"}
-      plugin: kcptun
-      plugin-opts:
-        key: it's a secrect # предварительно согласованный секрет клиента и сервера
-        crypt: aes # aes, aes-128, aes-128-gcm, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none, null
-        mode: fast # профили: fast3, fast2, fast, normal, manual
-        conn: 1 # количество UDP-соединений с сервером
-        autoexpire: 0 # время автоматического истечения одного UDP-соединения, в секундах; 0 отключает
-        scavengettl: 600 # время жизни истекшего соединения, в секундах
-        mtu: 1350 # максимальная единица передачи для UDP-пакетов
-        ratelimit: 0 # максимальная исходящая скорость одного KCP-соединения, в байтах/с; 0 отключает. Также называется packet pacing
-        sndwnd: 128 # размер окна отправки, в пакетах
-        rcvwnd: 512 # размер окна приема, в пакетах
-        datashard: 10 # число блоков данных для кодирования Рида-Соломона
-        parityshard: 3 # число блоков четности для кодирования Рида-Соломона
-        dscp: 0 # значение DSCP, 6 бит
-        nocomp: false # отключить сжатие
-        acknodelay: false # немедленно отправлять ACK при получении пакета
-        nodelay: 0
-        interval: 50
-        resend: 0
-        sockbuf: 4194304 # буфер одного сокета, в байтах
-        smuxver: 1 # версия smux, возможные значения: 1, 2
-        smuxbuf: 4194304 # общий буфер демультиплексирования, в байтах
-        framesize: 8192 # максимальный размер кадра smux
-        streambuf: 2097152 # буфер приема одного потока, в байтах; smux v2+
-        keepalive: 10 # интервал между heartbeat-пакетами, в секундах
+    plugin: kcptun
+    plugin-opts:
+      key: it's a secrect
+      crypt: aes
+      mode: fast
+      conn: 1
+      autoexpire: 0
+      scavengettl: 600
+      mtu: 1350
+      ratelimit: 0
+      sndwnd: 128
+      rcvwnd: 512
+      datashard: 10
+      parityshard: 3
+      dscp: 0
+      nocomp: false
+      acknodelay: false
+      nodelay: 0
+      interval: 50
+      resend: 0
+      sockbuf: 4194304
+      smuxver: 1
+      smuxbuf: 4194304
+      framesize: 8192
+      streambuf: 2097152
+      keepalive: 10
     ```
+
+    | Поле | Описание |
+    | --- | --- |
+    | `key` | Предварительно общий секрет клиента и сервера |
+    | `crypt` | Шифр: `aes`, `aes-128`, `aes-128-gcm`, `aes-192`, `salsa20`, `blowfish`, `twofish`, `cast5`, `3des`, `tea`, `xtea`, `xor`, `none`, `null` |
+    | `mode` | Предустановленный профиль: `fast3`, `fast2`, `fast`, `normal`, `manual` |
+    | `conn` | Количество UDP-соединений с сервером |
+    | `autoexpire` | Автоматическое истечение одного UDP-соединения в секундах; `0` отключает его |
+    | `scavengettl` | Время жизни истекшего соединения в секундах |
+    | `mtu` | Максимальная единица передачи для UDP-пакетов |
+    | `ratelimit` | Максимальная исходящая скорость KCP-соединения в байтах/с; `0` отключает её. Также называется packet pacing |
+    | `sndwnd` / `rcvwnd` | Размер окна отправки/приёма в пакетах |
+    | `datashard` / `parityshard` | Число data/parity частей для коррекции ошибок Reed-Solomon |
+    | `dscp` | Значение DSCP (6 бит) |
+    | `nocomp` | Отключает сжатие |
+    | `acknodelay` | Немедленно отправляет ACK при получении пакета |
+    | `nodelay` / `interval` / `resend` | Режим KCP no-delay, интервал обновления и параметры быстрой повторной передачи |
+    | `sockbuf` | Буфер одного socket в байтах |
+    | `smuxver` | Версия smux: `1` или `2` |
+    | `smuxbuf` | Общий буфер демультиплексирования в байтах |
+    | `framesize` | Максимальный размер кадра smux в байтах |
+    | `streambuf` | Буфер приёма одного stream в байтах, для smux v2+ |
+    | `keepalive` | Интервал между heartbeat-пакетами в секундах |
 
 === "jls"
     ```{.yaml linenums="1"}
@@ -194,5 +232,7 @@ proxies:
       host: "www.example.com"
       username: "jls-user"
       password: "jls-password"
-      # alpn: [h2, http/1.1]
+      alpn: [h2, http/1.1]
     ```
+
+    `plugin-opts.alpn` опционально. Здесь указывается список прикладных протоколов, например `[h2, http/1.1]`.

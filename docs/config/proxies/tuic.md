@@ -9,21 +9,10 @@ proxies:
   token: TOKEN
   uuid: 00000000-0000-0000-0000-000000000001
   password: PASSWORD_1
-  # ip: 127.0.0.1
-  # heartbeat-interval: 10000
-  # alpn: [h3]
   disable-sni: true
   reduce-rtt: true
   request-timeout: 8000
   udp-relay-mode: native
-  # congestion-controller: bbr
-  # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
-  # max-udp-relay-packet-size: 1500
-  # fast-open: true
-  # skip-cert-verify: true
-  # name-cert-verify: example.com
-  # max-open-streams: 20
-  # sni: example.com
 ```
 
 [通用字段](./index.md)

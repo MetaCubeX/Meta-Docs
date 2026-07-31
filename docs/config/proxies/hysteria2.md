@@ -13,35 +13,14 @@ proxies:
   password: yourpassword
   up: "30 Mbps"
   down: "200 Mbps"
-  # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
-  obfs: salamander # 默认为空，如果填写则开启obfs，目前支持salamander和 gecko
+  obfs: salamander
   obfs-password: yourpassword
-  # obfs-min-packet-size: 512
-  # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
   name-cert-verify: example.com
-  fingerprint: xxxx # 配置指纹将实现 SSL Pining 效果, 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
+  fingerprint: xxxx
   alpn:
     - h3
-  # realm-opts:
-  #   enable: true # 必须手动开启
-  #   server-url: https://realm.hy2.io
-  #   token: public
-  #   realm-id: my-cabin-1f3a8c2e9b
-  #   stun-servers:
-  #     - stun.nextcloud.com:3478
-  #     - stun.sip.us:3478
-  #     - global.stun.twilio.com:3478
-  #   # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, name-cert-verify, fingerprint, certificate, private-key, alpn)
-  #   # skip-cert-verify： false
-  #   # name-cert-verify: example.com
-  #   # ......
-  ###quic-go特殊配置项，不要随意修改除非你知道你在干什么###
-  # initial-stream-receive-window： 8388608
-  # max-stream-receive-window： 8388608
-  # initial-connection-receive-window： 20971520
-  # max-connection-receive-window： 20971520
 ```
 
 [通用字段](./index.md)

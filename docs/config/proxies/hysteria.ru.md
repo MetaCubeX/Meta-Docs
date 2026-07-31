@@ -6,22 +6,10 @@ proxies:
   type: hysteria
   server: server.com
   port: 443
-  # ports: 1000,2000-3000,4000 # port нельзя опустить
   auth-str: yourpassword
-  # obfs: obfs_str
-  # alpn:
-  #   - h3
-  protocol: udp # поддерживает udp/wechat-video/faketcp
-  up: "30 Mbps" # если единица измерения не указана, по умолчанию Mbps
-  down: "200 Mbps" # если единица измерения не указана, по умолчанию Mbps
-  # sni: server.com
-  # skip-cert-verify: false
-  # name-cert-verify: example.com
-  # recv-window-conn: 12582912
-  # recv-window: 52428800
-  # disable_mtu_discovery: false
-  # fingerprint: xxxx
-  # fast-open: true # включить Fast Open (снижает задержку установки соединения), по умолчанию false
+  protocol: udp
+  up: "30 Mbps"
+  down: "200 Mbps"
 ```
 
 [Общие поля](./index.md)

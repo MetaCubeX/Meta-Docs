@@ -2,7 +2,6 @@
 
 ```{.yaml linenums="1"}
 proxies:
-# masque
 - name: "masque"
   type: masque
   server: server.com
@@ -13,30 +12,16 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
-  # sni: example.com
-  # Идентификатор исходящего прокси. Если значение не пустое, соединения будут отправляться через указанный proxy
-  # dialer-proxy: "ss1"
-  # remote-dns-resolve: true # Принудительное удаленное DNS-разрешение, значение по умолчанию — false
-  # dns: [ 1.1.1.1, 8.8.8.8 ] # Работает только при remote-dns-resolve: true
-  # congestion-controller: bbr # По умолчанию отключено
-  # bbr-profile: "" # Возможные значения: "standard", "conservative", "aggressive". По умолчанию: "standard"
-  # handshake-timeout: 30
 
-# masque-h3-l4proxy
 - name: "masque-h3-l4proxy"
   type: masque
   server: server.com
   port: 443
   private-key: BASE64_ENCODED_PRIVATE_KEY
   public-key: BASE64_ENCODED_PUBLIC_KEY
-  udp: false # режим l4proxy сейчас не поддерживает UDP
+  udp: false
   network: h3-l4proxy
-  # remote-dns-resolve: true # Принудительное удаленное DNS-разрешение, значение по умолчанию — false
-  # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # Работает только при remote-dns-resolve: true
-  # congestion-controller: bbr # По умолчанию отключено
-  # handshake-timeout: 30
 
-# masque-h2
 - name: "masque-h2"
   type: masque
   server: server.com
@@ -47,13 +32,7 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
-  # sni: example.com
   network: h2
-  # Идентификатор исходящего прокси. Если значение не пустое, соединения будут отправляться через указанный proxy
-  # dialer-proxy: "ss1"
-  # remote-dns-resolve: true # Принудительное удаленное DNS-разрешение, значение по умолчанию — false
-  # dns: [ 1.1.1.1, 8.8.8.8 ] # Работает только при remote-dns-resolve: true
-  # handshake-timeout: 30
 ```
 
 ## Получение конфигурации MASQUE

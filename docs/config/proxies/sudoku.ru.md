@@ -11,9 +11,6 @@ proxies:
     padding-min: 2
     padding-max: 7
     table-type: prefer_ascii
-    # custom-table: xpxvvpvv
-    # custom-tables: ["xpxvvpvv", "vxpvxvvp"]
-    # multiplex: "off"
     httpmask:
       disable: false
       mode: legacy

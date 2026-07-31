@@ -15,40 +15,7 @@ proxies:
   ipv6: fd01:5ca1:ab1e:80fa:ab85:6eea:213f:f4a5
   public-key: Cr8hWlKvtDt7nrvf+f0brNQQzabAqrjfBvas9pmowjo=
   allowed-ips: ['0.0.0.0/0']
-  # pre-shared-key: 31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=
-  # reserved: [209,98,59]  # Строковый формат также допустим, например "U4An"
-  # persistent-keepalive: 0
   udp: true
-  # mtu: 1408
-  # dialer-proxy: "ss1"  # Идентификатор исходящего прокси. Когда значение не пусто, используется указанный proxy/proxy-group для установки соединения
-  # remote-dns-resolve: true # Принудительное удаленное разрешение DNS, по умолчанию false
-  # dns: [ 1.1.1.1, 8.8.8.8 ] # Действует только когда remote-dns-resolve установлен в true
-  # Если присутствует, активирует функции AmneziaWG
-  # amnezia-wg-option:
-  #   jc: 5
-  #   jmin: 500
-  #   jmax: 501
-  #   s1: 30
-  #   s2: 40
-  #   s3: 50                                            # AmneziaWG v1.5 и v2
-  #   s4: 5                                             # AmneziaWG v1.5 и v2
-  #   h1: 123456                                        # AmneziaWG v1.0 и v1.5
-  #   h2: 67543                                         # AmneziaWG v1.0 и v1.5
-  #   h3: 123123                                        # AmneziaWG v1.0 и v1.5
-  #   h4: 32345                                         # AmneziaWG v1.0 и v1.5
-  #   h1: 123456-123500                                 # только AmneziaWG v2.0
-  #   h2: 67543-67550                                   # только AmneziaWG v2.0
-  #   h3: 123123-123200                                 # только AmneziaWG v2.0
-  #   h4: 32345-32350                                   # только AmneziaWG v2.0
-  #   i1: <b 0xf6ab3267fa><c><b 0xf6ab><t><r 10><wt 10> # AmneziaWG v1.5 и v2
-  #   i2: <b 0xf6ab3267fa><r 100>                       # AmneziaWG v1.5 и v2
-  #   i3: ""                                            # AmneziaWG v1.5 и v2
-  #   i4: ""                                            # AmneziaWG v1.5 и v2
-  #   i5: ""                                            # AmneziaWG v1.5 и v2
-  #   j1: <b 0xffffffff><c><b 0xf6ab><t><r 10>          # только AmneziaWG v1.5 (удалено в v2)
-  #   j2: <c><b 0xf6ab><t><wt 1000>                     # только AmneziaWG v1.5 (удалено в v2)
-  #   j3: <t><b 0xf6ab><c><r 10>                        # только AmneziaWG v1.5 (удалено в v2)
-  #   itime: 60                                         # только AmneziaWG v1.5 (удалено в v2)
 ```
 
 ## Полная запись
@@ -69,13 +36,7 @@ proxies:
       port: 2480
       public-key: Cr8hWlKvtDt7nrvf+f0brNQQzabAqrjfBvas9pmowjo=
       allowed-ips: ['0.0.0.0/0']
-      # pre-shared-key: 31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=
-      # reserved: [209,98,59]  # Строковый формат также допустим, например "U4An"
   udp: true
-  # mtu: 1408
-  # dialer-proxy: "ss1"  # Идентификатор исходящего прокси. Когда значение не пусто, используется указанный proxy/proxy-group для установки соединения
-  # remote-dns-resolve: true # Принудительное удаленное разрешение DNS, по умолчанию false
-  # dns: [ 1.1.1.1, 8.8.8.8 ] # Действует только когда remote-dns-resolve установлен в true
 ```
 
 [Общие поля](./index.md)

@@ -8,22 +8,8 @@ proxies:
   port: 443
   username: username
   password: password
-  # client-fingerprint: chrome
   health-check: true
   udp: true
-  # sni: "example.com"
-  # alpn:
-  #   - h2
-  # skip-cert-verify: true
-  # name-cert-verify: example.com
-  ### quic options
-  # quic: true
-  # congestion-controller: bbr
-  # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
-  ### reuse options
-  # max-connections: 8
-  # min-streams: 5
-  # max-streams: 0
 ```
 
 [Common fields](./index.md)

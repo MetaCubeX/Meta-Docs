@@ -15,40 +15,7 @@ proxies:
   ipv6: fd01:5ca1:ab1e:80fa:ab85:6eea:213f:f4a5
   public-key: Cr8hWlKvtDt7nrvf+f0brNQQzabAqrjfBvas9pmowjo=
   allowed-ips: ['0.0.0.0/0']
-  # pre-shared-key: 31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=
-  # reserved: [209,98,59]  # String format is also valid, such as "U4An"
-  # persistent-keepalive: 0
   udp: true
-  # mtu: 1408
-  # dialer-proxy: "ss1"  # Identifier of an outbound proxy. When non-empty, connections are sent through the specified proxy/proxy-group
-  # remote-dns-resolve: true # Force remote DNS resolution, default is false
-  # dns: [ 1.1.1.1, 8.8.8.8 ] # Effective only when remote-dns-resolve is true
-  # If present, enables AmneziaWG functionality
-  # amnezia-wg-option:
-  #   jc: 5
-  #   jmin: 500
-  #   jmax: 501
-  #   s1: 30
-  #   s2: 40
-  #   s3: 50                                            # AmneziaWG v1.5 and v2
-  #   s4: 5                                             # AmneziaWG v1.5 and v2
-  #   h1: 123456                                        # AmneziaWG v1.0 and v1.5
-  #   h2: 67543                                         # AmneziaWG v1.0 and v1.5
-  #   h3: 123123                                        # AmneziaWG v1.0 and v1.5
-  #   h4: 32345                                         # AmneziaWG v1.0 and v1.5
-  #   h1: 123456-123500                                 # AmneziaWG v2.0 only
-  #   h2: 67543-67550                                   # AmneziaWG v2.0 only
-  #   h3: 123123-123200                                 # AmneziaWG v2.0 only
-  #   h4: 32345-32350                                   # AmneziaWG v2.0 only
-  #   i1: <b 0xf6ab3267fa><c><b 0xf6ab><t><r 10><wt 10> # AmneziaWG v1.5 and v2
-  #   i2: <b 0xf6ab3267fa><r 100>                       # AmneziaWG v1.5 and v2
-  #   i3: ""                                            # AmneziaWG v1.5 and v2
-  #   i4: ""                                            # AmneziaWG v1.5 and v2
-  #   i5: ""                                            # AmneziaWG v1.5 and v2
-  #   j1: <b 0xffffffff><c><b 0xf6ab><t><r 10>          # AmneziaWG v1.5 only (removed in v2)
-  #   j2: <c><b 0xf6ab><t><wt 1000>                     # AmneziaWG v1.5 only (removed in v2)
-  #   j3: <t><b 0xf6ab><c><r 10>                        # AmneziaWG v1.5 only (removed in v2)
-  #   itime: 60                                         # AmneziaWG v1.5 only (removed in v2)
 ```
 
 ## Full syntax
@@ -69,13 +36,7 @@ proxies:
       port: 2480
       public-key: Cr8hWlKvtDt7nrvf+f0brNQQzabAqrjfBvas9pmowjo=
       allowed-ips: ['0.0.0.0/0']
-      # pre-shared-key: 31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=
-      # reserved: [209,98,59]  # String format is also valid, such as "U4An"
   udp: true
-  # mtu: 1408
-  # dialer-proxy: "ss1"  # Identifier of an outbound proxy. When non-empty, connections are sent through the specified proxy/proxy-group
-  # remote-dns-resolve: true # Force remote DNS resolution, default is false
-  # dns: [ 1.1.1.1, 8.8.8.8 ] # Effective only when remote-dns-resolve is true
 ```
 
 [Common fields](./index.md)

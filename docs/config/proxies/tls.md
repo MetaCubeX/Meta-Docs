@@ -11,9 +11,6 @@ proxies:
   - h2
   - http/1.1
   skip-cert-verify: true
-  # name-cert-verify: example.com
-  # certificate: xxxx
-  # private-key: xxx
   client-fingerprint: chrome
   reality-opts:
     public-key: xxxx
@@ -22,7 +19,6 @@ proxies:
   ech-opts:
     enable: true
     config: base64_encoded_config
-    # query-server-name: xxx.com
   shadow-tls-opts: 
     version: 3 
     password: shadow-tls-password
