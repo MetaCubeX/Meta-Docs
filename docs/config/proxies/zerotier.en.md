@@ -1,4 +1,3 @@
-```markdown
 # ZeroTier
 
 ```{.yaml linenums="1"}
