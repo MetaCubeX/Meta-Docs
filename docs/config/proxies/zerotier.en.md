@@ -10,7 +10,7 @@ proxies:
     # mtu: 1400
     # physical-mtu: 1432
     # ip-stack:
-    #   mode:
+    #   mode: auto
     #   congestion-controller: cubic
     # primary-port: 0
     # secondary-port: 0
