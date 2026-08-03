@@ -9,6 +9,9 @@ proxies:
     # planet: ./planet
     # mtu: 1400
     # physical-mtu: 1432
+    # ip-stack:
+    #   mode:
+    #   congestion-controller: cubic
     # primary-port: 0
     # secondary-port: 0
     # tcp-fallback-mode: auto
@@ -50,6 +53,20 @@ Optional. Local MTU override value; cannot exceed the MTU provided by the ZeroTi
 ## physical-mtu
 
 Optional. ZeroTier UDP payload MTU. Valid range: `510-10324`, default: `1432`.
+
+## ip-stack
+
+Optional IP stack configuration.
+
+### ip-stack-mode
+
+IP stack mode. Available values: `auto`, `gvisor`, `mips`. The default value is `auto`.
+
+### ip-stack-congestion-controller
+
+TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`. The default value is `cubic`.
+
+This option has no effect when using the gVisor IP stack.
 
 ## primary-port
 
