@@ -9,9 +9,12 @@ proxies:
     # planet: ./planet
     # mtu: 1400
     # physical-mtu: 1432
+    # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
     # primary-port: 0
     # secondary-port: 0
-    # tcp-fallback-mode: auto
+    # tcp-fallback-mode: auto  
     # tcp-fallback-relay: 204.80.128.1:443
     # remote-trace-target: "0123456789"
     # remote-trace-level: 0
@@ -50,6 +53,20 @@ ZeroTier 网络 ID
 ## physical-mtu
 
 可选，ZeroTier UDP 负载 MTU，有效范围为 `510-10324`，默认值为 `1432`。
+
+## ip-stack
+
+可选，IP 协议栈配置。
+
+### ip-stack-mode
+
+IP 协议栈模式，可选值: `auto` `gvisor` `mips` 默认为 `auto`
+
+### ip-stack-congestion-controller
+
+TCP 拥塞控制算法，可选值: `cubic` `reno` `bbr`，默认为 `cubic`
+
+对于 gVisor IP 协议栈，该选项不会生效。
 
 ## primary-port
 
