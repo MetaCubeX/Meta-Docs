@@ -9,6 +9,9 @@ proxies:
     # planet: ./planet
     # mtu: 1400
     # physical-mtu: 1432
+    # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
     # primary-port: 0
     # secondary-port: 0
     # tcp-fallback-mode: auto
@@ -50,6 +53,20 @@ proxies:
 ## physical-mtu
 
 Опционально. MTU полезной нагрузки UDP ZeroTier. Допустимый диапазон: `510-10324`, значение по умолчанию: `1432`.
+
+## ip-stack
+
+Необязательная настройка стека IP-протоколов.
+
+### ip-stack-mode
+
+Режим стека IP-протоколов. Доступные значения: `auto`, `gvisor`, `mips`. Значение по умолчанию — `auto`.
+
+### ip-stack-congestion-controller
+
+Алгоритм управления перегрузкой TCP. Доступные значения: `cubic`, `reno`, `bbr`. Значение по умолчанию — `cubic`.
+
+При использовании стека IP-протоколов gVisor этот параметр не применяется.
 
 ## primary-port
 
