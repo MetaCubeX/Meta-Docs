@@ -60,7 +60,7 @@ Optional IP stack configuration.
 
 ### ip-stack-mode
 
-IP stack mode. Available values: `auto`, `gvisor`, `mips`. The default value is `auto`.
+Available values: `auto`, `gvisor`, `mips`. The default value is `auto`. `auto` automatically selects the stack based on the current build: `gVisor` is used when compiled with `gVisor` support; otherwise, the mihomo IP stack (`MIPS`) is used.
 
 ### ip-stack-congestion-controller
 
