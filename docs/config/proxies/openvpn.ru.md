@@ -50,6 +50,9 @@ proxies:
     # comp-lzo: "no"
     udp: true
     # mtu: 1500
+    # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
     # dialer-proxy: "ss1"
     # remote-dns-resolve: true
     # dns: [ 1.1.1.1, 8.8.8.8 ]
@@ -151,6 +154,20 @@ proxies:
 ## mtu
 
 Опционально, максимальный размер пакета (MTU), по умолчанию `1500`.
+
+## ip-stack
+
+Необязательная настройка стека IP-протоколов.
+
+### ip-stack-mode
+
+Доступные значения: `auto`, `gvisor`, `mips`. Значение по умолчанию — `auto`. При значении `auto` стек выбирается автоматически в зависимости от текущей сборки: если gVisor включён при компиляции, используется `gVisor`; в противном случае используется IP-стек mihomo (`MIPS`).
+
+### ip-stack-congestion-controller
+
+Алгоритм управления перегрузкой TCP. Доступные значения: `cubic`, `reno`, `bbr`. Значение по умолчанию — `cubic`.
+
+При использовании стека IP-протоколов gVisor этот параметр не применяется.
 
 ## dialer-proxy
 

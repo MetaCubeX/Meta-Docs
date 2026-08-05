@@ -50,6 +50,9 @@ proxies:
     # comp-lzo: "no"
     udp: true
     # mtu: 1500
+    # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
     # dialer-proxy: "ss1"
     # remote-dns-resolve: true
     # dns: [ 1.1.1.1, 8.8.8.8 ]
@@ -151,6 +154,20 @@ Optional, whether to use the UDP protocol. `true` for UDP, `false` for TCP.
 ## mtu
 
 Optional, Maximum Transmission Unit. Defaults to `1500`.
+
+## ip-stack
+
+Optional IP stack configuration.
+
+### ip-stack-mode
+
+Available values: `auto`, `gvisor`, `mips`. The default value is `auto`. `auto` automatically selects the stack based on the current build: `gVisor` is used when compiled with `gVisor` support; otherwise, the mihomo IP stack (`MIPS`) is used.
+
+### ip-stack-congestion-controller
+
+TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`. The default value is `cubic`.
+
+This option has no effect when using the gVisor IP stack.
 
 ## dialer-proxy
 
