@@ -60,7 +60,7 @@ ZeroTier 网络 ID
 
 ### ip-stack-mode
 
-IP 协议栈模式，可选值: `auto` `gvisor` `mips` 默认为 `auto`
+可选值：`auto`、`gvisor`、`mips`。默认值为 `auto`。`auto` 会根据当前编译支持情况自动选择：如果编译时启用了 `gVisor`，则使用 `gVisor`；否则使用 mihomo IP 协议栈（`MIPS`）。
 
 ### ip-stack-congestion-controller
 
