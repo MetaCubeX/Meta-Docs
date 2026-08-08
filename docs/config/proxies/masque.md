@@ -108,7 +108,7 @@ TUN 设备的 MTU 大小，默认为 1280
 
 ### ip-stack-congestion-controller
 
-TCP 拥塞控制算法，可选值: `cubic` `reno` `bbr`，默认为 `cubic`
+TCP 拥塞控制算法，可选值: `cubic` `reno` `bbr` `bbr3`，默认为 `cubic`
 
 对于 gVisor IP 协议栈，该选项不会生效。
 
