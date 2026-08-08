@@ -18,6 +18,9 @@ proxies:
   # pre-shared-key: 31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=
   # reserved: [209,98,59]  # 字符串格式也是合法的，如"U4An"
   # persistent-keepalive: 0
+  # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
   udp: true
   # mtu: 1408
   # dialer-proxy: "ss1"  # 一个出站代理的标识。当值不为空时，将使用指定的 proxy/proxy-group 发出连接
@@ -113,6 +116,20 @@ base64 编码的 Wireguard 服务端公钥
 ### persistent-keepalive
 
 可选字段，定期发送数据包来维持连接的持久性
+
+### ip-stack
+
+可选，IP 协议栈配置。
+
+#### ip-stack-mode
+
+可选值：`auto`、`gvisor`、`mips`。默认值为 `auto`。`auto` 会根据当前编译支持情况自动选择：如果编译时启用了 `gVisor`，则使用 `gVisor`；否则使用 mihomo IP 协议栈（`MIPS`）。
+
+#### ip-stack-congestion-controller
+
+TCP 拥塞控制算法，可选值: `cubic` `reno` `bbr` `bbr3`，默认为 `cubic`
+
+对于 gVisor IP 协议栈，该选项不会生效。
 
 ### mtu
 
