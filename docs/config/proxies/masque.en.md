@@ -108,7 +108,7 @@ Available values: `auto`, `gvisor`, `mips`. The default value is `auto`. `auto` 
 
 ### ip-stack-congestion-controller
 
-TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`. The default value is `cubic`.
+TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`,`bbr3`. The default value is `cubic`.
 
 This option has no effect when using the gVisor IP stack.
 
