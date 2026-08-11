@@ -235,11 +235,11 @@ Supported functions include `length`, `keys`, `has`, `contains`, `select`, `reve
     
 ## filter
 
-Filters nodes that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Use `` ` `` to separate multiple regular expressions.
+Filters nodes that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/README.md). Use `` ` `` to separate multiple regular expressions.
 
 ## exclude-filter
 
-Excludes nodes that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Use `` ` `` to separate multiple regular expressions.
+Excludes nodes that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/README.md). Use `` ` `` to separate multiple regular expressions.
 
 ## exclude-type
 
