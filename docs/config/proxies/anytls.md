@@ -9,6 +9,7 @@ proxies:
   password: "<your password>"
   client-fingerprint: chrome
   udp: true
+  # client-metadata: ""
   idle-session-check-interval: 30
   idle-session-timeout: 30
   min-idle-session: 0
@@ -35,6 +36,13 @@ proxies:
 
 !!! tip
     Mihomo 不支持 AnyTLS+Reality 的组合（未来也不会支持）。如果您想隐藏 SNI，请配合 [ECH](./tls.md#ech-opts) 使用，或选择与 [ShadowTLS](./tls.md#shadow-tls-opts)、[ResTLS](./tls.md#restls-opts)、[JLS](./tls.md#jls-opts) 组合使用。如果您非要使用 Reality，请选择 [Vmess](./vmess.md)、[VLESS](./vless.md)、[Trojan](./trojan.md) 协议。
+
+## client-metadata
+
+可选，发送给服务端的客户端元数据
+
+!!! warning
+    由于`cilent-metadata`可能被用于统计客户端信息并区别对待，从v1.19.30开始默认再不发送该内容，如果需要请自行填写
 
 ## idle-session-check-interval
 
