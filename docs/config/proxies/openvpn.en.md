@@ -164,11 +164,11 @@ Optional, Maximum Transmission Unit. Defaults to `1500`.
 
 Optional IP stack configuration.
 
-### ip-stack-mode
+### ip-stack.mode
 
 Available values: `auto`, `gvisor`, `mips`. The default value is `auto`. `auto` automatically selects the stack based on the current build: `gVisor` is used when compiled with `gVisor` support; otherwise, the mihomo IP stack (`MIPS`) is used.
 
-### ip-stack-congestion-controller
+### ip-stack.congestion-controller
 
 TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`, `bbr3`. The default value is `cubic`.
 

@@ -58,13 +58,13 @@ ZeroTier 网络 ID
 
 可选，IP 协议栈配置。
 
-### ip-stack-mode
+### ip-stack.mode
 
 可选值：`auto`、`gvisor`、`mips`。默认值为 `auto`。`auto` 会根据当前编译支持情况自动选择：如果编译时启用了 `gVisor`，则使用 `gVisor`；否则使用 mihomo IP 协议栈（`MIPS`）。
 
-### ip-stack-congestion-controller
+### ip-stack.congestion-controller
 
-TCP 拥塞控制算法，可选值: `cubic` `reno` `bbr` `bbr3`，默认为 `cubic`
+TCP 拥塞控制算法，可选值：`cubic`、`reno`、`bbr`、`bbr3`，默认为 `cubic`
 
 对于 gVisor IP 协议栈，该选项不会生效。
 
@@ -116,11 +116,11 @@ TCP 拥塞控制算法，可选值: `cubic` `reno` `bbr` `bbr3`，默认为 `cub
 
 可选，配置私有 Moon 根服务器列表
 
-### orbit-world
+### orbit.world
 
 Moon World ID，必须为 16 位十六进制字符串。
 
-### orbit-seed
+### orbit.seed
 
 Moon 根节点的 Node ID，必须为 10 位数字。
 

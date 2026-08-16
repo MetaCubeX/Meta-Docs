@@ -58,11 +58,11 @@ Optional. ZeroTier UDP payload MTU. Valid range: `510-10324`, default: `1432`.
 
 Optional IP stack configuration.
 
-### ip-stack-mode
+### ip-stack.mode
 
 Available values: `auto`, `gvisor`, `mips`. The default value is `auto`. `auto` automatically selects the stack based on the current build: `gVisor` is used when compiled with `gVisor` support; otherwise, the mihomo IP stack (`MIPS`) is used.
 
-### ip-stack-congestion-controller
+### ip-stack.congestion-controller
 
 TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`, `bbr3`. The default value is `cubic`.
 
@@ -116,11 +116,11 @@ Optional. Default: `false`.
 
 Optional. Configure a list of private moon root servers.
 
-### orbit-world
+### orbit.world
 
 Moon World ID, must be a 16-digit hexadecimal string.
 
-### orbit-seed
+### orbit.seed
 
 Moon root node ID, must be a 10-digit number.
 
