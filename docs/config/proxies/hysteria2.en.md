@@ -37,6 +37,7 @@ proxies:
   #   # skip-cert-verify： false
   #   # name-cert-verify: example.com
   #   # ......
+  # handshake-timeout: 30
   ###Special quic-go options. Do not modify them unless you know what you are doing.###
   # initial-stream-receive-window： 8388608
   # max-stream-receive-window： 8388608
@@ -83,3 +84,7 @@ Minimum wire packet size (in bytes). Restricted to `gecko` only.
 Maximum wire packet size (in bytes). Restricted to `gecko` only.
 
 ## realm-opts
+
+## handshake-timeout
+
+Specified in seconds. When set, the handshake timeout is independent of the outer connection timeout. The default value is `0`, meaning the handshake uses only the outer connection timeout.

@@ -37,6 +37,7 @@ proxies:
   #   # skip-cert-verify： false
   #   # name-cert-verify: example.com
   #   # ......
+  # handshake-timeout: 30
   ###quic-go特殊配置项，不要随意修改除非你知道你在干什么###
   # initial-stream-receive-window： 8388608
   # max-stream-receive-window： 8388608
@@ -83,3 +84,7 @@ QUIC 流量混淆器密码
 最大线上数据包大小（字节）。仅限 `gecko`。
 
 ## realm-opts
+
+## handshake-timeout
+
+单位为秒；配置后握手时不受外层连接超时影响；默认值为 0，表示仅使用外层连接超时
