@@ -41,6 +41,7 @@ proxies:
     #   UV_DEVICE_ID: "laptop-001"
     # ping: 10
     # ping-restart: 60
+    # tran-window: 3600
     # handshake-timeout: 30
     # dev: tun
     # cipher: AES-128-GCM
@@ -115,6 +116,10 @@ proxies:
 ## peer-info
 
 可选，透传给服务端的 peer-info 键值对，会追加在内置 `IV_VER`/`IV_PROTO`/`IV_CIPHERS` 之后，用于服务端基于 peer-info 做准入决策。
+
+## tran-window
+
+旧 data key 在 rekey 后保留的秒数；默认 3600，显式设为 0 表示立即过期，应与服务端 --tran-window 对齐
 
 ## handshake-timeout
 
