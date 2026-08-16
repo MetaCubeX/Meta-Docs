@@ -41,6 +41,7 @@ proxies:
     #   UV_DEVICE_ID: "laptop-001"
     # ping: 10
     # ping-restart: 60
+    # tran-window: 3600
     # handshake-timeout: 30
     # dev: tun
     # cipher: AES-128-GCM
@@ -118,6 +119,10 @@ Optional, defaults to `0`.
 ## peer-info
 
 Optional key-value pairs passed to the server as peer-info. They are appended after the built-in `IV_VER`/`IV_PROTO`/`IV_CIPHERS` values and can be used by the server for admission decisions.
+
+## tran-window
+
+The number of seconds the old `data key` is retained after `rekeying`; the default is 3600. Explicitly setting it to 0 means immediate expiration. It should be aligned with the server-side `--tran-window`.
 
 ## handshake-timeout
 
