@@ -50,6 +50,9 @@ proxies:
     # comp-lzo: "no"
     udp: true
     # mtu: 1500
+    # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
     # dialer-proxy: "ss1"
     # remote-dns-resolve: true
     # dns: [ 1.1.1.1, 8.8.8.8 ]
@@ -151,6 +154,20 @@ proxies:
 ## mtu
 
 可选，最大传输单元，默认 `1500`。
+
+## ip-stack
+
+可选，IP 协议栈配置。
+
+### ip-stack-mode
+
+可选值：`auto`、`gvisor`、`mips`。默认值为 `auto`。`auto` 会根据当前编译支持情况自动选择：如果编译时启用了 `gVisor`，则使用 `gVisor`；否则使用 mihomo IP 协议栈（`MIPS`）。
+
+### ip-stack-congestion-controller
+
+TCP 拥塞控制算法，可选值: `cubic` `reno` `bbr` `bbr3`，默认为 `cubic`
+
+对于 gVisor IP 协议栈，该选项不会生效。
 
 ## dialer-proxy
 

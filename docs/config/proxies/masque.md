@@ -13,6 +13,9 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
   # sni: example.com
   # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接
   # dialer-proxy: "ss1"
@@ -30,6 +33,9 @@ proxies:
   private-key: BASE64_ENCODED_PRIVATE_KEY
   public-key: BASE64_ENCODED_PUBLIC_KEY
   udp: false # 目前 l4proxy 模式不支持 udp
+  # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
   network: h3-l4proxy
   # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
   # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # 仅在 remote-dns-resolve 为 true 时生效
@@ -47,6 +53,9 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
   # sni: example.com
   network: h2
   # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接
@@ -88,6 +97,20 @@ TUN 设备的 MTU 大小，默认为 1280
 ## udp
 
 是否启用 UDP 支持，默认为 false
+
+## ip-stack
+
+可选，IP 协议栈配置。
+
+### ip-stack-mode
+
+可选值：`auto`、`gvisor`、`mips`。默认值为 `auto`。`auto` 会根据当前编译支持情况自动选择：如果编译时启用了 `gVisor`，则使用 `gVisor`；否则使用 mihomo IP 协议栈（`MIPS`）。
+
+### ip-stack-congestion-controller
+
+TCP 拥塞控制算法，可选值: `cubic` `reno` `bbr` `bbr3`，默认为 `cubic`
+
+对于 gVisor IP 协议栈，该选项不会生效。
 
 ## remote-dns-resolve
 

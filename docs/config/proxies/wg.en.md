@@ -18,6 +18,9 @@ proxies:
   # pre-shared-key: 31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=
   # reserved: [209,98,59]  # String format is also valid, such as "U4An"
   # persistent-keepalive: 0
+  # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
   udp: true
   # mtu: 1408
   # dialer-proxy: "ss1"  # Identifier of an outbound proxy. When non-empty, connections are sent through the specified proxy/proxy-group
@@ -121,6 +124,20 @@ Optional field, value of the WireGuard protocol reserved field. Required by some
 ### persistent-keepalive
 
 Optional field, periodically sends packets to keep the connection persistent.
+
+### ip-stack
+
+Optional IP stack configuration.
+
+#### ip-stack-mode
+
+Available values: `auto`, `gvisor`, `mips`. The default value is `auto`. `auto` automatically selects the stack based on the current build: `gVisor` is used when compiled with `gVisor` support; otherwise, the mihomo IP stack (`MIPS`) is used.
+
+#### ip-stack-congestion-controller
+
+TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`,`bbr3`. The default value is `cubic`.
+
+This option has no effect when using the gVisor IP stack.
 
 ### mtu
 
