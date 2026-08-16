@@ -25,30 +25,38 @@ proxies:
   # dns: [ 1.1.1.1, 8.8.8.8 ] # 仅在remote-dns-resolve为true时生效
   # 如果存在则开启AmneziaWG功能
   # amnezia-wg-option:
-  #   jc: 5
-  #   jmin: 500
-  #   jmax: 501
-  #   s1: 30
-  #   s2: 40
-  #   s3: 50                                            # AmneziaWG v1.5 and v2
-  #   s4: 5                                             # AmneziaWG v1.5 and v2
-  #   h1: 123456                                        # AmneziaWG v1.0 and v1.5
-  #   h2: 67543                                         # AmneziaWG v1.0 and v1.5
-  #   h3: 123123                                        # AmneziaWG v1.0 and v1.5
-  #   h4: 32345                                         # AmneziaWG v1.0 and v1.5
-  #   h1: 123456-123500                                 # AmneziaWG v2.0 only
-  #   h2: 67543-67550                                   # AmneziaWG v2.0 only
-  #   h3: 123123-123200                                 # AmneziaWG v2.0 only
-  #   h4: 32345-32350                                   # AmneziaWG v2.0 only
-  #   i1: <b 0xf6ab3267fa><c><b 0xf6ab><t><r 10><wt 10> # AmneziaWG v1.5 and v2
-  #   i2: <b 0xf6ab3267fa><r 100>                       # AmneziaWG v1.5 and v2
-  #   i3: ""                                            # AmneziaWG v1.5 and v2
-  #   i4: ""                                            # AmneziaWG v1.5 and v2
-  #   i5: ""                                            # AmneziaWG v1.5 and v2
-  #   j1: <b 0xffffffff><c><b 0xf6ab><t><r 10>          # AmneziaWG v1.5 only (removed in v2)
-  #   j2: <c><b 0xf6ab><t><wt 1000>                     # AmneziaWG v1.5 only (removed in v2)
-  #   j3: <t><b 0xf6ab><c><r 10>                        # AmneziaWG v1.5 only (removed in v2)
-  #   itime: 60                                         # AmneziaWG v1.5 only (removed in v2)
+  #   version: 2                                        # 只有版本 3 使用 v3 实现；其他所有值均使用旧版实现
+  #   jc: 5                                             # AmneziaWG v1.0+
+  #   jmin: 500                                         # AmneziaWG v1.0+
+  #   jmax: 501                                         # AmneziaWG v1.0+
+  #   s1: 30                                            # AmneziaWG v1.0+
+  #   s2: 40                                            # AmneziaWG v1.0+
+  #   s3: 50                                            # AmneziaWG v1.5+
+  #   s4: 8                                             # AmneziaWG v1.5+
+  #   h1: 123456                                        # AmneziaWG v1.0/v1.5 仅支持单个数值；v2+ 还支持范围值
+  #   h2: 67543                                         # AmneziaWG v1.0/v1.5 仅支持单个数值；v2+ 还支持范围值
+  #   h3: 123123                                        # AmneziaWG v1.0/v1.5 仅支持单个数值；v2+ 还支持范围值
+  #   h4: 32345                                         # AmneziaWG v1.0/v1.5 仅支持单个数值；v2+ 还支持范围值
+  #   i1: <b 0xf6ab3267fa><b 0xf6ab><t><r 10>           # AmneziaWG v1.5+
+  #   i2: <b 0xf6ab3267fa><r 100>                       # AmneziaWG v1.5+
+  #   i3: ""                                            # AmneziaWG v1.5+
+  #   i4: ""                                            # AmneziaWG v1.5+
+  #   i5: ""                                            # AmneziaWG v1.5+
+  #   j1: <b 0xffffffff><c><b 0xf6ab><t><r 10>          # 仅 AmneziaWG v1.5 支持（v2+ 已移除）
+  #   j2: <c><b 0xf6ab><t><wt 1000>                     # 仅 AmneziaWG v1.5 支持（v2+ 已移除）
+  #   j3: <t><b 0xf6ab><c><r 10>                        # 仅 AmneziaWG v1.5 支持（v2+ 已移除）
+  #   itime: 60                                         # 仅 AmneziaWG v1.5 支持（v2+ 已移除）
+  #   header-protection-key: >-                         # AmneziaWG v3+
+  #     MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
+  #   content-padding-addition: 0-32                    # AmneziaWG v3+
+  #   rekey-after-time: 120                             # AmneziaWG v3+
+  #   rekey-timeout: 5                                  # AmneziaWG v3+
+  #   reject-after-time: 180                            # AmneziaWG v3+
+  #   keepalive-timeout: 10                             # AmneziaWG v3+
+  #   max-handshake-attempts: 18                        # AmneziaWG v3+
+  #   random-trailers: true                             # AmneziaWG v3.1+
+  #   disable-cookies: true                             # AmneziaWG v3.1+
+
 ```
 
 ## 完整写法
