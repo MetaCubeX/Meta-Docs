@@ -14,8 +14,8 @@ proxies:
   mtu: 1280
   udp: true
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   # sni: example.com
   # Идентификатор исходящего прокси. Если значение не пустое, соединения будут отправляться через указанный proxy
   # dialer-proxy: "ss1"
@@ -34,8 +34,8 @@ proxies:
   public-key: BASE64_ENCODED_PUBLIC_KEY
   udp: false # режим l4proxy сейчас не поддерживает UDP
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   network: h3-l4proxy
   # remote-dns-resolve: true # Принудительное удаленное DNS-разрешение, значение по умолчанию — false
   # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # Работает только при remote-dns-resolve: true
@@ -54,8 +54,8 @@ proxies:
   mtu: 1280
   udp: true
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   # sni: example.com
   network: h2
   # Идентификатор исходящего прокси. Если значение не пустое, соединения будут отправляться через указанный proxy
@@ -108,7 +108,7 @@ proxies:
 
 ### ip-stack-congestion-controller
 
-Алгоритм управления перегрузкой TCP. Доступные значения: `cubic`, `reno`, `bbr` `bbr3`. Значение по умолчанию — `cubic`.
+Алгоритм управления перегрузкой TCP. Доступные значения: `cubic`, `reno`, `bbr`, `bbr3`. Значение по умолчанию — `cubic`.
 
 При использовании стека IP-протоколов gVisor этот параметр не применяется.
 

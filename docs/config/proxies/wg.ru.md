@@ -19,8 +19,8 @@ proxies:
   # reserved: [209,98,59]  # Строковый формат также допустим, например "U4An"
   # persistent-keepalive: 0
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   udp: true
   # mtu: 1408
   # dialer-proxy: "ss1"  # Идентификатор исходящего прокси. Когда значение не пусто, используется указанный proxy/proxy-group для установки соединения
@@ -135,7 +135,7 @@ IPv4-адрес, используемый локальной машиной в �
 
 #### ip-stack-congestion-controller
 
-Алгоритм управления перегрузкой TCP. Доступные значения: `cubic`, `reno`, `bbr`,`bbr3`. Значение по умолчанию — `cubic`.
+Алгоритм управления перегрузкой TCP. Доступные значения: `cubic`, `reno`, `bbr`, `bbr3`. Значение по умолчанию — `cubic`.
 
 При использовании стека IP-протоколов gVisor этот параметр не применяется.
 

@@ -14,8 +14,8 @@ proxies:
   mtu: 1280
   udp: true
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   # sni: example.com
   # Identifier of an outbound proxy. When non-empty, connections are sent through the specified proxy.
   # dialer-proxy: "ss1"
@@ -34,8 +34,8 @@ proxies:
   public-key: BASE64_ENCODED_PUBLIC_KEY
   udp: false # l4proxy mode currently does not support UDP
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   network: h3-l4proxy
   # remote-dns-resolve: true # Force remote DNS resolution, default is false
   # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # Effective only when remote-dns-resolve is true
@@ -54,8 +54,8 @@ proxies:
   mtu: 1280
   udp: true
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   # sni: example.com
   network: h2
   # Identifier of an outbound proxy. When non-empty, connections are sent through the specified proxy.
@@ -108,7 +108,7 @@ Available values: `auto`, `gvisor`, `mips`. The default value is `auto`. `auto` 
 
 ### ip-stack-congestion-controller
 
-TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`,`bbr3`. The default value is `cubic`.
+TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`, `bbr3`. The default value is `cubic`.
 
 This option has no effect when using the gVisor IP stack.
 

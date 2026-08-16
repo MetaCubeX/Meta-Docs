@@ -19,8 +19,8 @@ proxies:
   # reserved: [209,98,59]  # 字符串格式也是合法的，如"U4An"
   # persistent-keepalive: 0
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   udp: true
   # mtu: 1408
   # dialer-proxy: "ss1"  # 一个出站代理的标识。当值不为空时，将使用指定的 proxy/proxy-group 发出连接

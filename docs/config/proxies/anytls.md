@@ -42,7 +42,7 @@ proxies:
 可选，发送给服务端的客户端元数据
 
 !!! warning
-    由于`cilent-metadata`可能被用于统计客户端信息并区别对待，从v1.19.30开始默认再不发送该内容，如果需要请自行填写
+    由于 `client-metadata` 可能被用于统计客户端信息并区别对待，从 v1.19.30 开始默认不再发送该内容，如果需要请自行填写
 
 ## idle-session-check-interval
 

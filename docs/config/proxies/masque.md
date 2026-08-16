@@ -14,8 +14,8 @@ proxies:
   mtu: 1280
   udp: true
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   # sni: example.com
   # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接
   # dialer-proxy: "ss1"
@@ -34,8 +34,8 @@ proxies:
   public-key: BASE64_ENCODED_PUBLIC_KEY
   udp: false # 目前 l4proxy 模式不支持 udp
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   network: h3-l4proxy
   # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
   # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # 仅在 remote-dns-resolve 为 true 时生效
@@ -54,8 +54,8 @@ proxies:
   mtu: 1280
   udp: true
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   # sni: example.com
   network: h2
   # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接

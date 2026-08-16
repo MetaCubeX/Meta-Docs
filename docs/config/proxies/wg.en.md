@@ -19,15 +19,15 @@ proxies:
   # reserved: [209,98,59]  # String format is also valid, such as "U4An"
   # persistent-keepalive: 0
   # ip-stack:
-    #   mode: auto
-    #   congestion-controller: cubic
+  #   mode: auto
+  #   congestion-controller: cubic
   udp: true
   # mtu: 1408
   # dialer-proxy: "ss1"  # Identifier of an outbound proxy. When non-empty, connections are sent through the specified proxy/proxy-group
   # remote-dns-resolve: true # Force remote DNS resolution, default is false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # Effective only when remote-dns-resolve is true
   # If present, enables AmneziaWG functionality
-  # amnezia-wg-option: 
+  # amnezia-wg-option:
   #   version: 2                                        # Only version 3 uses the v3 implementation; all other values use the legacy implementation
   #   jc: 5                                             # AmneziaWG v1.0+
   #   jmin: 500                                         # AmneziaWG v1.0+
@@ -135,7 +135,7 @@ Available values: `auto`, `gvisor`, `mips`. The default value is `auto`. `auto` 
 
 #### ip-stack-congestion-controller
 
-TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`,`bbr3`. The default value is `cubic`.
+TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`, `bbr3`. The default value is `cubic`.
 
 This option has no effect when using the gVisor IP stack.
 
