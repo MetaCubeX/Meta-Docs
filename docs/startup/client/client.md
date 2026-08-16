@@ -25,7 +25,7 @@
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
-|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
 
 ## MacOS
 
@@ -50,7 +50,7 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|维护中 |
 |[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|维护中 |
-|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|维护中 | 不开源 |
 
 ## Linux
@@ -72,7 +72,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
-|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
 
 ## Android

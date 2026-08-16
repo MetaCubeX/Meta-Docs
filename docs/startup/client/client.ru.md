@@ -25,7 +25,7 @@
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
-|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 
 ## MacOS
 
@@ -50,7 +50,7 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|поддерживается |
 |[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|поддерживается |
-|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
 
 ## Linux
@@ -72,7 +72,7 @@
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
-|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
  
 ## Android

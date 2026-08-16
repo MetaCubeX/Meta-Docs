@@ -41,6 +41,7 @@ proxies:
     #   UV_DEVICE_ID: "laptop-001"
     # ping: 10
     # ping-restart: 60
+    # tran-window: 3600
     # handshake-timeout: 30
     # dev: tun
     # cipher: AES-128-GCM
@@ -50,6 +51,9 @@ proxies:
     # comp-lzo: "no"
     udp: true
     # mtu: 1500
+    # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
     # dialer-proxy: "ss1"
     # remote-dns-resolve: true
     # dns: [ 1.1.1.1, 8.8.8.8 ]
@@ -116,6 +120,10 @@ Optional, defaults to `0`.
 
 Optional key-value pairs passed to the server as peer-info. They are appended after the built-in `IV_VER`/`IV_PROTO`/`IV_CIPHERS` values and can be used by the server for admission decisions.
 
+## tran-window
+
+The number of seconds the old `data key` is retained after `rekeying`; the default is 3600. Explicitly setting it to 0 means immediate expiration. It should be aligned with the server-side `--tran-window`.
+
 ## handshake-timeout
 
 Optional handshake timeout in seconds. The default value is `0`, meaning only the outer connection timeout is used.
@@ -151,6 +159,20 @@ Optional, whether to use the UDP protocol. `true` for UDP, `false` for TCP.
 ## mtu
 
 Optional, Maximum Transmission Unit. Defaults to `1500`.
+
+## ip-stack
+
+Optional IP stack configuration.
+
+### ip-stack-mode
+
+Available values: `auto`, `gvisor`, `mips`. The default value is `auto`. `auto` automatically selects the stack based on the current build: `gVisor` is used when compiled with `gVisor` support; otherwise, the mihomo IP stack (`MIPS`) is used.
+
+### ip-stack-congestion-controller
+
+TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr` `bbr3`. The default value is `cubic`.
+
+This option has no effect when using the gVisor IP stack.
 
 ## dialer-proxy
 

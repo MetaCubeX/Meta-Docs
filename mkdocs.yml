@@ -292,6 +292,7 @@ nav:
       - SSH: config/proxies/ssh.md
       - MASQUE: config/proxies/masque.md
       - TrustTunnel: config/proxies/trusttunnel.md
+      - ZeroTier: config/proxies/zerotier.md
       - OpenVPN: config/proxies/openvpn.md
     - 代理集合:
       - 代理集合配置: config/proxy-providers/index.md

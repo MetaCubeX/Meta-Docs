@@ -44,6 +44,7 @@ listeners:
   #   # restls-script: ""
   #   # min-record-len: 0
   #   # proxy: ""
+  #   # rate-limit: 0 # fallback 双向转发限速，单位 bit/s；0 表示不限速
   # jls-config: # JLS 替代普通 TLS；未认证连接回落到 dest
   #   enable: true
   #   users:
@@ -62,6 +63,8 @@ listeners:
   #     - 0123456789abcdef
   #   server-names:
   #     - test.com
+  #   # max-time-difference: 0 # 单位微秒
+  #   # proxy: ""
   #   #下列两个 limit 为选填，可对未通过验证的回落连接限速，bytesPerSec 默认为 0 即不启用
   #   #回落限速是一种特征，不建议启用，如果您是面板/一键脚本开发者，务必让这些参数随机化
   #   limit-fallback-upload:

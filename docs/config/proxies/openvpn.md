@@ -41,6 +41,7 @@ proxies:
     #   UV_DEVICE_ID: "laptop-001"
     # ping: 10
     # ping-restart: 60
+    # tran-window: 3600
     # handshake-timeout: 30
     # dev: tun
     # cipher: AES-128-GCM
@@ -50,6 +51,9 @@ proxies:
     # comp-lzo: "no"
     udp: true
     # mtu: 1500
+    # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
     # dialer-proxy: "ss1"
     # remote-dns-resolve: true
     # dns: [ 1.1.1.1, 8.8.8.8 ]
@@ -116,6 +120,10 @@ proxies:
 
 可选，透传给服务端的 peer-info 键值对，会追加在内置 `IV_VER`/`IV_PROTO`/`IV_CIPHERS` 之后，用于服务端基于 peer-info 做准入决策。
 
+## tran-window
+
+旧 data key 在 rekey 后保留的秒数；默认 3600，显式设为 0 表示立即过期，应与服务端 --tran-window 对齐
+
 ## handshake-timeout
 
 可选，握手超时时间，单位为秒。默认值为 `0`，表示仅使用外层连接超时。
@@ -151,6 +159,20 @@ proxies:
 ## mtu
 
 可选，最大传输单元，默认 `1500`。
+
+## ip-stack
+
+可选，IP 协议栈配置。
+
+### ip-stack-mode
+
+可选值：`auto`、`gvisor`、`mips`。默认值为 `auto`。`auto` 会根据当前编译支持情况自动选择：如果编译时启用了 `gVisor`，则使用 `gVisor`；否则使用 mihomo IP 协议栈（`MIPS`）。
+
+### ip-stack-congestion-controller
+
+TCP 拥塞控制算法，可选值: `cubic` `reno` `bbr` `bbr3`，默认为 `cubic`
+
+对于 gVisor IP 协议栈，该选项不会生效。
 
 ## dialer-proxy
 
