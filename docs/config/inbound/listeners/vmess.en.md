@@ -84,6 +84,7 @@ listeners:
   #   # restls-script: ""
   #   # min-record-len: 0
   #   # proxy: ""
+  #   # rate-limit: 0 # Bidirectional forwarding rate limit for fallback, in bit/s; 0 means unlimited.
   # if reality-config is filled, enables reality (note: cannot be filled simultaneously with certificate and private-key)
   # reality-config:
   #   dest: test.com:443

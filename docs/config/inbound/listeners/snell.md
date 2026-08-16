@@ -26,6 +26,7 @@ listeners:
     #   enable: false
     #   dest: test.com:443
     #   password: restls-password
+    #   rate-limit: 0 # fallback 双向转发限速，单位 bit/s；0 表示不限速
     # jls-config:
     #   enable: false
     #   users:
