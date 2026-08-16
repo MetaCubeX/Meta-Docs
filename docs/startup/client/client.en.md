@@ -49,6 +49,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|Maintained |
+|[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
 
