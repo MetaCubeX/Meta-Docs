@@ -26,6 +26,7 @@
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
+|[pure-clash]([https://github.com/prime-zt/pure-clash)|поддерживается |
 
 ## MacOS
 
@@ -74,6 +75,7 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
+|[pure-clash]([https://github.com/prime-zt/pure-clash)|поддерживается |
  
 ## Android
 
