@@ -26,6 +26,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
+|[pure-clash]([https://github.com/prime-zt/pure-clash)|Maintained |
 
 ## MacOS
 
