@@ -15,6 +15,7 @@ proxies:
   # alpn:
   #   - h2
   # skip-cert-verify: true
+  # name-cert-verify: example.com
   ### quic options
   # quic: true
   # congestion-controller: bbr

@@ -22,9 +22,21 @@ proxies:
   fingerprint: xxxx
   client-fingerprint: chrome
   skip-cert-verify: true
+  name-cert-verify: example.com
+  shadow-tls-opts:
+    version: 3
+    password: shadow-tls-password
+  restls-opts:
+    password: restls-password
+    version-hint: tls13
+  jls-opts:
+    username: jls-user
+    password: jls-password
   reality-opts:
     public-key: xxxx
     short-id: xxxx
+  tlsmirror-opts:
+    primary-key: xxxx
 
   network: tcp
 
@@ -62,6 +74,6 @@ proxies:
 
 ## network
 
-Транспортный уровень, поддерживает ws/http/h2/grpc, если не настроен или настроен с другим значением, используется tcp
+Транспортный уровень, поддерживает ws/http/h2/grpc/mkcp/mekya. Если не настроен или настроен с другим значением, используется tcp
 
-См. [Конфигурация транспортного уровня](./transport.md) 
+См. [Конфигурация транспортного уровня](./transport.md)

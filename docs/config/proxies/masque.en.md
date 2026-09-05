@@ -13,12 +13,34 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # ip-stack:
+  #   mode: auto
+  #   congestion-controller: cubic
+  # sni: example.com
   # Identifier of an outbound proxy. When non-empty, connections are sent through the specified proxy.
   # dialer-proxy: "ss1"
   # remote-dns-resolve: true # Force remote DNS resolution, default is false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # Effective only when remote-dns-resolve is true
   # congestion-controller: bbr # Disabled by default
   # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  # handshake-timeout: 30
+
+# masque-h3-l4proxy
+- name: "masque-h3-l4proxy"
+  type: masque
+  server: server.com
+  port: 443
+  private-key: BASE64_ENCODED_PRIVATE_KEY
+  public-key: BASE64_ENCODED_PUBLIC_KEY
+  udp: false # l4proxy mode currently does not support UDP
+  # ip-stack:
+  #   mode: auto
+  #   congestion-controller: cubic
+  network: h3-l4proxy
+  # remote-dns-resolve: true # Force remote DNS resolution, default is false
+  # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # Effective only when remote-dns-resolve is true
+  # congestion-controller: bbr # Disabled by default
+  # handshake-timeout: 30
 
 # masque-h2
 - name: "masque-h2"
@@ -31,11 +53,16 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # ip-stack:
+  #   mode: auto
+  #   congestion-controller: cubic
+  # sni: example.com
   network: h2
   # Identifier of an outbound proxy. When non-empty, connections are sent through the specified proxy.
   # dialer-proxy: "ss1"
   # remote-dns-resolve: true # Force remote DNS resolution, default is false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # Effective only when remote-dns-resolve is true
+  # handshake-timeout: 30
 ```
 
 ## Get MASQUE configuration
@@ -71,6 +98,20 @@ MTU size for the TUN device, defaults to 1280.
 
 Whether to enable UDP support, defaults to false.
 
+## ip-stack
+
+Optional IP stack configuration.
+
+### ip-stack.mode
+
+Available values: `auto`, `gvisor`, `mips`. The default value is `auto`. `auto` automatically selects the stack based on the current build: `gVisor` is used when compiled with `gVisor` support; otherwise, the mihomo IP stack (`MIPS`) is used.
+
+### ip-stack.congestion-controller
+
+TCP congestion control algorithm. Available values: `cubic`, `reno`, `bbr`, `bbr3`. The default value is `cubic`.
+
+This option has no effect when using the gVisor IP stack.
+
 ## remote-dns-resolve
 
 Whether to enable remote DNS resolution through the MASQUE tunnel.
@@ -85,4 +126,11 @@ Overrides the default congestion control algorithm. Disabled by default. Availab
 
 ## network
 
-Optional. Defaults to `quic`. For `masque-h2`, set it to `h2`.
+Optional. Defaults to `quic`. For `masque-h2`, set it to `h2`. For h3-l4proxy mode, set it to `h3-l4proxy`.
+
+!!! note
+    `h3-l4proxy` mode currently does not support UDP.
+
+## handshake-timeout
+
+Handshake timeout in seconds. The default value is `0`, meaning only the outer connection timeout is used.

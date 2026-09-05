@@ -44,6 +44,10 @@ tun:
   - 1000
   exclude-uid-range:
   - 1000:9999
+  include-mac-address:
+  - 00:11:22:33:44:55
+  exclude-mac-address:
+  - 00:11:22:33:44:66
   include-android-user:
   - 0
   - 10
@@ -152,7 +156,7 @@ dns 劫持，将匹配到的连接导入内部 [dns](../dns/index.md) 模块，�
 
 指定tun的ipv6地址
 
-!!!note
+!!! note
     * 目前会在程序启动时检查系统其他网卡是否有IPV6，如果不存在会禁用该功能，如果需要强制开启tun的v6地址，请手动设置`SKIP_SYSTEM_IPV6_CHECK=1`系统环境变量
     * 需要同时将顶层配置中的`ipv6`设置为`true`才会生效
 
@@ -222,6 +226,14 @@ UDP NAT 过期时间，以秒为单位，默认为 300(5 分钟)
 ## exclude-uid-range
 
 排除用户范围，使其避免被 Tun 路由流量
+
+## include-mac-address
+
+按来源 MAC 地址限制被路由的局域网设备。仅支持 Linux，且需要启用 `auto-route` 和 `auto-redirect`。
+
+## exclude-mac-address
+
+按来源 MAC 地址排除局域网设备的流量。仅支持 Linux，且需要启用 `auto-route` 和 `auto-redirect`。
 
 ## include-android-user
 

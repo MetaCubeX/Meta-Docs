@@ -6,6 +6,7 @@ listeners:
   type: trojan
   port: 10819 # поддерживает формат ports, например 200,302 или 200,204,401-429,501-503
   listen: 0.0.0.0
+  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
   # rule: sub-rule-name1 # по умолчанию использует rules, если sub-rule не найдено, то напрямую использует rules
   # proxy: proxy # если не пусто, то входящий трафик напрямую передается указанному proxy (когда proxy не пусто, имя proxy должно быть корректным, иначе возникнет ошибка)
   users:
@@ -26,6 +27,34 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  # shadow-tls:
+  #   enable: true
+  #   version: 3 # поддерживает v1/v2/v3
+  #   # password: shadow-tls-password # параметр конфигурации v2
+  #   users: # параметр конфигурации v3
+  #     - name: shadow-tls-user
+  #       password: shadow-tls-password
+  #   handshake:
+  #     dest: www.example.com:443
+  #     # proxy: ""
+  # res-tls:
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
+  #   # rate-limit: 0 # Ограничение скорости двусторонней передачи для fallback, в бит/с; 0 — без ограничений.
+  # jls-config: # JLS заменяет обычный TLS; неавторизованные соединения перенаправляются на dest
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # Если пусто, выводится из dest
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # Ограничение скорости fallback-пересылки, bit/s; 0 означает без ограничения
   # если заполнен reality-config, то включается reality (не может использоваться одновременно с certificate и private-key)
   # reality-config:
   #   dest: test.com:443
@@ -34,6 +63,8 @@ listeners:
   #     - 0123456789abcdef
   #   server-names:
   #     - test.com
+  #   # max-time-difference: 0 # в микросекундах
+  #   # proxy: ""
   #   #следующие два limit необязательны, могут ограничивать скорость fallback-соединений, не прошедших проверку, bytesPerSec по умолчанию 0 (не включено)
   #   #ограничение скорости fallback является характеристикой, не рекомендуется включать, если вы разработчик панели/скрипта, обязательно рандомизируйте эти параметры
   #   limit-fallback-upload:
@@ -48,6 +79,12 @@ listeners:
   #   enabled: false
   #   method: aes-128-gcm # aes-128-gcm/aes-256-gcm/chacha20-ietf-poly1305
   #   password: "example"
-  ### Обратите внимание, что для троянских программ, если параметр "allow-insecure" не равен true, необходимо заполнить хотя бы одно из следующих полей: "certificate and private-key", "reality-config" или "ss-option". ###
+  ### ВНИМАНИЕ: Для слушателя trojan, если "allow-insecure" не равен true, необходимо заполнить как минимум одну из опций: "certificate" и "private-key" или "shadow-tls" или "res-tls" или "jls-config" или "reality-config" или "ss-option" ###
   # allow-insecure: false # Разрешить ли отключение шифрования TLS (Примечание: только в случаях, когда nginx или caddy установлены предварительно)
-``` 
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # по умолчанию в Mbps
+  #     down: 1000
+```

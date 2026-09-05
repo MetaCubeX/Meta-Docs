@@ -18,6 +18,9 @@ proxies:
   # pre-shared-key: 31aIhAPwktDGpH4JDhA8GNvjFXEf/a6+UaQRyOAiyfM=
   # reserved: [209,98,59]  # Строковый формат также допустим, например "U4An"
   # persistent-keepalive: 0
+  # ip-stack:
+  #   mode: auto
+  #   congestion-controller: cubic
   udp: true
   # mtu: 1408
   # dialer-proxy: "ss1"  # Идентификатор исходящего прокси. Когда значение не пусто, используется указанный proxy/proxy-group для установки соединения
@@ -25,30 +28,38 @@ proxies:
   # dns: [ 1.1.1.1, 8.8.8.8 ] # Действует только когда remote-dns-resolve установлен в true
   # Если присутствует, активирует функции AmneziaWG
   # amnezia-wg-option:
-  #   jc: 5
-  #   jmin: 500
-  #   jmax: 501
-  #   s1: 30
-  #   s2: 40
-  #   s3: 50                                            # AmneziaWG v1.5 and v2
-  #   s4: 5                                             # AmneziaWG v1.5 and v2
-  #   h1: 123456                                        # AmneziaWG v1.0 and v1.5
-  #   h2: 67543                                         # AmneziaWG v1.0 and v1.5
-  #   h3: 123123                                        # AmneziaWG v1.0 and v1.5
-  #   h4: 32345                                         # AmneziaWG v1.0 and v1.5
-  #   h1: 123456-123500                                 # AmneziaWG v2.0 only
-  #   h2: 67543-67550                                   # AmneziaWG v2.0 only
-  #   h3: 123123-123200                                 # AmneziaWG v2.0 only
-  #   h4: 32345-32350                                   # AmneziaWG v2.0 only
-  #   i1: <b 0xf6ab3267fa><c><b 0xf6ab><t><r 10><wt 10> # AmneziaWG v1.5 and v2
-  #   i2: <b 0xf6ab3267fa><r 100>                       # AmneziaWG v1.5 and v2
-  #   i3: ""                                            # AmneziaWG v1.5 and v2
-  #   i4: ""                                            # AmneziaWG v1.5 and v2
-  #   i5: ""                                            # AmneziaWG v1.5 and v2
-  #   j1: <b 0xffffffff><c><b 0xf6ab><t><r 10>          # AmneziaWG v1.5 only (removed in v2)
-  #   j2: <c><b 0xf6ab><t><wt 1000>                     # AmneziaWG v1.5 only (removed in v2)
-  #   j3: <t><b 0xf6ab><c><r 10>                        # AmneziaWG v1.5 only (removed in v2)
-  #   itime: 60                                         # AmneziaWG v1.5 only (removed in v2)
+  #   version: 2                                        # Только версия 3 использует реализацию v3; все остальные значения используют устаревшую реализацию
+  #   jc: 5                                             # AmneziaWG v1.0+
+  #   jmin: 500                                         # AmneziaWG v1.0+
+  #   jmax: 501                                         # AmneziaWG v1.0+
+  #   s1: 30                                            # AmneziaWG v1.0+
+  #   s2: 40                                            # AmneziaWG v1.0+
+  #   s3: 50                                            # AmneziaWG v1.5+
+  #   s4: 8                                             # AmneziaWG v1.5+
+  #   h1: 123456                                        # AmneziaWG v1.0/v1.5 поддерживает только одиночные значения; v2+ также поддерживает диапазоны
+  #   h2: 67543                                         # AmneziaWG v1.0/v1.5 поддерживает только одиночные значения; v2+ также поддерживает диапазоны
+  #   h3: 123123                                        # AmneziaWG v1.0/v1.5 поддерживает только одиночные значения; v2+ также поддерживает диапазоны
+  #   h4: 32345                                         # AmneziaWG v1.0/v1.5 поддерживает только одиночные значения; v2+ также поддерживает диапазоны
+  #   i1: <b 0xf6ab3267fa><b 0xf6ab><t><r 10>           # AmneziaWG v1.5+
+  #   i2: <b 0xf6ab3267fa><r 100>                       # AmneziaWG v1.5+
+  #   i3: ""                                            # AmneziaWG v1.5+
+  #   i4: ""                                            # AmneziaWG v1.5+
+  #   i5: ""                                            # AmneziaWG v1.5+
+  #   j1: <b 0xffffffff><c><b 0xf6ab><t><r 10>          # Только AmneziaWG v1.5 (удалено в v2+)
+  #   j2: <c><b 0xf6ab><t><wt 1000>                     # Только AmneziaWG v1.5 (удалено в v2+)
+  #   j3: <t><b 0xf6ab><c><r 10>                        # Только AmneziaWG v1.5 (удалено в v2+)
+  #   itime: 60                                         # Только AmneziaWG v1.5 (удалено в v2+)
+  #   header-protection-key: >-                         # AmneziaWG v3+
+  #     MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
+  #   content-padding-addition: 0-32                    # AmneziaWG v3+
+  #   rekey-after-time: 120                             # AmneziaWG v3+
+  #   rekey-timeout: 5                                  # AmneziaWG v3+
+  #   reject-after-time: 180                            # AmneziaWG v3+
+  #   keepalive-timeout: 10                             # AmneziaWG v3+
+  #   max-handshake-attempts: 18                        # AmneziaWG v3+
+  #   random-trailers: true                             # AmneziaWG v3.1+
+  #   disable-cookies: true                             # AmneziaWG v3.1+
+
 ```
 
 ## Полная запись
@@ -113,6 +124,20 @@ IPv4-адрес, используемый локальной машиной в �
 ### persistent-keepalive
 
 Необязательное поле, периодически отправляющее пакеты данных для поддержания постоянного соединения.
+
+### ip-stack
+
+Необязательная настройка стека IP-протоколов.
+
+#### ip-stack.mode
+
+Доступные значения: `auto`, `gvisor`, `mips`. Значение по умолчанию — `auto`. При значении `auto` стек выбирается автоматически в зависимости от текущей сборки: если gVisor включён при компиляции, используется `gVisor`; в противном случае используется IP-стек mihomo (`MIPS`).
+
+#### ip-stack.congestion-controller
+
+Алгоритм управления перегрузкой TCP. Доступные значения: `cubic`, `reno`, `bbr`, `bbr3`. Значение по умолчанию — `cubic`.
+
+При использовании стека IP-протоколов gVisor этот параметр не применяется.
 
 ### mtu
 

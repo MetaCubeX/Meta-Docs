@@ -7,6 +7,7 @@ listeners:
   type: hysteria2-realm
   port: 10820 # 支持使用ports格式，例如200,302 or 200,204,401-429,501-503
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   token: public # hysteria2入站和出站通过 `Authorization: Bearer <token>` 出示的 Bearer 令牌。
   max-realms: 65536 # maximum total realms (0 = unlimited)
   max-realms-per-ip: 4 # maximum realms per client IP (0 = unlimited)

@@ -1,8 +1,24 @@
-Clash.Meta 使用流量入站，可以作为服务器。
+# 入站配置
 
-## 局域网入站
+mihomo 可以通过代理端口、TUN 和 Listeners 接收流量。入站是否能从公网访问取决于监听地址、系统路由和防火墙配置，而不是协议所属的分类。
 
-用于监听局域网流量的入站，适用于无加密传输：
+## 配置方式
+
+### 代理端口
+
+顶层的 `port`、`socks-port`、`mixed-port`、`redir-port` 和 `tproxy-port` 适合只需要一组固定代理端口的配置。
+
+参阅[代理端口](./port.md)。
+
+### TUN
+
+顶层 `tun` 配置用于接管系统流量，适合需要自动路由、DNS 劫持或按应用分流的场景。
+
+参阅 [TUN](./tun.md)。
+
+### Listeners
+
+`listeners` 可以同时创建多个不同类型、监听地址和端口的入站，并为每个入站单独设置 `rule`、`proxy` 等通用字段。
 
 ```{.yaml linenums="1"}
 listeners:
@@ -13,167 +29,51 @@ listeners:
     # rule: sub-rule-name1 # 默认使用 rules,如果未找到 sub-rule 则直接使用 rules
     # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理
     # udp: false # 默认 true
-
-  - name: http-in-1
-    type: http
-    port: 10809
-    listen: 0.0.0.0
-    # rule: sub-rule-name1 # 默认使用 rules,如果未找到 sub-rule 则直接使用 rules
-    # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理(当proxy不为空时,这里的proxy名称必须合法,否则会出错)
-
-  - name: mixed-in-1
-    type: mixed #  HTTP(S) 和 SOCKS 代理混合
-    port: 10810
-    listen: 0.0.0.0
-    # rule: sub-rule-name1 # 默认使用 rules,如果未找到 sub-rule 则直接使用 rules
-    # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理(当proxy不为空时,这里的proxy名称必须合法,否则会出错)
-    # udp: false # 默认 true
-
-  - name: reidr-in-1
-    type: redir
-    port: 10811
-    listen: 0.0.0.0
-    # rule: sub-rule-name1 # 默认使用 rules,如果未找到 sub-rule 则直接使用 rules
-    # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理(当proxy不为空时,这里的proxy名称必须合法,否则会出错)
-
-  - name: tproxy-in-1
-    type: tproxy
-    port: 10812
-    listen: 0.0.0.0
-    # rule: sub-rule-name1 # 默认使用 rules,如果未找到 sub-rule 则直接使用 rules
-    # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理(当proxy不为空时,这里的proxy名称必须合法,否则会出错)
-    # udp: false # 默认 true
-
-  - name: tunnel-in-1
-    type: tunnel
-    port: 10816
-    listen: 0.0.0.0
-    # rule: sub-rule-name1 # 默认使用 rules,如果未找到 sub-rule 则直接使用 rules
-    # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理(当proxy不为空时,这里的proxy名称必须合法,否则会出错)
-    network: [tcp, udp]
-    target: target.com
-
-  - name: tun-in-1
-    type: tun
-    # rule: sub-rule-name1 # 默认使用 rules,如果未找到 sub-rule 则直接使用 rules
-    # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理(当proxy不为空时,这里的proxy名称必须合法,否则会出错)
-    stack: system # gvisor / lwip
-    dns-hijack:
-      - 0.0.0.0:53 # 需要劫持的 DNS
-    # auto-detect-interface: false # 自动识别出口网卡
-    # auto-route: false # 配置路由表
-    # mtu: 9000 # 最大传输单元
-    inet4-address: # 必须手动设置ipv4地址段
-      - 198.19.0.1/30
-    inet6-address: # 必须手动设置ipv6地址段
-      - "fdfe:dcba:9877::1/126"
-    # strict-route: true # 将所有连接路由到tun来防止泄漏,但你的设备将无法其他设备被访问
-    #    inet4-route-address: # 启用 auto-route 时使用自定义路由而不是默认路由
-    #      - 0.0.0.0/1
-    #      - 128.0.0.0/1
-    #    inet6-route-address: # 启用 auto-route 时使用自定义路由而不是默认路由
-    #      - "::/1"
-    #      - "8000::/1"
-    # endpoint-independent-nat: false # 启用独立于端点的 NAT
-    # include-uid: # UID 规则仅在 Linux 下被支持,并且需要 auto-route
-    # - 0
-    # include-uid-range: # 限制被路由的的用户范围
-    # - 1000-99999
-    # exclude-uid: # 排除路由的的用户
-    #- 1000
-    # exclude-uid-range: # 排除路由的的用户范围
-    # - 1000-99999
-
-    # Android 用户和应用规则仅在 Android 下被支持
-    # 并且需要 auto-route
-
-    # include-android-user: # 限制被路由的 Android 用户
-    # - 0
-    # - 10
-    # include-package: # 限制被路由的 Android 应用包名
-    # - com.android.chrome
-    # exclude-package: # 排除被路由的 Android 应用包名
-    # - com.android.captiveportallogin
 ```
 
-## 互联网入站
+参阅 [Listener 通用字段](./listeners/index.md)。
 
-用于加密传输流量的入站如下：
+!!! warning
+    `listen: 0.0.0.0` 会监听所有网络接口。未启用 TLS 的 HTTP、SOCKS、Mixed 等入站不应直接暴露到公网。
 
-```{.yaml linenums="1"}
-listeners:
-  - name: shadowsocks-in-1
-    type: shadowsocks
-    port: 10813
-    listen: 0.0.0.0
-    # rule: sub-rule-name1 # 默认使用 rules,如果未找到 sub-rule 则直接使用 rules
-    # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理(当proxy不为空时,这里的proxy名称必须合法,否则会出错)
-    password: vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=
-    cipher: 2022-blake3-aes-256-gcm
+## Listener 类型
 
-  - name: vmess-in-1
-    type: vmess
-    port: 10814
-    listen: 0.0.0.0
-    # rule: sub-rule-name1 # 默认使用 rules,如果未找到 sub-rule 则直接使用 rules
-    # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理(当proxy不为空时,这里的proxy名称必须合法,否则会出错)
-    users:
-      - username: 1
-        uuid: 9d0cb9d0-964f-4ef6-897d-6c6b3ccf9e68
-        alterId: 1
-
-  - name: tuic-in-1
-    type: tuic
-    port: 10815
-    listen: 0.0.0.0
-    # rule: sub-rule-name1 # 默认使用 rules，如果未找到 sub-rule 则直接使用 rules
-    # proxy: proxy # 如果不为空则直接将该入站流量交由指定proxy处理(当proxy不为空时，这里的proxy名称必须合法，否则会出错)
-    # token:    # tuicV4填写（不可同时填写users）
-    #   - TOKEN
-    # users:    # tuicV5填写（不可同时填写token）
-    #   00000000-0000-0000-0000-000000000000: PASSWORD-0
-    #   00000000-0000-0000-0000-000000000001: PASSWORD-1
-    #  certificate: ./server.crt
-    #  private-key: ./server.key
-    #  congestion-controller: bbr
-    #  max-idle-time: 15000
-    #  authentication-timeout: 1000
-    #  alpn:
-    #    - h3
-    #  max-udp-relay-packet-size: 1500
-
-
-```
+| 用途 | 类型 |
+|---|---|
+| 应用代理 | [HTTP](./listeners/http.md)、[SOCKS](./listeners/socks.md)、[Mixed](./listeners/mixed.md) |
+| 透明代理与系统接管 | [Redirect](./listeners/redirect.md)、[TProxy](./listeners/tproxy.md)、[TUN](./listeners/tun.md) |
+| 端口转发 | [Tunnel](./listeners/tunnel.md) |
+| 加密代理服务端 | [Shadowsocks](./listeners/ss.md)、[VMess](./listeners/vmess.md)、[VLESS](./listeners/vless.md)、[Trojan](./listeners/trojan.md)、[AnyTLS](./listeners/anytls.md)、[Snell](./listeners/snell.md)、[Mieru](./listeners/mieru.md)、[Sudoku](./listeners/sudoku.md)、[TrustTunnel](./listeners/trusttunnel.md) |
+| QUIC / UDP 服务端 | [TUIC v4](./listeners/tuic-v4.md)、[TUIC v5](./listeners/tuic-v5.md)、[Hysteria2](./listeners/hysteria2.md)、[Hysteria2 Realm](./listeners/hysteria2-realm.md)、[ShadowQUIC](./listeners/shadowquic.md) |
 
 !!! note
-    proxy 如果不为空，则将该入站流量交由指定[proxy](../proxies/index.md)处理
+    Listener 中的 TUN 面向高级使用场景。普通用户应优先使用顶层 [TUN](./tun.md) 配置。
 
-    rule 如果定义的 [子规则 (sub-rule)](../sub-rule.md)不存在 则直接使用 rules
+## 快捷入口
 
-## 入口配置
-
-入口配置与 Listener 等价，传入流量将和 socks,mixed 等入口一样按照 mode 所指定的方式进行匹配处理
+`ss-config`、`vmess-config` 和 `tuic-server` 仍可用于快速创建对应入站。这些快捷入口与对应的 Listener 等价，传入流量与其他入站一样按照配置的 `mode` 处理。
 
 ```{.yaml linenums="1"}
-# shadowsocks,vmess 入口配置（传入流量将和socks,mixed等入口一样按照mode所指定的方式进行匹配处理）
 ss-config: ss://2022-blake3-aes-256-gcm:vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=@:23456
 vmess-config: vmess://1:9d0cb9d0-964f-4ef6-897d-6c6b3ccf9e68@:12345
 
-# tuic服务器入口（传入流量将和socks,mixed等入口一样按照mode所指定的方式进行匹配处理）
 tuic-server:
- enable: true
- listen: 127.0.0.1:10443
- token:    # tuicV4填写（不可同时填写users）
-   - TOKEN
- users:    # tuicV5填写（不可同时填写token）
-   00000000-0000-0000-0000-000000000000: PASSWORD-0
-   00000000-0000-0000-0000-000000000001: PASSWORD-1
- certificate: ./server.crt
- private-key: ./server.key
- congestion-controller: bbr
- max-idle-time: 15000
- authentication-timeout: 1000
- alpn:
-   - h3
- max-udp-relay-packet-size: 1500
+  enable: true
+  listen: 127.0.0.1:10443
+  token: # TUIC v4，与 users 不能同时配置
+    - TOKEN
+  # users: # TUIC v5，与 token 不能同时配置
+  #   00000000-0000-0000-0000-000000000000: PASSWORD-0
+  #   00000000-0000-0000-0000-000000000001: PASSWORD-1
+  certificate: ./server.crt
+  private-key: ./server.key
+  congestion-controller: bbr
+  max-idle-time: 15000
+  authentication-timeout: 1000
+  alpn:
+    - h3
+  max-udp-relay-packet-size: 1500
 ```
+
+!!! note
+    快捷入口适合兼容已有配置或简单场景。新配置需要更多协议选项或独立路由时，建议使用 `listeners`。

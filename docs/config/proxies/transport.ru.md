@@ -37,7 +37,7 @@
       grpc-opts:
         grpc-service-name: example
         # grpc-user-agent:
-        # ping-interval: 0 
+        # ping-interval: 0
         # max-connections: 1
         # min-streams: 0
         # max-streams: 0
@@ -57,6 +57,57 @@
         v2ray-http-upgrade: false
         v2ray-http-upgrade-fast-open: false
     ```
+=== "mkcp"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "mkcp-opts-example"
+      type: vmess
+      server: server
+      port: 443
+      uuid: uuid
+      alterId: 32
+      cipher: auto
+      network: mkcp
+      mkcp-opts:
+        mtu: 1350
+        tti: 50
+        uplink-capacity: 5
+        downlink-capacity: 20
+        congestion: false
+        write-buffer: 2097152
+        read-buffer: 2097152
+        seed: ""
+        header: ""
+    ```
+=== "mekya"
+    ```{.yaml linenums="1"}
+    proxies:
+    - name: "mekya-opts-example"
+      type: vmess
+      server: server
+      port: 443
+      uuid: uuid
+      alterId: 32
+      cipher: auto
+      tls: true
+      network: mekya
+      mekya-opts:
+        url: https://server:443/mekya
+        max-write-delay: 80
+        max-request-size: 96000
+        polling-interval-initial: 200
+        h2-pool-size: 8
+        kcp:
+          mtu: 1350
+          tti: 15
+          uplink-capacity: 40
+          downlink-capacity: 2000
+          congestion: false
+          write-buffer: 67108864
+          read-buffer: 67108864
+          seed: ""
+          header: ""
+    ```
 === "xhttp"
     ```{.yaml linenums="1"}
     proxies:
@@ -68,10 +119,11 @@
       udp: true
       tls: true
       network: xhttp
-      alpn: [h2] # By default, only h2 mode is supported. To enable h3 mode, you need to set alpn: [h3]; to enable HTTP/1.1 mode, you need to set alpn: [http/1.1].
+      alpn: [h2] # По умолчанию поддерживается только h2. Для h3 укажите alpn: [h3], для HTTP/1.1 — alpn: [http/1.1].
       # ech-opts: ...
       # reality-opts: ...
       # skip-cert-verify: false
+      # name-cert-verify: example.com
       # fingerprint: ...
       # certificate: ...
       # private-key: ...
@@ -81,7 +133,7 @@
       xhttp-opts:
         path: "/"
         host: xxx.com
-        # mode: "stream-one" # Available: "stream-one", "stream-up" or "packet-up"
+        # mode: "stream-one" # Возможные значения: "stream-one", "stream-up" или "packet-up"
         # headers:
         #   X-Forwarded-For: ""
         # no-grpc-header: false
@@ -89,16 +141,18 @@
         # x-padding-obfs-mode: false
         # x-padding-key: x_padding
         # x-padding-header: Referer
-        # x-padding-placement: queryInHeader # Available: queryInHeader, cookie, header, query
-        # x-padding-method: repeat-x # Available: repeat-x, tokenish
-        # uplink-http-method: POST # Available: POST, PUT, PATCH, DELETE
-        # session-placement: path # Available: path, query, cookie, header
+        # x-padding-placement: queryInHeader # Возможные значения: queryInHeader, cookie, header, query
+        # x-padding-method: repeat-x # Возможные значения: repeat-x, tokenish
+        # uplink-http-method: POST # Возможные значения: POST, PUT, PATCH, DELETE
+        # session-placement: path # Возможные значения: path, query, cookie, header
         # session-key: ""
-        # seq-placement: path # Available: path, query, cookie, header
+        # session-table: "" # Возможные значения: "", "uuid", "ALPHABET", "Alphabet", "BASE36", "Base62", "HEX", "alphabet", "base36", "hex", "number"
+        # session-length: "16-32"
+        # seq-placement: path # Возможные значения: path, query, cookie, header
         # seq-key: ""
-        # uplink-data-placement: body # Available: body, cookie, header
+        # uplink-data-placement: body # Возможные значения: body, cookie, header
         # uplink-data-key: ""
-        # uplink-chunk-size: 0 # only applicable when uplink-data-placement is not body
+        # uplink-chunk-size: 0 # Применяется только когда uplink-data-placement не равно body
         # sc-max-each-post-bytes: 1000000
         # sc-min-posts-interval-ms: 30
         # reuse-settings: # aka XMUX
@@ -127,8 +181,12 @@
         #   tls: true
         #   alpn: ...
         #   ech-opts: ...
+        #   shadow-tls-opts: ...
+        #   restls-opts: ...
+        #   jls-opts: ...
         #   reality-opts: ...
         #   skip-cert-verify: false
+        #   name-cert-verify: example.com
         #   fingerprint: ...
         #   certificate: ...
         #   private-key: ...
@@ -219,15 +277,87 @@ gRPC UserAgent
 
 ### ws-opts.early-data-header-name
 
-Имя заголовка для Early Data
-
 ### ws-opts.v2ray-http-upgrade
 
 Использовать HTTP upgrade
 
 ### ws-opts.v2ray-http-upgrade-fast-open
 
-Включить fast open для HTTP upgrade 
+Включить fast open для HTTP upgrade
+
+## mkcp-opts
+
+Настройки транспортного уровня `mkcp`, действуют только когда транспортный уровень — `mkcp`.
+
+!!! note
+    Транспортный уровень mKCP поддерживается только VMess. Не используйте его с другими протоколами.
+
+### mkcp-opts.mtu
+
+Максимальный размер передаваемого блока.
+
+### mkcp-opts.tti
+
+Интервал передачи, в миллисекундах.
+
+### mkcp-opts.uplink-capacity
+
+Пропускная способность вверх, в MB/s.
+
+### mkcp-opts.downlink-capacity
+
+Пропускная способность вниз, в MB/s.
+
+### mkcp-opts.congestion
+
+Включать ли управление перегрузкой.
+
+### mkcp-opts.write-buffer
+
+Размер буфера записи, в байтах.
+
+### mkcp-opts.read-buffer
+
+Размер буфера чтения, в байтах.
+
+### mkcp-opts.seed
+
+Seed для аутентификации AES-GCM. Оставьте пустым для аутентификации по умолчанию.
+
+### mkcp-opts.header
+
+Маскировка заголовка пакета. Возможные значения: `none`/`srtp`/`utp`/`wechat-video`/`dtls`/`wireguard`.
+
+## mekya-opts
+
+Настройки транспортного уровня `mekya`, действуют только когда транспортный уровень — `mekya`.
+
+!!! note
+    Транспортный уровень Mekya поддерживается только VMess. Не используйте его с другими протоколами.
+
+### mekya-opts.url
+
+URL сервера Mekya.
+
+### mekya-opts.max-write-delay
+
+Максимальное ожидание агрегации после первого пакета, в миллисекундах.
+
+### mekya-opts.max-request-size
+
+Максимальный размер полезной нагрузки одного HTTP-запроса, в байтах.
+
+### mekya-opts.polling-interval-initial
+
+Интервал пустого polling, в миллисекундах.
+
+### mekya-opts.h2-pool-size
+
+Размер пула соединений HTTP/2.
+
+### mekya-opts.kcp
+
+Внутренние параметры KCP для Mekya. Поля совпадают с [mkcp-opts](#mkcp-opts).
 
 ## xhttp-opts
 
@@ -236,7 +366,7 @@ gRPC UserAgent
 По умолчанию поддерживается только режим h2. Чтобы включить режим h3, необходимо установить параметр alpn: [h3]; чтобы включить режим HTTP/1.1, необходимо установить параметр alpn: [http/1.1].
 
 !!! note
-    VLESS поддерживает только транспортный уровень xhttp; пожалуйста, не используйте его с другими протоколами.
+    Транспортный уровень xhttp поддерживается только VLESS. Не используйте его с другими протоколами.
 
 ### xhttp-opts.path
 
@@ -264,11 +394,11 @@ gRPC UserAgent
 
 ### xhttp-opts.x-padding-obfs-mode
 
-Включает обфускацию отступов. По умолчанию — false для обратной совместимости.
+Включает обфускацию заполнения. По умолчанию — false для обратной совместимости.
 
 ### xhttp-opts.x-padding-key
 
-Ключ, используемый для хранения значений отступов. Его значение зависит от `x-padding-placement`:
+Ключ, используемый для хранения значений заполнения. Его назначение зависит от `x-padding-placement`:
 
 * Имя параметра запроса в URL (если placement — `queryInHeader`)
 * Имя cookie
@@ -281,7 +411,7 @@ gRPC UserAgent
 
 ### xhttp-opts.x-padding-placement
 
-Определяет место размещения значений отступов. Возможные значения: `queryInHeader`, `cookie`, `header`, `query`. Действует только при значении `x-padding-obfs-mode` равном true.
+Определяет место размещения значений заполнения. Возможные значения: `queryInHeader`, `cookie`, `header`, `query`. Действует только при значении `x-padding-obfs-mode` равном true.
 
 ### xhttp-opts.x-padding-method
 
@@ -301,6 +431,14 @@ gRPC UserAgent
 ### xhttp-opts.session-key
 
 Имя ключа для идентификатора сессии (не применяется, если местоположение размещения — `path`)
+
+### xhttp-opts.session-table
+
+Таблица символов для генерации идентификатора сессии. Возможные значения: `""`, `uuid`, `ALPHABET`, `Alphabet`, `BASE36`, `Base62`, `HEX`, `alphabet`, `base36`, `hex`, `number`.
+
+### xhttp-opts.session-length
+
+Диапазон длины идентификатора сессии. Начальное значение не может быть `0`; общее пространство ID должно быть больше 2,1 млрд. Действует только если `session-table` не пустой или равен `uuid`.
 
 ### xhttp-opts.seq-placement
 
@@ -361,7 +499,7 @@ gRPC UserAgent
 
 ### xhttp-opts.reuse-settings.h-max-request-times
 
-Максимальное количество раз, когда может быть передано одно соединение. Этот параметр неточен, и запросы GET в Golang имеют автоматические повторные попытки, поэтому заполнять его не рекомендуется.
+Максимальное суммарное количество запросов, которое может обслужить одно соединение. Этот счетчик неточен, а GET-запросы в Golang автоматически повторяются, поэтому указывать этот параметр не рекомендуется.
 
 ### xhttp-opts.reuse-settings.h-max-reusable-secs
 
@@ -375,4 +513,4 @@ gRPC UserAgent
 
 Настройки разделения загрузки/выгрузки
 
-Примечание: Этот параметр переопределяет исходную конфигурацию. Если какой-либо параметр не указан, будут использоваться параметры загрузки. (Поддерживаются только параметры, указанные в экземпляре; параметры, не указанные в списке, не будут переопределены.)
+Примечание: Этот параметр переопределяет исходную конфигурацию. Если какой-либо параметр не указан, будет использован соответствующий параметр восходящего канала. Поддерживаются только параметры, указанные в примере; параметры вне списка не переопределяются.

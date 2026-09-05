@@ -44,10 +44,14 @@ dns:
       - gfw
     ipcidr:
       - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+      - 100.64.0.0/10
     domain:
       - '+.google.com'
       - '+.facebook.com'
       - '+.youtube.com'
+  # fallback-lazy-query: false
 ```
 
 ## enable
@@ -194,6 +198,9 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 
 geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只使用 `fallback`解析，不去使用 `nameserver`
 
+!!! warning ""
+    该字段已废弃，请使用 [nameserver-policy](./index.md#nameserver-policy)
+
 ### ipcidr
 
 书写内容为 `IP/掩码`
@@ -203,6 +210,10 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 ### domain
 
 这些域名被视为已污染，匹配到这些域名，会直接使用 `fallback`解析，不去使用 `nameserver`
+
+### fallback-lazy-query
+
+默认值为 false ，如果为 true 会先判断来自 `nameserver` 的结果是否满足 `fallback-filter` 后再发起查询
 
 ## 附加参数
 
@@ -238,6 +249,10 @@ proxies:
 ### skip-cert-verify
 
 跳过 TLS 证书验证
+
+### name-cert-verify
+
+仅修改证书 DNSName 校验目标，不修改 SNI
 
 ### ecs
 

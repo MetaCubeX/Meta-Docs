@@ -21,6 +21,7 @@ proxies:
   # max-udp-relay-packet-size: 1500
   # fast-open: true
   # skip-cert-verify: true
+  # name-cert-verify: example.com
   # max-open-streams: 20
   # sni: example.com
 ```

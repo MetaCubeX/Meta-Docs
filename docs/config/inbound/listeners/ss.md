@@ -6,9 +6,13 @@ listeners:
   type: shadowsocks
   port: 10001
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   cipher: 2022-blake3-aes-256-gcm
   password: vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=
   udp: true
+  # simple-obfs:
+  #   enable: false # 设置为 true 时开启
+  #   mode: http # 可选值：http、tls
   # shadow-tls:
   #   enable: false # 设置为true时开启
   #   version: 3 # 支持v1/v2/v3
@@ -18,6 +22,24 @@ listeners:
   #       password: password
   #   handshake:
   #     dest: test.com:443
+  # res-tls:
+  #   enable: false # 设置为true时开启
+  #   dest: test.com:443
+  #   password: password
+  #   restls-script: ""
+  #   min-record-len: 0
+  #   proxy: ""
+  #   rate-limit: 0 # fallback 双向转发限速，单位 bit/s；0 表示不限速
+  # jls-config: # 仅封装 TCP；JLS 认证失败或普通 TLS 连接会透明回落到 dest
+  #   enable: false
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # 留空时从 dest 推导
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # 转发限速，单位 bit/s，0 表示不限速
   # kcp-tun:
   #   enable: false
   #   key: it's a secrect # pre-shared secret between client and server
@@ -44,6 +66,12 @@ listeners:
   #   framesize: 8192 # smux max frame size
   #   streambuf: 2097152 # per stream receive buffer in bytes, smux v2+
   #   keepalive: 10 # seconds between heartbeats
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # 默认 Mbps
+  #     down: 1000
 ```
 
 ## [通用字段](./index.md)

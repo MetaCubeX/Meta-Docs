@@ -17,7 +17,7 @@ listeners:
   inet6-address:
   - "fdfe:dcba:9877::1/126"
   # strict-route: true
-  # inet4-route-address:由
+  # inet4-route-address:
   # - 0.0.0.0/1
   # - 128.0.0.0/1
   # inet6-route-address:
@@ -32,6 +32,10 @@ listeners:
   # - 1000
   # exclude-uid-range:
   # - 1000-99999
+  # include-mac-address:
+  # - 00:11:22:33:44:55
+  # exclude-mac-address:
+  # - 00:11:22:33:44:55
   # include-android-user:
   # - 0
   # - 10

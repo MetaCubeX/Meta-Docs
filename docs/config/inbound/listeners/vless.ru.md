@@ -6,6 +6,7 @@ listeners:
   type: vless
   port: 10817 # поддерживает формат ports, например 200,302 или 200,204,401-429,501-503
   listen: 0.0.0.0
+  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
   # rule: sub-rule-name1 # по умолчанию использует rules, если sub-rule не найдено, то напрямую использует rules
   # proxy: proxy # если не пусто, то входящий трафик напрямую передается указанному proxy (когда proxy не пусто, имя proxy должно быть корректным, иначе возникнет ошибка)
   users:
@@ -17,22 +18,24 @@ listeners:
   # xhttp-config: # Если поле не пустое, включите транспортный уровень xhttp.
   #   path: "/"
   #   host: ""
-  #   mode: auto # Available: "stream-one", "stream-up" or "packet-up"
+  #   mode: auto # Возможные значения: "stream-one", "stream-up" или "packet-up"
   #   no-sse-header: false
   #   x-padding-bytes: "100-1000"
   #   x-padding-obfs-mode: false
   #   x-padding-key: x_padding
   #   x-padding-header: Referer
-  #   x-padding-placement: queryInHeader # Available: queryInHeader, cookie, header, query
-  #   x-padding-method: repeat-x # Available: repeat-x, tokenish
-  #   uplink-http-method: POST # Available: POST, PUT, PATCH, DELETE
-  #   session-placement: path # Available: path, query, cookie, header
+  #   x-padding-placement: queryInHeader # Возможные значения: queryInHeader, cookie, header, query
+  #   x-padding-method: repeat-x # Возможные значения: repeat-x, tokenish
+  #   uplink-http-method: POST # Возможные значения: POST, PUT, PATCH, DELETE
+  #   session-placement: path # Возможные значения: path, query, cookie, header
   #   session-key: ""
-  #   seq-placement: path # Available: path, query, cookie, header
+  #   session-table: "" # Возможные значения: "", "uuid", "ALPHABET", "Alphabet", "BASE36", "Base62", "HEX", "alphabet", "base36", "hex", "number"
+  #   session-length: "16-32" # начальное значение не может быть 0, общее пространство id должно быть больше 2,1 млрд; действует только если session-table не пустой или uuid
+  #   seq-placement: path # Возможные значения: path, query, cookie, header
   #   seq-key: ""
-  #   uplink-data-placement: body # Available: body, cookie, header
+  #   uplink-data-placement: body # Возможные значения: body, cookie, header
   #   uplink-data-key: ""
-  #   uplink-chunk-size: 0 # only applicable when uplink-data-placement is not body
+  #   uplink-chunk-size: 0 # Применяется только когда uplink-data-placement не равно body
   #   sc-max-buffered-posts: 30
   #   sc-stream-up-server-secs: "20-80"
   #   sc-max-each-post-bytes: 1000000
@@ -70,6 +73,8 @@ listeners:
       - 0123456789abcdef
     server-names:
       - test.com
+    # max-time-difference: 0 # в микросекундах
+    # proxy: ""
     #следующие два limit необязательны, могут ограничивать скорость fallback-соединений, не прошедших проверку, bytesPerSec по умолчанию 0 (не включено)
     #ограничение скорости fallback является характеристикой, не рекомендуется включать, если вы разработчик панели/скрипта, обязательно рандомизируйте эти параметры
     limit-fallback-upload:
@@ -80,6 +85,40 @@ listeners:
       after-bytes: 0 # начать ограничение скорости после передачи указанного количества байт
       bytes-per-sec: 0 # базовая скорость (байт/сек)
       burst-bytes-per-sec: 0 # пиковая скорость (байт/сек), действует когда больше bytesPerSec
-  ### Обратите внимание, что для слушателей Vless, если параметр "allow-insecure" не равен true, необходимо заполнить хотя бы одно из следующих полей: "certificate and private-key", "reality-config" или "decryption". ###
+  # shadow-tls:
+  #   enable: true
+  #   version: 3 # поддерживает v1/v2/v3
+  #   # password: shadow-tls-password # параметр конфигурации v2
+  #   users: # параметр конфигурации v3
+  #     - name: shadow-tls-user
+  #       password: shadow-tls-password
+  #   handshake:
+  #     dest: www.example.com:443
+  #     # proxy: ""
+  # res-tls:
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
+  #   # rate-limit: 0 # Ограничение скорости двусторонней передачи для fallback, в бит/с; 0 — без ограничений.
+  # jls-config: # JLS заменяет обычный TLS; неавторизованные соединения перенаправляются на dest
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # Если пусто, выводится из dest
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # Ограничение скорости fallback-пересылки, bit/s; 0 означает без ограничения
+  ### ВНИМАНИЕ: Для слушателя vless, если "allow-insecure" не равен true, необходимо заполнить как минимум одну из опций: «certificate и private-key» или «shadow-tls» или «res-tls» или «jls-config» или «reality-config» или «decryption» ###
   # allow-insecure: false # Разрешить ли отключение шифрования TLS (Примечание: только в случаях, когда nginx или caddy установлены предварительно)
-``` 
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # по умолчанию в Mbps
+  #     down: 1000
+```

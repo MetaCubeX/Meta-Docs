@@ -13,12 +13,34 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # ip-stack:
+  #   mode: auto
+  #   congestion-controller: cubic
+  # sni: example.com
   # Идентификатор исходящего прокси. Если значение не пустое, соединения будут отправляться через указанный proxy
   # dialer-proxy: "ss1"
   # remote-dns-resolve: true # Принудительное удаленное DNS-разрешение, значение по умолчанию — false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # Работает только при remote-dns-resolve: true
   # congestion-controller: bbr # По умолчанию отключено
-  # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  # bbr-profile: "" # Возможные значения: "standard", "conservative", "aggressive". По умолчанию: "standard"
+  # handshake-timeout: 30
+
+# masque-h3-l4proxy
+- name: "masque-h3-l4proxy"
+  type: masque
+  server: server.com
+  port: 443
+  private-key: BASE64_ENCODED_PRIVATE_KEY
+  public-key: BASE64_ENCODED_PUBLIC_KEY
+  udp: false # режим l4proxy сейчас не поддерживает UDP
+  # ip-stack:
+  #   mode: auto
+  #   congestion-controller: cubic
+  network: h3-l4proxy
+  # remote-dns-resolve: true # Принудительное удаленное DNS-разрешение, значение по умолчанию — false
+  # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # Работает только при remote-dns-resolve: true
+  # congestion-controller: bbr # По умолчанию отключено
+  # handshake-timeout: 30
 
 # masque-h2
 - name: "masque-h2"
@@ -31,11 +53,16 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # ip-stack:
+  #   mode: auto
+  #   congestion-controller: cubic
+  # sni: example.com
   network: h2
   # Идентификатор исходящего прокси. Если значение не пустое, соединения будут отправляться через указанный proxy
   # dialer-proxy: "ss1"
   # remote-dns-resolve: true # Принудительное удаленное DNS-разрешение, значение по умолчанию — false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # Работает только при remote-dns-resolve: true
+  # handshake-timeout: 30
 ```
 
 ## Получение конфигурации MASQUE
@@ -71,6 +98,20 @@ proxies:
 
 Включать ли поддержку UDP, по умолчанию false.
 
+## ip-stack
+
+Необязательная настройка стека IP-протоколов.
+
+### ip-stack.mode
+
+Доступные значения: `auto`, `gvisor`, `mips`. Значение по умолчанию — `auto`. При значении `auto` стек выбирается автоматически в зависимости от текущей сборки: если gVisor включён при компиляции, используется `gVisor`; в противном случае используется IP-стек mihomo (`MIPS`).
+
+### ip-stack.congestion-controller
+
+Алгоритм управления перегрузкой TCP. Доступные значения: `cubic`, `reno`, `bbr`, `bbr3`. Значение по умолчанию — `cubic`.
+
+При использовании стека IP-протоколов gVisor этот параметр не применяется.
+
 ## remote-dns-resolve
 
 Включать ли удаленное разрешение DNS через туннель MASQUE.
@@ -85,4 +126,11 @@ proxies:
 
 ## network
 
-Необязательное поле. По умолчанию используется `quic`, для `masque-h2` нужно установить `h2`.
+Необязательное поле. По умолчанию используется `quic`. Для `masque-h2` нужно установить `h2`, для режима h3-l4proxy — `h3-l4proxy`.
+
+!!! note
+    Режим `h3-l4proxy` сейчас не поддерживает UDP.
+
+## handshake-timeout
+
+Таймаут рукопожатия в секундах. Значение по умолчанию `0` означает, что используется только таймаут внешнего соединения.

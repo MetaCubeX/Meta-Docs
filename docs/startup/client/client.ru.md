@@ -12,6 +12,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|поддерживается |
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|поддерживается |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|поддерживается |
@@ -35,15 +36,19 @@
 |Название проекта | Статус поддержки | Примечание |
 |:----|:----|:----|
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
+|[CatBar](https://github.com/QuentinHsu/cat-bar)|поддерживается |
 |[ClashBar](https://github.com/Sitoi/ClashBar)|поддерживается |
 |[ClashMac](https://github.com/666OS/ClashMac)|поддерживается | Закрытый исходный код, сборка невоспроизводима |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
-|[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|поддерживается |
+|[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|поддерживается |
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
+|[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|поддерживается |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|поддерживается |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|поддерживается |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|поддерживается |
@@ -59,8 +64,10 @@
 |Название проекта | Статус поддержки | Примечание |
 |:----|:----|:----|
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
+|[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|поддерживается |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|поддерживается |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |
@@ -86,8 +93,10 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
-|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|поддерживается | Закрытый исходный код, сборка невоспроизводима |
+|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|поддерживается | Закрытый исходный код |
+|[MikuBox](https://github.com/HatsuneMikuUwU/MikuBoxForAndroid)|поддерживается |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|поддерживается |
+|[SlClash](https://github.com/songzhengpei/Slclash)|поддерживается |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|поддерживается |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддерживается |
 
@@ -103,6 +112,7 @@
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|поддерживается |
 |[LinkClashX](https://apps.apple.com/app/id6757075299)|поддерживается | Закрытый исходный код |
 |[Nextin](https://apps.apple.com/app/id6754002454)|поддерживается | Закрытый исходный код |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
 
 ## Merlin (прошивка KoolCenter/paldier SWRT)
 

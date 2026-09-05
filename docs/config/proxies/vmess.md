@@ -22,9 +22,21 @@ proxies:
   fingerprint: xxxx
   client-fingerprint: chrome
   skip-cert-verify: true
+  name-cert-verify: example.com
+  shadow-tls-opts:
+    version: 3
+    password: shadow-tls-password
+  restls-opts:
+    password: restls-password
+    version-hint: tls13
+  jls-opts:
+    username: jls-user
+    password: jls-password
   reality-opts:
     public-key: xxxx
     short-id: xxxx
+  tlsmirror-opts:
+    primary-key: xxxx
 
   network: tcp
 
@@ -62,6 +74,6 @@ UDP 包编码，为空则使用原始编码，可选 `packetaddr` (由 `v2ray 5+
 
 ## network
 
-传输层，支持 ws/http/h2/grpc，不配置或配置其他值则为 tcp
+传输层，支持 ws/http/h2/grpc/mkcp/mekya，不配置或配置其他值则为 tcp
 
 参阅 [传输层配置](./transport.md)

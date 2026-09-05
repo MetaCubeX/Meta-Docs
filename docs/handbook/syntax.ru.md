@@ -135,7 +135,7 @@ proxy-providers:
 ## Подстановочные знаки для доменов {#domain-wildcards}
 
 !!! note
-  Подстановочные знаки для доменов в этом разделе отличаются от [`DOMAIN-WILDCARD` в правилах маршрутизации](../config/rules/index.md#domain-wildcard)
+    Подстановочные знаки для доменов в этом разделе отличаются от [`DOMAIN-WILDCARD` в правилах маршрутизации](../config/rules/index.md#domain-wildcard)
 
 ### Подстановочный знак `*`
 

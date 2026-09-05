@@ -14,6 +14,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   interval: 300
   lazy: true
+  default-selected: ss
   empty-fallback: COMPATIBLE
   timeout: 5000
   max-failed-times: 5
@@ -65,6 +66,10 @@ proxy-groups:
 ## lazy
 
 Ленивое состояние, по умолчанию `true`. Если текущая группа прокси не выбрана, тестирование не выполняется.
+
+## default-selected
+
+Узел, выбранный по умолчанию. Если поле пустое или указанное имя узла не существует, выбирается первый узел в группе.
 
 ## empty-fallback
 
@@ -128,14 +133,14 @@ proxy-groups:
 
 ## filter
 
-Фильтрует узлы, соответствующие ключевым словам или [регулярным выражениям](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Можно использовать ` для разделения нескольких регулярных выражений.
+Фильтрует узлы, соответствующие ключевым словам или [регулярным выражениям](https://github.com/ziishaned/learn-regex/blob/master/translations/README-ru.md). Используйте `` ` `` для разделения нескольких регулярных выражений.
 
 !!! info ""
     Применяется только к включенным наборам прокси и [включению всех исходящих прокси](./index.md#include-all-proxies).
 
 ## exclude-filter
 
-Исключает узлы, соответствующие ключевым словам или [регулярным выражениям](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). Можно использовать ` для разделения нескольких регулярных выражений.
+Исключает узлы, соответствующие ключевым словам или [регулярным выражениям](https://github.com/ziishaned/learn-regex/blob/master/translations/README-ru.md). Используйте `` ` `` для разделения нескольких регулярных выражений.
 
 ## exclude-type
 
@@ -177,4 +182,4 @@ expected-status: 200/302/400-503
 
 ## icon
 
-Возвращает строку, введенную для `icon` в API, для отображения в этой группе прокси (требует адаптации фронтенда с использованием API). 
+Возвращает строку, введенную для `icon` в API, для отображения в этой группе прокси (требует адаптации фронтенда с использованием API).

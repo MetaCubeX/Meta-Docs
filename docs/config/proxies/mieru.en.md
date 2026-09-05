@@ -11,6 +11,7 @@ proxies:
     username: user
     password: password
     multiplexing: MULTIPLEXING_LOW
+    handshake-mode: HANDSHAKE_STANDARD
     traffic-pattern: ""
 ```
 
@@ -27,6 +28,10 @@ Protocol. Currently supports `TCP` and `UDP`.
 ## multiplexing
 
 Multiplexing mode. Available values include `MULTIPLEXING_OFF`, `MULTIPLEXING_LOW`, `MULTIPLEXING_MIDDLE`, and `MULTIPLEXING_HIGH`. `MULTIPLEXING_OFF` disables multiplexing. Default: `MULTIPLEXING_LOW`.
+
+## handshake-mode
+
+Handshake mode. `HANDSHAKE_STANDARD` (default) waits for the handshake to complete; `HANDSHAKE_NO_WAIT` enables a 0-RTT handshake.
 
 ## traffic-pattern
 

@@ -6,6 +6,7 @@ listeners:
   type: mixed
   port: 7892
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   udp: true
   users:
     - username: username1

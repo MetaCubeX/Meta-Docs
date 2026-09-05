@@ -14,6 +14,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   interval: 300
   lazy: true
+  default-selected: ss
   empty-fallback: COMPATIBLE
   timeout: 5000
   max-failed-times: 5
@@ -55,7 +56,7 @@ References to [proxy sets](../proxy-providers/index.md).
 
 Health check test address.
 
-!!! note 
+!!! note
     It will only check the proxies field of the proxy group, and will not check the proxies of the proxy providers introduced through use.
 
 ## interval
@@ -65,6 +66,10 @@ Health check interval; if not 0, periodic testing is enabled, measured in second
 ## lazy
 
 Lazy state, defaults to `true`. If the current proxy group is not selected, no testing is performed.
+
+## default-selected
+
+The node selected by default. If this field is empty or the node name does not exist, the first node in the group is selected.
 
 ## empty-fallback
 
@@ -129,18 +134,18 @@ Includes all [proxy sets](../proxy-providers/index.md), sorted by name.
 
 ## filter
 
-Filters nodes that meet keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). You can use ` to separate multiple regular expressions.
+Filters nodes that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/README.md). Use `` ` `` to separate multiple regular expressions.
 
 !!! info ""
     This only applies to included proxy sets and [including all outbound proxies](./index.md#include-all-proxies).
 
 ## exclude-filter
 
-Excludes nodes that meet keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md). You can use ` to separate multiple regular expressions.
+Excludes nodes that match keywords or [regular expressions](https://github.com/ziishaned/learn-regex/blob/master/README.md). Use `` ` `` to separate multiple regular expressions.
 
 ## exclude-type
 
-Regular expressions are not supported. Split by `|`, exclude based on node type, only excluding [ingress outbound proxies](#proxies)
+Regular expressions are not supported. Split by `|` and exclude by node type. This applies only to [included outbound proxies](#proxies).
 
 For supported types, please refer to [Adapter Type](https://github.com/MetaCubeX/mihomo/blob/fbead56ec97ae93f904f4476df1741af718c9c2a/constant/adapters.go#L18-L45), ignore case sensitivity
 

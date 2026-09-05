@@ -6,6 +6,7 @@ listeners:
   type: hysteria2
   port: 8443
   listen: 0.0.0.0
+  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
   users:
     user1: password1
     user2: password2
@@ -15,7 +16,7 @@ listeners:
   obfs: salamander
   obfs-password: password
   masquerade: ""
-  #  bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  #  bbr-profile: "" # Возможные значения: "standard", "conservative", "aggressive". По умолчанию: "standard"
   #  realm-opts:
   #    enable: true # Необходимо включить вручную.
   #    server-url: https://realm.hy2.io
@@ -26,8 +27,9 @@ listeners:
   #      - stun.sip.us:3478
   #      - global.stun.twilio.com:3478
   #    # proxy: DIRECT # Настройте URL-адрес сервера для подключения через определенный прокси-сервер.
-  #    # Следующая инструкция позволяет ввести конфигурацию TLS для URL-адреса сервера (sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #    # Следующая инструкция позволяет ввести конфигурацию TLS для URL-адреса сервера (sni, skip-cert-verify, name-cert-verify, fingerprint, certificate, private-key, alpn)
   #    # skip-cert-verify： false
+  #    # name-cert-verify: example.com
   #    # ......
   alpn:
   - h3
@@ -43,6 +45,12 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # по умолчанию в Mbps
+  #     down: 1000
 ```
 
 ## [Общие поля](./index.md)
@@ -58,7 +66,7 @@ listeners:
 
 ### up/down
 
-Настройки скорости Hysteria, по умолчанию в Mbps, подробнее см. [документацию Hysteria](https://v2.hysteria.network/zh/docs/advanced/Full-Server-Config/#_4)
+Настройки скорости Hysteria, по умолчанию в Mbps, подробнее см. [документацию Hysteria](https://v2.hysteria.network/docs/advanced/Full-Server-Config/#bandwidth)
 
 ### ignore-client-bandwidth
 
@@ -81,7 +89,7 @@ listeners:
 
 Маскировка трафика под HTTP/3, поддерживает только `file` и `http/https`, если пусто, всегда возвращает 404 Not Found
 
-Подробнее см. [документацию Hysteria](https://v2.hysteria.network/zh/docs/advanced/Full-Server-Config/#masquerade)
+Подробнее см. [документацию Hysteria](https://v2.hysteria.network/docs/advanced/Full-Server-Config/#masquerade)
 
 |              | Пример                   | Описание       |
 |--------------|-------------------------|----------------|
@@ -96,4 +104,4 @@ listeners:
 
 ### certificate/private-key
 
-Пути к файлам сертификата TLS 
+Пути к файлам сертификата TLS

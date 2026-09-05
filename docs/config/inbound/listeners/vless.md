@@ -6,6 +6,7 @@ listeners:
   type: vless
   port: 10817 # 支持使用ports格式，例如200,302 or 200,204,401-429,501-503
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   # rule: sub-rule-name1 # 默认使用 rules，如果未找到 sub-rule 则直接使用 rules
   # proxy: proxy # 如果不为空则直接将该入站流量交由指定 proxy 处理 (当 proxy 不为空时，这里的 proxy 名称必须合法，否则会出错)
   users:
@@ -28,6 +29,8 @@ listeners:
   #   uplink-http-method: POST # Available: POST, PUT, PATCH, DELETE
   #   session-placement: path # Available: path, query, cookie, header
   #   session-key: ""
+  #   session-table: "" # Available: "", "uuid", "ALPHABET", "Alphabet", "BASE36", "Base62", "HEX", "alphabet", "base36", "hex", "number"
+  #   session-length: "16-32" # 起始值不可为 0，总的 id 空间必须大于 21 亿，仅当session-table不为空或uuid时生效
   #   seq-placement: path # Available: path, query, cookie, header
   #   seq-key: ""
   #   uplink-data-placement: body # Available: body, cookie, header
@@ -70,6 +73,8 @@ listeners:
       - 0123456789abcdef
     server-names:
       - test.com
+    # max-time-difference: 0 # 单位微秒
+    # proxy: ""
     #下列两个 limit 为选填，可对未通过验证的回落连接限速，bytesPerSec 默认为 0 即不启用
     #回落限速是一种特征，不建议启用，如果您是面板/一键脚本开发者，务必让这些参数随机化
     limit-fallback-upload:
@@ -80,6 +85,40 @@ listeners:
       after-bytes: 0 # 传输指定字节后开始限速
       bytes-per-sec: 0 # 基准速率（字节/秒）
       burst-bytes-per-sec: 0 # 突发速率（字节/秒），大于 bytesPerSec 时生效
-  ### 注意，对于vless listener, 如果 "allow-insecure" 不为 true, 至少需要填写 “certificate和private-key” 或 “reality-config” 或 “decryption” 的其中一项 ###
+  # shadow-tls:
+  #   enable: true
+  #   version: 3 # 支持 v1/v2/v3
+  #   # password: shadow-tls-password # v2 配置项
+  #   users: # v3 配置项
+  #     - name: shadow-tls-user
+  #       password: shadow-tls-password
+  #   handshake:
+  #     dest: www.example.com:443
+  #     # proxy: ""
+  # res-tls:
+  #   enable: true
+  #   dest: www.example.com:443
+  #   password: restls-password
+  #   # restls-script: ""
+  #   # min-record-len: 0
+  #   # proxy: ""
+  #   # rate-limit: 0 # fallback 双向转发限速，单位 bit/s；0 表示不限速
+  # jls-config: # JLS 替代普通 TLS；未认证连接回落到 dest
+  #   enable: true
+  #   users:
+  #     - username: jls-user
+  #       password: jls-password
+  #   dest: www.example.com:443
+  #   # sni: www.example.com # 留空时从 dest 推导
+  #   # alpn: [h2, http/1.1]
+  #   # proxy: ""
+  #   # rate-limit: 0 # fallback 转发限速，单位 bit/s；0 表示不限速
+  ### 注意，对于vless listener, 如果 "allow-insecure" 不为 true, 至少需要填写 “certificate和private-key” 或 “shadow-tls” 或 “res-tls” 或 “jls-config” 或 “reality-config” 或 “decryption” 的其中一项 ###
   # allow-insecure: false # 是否允许不开启tls加密（注意：仅用于有 nginx, caddy 前置的情况）
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # 默认 Mbps
+  #     down: 1000
 ```

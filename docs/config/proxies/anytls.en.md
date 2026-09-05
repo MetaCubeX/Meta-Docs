@@ -9,6 +9,7 @@ proxies:
   password: "<your password>"
   client-fingerprint: chrome
   udp: true
+  # client-metadata: ""
   idle-session-check-interval: 30
   idle-session-timeout: 30
   min-idle-session: 0
@@ -17,6 +18,16 @@ proxies:
     - h2
     - http/1.1
   skip-cert-verify: true
+  name-cert-verify: example.com
+  shadow-tls-opts:
+    version: 3
+    password: shadow-tls-password
+  restls-opts:
+    password: restls-password
+    version-hint: tls13
+  jls-opts:
+    username: jls-user
+    password: jls-password
 ```
 
 [Common fields](./index.md)
@@ -24,7 +35,14 @@ proxies:
 [TLS fields](./tls.md)
 
 !!! tip
-    Mihomo does not support AnyTLS+Reality, and will not support this combination in the future. If you want to hide SNI, use [ECH](./tls.md#ech-opts). If you must use Reality, choose the [VMess](./vmess.md), [VLESS](./vless.md), or [Trojan](./trojan.md) protocol.
+    Mihomo does not support AnyTLS+Reality, and will not support this combination in the future. If you want to hide SNI, use [ECH](./tls.md#ech-opts), or combine AnyTLS with [ShadowTLS](./tls.md#shadow-tls-opts), [ResTLS](./tls.md#restls-opts), or [JLS](./tls.md#jls-opts). If you must use Reality, choose the [VMess](./vmess.md), [VLESS](./vless.md), or [Trojan](./trojan.md) protocol.
+
+## client-metadata
+
+Optional. Client metadata sent to the server.
+
+!!! warning
+    Since `client-metadata` may be used to collect client information and treat clients differently, this data is no longer sent by default starting from v1.19.30. If needed, specify it manually.
 
 ## idle-session-check-interval
 

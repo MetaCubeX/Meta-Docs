@@ -6,6 +6,7 @@ listeners:
   type: mieru
   port: 10818
   listen: 0.0.0.0
+  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
   transport: TCP # Поддерживает TCP или UDP
   users:
     username1: password1
@@ -16,4 +17,4 @@ listeners:
   # user-hint-is-mandatory: false
 ```
 
-[Общие поля](./index.ru.md)
+[Общие поля](./index.md)

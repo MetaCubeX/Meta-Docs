@@ -4,6 +4,7 @@
 experimental:
   quic-go-disable-gso: false
   quic-go-disable-ecn: false
+  dialer-ip4p-convert: false
 ```
 
 ## quic-go-disable-gso

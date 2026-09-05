@@ -14,6 +14,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   interval: 300
   lazy: true
+  default-selected: ss
   empty-fallback: COMPATIBLE
   timeout: 5000
   max-failed-times: 5
@@ -65,6 +66,10 @@ proxy-groups:
 ## lazy
 
 懒惰状态，默认为`true`,未选择到当前策略组时，不进行测试
+
+## default-selected
+
+默认选择的节点。该项为空或者设置的节点名不存在时，默认选择组中第一个节点
 
 ## empty-fallback
 
@@ -128,14 +133,14 @@ proxy-groups:
 
 ## filter
 
-筛选满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点，可以使用 ` 区分多个正则表达式
+筛选满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点，可以使用 `` ` `` 区分多个正则表达式
 
 !!! info ""
     仅作用于引入代理集合以及[引入所有出站代理](./index.md#include-all-proxies)
 
 ## exclude-filter
 
-排除满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点，可以使用 ` 区分多个正则表达式
+排除满足关键词或[正则表达式](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)的节点，可以使用 `` ` `` 区分多个正则表达式
 
 ## exclude-type
 

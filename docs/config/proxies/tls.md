@@ -11,6 +11,7 @@ proxies:
   - h2
   - http/1.1
   skip-cert-verify: true
+  # name-cert-verify: example.com
   # certificate: xxxx
   # private-key: xxx
   client-fingerprint: chrome
@@ -22,6 +23,53 @@ proxies:
     enable: true
     config: base64_encoded_config
     # query-server-name: xxx.com
+  shadow-tls-opts: 
+    version: 3 
+    password: shadow-tls-password
+  restls-opts:
+    password: restls-password
+    version-hint: tls13
+  jls-opts:
+    username: jls-user
+    password: jls-password
+  tlsmirror-opts:
+    primary-key: MDEyMzQ1Njc4OWFiY2RlZjAxMjM0NTY3ODlhYmNkZWY=
+    explicit-nonce-ciphersuites: [
+      156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171,
+      172, 173, 49195, 49196, 49197, 49198, 49199, 49200, 49201, 49202, 49290, 49291,
+      49293, 49316, 49317, 49318, 49319, 49320, 49321, 49322, 49323, 49324, 49325,
+      49326, 49327, 52392, 52393, 52394, 52395, 52396, 52397, 52398
+    ]
+    defer-instance-derived-write-time:
+      base-nanoseconds: 0
+      uniform-random-multiplier-nanoseconds: 0
+    transport-layer-padding:
+      enabled: false
+    connection-enrolment:
+      primary-egress-outbound: ""
+    sequence-watermarking-enabled: false
+    embedded-traffic-generator:
+      steps:
+        - name: example
+          host: example.com
+          path: /
+          method: GET
+          headers:
+            - name: User-Agent
+              value: mihomo
+            - name: Accept
+              values:
+                - text/html
+                - application/xhtml+xml
+          connection-ready: true
+          connection-recall-exit: true
+          h2-do-not-wait-for-download-finish: false
+          wait-time:
+            base-nanoseconds: 1000000000
+            uniform-random-multiplier-nanoseconds: 0
+          next-step:
+            - weight: 1
+              goto-location: 0
 ```
 
 ## tls
@@ -60,6 +108,10 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 跳过证书验证，仅适用于使用 `tls` 的协议
 
+## name-cert-verify
+
+可选，仅修改证书 DNSName 校验目标，不修改 SNI
+
 ## certificate
 
 如果填写则开启 [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/)（需要和 private-key 同时填写），内容为证书 PEM 格式，或者 证书的路径
@@ -78,6 +130,9 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 ## reality-opts
 
 reality 配置，如果不为空，则启用 reality
+
+!!! warning
+    由于 xray-core 刻意的[不兼容行为](https://github.com/XTLS/Xray-core/commit/af7eb68028732a8ee3c0e5d6ab2b8a657bb2e770)，我们不会考虑 xray v26.7.11+ 版本的兼容性，如果不能使用请更换服务端（如 [mihomo 原生 listener](../inbound/listeners/index.md)，sing-box 或旧版 xray-core），或用其他协议替代
 
 ### reality-opts.public-key
 
@@ -107,3 +162,130 @@ ECH 配置，如果为空则通过 dns 解析，不为空则通过该值指定�
 ### ech-opts.query-server-name
 
 可选项，不为空时用于指定通过 dns 解析时的域名
+
+## shadow-tls-opts
+
+需要开启 `tls: true`；使用通用配置中的 `sni` / `servername` 作为 ShadowTLS 的 SNI。
+
+### shadow-tls-opts.version
+
+支持 `v1` / `v2` / `v3`；留空时默认为 `v2`。
+
+### shadow-tls-opts.password
+
+ShadowTLS 密码
+
+## restls-opts
+
+需要开启 `tls: true`；使用通用配置中的 `sni` / `servername` 作为 Restls 的 SNI。
+
+### restls-opts.password
+
+Restls 密码
+
+### restls-opts.version-hint
+
+TLS 版本提示，可选值为 `tls12` / `tls13`
+
+### restls-opts.restls-script
+
+可选，用于控制握手后的 Restls 载体流量脚本
+
+## jls-opts
+
+需要开启 `tls: true`。使用通用配置中的 `sni` / `servername` 作为 JLS 的 SNI。
+
+### jls-opts.username
+
+JLS 用户名
+
+### jls-opts.password
+
+JLS 密码
+
+## tlsmirror-opts
+
+当 `tls` 为 `true` 且配置 `tlsmirror-opts` 时启用 tlsmirror。tlsmirror 的 TLS 载体会使用同一出站中的 `servername`、`alpn`、`skip-cert-verify`、`name-cert-verify`、`fingerprint`、`certificate`、`private-key`、`client-fingerprint` 和 `ech-opts` 配置；`servername` 为空时使用 `server`。
+
+!!! note
+    目前仅 VMess 支持开启 tlsmirror，请勿在其他协议上使用
+
+### tlsmirror-opts.primary-key
+
+必填，32 字节主密钥的 base64 编码
+
+### tlsmirror-opts.explicit-nonce-ciphersuites
+
+TLS 1.2 载体使用显式 nonce 的加密套件
+
+### tlsmirror-opts.defer-instance-derived-write-time
+
+首次写入前的延迟
+
+### tlsmirror-opts.transport-layer-padding
+
+传输层填充设置
+
+### tlsmirror-opts.connection-enrolment
+
+v2ray 兼容的连接登记确认设置。mihomo VMess 出站一般保持 `primary-egress-outbound` 为空
+
+#### tlsmirror-opts.connection-enrolment.primary-ingress-outbound
+
+连接登记使用的入站侧控制出站标识，通常用于和 v2ray 兼容的服务端配置对应
+
+#### tlsmirror-opts.connection-enrolment.primary-egress-outbound
+
+连接登记使用的出站侧控制出站标识。mihomo VMess 出站一般保持为空；v2ray 可填写专用的控制出站 tag
+
+### tlsmirror-opts.sequence-watermarking-enabled
+
+是否启用序列水印
+
+### tlsmirror-opts.embedded-traffic-generator
+
+生成额外的 HTTP 载体流量，协议由 `alpn` 决定。未配置 `steps` 时不会启用
+
+#### tlsmirror-opts.embedded-traffic-generator.steps
+
+HTTP 载体流量步骤列表，按顺序执行；也可以通过 `next-step` 跳转
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.name
+
+步骤名称，仅用于标识
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.host
+
+HTTP 请求目标主机
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.path
+
+HTTP 请求路径
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.method
+
+HTTP 请求方法
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.headers
+
+HTTP 请求头列表。每项使用 `name` 指定头名，可用 `value` 写入单个值，或用 `values` 写入多个值
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.connection-ready
+
+该步骤完成后再交付代理连接
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.connection-recall-exit
+
+代理连接关闭后退出载体流量
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.h2-do-not-wait-for-download-finish
+
+当载体协议为 `h2` 时，不等待响应体读取完成
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.wait-time
+
+步骤完成后等待的时间，字段同 [tlsmirror-opts.defer-instance-derived-write-time](#tlsmirror-optsdefer-instance-derived-write-time)
+
+#### tlsmirror-opts.embedded-traffic-generator.steps.next-step
+
+下一步骤的加权候选列表。`weight` 为权重，`goto-location` 为跳转到的步骤下标

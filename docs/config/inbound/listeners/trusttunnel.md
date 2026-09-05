@@ -6,6 +6,7 @@ listeners:
   type: trusttunnel
   port: 10821
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   # rule: sub-rule-name1 # 默认使用 rules，如果未找到 sub-rule 则直接使用 rules
   # proxy: proxy # 如果不为空则直接将该入站流量交由指定 proxy 处理 (当 proxy 不为空时，这里的 proxy 名称必须合法，否则会出错)
   users:

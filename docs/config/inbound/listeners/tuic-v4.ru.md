@@ -6,6 +6,7 @@ listeners:
   type: tuic
   port: 10003
   listen: 0.0.0.0
+  # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
   token:
     - TOKEN
   certificate: ./server.crt # сертификат в формате PEM или путь к сертификату
@@ -21,10 +22,16 @@ listeners:
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
   congestion-controller: bbr
-  #  bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  #  bbr-profile: "" # Возможные значения: "standard", "conservative", "aggressive". По умолчанию: "standard"
   max-idle-time: 15000
   authentication-timeout: 1000
   alpn:
     - h3
   max-udp-relay-packet-size: 1500
-``` 
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # по умолчанию в Mbps
+  #     down: 1000
+```

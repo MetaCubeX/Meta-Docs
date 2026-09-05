@@ -7,7 +7,7 @@ ntp:
   server: time.apple.com
   port: 123
   interval: 30
-  # dialer-proxy:DIRECT
+  # dialer-proxy: DIRECT
 ```
 
 ## enable

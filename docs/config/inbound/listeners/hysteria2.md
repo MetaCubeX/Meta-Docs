@@ -6,6 +6,7 @@ listeners:
   type: hysteria2
   port: 8443
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   users:
     user1: password1
     user2: password2
@@ -26,8 +27,9 @@ listeners:
   #      - stun.sip.us:3478
   #      - global.stun.twilio.com:3478
   #    # proxy: DIRECT # 设置server-url通过哪个代理进行连接
-  #    # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #    # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, name-cert-verify, fingerprint, certificate, private-key, alpn)
   #    # skip-cert-verify： false
+  #    # name-cert-verify: example.com
   #    # ......
   alpn:
   - h3
@@ -43,6 +45,12 @@ listeners:
   #   madSJjYQIf9o1N5GXjkW4DEEeb17qMxHdwMdNnwADAABAAEAAQACAAEAAwAIdGVz
   #   dC5jb20AAA==
   #   -----END ECH KEYS-----
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # 默认 Mbps
+  #     down: 1000
 ```
 
 ## [通用字段](./index.md)

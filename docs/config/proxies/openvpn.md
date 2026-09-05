@@ -19,6 +19,11 @@ proxies:
     #   -----BEGIN PRIVATE KEY-----
     #   ...
     #   -----END PRIVATE KEY-----
+    # tls-auth: |
+    #   -----BEGIN OpenVPN Static key V1-----
+    #   ...
+    #   -----END OpenVPN Static key V1-----
+    # key-direction: "1"
     ca: |
       -----BEGIN CERTIFICATE-----
       MIIB...example
@@ -27,14 +32,28 @@ proxies:
     #  -----BEGIN OpenVPN Static key V1-----
     #  ...
     #  -----END OpenVPN Static key V1-----
+    # tls-crypt-v2: |
+    #  -----BEGIN OpenVPN tls-crypt-v2 client key-----
+    #  ...
+    #  -----END OpenVPN tls-crypt-v2 client key-----
+    # peer-info:
+    #   IV_HWADDR: "52:54:00:ff:72:87"
+    #   UV_DEVICE_ID: "laptop-001"
     # ping: 10
     # ping-restart: 60
+    # tran-window: 3600
+    # handshake-timeout: 30
     # dev: tun
     # cipher: AES-128-GCM
+    # data-ciphers: [AES-256-GCM, AES-128-GCM]
+    # data-ciphers-fallback: AES-128-CBC
     # auth: SHA256
     # comp-lzo: "no"
     udp: true
     # mtu: 1500
+    # ip-stack:
+    #   mode: auto
+    #   congestion-controller: cubic
     # dialer-proxy: "ss1"
     # remote-dns-resolve: true
     # dns: [ 1.1.1.1, 8.8.8.8 ]
@@ -73,9 +92,21 @@ proxies:
 
 **可选**，客户端私钥内容。从 `.ovpn` 文件的 `<key>` 标签中复制。使用用户名/密码认证时可省略。
 
+## tls-auth
+
+**可选**，从 `.ovpn` 文件的 `<tls-auth>` 标签中复制，**与 `tls-crypt` / `tls-crypt-v2` 互斥**
+
+## key-direction
+
+**可选**，使用 `tls-auth` 时填写，支持 `"1"` 或 `"0"`；如果不填或为空字符串，则默认为双向模式（`bidirectional`）。
+
 ## tls-crypt
 
-**可选**，TLS 加密密钥。从 `.ovpn` 文件的 `<tls-crypt>` 标签中复制，不需要保留标签。
+**可选**，TLS 加密密钥。从 `.ovpn` 文件的 `<tls-crypt>` 标签中复制，不需要保留标签。**与 `tls-auth` / `tls-crypt-v2` 互斥**。
+
+## tls-crypt-v2
+
+**可选**，从 `.ovpn` 文件的 `<tls-crypt-v2>` 标签中复制客户端密钥，不需要保留标签。**与 `tls-auth` / `tls-crypt` 互斥**。
 
 ## ping
 
@@ -85,6 +116,18 @@ proxies:
 
 可选，默认值为`0`。
 
+## peer-info
+
+可选，透传给服务端的 peer-info 键值对，会追加在内置 `IV_VER`/`IV_PROTO`/`IV_CIPHERS` 之后，用于服务端基于 peer-info 做准入决策。
+
+## tran-window
+
+旧 data key 在 rekey 后保留的秒数；默认 3600，显式设为 0 表示立即过期，应与服务端 --tran-window 对齐
+
+## handshake-timeout
+
+可选，握手超时时间，单位为秒。默认值为 `0`，表示仅使用外层连接超时。
+
 ## dev
 
 可选，虚拟网卡类型，当前仅支持 `tun`，默认 `tun`。
@@ -92,6 +135,14 @@ proxies:
 ## cipher
 
 可选，加密方式，支持 `AES-128-GCM` / `AES-256-GCM`/ `AES-128-CBC` / `AES-256-CBC` /`CHACHA20-POLY1305`默认 `AES-128-GCM`， `AES-CBC` 会按 `AES-128-CBC` 处理。
+
+## data-ciphers
+
+可选，数据通道 cipher 协商列表，发送 IV_CIPHERS 给服务端；服务端 push 的 cipher 列表与本地列表取交集，取第一个匹配项。
+
+## data-ciphers-fallback
+
+可选，协商失败时的回退 cipher（对应 --data-ciphers-fallback）
 
 ## auth
 
@@ -108,6 +159,20 @@ proxies:
 ## mtu
 
 可选，最大传输单元，默认 `1500`。
+
+## ip-stack
+
+可选，IP 协议栈配置。
+
+### ip-stack.mode
+
+可选值：`auto`、`gvisor`、`mips`。默认值为 `auto`。`auto` 会根据当前编译支持情况自动选择：如果编译时启用了 `gVisor`，则使用 `gVisor`；否则使用 mihomo IP 协议栈（`MIPS`）。
+
+### ip-stack.congestion-controller
+
+TCP 拥塞控制算法，可选值：`cubic`、`reno`、`bbr`、`bbr3`，默认为 `cubic`
+
+对于 gVisor IP 协议栈，该选项不会生效。
 
 ## dialer-proxy
 

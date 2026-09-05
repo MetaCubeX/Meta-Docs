@@ -13,12 +13,34 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # ip-stack:
+  #   mode: auto
+  #   congestion-controller: cubic
+  # sni: example.com
   # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接
   # dialer-proxy: "ss1"
   # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # 仅在 remote-dns-resolve 为 true 时生效
   # congestion-controller: bbr # 默认不开启
   # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
+  # handshake-timeout: 30
+
+# masque-h3-l4proxy
+- name: "masque-h3-l4proxy"
+  type: masque
+  server: server.com
+  port: 443
+  private-key: BASE64_ENCODED_PRIVATE_KEY
+  public-key: BASE64_ENCODED_PUBLIC_KEY
+  udp: false # 目前 l4proxy 模式不支持 udp
+  # ip-stack:
+  #   mode: auto
+  #   congestion-controller: cubic
+  network: h3-l4proxy
+  # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
+  # dns: [ tls://1.1.1.1, tls://1.0.0.1 ] # 仅在 remote-dns-resolve 为 true 时生效
+  # congestion-controller: bbr # 默认不开启
+  # handshake-timeout: 30
 
 # masque-h2
 - name: "masque-h2"
@@ -31,11 +53,16 @@ proxies:
   ipv6: fd00::2/128
   mtu: 1280
   udp: true
+  # ip-stack:
+  #   mode: auto
+  #   congestion-controller: cubic
+  # sni: example.com
   network: h2
   # 一个出站代理的标识。当值不为空时，将使用指定的 proxy 发出连接
   # dialer-proxy: "ss1"
   # remote-dns-resolve: true # 强制 dns 远程解析，默认值为 false
   # dns: [ 1.1.1.1, 8.8.8.8 ] # 仅在 remote-dns-resolve 为 true 时生效
+  # handshake-timeout: 30
 ```
 
 ## 获取 masque 配置
@@ -71,6 +98,20 @@ TUN 设备的 MTU 大小，默认为 1280
 
 是否启用 UDP 支持，默认为 false
 
+## ip-stack
+
+可选，IP 协议栈配置。
+
+### ip-stack.mode
+
+可选值：`auto`、`gvisor`、`mips`。默认值为 `auto`。`auto` 会根据当前编译支持情况自动选择：如果编译时启用了 `gVisor`，则使用 `gVisor`；否则使用 mihomo IP 协议栈（`MIPS`）。
+
+### ip-stack.congestion-controller
+
+TCP 拥塞控制算法，可选值：`cubic`、`reno`、`bbr`、`bbr3`，默认为 `cubic`
+
+对于 gVisor IP 协议栈，该选项不会生效。
+
 ## remote-dns-resolve
 
 是否启用远程 DNS 解析，通过 MASQUE 隧道解析 DNS
@@ -85,4 +126,11 @@ TUN 设备的 MTU 大小，默认为 1280
 
 ## network
 
-optional, 默认为 quic，masque-h2 需要设置为`h2`
+可选，默认为 `quic`。masque-h2 需要设置为 `h2`，h3-l4proxy 模式需要设置为 `h3-l4proxy`
+
+!!! note
+    `h3-l4proxy` 模式目前不支持 UDP。
+
+## handshake-timeout
+
+握手超时时间，单位为秒。默认值为 `0`，表示仅使用外层连接超时

@@ -34,6 +34,9 @@ dns:
     - https://doh.pub/dns-query
   proxy-server-nameserver-policy:
     'www.yournode.com': '114.114.114.114'
+  direct-nameserver:
+    - system
+  direct-nameserver-follow-policy: false
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -41,10 +44,14 @@ dns:
       - gfw
     ipcidr:
       - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+      - 100.64.0.0/10
     domain:
       - '+.google.com'
       - '+.facebook.com'
       - '+.youtube.com'
+  # fallback-lazy-query: false
 ```
 
 ## enable
@@ -192,6 +199,9 @@ Optional values are collections included in the corresponding geosite.
 
 Contents of the geosite list are considered polluted; domain names matching the geosite will only use `fallback` resolution, not `nameserver`.
 
+!!! warning ""
+    This field is deprecated. Use [nameserver-policy](./index.md#nameserver-policy) instead.
+
 ### ipcidr
 
 Written as `IP/mask`.
@@ -201,6 +211,10 @@ Results from these subnets will be considered polluted; when `nameserver` resolv
 ### domain
 
 These domains are considered polluted; matching these domains will directly use `fallback` resolution, not `nameserver`.
+
+### fallback-lazy-query
+
+The default value is `false`. If set to `true`, it will first evaluate whether the results from `nameserver` satisfy the `fallback-filter` conditions before initiating a fallback query.
 
 ## Additional Parameters
 
@@ -225,7 +239,7 @@ Prefer using existing proxies; if a proxy with that name does not exist, specify
 
 `#RULES` is to connect in accordance with routing rules, equivalent to [respect-rules](./index.md#respect-rules).
 
-If querying through a proxy is required, `proxy-server-nameserver` should be configured to prevent egg issues.
+If querying through a proxy is required, `proxy-server-nameserver` should be configured to avoid a chicken-and-egg problem.
 
 ### h3
 
@@ -236,6 +250,10 @@ This option does not conflict with `prefer-h3`. After filling it in, it forces t
 ### skip-cert-verify
 
 Skip TLS certificate verification
+
+### name-cert-verify
+
+Only modifies the certificate's DNSName verification target, without altering the SNI.
 
 ### ecs
 

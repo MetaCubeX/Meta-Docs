@@ -13,13 +13,14 @@ proxies:
     table-type: prefer_ascii
     # custom-table: xpxvvpvv
     # custom-tables: ["xpxvvpvv", "vxpvxvvp"]
+    # multiplex: "off"
     httpmask:
       disable: false
       mode: legacy
       tls: true
-      mask-host: ""
+      host: ""
       path-root: ""
-      multiplex: off
+      multiplex: "off"
     enable-pure-downlink: false
 ```
 
@@ -31,15 +32,15 @@ proxies:
 
 ## aead-method
 
-可选值：`chacha20-poly1305`、`aes-128-gcm`、`none` 我们保证在 none 的情况下 sudoku 混淆层仍然确保安全
+可选值：`chacha20-poly1305`、`aes-128-gcm`、`none`。不建议使用 `none`，因为它不提供 AEAD 保护。
 
 ## padding-min
 
-最小填充字节数
+最小填充率，范围为 0-100。
 
 ## padding-max
 
-最大填充字节数
+最大填充率，范围为 0-100，且必须大于或等于 `padding-min`。
 
 ## table-type
 
@@ -52,6 +53,10 @@ proxies:
 ## custom-tables
 
 可选，自定义字节布局列表（x/v/p），非空时覆盖 custom-table
+
+## multiplex
+
+可选：`off`（默认）、`auto`（仅复用 HTTPMask 底层连接）、`on`（在原始 TCP 或 HTTPMask 上启用 Sudoku 单会话多目标 mux）
 
 ## httpmask.disable
 
@@ -71,12 +76,12 @@ proxies:
 
 ## httpmask.path-root
 
-可选：HTTP 隧道端点一级路径前缀（双方需一致），例如 "aabbcc" => /aabbcc/session、/aabbcc/stream、/aabbcc/api/v1/upload
+可选：HTTP 隧道端点一级路径前缀（双方需一致），例如 "aabbcc" => /aabbcc/session、/aabbcc/stream、/aabbcc/api/v1/upload、/aabbcc/ws
 
 ## httpmask.multiplex
 
-可选：off（默认）、auto（复用 h1.1 keep-alive / h2 连接，减少每次建链 RTT）、on（单条隧道内多路复用多个目标连接；仅在 mode=stream/poll/auto 生效；ws 强制 off）
+兼容旧配置；设置时优先于顶层 `multiplex`
 
 ## enable-pure-downlink
 
-是否启用混淆下行，false 的情况下能在保证数据安全的前提下极大提升下行速度，与服务端端保持相同 (如果此处为 false，则要求 aead 不可为 none)
+选择下行模式：`false` 为带宽优化下行，`true` 为纯 Sudoku 下行。该配置需要与服务端保持一致。

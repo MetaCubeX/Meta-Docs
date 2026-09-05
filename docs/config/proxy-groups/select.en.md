@@ -8,6 +8,7 @@ proxy-groups:
   - ss
   - vmess
   - auto
+  # default-selected: ss
   #disable-udp: true
 ```
 

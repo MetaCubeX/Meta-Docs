@@ -41,7 +41,6 @@
           asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
 
         find-process-mode: strict
-        global-client-fingerprint: chrome
 
         profile:
           store-selected: true
@@ -247,7 +246,6 @@
         external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
         
         find-process-mode: strict
-        global-client-fingerprint: chrome
         
         profile:
           store-selected: true

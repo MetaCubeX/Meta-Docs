@@ -1,4 +1,4 @@
-# Grammar
+# Syntax
 
 Mihomo uses `yaml` as the configuration file format.
 
@@ -135,7 +135,7 @@ proxy-providers:
 ## Domain Wildcards {#domain-wildcards}
 
 !!! note
-  The domain wildcard in this section is not the same as [`DOMAIN-WILDCARD` in the routing rules](../config/rules/index.md#domain-wildcard).
+    The domain wildcard in this section is not the same as [`DOMAIN-WILDCARD` in the routing rules](../config/rules/index.md#domain-wildcard).
 
 ### Wildcard `*`
 
@@ -198,7 +198,7 @@ Match ports 114 to 514 and 810 to 1919, as well as port 65530.
 <!-- 
 ## Time Format
 
-Mihome supports two time formats: integer and duration.
+Mihomo supports two time formats: integer and duration.
 
 === "Integer format"
     ```{.yaml linenums="1"}

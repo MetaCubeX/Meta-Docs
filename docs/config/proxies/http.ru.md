@@ -10,6 +10,7 @@ proxies:
   # password: password
   # tls: true # https
   # skip-cert-verify: true
+  # name-cert-verify: example.com
   # sni: custom.com
   # fingerprint: xxxx # как в experimental.fingerprints, использует sha256 отпечаток, настраивает отпечаток независимо от протокола, игнорирует experimental.fingerprints
   # ip-version: dual
@@ -18,4 +19,4 @@ proxies:
 
 [Общие поля](./index.md)
 
-[Поля TLS](./tls.md) 
+[Поля TLS](./tls.md)

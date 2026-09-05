@@ -13,16 +13,18 @@ proxies:
     table-type: prefer_ascii
     # custom-table: xpxvvpvv
     # custom-tables: ["xpxvvpvv", "vxpvxvvp"]
-    http-mask: true
-    # http-mask-mode: legacy
-    # http-mask-tls: true
-    # http-mask-host: ""
-    # path-root: ""
-    # http-mask-multiplex: off
+    # multiplex: "off"
+    httpmask:
+      disable: false
+      mode: legacy
+      tls: true
+      host: ""
+      path-root: ""
+      multiplex: "off"
     enable-pure-downlink: false
 ```
 
-[Общие поля](./index.ru.md)
+[Общие поля](./index.md)
 
 ## key
 
@@ -30,52 +32,56 @@ proxies:
 
 ## aead-method
 
-Возможные значения: `chacha20-poly1305`, `aes-128-gcm`, `none` - мы гарантируем безопасность даже при использовании none благодаря слою обфускации sudoku
+Возможные значения: `chacha20-poly1305`, `aes-128-gcm`, `none`. Использование `none` не рекомендуется, поскольку этот режим не обеспечивает защиту AEAD.
 
 ## padding-min
 
-Минимальное количество байтов заполнения
+Минимальный коэффициент заполнения от 0 до 100.
 
 ## padding-max
 
-Максимальное количество байтов заполнения
+Максимальный коэффициент заполнения от 0 до 100. Он должен быть не меньше `padding-min`.
 
 ## table-type
 
-Возможные значения: prefer_ascii, prefer_entropy - первый использует полное ASCII отображение, второй гарантирует энтропию (Хэмминг 1) менее 3
+Возможные значения: `prefer_ascii`, `prefer_entropy`, `up_ascii_down_entropy`, `up_entropy_down_ascii`.
 
 ## custom-table
 
-Опционально, пользовательская раскладка байтов, должна содержать 2x, 2p, 4v в любой комбинации. При включении этого параметра нужно настроить `table-type` как `prefer_entropy`
+Опциональная пользовательская раскладка байтов. Она должна содержать 2 `x`, 2 `p` и 4 `v` в любой комбинации и действует только для направления entropy.
 
 ## custom-tables
 
-Опционально, список пользовательских раскладок байтов (x/v/p) для ротации в режиме xvp; при наличии переопределяет custom-table
+Опциональный список пользовательских раскладок байтов (x/v/p); если список не пуст, он переопределяет `custom-table`.
 
-## http-mask
+## multiplex
 
-Включить ли HTTP маску
+Необязательно: `off` (по умолчанию), `auto` (повторно использует только нижележащее соединение HTTPMask), `on` (включает Sudoku mux с несколькими целями в одном сеансе поверх raw TCP или HTTPMask).
 
-## http-mask-mode
+## httpmask.disable
 
-Опционально: legacy (по умолчанию), stream, poll, auto; stream/poll/auto поддерживают работу через CDN/прокси
+Отключать ли всю HTTP-маскировку и туннелирование.
 
-## http-mask-tls
+## httpmask.mode
 
-Опционально: действует только при http-mask-mode в режиме stream/poll/auto; true принудительно включает https; false принудительно включает http (не определяется автоматически по порту)
+Опционально: `legacy` (по умолчанию), `stream`, `poll`, `auto`, `ws`. Режимы `stream`/`poll`/`auto`/`ws` поддерживают работу через CDN или обратный прокси.
 
-## http-mask-host
+## httpmask.tls
 
-Опционально: переопределяет Host/SNI (поддерживает example.com или example.com:443); действует только при http-mask-mode в режиме stream/poll/auto
+Опционально: действует только в режимах `stream`/`poll`/`auto`/`ws`; `true` принудительно включает HTTPS, а `false` - HTTP без автоматического определения по порту.
 
-## path-root
+## httpmask.host
 
-Опционально: префикс пути первого уровня для HTTP туннеля (должен совпадать на обеих сторонах), например "aabbcc" => /aabbcc/session, /aabbcc/stream, /aabbcc/api/v1/upload
+Опционально: переопределяет Host/SNI (поддерживает `example.com` или `example.com:443`); действует только в режимах `stream`/`poll`/`auto`/`ws`.
 
-## http-mask-multiplex
+## httpmask.path-root
 
-Опционально: off (по умолчанию), auto (переиспользование h1.1 keep-alive / h2 соединений для уменьшения RTT при каждом установлении соединения), on (мультиплексирование нескольких целевых соединений в одном туннеле; действует только при http-mask-mode=stream/poll/auto)
+Опционально: префикс пути первого уровня для HTTP-туннеля (должен совпадать на обеих сторонах), например `aabbcc` => `/aabbcc/session`, `/aabbcc/stream`, `/aabbcc/api/v1/upload`, `/aabbcc/ws`.
+
+## httpmask.multiplex
+
+Параметр для совместимости со старой конфигурацией. Если задан, имеет приоритет над верхнеуровневым `multiplex`.
 
 ## enable-pure-downlink
 
-Включить ли обфускацию нисходящего канала, при false значительно повышает скорость загрузки с сохранением безопасности данных, должно совпадать с сервером (если здесь false, то aead не может быть none)
+Выбирает режим нисходящего канала: `false` использует оптимизированный по пропускной способности режим, а `true` - чистый нисходящий канал Sudoku. Настройка должна совпадать с сервером.

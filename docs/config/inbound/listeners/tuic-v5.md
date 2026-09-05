@@ -6,6 +6,7 @@ listeners:
   type: tuic
   port: 10004
   listen: 0.0.0.0
+  # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   users:
     UUID1: PASSWORD1
     UUID2: PASSWORD2
@@ -28,4 +29,10 @@ listeners:
   alpn:
     - h3
   max-udp-relay-packet-size: 1500
+  # mux-option:
+  #   padding: true
+  #   brutal:
+  #     enabled: true
+  #     up: 1000 # 默认 Mbps
+  #     down: 1000
 ```

@@ -1,6 +1,6 @@
 # Hysteria2
 
-[Справочная конфигурация](https://hysteria.network/zh/docs/advanced-usage/#%e5%ae%a2%e6%88%b7%e7%ab%af)
+[Справочная конфигурация](https://hysteria.network/ru/docs/advanced/Full-Client-Config/)
 
 ```{.yaml linenums="1"}
 proxies:
@@ -13,13 +13,15 @@ proxies:
   password: yourpassword
   up: "30 Mbps"
   down: "200 Mbps"
-  # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
-  obfs: salamander # по умолчанию пусто, если указать - включается obfs, в настоящее время поддерживается только salamander
+  # bbr-profile: "" # Возможные значения: "standard", "conservative", "aggressive". По умолчанию: "standard"
+  obfs: salamander # Тип обфускатора трафика QUIC. Можно установить значение `salamander` или `gecko`. Если оставить пустым, обфускация будет отключена.
   obfs-password: yourpassword
-
+  # obfs-min-packet-size: 512
+  # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
-  fingerprint: xxxx
+  name-cert-verify: example.com
+  fingerprint: xxxx # Настройка отпечатка обеспечивает SSL pinning. Получить его можно командой: openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
   alpn:
     - h3
   # realm-opts:
@@ -31,9 +33,11 @@ proxies:
   #     - stun.nextcloud.com:3478
   #     - stun.sip.us:3478
   #     - global.stun.twilio.com:3478
-  #   # Следующая инструкция позволяет ввести конфигурацию TLS для URL-адреса сервера (sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #   # Следующая инструкция позволяет ввести конфигурацию TLS для URL-адреса сервера (sni, skip-cert-verify, name-cert-verify, fingerprint, certificate, private-key, alpn)
   #   # skip-cert-verify： false
+  #   # name-cert-verify: example.com
   #   # ......
+  # handshake-timeout: 30
   ###специальные настройки quic-go, не изменяйте без необходимости, если не знаете, что делаете###
   # initial-stream-receive-window： 8388608
   # max-stream-receive-window： 8388608
@@ -65,10 +69,22 @@ proxies:
 
 ## obfs
 
-Тип маскировки трафика QUIC, можно установить только `salamander`, если пусто, то отключено
+Тип обфускатора трафика QUIC. Можно установить `salamander` или `gecko`; если значение пустое, обфускация отключена.
 
 ## obfs-password
 
+Пароль для обфускатора трафика QUIC.
+
+## obfs-min-packet-size
+
+Минимальный размер сетевого пакета (в байтах). Доступно только для `gecko`.
+
+## obfs-max-packet-size
+
+Максимальный размер сетевого пакета (в байтах). Доступно только для `gecko`.
+
 ## realm-opts
 
-Пароль для маскировки трафика QUIC 
+## handshake-timeout
+
+Указывается в секундах. После настройки тайм-аут рукопожатия не зависит от тайм-аута внешнего соединения. Значение по умолчанию — 0, что означает использование только тайм-аута внешнего соединения.

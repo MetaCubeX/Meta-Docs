@@ -32,6 +32,10 @@ listeners:
   # - 1000
   # exclude-uid-range:
   # - 1000-99999
+  # include-mac-address:
+  # - 00:11:22:33:44:55
+  # exclude-mac-address:
+  # - 00:11:22:33:44:55
   # include-android-user:
   # - 0
   # - 10

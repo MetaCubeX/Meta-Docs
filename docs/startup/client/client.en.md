@@ -11,6 +11,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[FlyClash](https://github.com/GtxFury/FlyClash)|Maintained |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|Maintained |
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|Maintained |
@@ -39,12 +40,15 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ClashBar](https://github.com/Sitoi/ClashBar)|Maintained |
 |[ClashMac](https://github.com/666OS/ClashMac)|Maintained | Closed-source; build is not reproducible |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
+|[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|Maintained |
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|Maintained |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|Maintained |
 |[KumoApp](https://github.com/ProjectKumo/KumoApp)|Maintained |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[clash-nyanpasu](https://github.com/keiko233/clash-nyanpasu)|Maintained |
@@ -60,8 +64,10 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |Project | Maintenance Status | Notes |
 |:----|:----|:----|
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
+|[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source;build is not reproducible |
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
+|[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)|Maintained |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|Maintained |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |
@@ -87,8 +93,10 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
-|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|Maintained | Closed-source; build is not reproducible |
+|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|Maintained | Closed-source  |
+|[MikuBox](https://github.com/HatsuneMikuUwU/MikuBoxForAndroid)|Maintained |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|Maintained |
+|[SlClash](https://github.com/songzhengpei/Slclash)|Maintained |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|Maintained |
 |[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Maintained |
 
@@ -104,6 +112,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|Maintained |
 |[LinkClashX](https://apps.apple.com/app/id6757075299)|Maintained | Closed-source |
 |[Nextin](https://apps.apple.com/app/id6754002454)|Maintained | Closed-source |
+|[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
 
 ## Merlin (KoolCenter firmware/paldier SWRT firmware)
 

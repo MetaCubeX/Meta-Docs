@@ -1,6 +1,6 @@
 # Hysteria2
 
-[配置参考](https://hysteria.network/zh/docs/advanced-usage/#%e5%ae%a2%e6%88%b7%e7%ab%af)
+[配置参考](https://hysteria.network/zh/docs/advanced/Full-Client-Config/)
 
 ```{.yaml linenums="1"}
 proxies:
@@ -14,11 +14,13 @@ proxies:
   up: "30 Mbps"
   down: "200 Mbps"
   # bbr-profile: "" # Available: "standard", "conservative", "aggressive". Default: "standard"
-  obfs: salamander # 默认为空，如果填写则开启obfs，目前仅支持salamander
+  obfs: salamander # 默认为空，如果填写则开启obfs，目前支持salamander和 gecko
   obfs-password: yourpassword
-
+  # obfs-min-packet-size: 512
+  # obfs-max-packet-size: 1200
   sni: server.com
   skip-cert-verify: false
+  name-cert-verify: example.com
   fingerprint: xxxx # 配置指纹将实现 SSL Pining 效果, 可使用 openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem 获取
   alpn:
     - h3
@@ -31,9 +33,11 @@ proxies:
   #     - stun.nextcloud.com:3478
   #     - stun.sip.us:3478
   #     - global.stun.twilio.com:3478
-  #   # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, fingerprint, certificate, private-key, alpn)
+  #   # 下面支持填写针对server-url的TLS配置(sni, skip-cert-verify, name-cert-verify, fingerprint, certificate, private-key, alpn)
   #   # skip-cert-verify： false
+  #   # name-cert-verify: example.com
   #   # ......
+  # handshake-timeout: 30
   ###quic-go特殊配置项，不要随意修改除非你知道你在干什么###
   # initial-stream-receive-window： 8388608
   # max-stream-receive-window： 8388608
@@ -65,10 +69,22 @@ brutal 速率控制，若不写单位，默认为 Mbps
 
 ## obfs
 
-QUIC 流量混淆器类型，仅可设为 `salamander`，如果为空则禁用
+QUIC 流量混淆器类型，可设为 `salamander`或`gecko`，如果为空则禁用
 
 ## obfs-password
 
+QUIC 流量混淆器密码
+
+## obfs-min-packet-size
+
+最小线上数据包大小（字节）。仅限 `gecko`。
+
+## obfs-max-packet-size
+
+最大线上数据包大小（字节）。仅限 `gecko`。
+
 ## realm-opts
 
-QUIC 流量混淆器密码
+## handshake-timeout
+
+单位为秒；配置后握手时不受外层连接超时影响；默认值为 0，表示仅使用外层连接超时
