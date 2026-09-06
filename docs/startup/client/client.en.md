@@ -31,6 +31,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 
 |Project | Maintenance Status | Notes |
 |:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|Maintained | Native client for Apple platforms; both the client and core are fully open-source |
 |[sparkle](https://github.com/xishang0128/sparkle)|Maintained |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|Unmaintained |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|Maintained |
@@ -96,6 +97,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 
 |Project | Maintenance Status | Notes |
 |:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|Maintained | Native client for Apple platforms; both the client and core are fully open-source |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
 |[Clash Lite](https://apps.apple.com/app/id6761357475)|Maintained | Closed-source |
 |[LinkClashX](https://apps.apple.com/app/id6757075299)|Maintained | Closed-source |
@@ -103,6 +105,12 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|Maintained |
 |[Nextin](https://apps.apple.com/app/id6754002454)|Maintained | Closed-source |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
+
+## tvOS
+
+|Project | Maintenance Status | Notes |
+|:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|Maintained | Native client for Apple platforms; both the client and core are fully open-source |
 
 ## Merlin (KoolCenter firmware/paldier SWRT firmware)
 

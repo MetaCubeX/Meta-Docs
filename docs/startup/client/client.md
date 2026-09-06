@@ -31,6 +31,7 @@
 
 |项目名称 | 维护状态 | 备注 |
 |:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|维护中 | Apple 平台原生客户端，客户端与内核均完整开源 |
 |[sparkle](https://github.com/xishang0128/sparkle)|维护中 |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|停止维护 |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|维护中 |
@@ -96,6 +97,7 @@
 
 |项目名称 | 维护状态 | 备注 |
 |:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|维护中 | Apple 平台原生客户端，客户端与内核均完整开源 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
 |[Clash Lite](https://apps.apple.com/app/id6761357475)|维护中 | 不开源 |
 |[LinkClashX](https://apps.apple.com/app/id6757075299)|维护中 | 不开源 |
@@ -103,6 +105,12 @@
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|维护中 |
 |[Nextin](https://apps.apple.com/app/id6754002454)|维护中 | 不开源 |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|维护中 | 不开源 |
+
+## tvOS
+
+|项目名称 | 维护状态 | 备注 |
+|:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|维护中 | Apple 平台原生客户端，客户端与内核均完整开源 |
 
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
 

@@ -31,6 +31,7 @@
 
 |Название проекта | Статус поддержки | Примечание |
 |:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|поддерживается | Нативный клиент для платформ Apple; исходный код клиента и ядра полностью открыт |
 |[sparkle](https://github.com/xishang0128/sparkle)|поддерживается |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|поддержка прекращена |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|поддерживается |
@@ -96,6 +97,7 @@
 
 |Название проекта | Статус поддержки | Примечание |
 |:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|поддерживается | Нативный клиент для платформ Apple; исходный код клиента и ядра полностью открыт |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[Clash Lite](https://apps.apple.com/app/id6761357475)|поддерживается | Закрытый исходный код |
 |[LinkClashX](https://apps.apple.com/app/id6757075299)|поддерживается | Закрытый исходный код |
@@ -103,6 +105,12 @@
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|поддерживается |
 |[Nextin](https://apps.apple.com/app/id6754002454)|поддерживается | Закрытый исходный код |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
+
+## tvOS
+
+|Название проекта | Статус поддержки | Примечание |
+|:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|поддерживается | Нативный клиент для платформ Apple; исходный код клиента и ядра полностью открыт |
 
 ## Merlin (прошивка KoolCenter/paldier SWRT)
 
