@@ -53,6 +53,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|Maintained |
 
 ## Linux
 
@@ -105,6 +106,13 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|Maintained |
 |[Nextin](https://apps.apple.com/app/id6754002454)|Maintained | Closed-source |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|Maintained |
+
+## tvOS
+
+|Project | Maintenance Status | Notes |
+|:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|Maintained |
 
 ## Merlin (KoolCenter firmware/paldier SWRT firmware)
 
