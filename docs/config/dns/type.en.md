@@ -50,6 +50,22 @@ CMFA only. Uses the system DNS servers.
 - dhcp://system
 ```
 
+## tailscale
+
+```{.yaml linenums="1"}
+- ts://tailscale
+```
+
+Query using the DNS configuration of the specified Tailscale outbound
+
+## easytier
+
+```{.yaml linenums="1"}
+- et://easytier
+```
+
+Only resolves A/PTR records in the overlay network of the specified EasyTier outbound; recommended to use in `nameserver-policy`
+
 ## rcode
 
 ```{.yaml linenums="1"}
