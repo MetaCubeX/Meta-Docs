@@ -76,6 +76,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source;build is not reproducible |
 |[pure-clash]([https://github.com/prime-zt/pure-clash)|Maintained |
+|[3m-ui](https://github.com/kazeyukiro/3m-ui)|Maintained | Inbound management |
 
 ## Android
 
