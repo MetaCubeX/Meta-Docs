@@ -26,7 +26,8 @@
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
-|[pure-clash]([https://github.com/prime-zt/pure-clash)|维护中 |
+|[pure-clash](https://github.com/prime-zt/pure-clash)|维护中 |
+|[Jeemi](https://github.com/bluevava/jeemi-desktop)|维护中 |
 
 ## MacOS
 
@@ -54,6 +55,7 @@
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|维护中 | 不开源 |
 |[Swihomo](https://github.com/ruattd/swihomo)|维护中 |
+|[Jeemi](https://github.com/bluevava/jeemi-desktop)|维护中 |
 
 ## Linux
 
@@ -77,6 +79,7 @@
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
 |[pure-clash]([https://github.com/prime-zt/pure-clash)|维护中 |
+|[Jeemi](https://github.com/bluevava/jeemi-desktop)|维护中 |
 
 ## Android
 
@@ -94,6 +97,7 @@
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|维护中 |
 |[SlClash](https://github.com/songzhengpei/Slclash)|维护中 |
 |[MikuBox](https://github.com/HatsuneMikuUwU/MikuBoxForAndroid)|维护中 |
+|[Jeemi](https://github.com/bluevava/jeemi-android)|维护中 |
 
 ## iOS
 
