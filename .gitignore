@@ -3,3 +3,4 @@
 .tool-versions
 .venv/
 site/
+uv.lock
