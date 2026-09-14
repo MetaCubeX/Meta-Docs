@@ -6,6 +6,7 @@ proxies:
     type: zerotier
     network: "0123456789abcdef"
     # state-dir: ./zerotier-node
+    # identity-secret: "0123456789:0:public-key:private-key"
     # planet: ./planet
     # mtu: 1400
     # physical-mtu: 1432
@@ -40,7 +41,11 @@ ZeroTier 网络 ID
 
 ## state-dir
 
-可选，持久化节点身份；默认使用由网络 ID 和出站名称生成的独立目录
+可选，持久化节点状态与默认身份；默认使用由网络 ID 和出站名称生成的独立目录
+
+## identity-secret
+
+可选，完整的 `identity.secret` 内容；会覆盖 `state-dir` 中保存的身份，且不会写入 `state-dir`
 
 ## planet
 
