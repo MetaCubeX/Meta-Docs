@@ -76,6 +76,7 @@
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[pure-clash]([https://github.com/prime-zt/pure-clash)|поддерживается |
+|[3m-ui](https://github.com/kazeyukiro/3m-ui)|поддерживается | Управление входящими подключениями |
  
 ## Android
 
