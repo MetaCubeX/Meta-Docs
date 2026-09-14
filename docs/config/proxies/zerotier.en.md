@@ -6,6 +6,7 @@ proxies:
     type: zerotier
     network: "0123456789abcdef"
     # state-dir: ./zerotier-node
+    # identity-secret: "0123456789:0:public-key:private-key"
     # planet: ./planet
     # mtu: 1400
     # physical-mtu: 1432
@@ -40,7 +41,11 @@ ZeroTier network ID.
 
 ## state-dir
 
-Optional. Persistent node identity directory; defaults to an isolated directory derived from the network ID and outbound name.
+Optional. Persistent node state and default identity; defaults to an isolated directory derived from the network ID and outbound name.
+
+## identity-secret
+
+Optional. Complete `identity.secret` contents; overrides the identity in `state-dir` and is not written there.
 
 ## planet
 

@@ -50,6 +50,22 @@
 - dhcp://system
 ```
 
+## tailscale
+
+```{.yaml linenums="1"}
+- ts://tailscale
+```
+
+使用指定 Tailscale 出站的 DNS 配置查询
+
+## easytier
+
+```{.yaml linenums="1"}
+- et://easytier
+```
+
+仅解析指定 EasyTier 出站 overlay 网络中的 A/PTR 记录，建议放在 `nameserver-policy` 中使用
+
 ## rcode
 
 ```{.yaml linenums="1"}
