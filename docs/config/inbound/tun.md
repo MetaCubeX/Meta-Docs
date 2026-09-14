@@ -77,12 +77,13 @@ tun:
 
 tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `gvisor`
 
-可用值： `system/gvisor/mixed`
+可用值： `system/gvisor/mixed/mips`
 
 !!! note "协议栈之间的区别"
     * `system` 使用系统协议栈，可以提供更稳定/全面的 tun 体验，且占用相对其他堆栈更低
     * `gvisor` 通过在用户空间中实现网络协议栈，可以提供更高的安全性和隔离性，同时可以避免操作系统内核和用户空间之间的切换，从而在特定情况下具有更好的网络处理性能
     * `mixed` 混合堆栈，tcp 使用 `system`栈，udp 使用 `gvisor`栈，使用体验可能相对更好
+    * `mips` 使用 mihomo 自研的 IP 协议栈
     * [简单性能测试](tun.md#tun_1)
     * 如果打开了防火墙，则无法使用 `system` 和 `mixed` 协议栈，通过以下方式放行内核：
         * Windows: 设置 -> Windows 安全中心 -> 允许应用通过防火墙 -> 选中内核
