@@ -105,6 +105,7 @@
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|поддерживается |
 |[Nextin](https://apps.apple.com/app/id6754002454)|поддерживается | Закрытый исходный код |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
+|[Pharos Pro](https://apps.apple.com/app/pharos-pro/id1456610173)|Закрытый исходный код | С закрытым исходным кодом, платный |
 
 ## Merlin (прошивка KoolCenter/paldier SWRT)
 

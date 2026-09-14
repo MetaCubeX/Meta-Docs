@@ -107,6 +107,7 @@
 |[Nextin](https://apps.apple.com/app/id6754002454)|维护中 | 不开源 |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|维护中 | 不开源 |
 |[Swihomo](https://github.com/ruattd/swihomo)|维护中 |
+|[Pharos Pro](https://apps.apple.com/app/pharos-pro/id1456610173)|维护中 | 不开源，付费 |
 
 ## Merlin (KoolCenter 固件/paldier SWRT 固件)
 

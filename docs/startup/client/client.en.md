@@ -105,6 +105,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|Maintained |
 |[Nextin](https://apps.apple.com/app/id6754002454)|Maintained | Closed-source |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
+|[Pharos Pro](https://apps.apple.com/app/pharos-pro/id1456610173)|Maintained | Closed-source and paid |
 
 ## Merlin (KoolCenter firmware/paldier SWRT firmware)
 
