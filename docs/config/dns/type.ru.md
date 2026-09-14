@@ -50,6 +50,22 @@
 - dhcp://system
 ```
 
+## tailscale
+
+```{.yaml linenums="1"}
+- ts://tailscale
+```
+
+Запрос с использованием настроек DNS указанного исходящего соединения Tailscale
+
+## easytier
+
+```{.yaml linenums="1"}
+- et://easytier
+```
+
+Разрешает только A/PTR-записи overlay-сети указанного исходящего соединения EasyTier; рекомендуется использовать в `nameserver-policy`
+
 ## rcode
 
 ```{.yaml linenums="1"}

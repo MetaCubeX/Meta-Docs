@@ -288,6 +288,7 @@ nav:
       - TUIC: config/proxies/tuic.md
       - ShadowQUIC: config/proxies/shadowquic.md
       - WireGuard: config/proxies/wg.md
+      - EasyTier: config/proxies/easytier.md
       - Tailscale: config/proxies/tailscale.md
       - SSH: config/proxies/ssh.md
       - MASQUE: config/proxies/masque.md
