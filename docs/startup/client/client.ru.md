@@ -53,6 +53,7 @@
 |[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|поддерживается |
 
 ## Linux
 
@@ -105,6 +106,13 @@
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|поддерживается |
 |[Nextin](https://apps.apple.com/app/id6754002454)|поддерживается | Закрытый исходный код |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|поддерживается |
+
+## tvOS
+
+|Название проекта | Статус поддержки | Примечание |
+|:----|:----|:----|
+|[Clash by Hako](https://github.com/TokenPLS/Hako-Client)|поддерживается |
 
 ## Merlin (прошивка KoolCenter/paldier SWRT)
 
