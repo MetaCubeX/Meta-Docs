@@ -26,7 +26,8 @@
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
-|[pure-clash]([https://github.com/prime-zt/pure-clash)|поддерживается |
+|[pure-clash](https://github.com/prime-zt/pure-clash)|поддерживается |
+|[Jeemi](https://github.com/bluevava/jeemi-desktop)|поддерживается |
 
 ## MacOS
 
@@ -53,6 +54,7 @@
 |[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
+|[Jeemi](https://github.com/bluevava/jeemi-desktop)|поддерживается |
 
 ## Linux
 
@@ -75,8 +77,9 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
-|[pure-clash]([https://github.com/prime-zt/pure-clash)|поддерживается |
+|[pure-clash](https://github.com/prime-zt/pure-clash)|поддерживается |
 |[3m-ui](https://github.com/kazeyukiro/3m-ui)|поддерживается | Управление входящими подключениями |
+|[Jeemi](https://github.com/bluevava/jeemi-desktop)|поддерживается |
  
 ## Android
 
@@ -94,6 +97,7 @@
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|поддерживается |
 |[SlClash](https://github.com/songzhengpei/Slclash)|поддерживается |
 |[MikuBox](https://github.com/HatsuneMikuUwU/MikuBoxForAndroid)|поддерживается |
+|[Jeemi](https://github.com/bluevava/jeemi-android)|поддерживается |
 
 ## iOS
 
