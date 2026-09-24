@@ -26,7 +26,7 @@
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
-|[pure-clash]([https://github.com/prime-zt/pure-clash)|维护中 |
+|[pure-clash](https://github.com/prime-zt/pure-clash)|维护中 |
 
 ## MacOS
 
