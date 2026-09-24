@@ -20,7 +20,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|Maintained |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
-|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Maintained |
+|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Unmaintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
@@ -88,7 +88,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[YumeBox](https://github.com/YumeLira/YumeBox)|Maintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
-|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Maintained |
+|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Unmaintained |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|Maintained |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|Maintained |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|Maintained |

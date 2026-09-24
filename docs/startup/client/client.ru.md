@@ -20,7 +20,7 @@
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|поддерживается |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
-|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддерживается |
+|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддержка прекращена |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|поддерживается |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|поддерживается |
@@ -88,7 +88,7 @@
 |[YumeBox](https://github.com/YumeLira/YumeBox)|поддерживается |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
-|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддерживается |
+|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|поддержка прекращена |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|поддерживается |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|поддерживается |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|поддерживается |
