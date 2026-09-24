@@ -26,7 +26,7 @@
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
-|[pure-clash]([https://github.com/prime-zt/pure-clash)|维护中 |
+|[pure-clash](https://github.com/prime-zt/pure-clash)|维护中 |
 
 ## MacOS
 
@@ -76,7 +76,7 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
-|[pure-clash]([https://github.com/prime-zt/pure-clash)|维护中 |
+|[pure-clash](https://github.com/prime-zt/pure-clash)|维护中 |
 |[3m-ui](https://github.com/kazeyukiro/3m-ui)|维护中 | 入站管理 |
 
 ## Android
