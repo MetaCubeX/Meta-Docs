@@ -10,6 +10,7 @@ proxies:
     state-dir: ./tailscale
     ephemeral: false
     udp: true
+    port: 41641
     accept-routes: true
     advertise-routes:
       - 192.168.1.0/24
@@ -57,6 +58,10 @@ proxies:
 ## udp
 
 可选，是否启用 UDP，默认值为 `false`。
+
+## port
+
+可选，Tailscale 节点通信的 UDP 监听端口，默认值为 `41641`。设为 `0` 时使用随机端口。如果防火墙阻止入站 UDP，请放行实际监听端口以便建立节点直连。此项独立于 `udp` 业务流量选项。
 
 ## accept-routes
 

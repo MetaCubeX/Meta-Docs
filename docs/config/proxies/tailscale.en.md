@@ -10,6 +10,7 @@ proxies:
     state-dir: ./tailscale
     ephemeral: false
     udp: true
+    port: 41641
     accept-routes: true
     advertise-routes:
       - 192.168.1.0/24
@@ -57,6 +58,10 @@ Optional, whether to log in as an ephemeral node. Default: `false`.
 ## udp
 
 Optional, whether to enable UDP. Default: `false`.
+
+## port
+
+Optional, UDP listening port for Tailscale peer traffic. Default: `41641`. Set to `0` to use a random port. If the firewall blocks inbound UDP, allow the actual listening port to help establish direct peer connections. This setting is independent of the `udp` option for proxied traffic.
 
 ## accept-routes
 
