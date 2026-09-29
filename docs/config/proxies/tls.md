@@ -114,11 +114,11 @@ openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem
 
 ## certificate
 
-如果填写则开启 [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/)（需要和 private-key 同时填写），内容为证书 PEM 格式，或者 证书的路径
+如果填写则开启 [mTLS](https://www.cloudflare.com/zh-cn/learning/access-management/what-is-mutual-tls/)（需要和 private-key 同时填写），内容为证书 PEM 格式，或者 证书的路径
 
 ## private-key
 
-如果填写则开启 [mTLS](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/)（需要和 certificate 同时填写），内容为证书对应的私钥 PEM 格式，或者私钥路径
+如果填写则开启 [mTLS](https://www.cloudflare.com/zh-cn/learning/access-management/what-is-mutual-tls/)（需要和 certificate 同时填写），内容为证书对应的私钥 PEM 格式，或者私钥路径
 
 ## client-fingerprint
 
