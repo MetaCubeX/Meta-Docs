@@ -9,7 +9,6 @@ tun:
   auto-detect-interface: true
   dns-hijack:
     - any:53
-    - tcp://any:53
   device: utun0
   mtu: 9000
   strict-route: true
@@ -117,7 +116,7 @@ Automatically detect the outbound interface for traffic. It is recommended to ma
 
 ## dns-hijack
 
-DNS hijacking. Redirects matched connections into the internal [DNS](../dns/index.md) module. If no protocol is specified, it defaults to `udp://`.
+DNS hijacking. Redirects matched connections into the internal [DNS](../dns/index.md) module.
 
 !!! warning ""
     * On `MacOS`/`Windows`, it cannot automatically hijack DNS requests sent to the local network.

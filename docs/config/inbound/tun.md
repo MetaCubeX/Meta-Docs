@@ -9,7 +9,6 @@ tun:
   auto-detect-interface: true
   dns-hijack:
     - any:53
-    - tcp://any:53
   device: utun0
   mtu: 9000
   strict-route: true
@@ -116,7 +115,7 @@ tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `gvisor
 
 ## dns-hijack
 
-dns 劫持，将匹配到的连接导入内部 [dns](../dns/index.md) 模块，不书写协议则为 udp://
+dns 劫持，将匹配到的连接导入内部 [dns](../dns/index.md) 模块
 
 !!! warning ""
     * 在 `MacOS`/`Windows` 无法自动劫持发往局域网的 dns 请求

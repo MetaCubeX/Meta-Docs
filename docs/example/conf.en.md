@@ -65,7 +65,6 @@
           stack: mixed
           dns-hijack:
             - "any:53"
-            - "tcp://any:53"
           auto-route: true
           auto-redirect: true
           auto-detect-interface: true
@@ -270,7 +269,6 @@
           stack: mixed
           dns-hijack:
             - "any:53"
-            - "tcp://any:53"
           auto-route: true
           auto-redirect: true
           auto-detect-interface: true
