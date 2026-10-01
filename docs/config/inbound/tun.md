@@ -3,7 +3,7 @@
 ```{.yaml linenums="1"}
 tun:
   enable: true
-  stack: system
+  stack: mips
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
@@ -75,7 +75,7 @@ tun:
 
 ## stack
 
-tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `gvisor`
+tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `mips`
 
 可用值： `system/gvisor/mixed/mips`
 
@@ -176,6 +176,10 @@ UDP NAT 过期时间，以秒为单位，默认为 300(5 分钟)
 ## endpoint-independent-nat
 
 启用独立于端点的 NAT，性能可能会略有下降，所以不建议在不需要的时候开启。
+
+## congestion-controller
+
+TCP 拥塞控制算法，可选值：`cubic`、`reno`、`bbr`、`bbr3`，默认为 `cubic`，仅在使用 `mips` 协议栈时生效
 
 ## route-address-set
 

@@ -3,7 +3,7 @@
 ```{.yaml linenums="1"}
 tun:
   enable: true
-  stack: system
+  stack: mips
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
@@ -75,7 +75,7 @@ tun:
 
 ## stack
 
-Стек режима tun, если нет проблем с использованием, рекомендуется использовать стек `mixed`, по умолчанию используется `gvisor`
+Стек режима tun, если нет проблем с использованием, рекомендуется использовать стек `mixed`, по умолчанию используется `mips`
 
 Возможные значения: `system/gvisor/mixed/mips`
 
@@ -174,6 +174,10 @@ auto-redirect с auto-route теперь может работать на роу
 ## endpoint-independent-nat
 
 Включает NAT, независимый от конечной точки. Производительность может немного снизиться, поэтому не рекомендуется включать, если в этом нет необходимости.
+
+## congestion-controller
+
+Алгоритм управления перегрузкой TCP. Доступные значения: `cubic`, `reno`, `bbr`, `bbr3`. Значение по умолчанию — `cubic`. Действует только при использовании стека `mips`.
 
 ## route-address-set
 
