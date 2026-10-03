@@ -12,6 +12,7 @@ proxy-groups:
   interval: 300
   #lazy: true
   #strategy: consistent-hashing # or round-robin
+  #hash-key: in-user
 ```
 
 ## Common Fields
@@ -30,3 +31,11 @@ Load Balancing Strategies
 
 !!! note
     When the `target address` is a domain, it uses top-level domain matching.
+
+## hash-key
+
+Hash key, optional value `in-user`, only supported by `consistent-hashing` and `sticky-sessions`; `round-robin` does not hash, configuring it will raise an error instead of being ignored.
+
+* `in-user` uses the authenticated inbound username as the hash key (the same field read by `IN-USER` rules). It does not change with the destination address, so a task spanning multiple domains stays on the same node and egress IP; unauthenticated requests fall back to the strategy's default key.
+
+* When unset, the behavior is identical to previous versions.
