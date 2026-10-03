@@ -76,7 +76,7 @@ Enable TUN mode.
 
 ## stack
 
-TUN mode protocol stack. If no usage issues occur, `mixed` stack is recommended. Default is `mips`.
+TUN mode protocol stack. If no usage issues occur, `mips` stack is recommended. Default is `mips`.
 
 Available values: `system/gvisor/mixed/mips`
 
