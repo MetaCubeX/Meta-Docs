@@ -75,7 +75,7 @@ tun:
 
 ## stack
 
-tun 模式堆栈，如无使用问题，建议使用 `mixed`栈，默认 `mips`
+tun 模式堆栈，如无使用问题，建议使用 `mips` 栈，默认 `mips`
 
 可用值： `system/gvisor/mixed/mips`
 
