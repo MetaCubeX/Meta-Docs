@@ -9,7 +9,6 @@ tun:
   auto-detect-interface: true
   dns-hijack:
     - any:53
-    - tcp://any:53
   device: utun0
   mtu: 9000
   strict-route: true
@@ -116,7 +115,7 @@ auto-redirect с auto-route теперь может работать на роу
 
 ## dns-hijack
 
-Перехват DNS, направляет соответствующие соединения во внутренний модуль [dns](../dns/index.md), если протокол не указан, то используется udp://
+Перехват DNS, направляет соответствующие соединения во внутренний модуль [dns](../dns/index.md)
 
 !!! warning ""
     * На `MacOS`/`Windows` невозможно автоматически перехватывать DNS-запросы, отправляемые в локальную сеть
