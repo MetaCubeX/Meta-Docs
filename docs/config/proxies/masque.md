@@ -104,7 +104,7 @@ TUN 设备的 MTU 大小，默认为 1280
 
 ### ip-stack.mode
 
-可选值：`auto`、`gvisor`、`mips`。默认值为 `auto`。`auto` 会根据当前编译支持情况自动选择：如果编译时启用了 `gVisor`，则使用 `gVisor`；否则使用 mihomo IP 协议栈（`MIPS`）。
+可选值：`auto`、`gvisor`、`mips`。默认值为 `auto`。`auto` 始终使用 mihomo IP 协议栈（`MIPS`）；`gvisor` 需使用 `-tags with_gvisor` 编译。
 
 ### ip-stack.congestion-controller
 

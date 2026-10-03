@@ -6,7 +6,7 @@ The TUN listener is intended for advanced users. General users should use the to
 listeners:
 - name: tun-in
   type: tun
-  stack: system
+  stack: mips
   dns-hijack:
   - 0.0.0.0:53
   # auto-detect-interface: false
@@ -43,4 +43,5 @@ listeners:
   # - com.android.chrome
   # exclude-package:
   # - com.android.captiveportallogin
+  # congestion-controller: cubic
 ```
