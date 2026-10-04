@@ -114,6 +114,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[merlinclashcat](https://t.me/merlinclashcat)|Maintained|
 |[vClash](https://github.com/vxiaov/vClash)|Maintained |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|Maintained |
+|[Exodus](https://github.com/prettyleaf/OpenWrt-exodus/tree/asuswrt)|Maintained|
 
 ## OpenWRT
 
@@ -127,6 +128,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[SSClash](https://github.com/zerolabnet/SSClash)|Maintained |
 |[ShadowSocksR Plus+](https://github.com/fw876/helloworld)|Maintained |
 |[openwrt-clashoo](https://github.com/kenzok8/openwrt-clashoo)|Maintained |
+|[Exodus](https://github.com/prettyleaf/OpenWrt-exodus/tree/main)|Maintained|
 
 ## Shell
 
