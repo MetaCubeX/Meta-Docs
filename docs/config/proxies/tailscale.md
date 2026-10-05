@@ -10,7 +10,10 @@ proxies:
     state-dir: ./tailscale
     ephemeral: false
     udp: true
+    port: 41641
     accept-routes: true
+    advertise-routes:
+      - 192.168.1.0/24
     exit-node: 100.64.0.1
     exit-node-allow-lan-access: true
     dialer-proxy: "ss1"
@@ -56,9 +59,31 @@ proxies:
 
 可选，是否启用 UDP，默认值为 `false`。
 
+## port
+
+可选，Tailscale 节点通信的 UDP 监听端口，默认值为 `41641`。设为 `0` 时使用随机端口。如果防火墙阻止入站 UDP，请放行实际监听端口以便建立节点直连。此项独立于 `udp` 业务流量选项。
+
 ## accept-routes
 
 可选，是否接受 Tailnet 中发布的 subnet routes。
+
+## advertise-routes
+
+可选，把本机可达网段发布到 Tailnet，供其他节点经此节点访问。
+
+```yaml
+advertise-routes:
+  - 192.168.1.0/24
+  - fd12:3456:789a::/64
+```
+
+路由需要在 Tailscale 或 Headscale 控制台批准后，其他节点才会使用。不填写时不会改动已经保存的路由；设为 `[]` 会清除已发布的路由。
+
+前缀会归一化到网段地址，例如 `192.168.1.5/24` 会按 `192.168.1.0/24` 发布。非法 CIDR 或重复网段会在加载配置时直接报错。
+
+同时发布 `0.0.0.0/0` 和 `::/0` 表示作为 exit node，此时不能再配置 `exit-node`。
+
+进入这些网段的 TCP/UDP 由 userspace 网络栈从本机转发出去，沿用 `interface-name`、`routing-mark` 和 `dialer-proxy`。
 
 ## exit-node
 
