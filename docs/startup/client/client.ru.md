@@ -16,7 +16,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
-|[FlyClash](https://github.com/GtxFury/FlyClash)|поддерживается |
+|[Diodos](https://github.com/Devi766/Diodos)|поддерживается |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|поддерживается |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
@@ -84,7 +84,7 @@
 |:----|:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|поддерживается |
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
-|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|поддерживается | Закрытый исходный код |
+|[Diodos](https://github.com/Devi766/Diodos-Android)|поддерживается | Закрытый исходный код |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|поддерживается |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
