@@ -16,7 +16,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|Maintained |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
-|[FlyClash](https://github.com/GtxFury/FlyClash)|Maintained |
+|[Diodos](https://github.com/Devi766/Diodos)|Maintained |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|Maintained |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
@@ -84,7 +84,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |:----|:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|Maintained |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
-|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|Maintained | Closed-source  |
+|[Diodos](https://github.com/Devi766/Diodos-Android)|Maintained | Closed-source  |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|Maintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
