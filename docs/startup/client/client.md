@@ -16,7 +16,7 @@
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[Pandora-Box](https://github.com/snakem982/Pandora-Box)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
-|[FlyClash](https://github.com/GtxFury/FlyClash)|维护中 |
+|[Diodos](https://github.com/Devi766/Diodos)|维护中 |
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|维护中 |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
@@ -85,7 +85,7 @@
 |:----|:----|:----|
 |[FlClash](https://github.com/chen08209/FlClash)|维护中 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
-|[FlyClash](https://github.com/GtxFury/FlyClash-Android)|维护中 | 不开源 |
+|[Diodos](https://github.com/Devi766/Diodos-Android)|维护中 | 不开源 |
 |[YumeBox](https://github.com/YumeLira/YumeBox)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
