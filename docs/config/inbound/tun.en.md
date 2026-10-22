@@ -7,6 +7,7 @@ tun:
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
+  # dns-mode: hijack
   dns-hijack:
     - any:53
     - tcp://any:53
@@ -114,6 +115,15 @@ With auto-route enabled, auto-redirect now works on routers as expected without 
 ## auto-detect-interface
 
 Automatically detect the outbound interface for traffic. It is recommended to manually specify the outbound network interface for devices connected to multiple outbound interfaces simultaneously.
+
+## dns-mode
+
+How the system DNS is configured
+
+* `disabled` does not set the system DNS
+* `native` sets the tun address as the system DNS
+* `hijack` additionally intercepts traffic sent to port 53 of other interfaces on top of `native` (requires `strict-route` on Windows and `auto-redirect` on Linux)
+* If left empty, the legacy behavior is kept: Windows and Linux default to `hijack` when `auto-route` is enabled, otherwise `disabled`; macOS defaults to `disabled`
 
 ## dns-hijack
 

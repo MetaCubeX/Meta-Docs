@@ -7,6 +7,7 @@ listeners:
 - name: tun-in
   type: tun
   stack: mips
+  # dns-mode: hijack
   dns-hijack:
   - 0.0.0.0:53
   # auto-detect-interface: false
@@ -45,3 +46,7 @@ listeners:
   # - com.android.captiveportallogin
   # congestion-controller: cubic
 ``` 
+
+## dns-mode
+
+Способ настройки системного DNS. Доступные значения: `disabled` / `native` / `hijack`. Если оставить пустым, применяется прежнее поведение. См. [TUN в конфигурации верхнего уровня](../tun.ru.md#dns-mode)

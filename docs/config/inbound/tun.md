@@ -7,6 +7,7 @@ tun:
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
+  # dns-mode: hijack
   dns-hijack:
     - any:53
     - tcp://any:53
@@ -113,6 +114,15 @@ tun 模式堆栈，如无使用问题，建议使用 `mips` 栈，默认 `mips`
 ## auto-detect-interface
 
 自动选择流量出口接口，多出口网卡同时连接的设备建议手动指定出口网卡
+
+## dns-mode
+
+系统 DNS 配置方式
+
+* `disabled` 不设置系统 DNS
+* `native` 将 tun 地址设为系统 DNS
+* `hijack` 在 `native` 基础上额外拦截发往其他网卡的 53 端口流量（Windows 需 `strict-route`，Linux 需 `auto-redirect`）
+* 留空则保持旧行为：Windows 和 Linux 在启用 `auto-route` 时默认 `hijack`，否则 `disabled`；macOS 默认 `disabled`
 
 ## dns-hijack
 
