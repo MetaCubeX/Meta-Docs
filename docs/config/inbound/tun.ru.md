@@ -7,6 +7,7 @@ tun:
   auto-route: true
   auto-redirect: true
   auto-detect-interface: true
+  # dns-mode: hijack
   dns-hijack:
     - any:53
     - tcp://any:53
@@ -113,6 +114,15 @@ auto-redirect с auto-route теперь может работать на роу
 ## auto-detect-interface
 
 Автоматически определяет интерфейс для исходящего трафика. На устройствах с несколькими сетевыми картами, подключенными одновременно, рекомендуется вручную указать исходящую сетевую карту
+
+## dns-mode
+
+Способ настройки системного DNS
+
+* `disabled` не настраивает системный DNS
+* `native` устанавливает адрес tun в качестве системного DNS
+* `hijack` дополнительно перехватывает трафик на порт 53 других интерфейсов в дополнение к `native` (требуется `strict-route` в Windows и `auto-redirect` в Linux)
+* Если оставить пустым, сохраняется прежнее поведение: Windows и Linux по умолчанию используют `hijack` при включенном `auto-route`, иначе `disabled`; macOS по умолчанию использует `disabled`
 
 ## dns-hijack
 
