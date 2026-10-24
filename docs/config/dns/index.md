@@ -37,6 +37,7 @@ dns:
   direct-nameserver:
     - system
   direct-nameserver-follow-policy: false
+  # fallback-lazy-query: false
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -51,7 +52,6 @@ dns:
       - '+.google.com'
       - '+.facebook.com'
       - '+.youtube.com'
-  # fallback-lazy-query: false
 ```
 
 ## enable
@@ -79,7 +79,7 @@ DNS 服务监听，支持 udp, tcp
 
 ## enhanced-mode
 
-可选值 `fake-ip`/`redir-host`，默认`redir-host`
+可选值 `normal`/`fake-ip`/`redir-host`，默认`redir-host`
 
 mihomo 的 DNS 处理模式
 
@@ -140,7 +140,7 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 默认 DNS, 用于解析 DNS 服务器 的域名
 
 !!! note ""
-    必须为 IP, 可为加密 DNS
+    必须为 IP, 可为加密 DNS, 或 `system`（使用系统 DNS）
 
 ## nameserver-policy
 
@@ -176,6 +176,10 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 
 配置 `fallback`后默认启用 `fallback-filter`,`geoip-code`为 cn
 
+## fallback-lazy-query
+
+默认值为 false ，如果为 true 会先判断来自 `nameserver` 的结果是否满足 `fallback-filter` 后再发起查询
+
 ## fallback-filter
 
 后备域名解析服务器筛选，满足条件的将使用 `fallback`结果或只使用 `fallback`解析
@@ -210,10 +214,6 @@ geosite 列表的内容被视为已污染，匹配到 geosite 的域名，将只
 ### domain
 
 这些域名被视为已污染，匹配到这些域名，会直接使用 `fallback`解析，不去使用 `nameserver`
-
-### fallback-lazy-query
-
-默认值为 false ，如果为 true 会先判断来自 `nameserver` 的结果是否满足 `fallback-filter` 后再发起查询
 
 ## 附加参数
 

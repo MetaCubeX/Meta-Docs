@@ -37,6 +37,7 @@ dns:
   direct-nameserver:
     - system
   direct-nameserver-follow-policy: false
+  # fallback-lazy-query: false
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -51,7 +52,6 @@ dns:
       - '+.google.com'
       - '+.facebook.com'
       - '+.youtube.com'
-  # fallback-lazy-query: false
 ```
 
 ## enable
@@ -79,7 +79,7 @@ dns:
 
 ## enhanced-mode
 
-Возможные значения: `fake-ip`/`redir-host`, по умолчанию `redir-host`
+Возможные значения: `normal`/`fake-ip`/`redir-host`, по умолчанию `redir-host`
 
 Режим обработки DNS в mihomo
 
@@ -140,7 +140,7 @@ DNS-соединения следуют [правилам маршрутизац
 DNS по умолчанию, используется для разрешения доменных имен DNS-серверов
 
 !!! note ""
-    Должен быть указан IP, может быть зашифрованным DNS
+    Должен быть указан IP, может быть зашифрованным DNS, либо `system` (системный DNS)
 
 ## nameserver-policy
 
@@ -176,6 +176,10 @@ DNS-сервер для разрешения доменных имен чере�
 
 После настройки `fallback` по умолчанию включается `fallback-filter` с `geoip-code` равным cn.
 
+## fallback-lazy-query
+
+Значение по умолчанию — `false`. Если установлено значение `true`, система сначала проверит, соответствуют ли результаты от `nameserver` условиям `fallback-filter`, и только после этого инициирует запрос к `fallback`.
+
 ## fallback-filter
 
 Фильтр резервных серверов разрешения доменных имен. Если условия соответствуют, будет использован результат `fallback` или для разрешения будет использован только `fallback`.
@@ -210,10 +214,6 @@ IP-результаты, не принадлежащие стране, наст�
 ### domain
 
 Эти домены считаются загрязненными. При совпадении с этими доменами будет напрямую использоваться разрешение через `fallback`, без использования `nameserver`.
-
-### fallback-lazy-query
-
-Значение по умолчанию — `false`. Если установлено значение `true`, система сначала проверит, соответствуют ли результаты от `nameserver` условиям `fallback-filter`, и только после этого инициирует запрос к `fallback`.
 
 ## Дополнительные параметры
 
