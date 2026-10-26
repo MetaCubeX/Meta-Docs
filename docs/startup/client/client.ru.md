@@ -27,6 +27,7 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[pure-clash]([https://github.com/prime-zt/pure-clash)|поддерживается |
+|[SuperPuperVPN](https://github.com/NikitaKnutov/superpupervpn)|поддерживается |
 
 ## MacOS
 
@@ -77,6 +78,7 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[pure-clash]([https://github.com/prime-zt/pure-clash)|поддерживается |
 |[3m-ui](https://github.com/kazeyukiro/3m-ui)|поддерживается | Управление входящими подключениями |
+|[SuperPuperVPN](https://github.com/NikitaKnutov/superpupervpn)|поддерживается |
  
 ## Android
 
