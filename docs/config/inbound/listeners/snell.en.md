@@ -8,10 +8,11 @@ listeners:
     listen: 0.0.0.0
     # routing-mark: 0 # Sets the routing-mark for the listening socket (Linux only)
     psk: your-password
-    version: 4 # Supports 1/2/3/4/5
+    version: 4 # Supports 1/2/3/4/5/6
     udp: true # UDP over TCP tunnel, defaults to true
+    # mode: default # v6 only: default / unshaped / unsafe-raw, must match the client; v6 psk length must be 12 to 255 bytes
     # obfs-opts:
-    #   mode: http # Optional: http / tls
+    #   mode: http # Optional: http / tls (not supported on v6; configuration will error)
     #   host: bing.com
     # shadow-tls:
     #   enable: false # Set to true to enable
