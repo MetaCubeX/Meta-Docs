@@ -20,13 +20,12 @@
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|维护中 |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
-|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|维护中 |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|维护中 |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
-|[pure-clash]([https://github.com/prime-zt/pure-clash)|维护中 |
+|[pure-clash](https://github.com/prime-zt/pure-clash)|维护中 |
 
 ## MacOS
 
@@ -76,7 +75,7 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
-|[pure-clash]([https://github.com/prime-zt/pure-clash)|维护中 |
+|[pure-clash](https://github.com/prime-zt/pure-clash)|维护中 |
 |[3m-ui](https://github.com/kazeyukiro/3m-ui)|维护中 | 入站管理 |
 
 ## Android
@@ -89,7 +88,6 @@
 |[YumeBox](https://github.com/YumeLira/YumeBox)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
-|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|维护中 |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|维护中 |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|维护中 |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|维护中 |
@@ -101,7 +99,6 @@
 |项目名称 | 维护状态 | 备注 |
 |:----|:----|:----|
 |[ClashMi](https://github.com/KaringX/clashmi)|维护中 | 前端开源，构建不可复现 |
-|[Clash Lite](https://apps.apple.com/app/id6761357475)|维护中 | 不开源 |
 |[LinkClashX](https://apps.apple.com/app/id6757075299)|维护中 | 不开源 |
 |[ConnectNow](https://apps.apple.com/app/id6749354119)|维护中 | 不开源 |
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|维护中 |
