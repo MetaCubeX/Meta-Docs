@@ -9,6 +9,9 @@ listeners:
   # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   cipher: 2022-blake3-aes-256-gcm
   password: vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=
+  # users: # 多用户，匹配到的用户名可用于 IN-USER 规则，仅支持 AEAD 加密及 2022-blake3-aes-* 加密
+  #   username1: 6NNH4wlU1Sg+r8uILmCzg9qogjbKGDh/RXT7SYwFx1g=
+  #   username2: 9x0ZrXIZTB5+nwF4QzF+Rn4KfJ2kchNm74aOYhZ+8Sg=
   udp: true
   # simple-obfs:
   #   enable: false # 设置为 true 时开启
@@ -105,3 +108,11 @@ listeners:
 ### udp
 
 是否监听 UDP
+
+### users
+
+多用户配置。匹配到的用户名可用于 `IN-USER` 规则。仅支持 AEAD 加密及 `2022-blake3-aes-*` 加密。
+
+- `2022-blake3-aes-*`：上方 `password` 为服务端 PSK，此处为用户 PSK，客户端密码填写 `服务端PSK:用户PSK`
+- AEAD 加密：上方 `password` 需留空，客户端密码直接填写此处的密码
+- 注意：AEAD 加密的数据包不含用户标识，服务端需对每个包逐个尝试所有用户的密码，UDP 处理开销随用户数线性增长（且无效包会尝试全部用户），用户较多时请使用 `2022-blake3-aes-*`
