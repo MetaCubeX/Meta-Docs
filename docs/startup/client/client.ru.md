@@ -27,6 +27,7 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[pure-clash]([https://github.com/prime-zt/pure-clash)|поддерживается |
+|[Solaris](https://github.com/Ember-Moth/Solaris)|поддерживается | Использует форк ядра mihomo |
 
 ## MacOS
 
@@ -53,6 +54,7 @@
 |[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
+|[Solaris](https://github.com/Ember-Moth/Solaris)|поддерживается | Использует форк ядра mihomo |
 
 ## Linux
 
