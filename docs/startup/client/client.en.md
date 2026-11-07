@@ -27,6 +27,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[pure-clash]([https://github.com/prime-zt/pure-clash)|Maintained |
+|[Solaris](https://github.com/Ember-Moth/Solaris)|Maintained | Uses a fork of the mihomo core |
 
 ## MacOS
 
@@ -53,6 +54,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|Maintained | Closed-source |
+|[Solaris](https://github.com/Ember-Moth/Solaris)|Maintained | Uses a fork of the mihomo core |
 
 ## Linux
 

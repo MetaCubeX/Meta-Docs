@@ -27,6 +27,7 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|维护中 |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
 |[pure-clash]([https://github.com/prime-zt/pure-clash)|维护中 |
+|[Solaris](https://github.com/Ember-Moth/Solaris)|维护中 | 使用 mihomo 分支内核 |
 
 ## MacOS
 
@@ -54,6 +55,7 @@
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|维护中 | 不开源 |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|维护中 | 不开源 |
 |[Swihomo](https://github.com/ruattd/swihomo)|维护中 |
+|[Solaris](https://github.com/Ember-Moth/Solaris)|维护中 | 使用 mihomo 分支内核 |
 
 ## Linux
 
