@@ -156,3 +156,9 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |:----|:----|:----|
 |[DeckyClash](https://github.com/chenx-dust/DeckyClash)|Maintained |
 |[ToMoon](https://github.com/YukiCoco/ToMoon)|Maintained |
+
+## Docker
+
+|Project | Maintenance Status | Notes |
+|:----|:----|:----|
+|[mihomo-sub](https://github.com/pure-white-ice-cream/mihomo-sub)|Maintained | Bundles Mihomo and supports scheduled subscription updates and conversion |
