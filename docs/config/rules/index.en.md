@@ -63,6 +63,8 @@ Rules will be matched in order from top to bottom, with the rules at the top hav
 !!! warning ""
     If the request is for UDP and the proxy node does not support UDP (for example, if the `ss` node does not have `udp: true` specified), it will continue to match downwards.
 
+    `MATCH` is skipped the same way. If no later rule matches, the request is sent via `DIRECT` (log: `doesn't match any rule using DIRECT`) and the remote side sees your real IP. To prevent this, add `NETWORK,UDP,REJECT` after `MATCH`; only UDP requests that skipped `MATCH` this way reach it.
+
 ### DOMAIN
 
 Matches the full domain name.

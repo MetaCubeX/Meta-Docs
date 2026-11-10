@@ -63,6 +63,8 @@ rules:
 !!! warning ""
     如请求为 udp，而代理节点没有 udp 支持 (例如`ss`节点没写`udp: true`),则会继续向下匹配
 
+    `MATCH` 同样会被跳过。如果之后没有其他规则匹配，该请求会使用 `DIRECT` 发出（日志：`doesn't match any rule using DIRECT`），对端看到的是本机的真实 IP。如需避免，可在 `MATCH` 之后追加 `NETWORK,UDP,REJECT`，它只会被这类跳过了 `MATCH` 的 udp 请求命中
+
 ### DOMAIN
 
 匹配完整域名
