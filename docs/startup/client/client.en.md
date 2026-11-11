@@ -5,6 +5,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 
 |Project | Maintenance Status | Notes |
 |:----|:----|:----|
+|[Routa](https://github.com/c0010c/Routa)|Maintained |
 |[sparkle](https://github.com/xishang0128/sparkle)|Maintained |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|Unmaintained |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|Maintained |
