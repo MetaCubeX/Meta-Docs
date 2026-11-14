@@ -7,11 +7,13 @@ proxies:
   server: server
   port: 44046
   psk: yourpsk
-  # version: 4
-  # udp: true
-  # reuse: false
+  # userkey: per-user-client-id # v6 only; sent as the Snell ClientID
+  # version: 4 # поддерживаются 1/2/3/4/5/6
+  # udp: true # UDP поддерживается на версиях 3/4/5/6
+  # reuse: false # только v4/5/6
+  # mode: default # только v6: default / unshaped / unsafe-raw, должно совпадать с сервером
   # obfs-opts:
-  #   mode: http
+  #   mode: http # или tls/shadow-tls/restls/jls (http/tls недоступны на v6)
   #   host: bing.com
 
 - name: "snell-shadow-tls"
@@ -64,13 +66,21 @@ proxies:
 
 Обязательно. Предварительно общий ключ (PSK) Snell.
 
+## userkey
+
+Необязательно. Только для v6. Идентификатор клиента Snell (ClientID), отправляется с соединением и используется сервером для различения пользователей.
+
 ## version
 
-Версия Snell. Поддерживаются v1/2/3/4/5. Только v3/4/5 поддерживают UDP.
+Версия Snell. Поддерживаются v1/2/3/4/5/6. Только v3/4/5/6 поддерживают UDP.
 
 ## reuse
 
-Необязательно. Поддерживается в v4/5. По умолчанию: false.
+Необязательно. Поддерживается в v4/5/6. По умолчанию: false.
+
+## mode
+
+Необязательно. Только для v6. Допустимые значения: `default` / `unshaped` / `unsafe-raw`. Должно совпадать с сервером.
 
 ## client-fingerprint
 
@@ -82,7 +92,7 @@ proxies:
 
 ### obfs-opts.mode
 
-Режим обфускации Snell. Поддерживаются http/tls/shadow-tls/restls/jls.
+Режим обфускации Snell. Поддерживаются http/tls/shadow-tls/restls/jls (http/tls недоступны на v6).
 
 ### obfs-opts.host
 

@@ -7,11 +7,13 @@ proxies:
   server: server
   port: 44046
   psk: yourpsk
-  # version: 4
-  # udp: true
-  # reuse: false
+  # userkey: per-user-client-id # v6 only; sent as the Snell ClientID
+  # version: 4 # support 1/2/3/4/5/6
+  # udp: true # support UDP on version 3/4/5/6
+  # reuse: false # v4/5/6 only
+  # mode: default # v6 only, default / unshaped / unsafe-raw, must match the server
   # obfs-opts:
-  #   mode: http
+  #   mode: http # or tls/shadow-tls/restls/jls (http/tls are not available on v6)
   #   host: bing.com
 
 - name: "snell-shadow-tls"
@@ -64,13 +66,21 @@ proxies:
 
 必须，Snell 预共享密钥
 
+## userkey
+
+可选，v6 专属，Snell 客户端标识（ClientID），随连接发送，用于服务端区分用户
+
 ## version
 
-snell 版本，支持 v1/2/3/4/5，仅 v3/4/5 支持 udp
+snell 版本，支持 v1/2/3/4/5/6，仅 v3/4/5/6 支持 udp
 
 ## reuse
 
-可选，支持 v4/5，默认为 false
+可选，支持 v4/5/6，默认为 false
+
+## mode
+
+可选，v6 专属，可选值为 `default` / `unshaped` / `unsafe-raw`，需与服务端一致
 
 ## client-fingerprint
 
@@ -82,7 +92,7 @@ Snell 混淆设置
 
 ### obfs-opts.mode
 
-Snell 混淆模式，支持 http/tls/shadow-tls/restls/jls
+Snell 混淆模式，支持 http/tls/shadow-tls/restls/jls（v6 不支持 http/tls）
 
 ### obfs-opts.host
 
