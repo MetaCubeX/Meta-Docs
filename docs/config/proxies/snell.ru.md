@@ -7,6 +7,7 @@ proxies:
   server: server
   port: 44046
   psk: yourpsk
+  # userkey: per-user-client-id # v6 only; sent as the Snell ClientID
   # version: 4 # поддерживаются 1/2/3/4/5/6
   # udp: true # UDP поддерживается на версиях 3/4/5/6
   # reuse: false # только v4/5/6
@@ -64,6 +65,10 @@ proxies:
 ## psk
 
 Обязательно. Предварительно общий ключ (PSK) Snell.
+
+## userkey
+
+Необязательно. Только для v6. Идентификатор клиента Snell (ClientID), отправляется с соединением и используется сервером для различения пользователей.
 
 ## version
 
