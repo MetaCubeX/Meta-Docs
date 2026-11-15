@@ -5,6 +5,7 @@
 
 |Название проекта | Статус поддержки | Примечание |
 |:----|:----|:----|
+|[Routa](https://github.com/c0010c/Routa)|поддерживается |
 |[sparkle](https://github.com/xishang0128/sparkle)|поддерживается |
 |[clash-verge](https://github.com/MetaCubeX/clash-verge)|поддержка прекращена |
 |[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)|поддерживается |
