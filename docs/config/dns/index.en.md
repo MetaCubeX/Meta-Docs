@@ -37,6 +37,7 @@ dns:
   direct-nameserver:
     - system
   direct-nameserver-follow-policy: false
+  # fallback-lazy-query: false
   fallback-filter:
     geoip: true
     geoip-code: CN
@@ -51,7 +52,6 @@ dns:
       - '+.google.com'
       - '+.facebook.com'
       - '+.youtube.com'
-  # fallback-lazy-query: false
 ```
 
 ## enable
@@ -79,7 +79,7 @@ Whether to resolve IPV6; if set to false, it will respond with empty resolutions
 
 ## enhanced-mode
 
-Optional values are `fake-ip`/`redir-host`, default is `redir-host`.
+Optional values are `normal`/`fake-ip`/`redir-host`, default is `redir-host`.
 
 This refers to the DNS processing mode of mihomo.
 
@@ -141,7 +141,7 @@ DNS connections comply with [routing rules](../rules/index.md), requiring config
 Default DNS, used for resolving the domain names of DNS servers.
 
 !!! note ""
-    Must be an IP, can be encrypted DNS.
+    Must be an IP, can be encrypted DNS, or `system` (system DNS).
 
 ## nameserver-policy
 
@@ -177,6 +177,10 @@ Backup domain name resolution servers, generally using overseas DNS to ensure re
 
 After configuring `fallback`, `fallback-filter` is enabled by default, with `geoip-code` set to CN.
 
+## fallback-lazy-query
+
+The default value is `false`. If set to `true`, it will first evaluate whether the results from `nameserver` satisfy the `fallback-filter` conditions before initiating a fallback query.
+
 ## fallback-filter
 
 Filtering for backup domain name resolution servers; those meeting the conditions will use `fallback` results or only use `fallback` for resolution.
@@ -211,10 +215,6 @@ Results from these subnets will be considered polluted; when `nameserver` resolv
 ### domain
 
 These domains are considered polluted; matching these domains will directly use `fallback` resolution, not `nameserver`.
-
-### fallback-lazy-query
-
-The default value is `false`. If set to `true`, it will first evaluate whether the results from `nameserver` satisfy the `fallback-filter` conditions before initiating a fallback query.
 
 ## Additional Parameters
 
