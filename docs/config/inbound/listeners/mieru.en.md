@@ -15,6 +15,8 @@ listeners:
   # traffic-pattern: ""
   # When enabled, the proxy server rejects clients that do not send a user hint
   # user-hint-is-mandatory: false
+  # Close the underlying TCP connection after both upstream and downstream have been idle for this many seconds. Minimum is 60.
+  # tcp-idle-timeout: 1800
 ```
 
 [General Fields](./index.md)

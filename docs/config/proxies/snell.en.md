@@ -7,11 +7,13 @@ proxies:
   server: server
   port: 44046
   psk: yourpsk
-  # version: 4
-  # udp: true
-  # reuse: false
+  # userkey: per-user-client-id # v6 only; sent as the Snell ClientID
+  # version: 4 # support 1/2/3/4/5/6
+  # udp: true # support UDP on version 3/4/5/6
+  # reuse: false # v4/5/6 only
+  # mode: default # v6 only, default / unshaped / unsafe-raw, must match the server
   # obfs-opts:
-  #   mode: http
+  #   mode: http # or tls/shadow-tls/restls/jls (http/tls are not available on v6)
   #   host: bing.com
 
 - name: "snell-shadow-tls"
@@ -63,13 +65,21 @@ proxies:
 
 Required. Snell pre-shared key.
 
+## userkey
+
+Optional. v6 only. The Snell client identifier (ClientID), sent with the connection and used by the server to distinguish users.
+
 ## version
 
-Snell version. Supports v1/2/3/4/5. UDP is only supported on v3/4/5.
+Snell version. Supports v1/2/3/4/5/6. UDP is only supported on v3/4/5/6.
 
 ## reuse
 
-Optional. Supports v4/5. Default is false.
+Optional. Supports v4/5/6. Default is false.
+
+## mode
+
+Optional. v6 only. Available values: `default` / `unshaped` / `unsafe-raw`. Must match the server.
 
 ## client-fingerprint
 
@@ -81,7 +91,7 @@ Snell obfuscation settings.
 
 ### obfs-opts.mode
 
-Snell obfuscation mode. Supports http/tls/shadow-tls/restls/jls.
+Snell obfuscation mode. Supports http/tls/shadow-tls/restls/jls (http/tls are not available on v6).
 
 ### obfs-opts.host
 

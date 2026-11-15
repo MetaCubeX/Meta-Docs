@@ -8,10 +8,11 @@ listeners:
     listen: 0.0.0.0
     # routing-mark: 0 # Устанавливает routing-mark для прослушивающего сокета (поддерживается только в Linux)
     psk: your-password
-    version: 4 # Поддерживаются 1/2/3/4/5
+    version: 4 # Поддерживаются 1/2/3/4/5/6
     udp: true # UDP через TCP-туннель, по умолчанию true
+    # mode: default # только v6: default / unshaped / unsafe-raw, должно совпадать с клиентом; длина psk для v6 должна быть от 12 до 255 байт
     # obfs-opts:
-    #   mode: http # Необязательно: http / tls
+    #   mode: http # Необязательно: http / tls (не поддерживается на v6; при конфигурации возникнет ошибка)
     #   host: bing.com
     # shadow-tls:
     #   enable: false # Установите true для включения
