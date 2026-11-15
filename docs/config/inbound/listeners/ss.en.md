@@ -9,6 +9,9 @@ listeners:
   # routing-mark: 0 # Sets the routing-mark for the listening socket (Linux only)
   cipher: 2022-blake3-aes-256-gcm
   password: vlmpIPSyHH6f4S8WVPdRIHIlzmB+GIRfoH3aNJ/t9Gg=
+  # users: # Multi-user; matched usernames can be used in IN-USER rules. Supports AEAD ciphers and 2022-blake3-aes-* only
+  #   username1: 6NNH4wlU1Sg+r8uILmCzg9qogjbKGDh/RXT7SYwFx1g=
+  #   username2: 9x0ZrXIZTB5+nwF4QzF+Rn4KfJ2kchNm74aOYhZ+8Sg=
   udp: true
   # simple-obfs:
   #   enable: false # Set to true to enable
@@ -105,3 +108,11 @@ Encryption method
 ### udp
 
 Whether to listen for UDP
+
+### users
+
+Multi-user configuration. The matched username can be used in `IN-USER` rules. Only AEAD ciphers and `2022-blake3-aes-*` are supported.
+
+- `2022-blake3-aes-*`: the `password` above is the server PSK, while these are per-user PSKs; the client password is `serverPSK:userPSK`
+- AEAD ciphers: the `password` above must be left empty; the client uses the password defined here directly
+- Note: AEAD packets do not carry a user identifier, so the server must try every user's password for each packet. UDP overhead grows linearly with the number of users (and invalid packets try all users), so prefer `2022-blake3-aes-*` when there are many users
