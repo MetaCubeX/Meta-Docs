@@ -20,13 +20,12 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[Koala Clash](https://github.com/coolcoala/koala-clash)|Maintained |
 |[Stelliberty](https://github.com/Kindness-Kismet/Stelliberty)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
-|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Maintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[GoclashZ](https://github.com/Zzz-IT/GoclashZ)|Maintained |
 |[Zephyr](https://github.com/Juwan-Hwang/Zephyr)|Maintained |
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
-|[pure-clash]([https://github.com/prime-zt/pure-clash)|Maintained |
+|[pure-clash](https://github.com/prime-zt/pure-clash)|Maintained |
 
 ## MacOS
 
@@ -75,7 +74,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|Maintained |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|Maintained |Closed-source |
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source;build is not reproducible |
-|[pure-clash]([https://github.com/prime-zt/pure-clash)|Maintained |
+|[pure-clash](https://github.com/prime-zt/pure-clash)|Maintained |
 |[3m-ui](https://github.com/kazeyukiro/3m-ui)|Maintained | Inbound management |
 
 ## Android
@@ -88,7 +87,6 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[YumeBox](https://github.com/YumeLira/YumeBox)|Maintained |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|Maintained |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|Maintained |
-|[clash-xiaoy](https://github.com/aimy1/clash-xiaoy)|Maintained |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|Maintained |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|Maintained |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|Maintained |
@@ -100,7 +98,6 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |Project | Maintenance Status | Notes |
 |:----|:----|:----|
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source; build is not reproducible |
-|[Clash Lite](https://apps.apple.com/app/id6761357475)|Maintained | Closed-source |
 |[LinkClashX](https://apps.apple.com/app/id6757075299)|Maintained | Closed-source |
 |[ConnectNow](https://apps.apple.com/app/id6749354119)|Maintained | Closed-source |
 |[Everywhere](https://github.com/NodePassProject/Everywhere)|Maintained |
