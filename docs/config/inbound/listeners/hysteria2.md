@@ -4,7 +4,7 @@
 listeners:
 - name: hy-in
   type: hysteria2
-  port: 8443
+  port: 8443,20000-50000 # 使用端口范围来启用端口跳跃 https://wiki.metacubex.one/handbook/syntax/#port-ranges
   listen: 0.0.0.0
   # routing-mark: 0 # 为监听socket设置routing-mark（仅支持linux）
   users:
