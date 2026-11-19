@@ -26,6 +26,7 @@
 |[SlothClash](https://github.com/Nemu-x/SlothClash)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[pure-clash](https://github.com/prime-zt/pure-clash)|поддерживается |
+|[ReClash](https://github.com/Hoxiee/ReClash)|поддерживается |
 
 ## MacOS
 
@@ -52,6 +53,7 @@
 |[Everywhere](https://github.com/NodePassProject/Everywhere-macOS)|поддерживается |
 |[Flowvy](https://github.com/flowvy-proxy/desktop)|поддерживается |Закрытый исходный код |
 |[Rabbit Hole](https://apps.apple.com/us/app/rabbithole-vpn-client/id6683309629)|поддерживается |Закрытый исходный код  |
+|[ReClash](https://github.com/Hoxiee/ReClash)|поддерживается |
 
 ## Linux
 
@@ -76,6 +78,7 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[pure-clash](https://github.com/prime-zt/pure-clash)|поддерживается |
 |[3m-ui](https://github.com/kazeyukiro/3m-ui)|поддерживается | Управление входящими подключениями |
+|[ReClash](https://github.com/Hoxiee/ReClash)|поддерживается |
  
 ## Android
 
@@ -92,6 +95,7 @@
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|поддерживается |
 |[SlClash](https://github.com/songzhengpei/Slclash)|поддерживается |
 |[MikuBox](https://github.com/HatsuneMikuUwU/MikuBoxForAndroid)|поддерживается |
+|[ReClash](https://github.com/Hoxiee/ReClash)|поддерживается |
 
 ## iOS
 
