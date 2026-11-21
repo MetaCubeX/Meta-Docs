@@ -20,6 +20,8 @@ proxies:
 ```
 
 !!! note
+    The Tailscale outbound is only available when mihomo is built with the `-tags with_gvisor` build tag and without `no_tailscale`; otherwise this outbound type is unavailable.
+
     Like other proxy protocols, Tailscale is an optional proxy node. Traffic will only go through Tailscale if you direct it via rules, policy groups, or other routing methods.
 
     Furthermore, all types of proxies only start connecting when the first matching connection is triggered (i.e., they do not start synchronously with Mihomo). Therefore, a timeout on the first attempt to access the Tailscale node is normal; please try again until Tailscale loads successfully.

@@ -20,6 +20,8 @@ proxies:
 ```
 
 !!! note
+    Tailscale 出站需要以 `-tags with_gvisor` 编译 mihomo 且未使用 `no_tailscale` 构建标签才可用；若构建时未包含相应标签，此出站类型不可用。
+
     和其他代理协议一样，tailscale 只是一个可选代理节点。只有当你通过规则、策略组或其他路由方式把流量指向这个节点时，对应流量才会走 Tailscale。
     
     此外，所有类型的 proxy 都只会在其匹配上的第一个链接触发的时候才会开始链接（即并不会随 Mihomo 同步启动），所以第一次访问 Tailscale 节点超时是正常情况，请多次尝试直到 Tailscale 正常加载完成。
