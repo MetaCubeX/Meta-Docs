@@ -154,6 +154,14 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 
 代理节点域名解析服务器，仅用于解析代理节点的域名，如果不填则遵循 nameserver-policy、nameserver 和 fallback 的配置
 
+如果当前网络无法访问配置的解析服务器，使用域名的代理节点可能在连接前就因解析失败而超时。若系统 DNS 能解析节点域名，可将此项设为：
+
+```yaml
+dns:
+  proxy-server-nameserver:
+    - system
+```
+
 ## proxy-server-nameserver-policy
 
 格式同nameserver-policy，仅用于节点域名解析，当且仅当proxy-server-nameserver不为空时生效
@@ -165,6 +173,8 @@ dns 连接遵守[路由规则](../rules/index.md)，需配置 [proxy-server-name
 ## direct-nameserver-follow-policy
 
 是否遵循 nameserver-policy，默认为不遵守，仅当 direct-nameserver 不为空时生效
+
+设为 `true` 后，如果直连域名匹配 `nameserver-policy`，则使用该策略指定的 DNS 服务器。未匹配的域名仍使用 `direct-nameserver`。若直连网站通过系统 DNS 可访问，却在 mihomo 中超时，请检查匹配策略所用的 DNS 服务器是否可达。
 
 ## nameserver
 
