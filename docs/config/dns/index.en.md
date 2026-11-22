@@ -155,6 +155,14 @@ Values support strings/arrays.
 
 The proxy node domain resolution server is used solely for resolving the domain names of proxy nodes. If left blank, it will follow the configurations of nameserver-policy, nameserver, and fallback.
 
+If the configured resolver is unreachable, a proxy node configured with a hostname can time out before making a connection. If system DNS can resolve the node hostname, you can use:
+
+```yaml
+dns:
+  proxy-server-nameserver:
+    - system
+```
+
 ## proxy-server-nameserver-policy
 
 The format is the same as nameserver-policy, and it is only used for node domain name resolution. It takes effect only if proxy-server-nameserver is not empty.
@@ -166,6 +174,8 @@ The DNS server for domain resolution at the direct exit. If left blank, it will 
 ## direct-nameserver-follow-policy
 
 Indicates whether to adhere to the nameserver-policy. The default is not to comply, and it only takes effect when direct-nameserver is not empty.
+
+With this option enabled, a matching `nameserver-policy` entry supplies the resolver for a direct connection. Domains without a match still use `direct-nameserver`. If a website works with system DNS but times out through mihomo despite matching a `DIRECT` rule, check whether the resolver selected by `nameserver-policy` is reachable.
 
 ## nameserver
 
