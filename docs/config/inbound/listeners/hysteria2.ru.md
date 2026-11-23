@@ -66,7 +66,7 @@ listeners:
 
 ### up/down
 
-Настройки скорости Hysteria, по умолчанию в Mbps, подробнее см. [документацию Hysteria](https://v2.hysteria.network/docs/advanced/Full-Server-Config/#bandwidth)
+Настройки скорости Hysteria, по умолчанию в Mbps, подробнее см. [документацию Hysteria](https://v2.hysteria.network/ru/docs/advanced/Full-Server-Config/#_3)
 
 ### ignore-client-bandwidth
 
@@ -89,7 +89,7 @@ listeners:
 
 Маскировка трафика под HTTP/3, поддерживает только `file` и `http/https`, если пусто, всегда возвращает 404 Not Found
 
-Подробнее см. [документацию Hysteria](https://v2.hysteria.network/docs/advanced/Full-Server-Config/#masquerade)
+Подробнее см. [документацию Hysteria](https://v2.hysteria.network/ru/docs/advanced/Full-Server-Config/#_14)
 
 |              | Пример                   | Описание       |
 |--------------|-------------------------|----------------|
