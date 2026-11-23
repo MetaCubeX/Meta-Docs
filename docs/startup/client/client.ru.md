@@ -76,6 +76,7 @@
 |[ClashMi](https://github.com/KaringX/clashmi)|поддерживается | Фронтенд с открытым исходным кодом, сборка невоспроизводима |
 |[pure-clash](https://github.com/prime-zt/pure-clash)|поддерживается |
 |[3m-ui](https://github.com/kazeyukiro/3m-ui)|поддерживается | Управление входящими подключениями |
+|[Anoya](https://github.com/annoya/anoya-client)|поддерживается |
  
 ## Android
 
@@ -92,6 +93,7 @@
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|поддерживается |
 |[SlClash](https://github.com/songzhengpei/Slclash)|поддерживается |
 |[MikuBox](https://github.com/HatsuneMikuUwU/MikuBoxForAndroid)|поддерживается |
+|[Anoya](https://github.com/annoya/anoya-client)|поддерживается |
 
 ## iOS
 
