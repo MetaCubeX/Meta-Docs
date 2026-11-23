@@ -4,7 +4,7 @@
         # url 里填写自己的订阅,名称不能重复
         proxy-providers:
           provider1:
-            url: ""
+            url: "https://gist.githubusercontent.com/shuaidaoya/9e5cf2749c0ce79932dd9229d9b4162b/raw/all.yaml"
             type: http
             interval: 86400
             health-check: {enable: true,url: "https://www.gstatic.com/generate_204", interval: 300}
