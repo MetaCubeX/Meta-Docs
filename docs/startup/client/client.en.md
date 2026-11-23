@@ -76,6 +76,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[ClashMi](https://github.com/KaringX/clashmi)|Maintained | Frontend is open-source;build is not reproducible |
 |[pure-clash](https://github.com/prime-zt/pure-clash)|Maintained |
 |[3m-ui](https://github.com/kazeyukiro/3m-ui)|Maintained | Inbound management |
+|[Anoya](https://github.com/annoya/anoya-client)|Maintained |
 
 ## Android
 
@@ -92,6 +93,7 @@ The tools/clients listed here use or include the mihomo core. We **do not direct
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|Maintained |
 |[SlClash](https://github.com/songzhengpei/Slclash)|Maintained |
 |[MikuBox](https://github.com/HatsuneMikuUwU/MikuBoxForAndroid)|Maintained |
+|[Anoya](https://github.com/annoya/anoya-client)|Maintained |
 
 ## iOS
 
