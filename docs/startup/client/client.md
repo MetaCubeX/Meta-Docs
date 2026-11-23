@@ -113,6 +113,7 @@
 |[merlinclashcat](https://t.me/merlinclashcat)|维护中|
 |[vClash](https://github.com/vxiaov/vClash)|维护中 |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|维护中 |
+|[Exodus](https://github.com/prettyleaf/OpenWrt-exodus/tree/asuswrt)|维护中|
 
 ## OpenWRT
 
@@ -126,6 +127,7 @@
 |[SSClash](https://github.com/zerolabnet/SSClash)|维护中 |
 |[ShadowSocksR Plus+](https://github.com/fw876/helloworld)|维护中 |
 |[openwrt-clashoo](https://github.com/kenzok8/openwrt-clashoo)|维护中 |
+|[Exodus](https://github.com/prettyleaf/OpenWrt-exodus/tree/main)|维护中|
 
 ## Shell
 

@@ -111,6 +111,7 @@
 |[merlinclashcat](https://t.me/merlinclashcat)|поддерживается|
 |[vClash](https://github.com/vxiaov/vClash)|поддерживается |
 |[ShellCrash](https://github.com/juewuy/ShellCrash)|поддерживается |
+|[Exodus](https://github.com/prettyleaf/OpenWrt-exodus/tree/asuswrt)|поддерживается|
 
 ## OpenWRT
 
@@ -124,6 +125,7 @@
 |[SSClash](https://github.com/zerolabnet/SSClash)|поддерживается |
 |[ShadowSocksR Plus+](https://github.com/fw876/helloworld)|поддерживается |
 |[openwrt-clashoo](https://github.com/kenzok8/openwrt-clashoo)|поддерживается |
+|[Exodus](https://github.com/prettyleaf/OpenWrt-exodus/tree/main)|поддерживается|
 
 ## Shell
 
