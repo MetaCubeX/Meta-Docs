@@ -295,6 +295,7 @@ nav:
       - TrustTunnel: config/proxies/trusttunnel.md
       - ZeroTier: config/proxies/zerotier.md
       - OpenVPN: config/proxies/openvpn.md
+      - GOST Relay: config/proxies/gost-relay.md
     - 代理集合:
       - 代理集合配置: config/proxy-providers/index.md
       - 代理集合内容: config/proxy-providers/content.md
