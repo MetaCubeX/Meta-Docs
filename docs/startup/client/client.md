@@ -88,6 +88,7 @@
 |[YumeBox](https://github.com/YumeLira/YumeBox)|维护中 |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|维护中 |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|维护中 |
+|[ducker](https://github.com/duckerapp/ducker)|维护中 | 支持 Android TV |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|维护中 |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|维护中 |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|维护中 |

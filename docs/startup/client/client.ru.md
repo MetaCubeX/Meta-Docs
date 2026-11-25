@@ -87,6 +87,7 @@
 |[YumeBox](https://github.com/YumeLira/YumeBox)|поддерживается |
 |[Bettbox](https://github.com/appshubcc/Bettbox)|поддерживается |
 |[FlClashX](https://github.com/pluralplay/FlClashX)|поддерживается |
+|[ducker](https://github.com/duckerapp/ducker)|поддерживается | Поддерживает Android TV |
 |[MonadBox](https://github.com/MonadBoxLab/MonadBox)|поддерживается |
 |[ClashFest](https://github.com/Nemu-x/ClashFest)|поддерживается |
 |[AsteriskMETA](https://github.com/Asterisk4Magisk/AsteriskMETA)|поддерживается |
